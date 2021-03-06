@@ -1,0 +1,10 @@
+D:\c#homework\homework01\calculator02\bin\Debug\calculator02.exe.config
+D:\c#homework\homework01\calculator02\bin\Debug\calculator02.exe
+D:\c#homework\homework01\calculator02\bin\Debug\calculator02.pdb
+D:\c#homework\homework01\calculator02\obj\Debug\calculator02.csprojAssemblyReference.cache
+D:\c#homework\homework01\calculator02\obj\Debug\calculator02.Form1.resources
+D:\c#homework\homework01\calculator02\obj\Debug\calculator02.Properties.Resources.resources
+D:\c#homework\homework01\calculator02\obj\Debug\calculator02.csproj.GenerateResource.cache
+D:\c#homework\homework01\calculator02\obj\Debug\calculator02.csproj.CoreCompileInputs.cache
+D:\c#homework\homework01\calculator02\obj\Debug\calculator02.exe
+D:\c#homework\homework01\calculator02\obj\Debug\calculator02.pdb
