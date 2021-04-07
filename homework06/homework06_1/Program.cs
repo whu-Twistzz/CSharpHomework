@@ -6,10 +6,10 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Xml.Serialization;
 
-namespace homework05_1
-{   
+namespace homework06_1
+{
     //订单类
-    class Order:IComparable
+   public class Order : IComparable
     {
         //定义订单号、顾客、订单总额
         private int id { get; set; }
@@ -18,7 +18,7 @@ namespace homework05_1
         //多个订单明细
         public List<OrderDetails> orderDetails = new List<OrderDetails>();
         public Order(int id, String customer, int totalMoney)
-        { 
+        {
             this.id = id;
             this.customer = customer;
             this.totalMoney = totalMoney;
@@ -62,9 +62,9 @@ namespace homework05_1
         public void addOrderDetails(string name, int number, int price)
         {
             OrderDetails od = new OrderDetails(name, number, price);
-            foreach(OrderDetails o in orderDetails)
+            foreach (OrderDetails o in orderDetails)
             {
-                if(o.Equals(od))
+                if (o.Equals(od))
                 {
                     Console.WriteLine("订单明细重复,添加失败!");
                     return;
@@ -101,7 +101,7 @@ namespace homework05_1
         public override bool Equals(object obj)
         {
             Order o = obj as Order;
-            return o.id == this.id ;
+            return o.id == this.id;
         }
         //重写tostring方法
         public override string ToString()
@@ -112,7 +112,7 @@ namespace homework05_1
 
 
     //订单明细类
-    class OrderDetails
+    public class OrderDetails
     {
         //定义商品名、商品数量、商品单价
         private String name { get; set; }
@@ -147,10 +147,10 @@ namespace homework05_1
 
     //订单服务类
     [Serializable]
-    class OrderService
+   public class OrderService
     {
         //定义订单集合
-        private List<Order> orders = new List<Order>();
+        public List<Order> orders = new List<Order>();
         //打印所有订单及其明细
         public void showAllOrder()
         {
@@ -181,7 +181,7 @@ namespace homework05_1
                 {
                     List<Order> orders = (List<Order>)xmlSerializer.Deserialize(fs);
                     Console.WriteLine("反序列化结果如下:");
-                    foreach(Order o in orders)
+                    foreach (Order o in orders)
                     {
                         Console.WriteLine("----------------------------------------");
                         Console.WriteLine("订单号  客户名  总金额");
@@ -267,11 +267,12 @@ namespace homework05_1
             }
         }
         //查询订单
-        public void searchOrder()
+        public List<Order> SearchOrder()
         {
             Console.WriteLine("1.根据订单号查询订单\n2.根据商品名查询订单\n3.根据客户名查询订单\n4.根据订单金额查询订单\n");
             int i = Convert.ToInt32(Console.ReadLine());
-            try {
+            try
+            {
                 switch (i)
                 {
                     //根据订单号查询订单
@@ -290,6 +291,7 @@ namespace homework05_1
                             o.showOrderDetails();
                             Console.WriteLine("----------------------------------------");
                         }
+                        return orderlist1;
                         break;
                     //根据商品名查询订单
                     case 2:
@@ -308,6 +310,7 @@ namespace homework05_1
                             o.showOrderDetails();
                             Console.WriteLine("----------------------------------------");
                         }
+                        return orderlist2;
                         break;
                     //根据客户名查询订单
                     case 3:
@@ -326,6 +329,7 @@ namespace homework05_1
                             o.showOrderDetails();
                             Console.WriteLine("----------------------------------------");
                         }
+                        return orderlist3;
                         break;
                     //根据订单金额查询订单
                     case 4:
@@ -347,12 +351,16 @@ namespace homework05_1
                             o.showOrderDetails();
                             Console.WriteLine("----------------------------------------");
                         }
+                        return orderlist4;
                         break;
+                    default:
+                        return null;
                 }
             }
             catch
             {
                 Console.WriteLine("查询失败!");
+                return null;
             }
         }
         //排序方法，默认订单号
@@ -360,31 +368,35 @@ namespace homework05_1
         {
             orders.Sort();
         }
+        public void sortOrders(Comparison<Order> func)
+        {
+            orders.Sort(func);
+        }
     }
     class Program
     {
         static void Main(string[] args)
         {
             bool isQuit = false;
-            OrderService os=new OrderService();
-            while(!isQuit)
-                {
+            OrderService os = new OrderService();
+            while (!isQuit)
+            {
                 Console.WriteLine("\n请输入序号，选择功能:");
                 Console.WriteLine("--------------------------------------------------");
                 Console.WriteLine("1.显示所有订单\n2.添加订单\n3.删除订单\n4.查询订单\n5.订单排序\n6.退出\n");
                 Console.WriteLine("--------------------------------------------------");
                 int choose = Convert.ToInt32(Console.ReadLine());
-                switch(choose)
+                switch (choose)
                 {
-                    case 1:os.showAllOrder(); break;
-                    case 2:os.addOrder();break;
-                    case 3:os.removeOrder();break;
-                    case 4:os.searchOrder();break;
-                    case 5:os.sortOrders();break;
-                    case 6:isQuit = true;break;
-                    default:Console.WriteLine("输入的序号有误，请重新输入!");break;
+                    case 1: os.showAllOrder(); break;
+                    case 2: os.addOrder(); break;
+                    case 3: os.removeOrder(); break;
+                    case 4: os.SearchOrder(); break;
+                    case 5: os.sortOrders(); break;
+                    case 6: isQuit = true; break;
+                    default: Console.WriteLine("输入的序号有误，请重新输入!"); break;
                 }
             }
-         }
+        }
     }
- }
+}
