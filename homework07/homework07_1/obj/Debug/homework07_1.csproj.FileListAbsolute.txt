@@ -1,0 +1,10 @@
+D:\c#homework\homework07\homework07_1\bin\Debug\homework07_1.exe.config
+D:\c#homework\homework07\homework07_1\bin\Debug\homework07_1.exe
+D:\c#homework\homework07\homework07_1\bin\Debug\homework07_1.pdb
+D:\c#homework\homework07\homework07_1\obj\Debug\homework07_1.csprojAssemblyReference.cache
+D:\c#homework\homework07\homework07_1\obj\Debug\homework07_1.Form1.resources
+D:\c#homework\homework07\homework07_1\obj\Debug\homework07_1.Properties.Resources.resources
+D:\c#homework\homework07\homework07_1\obj\Debug\homework07_1.csproj.GenerateResource.cache
+D:\c#homework\homework07\homework07_1\obj\Debug\homework07_1.csproj.CoreCompileInputs.cache
+D:\c#homework\homework07\homework07_1\obj\Debug\homework07_1.exe
+D:\c#homework\homework07\homework07_1\obj\Debug\homework07_1.pdb
