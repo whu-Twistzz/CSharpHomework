@@ -1,0 +1,15 @@
+D:\c#homework\homework08\homework08_1\bin\Debug\homework08_1.exe.config
+D:\c#homework\homework08\homework08_1\bin\Debug\homework08_1.exe
+D:\c#homework\homework08\homework08_1\bin\Debug\homework08_1.pdb
+D:\c#homework\homework08\homework08_1\bin\Debug\homework06_1.exe
+D:\c#homework\homework08\homework08_1\bin\Debug\homework06_1.pdb
+D:\c#homework\homework08\homework08_1\bin\Debug\homework06_1.exe.config
+D:\c#homework\homework08\homework08_1\obj\Debug\homework08_1.csprojAssemblyReference.cache
+D:\c#homework\homework08\homework08_1\obj\Debug\homework08_1.Form1.resources
+D:\c#homework\homework08\homework08_1\obj\Debug\homework08_1.Properties.Resources.resources
+D:\c#homework\homework08\homework08_1\obj\Debug\homework08_1.csproj.GenerateResource.cache
+D:\c#homework\homework08\homework08_1\obj\Debug\homework08_1.csproj.CoreCompileInputs.cache
+D:\c#homework\homework08\homework08_1\obj\Debug\homework08_1.csproj.CopyComplete
+D:\c#homework\homework08\homework08_1\obj\Debug\homework08_1.exe
+D:\c#homework\homework08\homework08_1\obj\Debug\homework08_1.pdb
+D:\c#homework\homework08\homework08_1\obj\Debug\homework08_1.Form2.resources
