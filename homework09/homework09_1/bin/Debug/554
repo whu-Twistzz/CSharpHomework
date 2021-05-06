@@ -1,0 +1,145 @@
+﻿<!DOCTYPE html>
+
+<html lang="en-us" xml:lang="en-us">
+
+    <head>
+
+        <meta http-equiv="X-UA-Compatible" content="IE=Edge" /><!-- custom.min.css --><link href="/windows/styles/custom-min.css" rel="stylesheet" type="text/css" />
+        
+        
+
+        <title>注册成为应用开发人员 – Windows 应用开发</title>
+        <meta name="Description" content="注册成为开发人员并将你的应用和游戏提交至 Microsoft Store 和其他 Microsoft 市场。" />
+        <meta name="Keywords" content="开发者帐户, 注册, 开发人员计划, 加入 Windows 开发人员计划" />
+        <meta name="Robots" content="noodp" />
+        <link rel="canonical" href="https://developer.microsoft.com/zh-cn/store/register" />
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+        <meta name="viewport" content="width=device-width" />
+        <meta name="ms.pagename" id="ms.pagename" content="cms/store/register" />
+        <meta name="cookieCompliance" content="true">
+        
+        <meta name="uhfHeaderId" content="win-dev-center-header">
+        <meta name="uhfFooterId" content="win-dev-center-footer">
+        <meta name="uhfPartnerId" content="DEV_Windows">
+        
+        
+        <script>
+            var msDocs = { data: {}, functions: {} };
+            if (!('Promise' in window && 'resolve' in window.Promise && 'reject' in window.Promise && 'all' in window.Promise && 'race' in window.Promise)) {
+                document.write('<script src="https://static.docs.com/ui/third-party/bluebird/3.5.0/bluebird.min.js"><\/script>');
+            }
+        var splitUrl = window.location.pathname.toLocaleLowerCase().split("/");
+        var pageLocale = splitUrl[1];
+        var mwfCSS = "https://mwf-service.akamaized.net/mwf/css/bundle/1.57.8/west-european/default/mwf-main.min.css";
+        var bidi = false;
+        if (pageLocale === "ar-sa") {
+        mwfCSS = "https://mwf-service.akamaized.net/mwf/css/bundle/1.57.8/arabic/default/mwf-main.min.css";
+        bidi=true;
+        }
+        if (pageLocale === "he-il") {
+        mwfCSS = "https://mwf-service.akamaized.net/mwf/css/bundle/1.57.8/arabic/default/mwf-main.min.css";
+        bidi=true;
+        }
+        
+        var mwfCSSLink = document.createElement("link");
+            mwfCSSLink.rel = "stylesheet";
+            mwfCSSLink.href = mwfCSS;
+            document.getElementsByTagName("head")[0].appendChild(mwfCSSLink);
+        
+        if (bidi) {
+            var ss = document.createElement("link");
+                ss.rel = "stylesheet";
+                ss.href = "/windows/styles/BiDi.css";
+                document.getElementsByTagName("head")[0].appendChild(ss);
+            var ss_1 = document.createElement("link");
+                ss_1.rel = "stylesheet";
+                ss_1.href= "/windows/styles/custom-min_ar-SA.css";
+                document.getElementsByTagName("head")[0].appendChild(ss_1);
+            var ss_2 = document.createElement("link");
+                ss_2.rel = "stylesheet";
+                ss_2.href= "/windows/styles/mwf-custom-bidi-min.css";
+                document.getElementsByTagName("head")[0].appendChild(ss_2);
+        }
+        </script>
+        <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-2.2.4.min.js"></script>
+        <script src="https://wcpstatic.microsoft.com/mscc/lib/v2/wcp-consent.js"></script>
+        <script src="https://static.docs.com/ui/third-party/developer.microsoft.com/1.1.0/developer-microsoft-com.js"></script>
+    </head>
+
+    <body>
+
+
+        <div id="headerAreaHolder" ms.pgarea="header" data-bi-name="header">
+            <div id="uhfPlaceHolder" class="c-me">
+            </div>
+        </div>
+
+        <script type="text/javascript"
+            src="https://mwf-service.akamaized.net/mwf/js/bundle/1.57.8/mwf-auto-init-main.var.min.js"></script><!--mwf-custom-min.css--><link rel="stylesheet" type="text/css" href="/windows/styles/mwf-custom-min.css" /><!-- Harmony code goes here --><section role="main" id="cx-root" class="x-m-b-12x">
+    <div class="cx-bg-gray-gradient x-m-b-12x">
+        <div data-grid="container">
+            <section class="m-hero-item f-x-left f-y-center context-accessory" role="presentation"><picture> <source srcset="images/RegisterHero_MWF_1600x600.png" media="(min-width: 1779px)"> <source srcset="images/RegisterHero_MWF_1600x600.png" media="(min-width: 1400px)"> <source srcset="images/RegisterHero_MWF_1259x472.png" media="(min-width: 1084px)"> <source srcset="images/RegisterHero_MWF_1083x609.png" media="(min-width:768px)"> <source srcset="images/RegisterHero_MWF_767x431.png" media="(min-width:540px)"> <source srcset="images/RegisterHero_MWF_539x303.png" media="(min-width:0)"> <img srcset="images/RegisterHero_MWF_1259x472.png" src="images/RegisterHero_MWF_1259x472.png" alt=""> </picture><div>
+                    <div>
+                        <h1 class="c-heading-2">注册</h1>
+                        <p class="c-paragraph-1">注册以向 Microsoft 店面提交应用和游戏。</p>
+                        <div class="c-group"><a href="https://partner.microsoft.com/dashboard/registration" class="c-call-to-action c-glyph"> <span>注册</span></a></div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+    <div data-grid="container">
+        <div data-grid="col-9" class="x-m-b-12x">
+            <header class="m-heading-3 x-p-t-0x">
+                <h2 class="c-heading-3 x-p-t-0x  x-p-b-3x">热门问题</h2>
+                <div class="c-drawer f-divider"><button class="c-glyph" aria-expanded="false" aria-controls="simpleDrawer1">开发者帐户的费用是多少？</button><div id="simpleDrawer1">
+                        <div>
+                            <p class="c-paragraph-3 x-p-l-3x x-m-b-3x">个人帐户约花费 19 美元，公司帐户约花费 99 美元（具体费用可能因你<a href="https://docs.microsoft.com/windows/uwp/publish/account-types-locations-and-fees" class="c-hyperlink">所在国家或地区</a>而异）。这是一次性注册费，之后不会收取任何费用。</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="c-drawer f-divider"><button class="c-glyph" aria-expanded="false" aria-controls="simpleDrawer2">需要如何操作才可以注册开发者帐户？</button><div id="simpleDrawer2">
+                        <p class="c-paragraph-3 x-p-l-3x x-m-b-3x">需要使用你希望与你的开发者帐户关联的 Microsoft 帐户登录。如果你还没有 Microsoft 帐户，可以在开始注册过程时获取一个。你还需要使用 Visa/Mastercard、PayPal（在<a href="https://docs.microsoft.com/windows/uwp/publish/account-types-locations-and-fees" class="c-hyperlink">支持的地点</a>）或促销代码为帐户付款。请注意，不接受预付费信用卡。</p>
+                    </div>
+                </div>
+                <div class="c-drawer f-divider"><button class="c-glyph" aria-expanded="false" aria-controls="simpleDrawer3">个人帐户和公司帐户的区别是什么？</button><div id="simpleDrawer3">
+                        <p class="c-paragraph-3 x-p-l-3x x-m-b-3x">个人帐户适用于自行开发的单个开发人员。公司帐户适用于组织和企业。通过公司帐户可使用某些<a href="https://docs.microsoft.com/windows/uwp/publish/store-policies#1014-account-type" class="c-hyperlink">附加功能</a>提交应用。在你注册公司帐户后，我们还需要进一步对公司帐户进行验证，以确保已向你授权为公司设置该帐户。此验证需要几天到几周时间，通常还会致电你的公司。这两种类型的帐户均允许提交应用和服务。有关详细信息，请参阅<a href="https://docs.microsoft.com/windows/uwp/publish/account-types-locations-and-fees" class="c-hyperlink">帐户类型、位置和费用</a>。</p>
+                    </div>
+                </div>
+                <div class="c-drawer f-divider"><button class="c-glyph" aria-expanded="false" aria-controls="simpleDrawer4">哪些市场受支持？</button><div id="simpleDrawer4">
+                        <p class="c-paragraph-3 x-p-l-3x x-m-b-3x">如果你居住在<a href="https://docs.microsoft.com/windows/uwp/publish/account-types-locations-and-fees" class="c-hyperlink">受支持的国家或地区</a>或在这些地方开展业务，则可以注册开发者帐户，并将应用提交到 Microsoft Store。Azure 计划适用于居住在<a href="https://docs.microsoft.com/legal/marketplace/participation-policy" class="c-hyperlink">受支持的国家或地区</a>或在这些地方开展业务的开发人员。</p>
+                    </div>
+                </div>
+                <div class="c-drawer f-divider"><button class="c-glyph" aria-expanded="false" aria-controls="simpleDrawer5">拥有开发者帐户后可以执行哪些操作？</button><div id="simpleDrawer5">
+                        <p class="c-paragraph-3 x-p-l-3x x-m-b-3x">使用开发人员帐户，可以向 Microsoft 市场（包括 Microsoft Store）提交应用和游戏。请注意，你首先需要确认你的付款和税务信息，然后才可以针对你发布的产品进行收费。</p>
+                    </div>
+                </div>
+                <div class="c-drawer f-divider"><button class="c-glyph" aria-expanded="false" aria-controls="simpleDrawer6">我的组织中多个人是否可以用同一个开发者帐户工作？</button><div id="simpleDrawer6">
+                        <p class="c-paragraph-3 x-p-l-3x x-m-b-3x">相同。你需要使用 Microsoft 帐户来创建该帐户。该帐户的所有者为此 Microsoft 帐户指定的人员，其对该帐户拥有完全控制权。创建该帐户后，你可以<a href="https://docs.microsoft.com/windows/uwp/publish/associate-azure-ad-with-partner-center" class="c-hyperlink">将你的合作伙伴中心帐户与组织的 Azure Active Directory 相关联</a>，然后<a href="https://docs.microsoft.com/windows/uwp/publish/add-users-groups-and-azure-ad-applications" class="c-hyperlink">向该帐户添加用户并赋予其相应的角色和权限</a>。</p>
+                    </div>
+                </div>
+                <div class="c-drawer f-divider"><button class="c-glyph" aria-expanded="false" aria-controls="simpleDrawer7">我看到一条消息，指示我的 Microsoft 帐户未与开发者帐户关联。为什么？</button><div id="simpleDrawer7">
+                        <p class="c-paragraph-3 x-p-l-3x x-m-b-3x">如果你的 Microsoft 帐户使用了带学校或公司域的电子邮件地址，你可能会看到此消息。如果你看到一条指示你的电子邮件用于多个帐户的提示，请选择<strong>“个人帐户”</strong>以继续操作。如果仍然无法完成帐户注册过程，你可能需要使用一个未与你的组织相关联的电子邮件地址来创建新的 Microsoft 帐户，然后使用这一新 Microsoft 帐户注册成为开发人员。</p>
+                    </div>
+                </div>
+                <div class="c-drawer f-divider"><button class="c-glyph" aria-expanded="false" aria-controls="simpleDrawer8">为什么我已经拥有开发者帐户，却仍收到关于注册过程的提示？</button><div id="simpleDrawer8">
+                        <p class="c-paragraph-3 x-p-l-3x">首先，检查你是否尝试使用与开发者帐户相关联的 Microsoft 帐户登录。如果是，你可能会看到一个提示，指示你的电子邮件与多个帐户一起使用；在此情况下，请选择个人帐户继续进行操作。如果未看到此提示，并且确定你使用的是正确的 Microsoft 帐户，请<a href="//go.microsoft.com/fwlink/p/?LinkId=331501" class="c-hyperlink">联系支持人员</a>。</p>
+                        <p class="c-paragraph-3 x-p-l-3x x-m-b-3x"><strong>注意</strong>：如果你的组织使用 Azure Active Directory <a href="https://docs.microsoft.com/windows/uwp/publish/manage-account-users" class="c-hyperlink">允许多个用户访问开发者帐户</a>，请确保使用组织授予你访问该帐户的权限所使用的电子邮件地址来尝试登录，而不是使用 Microsoft 帐户登录。如果仍然有问题，请联系你的组织的 Azure AD 管理员以获得帮助。</p>
+                    </div>
+                </div>
+                <div class="c-drawer f-divider"><button class="c-glyph" aria-expanded="false" aria-controls="simpleDrawer9">我如何获取有关开发者帐户的帮助？</button><div id="simpleDrawer9">
+                        <p class="c-paragraph-3 x-p-l-3x x-m-b-3x">访问我们的<a href="/windows/support" class="c-hyperlink">支持页面</a>，获取有关注册、帐户访问或其他问题的帮助。</p>
+                    </div>
+                </div>
+            </header>
+        </div>
+    </div>
+</section><script>
+            $(function(){
+                $("#includedContent").load("../include_feedback_socui.html");
+            });
+        </script>
+        <div id="includedContent"></div><!-- Feedback sock control JS --></body>
+
+</html>

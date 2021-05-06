@@ -1,0 +1,1114 @@
+﻿<!DOCTYPE html>
+<html lang="zh-CN" dir="ltr" class="no-js">
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<title>新闻中心</title>
+<script type="text/javascript" src="https://news.microsoft.com/wp-content/plugins/microsoft-uhf/assets/microsoft-cookie-list.js"></script>
+    <script src="https://unpkg.com/yett"></script>
+    <link rel='dns-prefetch' href='//az725175.vo.msecnd.net' />
+<link rel='dns-prefetch' href='//cdnjs.cloudflare.com' />
+<link rel='dns-prefetch' href='//s.w.org' />
+     <script>
+		function clicktaleTracking() {
+			var s = document.createElement( 'script' );
+			var src = "https://cdnssl.clicktale.net/www07/ptc/959721af-e707-44b6-9b6a-d14f3ec0f756.js";
+			s.setAttribute( 'src', src );
+			document.body.appendChild( s );
+		}
+     </script>
+	<link rel='stylesheet' id='wp-block-library-css'  href='https://news.microsoft.com/zh-cn/wp-includes/css/dist/block-library/style.min.css' type='text/css' media='all' />
+<link rel='stylesheet' id='mt-slick-css-css'  href='//cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.0/css/swiper.min.css' type='text/css' media='all' />
+<link rel='stylesheet' id='themefragments-css'  href='https://news.microsoft.com/wp-content/plugins/microsoft-fragments/assets/css/theme-fragments.min.css?ver=0.7.2' type='text/css' media='all' />
+<link rel='stylesheet' id='tribe-responsive-images-fe-css'  href='https://news.microsoft.com/wp-content/plugins/responsive-images-plugin/public/css/tribe-responsive-images-fe.min.css?ver=1606167878' type='text/css' media='all' />
+<link rel='stylesheet' id='microsoft-mosaic-grid-css'  href='https://news.microsoft.com/wp-content/plugins/mosaic-grid-headers/public/css/microsoft-mosaic-grid.min.css?ver=1606167877' type='text/css' media='all' />
+<link rel='stylesheet' id='mnc-css'  href='https://news.microsoft.com/wp-content/themes/microsoft-news-center-2016/assets/css/microsoft-news-center.min.css?ver=0.7.4' type='text/css' media='all' />
+<link rel='stylesheet' id='microsoft-social-sharing-css'  href='https://news.microsoft.com/wp-content/plugins/microsoft-social-sharing/public/css/microsoft-social-sharing.min.css?ver=1606167877' type='text/css' media='all' />
+<link rel='stylesheet' id='ms-cookie-content-css'  href='https://news.microsoft.com/wp-content/plugins/microsoft-oembeds/cookie-consent.css?ver=1.0.0' type='text/css' media='screen' />
+<script type='text/javascript' src='https://az725175.vo.msecnd.net/scripts/jsll-4.js'></script>
+<script type='text/javascript' src='https://news.microsoft.com/zh-cn/wp-includes/js/jquery/jquery.js?ver=1.12.4-wp'></script>
+<script type='text/javascript' src='https://news.microsoft.com/zh-cn/wp-includes/js/jquery/jquery-migrate.min.js?ver=1.4.1'></script>
+<link rel='https://api.w.org/' href='https://news.microsoft.com/zh-cn/wp-json/' />
+<link rel="canonical" href="https://news.microsoft.com/zh-cn/" />
+<link rel='shortlink' href='https://news.microsoft.com/zh-cn/' />
+<link rel="alternate" type="application/json+oembed" href="https://news.microsoft.com/zh-cn/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fnews.microsoft.com%2Fzh-cn%2F" />
+<link rel="alternate" type="text/xml+oembed" href="https://news.microsoft.com/zh-cn/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fnews.microsoft.com%2Fzh-cn%2F&#038;format=xml" />
+<link rel="stylesheet" href="https://www.microsoft.com/onerfstatics/marketingsites-eus-prod/chinese-simplified/shell/_scrf/css/themes=default.device=uplevel_web_pc/de-d4f5a9/33-fa7e00/4c-0b4a50/72-2965a5/41-e4e079/cd-a6d564/2b-bd61b8/64-b46b82?ver=2.0&amp;_cf=20210415" type="text/css" media="all" /><link rel='stylesheet' href='https://statics-marketingsites-eus-ms-com.akamaized.net/statics/override.css?c=7' type='text/css' /><!-- Stream WordPress user activity plugin v3.5.1 -->
+	<script>(function () {
+			var html = document.querySelectorAll('html')[0];
+			html.classList.remove('no-js');
+			html.classList.add('js');
+		}());</script>
+	<link rel='preload' href='//cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.0/js/swiper.min.js' as='script'/>
+<link rel='preload' href='https://news.microsoft.com/wp-content/plugins/microsoft-fragments/assets/js/theme-fragments.min.js?ver=0.7.2' as='script'/>
+<link rel='preload' href='https://news.microsoft.com/wp-content/plugins/responsive-images-plugin/public/js/tribe-responsive-images-fe.min.js' as='script'/>
+<link rel='preload' href='https://news.microsoft.com/wp-content/plugins/mosaic-grid-headers/public/js/microsoft-mosaic-grid.min.js' as='script'/>
+<link rel='preload' href='https://news.microsoft.com/wp-content/themes/microsoft-news-center-2016/assets/js/bundle.min.js?ver=0.7.4' as='script'/>
+<link rel='preload' href='https://news.microsoft.com/wp-content/plugins/page-links-to/dist/new-tab.js?ver=3.3.4' as='script'/>
+<link rel='preload' href='https://news.microsoft.com/wp-content/plugins/microsoft-oembeds/cookie-consent.js?ver=1.0.0' as='script'/>
+<link rel='preload' href='https://news.microsoft.com/wp-content/plugins/microsoft-uhf/assets/microsoft-uhf.js?ver=0.3.8' as='script'/>
+<link rel='preload' href='https://news.microsoft.com/wp-content/plugins/microsoft-uhf/assets/microsoft-cookie-updates.js?ver=0.3.8' as='script'/>
+
+<!-- Jetpack Open Graph Tags -->
+<meta property="og:type" content="website" />
+<meta property="og:title" content="新闻中心" />
+<meta property="og:url" content="https://news.microsoft.com/zh-cn/" />
+<meta property="og:site_name" content="新闻中心" />
+<meta property="og:image" content="https://s0.wp.com/i/blank.jpg" />
+<meta property="og:locale" content="zh_CN" />
+<meta name="twitter:text:title" content="Home" />
+<meta name="twitter:image" content="https://news.microsoft.com/wp-content/themes/microsoft-news-center-2016/assets/img/site-icon.png" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:description" content="访问文章了解更多信息。" />
+
+<!-- End Jetpack Open Graph Tags -->
+			<meta name="awa-pageType" content="Homepage">
+						<meta name="awa-market" content="zh-cn">
+						<meta name="awa-env" content="Production">
+				<!-- JSLL tracking -->
+	<script>
+		var config = {
+			syncMuid: awa.utils.isValueAssigned(awa.cookie.getCookie("MSCC")),
+			userConsentCookieName: "MSCC",
+			coreData: {
+				appId: "MNC",
+			},
+		};
+		awa.init(config);
+	</script>
+	<link rel="icon" href="https://news.microsoft.com/wp-content/themes/microsoft-news-center-2016/assets/img/site-icon.png" sizes="32x32" />
+<link rel="icon" href="https://news.microsoft.com/wp-content/themes/microsoft-news-center-2016/assets/img/site-icon.png" sizes="192x192" />
+<link rel="apple-touch-icon" href="https://news.microsoft.com/wp-content/themes/microsoft-news-center-2016/assets/img/site-icon.png" />
+<meta name="msapplication-TileImage" content="https://news.microsoft.com/wp-content/themes/microsoft-news-center-2016/assets/img/site-icon.png" />
+<script src="https://wcpstatic.microsoft.com/mscc/lib/v2/wcp-consent.js"></script><script src="https://www.microsoft.com/onerfstatics/marketingsites-eus-prod/shell/_scrf/js/themes=default/54-af9f9f/c0-247156/de-099401/e1-a50eee/e7-954872/d8-97d509/f0-251fe2/46-be1318/77-04a268/11-240c7b/63-077520/a4-34de62/bb-d7480b/db-bc0148/dc-7e9864/6d-c07ea1/9d-b58f60/f6-aa5278/cd-23d3b0/6d-1e7ed0/b7-cadaa7/c4-898cf2/ca-40b7b0/4e-ee3a55/3e-f5c39b/c3-6454d7/f9-7592d3/92-10345d/79-499886/7e-cda2d3/69-13871c/b7-0ad59f/e0-3c9860/91-97a04f/1f-100dea/33-abe4df/17-f90ef1?ver=2.0&_cf=20210415&iife=1"></script>	</head>
+	<body class="home page-template-default page page-id-54151 microsoft-uhf">
+
+	<a class="x-screen-reader skip-to-main" href="#main-content" tabindex="-1">跳过主内容</a>
+
+	<div id="headerArea" class="uhf"  data-m='{"cN":"headerArea","cT":"Area_coreuiArea","id":"a1Body","sN":1,"aN":"Body"}'>
+                <div id="headerRegion"     data-region-key="headerregion" data-m='{"cN":"headerRegion","cT":"Region_coreui-region","id":"r1a1","sN":1,"aN":"a1"}' >
+
+    <div  id="headerUniversalHeader" data-m='{"cN":"headerUniversalHeader","cT":"Module_coreui-universalheader","id":"m1r1a1","sN":1,"aN":"r1a1"}'  data-module-id="Category|headerRegion|coreui-region|headerUniversalHeader|coreui-universalheader">
+        
+
+                        <div id="epb" class="x-hidden x-hidden-vp-mobile-st uhfc-universal-context context-uhf" data-m='{"cN":"epb_cont","cT":"Container","id":"c1m1r1a1","sN":1,"aN":"m1r1a1"}'>
+
+	<div class="c-uhfh-alert f-information epb-container theme-light" role="dialog" aria-label="促销性横幅" data-m='{"cT":"Container","id":"c1c1m1r1a1","sN":1,"aN":"c1m1r1a1"}' data-pb="[{&quot;Browser&quot;:&quot;anaheim&quot;,&quot;ExtensionType&quot;:&quot;windows10only&quot;,&quot;ExtensionUrl&quot;:&quot;https://go.microsoft.com/fwlink/?linkid=2128969&amp;pc=W037&quot;,&quot;BackgroundColorDarkTheme&quot;:&quot;b-black&quot;,&quot;LogoUrlDarkTheme&quot;:&quot;https://img-prod-cms-rt-microsoft-com.akamaized.net/cms/api/am/imageFileData/RE4xvsU?ver=e636&quot;,&quot;ActionLinkBackgroundColorDarkTheme&quot;:&quot;btn-white&quot;,&quot;BackgroundColorLightTheme&quot;:&quot;b-white&quot;,&quot;LogoUrlLightTheme&quot;:&quot;https://img-prod-cms-rt-microsoft-com.akamaized.net/cms/api/am/imageFileData/RE4xvsU?ver=e636&quot;,&quot;ActionLinkBackgroundColorLightTheme&quot;:&quot;btn-light-blue&quot;,&quot;Title&quot;:&quot;从桌面上一张张的照片探索世界立刻下载必应壁纸 APP&quot;,&quot;Paragraph&quot;:&quot;下载必应壁纸 APP ，每天为您换美桌面&quot;,&quot;ActionLinkText&quot;:&quot;立刻下载&quot;,&quot;ActionLinkAriaLabel&quot;:&quot;立刻下载&quot;,&quot;DismissText&quot;:&quot;不，谢谢&quot;,&quot;DismissAriaLabel&quot;:&quot;不，谢谢&quot;,&quot;CookieExpiration&quot;:&quot;30&quot;,&quot;CurrentTheme&quot;:&quot;theme-light&quot;},{&quot;Browser&quot;:&quot;chrome&quot;,&quot;ExtensionType&quot;:&quot;news&quot;,&quot;ExtensionUrl&quot;:&quot;https://browserdefaults.microsoft.com/extn/redirect/?xid=10&amp;br=gc&amp;channel=uhf&amp;pc=U556&quot;,&quot;BackgroundColorDarkTheme&quot;:&quot;b-black&quot;,&quot;LogoUrlDarkTheme&quot;:&quot;https://img-prod-cms-rt-microsoft-com.akamaized.net/cms/api/am/imageFileData/RE4myc9?ver=c8c3&quot;,&quot;ActionLinkBackgroundColorDarkTheme&quot;:&quot;btn-white&quot;,&quot;BackgroundColorLightTheme&quot;:&quot;b-white&quot;,&quot;LogoUrlLightTheme&quot;:&quot;https://img-prod-cms-rt-microsoft-com.akamaized.net/cms/api/am/imageFileData/RE4myc9?ver=c8c3&quot;,&quot;ActionLinkBackgroundColorLightTheme&quot;:&quot;btn-red&quot;,&quot;Title&quot;:&quot;随时了解全球重大新闻&quot;,&quot;Paragraph&quot;:&quot;获取 Microsoft News 扩展&quot;,&quot;ActionLinkText&quot;:&quot;立即添加&quot;,&quot;ActionLinkAriaLabel&quot;:&quot;立即添加&quot;,&quot;DismissText&quot;:&quot;不，谢谢&quot;,&quot;DismissAriaLabel&quot;:&quot;不，谢谢&quot;,&quot;CookieExpiration&quot;:&quot;30&quot;,&quot;CurrentTheme&quot;:&quot;theme-light&quot;},{&quot;Browser&quot;:&quot;firefox&quot;,&quot;ExtensionType&quot;:&quot;msn&quot;,&quot;ExtensionUrl&quot;:&quot;https://browserdefaults.microsoft.com/BNP/redirect?br=mf&amp;xid=2&amp;channel=uhf&quot;,&quot;BackgroundColorDarkTheme&quot;:&quot;b-blue&quot;,&quot;LogoUrlDarkTheme&quot;:&quot;https://img-prod-cms-rt-microsoft-com.akamaized.net/cms/api/am/imageFileData/RE3zanz?ver=4e18&quot;,&quot;ActionLinkBackgroundColorDarkTheme&quot;:&quot;btn-white&quot;,&quot;BackgroundColorLightTheme&quot;:&quot;b-white&quot;,&quot;LogoUrlLightTheme&quot;:&quot;https://img-prod-cms-rt-microsoft-com.akamaized.net/cms/api/am/imageFileData/RE3zcX5?ver=0d48&quot;,&quot;ActionLinkBackgroundColorLightTheme&quot;:&quot;btn-blue&quot;,&quot;Title&quot;:&quot;随时了解全球重大新闻&quot;,&quot;Paragraph&quot;:&quot;获取 Bing + MSN 扩展&quot;,&quot;ActionLinkText&quot;:&quot;立即添加&quot;,&quot;ActionLinkAriaLabel&quot;:&quot;立即添加&quot;,&quot;DismissText&quot;:&quot;不，谢谢&quot;,&quot;DismissAriaLabel&quot;:&quot;不，谢谢&quot;,&quot;CookieExpiration&quot;:&quot;30&quot;,&quot;CurrentTheme&quot;:&quot;theme-light&quot;}]" data-pb-g="true">
+		<div>
+			<div class="c-paragraph">
+				<img alt="" data-src="" src="" class="f-img-lzy" />
+				<span class="c-text-group pb-content">
+					<span class="epb-launch pb-content-heading"></span>
+					<span class="epb-text pb-content-text"></span>
+				</span>
+			</div>
+			<span class="c-group">
+				<button id="close-epb" class="c-action-trigger c-action-cancel glyph-cancel" data-m='{"cN":"PB-dismiss_nonnav","id":"nn1c1c1m1r1a1","sN":1,"aN":"c1c1m1r1a1"}'></button>
+				<a id="epbTryNow" href="" target="_blank" class="epb-launch c-action-trigger c-action-open" data-m='{"cN":"PB-launch_nav","id":"n2c1c1m1r1a1","sN":2,"aN":"c1c1m1r1a1"}'></a>
+			</span>
+		</div>
+	</div>
+
+
+
+
+
+                            
+                        </div>
+
+                        <div data-m='{"cN":"cookiebanner_cont","cT":"Container","id":"c2c1m1r1a1","sN":2,"aN":"c1m1r1a1"}'>
+
+<div id="uhfCookieAlert" data-locale="zh-cn">
+    <div id="msccBannerV2"></div>
+</div>
+
+                            
+                        </div>
+
+
+
+        <a id="uhfSkipToMain" class="m-skip-to-main" href="javascript:void(0)" data-href="" tabindex="0" data-m='{"cN":"Skip to content_nonnav","id":"nn3c1m1r1a1","sN":3,"aN":"c1m1r1a1"}'>跳转至主内容</a>
+
+
+<header class="c-uhfh context-uhf no-js c-sgl-stck c-category-header " itemscope="itemscope" data-header-footprint="/MSNewsZHCN/MSNewsHeaderZHCN, fromService: True"   data-magict="true"  itemtype="http://schema.org/Organization">
+    <div class="theme-light js-global-head f-closed  global-head-cont" data-m='{"cN":"Universal Header_cont","cT":"Container","id":"c4c1m1r1a1","sN":4,"aN":"c1m1r1a1"}'>
+        <div class="c-uhfh-gcontainer-st">
+            <button type="button" class="c-action-trigger c-glyph glyph-global-nav-button" aria-label="所有 Microsoft 项目都会扩展以显示 Microsoft 产品和服务的列表" initialState-label="所有 Microsoft 项目都会扩展以显示 Microsoft 产品和服务的列表" toggleState-label="Close All Microsoft list" aria-expanded="false" data-m='{"cN":"Mobile menu button_nonnav","id":"nn1c4c1m1r1a1","sN":1,"aN":"c4c1m1r1a1"}'></button>
+            <button type="button" class="c-action-trigger c-glyph glyph-arrow-htmllegacy" aria-label="关闭搜索" aria-expanded="false" data-m='{"cN":"Close Search_nonnav","id":"nn2c4c1m1r1a1","sN":2,"aN":"c4c1m1r1a1"}'></button>
+                    <a id="uhfLogo" class="c-logo c-sgl-stk-uhfLogo" itemprop="url" href="https://www.microsoft.com" aria-label="Microsoft" data-m='{"cN":"GlobalNav_Logo_cont","cT":"Container","id":"c3c4c1m1r1a1","sN":3,"aN":"c4c1m1r1a1"}'>
+                        <img alt="" itemprop="logo" class="c-image" src="https://img-prod-cms-rt-microsoft-com.akamaized.net/cms/api/am/imageFileData/RE1Mu3b?ver=5c31" role="presentation" aria-hidden="true" />
+                        <span itemprop="name" role="presentation" aria-hidden="true">Microsoft</span>
+                    </a>
+            <div class="f-mobile-title">
+                <button type="button" class="c-action-trigger c-glyph glyph-chevron-left" aria-label="查看更多菜单选项" data-m='{"cN":"Mobile back button_nonnav","id":"nn4c4c1m1r1a1","sN":4,"aN":"c4c1m1r1a1"}'></button>
+                <span data-global-title="Microsoft 主页" class="js-mobile-title">新闻中心</span>
+                <button type="button" class="c-action-trigger c-glyph glyph-chevron-right" aria-label="查看更多菜单选项" data-m='{"cN":"Mobile forward button_nonnav","id":"nn5c4c1m1r1a1","sN":5,"aN":"c4c1m1r1a1"}'></button>
+            </div>
+                    <div class="c-show-pipe x-hidden-vp-mobile-st">
+                        <a id="uhfCatLogo" class="c-logo c-cat-logo" href="http://news.microsoft.com/zh-cn/" aria-label="新闻中心" itemprop="url" data-m='{"cN":"CatNav_新闻中心_nav","id":"n6c4c1m1r1a1","sN":6,"aN":"c4c1m1r1a1"}'>
+                                <span>新闻中心</span>
+                        </a>
+                    </div>
+                <div class="cat-logo-button-cont x-hidden">
+                        <button type="button" id="uhfCatLogoButton" class="c-cat-logo-button x-hidden" aria-expanded="false" aria-label="新闻中心" data-m='{"cN":"新闻中心_nonnav","id":"nn7c4c1m1r1a1","sN":7,"aN":"c4c1m1r1a1"}'>
+                            新闻中心
+                        </button>
+                </div>
+
+
+
+                    <nav id="uhf-g-nav" aria-label="上下文菜单" class="c-uhfh-gnav" data-m='{"cN":"Category nav_cont","cT":"Container","id":"c8c4c1m1r1a1","sN":8,"aN":"c4c1m1r1a1"}'>
+            <ul class="js-paddle-items">
+                    <li class="single-link js-nav-menu x-hidden-none-mobile-vp uhf-menu-item">
+                        <a class="c-uhf-nav-link" href="http://news.microsoft.com/zh-cn/" data-m='{"cN":"CatNav_主页_nav","id":"n1c8c4c1m1r1a1","sN":1,"aN":"c8c4c1m1r1a1"}' > 主页 </a>
+                    </li>
+                                        <li class="nested-menu uhf-menu-item">
+                            <div class="c-uhf-menu js-nav-menu">
+                                <button type="button" id="c-shellmenu_39"  aria-expanded="false" data-m='{"cN":"CatNav_Company_nonnav","id":"nn2c8c4c1m1r1a1","sN":2,"aN":"c8c4c1m1r1a1"}'>微软公司</button>
+
+                                <ul class="" data-class-idn="" aria-hidden="true" data-m='{"cN":"Company_cont","cT":"Container","id":"c3c8c4c1m1r1a1","sN":3,"aN":"c8c4c1m1r1a1"}'>
+        <li class="js-nav-menu single-link" data-m='{"cN":"Company_MicrosoftChina_cont","cT":"Container","id":"c1c3c8c4c1m1r1a1","sN":1,"aN":"c3c8c4c1m1r1a1"}'>
+            <a id="c-shellmenu_40" class="js-subm-uhf-nav-link" href="http://news.microsoft.com/zh-cn/features/%e5%be%ae%e8%bd%af%e5%9c%a8%e4%b8%ad%e5%9b%bd/" data-m='{"cN":"CatNav_Company_MicrosoftChina_nav","id":"n1c1c3c8c4c1m1r1a1","sN":1,"aN":"c1c3c8c4c1m1r1a1"}'>微软中国介绍</a>
+            
+        </li>
+        <li class="js-nav-menu single-link" data-m='{"cN":"Company_CorporateSocialResponsibility_cont","cT":"Container","id":"c2c3c8c4c1m1r1a1","sN":2,"aN":"c3c8c4c1m1r1a1"}'>
+            <a id="c-shellmenu_41" class="js-subm-uhf-nav-link" href="http://news.microsoft.com/zh-cn/presskits/csr/" data-m='{"cN":"CatNav_Company_CorporateSocialResponsibility_nav","id":"n1c2c3c8c4c1m1r1a1","sN":1,"aN":"c2c3c8c4c1m1r1a1"}'>企业社会责任</a>
+            
+        </li>
+        <li class="js-nav-menu single-link" data-m='{"cN":"Company_GlobalBusinessOrganizations_cont","cT":"Container","id":"c3c3c8c4c1m1r1a1","sN":3,"aN":"c3c8c4c1m1r1a1"}'>
+            <a id="c-shellmenu_42" class="js-subm-uhf-nav-link" href="http://www.microsoft.com/worldwide/" data-m='{"cN":"CatNav_Company_GlobalBusinessOrganizations_nav","id":"n1c3c3c8c4c1m1r1a1","sN":1,"aN":"c3c3c8c4c1m1r1a1"}'>全球营业机构</a>
+            
+        </li>
+        <li class="js-nav-menu single-link" data-m='{"cN":"Company_ChinaManagementTeam_cont","cT":"Container","id":"c4c3c8c4c1m1r1a1","sN":4,"aN":"c3c8c4c1m1r1a1"}'>
+            <a id="c-shellmenu_43" class="js-subm-uhf-nav-link" href="http://news.microsoft.com/zh-cn/microsoft-senior-leaders/" data-m='{"cN":"CatNav_Company_ChinaManagementTeam_nav","id":"n1c4c3c8c4c1m1r1a1","sN":1,"aN":"c4c3c8c4c1m1r1a1"}'>中国区管理团队</a>
+            
+        </li>
+        <li class="js-nav-menu single-link" data-m='{"cN":"Company_MicrosoftGlobalManagement_cont","cT":"Container","id":"c5c3c8c4c1m1r1a1","sN":5,"aN":"c3c8c4c1m1r1a1"}'>
+            <a id="c-shellmenu_44" class="js-subm-uhf-nav-link" href="http://news.microsoft.com/microsoft-senior-leaders/" data-m='{"cN":"CatNav_Company_MicrosoftGlobalManagement_nav","id":"n1c5c3c8c4c1m1r1a1","sN":1,"aN":"c5c3c8c4c1m1r1a1"}'>微软全球管理层</a>
+            
+        </li>
+                                                    
+                                </ul>
+                            </div>
+                        </li>                        <li class="nested-menu uhf-menu-item">
+                            <div class="c-uhf-menu js-nav-menu">
+                                <button type="button" id="c-shellmenu_45"  aria-expanded="false" data-m='{"cN":"CatNav_Products_nonnav","id":"nn4c8c4c1m1r1a1","sN":4,"aN":"c8c4c1m1r1a1"}'>微软产品</button>
+
+                                <ul class="" data-class-idn="" aria-hidden="true" data-m='{"cN":"Products_cont","cT":"Container","id":"c5c8c4c1m1r1a1","sN":5,"aN":"c8c4c1m1r1a1"}'>
+        <li class="js-nav-menu single-link" data-m='{"cN":"Products_Cloud_cont","cT":"Container","id":"c1c5c8c4c1m1r1a1","sN":1,"aN":"c5c8c4c1m1r1a1"}'>
+            <a id="c-shellmenu_46" class="js-subm-uhf-nav-link" href="http://news.microsoft.com/zh-cn/presskits/cloud/" data-m='{"cN":"CatNav_Products_Cloud_nav","id":"n1c1c5c8c4c1m1r1a1","sN":1,"aN":"c1c5c8c4c1m1r1a1"}'>云</a>
+            
+        </li>
+        <li class="js-nav-menu single-link" data-m='{"cN":"Products_BigData_cont","cT":"Container","id":"c2c5c8c4c1m1r1a1","sN":2,"aN":"c5c8c4c1m1r1a1"}'>
+            <a id="c-shellmenu_47" class="js-subm-uhf-nav-link" href="http://news.microsoft.com/zh-cn/presskits/big-data/" data-m='{"cN":"CatNav_Products_BigData_nav","id":"n1c2c5c8c4c1m1r1a1","sN":1,"aN":"c2c5c8c4c1m1r1a1"}'>大数据</a>
+            
+        </li>
+        <li class="js-nav-menu single-link" data-m='{"cN":"Products_Equipment_cont","cT":"Container","id":"c3c5c8c4c1m1r1a1","sN":3,"aN":"c5c8c4c1m1r1a1"}'>
+            <a id="c-shellmenu_48" class="js-subm-uhf-nav-link" href="http://news.microsoft.com/zh-cn/presskits/equipment/" data-m='{"cN":"CatNav_Products_Equipment_nav","id":"n1c3c5c8c4c1m1r1a1","sN":1,"aN":"c3c5c8c4c1m1r1a1"}'>设备</a>
+            
+        </li>
+        <li class="js-nav-menu single-link" data-m='{"cN":"Products_Windows_cont","cT":"Container","id":"c4c5c8c4c1m1r1a1","sN":4,"aN":"c5c8c4c1m1r1a1"}'>
+            <a id="c-shellmenu_49" class="js-subm-uhf-nav-link" href="http://news.microsoft.com/zh-cn/presskits/windows/" data-m='{"cN":"CatNav_Products_Windows_nav","id":"n1c4c5c8c4c1m1r1a1","sN":1,"aN":"c4c5c8c4c1m1r1a1"}'>Windows</a>
+            
+        </li>
+        <li class="js-nav-menu single-link" data-m='{"cN":"Products_Office_cont","cT":"Container","id":"c5c5c8c4c1m1r1a1","sN":5,"aN":"c5c8c4c1m1r1a1"}'>
+            <a id="c-shellmenu_50" class="js-subm-uhf-nav-link" href="http://news.microsoft.com/zh-cn/presskits/office/" data-m='{"cN":"CatNav_Products_Office_nav","id":"n1c5c5c8c4c1m1r1a1","sN":1,"aN":"c5c5c8c4c1m1r1a1"}'>Office</a>
+            
+        </li>
+        <li class="js-nav-menu single-link" data-m='{"cN":"Products_Xbox_cont","cT":"Container","id":"c6c5c8c4c1m1r1a1","sN":6,"aN":"c5c8c4c1m1r1a1"}'>
+            <a id="c-shellmenu_51" class="js-subm-uhf-nav-link" href="http://news.microsoft.com/zh-cn/presskits/entertainment/" data-m='{"cN":"CatNav_Products_Xbox_nav","id":"n1c6c5c8c4c1m1r1a1","sN":1,"aN":"c6c5c8c4c1m1r1a1"}'>Xbox</a>
+            
+        </li>
+        <li class="js-nav-menu single-link" data-m='{"cN":"Products_ConsumerServices_cont","cT":"Container","id":"c7c5c8c4c1m1r1a1","sN":7,"aN":"c5c8c4c1m1r1a1"}'>
+            <a id="c-shellmenu_52" class="js-subm-uhf-nav-link" href="http://news.microsoft.com/zh-cn/presskits/consumer-grade-service/" data-m='{"cN":"CatNav_Products_ConsumerServices_nav","id":"n1c7c5c8c4c1m1r1a1","sN":1,"aN":"c7c5c8c4c1m1r1a1"}'>消费级服务</a>
+            
+        </li>
+        <li class="js-nav-menu single-link" data-m='{"cN":"Products_Dynamics_cont","cT":"Container","id":"c8c5c8c4c1m1r1a1","sN":8,"aN":"c5c8c4c1m1r1a1"}'>
+            <a id="c-shellmenu_53" class="js-subm-uhf-nav-link" href="http://news.microsoft.com/zh-cn/presskit/dynamics/" data-m='{"cN":"CatNav_Products_Dynamics_nav","id":"n1c8c5c8c4c1m1r1a1","sN":1,"aN":"c8c5c8c4c1m1r1a1"}'>Dynamics</a>
+            
+        </li>
+        <li class="js-nav-menu single-link" data-m='{"cN":"Products_DevelopmentTools_cont","cT":"Container","id":"c9c5c8c4c1m1r1a1","sN":9,"aN":"c5c8c4c1m1r1a1"}'>
+            <a id="c-shellmenu_54" class="js-subm-uhf-nav-link" href="http://news.microsoft.com/zh-cn/presskits/development-facility/" data-m='{"cN":"CatNav_Products_DevelopmentTools_nav","id":"n1c9c5c8c4c1m1r1a1","sN":1,"aN":"c9c5c8c4c1m1r1a1"}'>开发工具</a>
+            
+        </li>
+                                                    
+                                </ul>
+                            </div>
+                        </li>                        <li class="single-link js-nav-menu uhf-menu-item">
+                            <a id="c-shellmenu_55" class="c-uhf-nav-link" href="http://news.microsoft.com/zh-cn/blogs/" data-m='{"cN":"CatNav_Attention_nav","id":"n6c8c4c1m1r1a1","sN":6,"aN":"c8c4c1m1r1a1"}'>关注微软</a>
+                        </li>
+                        <li class="nested-menu uhf-menu-item">
+                            <div class="c-uhf-menu js-nav-menu">
+                                <button type="button" id="c-shellmenu_56"  aria-expanded="false" data-m='{"cN":"CatNav_Press_nonnav","id":"nn7c8c4c1m1r1a1","sN":7,"aN":"c8c4c1m1r1a1"}'>新闻工具</button>
+
+                                <ul class="" data-class-idn="" aria-hidden="true" data-m='{"cN":"Press_cont","cT":"Container","id":"c8c8c4c1m1r1a1","sN":8,"aN":"c8c4c1m1r1a1"}'>
+        <li class="js-nav-menu single-link" data-m='{"cN":"Press_PhotoGallery_cont","cT":"Container","id":"c1c8c8c4c1m1r1a1","sN":1,"aN":"c8c8c4c1m1r1a1"}'>
+            <a id="c-shellmenu_57" class="js-subm-uhf-nav-link" href="http://news.microsoft.com/imageGallery/" data-m='{"cN":"CatNav_Press_PhotoGallery_nav","id":"n1c1c8c8c4c1m1r1a1","sN":1,"aN":"c1c8c8c4c1m1r1a1"}'>图片库</a>
+            
+        </li>
+        <li class="js-nav-menu single-link" data-m='{"cN":"Press_MicrosoftNumbers_cont","cT":"Container","id":"c2c8c8c4c1m1r1a1","sN":2,"aN":"c8c8c4c1m1r1a1"}'>
+            <a id="c-shellmenu_58" class="js-subm-uhf-nav-link" href="http://news.microsoft.com/stories/zh-cn/bythenumbers/index.html" data-m='{"cN":"CatNav_Press_MicrosoftNumbers_nav","id":"n1c2c8c8c4c1m1r1a1","sN":1,"aN":"c2c8c8c4c1m1r1a1"}'>透过数字看微软</a>
+            
+        </li>
+        <li class="js-nav-menu single-link" data-m='{"cN":"Press_ContactUs_cont","cT":"Container","id":"c3c8c8c4c1m1r1a1","sN":3,"aN":"c8c8c4c1m1r1a1"}'>
+            <a id="c-shellmenu_59" class="js-subm-uhf-nav-link" href="http://support.microsoft.com/?ln=zh-cn" data-m='{"cN":"CatNav_Press_ContactUs_nav","id":"n1c3c8c8c4c1m1r1a1","sN":1,"aN":"c3c8c8c4c1m1r1a1"}'>联系我们</a>
+            
+        </li>
+        <li class="js-nav-menu single-link" data-m='{"cN":"Press_WorldwideNews_cont","cT":"Container","id":"c4c8c8c4c1m1r1a1","sN":4,"aN":"c8c8c4c1m1r1a1"}'>
+            <a id="c-shellmenu_60" class="js-subm-uhf-nav-link" href="http://news.microsoft.com/worldwide-microsoft-pr-sites/" data-m='{"cN":"CatNav_Press_WorldwideNews_nav","id":"n1c4c8c8c4c1m1r1a1","sN":1,"aN":"c4c8c8c4c1m1r1a1"}'>Worldwide News</a>
+            
+        </li>
+                                                    
+                                </ul>
+                            </div>
+                        </li>
+
+                <li id="overflow-menu" class="overflow-menu x-hidden uhf-menu-item">
+                        <div class="c-uhf-menu js-nav-menu">
+        <button data-m='{"pid":"更多","id":"nn9c8c4c1m1r1a1","sN":9,"aN":"c8c4c1m1r1a1"}' type="button" aria-label="更多" aria-expanded="false">更多</button>
+        <ul id="overflow-menu-list" aria-hidden="true" class="overflow-menu-list">
+        </ul>
+    </div>
+
+                </li>
+                            </ul>
+            
+        </nav>
+
+
+            <div class="c-uhfh-actions" data-m='{"cN":"Header actions_cont","cT":"Container","id":"c9c4c1m1r1a1","sN":9,"aN":"c4c1m1r1a1"}'>
+                <div class="wf-menu">        <nav id="uhf-c-nav" aria-label="所有 Microsoft 菜单" data-m='{"cN":"GlobalNav_cont","cT":"Container","id":"c1c9c4c1m1r1a1","sN":1,"aN":"c9c4c1m1r1a1"}'>
+            <ul class="js-paddle-items">
+                <li>
+                    <div class="c-uhf-menu js-nav-menu">
+                        <button type="button" class="c-button-logo all-ms-nav" aria-label="所有 Microsoft 项目都会扩展以显示 Microsoft 产品和服务的列表" aria-expanded="false" data-m='{"cN":"GlobalNav_More_nonnav","id":"nn1c1c9c4c1m1r1a1","sN":1,"aN":"c1c9c4c1m1r1a1"}'> <span>所有 Microsoft</span></button>
+                        <ul class="f-multi-column f-multi-column-6" aria-hidden="true" data-m='{"cN":"More_cont","cT":"Container","id":"c2c1c9c4c1m1r1a1","sN":2,"aN":"c1c9c4c1m1r1a1"}'>
+                                    <li class="c-w0-contr">
+            <ul class="c-w0">
+        <li class="js-nav-menu single-link" data-m='{"cN":"M365_cont","cT":"Container","id":"c1c2c1c9c4c1m1r1a1","sN":1,"aN":"c2c1c9c4c1m1r1a1"}'>
+            <a id="shellmenu_0" class="js-subm-uhf-nav-link" href="https://www.microsoft.com/microsoft-365" data-m='{"cN":"W0Nav_M365_nav","id":"n1c1c2c1c9c4c1m1r1a1","sN":1,"aN":"c1c2c1c9c4c1m1r1a1"}'>Microsoft 365</a>
+            
+        </li>
+        <li class="js-nav-menu single-link" data-m='{"cN":"Office_cont","cT":"Container","id":"c2c2c1c9c4c1m1r1a1","sN":2,"aN":"c2c1c9c4c1m1r1a1"}'>
+            <a id="shellmenu_1" class="js-subm-uhf-nav-link" href="https://www.microsoft.com/microsoft-365/microsoft-office" data-m='{"cN":"W0Nav_Office_nav","id":"n1c2c2c1c9c4c1m1r1a1","sN":1,"aN":"c2c2c1c9c4c1m1r1a1"}'>Office</a>
+            
+        </li>
+        <li class="js-nav-menu single-link" data-m='{"cN":"Windows_cont","cT":"Container","id":"c3c2c1c9c4c1m1r1a1","sN":3,"aN":"c2c1c9c4c1m1r1a1"}'>
+            <a id="shellmenu_2" class="js-subm-uhf-nav-link" href="https://www.microsoft.com/zh-cn/windows/" data-m='{"cN":"W0Nav_Windows_nav","id":"n1c3c2c1c9c4c1m1r1a1","sN":1,"aN":"c3c2c1c9c4c1m1r1a1"}'>Windows</a>
+            
+        </li>
+        <li class="js-nav-menu single-link" data-m='{"cN":"Surface_cont","cT":"Container","id":"c4c2c1c9c4c1m1r1a1","sN":4,"aN":"c2c1c9c4c1m1r1a1"}'>
+            <a id="shellmenu_3" class="js-subm-uhf-nav-link" href="https://www.microsoft.com/zh-cn/surface" data-m='{"cN":"W0Nav_Surface_nav","id":"n1c4c2c1c9c4c1m1r1a1","sN":1,"aN":"c4c2c1c9c4c1m1r1a1"}'>Surface</a>
+            
+        </li>
+        <li class="js-nav-menu single-link" data-m='{"cN":"Xbox_cont","cT":"Container","id":"c5c2c1c9c4c1m1r1a1","sN":5,"aN":"c2c1c9c4c1m1r1a1"}'>
+            <a id="shellmenu_4" class="js-subm-uhf-nav-link" href="https://www.xbox.com/" data-m='{"cN":"W0Nav_Xbox_nav","id":"n1c5c2c1c9c4c1m1r1a1","sN":1,"aN":"c5c2c1c9c4c1m1r1a1"}'>Xbox</a>
+            
+        </li>
+        <li class="js-nav-menu single-link" data-m='{"cN":"Deals_cont","cT":"Container","id":"c6c2c1c9c4c1m1r1a1","sN":6,"aN":"c2c1c9c4c1m1r1a1"}'>
+            <a id="shellmenu_5" class="js-subm-uhf-nav-link" href="https://www.microsoftstore.com.cn/promotion?WT.mc_id=msftcn_MSCOM_HP_DEALS_202103" data-m='{"cN":"W0Nav_Deals_nav","id":"n1c6c2c1c9c4c1m1r1a1","sN":1,"aN":"c6c2c1c9c4c1m1r1a1"}'>优惠</a>
+            
+        </li>
+        <li class="js-nav-menu single-link" data-m='{"cN":"Support_cont","cT":"Container","id":"c7c2c1c9c4c1m1r1a1","sN":7,"aN":"c2c1c9c4c1m1r1a1"}'>
+            <a id="l1_support" class="js-subm-uhf-nav-link" href="https://support.microsoft.com/zh-cn" data-m='{"cN":"W0Nav_Support_nav","id":"n1c7c2c1c9c4c1m1r1a1","sN":1,"aN":"c7c2c1c9c4c1m1r1a1"}'>支持</a>
+            
+        </li>
+            </ul>
+        </li>
+
+<li class="f-sub-menu js-nav-menu nested-menu" data-m='{"cT":"Container","id":"c8c2c1c9c4c1m1r1a1","sN":8,"aN":"c2c1c9c4c1m1r1a1"}'>
+
+    <span id="uhf-navspn-shellmenu_8-span" style="display:none"   f-multi-parent="true" aria-expanded="false" data-m='{"id":"nn1c8c2c1c9c4c1m1r1a1","sN":1,"aN":"c8c2c1c9c4c1m1r1a1"}'>软件</span>
+    <button id="uhf-navbtn-shellmenu_8-button" type="button"   f-multi-parent="true" aria-expanded="false" data-m='{"id":"nn2c8c2c1c9c4c1m1r1a1","sN":2,"aN":"c8c2c1c9c4c1m1r1a1"}'>软件</button>
+    <ul aria-hidden="true">
+        <li class="js-nav-menu single-link" data-m='{"cN":"More_Software_WindowsApps_cont","cT":"Container","id":"c3c8c2c1c9c4c1m1r1a1","sN":3,"aN":"c8c2c1c9c4c1m1r1a1"}'>
+            <a id="shellmenu_9" class="js-subm-uhf-nav-link" href="https://www.microsoft.com/zh-cn/store/apps/windows?icid=CNavAppsWindowsApps" data-m='{"cN":"GlobalNav_More_Software_WindowsApps_nav","id":"n1c3c8c2c1c9c4c1m1r1a1","sN":1,"aN":"c3c8c2c1c9c4c1m1r1a1"}'>Windows 应用</a>
+            
+        </li>
+        <li class="js-nav-menu single-link" data-m='{"cN":"More_Software_OneDrive_cont","cT":"Container","id":"c4c8c2c1c9c4c1m1r1a1","sN":4,"aN":"c8c2c1c9c4c1m1r1a1"}'>
+            <a id="shellmenu_10" class="js-subm-uhf-nav-link" href="https://onedrive.live.com/about/zh-CN/" data-m='{"cN":"GlobalNav_More_Software_OneDrive_nav","id":"n1c4c8c2c1c9c4c1m1r1a1","sN":1,"aN":"c4c8c2c1c9c4c1m1r1a1"}'>OneDrive</a>
+            
+        </li>
+        <li class="js-nav-menu single-link" data-m='{"cN":"More_Software_Outlook_cont","cT":"Container","id":"c5c8c2c1c9c4c1m1r1a1","sN":5,"aN":"c8c2c1c9c4c1m1r1a1"}'>
+            <a id="shellmenu_11" class="js-subm-uhf-nav-link" href="https://outlook.live.com/owa/" data-m='{"cN":"GlobalNav_More_Software_Outlook_nav","id":"n1c5c8c2c1c9c4c1m1r1a1","sN":1,"aN":"c5c8c2c1c9c4c1m1r1a1"}'>Outlook</a>
+            
+        </li>
+        <li class="js-nav-menu single-link" data-m='{"cN":"More_Software_Skype_cont","cT":"Container","id":"c6c8c2c1c9c4c1m1r1a1","sN":6,"aN":"c8c2c1c9c4c1m1r1a1"}'>
+            <a id="shellmenu_12" class="js-subm-uhf-nav-link" href="https://www.skype.com/zh-Hans/" data-m='{"cN":"GlobalNav_More_Software_Skype_nav","id":"n1c6c8c2c1c9c4c1m1r1a1","sN":1,"aN":"c6c8c2c1c9c4c1m1r1a1"}'>Skype</a>
+            
+        </li>
+        <li class="js-nav-menu single-link" data-m='{"cN":"More_Software_OneNote_cont","cT":"Container","id":"c7c8c2c1c9c4c1m1r1a1","sN":7,"aN":"c8c2c1c9c4c1m1r1a1"}'>
+            <a id="shellmenu_13" class="js-subm-uhf-nav-link" href="https://www.onenote.com/?omkt=zh-CN" data-m='{"cN":"GlobalNav_More_Software_OneNote_nav","id":"n1c7c8c2c1c9c4c1m1r1a1","sN":1,"aN":"c7c8c2c1c9c4c1m1r1a1"}'>OneNote</a>
+            
+        </li>
+        <li class="js-nav-menu single-link" data-m='{"cN":"More_Software_Microsoft Teams_cont","cT":"Container","id":"c8c8c2c1c9c4c1m1r1a1","sN":8,"aN":"c8c2c1c9c4c1m1r1a1"}'>
+            <a id="shellmenu_14" class="js-subm-uhf-nav-link" href="https://www.microsoft.com/zh-cn/microsoft-teams/free?icid=SSM_AS_Promo_Apps_MicrosoftTeams" data-m='{"cN":"GlobalNav_More_Software_Microsoft Teams_nav","id":"n1c8c8c2c1c9c4c1m1r1a1","sN":1,"aN":"c8c8c2c1c9c4c1m1r1a1"}'>Microsoft Teams</a>
+            
+        </li>
+    </ul>
+    
+</li>
+<li class="f-sub-menu js-nav-menu nested-menu" data-m='{"cN":"PCsAndDevices_cont","cT":"Container","id":"c9c2c1c9c4c1m1r1a1","sN":9,"aN":"c2c1c9c4c1m1r1a1"}'>
+
+    <span id="uhf-navspn-shellmenu_15-span" style="display:none"   f-multi-parent="true" aria-expanded="false" data-m='{"cN":"GlobalNav_PCsAndDevices_nonnav","id":"nn1c9c2c1c9c4c1m1r1a1","sN":1,"aN":"c9c2c1c9c4c1m1r1a1"}'>PC 和设备</span>
+    <button id="uhf-navbtn-shellmenu_15-button" type="button"   f-multi-parent="true" aria-expanded="false" data-m='{"cN":"GlobalNav_PCsAndDevices_nonnav","id":"nn2c9c2c1c9c4c1m1r1a1","sN":2,"aN":"c9c2c1c9c4c1m1r1a1"}'>PC 和设备</button>
+    <ul aria-hidden="true">
+        <li class="js-nav-menu single-link" data-m='{"cN":"More_PCAndDevices_ShopXbox_cont","cT":"Container","id":"c3c9c2c1c9c4c1m1r1a1","sN":3,"aN":"c9c2c1c9c4c1m1r1a1"}'>
+            <a id="shellmenu_16" class="js-subm-uhf-nav-link" href="https://www.microsoft.com/zh-cn/store/b/xbox?icid=CNavDevicesXbox" data-m='{"cN":"GlobalNav_More_PCAndDevices_ShopXbox_nav","id":"n1c3c9c2c1c9c4c1m1r1a1","sN":1,"aN":"c3c9c2c1c9c4c1m1r1a1"}'>购买 Xbox</a>
+            
+        </li>
+        <li class="js-nav-menu single-link" data-m='{"cN":"More_PCsAndDevices_PCsAndTablets_cont","cT":"Container","id":"c4c9c2c1c9c4c1m1r1a1","sN":4,"aN":"c9c2c1c9c4c1m1r1a1"}'>
+            <a id="shellmenu_17" class="js-subm-uhf-nav-link" href="https://www.microsoft.com/zh-cn/windows/devices" data-m='{"cN":"GlobalNav_More_PCsAndDevices_PCsAndTablets_nav","id":"n1c4c9c2c1c9c4c1m1r1a1","sN":1,"aN":"c4c9c2c1c9c4c1m1r1a1"}'>PC 和平板电脑</a>
+            
+        </li>
+        <li class="js-nav-menu single-link" data-m='{"cN":"More_PCAndDevices_Accessories_cont","cT":"Container","id":"c5c9c2c1c9c4c1m1r1a1","sN":5,"aN":"c9c2c1c9c4c1m1r1a1"}'>
+            <a id="shellmenu_18" class="js-subm-uhf-nav-link" href="https://www.microsoft.com/accessories/zh-cn" data-m='{"cN":"GlobalNav_More_PCAndDevices_Accessories_nav","id":"n1c5c9c2c1c9c4c1m1r1a1","sN":1,"aN":"c5c9c2c1c9c4c1m1r1a1"}'>配件</a>
+            
+        </li>
+    </ul>
+    
+</li>
+<li class="f-sub-menu js-nav-menu nested-menu" data-m='{"cT":"Container","id":"c10c2c1c9c4c1m1r1a1","sN":10,"aN":"c2c1c9c4c1m1r1a1"}'>
+
+    <span id="uhf-navspn-shellmenu_19-span" style="display:none"   f-multi-parent="true" aria-expanded="false" data-m='{"id":"nn1c10c2c1c9c4c1m1r1a1","sN":1,"aN":"c10c2c1c9c4c1m1r1a1"}'>娱乐</span>
+    <button id="uhf-navbtn-shellmenu_19-button" type="button"   f-multi-parent="true" aria-expanded="false" data-m='{"id":"nn2c10c2c1c9c4c1m1r1a1","sN":2,"aN":"c10c2c1c9c4c1m1r1a1"}'>娱乐</button>
+    <ul aria-hidden="true">
+        <li class="js-nav-menu single-link" data-m='{"cN":"Products_DevicesAndXbox_XboxAndGames_cont","cT":"Container","id":"c3c10c2c1c9c4c1m1r1a1","sN":3,"aN":"c10c2c1c9c4c1m1r1a1"}'>
+            <a id="shellmenu_20" class="js-subm-uhf-nav-link" href="https://www.xbox.com/zh-cn/games/xbox-one?xr=shellnav" data-m='{"cN":"GlobalNav_Products_DevicesAndXbox_XboxAndGames_nav","id":"n1c3c10c2c1c9c4c1m1r1a1","sN":1,"aN":"c3c10c2c1c9c4c1m1r1a1"}'>Xbox 与游戏</a>
+            
+        </li>
+        <li class="js-nav-menu single-link" data-m='{"cN":"Entertainment_PCGames_cont","cT":"Container","id":"c4c10c2c1c9c4c1m1r1a1","sN":4,"aN":"c10c2c1c9c4c1m1r1a1"}'>
+            <a id="shellmenu_21" class="js-subm-uhf-nav-link" href="https://www.microsoft.com/zh-cn/store/games/windows?icid=CNavGamesWindowsGames" data-m='{"cN":"GlobalNav_Entertainment_PCGames_nav","id":"n1c4c10c2c1c9c4c1m1r1a1","sN":1,"aN":"c4c10c2c1c9c4c1m1r1a1"}'>PC 游戏</a>
+            
+        </li>
+    </ul>
+    
+</li>
+<li class="f-sub-menu js-nav-menu nested-menu" data-m='{"cT":"Container","id":"c11c2c1c9c4c1m1r1a1","sN":11,"aN":"c2c1c9c4c1m1r1a1"}'>
+
+    <span id="uhf-navspn-shellmenu_22-span" style="display:none"   f-multi-parent="true" aria-expanded="false" data-m='{"id":"nn1c11c2c1c9c4c1m1r1a1","sN":1,"aN":"c11c2c1c9c4c1m1r1a1"}'>企业版</span>
+    <button id="uhf-navbtn-shellmenu_22-button" type="button"   f-multi-parent="true" aria-expanded="false" data-m='{"id":"nn2c11c2c1c9c4c1m1r1a1","sN":2,"aN":"c11c2c1c9c4c1m1r1a1"}'>企业版</button>
+    <ul aria-hidden="true">
+        <li class="js-nav-menu single-link" data-m='{"cN":"More_Business_MicrosoftAzure_cont","cT":"Container","id":"c3c11c2c1c9c4c1m1r1a1","sN":3,"aN":"c11c2c1c9c4c1m1r1a1"}'>
+            <a id="shellmenu_23" class="js-subm-uhf-nav-link" href="https://www.microsoft.com/china/azure/" data-m='{"cN":"GlobalNav_More_Business_MicrosoftAzure_nav","id":"n1c3c11c2c1c9c4c1m1r1a1","sN":1,"aN":"c3c11c2c1c9c4c1m1r1a1"}'>Microsoft Azure</a>
+            
+        </li>
+        <li class="js-nav-menu single-link" data-m='{"cN":"Business_Microsoft365_cont","cT":"Container","id":"c4c11c2c1c9c4c1m1r1a1","sN":4,"aN":"c11c2c1c9c4c1m1r1a1"}'>
+            <a id="shellmenu_24" class="js-subm-uhf-nav-link" href="https://www.microsoft.com/microsoft-365/business/all-business" data-m='{"cN":"GlobalNav_Business_Microsoft365_nav","id":"n1c4c11c2c1c9c4c1m1r1a1","sN":1,"aN":"c4c11c2c1c9c4c1m1r1a1"}'>Microsoft 365</a>
+            
+        </li>
+        <li class="js-nav-menu single-link" data-m='{"cN":"More_Business_Enterprise_cont","cT":"Container","id":"c5c11c2c1c9c4c1m1r1a1","sN":5,"aN":"c11c2c1c9c4c1m1r1a1"}'>
+            <a id="shellmenu_25" class="js-subm-uhf-nav-link" href="https://www.microsoft.com/zh-cn/enterprise" data-m='{"cN":"GlobalNav_More_Business_Enterprise_nav","id":"n1c5c11c2c1c9c4c1m1r1a1","sN":1,"aN":"c5c11c2c1c9c4c1m1r1a1"}'>Microsoft Industry</a>
+            
+        </li>
+        <li class="js-nav-menu single-link" data-m='{"cN":"More_Business_DataPlatform_cont","cT":"Container","id":"c6c11c2c1c9c4c1m1r1a1","sN":6,"aN":"c11c2c1c9c4c1m1r1a1"}'>
+            <a id="shellmenu_26" class="js-subm-uhf-nav-link" href="https://www.microsoft.com/zh-cn/sql-server/ " data-m='{"cN":"GlobalNav_More_Business_DataPlatform_nav","id":"n1c6c11c2c1c9c4c1m1r1a1","sN":1,"aN":"c6c11c2c1c9c4c1m1r1a1"}'>数据平台</a>
+            
+        </li>
+        <li class="js-nav-menu single-link" data-m='{"cN":"More_DeveloperAndIT_Power Platform_cont","cT":"Container","id":"c7c11c2c1c9c4c1m1r1a1","sN":7,"aN":"c11c2c1c9c4c1m1r1a1"}'>
+            <a id="shellmenu_27" class="js-subm-uhf-nav-link" href="https://powerplatform.microsoft.com/zh-cn" data-m='{"cN":"GlobalNav_More_DeveloperAndIT_Power Platform_nav","id":"n1c7c11c2c1c9c4c1m1r1a1","sN":1,"aN":"c7c11c2c1c9c4c1m1r1a1"}'>Power Platform</a>
+            
+        </li>
+        <li class="js-nav-menu single-link" data-m='{"cN":"More_Business_ShopBusiness_cont","cT":"Container","id":"c8c11c2c1c9c4c1m1r1a1","sN":8,"aN":"c11c2c1c9c4c1m1r1a1"}'>
+            <a id="shellmenu_28" class="js-subm-uhf-nav-link" href="https://www.microsoft.com/zh-cn/store/b/business?icid=CNavBusinessStore" data-m='{"cN":"GlobalNav_More_Business_ShopBusiness_nav","id":"n1c8c11c2c1c9c4c1m1r1a1","sN":1,"aN":"c8c11c2c1c9c4c1m1r1a1"}'>购买商业版</a>
+            
+        </li>
+    </ul>
+    
+</li>
+<li class="f-sub-menu js-nav-menu nested-menu" data-m='{"cT":"Container","id":"c12c2c1c9c4c1m1r1a1","sN":12,"aN":"c2c1c9c4c1m1r1a1"}'>
+
+    <span id="uhf-navspn-shellmenu_29-span" style="display:none"   f-multi-parent="true" aria-expanded="false" data-m='{"id":"nn1c12c2c1c9c4c1m1r1a1","sN":1,"aN":"c12c2c1c9c4c1m1r1a1"}'>开发人员与 IT</span>
+    <button id="uhf-navbtn-shellmenu_29-button" type="button"   f-multi-parent="true" aria-expanded="false" data-m='{"id":"nn2c12c2c1c9c4c1m1r1a1","sN":2,"aN":"c12c2c1c9c4c1m1r1a1"}'>开发人员与 IT</button>
+    <ul aria-hidden="true">
+        <li class="js-nav-menu single-link" data-m='{"cN":"More_DeveloperAndIT_.Net_cont","cT":"Container","id":"c3c12c2c1c9c4c1m1r1a1","sN":3,"aN":"c12c2c1c9c4c1m1r1a1"}'>
+            <a id="shellmenu_30" class="js-subm-uhf-nav-link" href="https://www.microsoft.com/net/" data-m='{"cN":"GlobalNav_More_DeveloperAndIT_.Net_nav","id":"n1c3c12c2c1c9c4c1m1r1a1","sN":1,"aN":"c3c12c2c1c9c4c1m1r1a1"}'>.NET</a>
+            
+        </li>
+        <li class="js-nav-menu single-link" data-m='{"cN":"More_DevelopersAndIT_VisualStudio_cont","cT":"Container","id":"c4c12c2c1c9c4c1m1r1a1","sN":4,"aN":"c12c2c1c9c4c1m1r1a1"}'>
+            <a id="shellmenu_31" class="js-subm-uhf-nav-link" href="https://visualstudio.microsoft.com/" data-m='{"cN":"GlobalNav_More_DevelopersAndIT_VisualStudio_nav","id":"n1c4c12c2c1c9c4c1m1r1a1","sN":1,"aN":"c4c12c2c1c9c4c1m1r1a1"}'>Visual Studio</a>
+            
+        </li>
+        <li class="js-nav-menu single-link" data-m='{"cN":"More_ProductsandServices_WindowsServer_cont","cT":"Container","id":"c5c12c2c1c9c4c1m1r1a1","sN":5,"aN":"c12c2c1c9c4c1m1r1a1"}'>
+            <a id="shellmenu_32" class="js-subm-uhf-nav-link" href="https://www.microsoft.com/cloud-platform/windows-server" data-m='{"cN":"GlobalNav_More_ProductsandServices_WindowsServer_nav","id":"n1c5c12c2c1c9c4c1m1r1a1","sN":1,"aN":"c5c12c2c1c9c4c1m1r1a1"}'>Windows Server</a>
+            
+        </li>
+        <li class="js-nav-menu single-link" data-m='{"cN":"More_DeveloperAndIT_WindowsDevCenter_cont","cT":"Container","id":"c6c12c2c1c9c4c1m1r1a1","sN":6,"aN":"c12c2c1c9c4c1m1r1a1"}'>
+            <a id="shellmenu_33" class="js-subm-uhf-nav-link" href="https://developer.microsoft.com/zh-cn/windows" data-m='{"cN":"GlobalNav_More_DeveloperAndIT_WindowsDevCenter_nav","id":"n1c6c12c2c1c9c4c1m1r1a1","sN":1,"aN":"c6c12c2c1c9c4c1m1r1a1"}'>开发 Windows 应用</a>
+            
+        </li>
+        <li class="js-nav-menu single-link" data-m='{"cN":"More_DeveloperAndIT_Docs.microsoft.com_cont","cT":"Container","id":"c7c12c2c1c9c4c1m1r1a1","sN":7,"aN":"c12c2c1c9c4c1m1r1a1"}'>
+            <a id="shellmenu_34" class="js-subm-uhf-nav-link" href="https://docs.microsoft.com/zh-cn/" data-m='{"cN":"GlobalNav_More_DeveloperAndIT_Docs.microsoft.com_nav","id":"n1c7c12c2c1c9c4c1m1r1a1","sN":1,"aN":"c7c12c2c1c9c4c1m1r1a1"}'>文档</a>
+            
+        </li>
+        <li class="js-nav-menu single-link" data-m='{"cN":"More_DeveloperAndIT_PowerApps_cont","cT":"Container","id":"c8c12c2c1c9c4c1m1r1a1","sN":8,"aN":"c12c2c1c9c4c1m1r1a1"}'>
+            <a id="shellmenu_35" class="js-subm-uhf-nav-link" href="https://powerapps.microsoft.com/zh-cn" data-m='{"cN":"GlobalNav_More_DeveloperAndIT_PowerApps_nav","id":"n1c8c12c2c1c9c4c1m1r1a1","sN":1,"aN":"c8c12c2c1c9c4c1m1r1a1"}'>Power Apps</a>
+            
+        </li>
+    </ul>
+    
+</li>
+<li class="f-sub-menu js-nav-menu nested-menu" data-m='{"cT":"Container","id":"c13c2c1c9c4c1m1r1a1","sN":13,"aN":"c2c1c9c4c1m1r1a1"}'>
+
+    <span id="uhf-navspn-shellmenu_36-span" style="display:none"   f-multi-parent="true" aria-expanded="false" data-m='{"id":"nn1c13c2c1c9c4c1m1r1a1","sN":1,"aN":"c13c2c1c9c4c1m1r1a1"}'>其他</span>
+    <button id="uhf-navbtn-shellmenu_36-button" type="button"   f-multi-parent="true" aria-expanded="false" data-m='{"id":"nn2c13c2c1c9c4c1m1r1a1","sN":2,"aN":"c13c2c1c9c4c1m1r1a1"}'>其他</button>
+    <ul aria-hidden="true">
+        <li class="js-nav-menu single-link" data-m='{"cN":"Products_SoftwareAndServices_FreeDownloadsAndSecurity_cont","cT":"Container","id":"c3c13c2c1c9c4c1m1r1a1","sN":3,"aN":"c13c2c1c9c4c1m1r1a1"}'>
+            <a id="shellmenu_37" class="js-subm-uhf-nav-link" href="https://www.microsoft.com/zh-cn/download/default.aspx" data-m='{"cN":"GlobalNav_Products_SoftwareAndServices_FreeDownloadsAndSecurity_nav","id":"n1c3c13c2c1c9c4c1m1r1a1","sN":1,"aN":"c3c13c2c1c9c4c1m1r1a1"}'>免费下载与安全性</a>
+            
+        </li>
+        <li class="js-nav-menu single-link" data-m='{"cN":"Products_ForStudentsAndEducators_Education_cont","cT":"Container","id":"c4c13c2c1c9c4c1m1r1a1","sN":4,"aN":"c13c2c1c9c4c1m1r1a1"}'>
+            <a id="shellmenu_38" class="js-subm-uhf-nav-link" href="https://www.microsoft.com/zh-cn/education?icid=CNavMSCOML0_Studentsandeducation" data-m='{"cN":"GlobalNav_Products_ForStudentsAndEducators_Education_nav","id":"n1c4c13c2c1c9c4c1m1r1a1","sN":1,"aN":"c4c13c2c1c9c4c1m1r1a1"}'>教育</a>
+            
+        </li>
+    </ul>
+    
+</li>
+                                                            <li class="f-multi-column-info">
+                                    <a data-m='{"id":"n14c2c1c9c4c1m1r1a1","sN":14,"aN":"c2c1c9c4c1m1r1a1"}' href="https://www.microsoft.com/zh-cn/sitemap.aspx" aria-label="" class="c-glyph">查看站点地图</a>
+                                </li>
+                            
+                        </ul>
+                    </div>
+                </li>
+            </ul>
+        </nav>
+</div>
+                            <form class="c-search" autocomplete="off" id="searchForm" name="searchForm" role="search" action="https://news.microsoft.com/zh-cn/" method="GET" data-seAutoSuggest='{"queryParams":{"market":"zh-cn","clientId":"7F27B536-CF6B-4C65-8638-A0F8CBDFCA65","sources":"Microsoft-Terms,Iris-Products,DCatAll-Products","filter":"ExcludeDCatProducts:DCatDevices-Products,DCatSoftware-Products,DCatBundles-Products+ClientType:StoreWeb","counts":"5,1,5"},"familyNames":{"Apps":"应用","Books":"书籍","Bundles":"套装","Devices":"设备","Fees":"Fee","Games":"游戏","MusicAlbums":"专辑","MusicTracks":"歌曲","MusicVideos":"视频","MusicArtists":"艺术家","OperatingSystem":"操作系统","Software":"软件","Movies":"电影","TV":"电视","CSV":"礼品卡","VideoActor":"演员"}}' data-seautosuggestapi="https://www.microsoft.com/services/api/v3/suggest" data-m='{"cN":"GlobalNav_Search_cont","cT":"Container","id":"c3c1c9c4c1m1r1a1","sN":3,"aN":"c1c9c4c1m1r1a1"}' aria-expanded="false">
+                                <input  id="cli_shellHeaderSearchInput" aria-label="已展开搜索" aria-autocomplete="list" aria-controls="universal-header-search-auto-suggest-transparent" aria-owns="universal-header-search-auto-suggest-ul" type="search" name="s" placeholder="" data-m='{"cN":"SearchBox_nav","id":"n1c3c1c9c4c1m1r1a1","sN":1,"aN":"c3c1c9c4c1m1r1a1"}' data-toggle="tooltip" data-placement="right" title="" />
+                                    <button id="search" aria-label="" class="c-glyph" data-m='{"cN":"Search_nav","id":"n2c3c1c9c4c1m1r1a1","sN":2,"aN":"c3c1c9c4c1m1r1a1"}' data-bi-dnt="true" data-bi-mto="true" aria-expanded="false">
+                                        <span role="presentation">搜索</span>
+                                        <span role="tooltip" class="c-uhf-tooltip c-uhf-search-tooltip"></span>
+                                    </button>
+                                <div class="m-auto-suggest" id="universal-header-search-auto-suggest-transparent" role="group">
+                                    <ul class="c-menu" id="universal-header-search-auto-suggest-ul" aria-label="搜索建议" aria-hidden="true" data-bi-dnt="true" data-bi-mto="true" data-js-auto-suggest-position="default" role="listbox" data-tel="jsll" data-m='{"cN":"search suggestions_cont","cT":"Container","id":"c3c3c1c9c4c1m1r1a1","sN":3,"aN":"c3c1c9c4c1m1r1a1"}'></ul>
+                                </div>
+                                
+                            </form>
+                        <button data-m='{"cN":"cancel-search","pid":"取消 搜索","id":"nn4c1c9c4c1m1r1a1","sN":4,"aN":"c1c9c4c1m1r1a1"}' id="cancel-search" class="cancel-search" aria-label="取消 搜索">
+                            <span>取消</span>
+                        </button>
+                    <a id="uhf-shopping-cart"
+                       aria-label="0 购物车中的物品"
+                       class="c-action-trigger c-glyph c-uhf-nav-link glyph-shopping-cart"
+                       href="//www.microsoftstore.com.cn/cart"
+                       data-src-dmn-chk="true"
+                       data-m='{"cN":"GlobalNav_Cart_nav","bhvr":82,"id":"n5c1c9c4c1m1r1a1","sN":5,"aN":"c1c9c4c1m1r1a1"}'>
+                        <span class="shopping-cart-amount x-hidden" aria-hidden="true">0</span>
+                        <span class="c-cart-lbl c-st-lbl">购物车</span>
+                        <span id="uhf-shopping-cart-tooltip" class="c-uhf-tooltip" role="tooltip">0 购物车中的物品</span>
+                    </a>
+                            <iframe id="shell-cart-count" data-src="//www.microsoftstore.com.cn/cart"></iframe>
+                
+            </div>
+        </div>
+        
+        
+    </div>
+    
+</header>
+
+
+
+
+    </div>
+        </div>
+
+    </div>
+	<div class="page-content context-mnc" ms.pgarea="body">
+		<div id="primary" class="content-area context-mnc-home">
+			<main id="main" class="site-main" role="main" tabindex="-1">
+
+				<h1 class="x-screen-reader">新闻中心</h1>
+
+                                    
+	<section class="mt-mosaic">
+		<div class="mt-mosaic__contain mt-mosaic__posts-2">
+										<div class="mt-mosaic__post">
+					<div class="mt-mosaic__post-wrap">
+
+																												<div class="mt-mosaic__picture-container">
+									<img width="924" height="520" src="https://3er1viui9wo30pkxh1v2nh4w-wpengine.netdna-ssl.com/wp-content/uploads/prod/sites/44/2021/04/20210430-5-924x520.jpg" class="attachment-mosaic-regular size-mosaic-regular" alt="微软深化无障碍承诺：进一步在技术、员工和工作场所中强化无障碍理念" srcset="https://3er1viui9wo30pkxh1v2nh4w-wpengine.netdna-ssl.com/wp-content/uploads/prod/sites/44/2021/04/20210430-5-924x520.jpg 924w, https://3er1viui9wo30pkxh1v2nh4w-wpengine.netdna-ssl.com/wp-content/uploads/prod/sites/44/2021/04/20210430-5-793x446.jpg 793w" sizes="(max-width: 924px) 100vw, 924px" data-original-w="1320" data-original-h="880" />								</div>
+							
+						
+						<div class="mt-mosaic__meta">
+							<div class="mt-mosaic__meta-wrap">
+								
+
+								<h2>
+									<a class="mt-mosaic__title" href="https://news.microsoft.com/zh-cn/%e5%be%ae%e8%bd%af%e6%b7%b1%e5%8c%96%e6%97%a0%e9%9a%9c%e7%a2%8d%e6%89%bf%e8%af%ba%ef%bc%9a%e8%bf%9b%e4%b8%80%e6%ad%a5%e5%9c%a8%e6%8a%80%e6%9c%af%e3%80%81%e5%91%98%e5%b7%a5%e5%92%8c%e5%b7%a5%e4%bd%9c/"><span></span> <span class="last-word c-glyph glyph-chevron-right">微软深化无障碍承诺：进一步在技术、员工和工作场所中强化无障碍理念</span></a>								</h2>
+
+								
+								
+							</div>
+						</div>
+					</div>
+				</div>
+											<div class="mt-mosaic__post">
+					<div class="mt-mosaic__post-wrap">
+
+																												<div class="mt-mosaic__picture-container">
+									<img width="924" height="520" src="https://3er1viui9wo30pkxh1v2nh4w-wpengine.netdna-ssl.com/wp-content/uploads/prod/sites/44/2021/04/20210427-1-924x520.jpg" class="attachment-mosaic-regular size-mosaic-regular" alt="才貌兼备 释放高效生产力 Surface Laptop 4 在中国市场正式上市" srcset="https://3er1viui9wo30pkxh1v2nh4w-wpengine.netdna-ssl.com/wp-content/uploads/prod/sites/44/2021/04/20210427-1-924x520.jpg 924w, https://3er1viui9wo30pkxh1v2nh4w-wpengine.netdna-ssl.com/wp-content/uploads/prod/sites/44/2021/04/20210427-1-793x446.jpg 793w" sizes="(max-width: 924px) 100vw, 924px" data-original-w="1269" data-original-h="781" />								</div>
+							
+						
+						<div class="mt-mosaic__meta">
+							<div class="mt-mosaic__meta-wrap">
+								
+
+								<h2>
+									<a class="mt-mosaic__title" href="https://news.microsoft.com/zh-cn/%e6%89%8d%e8%b2%8c%e5%85%bc%e5%a4%87-%e9%87%8a%e6%94%be%e9%ab%98%e6%95%88%e7%94%9f%e4%ba%a7%e5%8a%9b-surface-laptop-4-%e5%9c%a8%e4%b8%ad%e5%9b%bd%e5%b8%82%e5%9c%ba%e6%ad%a3%e5%bc%8f%e4%b8%8a%e5%b8%82/"><span>才貌兼备 释放高效生产力 Surface Laptop 4</span> <span class="last-word c-glyph glyph-chevron-right">在中国市场正式上市</span></a>								</h2>
+
+								
+								
+							</div>
+						</div>
+					</div>
+				</div>
+									</div>
+	</section>
+
+                
+				<section id="main-content" data-grid="container pad-6x stack-2">
+
+					<!-- RECENT -->
+					<section class="f-col-recent f-col-home f-col-height-match" data-grid="col-4" ms.cmpgrp="recent" ms.cmpnm="recent">
+						<h2 class="c-heading-5">近期新闻</h2>
+
+						<div>
+							
+							
+								<article class="m-preview post-59964 post type-post status-publish format-standard hentry category-recent-news" data-grid="col-12">
+									
+<div class="m-preview-content">
+	 
+	<a href="https://news.microsoft.com/zh-cn/%e9%9b%b7%e8%9b%87%e4%b8%8e%e5%be%ae%e8%bd%af%e4%b8%ad%e5%9b%bd%e6%90%ba%e6%89%8b%e6%89%93%e9%80%a0-z-%e4%b8%96%e4%bb%a3%e6%b8%b8%e6%88%8f%e7%94%9f%e6%b4%bb%e6%96%b0%e6%96%b9%e5%bc%8f/" class="f-post-link c-heading-6 m-chevron" rel="bookmark" ms.title="雷蛇与微软中国携手打造 Z 世代游戏生活新方式">
+		雷蛇与微软中国携手打造 Z 世代游戏生活新方式	</a>
+
+	</div>
+								</article>
+
+							
+								<article class="m-preview post-59950 post type-post status-publish format-standard has-post-thumbnail hentry category-recent-news" data-grid="col-12">
+									
+<div class="m-preview-content">
+	 
+	<a href="https://news.microsoft.com/zh-cn/%e5%85%a5%e5%8d%8e%e4%b8%83%e5%b9%b4%e6%89%a9%e5%ae%b9-12-%e5%80%8d%ef%bc%8c%e5%be%ae%e8%bd%af%e6%99%ba%e8%83%bd%e4%ba%91%e5%bc%80%e5%90%af%e4%ba%9a%e6%b4%b2%e7%bb%8f%e6%b5%8e%e5%a4%8d%e8%8b%8f/" class="f-post-link c-heading-6 m-chevron" rel="bookmark" ms.title="入华七年扩容 12 倍，微软智能云开启亚洲经济复苏加速通道">
+		入华七年扩容 12 倍，微软智能云开启亚洲经济复苏加速通道	</a>
+
+	</div>
+								</article>
+
+							
+								<article class="m-preview post-59938 post type-post status-publish format-standard hentry category-recent-news" data-grid="col-12">
+									
+<div class="m-preview-content">
+	 
+	<a href="https://news.microsoft.com/zh-cn/surface-laptop-4-%e5%95%86%e7%94%a8%e7%89%88%e9%9d%a2%e5%90%91%e4%b8%ad%e5%9b%bd%e5%b8%82%e5%9c%ba%e5%8f%91%e5%94%ae%ef%bc%8c%e4%b8%ba%e4%bc%81%e4%b8%9a%e5%ae%a2%e6%88%b7%e8%a7%a3%e9%94%81%e6%9b%b4/" class="f-post-link c-heading-6 m-chevron" rel="bookmark" ms.title="Surface Laptop 4 商用版面向中国市场发售，为企业客户解锁更多商业价值">
+		Surface Laptop 4 商用版面向中国市场发售，为企业客户解锁更多商业价值	</a>
+
+	</div>
+								</article>
+
+							
+								<article class="m-preview post-59915 post type-post status-publish format-standard hentry category-recent-news" data-grid="col-12">
+									
+<div class="m-preview-content">
+	 
+	<a href="https://news.microsoft.com/zh-cn/%e8%81%94%e5%90%88%e7%bd%b2%e5%90%8d%e6%96%87%e7%ab%a0-%e8%b4%ba%e6%b8%85%e5%8d%8e%e6%a0%a1%e5%ba%86%ef%bc%9a%e4%bb%a5%e8%87%aa%e5%bc%ba%e4%b8%8d%e6%81%af%e4%b9%8b%e7%b2%be%e7%a5%9e/" class="f-post-link c-heading-6 m-chevron" rel="bookmark" ms.title="贺清华校庆：以自强不息之精神引领创新，以厚德载物之担当共塑未来">
+		贺清华校庆：以自强不息之精神引领创新，以厚德载物之担当共塑未来	</a>
+
+	</div>
+								</article>
+
+							
+								<article class="m-preview post-59912 post type-post status-publish format-standard has-post-thumbnail hentry category-recent-news" data-grid="col-12">
+									
+<div class="m-preview-content">
+	 
+	<a href="https://news.microsoft.com/zh-cn/microsoft-365%ef%bc%9a%e5%8d%a1%e5%b0%94%e8%94%a1%e5%8f%b8%e5%91%98%e5%b7%a5%e5%8d%8f%e4%bd%9c%e5%87%9d%e8%81%9a%e5%8a%9b%e7%9a%84%e7%b2%98%e5%90%88%e5%89%82/" class="f-post-link c-heading-6 m-chevron" rel="bookmark" ms.title="Microsoft 365：卡尔蔡司员工协作凝聚力的“粘合剂”">
+		Microsoft 365：卡尔蔡司员工协作凝聚力的“粘合剂”	</a>
+
+	</div>
+								</article>
+
+							
+								<article class="m-preview post-59908 post type-post status-publish format-standard hentry category-recent-news" data-grid="col-12">
+									
+<div class="m-preview-content">
+	 
+	<a href="https://news.microsoft.com/zh-cn/%e6%8e%a8%e5%8a%a8%e5%85%a8%e7%90%83%e5%a4%9a%e5%85%83%e5%8c%96%e5%92%8c%e5%8c%85%e5%ae%b9%e6%80%a7%e5%bb%ba%e8%ae%be%ef%bc%8c%e4%b8%ba%e4%b8%aa%e4%ba%ba%e5%92%8c%e7%bb%84%e7%bb%87%e6%9e%84%e5%bb%ba/" class="f-post-link c-heading-6 m-chevron" rel="bookmark" ms.title="推动全球多元化和包容性建设，为个人和组织构建和谐发展环境">
+		推动全球多元化和包容性建设，为个人和组织构建和谐发展环境	</a>
+
+	</div>
+								</article>
+
+							
+								<article class="m-preview post-59897 post type-post status-publish format-standard has-post-thumbnail hentry category-recent-news" data-grid="col-12">
+									
+<div class="m-preview-content">
+	 
+	<a href="https://news.microsoft.com/zh-cn/%e5%be%ae%e8%bd%af%e5%8f%91%e5%b8%83-surface-laptop-4-%e5%8f%8a%e5%85%a8%e6%96%b0%e9%85%8d%e4%bb%b6%ef%bc%8c%e6%8f%90%e5%8d%87%e4%bc%9a%e8%ae%ae%e4%bd%93%e9%aa%8c/" class="f-post-link c-heading-6 m-chevron" rel="bookmark" ms.title="微软发布 Surface Laptop 4 及全新配件，提升会议体验">
+		微软发布 Surface Laptop 4 及全新配件，提升会议体验	</a>
+
+	</div>
+								</article>
+
+							
+								<article class="m-preview post-59891 post type-post status-publish format-standard has-post-thumbnail hentry category-recent-news" data-grid="col-12">
+									
+<div class="m-preview-content">
+	 
+	<a href="https://news.microsoft.com/zh-cn/%e5%be%ae%e8%bd%af%e5%8a%a9%e5%8a%9b%e8%81%94%e9%82%a6%e5%bf%ab%e9%80%92%e5%ae%9e%e7%8e%b0%e5%95%86%e4%b8%9a%e8%bd%ac%e5%9e%8b%ef%bc%8c%e5%9c%a8%e5%85%a8%e7%90%83%e8%8c%83%e5%9b%b4%e5%86%85%e9%87%8d/" class="f-post-link c-heading-6 m-chevron" rel="bookmark" ms.title="微软助力联邦快递实现商业转型，在全球范围内重塑端到端的贸易体验">
+		微软助力联邦快递实现商业转型，在全球范围内重塑端到端的贸易体验	</a>
+
+	</div>
+								</article>
+
+							
+								<article class="m-preview post-59888 post type-post status-publish format-standard has-post-thumbnail hentry category-recent-news" data-grid="col-12">
+									
+<div class="m-preview-content">
+	 
+	<a href="https://news.microsoft.com/zh-cn/%e4%bb%a5-surface-pro-%e4%b8%ba%e5%bc%95%e6%93%8e%ef%bc%8c%e9%9b%b7%e8%af%ba%e9%9b%86%e5%9b%a2%e6%8c%81%e7%bb%ad%e5%88%9b%e9%80%a0%e5%ae%a2%e6%88%b7%e4%bb%b7%e5%80%bc%e3%80%81/" class="f-post-link c-heading-6 m-chevron" rel="bookmark" ms.title="以 Surface Pro 为“引擎”，雷诺集团持续创造客户价值、建立客户信任、改善客户体验">
+		以 Surface Pro 为“引擎”，雷诺集团持续创造客户价值、建立客户信任、改善客户体验	</a>
+
+	</div>
+								</article>
+
+							
+								<article class="m-preview post-59884 post type-post status-publish format-standard has-post-thumbnail hentry category-recent-news" data-grid="col-12">
+									
+<div class="m-preview-content">
+	 
+	<a href="https://news.microsoft.com/zh-cn/%e4%bb%a5%e6%95%b0%e5%ad%97%e5%8c%96%e6%8a%80%e6%9c%af%e4%b8%ba%e6%96%b0%e5%b8%b8%e6%80%81%e6%a0%b8%e5%bf%83%ef%bc%8c%e5%be%ae%e8%bd%af%e9%87%8d%e5%a1%91%e5%88%b6%e9%80%a0%e4%b8%9a/" class="f-post-link c-heading-6 m-chevron" rel="bookmark" ms.title="以数字化技术为新常态核心，微软重塑制造业">
+		以数字化技术为新常态核心，微软重塑制造业	</a>
+
+	</div>
+								</article>
+
+							
+								<article class="m-preview post-59883 post type-post status-publish format-standard hentry category-recent-news" data-grid="col-12">
+									
+<div class="m-preview-content">
+	 
+	<a href="https://news.microsoft.com/zh-cn/%e5%be%ae%e8%bd%af-azure-stack-hci-%e6%b7%b7%e5%90%88%e4%ba%91%e8%a7%a3%e5%86%b3%e6%96%b9%e6%a1%88%e8%90%bd%e5%9c%b0%e4%b8%ad%e5%9b%bd%e5%b8%82%e5%9c%ba/" class="f-post-link c-heading-6 m-chevron" rel="bookmark" ms.title="微软 Azure Stack HCI 混合云解决方案落地中国市场">
+		微软 Azure Stack HCI 混合云解决方案落地中国市场	</a>
+
+	</div>
+								</article>
+
+							
+								<article class="m-preview post-59610 features type-features status-publish has-post-thumbnail hentry" data-grid="col-12">
+									
+<div class="m-preview-content">
+	 
+	<a href="https://news.microsoft.com/zh-cn/features/%e5%be%ae%e8%bd%af%e4%b8%ad%e5%9b%bd-2020-%e4%bc%81%e4%b8%9a%e5%85%ac%e6%b0%91%e6%8a%a5%e5%91%8a/" class="f-post-link c-heading-6 m-chevron" rel="bookmark" ms.title="微软中国 2020 企业公民报告">
+		微软中国 2020 企业公民报告	</a>
+
+	</div>
+								</article>
+
+							
+						</div>
+
+						<a
+		                href="https://news.microsoft.com/zh-cn/recent-news/page/1/"
+		                class="c-call-to-action f-call-to-action c-glyph m-chevron view-more"
+		                aria-label="查看更多近期新闻"
+            			>
+							<span>查看更多</span>
+						</a>
+
+					</section>
+
+					<!-- SPOTLIGHT -->
+					<section class="f-col-spotlight f-col-home f-col-height-match" data-grid="col-4" ms.cmpgrp="spotlight" ms.cmpnm="spotlight">
+						<h2 class="c-heading-5">特写新闻</h2>
+
+						<div>
+						<article class="m-preview">
+					<a class="m-preview-image" href="https://news.microsoft.com/zh-cn/%e8%ae%a9%e6%af%8f%e4%b8%80%e4%ba%ba%e9%83%bd%e8%83%bd%e5%b0%bd%e4%ba%ab%e7%b2%be%e5%bd%a9%e6%b8%b8%e6%88%8f%e4%b8%96%e7%95%8c/" ms.title="让每一人都能尽享精彩游戏世界">
+						<img src="https://3er1viui9wo30pkxh1v2nh4w-wpengine.netdna-ssl.com/wp-content/uploads/prod/sites/44/2021/04/8140c82449eafd0dd6a8056c7198a87-960x640.jpg" class="c-image wp-post-image" alt="让每一人都能尽享精彩游戏世界" scale="0" srcset="https://3er1viui9wo30pkxh1v2nh4w-wpengine.netdna-ssl.com/wp-content/uploads/prod/sites/44/2021/04/8140c82449eafd0dd6a8056c7198a87-960x640.jpg 960w, https://3er1viui9wo30pkxh1v2nh4w-wpengine.netdna-ssl.com/wp-content/uploads/prod/sites/44/2021/04/8140c82449eafd0dd6a8056c7198a87-300x200.jpg 300w, https://3er1viui9wo30pkxh1v2nh4w-wpengine.netdna-ssl.com/wp-content/uploads/prod/sites/44/2021/04/8140c82449eafd0dd6a8056c7198a87-1600x1067.jpg 1600w, https://3er1viui9wo30pkxh1v2nh4w-wpengine.netdna-ssl.com/wp-content/uploads/prod/sites/44/2021/04/8140c82449eafd0dd6a8056c7198a87-768x512.jpg 768w, https://3er1viui9wo30pkxh1v2nh4w-wpengine.netdna-ssl.com/wp-content/uploads/prod/sites/44/2021/04/8140c82449eafd0dd6a8056c7198a87-1536x1024.jpg 1536w, https://3er1viui9wo30pkxh1v2nh4w-wpengine.netdna-ssl.com/wp-content/uploads/prod/sites/44/2021/04/8140c82449eafd0dd6a8056c7198a87-2048x1365.jpg 2048w" sizes="(max-width: 960px) 100vw, 960px" data-original-w="2560" data-original-h="1707" />
+					</a>
+					<div class="m-preview-content">
+						<a href="https://news.microsoft.com/zh-cn/%e8%ae%a9%e6%af%8f%e4%b8%80%e4%ba%ba%e9%83%bd%e8%83%bd%e5%b0%bd%e4%ba%ab%e7%b2%be%e5%bd%a9%e6%b8%b8%e6%88%8f%e4%b8%96%e7%95%8c/" class="f-post-link c-heading-6 m-chevron">让每一人都能尽享精彩游戏世界</a>
+						
+					</div>
+				</article>
+<article class="m-preview">
+					<a class="m-preview-image" href="https://news.microsoft.com/zh-cn/microsoft-365%ef%bc%9a%e5%8d%a1%e5%b0%94%e8%94%a1%e5%8f%b8%e5%91%98%e5%b7%a5%e5%8d%8f%e4%bd%9c%e5%87%9d%e8%81%9a%e5%8a%9b%e7%9a%84%e7%b2%98%e5%90%88%e5%89%82/" ms.title="Microsoft 365：卡尔蔡司员工协作凝聚力的“粘合剂”">
+						<img src="https://3er1viui9wo30pkxh1v2nh4w-wpengine.netdna-ssl.com/wp-content/uploads/prod/sites/44/2021/04/d07d2cef25409a08115e6e559a472d6.png" class="c-image wp-post-image" alt="Microsoft 365：卡尔蔡司员工协作凝聚力的“粘合剂”" scale="0" srcset="https://3er1viui9wo30pkxh1v2nh4w-wpengine.netdna-ssl.com/wp-content/uploads/prod/sites/44/2021/04/d07d2cef25409a08115e6e559a472d6.png 870w, https://3er1viui9wo30pkxh1v2nh4w-wpengine.netdna-ssl.com/wp-content/uploads/prod/sites/44/2021/04/d07d2cef25409a08115e6e559a472d6-300x200.png 300w, https://3er1viui9wo30pkxh1v2nh4w-wpengine.netdna-ssl.com/wp-content/uploads/prod/sites/44/2021/04/d07d2cef25409a08115e6e559a472d6-768x512.png 768w" sizes="(max-width: 870px) 100vw, 870px" data-original-w="870" data-original-h="580" />
+					</a>
+					<div class="m-preview-content">
+						<a href="https://news.microsoft.com/zh-cn/microsoft-365%ef%bc%9a%e5%8d%a1%e5%b0%94%e8%94%a1%e5%8f%b8%e5%91%98%e5%b7%a5%e5%8d%8f%e4%bd%9c%e5%87%9d%e8%81%9a%e5%8a%9b%e7%9a%84%e7%b2%98%e5%90%88%e5%89%82/" class="f-post-link c-heading-6 m-chevron">Microsoft 365：卡尔蔡司员工协作凝聚力的“粘合剂”</a>
+						
+					</div>
+				</article>
+<article class="m-preview">
+					<a class="m-preview-image" href="https://news.microsoft.com/zh-cn/%e6%95%b0%e5%ad%97%e5%8c%96%e6%97%b6%e4%bb%a3%ef%bc%8cazure-%e6%88%90%e4%b8%ba%e9%81%93%e6%98%8e%e9%93%b6%e8%a1%8c%e9%9b%86%e5%9b%a2%e5%8a%a0%e6%b7%b1%e5%ae%a2%e6%88%b7%e5%85%b3%e7%b3%bb%e7%9a%84/" ms.title="数字化时代，Azure 成为道明银行集团加深客户关系的“秘密武器”">
+						<img src="https://3er1viui9wo30pkxh1v2nh4w-wpengine.netdna-ssl.com/wp-content/uploads/prod/sites/44/2021/02/20210219-1-960x640.jpg" class="c-image wp-post-image" alt="数字化时代，Azure 成为道明银行集团加深客户关系的“秘密武器”" scale="0" srcset="https://3er1viui9wo30pkxh1v2nh4w-wpengine.netdna-ssl.com/wp-content/uploads/prod/sites/44/2021/02/20210219-1-960x640.jpg 960w, https://3er1viui9wo30pkxh1v2nh4w-wpengine.netdna-ssl.com/wp-content/uploads/prod/sites/44/2021/02/20210219-1-300x200.jpg 300w, https://3er1viui9wo30pkxh1v2nh4w-wpengine.netdna-ssl.com/wp-content/uploads/prod/sites/44/2021/02/20210219-1-768x512.jpg 768w, https://3er1viui9wo30pkxh1v2nh4w-wpengine.netdna-ssl.com/wp-content/uploads/prod/sites/44/2021/02/20210219-1.jpg 1320w" sizes="(max-width: 960px) 100vw, 960px" data-original-w="1320" data-original-h="880" />
+					</a>
+					<div class="m-preview-content">
+						<a href="https://news.microsoft.com/zh-cn/%e6%95%b0%e5%ad%97%e5%8c%96%e6%97%b6%e4%bb%a3%ef%bc%8cazure-%e6%88%90%e4%b8%ba%e9%81%93%e6%98%8e%e9%93%b6%e8%a1%8c%e9%9b%86%e5%9b%a2%e5%8a%a0%e6%b7%b1%e5%ae%a2%e6%88%b7%e5%85%b3%e7%b3%bb%e7%9a%84/" class="f-post-link c-heading-6 m-chevron">数字化时代，Azure 成为道明银行集团加深客户关系的“秘密武器”</a>
+						
+					</div>
+				</article>
+<article class="m-preview">
+					<a class="m-preview-image" href="https://news.microsoft.com/zh-cn/%e5%be%ae%e8%bd%af%e5%8a%a9%e5%8a%9b%e8%81%94%e9%82%a6%e5%bf%ab%e9%80%92%e5%ae%9e%e7%8e%b0%e5%95%86%e4%b8%9a%e8%bd%ac%e5%9e%8b%ef%bc%8c%e5%9c%a8%e5%85%a8%e7%90%83%e8%8c%83%e5%9b%b4%e5%86%85%e9%87%8d/" ms.title="微软助力联邦快递实现商业转型，在全球范围内重塑端到端的贸易体验">
+						<img src="https://3er1viui9wo30pkxh1v2nh4w-wpengine.netdna-ssl.com/wp-content/uploads/prod/sites/44/2021/04/20210412-1.jpg" class="c-image wp-post-image" alt="微软助力联邦快递实现商业转型，在全球范围内重塑端到端的贸易体验" scale="0" srcset="https://3er1viui9wo30pkxh1v2nh4w-wpengine.netdna-ssl.com/wp-content/uploads/prod/sites/44/2021/04/20210412-1.jpg 624w, https://3er1viui9wo30pkxh1v2nh4w-wpengine.netdna-ssl.com/wp-content/uploads/prod/sites/44/2021/04/20210412-1-300x150.jpg 300w, https://3er1viui9wo30pkxh1v2nh4w-wpengine.netdna-ssl.com/wp-content/uploads/prod/sites/44/2021/04/20210412-1-519x260.jpg 519w" sizes="(max-width: 624px) 100vw, 624px" data-original-w="624" data-original-h="312" />
+					</a>
+					<div class="m-preview-content">
+						<a href="https://news.microsoft.com/zh-cn/%e5%be%ae%e8%bd%af%e5%8a%a9%e5%8a%9b%e8%81%94%e9%82%a6%e5%bf%ab%e9%80%92%e5%ae%9e%e7%8e%b0%e5%95%86%e4%b8%9a%e8%bd%ac%e5%9e%8b%ef%bc%8c%e5%9c%a8%e5%85%a8%e7%90%83%e8%8c%83%e5%9b%b4%e5%86%85%e9%87%8d/" class="f-post-link c-heading-6 m-chevron">微软助力联邦快递实现商业转型，在全球范围内重塑端到端的贸易体验</a>
+						
+					</div>
+				</article>
+<article class="m-preview">
+					<a class="m-preview-image" href="https://news.microsoft.com/zh-cn/azure-databricks-%e5%8a%a9%e5%8a%9b%e6%99%ae%e7%bd%97%e7%bb%b4%e7%99%bb%e6%96%af%e5%8c%bb%e7%96%97%e6%9c%ba%e6%9e%84%e7%bc%93%e8%a7%a3%e5%8c%bb%e7%96%97%e6%8b%a5%e6%8c%a4%ef%bc%8c/" ms.title="Azure Databricks 助力普罗维登斯医疗机构缓解“医疗拥挤”，实现数据平台现代化">
+						<img src="https://3er1viui9wo30pkxh1v2nh4w-wpengine.netdna-ssl.com/wp-content/uploads/prod/sites/44/2021/03/20210322-1.jpg" class="c-image wp-post-image" alt="Azure Databricks 助力普罗维登斯医疗机构缓解“医疗拥挤”，实现数据平台现代化" scale="0" srcset="https://3er1viui9wo30pkxh1v2nh4w-wpengine.netdna-ssl.com/wp-content/uploads/prod/sites/44/2021/03/20210322-1.jpg 576w, https://3er1viui9wo30pkxh1v2nh4w-wpengine.netdna-ssl.com/wp-content/uploads/prod/sites/44/2021/03/20210322-1-300x106.jpg 300w" sizes="(max-width: 576px) 100vw, 576px" data-original-w="576" data-original-h="204" />
+					</a>
+					<div class="m-preview-content">
+						<a href="https://news.microsoft.com/zh-cn/azure-databricks-%e5%8a%a9%e5%8a%9b%e6%99%ae%e7%bd%97%e7%bb%b4%e7%99%bb%e6%96%af%e5%8c%bb%e7%96%97%e6%9c%ba%e6%9e%84%e7%bc%93%e8%a7%a3%e5%8c%bb%e7%96%97%e6%8b%a5%e6%8c%a4%ef%bc%8c/" class="f-post-link c-heading-6 m-chevron">Azure Databricks 助力普罗维登斯医疗机构缓解“医疗拥挤”，实现数据平台现代化</a>
+						
+					</div>
+				</article>
+						</div>
+
+					</section>
+
+					<section class="f-col-home f-col-height-match" data-grid="col-4">
+	<h2 class="c-heading-5">热门话题</h2>
+	<div>
+		<section id="media_image-12" class="widget widget_media_image" data-grid="col-12"><h3 class="widget-title c-heading-5" data-grid="col-12"><!-- No title --></h3><div class="m-preview" data-grid="col-12"><div class="m-preview-content"><h3 class="widget-title c-heading-5" data-grid="col-12"><!-- No title --></h3><div class="m-preview" data-grid="col-12"><div class="m-preview-content"><a href="https://news.microsoft.com/zh-cn/features/%e5%be%ae%e8%bd%af%e4%b8%ad%e5%9b%bd-2020-%e4%bc%81%e4%b8%9a%e5%85%ac%e6%b0%91%e6%8a%a5%e5%91%8a/" class="" rel="" target=""><img width="540" height="280" src="https://3er1viui9wo30pkxh1v2nh4w-wpengine.netdna-ssl.com/wp-content/uploads/prod/sites/44/2020/11/unnamed-file-540x280.jpg" class="image wp-image-59629  attachment-presskit-story size-presskit-story" alt="" style="max-width: 100%; height: auto;" srcset="https://3er1viui9wo30pkxh1v2nh4w-wpengine.netdna-ssl.com/wp-content/uploads/prod/sites/44/2020/11/unnamed-file-540x280.jpg 540w, https://3er1viui9wo30pkxh1v2nh4w-wpengine.netdna-ssl.com/wp-content/uploads/prod/sites/44/2020/11/unnamed-file-181x94.jpg 181w" sizes="(max-width: 540px) 100vw, 540px" data-original-w="2003" data-original-h="1061" /></a></div></div></section><section id="nav_menu-9" class="widget widget_nav_menu" data-grid="col-12"><h3 class="widget-title c-heading-5" data-grid="col-12"><!-- No title --></h3><div class="m-preview" data-grid="col-12"><div class="m-preview-content"><div class="menu-%e5%8f%b3%e8%be%b9%e6%a0%8f-container"><ul id="menu-%e5%8f%b3%e8%be%b9%e6%a0%8f" class="menu"><li><a href="https://news.microsoft.com/zh-cn/presskits/azure/" class="c-hyperlink m-chevron">Azure</a></li>
+<li><a href="https://news.microsoft.com/zh-cn/presskits/microsoft-ai/" class="c-hyperlink m-chevron">Microsoft AI</a></li>
+<li><a href="https://news.microsoft.com/zh-cn/presskits/equipment/" class="c-hyperlink m-chevron">设备</a></li>
+<li><a href="https://news.microsoft.com/zh-cn/presskits/office/" class="c-hyperlink m-chevron">Office</a></li>
+<li><a href="https://news.microsoft.com/zh-cn/presskits/windows-2/" class="c-hyperlink m-chevron">Windows</a></li>
+<li><a href="https://news.microsoft.com/zh-cn/presskits/entertainment/" class="c-hyperlink m-chevron">Xbox</a></li>
+<li><a href="https://news.microsoft.com/zh-cn/presskits/big-data-2/" class="c-hyperlink m-chevron">大数据</a></li>
+</ul></div></div></div></section><section id="media_image-6" class="widget widget_media_image" data-grid="col-12"><h3 class="widget-title c-heading-5" data-grid="col-12">更多微软故事</h3><div class="m-preview" data-grid="col-12"><div class="m-preview-content"><a href="https://news.microsoft.com/zh-cn/features/" class="" rel="" target=""><img width="400" height="200" src="https://3er1viui9wo30pkxh1v2nh4w-wpengine.netdna-ssl.com/wp-content/uploads/sites/44/2015/09/400-banner-6.jpg" class="image wp-image-32991  attachment-presskit-story size-presskit-story" alt="" style="max-width: 100%; height: auto;" srcset="https://3er1viui9wo30pkxh1v2nh4w-wpengine.netdna-ssl.com/wp-content/uploads/prod/sites/44/2015/09/400-banner-6.jpg 400w, https://3er1viui9wo30pkxh1v2nh4w-wpengine.netdna-ssl.com/wp-content/uploads/prod/sites/44/2015/09/400-banner-6-300x150.jpg 300w, https://3er1viui9wo30pkxh1v2nh4w-wpengine.netdna-ssl.com/wp-content/uploads/prod/sites/44/2015/09/400-banner-6-278x139.jpg 278w" sizes="(max-width: 400px) 100vw, 400px" data-original-w="400" data-original-h="200" /></a></div></div></section><section id="media_image-14" class="widget widget_media_image" data-grid="col-12"><h3 class="widget-title c-heading-5" data-grid="col-12">借微软智能云矩阵 可口可乐革新全球客户沟通及员工体验</h3><div class="m-preview" data-grid="col-12"><div class="m-preview-content"><a href="https://news.microsoft.com/zh-cn/%e5%80%9f%e5%be%ae%e8%bd%af%e6%99%ba%e8%83%bd%e4%ba%91%e7%9f%a9%e9%98%b5-%e5%8f%af%e5%8f%a3%e5%8f%af%e4%b9%90%e9%9d%a9%e6%96%b0%e5%85%a8%e7%90%83%e5%ae%a2%e6%88%b7%e6%b2%9f%e9%80%9a%e5%8f%8a%e5%91%98/" class="" rel="" target=""><img width="540" height="279" src="https://3er1viui9wo30pkxh1v2nh4w-wpengine.netdna-ssl.com/wp-content/uploads/prod/sites/44/2021/04/20210427-4-540x279.jpg" class="image wp-image-59937  attachment-presskit-story size-presskit-story" alt="借微软智能云矩阵 可口可乐革新全球客户沟通及员工体验" style="max-width: 100%; height: auto;" srcset="https://3er1viui9wo30pkxh1v2nh4w-wpengine.netdna-ssl.com/wp-content/uploads/prod/sites/44/2021/04/20210427-4-540x279.jpg 540w, https://3er1viui9wo30pkxh1v2nh4w-wpengine.netdna-ssl.com/wp-content/uploads/prod/sites/44/2021/04/20210427-4-181x94.jpg 181w" sizes="(max-width: 540px) 100vw, 540px" data-original-w="624" data-original-h="279" /></a></div></div></section><section id="media_image-8" class="widget widget_media_image" data-grid="col-12"><h3 class="widget-title c-heading-5" data-grid="col-12">微软 Surface 助力 NTT COMWARE 公司重塑协同办公</h3><div class="m-preview" data-grid="col-12"><div class="m-preview-content"><a href="https://news.microsoft.com/zh-cn/%e5%be%ae%e8%bd%af-surface-%e5%8a%a9%e5%8a%9b-ntt-comware-%e5%85%ac%e5%8f%b8%e9%87%8d%e5%a1%91%e5%8d%8f%e5%90%8c%e5%8a%9e%e5%85%ac/" class="" rel="" target=""><img width="540" height="280" src="https://3er1viui9wo30pkxh1v2nh4w-wpengine.netdna-ssl.com/wp-content/uploads/prod/sites/44/2021/04/20210423-1-540x280.jpg" class="image wp-image-59924  attachment-presskit-story size-presskit-story" alt="在 NTT COMWARE 位于日本品川区的办公楼内，员工利用 Surface Hub 2S 进行远程面试" style="max-width: 100%; height: auto;" srcset="https://3er1viui9wo30pkxh1v2nh4w-wpengine.netdna-ssl.com/wp-content/uploads/prod/sites/44/2021/04/20210423-1-540x280.jpg 540w, https://3er1viui9wo30pkxh1v2nh4w-wpengine.netdna-ssl.com/wp-content/uploads/prod/sites/44/2021/04/20210423-1-181x94.jpg 181w" sizes="(max-width: 540px) 100vw, 540px" data-original-w="576" data-original-h="386" /></a></div></div></section>	</div>
+</section>
+				</section>
+
+			</main><!-- #main -->
+		</div><!-- #primary -->
+	</div>
+
+    <div class="social-footer-wrap">
+        <section class="social-footer" role="region" aria-label="社交媒体" data-grid="container pad-6x stack-2">
+            <div class="follow-msft" data-grid="col-6">
+
+				<div class="m-social mt-social-profiles f-horizontal f-share" itemscope itemtype="http://schema.org/Organization">
+    <p>关注我们：</p>
+    <ul>
+
+		
+		<!-- RSS Item -->
+		<li>
+			<a itemprop="sameAs" aria-label="RSS Subscription" title="RSS Subscription" href="https://news.microsoft.com/zh-cn?feed=rss2" target="blank">
+				<svg xmlns="http://www.w3.org/2000/svg" width="18" height="24" viewBox="0 0 24 24" focusable="false"><path fill="#231f20" d="M6.503 20.752c0 1.794-1.456 3.248-3.251 3.248-1.796 0-3.252-1.454-3.252-3.248 0-1.794 1.456-3.248 3.252-3.248 1.795.001 3.251 1.454 3.251 3.248zm-6.503-12.572v4.811c6.05.062 10.96 4.966 11.022 11.009h4.817c-.062-8.71-7.118-15.758-15.839-15.82zm0-3.368c10.58.046 19.152 8.594 19.183 19.188h4.817c-.03-13.231-10.755-23.954-24-24v4.812z"/></svg>
+				<span class="screen-reader-text">
+					Check us out on RSS				</span>
+			</a>
+		</li>
+
+    </ul>
+</div>
+
+            </div>
+            <div class="share-msft" data-grid="col-6">
+
+				<div class="m-social f-horizontal f-share" itemscope itemtype="http://schema.org/Organization"><p>分享这个页面：</p><ul>
+				<li> 
+					<a itemprop="sameAs" aria-label="分享到推特" title="分享到推特" href="https://www.linkedin.com/shareArticle?mini=true&#038;url=https%3A%2F%2Fnews.microsoft.com%2Fzh-cn%2F&#038;title=Home&#038;summary=Home&#038;source=https%3A%2F%2Fnews.microsoft.com%2Fzh-cn%2F" target="blank">
+						<picture>
+							<source type="image/svg+xml" srcset="https://news.microsoft.com/wp-content/themes/microsoft-news-center-2016/images/components/social/linkedin-gray.svg">
+							<img src="https://news.microsoft.com/wp-content/themes/microsoft-news-center-2016/images/components/social/linkedin-gray.png" alt="LinkedIn">
+						</picture>
+					</a>
+				</li>
+			
+				<li> 
+					<a itemprop="sameAs" aria-label="Share on Weibo" title="Share on Weibo" href="http://service.weibo.com/share/share.php?title=Home&#038;url=https%3A%2F%2Fnews.microsoft.com%2Fzh-cn%2F/" target="blank">
+						<picture>
+							<source type="image/svg+xml" srcset="https://news.microsoft.com/wp-content/themes/microsoft-news-center-2016/images/components/social/weibo-gray.svg">
+							<img src="https://news.microsoft.com/wp-content/themes/microsoft-news-center-2016/images/components/social/weibo-gray.png" alt="Weibo">
+						</picture>
+					</a>
+				</li>
+			
+				<li> 
+					<a itemprop="sameAs" aria-label="Share on WhatsApp" title="Share on WhatsApp" href="https://api.whatsapp.com/send?text=https%3A%2F%2Fnews.microsoft.com%2Fzh-cn%2F" target="blank">
+						<picture>
+							<source type="image/svg+xml" srcset="https://news.microsoft.com/wp-content/themes/microsoft-news-center-2016/images/components/social/whatsapp-gray.svg">
+							<img src="https://news.microsoft.com/wp-content/themes/microsoft-news-center-2016/images/components/social/whatsapp-gray.png" alt="WhatsApp">
+						</picture>
+					</a>
+				</li>
+			</ul></div>
+            </div>
+        </section>
+    </div>
+	<div id="footerArea" class="uhf"  data-m='{"cN":"footerArea","cT":"Area_coreuiArea","id":"a2Body","sN":2,"aN":"Body"}'>
+                <div id="footerRegion"     data-region-key="footerregion" data-m='{"cN":"footerRegion","cT":"Region_coreui-region","id":"r1a2","sN":1,"aN":"a2"}' >
+
+    <div  id="footerUniversalFooter" data-m='{"cN":"footerUniversalFooter","cT":"Module_coreui-universalfooter","id":"m1r1a2","sN":1,"aN":"r1a2"}'  data-module-id="Category|footerRegion|coreui-region|footerUniversalFooter|coreui-universalfooter">
+        
+
+
+
+<footer id="uhf-footer" class="c-uhff context-uhf"  data-uhf-mscc-rq="false" data-footer-footprint="/MSNewsZHCN/MSNewsFooterZHCN, fromService: True" data-m='{"cN":"Uhf footer_cont","cT":"Container","id":"c1m1r1a2","sN":1,"aN":"m1r1a2"}'>
+        <nav class="c-uhff-nav" aria-label="页脚资源链接" data-m='{"cN":"Footer nav_cont","cT":"Container","id":"c1c1m1r1a2","sN":1,"aN":"c1m1r1a2"}'>
+            
+                <div class="c-uhff-nav-row">
+                    <div class="c-uhff-nav-group" data-m='{"cN":"footerNavColumn1_cont","cT":"Container","id":"c1c1c1m1r1a2","sN":1,"aN":"c1c1m1r1a2"}'>
+                        <div class="c-heading-4" role="heading" aria-level="4">新增内容</div>
+                        <ul class="c-list f-bare">
+                            <li>
+                                <a aria-label="Microsoft 365 新增内容" class="c-uhff-link" href="https://www.microsoft.com/microsoft-365" data-m='{"cN":"Whatsnew_Microsoft365_nav","id":"n1c1c1c1m1r1a2","sN":1,"aN":"c1c1c1m1r1a2"}'>Microsoft 365</a>
+                            </li>
+                            <li>
+                                <a aria-label="Surface Pro 6 新增内容" class="c-uhff-link" href="https://www.microsoft.com/zh-cn/surface/devices/surface-pro-6" data-m='{"cN":"Footer_WhatsNew_NewSurfacePro6_nav","id":"n2c1c1c1m1r1a2","sN":2,"aN":"c1c1c1m1r1a2"}'>Surface Pro 6</a>
+                            </li>
+                            <li>
+                                <a aria-label="Surface Laptop 2 新增内容" class="c-uhff-link" href="https://www.microsoft.com/zh-cn/surface/devices/surface-laptop-2" data-m='{"cN":"Footer_WhatsNew_SurfaceLaptop2_nav","id":"n3c1c1c1m1r1a2","sN":3,"aN":"c1c1c1m1r1a2"}'>Surface Laptop 2</a>
+                            </li>
+                            <li>
+                                <a aria-label="Surface Go 新增内容" class="c-uhff-link" href="https://www.microsoft.com/zh-cn/surface/devices/surface-go" data-m='{"cN":"Footer_WhatsNew_SurfaceGo_nav","id":"n4c1c1c1m1r1a2","sN":4,"aN":"c1c1c1m1r1a2"}'>Surface Go</a>
+                            </li>
+                            <li>
+                                <a aria-label="Windows 10 应用程序 新增内容" class="c-uhff-link" href="https://www.microsoft.com/zh-cn/windows/windows-10-apps" data-m='{"cN":"Footer_WhatsNew_Windows_10_apps_nav","id":"n5c1c1c1m1r1a2","sN":5,"aN":"c1c1c1m1r1a2"}'>Windows 10 应用程序</a>
+                            </li>
+
+                        </ul>
+                        
+                    </div>
+                    <div class="c-uhff-nav-group" data-m='{"cN":"footerNavColumn2_cont","cT":"Container","id":"c2c1c1m1r1a2","sN":2,"aN":"c1c1m1r1a2"}'>
+                        <div class="c-heading-4" role="heading" aria-level="4">Microsoft Store</div>
+                        <ul class="c-list f-bare">
+                            <li>
+                                <a aria-label="帐户个人资料 Microsoft Store" class="c-uhff-link" href="https://account.microsoft.com/" data-m='{"cN":"Footer_StoreandSupport_AccountProfile_nav","id":"n1c2c1c1m1r1a2","sN":1,"aN":"c2c1c1m1r1a2"}'>帐户个人资料</a>
+                            </li>
+                            <li>
+                                <a aria-label="下载中心 Microsoft Store" class="c-uhff-link" href="https://www.microsoft.com/zh-cn/download" data-m='{"cN":"Footer_StoreandSupport_DownloadCenter_nav","id":"n2c2c1c1m1r1a2","sN":2,"aN":"c2c1c1m1r1a2"}'>下载中心</a>
+                            </li>
+                            <li>
+                                <a aria-label="订单跟踪 Microsoft Store" class="c-uhff-link" href="https://account.microsoft.com/orders" data-m='{"cN":"Footer_StoreandSupport_OrderTracking_nav","id":"n3c2c1c1m1r1a2","sN":3,"aN":"c2c1c1m1r1a2"}'>订单跟踪</a>
+                            </li>
+
+                        </ul>
+                        
+                    </div>
+                    <div class="c-uhff-nav-group" data-m='{"cN":"footerNavColumn3_cont","cT":"Container","id":"c3c1c1m1r1a2","sN":3,"aN":"c1c1m1r1a2"}'>
+                        <div class="c-heading-4" role="heading" aria-level="4">教育</div>
+                        <ul class="c-list f-bare">
+                            <li>
+                                <a aria-label="Microsoft 教育领域 教育" class="c-uhff-link" href="https://www.microsoft.com/zh-cn/education" data-m='{"cN":"Footer_Education_MicrosoftInEducation_nav","id":"n1c3c1c1m1r1a2","sN":1,"aN":"c3c1c1m1r1a2"}'>Microsoft 教育领域</a>
+                            </li>
+                            <li>
+                                <a aria-label="适合学生的 Office 教育" class="c-uhff-link" href="https://www.microsoft.com/zh-cn/education/products/office/default.aspx" data-m='{"cN":"Footer_Education_OfficeForStudents_nav","id":"n2c3c1c1m1r1a2","sN":2,"aN":"c3c1c1m1r1a2"}'>适合学生的 Office</a>
+                            </li>
+                            <li>
+                                <a aria-label="适用于学校的 Office 365 教育" class="c-uhff-link" href="https://products.office.com/zh-cn/academic/compare-office-365-education-plans" data-m='{"cN":"Footer_Education_Office365ForSchools_nav","id":"n3c3c1c1m1r1a2","sN":3,"aN":"c3c1c1m1r1a2"}'>适用于学校的 Office 365</a>
+                            </li>
+                            <li>
+                                <a aria-label="Microsoft Azure 教育领域 教育" class="c-uhff-link" href="https://azure.microsoft.com/zh-cn/community/education/" data-m='{"cN":"Footer_MicrosoftAzureInEducation_nav","id":"n4c3c1c1m1r1a2","sN":4,"aN":"c3c1c1m1r1a2"}'>Microsoft Azure 教育领域</a>
+                            </li>
+
+                        </ul>
+                        
+                    </div>
+                </div>
+                <div class="c-uhff-nav-row">
+                    <div class="c-uhff-nav-group" data-m='{"cN":"footerNavColumn4_cont","cT":"Container","id":"c4c1c1m1r1a2","sN":4,"aN":"c1c1m1r1a2"}'>
+                        <div class="c-heading-4" role="heading" aria-level="4">企业</div>
+                        <ul class="c-list f-bare">
+                            <li>
+                                <a aria-label="Azure 企业" class="c-uhff-link" href="https://azure.microsoft.com/" data-m='{"cN":"Footer_Enterprise_MicrosoftAzure_nav","id":"n1c4c1c1m1r1a2","sN":1,"aN":"c4c1c1m1r1a2"}'>Azure</a>
+                            </li>
+                            <li>
+                                <a aria-label="AppSource 企业" class="c-uhff-link" href="https://go.microsoft.com/fwlink/?LinkID=808093" data-m='{"cN":"Footer_Enterprise_MicrosoftAppSource_nav","id":"n2c4c1c1m1r1a2","sN":2,"aN":"c4c1c1m1r1a2"}'>AppSource</a>
+                            </li>
+                            <li>
+                                <a aria-label="汽车 企业" class="c-uhff-link" href="https://www.microsoft.com/enterprise/automotive" data-m='{"cN":"Footer_Enterprise_Automotive_nav","id":"n3c4c1c1m1r1a2","sN":3,"aN":"c4c1c1m1r1a2"}'>汽车</a>
+                            </li>
+                            <li>
+                                <a aria-label="政府机构 企业" class="c-uhff-link" href="https://www.microsoft.com/enterprise/government" data-m='{"cN":"Footer_Enterprise_Government_nav","id":"n4c4c1c1m1r1a2","sN":4,"aN":"c4c1c1m1r1a2"}'>政府机构</a>
+                            </li>
+                            <li>
+                                <a aria-label="医疗保健 企业" class="c-uhff-link" href="https://www.microsoft.com/enterprise/health" data-m='{"cN":"Footer_Enterprise_Health_nav","id":"n5c4c1c1m1r1a2","sN":5,"aN":"c4c1c1m1r1a2"}'>医疗保健</a>
+                            </li>
+                            <li>
+                                <a aria-label="制造业 企业" class="c-uhff-link" href="https://www.microsoft.com/enterprise/manufacturing" data-m='{"cN":"Footer_Enterprise_Manufacturing_nav","id":"n6c4c1c1m1r1a2","sN":6,"aN":"c4c1c1m1r1a2"}'>制造业</a>
+                            </li>
+                            <li>
+                                <a aria-label="金融服务 企业" class="c-uhff-link" href="https://www.microsoft.com/enterprise/financial-services/banking-and-capital-markets" data-m='{"cN":"Footer_Enterprise_FinanciaServices_nav","id":"n7c4c1c1m1r1a2","sN":7,"aN":"c4c1c1m1r1a2"}'>金融服务</a>
+                            </li>
+                            <li>
+                                <a aria-label="零售业 企业" class="c-uhff-link" href="https://www.microsoft.com/enterprise/retail-consumer-goods" data-m='{"cN":"Footer_Enterprise_Retail_nav","id":"n8c4c1c1m1r1a2","sN":8,"aN":"c4c1c1m1r1a2"}'>零售业</a>
+                            </li>
+
+                        </ul>
+                        
+                    </div>
+                    <div class="c-uhff-nav-group" data-m='{"cN":"footerNavColumn5_cont","cT":"Container","id":"c5c1c1m1r1a2","sN":5,"aN":"c1c1m1r1a2"}'>
+                        <div class="c-heading-4" role="heading" aria-level="4">开发人员</div>
+                        <ul class="c-list f-bare">
+                            <li>
+                                <a aria-label="Microsoft Visual Studio 开发人员" class="c-uhff-link" href="https://visualstudio.microsoft.com/" data-m='{"cN":"Footer_Developer_MicrosoftVisualStudio_nav","id":"n1c5c1c1m1r1a2","sN":1,"aN":"c5c1c1m1r1a2"}'>Microsoft Visual Studio</a>
+                            </li>
+                            <li>
+                                <a aria-label="Windows 开发人员中心 开发人员" class="c-uhff-link" href="https://developer.microsoft.com/zh-cn/windows" data-m='{"cN":"Footer_Developer_WindowsDevCenter_nav","id":"n2c5c1c1m1r1a2","sN":2,"aN":"c5c1c1m1r1a2"}'>Windows 开发人员中心</a>
+                            </li>
+                            <li>
+                                <a aria-label="开发人员中心 开发人员" class="c-uhff-link" href="https://developer.microsoft.com/" data-m='{"cN":"Footer_Developer_DeveloperCenter_nav","id":"n3c5c1c1m1r1a2","sN":3,"aN":"c5c1c1m1r1a2"}'>开发人员中心</a>
+                            </li>
+                            <li>
+                                <a aria-label="Microsoft 开发人员计划 开发人员" class="c-uhff-link" href="https://developer.microsoft.com/zh-cn/store/register" data-m='{"cN":"Footer_Developer_MicrosoftDeveloperProgram_nav","id":"n4c5c1c1m1r1a2","sN":4,"aN":"c5c1c1m1r1a2"}'>Microsoft 开发人员计划</a>
+                            </li>
+                            <li>
+                                <a aria-label="第9频道 开发人员" class="c-uhff-link" href="https://channel9.msdn.com/" data-m='{"cN":"Footer_Developer_Channel9_nav","id":"n5c5c1c1m1r1a2","sN":5,"aN":"c5c1c1m1r1a2"}'>第9频道</a>
+                            </li>
+                            <li>
+                                <a aria-label="Office 开发人员中心 开发人员" class="c-uhff-link" href="https://developer.microsoft.com/zh-cn/office" data-m='{"cN":"Footer_Developer_OfficeDevCenter_nav","id":"n6c5c1c1m1r1a2","sN":6,"aN":"c5c1c1m1r1a2"}'>Office 开发人员中心</a>
+                            </li>
+
+                        </ul>
+                        
+                    </div>
+                    <div class="c-uhff-nav-group" data-m='{"cN":"footerNavColumn6_cont","cT":"Container","id":"c6c1c1m1r1a2","sN":6,"aN":"c1c1m1r1a2"}'>
+                        <div class="c-heading-4" role="heading" aria-level="4">公司</div>
+                        <ul class="c-list f-bare">
+                            <li>
+                                <a aria-label="招贤纳士 公司" class="c-uhff-link" href="https://careers.microsoft.com/" data-m='{"cN":"Footer_Company_Careers_nav","id":"n1c6c1c1m1r1a2","sN":1,"aN":"c6c1c1m1r1a2"}'>招贤纳士</a>
+                            </li>
+                            <li>
+                                <a aria-label="关于 Microsoft 公司" class="c-uhff-link" href="https://www.microsoft.com/zh-cn/about" data-m='{"cN":"Footer_Company_AboutMicrosoft_nav","id":"n2c6c1c1m1r1a2","sN":2,"aN":"c6c1c1m1r1a2"}'>关于 Microsoft</a>
+                            </li>
+                            <li>
+                                <a aria-label="公司新闻 公司" class="c-uhff-link" href="https://news.microsoft.com/zh-cn" data-m='{"cN":"Footer_Company_CompanyNews_nav","id":"n3c6c1c1m1r1a2","sN":3,"aN":"c6c1c1m1r1a2"}'>公司新闻</a>
+                            </li>
+                            <li>
+                                <a aria-label="Microsoft 隐私 公司" class="c-uhff-link" href="https://privacy.microsoft.com/zh-cn" data-m='{"cN":"Footer_Company_PrivacyAtMicrosoft_nav","id":"n4c6c1c1m1r1a2","sN":4,"aN":"c6c1c1m1r1a2"}'>Microsoft 隐私</a>
+                            </li>
+                            <li>
+                                <a aria-label="投资人 公司" class="c-uhff-link" href="https://www.microsoft.com/investor/default.aspx" data-m='{"cN":"Footer_Company_Investors_nav","id":"n5c6c1c1m1r1a2","sN":5,"aN":"c6c1c1m1r1a2"}'>投资人</a>
+                            </li>
+                            <li>
+                                <a aria-label="安全性 公司" class="c-uhff-link" href="https://www.microsoft.com/zh-cn/security/default.aspx" data-m='{"cN":"Footer_Company_Security_nav","id":"n6c6c1c1m1r1a2","sN":6,"aN":"c6c1c1m1r1a2"}'>安全性</a>
+                            </li>
+
+                        </ul>
+                        
+                    </div>
+                </div>
+        </nav>
+    <div class="c-uhff-base">
+        
+        <nav aria-label="Microsoft 企业链接">
+            <ul class="c-list f-bare" data-m='{"cN":"Corp links_cont","cT":"Container","id":"c7c1c1m1r1a2","sN":7,"aN":"c1c1m1r1a2"}'>
+                                <li  id="c-uhff-footer_contactus">
+                    <a class="c-uhff-link" href="https://support.microsoft.com/contactus" data-mscc-ic="false" data-m='{"cN":"Footer_ContactUs_nav","id":"n1c7c1c1m1r1a2","sN":1,"aN":"c7c1c1m1r1a2"}'>与 Microsoft 联系</a>
+                </li>
+                <li  id="c-uhff-footer_privacyandcookies">
+                    <a class="c-uhff-link" href="https://go.microsoft.com/fwlink/?LinkId=521839" data-mscc-ic="false" data-m='{"cN":"Footer_PrivacyandCookies_nav","id":"n2c7c1c1m1r1a2","sN":2,"aN":"c7c1c1m1r1a2"}'>隐私</a>
+                </li>
+                <li class=" x-hidden" id="c-uhff-footer_managecookies">
+                    <a class="c-uhff-link" href="#" data-mscc-ic="false" data-m='{"cN":"Footer_ManageCookies_nav","id":"n3c7c1c1m1r1a2","sN":3,"aN":"c7c1c1m1r1a2"}'>管理 Cookie</a>
+                </li>
+                <li  id="c-uhff-footer_termsofuse">
+                    <a class="c-uhff-link" href="https://go.microsoft.com/fwlink/?LinkID=206977" data-mscc-ic="false" data-m='{"cN":"Footer_TermsOfUse_nav","id":"n4c7c1c1m1r1a2","sN":4,"aN":"c7c1c1m1r1a2"}'>使用条款</a>
+                </li>
+                <li  id="c-uhff-footer_trademarks">
+                    <a class="c-uhff-link" href="https://www.microsoft.com/trademarks" data-mscc-ic="false" data-m='{"cN":"Footer_Trademarks_nav","id":"n5c7c1c1m1r1a2","sN":5,"aN":"c7c1c1m1r1a2"}'>商标</a>
+                </li>
+                <li  id="c-uhff-footer_aboutourads">
+                    <a class="c-uhff-link" href="https://choice.microsoft.com/" data-mscc-ic="false" data-m='{"cN":"Footer_AboutourAds_nav","id":"n6c7c1c1m1r1a2","sN":6,"aN":"c7c1c1m1r1a2"}'>关于我们的广告</a>
+                </li>
+                <li  id="c-uhff-footer_special">
+                    <a class="c-uhff-link" href="http://www.beian.miit.gov.cn/" data-mscc-ic="false" data-m='{"cN":"Footer_Special_nav","id":"n7c7c1c1m1r1a2","sN":7,"aN":"c7c1c1m1r1a2"}'>京ICP备09042378号-6</a>
+                </li>
+                <li  id="c-uhff-footer_specialportal">
+                    <a class="c-uhff-link" href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=11010802023178" data-mscc-ic="false" data-m='{"cN":"Footer_SpecialPortal_nav","id":"n8c7c1c1m1r1a2","sN":8,"aN":"c7c1c1m1r1a2"}'>京公网安备 11010802023178</a>
+                </li>
+
+                <li>&#169; Microsoft 2021</li>
+                
+            </ul>
+        </nav>
+    </div>
+    
+</footer>
+
+
+
+
+    </div>
+        </div>
+
+    </div>
+	<!-- Facebook Pixel Code -->
+	<script>
+		function facebookTracking() {
+			!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+				n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
+				n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+				t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
+				document,'script','https://connect.facebook.net/en_US/fbevents.js');
+			fbq('init', '435868603227390');
+			fbq('track', 'PageView');
+		}
+	</script>
+	<!-- End Facebook Pixel Code -->
+
+		<script type="text/javascript">
+		function twitterTracking() {
+			var script = document.createElement( 'script' );
+			script.setAttribute( 'type', 'text/javascript' );
+			script.setAttribute( 'src', '//platform.twitter.com/oct.js' );
+			script.onload = function() {
+				var track = document.createElement( 'script' );
+				track.setAttribute( 'type', 'text/javascript' );
+				track.innerHTML = "twttr.conversion.trackPid('l6pv0', { tw_sale_amount: 0, tw_order_quantity: 0 });";
+				document.body.appendChild( track );
+			};
+			document.body.appendChild( script );
+		}
+	</script>
+		<script type="text/javascript">
+		var _linkedin_data_partner_id = '7850';
+		function linkedinTracking(){
+			var s = document.getElementsByTagName("script")[0];
+			var b = document.createElement("script");
+			b.type = "text/javascript";b.async = true;
+			b.src = "https://snap.licdn.com/li.lms-analytics/insight.min.js";
+			s.parentNode.insertBefore(b, s);
+		}
+	</script>
+	<script type='text/javascript' src='//cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.0/js/swiper.min.js'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var themefragments = [];
+/* ]]> */
+</script>
+<script type='text/javascript' src='https://news.microsoft.com/wp-content/plugins/microsoft-fragments/assets/js/theme-fragments.min.js?ver=0.7.2'></script>
+<script type='text/javascript' src='https://news.microsoft.com/wp-content/plugins/responsive-images-plugin/public/js/tribe-responsive-images-fe.min.js?ver=1606167878'></script>
+<script type='text/javascript' src='https://news.microsoft.com/wp-content/plugins/mosaic-grid-headers/public/js/microsoft-mosaic-grid.min.js?ver=1606167877'></script>
+<script type='text/javascript' src='https://news.microsoft.com/wp-content/themes/microsoft-news-center-2016/assets/js/vendor.min.js?ver=3.0.2'></script>
+<script type='text/javascript' src='//assets.onestore.ms/cdnfiles/external/mwf/short/v1/latest/scripts/mwf-auto-init-main.var.min.js?' async='async'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var mncI18n = {"followUs":"Follow Us"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='https://news.microsoft.com/wp-content/themes/microsoft-news-center-2016/assets/js/bundle.min.js?ver=0.7.4'></script>
+<script type='text/javascript' src='https://news.microsoft.com/wp-content/plugins/page-links-to/dist/new-tab.js?ver=3.3.4'></script>
+<script type='text/javascript' src='https://news.microsoft.com/wp-content/plugins/microsoft-oembeds/cookie-consent.js?ver=1.0.0'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var microsoftUhfSettings = {"homePath":"\/zh-cn\/","loginUrl":"https:\/\/www.microsoft.com\/zh-cn\/signin.aspx","logoutUrl":"https:\/\/www.microsoft.com\/zh-cn\/signout.aspx","scripts":[],"inline":["facebookTracking","clicktaleTracking","twitterTracking","linkedinTracking"]};
+/* ]]> */
+</script>
+<script type='text/javascript' src='https://news.microsoft.com/wp-content/plugins/microsoft-uhf/assets/microsoft-uhf.js?ver=0.3.8'></script>
+<script type='text/javascript' src='https://news.microsoft.com/wp-content/plugins/microsoft-uhf/assets/microsoft-cookie-updates.js?ver=0.3.8'></script>
+<script type='text/javascript' src='https://news.microsoft.com/zh-cn/wp-includes/js/wp-embed.min.js'></script>
+	</body>
+</html>

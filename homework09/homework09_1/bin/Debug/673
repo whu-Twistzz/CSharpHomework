@@ -1,0 +1,2099 @@
+﻿
+<!DOCTYPE html>
+<html lang="zh"
+      dir="ltr"
+      >
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    
+    <script src="https://cdn.jsdelivr.net/npm/mdn-polyfills/NodeList.prototype.forEach.js"></script>
+            <link rel="stylesheet" href="https://mwf-service.akamaized.net/mwf/css/bundle/1.57.0/west-european/default/mwf-main.min.css" />
+    <link rel="stylesheet" href="https://cortexonemsedu.blob.core.windows.net/staticcontent/CortexCss.css" />
+
+    <script src="https://mwf-service.akamaized.net/mwf/js/bundle/1.57.3/mwf-main.var.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script src="https://cortexonemsedu.blob.core.windows.net/staticcontent/CortexMain.js"></script>
+    <script src="https://cortexonemsedu.blob.core.windows.net/staticcontent/CortexImmersiveReader.js"></script>
+    <link rel="stylesheet" href="https://www.microsoft.com/onerfstatics/marketingsites-wcus-prod/chinese-simplified/shell/_scrf/css/themes=default.device=uplevel_web_pc/de-d4f5a9/33-fa7e00/4c-0b4a50/72-2965a5/41-e4e079/cd-a6d564/2b-bd61b8/64-b46b82?ver=2.0&amp;_cf=20210415" type="text/css" media="all" /><link rel='stylesheet' href='https://statics-marketingsites-wcus-ms-com.akamaized.net/statics/override.css?c=7' type='text/css' />
+    <script src="https://wcpstatic.microsoft.com/mscc/lib/v2/wcp-consent.js"></script><script src="https://www.microsoft.com/onerfstatics/marketingsites-wcus-prod/shell/_scrf/js/themes=default/54-af9f9f/c0-247156/de-099401/e1-a50eee/e7-954872/d8-97d509/f0-251fe2/46-be1318/77-04a268/11-240c7b/63-077520/a4-34de62/bb-d7480b/db-bc0148/dc-7e9864/6d-c07ea1/9d-b58f60/f6-aa5278/cd-23d3b0/6d-1e7ed0/b7-cadaa7/c4-898cf2/ca-40b7b0/4e-ee3a55/3e-f5c39b/c3-6454d7/f9-7592d3/92-10345d/79-499886/7e-cda2d3/69-13871c/b7-0ad59f/e0-3c9860/91-97a04f/1f-100dea/33-abe4df/17-f90ef1?ver=2.0&_cf=20210415&iife=1"></script>
+
+        <script src="https://cortexonemsedu.blob.core.windows.net/staticcontent/CortexMain.js"></script>
+        <script src="https://ms-p9-s2-170223-1115-43.azurewebsites.net/cortexone/Content/tagging_init.js"></script>
+
+        <script>
+            var cpmApiURL = "https://ms-p9-s2-170223-1115-43.azurewebsites.net//cortexone/CpmApi/submitEmail";
+        </script>
+
+
+    <script type='text/javascript' src='https://contentstorage.onenote.office.net/onenoteltir/immersivereadersdk/immersive-reader-sdk.0.0.1.js'></script>
+
+    <script>Cortex.Generic.checkCanonical();</script>
+    <link rel="shortcut icon" href="//www.microsoft.com/favicon.ico?v2">
+            <script src="https://www.microsoft.com/videoplayer/js/oneplayeriframe.js"></script>
+            <script src="https://cdn.jsdelivr.net/npm/js-cookie@2/src/js.cookie.min.js"></script>
+
+    <meta name="og:url" content="/cortexone/home/index" />
+    <meta name="og:site_name" content="Microsoft Education" />
+    <meta name="og:type" content="website" />
+    <meta name="og:locale" content="zh-CN" />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:site" content="@MicrosoftEDU" />
+    <meta name="author" content="Microsoft" />
+    <title>学校和学生免费使用 Microsoft Office 365 | Microsoft 教育</title>
+
+<meta name="Description" content="学校和学生只需提供有效的学校电子邮件地址，即可免费使用 Office 365 教育版。 使用这些功能强大的工具，实现面向 21 世纪的学习和发现。">
+<meta name="keywords" content="microsoft office 学生, 免费的学生版 Microsoft office, 免费的 office 365 教育版, Office 365 教育版, Microsoft 课堂, OneNote 课堂笔记本, OneNote 教职员工笔记本, Outlook, 在线版： Word, Word, Excel, PowerPoint, Skype for Business, Yammer, Office Delve, Microsoft Forms, Microsoft Sway, OneNote 学习工具, Microsoft Edge 学习工具, Azure Rights Management, Microsoft Teams, 基于聊天的工作空间, 日历, 会议, OneNote, 员工团队： PLC, Extensibility, 规划器">
+
+<meta property="og:title" content="学校和学生免费使用 Microsoft Office 365 | Microsoft 教育">
+<meta property="og:description" content="学校和学生只需提供有效的学校电子邮件地址，即可免费使用 Office 365 教育版。 使用这些功能强大的工具，实现面向 21 世纪的学习和发现。">
+<meta property="og:image" content="https://cortexonemsedu.azureedge.net/assets/seo-2/1/OG_FeatureHeader_Option.jpg">
+</head>
+
+<body data-locale="zh-CN">
+
+        <div id="headerArea" class="uhf"  data-m='{"cN":"headerArea","cT":"Area_coreuiArea","id":"a1Body","sN":1,"aN":"Body"}'>
+                <div id="headerRegion"     data-region-key="headerregion" data-m='{"cN":"headerRegion","cT":"Region_coreui-region","id":"r1a1","sN":1,"aN":"a1"}' >
+
+    <div  id="headerUniversalHeader" data-m='{"cN":"headerUniversalHeader","cT":"Module_coreui-universalheader","id":"m1r1a1","sN":1,"aN":"r1a1"}'  data-module-id="Category|headerRegion|coreui-region|headerUniversalHeader|coreui-universalheader">
+        
+
+                        <div id="epb" class="x-hidden x-hidden-vp-mobile-st uhfc-universal-context context-uhf" data-m='{"cN":"epb_cont","cT":"Container","id":"c1m1r1a1","sN":1,"aN":"m1r1a1"}'>
+
+	<div class="c-uhfh-alert f-information epb-container theme-light" role="dialog" aria-label="促销性横幅" data-m='{"cT":"Container","id":"c1c1m1r1a1","sN":1,"aN":"c1m1r1a1"}' data-pb="[{&quot;Browser&quot;:&quot;anaheim&quot;,&quot;ExtensionType&quot;:&quot;windows10only&quot;,&quot;ExtensionUrl&quot;:&quot;https://go.microsoft.com/fwlink/?linkid=2128969&amp;pc=W037&quot;,&quot;BackgroundColorDarkTheme&quot;:&quot;b-black&quot;,&quot;LogoUrlDarkTheme&quot;:&quot;https://img-prod-cms-rt-microsoft-com.akamaized.net/cms/api/am/imageFileData/RE4xvsU?ver=e636&quot;,&quot;ActionLinkBackgroundColorDarkTheme&quot;:&quot;btn-white&quot;,&quot;BackgroundColorLightTheme&quot;:&quot;b-white&quot;,&quot;LogoUrlLightTheme&quot;:&quot;https://img-prod-cms-rt-microsoft-com.akamaized.net/cms/api/am/imageFileData/RE4xvsU?ver=e636&quot;,&quot;ActionLinkBackgroundColorLightTheme&quot;:&quot;btn-light-blue&quot;,&quot;Title&quot;:&quot;从桌面上一张张的照片探索世界立刻下载必应壁纸 APP&quot;,&quot;Paragraph&quot;:&quot;下载必应壁纸 APP ，每天为您换美桌面&quot;,&quot;ActionLinkText&quot;:&quot;立刻下载&quot;,&quot;ActionLinkAriaLabel&quot;:&quot;立刻下载&quot;,&quot;DismissText&quot;:&quot;不，谢谢&quot;,&quot;DismissAriaLabel&quot;:&quot;不，谢谢&quot;,&quot;CookieExpiration&quot;:&quot;30&quot;,&quot;CurrentTheme&quot;:&quot;theme-light&quot;},{&quot;Browser&quot;:&quot;chrome&quot;,&quot;ExtensionType&quot;:&quot;news&quot;,&quot;ExtensionUrl&quot;:&quot;https://browserdefaults.microsoft.com/extn/redirect/?xid=10&amp;br=gc&amp;channel=uhf&amp;pc=U556&quot;,&quot;BackgroundColorDarkTheme&quot;:&quot;b-black&quot;,&quot;LogoUrlDarkTheme&quot;:&quot;https://img-prod-cms-rt-microsoft-com.akamaized.net/cms/api/am/imageFileData/RE4myc9?ver=c8c3&quot;,&quot;ActionLinkBackgroundColorDarkTheme&quot;:&quot;btn-white&quot;,&quot;BackgroundColorLightTheme&quot;:&quot;b-white&quot;,&quot;LogoUrlLightTheme&quot;:&quot;https://img-prod-cms-rt-microsoft-com.akamaized.net/cms/api/am/imageFileData/RE4myc9?ver=c8c3&quot;,&quot;ActionLinkBackgroundColorLightTheme&quot;:&quot;btn-red&quot;,&quot;Title&quot;:&quot;随时了解全球重大新闻&quot;,&quot;Paragraph&quot;:&quot;获取 Microsoft News 扩展&quot;,&quot;ActionLinkText&quot;:&quot;立即添加&quot;,&quot;ActionLinkAriaLabel&quot;:&quot;立即添加&quot;,&quot;DismissText&quot;:&quot;不，谢谢&quot;,&quot;DismissAriaLabel&quot;:&quot;不，谢谢&quot;,&quot;CookieExpiration&quot;:&quot;30&quot;,&quot;CurrentTheme&quot;:&quot;theme-light&quot;},{&quot;Browser&quot;:&quot;firefox&quot;,&quot;ExtensionType&quot;:&quot;msn&quot;,&quot;ExtensionUrl&quot;:&quot;https://browserdefaults.microsoft.com/BNP/redirect?br=mf&amp;xid=2&amp;channel=uhf&quot;,&quot;BackgroundColorDarkTheme&quot;:&quot;b-blue&quot;,&quot;LogoUrlDarkTheme&quot;:&quot;https://img-prod-cms-rt-microsoft-com.akamaized.net/cms/api/am/imageFileData/RE3zanz?ver=4e18&quot;,&quot;ActionLinkBackgroundColorDarkTheme&quot;:&quot;btn-white&quot;,&quot;BackgroundColorLightTheme&quot;:&quot;b-white&quot;,&quot;LogoUrlLightTheme&quot;:&quot;https://img-prod-cms-rt-microsoft-com.akamaized.net/cms/api/am/imageFileData/RE3zcX5?ver=0d48&quot;,&quot;ActionLinkBackgroundColorLightTheme&quot;:&quot;btn-blue&quot;,&quot;Title&quot;:&quot;随时了解全球重大新闻&quot;,&quot;Paragraph&quot;:&quot;获取 Bing + MSN 扩展&quot;,&quot;ActionLinkText&quot;:&quot;立即添加&quot;,&quot;ActionLinkAriaLabel&quot;:&quot;立即添加&quot;,&quot;DismissText&quot;:&quot;不，谢谢&quot;,&quot;DismissAriaLabel&quot;:&quot;不，谢谢&quot;,&quot;CookieExpiration&quot;:&quot;30&quot;,&quot;CurrentTheme&quot;:&quot;theme-light&quot;}]" data-pb-g="true">
+		<div>
+			<div class="c-paragraph">
+				<img alt="" data-src="" src="" class="f-img-lzy" />
+				<span class="c-text-group pb-content">
+					<span class="epb-launch pb-content-heading"></span>
+					<span class="epb-text pb-content-text"></span>
+				</span>
+			</div>
+			<span class="c-group">
+				<button id="close-epb" class="c-action-trigger c-action-cancel glyph-cancel" data-m='{"cN":"PB-dismiss_nonnav","id":"nn1c1c1m1r1a1","sN":1,"aN":"c1c1m1r1a1"}'></button>
+				<a id="epbTryNow" href="" target="_blank" class="epb-launch c-action-trigger c-action-open" data-m='{"cN":"PB-launch_nav","id":"n2c1c1m1r1a1","sN":2,"aN":"c1c1m1r1a1"}'></a>
+			</span>
+		</div>
+	</div>
+
+
+
+
+
+                            
+                        </div>
+
+                        <div data-m='{"cN":"cookiebanner_cont","cT":"Container","id":"c2c1m1r1a1","sN":2,"aN":"c1m1r1a1"}'>
+
+<div id="uhfCookieAlert" data-locale="zh-cn">
+    <div id="msccBannerV2"></div>
+</div>
+
+                            
+                        </div>
+
+
+
+        <a id="uhfSkipToMain" class="m-skip-to-main" href="javascript:void(0)" data-href="#mainContent" tabindex="0" data-m='{"cN":"Skip to content_nonnav","id":"nn3c1m1r1a1","sN":3,"aN":"c1m1r1a1"}'>跳转至主内容</a>
+
+
+<header class="c-uhfh context-uhf no-js c-sgl-stck c-category-header " itemscope="itemscope" data-header-footprint="/epgeam/epgeamheader_edu, fromService: True"   data-magict="true"  itemtype="http://schema.org/Organization">
+    <div class="theme-light js-global-head f-closed  global-head-cont" data-m='{"cN":"Universal Header_cont","cT":"Container","id":"c4c1m1r1a1","sN":4,"aN":"c1m1r1a1"}'>
+        <div class="c-uhfh-gcontainer-st">
+            <button type="button" class="c-action-trigger c-glyph glyph-global-nav-button" aria-label="所有 Microsoft 项目都会扩展以显示 Microsoft 产品和服务的列表" initialState-label="所有 Microsoft 项目都会扩展以显示 Microsoft 产品和服务的列表" toggleState-label="Close All Microsoft list" aria-expanded="false" data-m='{"cN":"Mobile menu button_nonnav","id":"nn1c4c1m1r1a1","sN":1,"aN":"c4c1m1r1a1"}'></button>
+            <button type="button" class="c-action-trigger c-glyph glyph-arrow-htmllegacy" aria-label="关闭搜索" aria-expanded="false" data-m='{"cN":"Close Search_nonnav","id":"nn2c4c1m1r1a1","sN":2,"aN":"c4c1m1r1a1"}'></button>
+                    <a id="uhfLogo" class="c-logo c-sgl-stk-uhfLogo" itemprop="url" href="https://www.microsoft.com" aria-label="Microsoft" data-m='{"cN":"GlobalNav_Logo_cont","cT":"Container","id":"c3c4c1m1r1a1","sN":3,"aN":"c4c1m1r1a1"}'>
+                        <img alt="" itemprop="logo" class="c-image" src="https://img-prod-cms-rt-microsoft-com.akamaized.net/cms/api/am/imageFileData/RE1Mu3b?ver=5c31" role="presentation" aria-hidden="true" />
+                        <span itemprop="name" role="presentation" aria-hidden="true">Microsoft</span>
+                    </a>
+            <div class="f-mobile-title">
+                <button type="button" class="c-action-trigger c-glyph glyph-chevron-left" aria-label="查看更多菜单选项" data-m='{"cN":"Mobile back button_nonnav","id":"nn4c4c1m1r1a1","sN":4,"aN":"c4c1m1r1a1"}'></button>
+                <span data-global-title="Microsoft 主页" class="js-mobile-title">教育</span>
+                <button type="button" class="c-action-trigger c-glyph glyph-chevron-right" aria-label="查看更多菜单选项" data-m='{"cN":"Mobile forward button_nonnav","id":"nn5c4c1m1r1a1","sN":5,"aN":"c4c1m1r1a1"}'></button>
+            </div>
+                    <div class="c-show-pipe x-hidden-vp-mobile-st">
+                        <a id="uhfCatLogo" class="c-logo c-cat-logo" href="https://www.microsoft.com/zh-cn/education" aria-label="教育" itemprop="url" data-m='{"cN":"CatNav_教育_nav","id":"n6c4c1m1r1a1","sN":6,"aN":"c4c1m1r1a1"}'>
+                                <span>教育</span>
+                        </a>
+                    </div>
+                <div class="cat-logo-button-cont x-hidden">
+                        <button type="button" id="uhfCatLogoButton" class="c-cat-logo-button x-hidden" aria-expanded="false" aria-label="教育" data-m='{"cN":"教育_nonnav","id":"nn7c4c1m1r1a1","sN":7,"aN":"c4c1m1r1a1"}'>
+                            教育
+                        </button>
+                </div>
+
+
+
+                    <nav id="uhf-g-nav" aria-label="上下文菜单" class="c-uhfh-gnav" data-m='{"cN":"Category nav_cont","cT":"Container","id":"c8c4c1m1r1a1","sN":8,"aN":"c4c1m1r1a1"}'>
+            <ul class="js-paddle-items">
+                    <li class="single-link js-nav-menu x-hidden-none-mobile-vp uhf-menu-item">
+                        <a class="c-uhf-nav-link" href="https://www.microsoft.com/zh-cn/education" data-m='{"cN":"CatNav_主页_nav","id":"n1c8c4c1m1r1a1","sN":1,"aN":"c8c4c1m1r1a1"}' > 主页 </a>
+                    </li>
+                                        <li class="nested-menu uhf-menu-item">
+                            <div class="c-uhf-menu js-nav-menu">
+                                <button type="button" id="SchoolLeaders"  aria-expanded="false" data-m='{"cN":"CatNav_SchoolLeaders_nonnav","id":"nn2c8c4c1m1r1a1","sN":2,"aN":"c8c4c1m1r1a1"}'>学校领导</button>
+
+                                <ul class="" data-class-idn="" aria-hidden="true" data-m='{"cN":"SchoolLeaders_cont","cT":"Container","id":"c3c8c4c1m1r1a1","sN":3,"aN":"c8c4c1m1r1a1"}'>
+        <li class="js-nav-menu single-link" data-m='{"cN":"SchoolLeaders_Overview_cont","cT":"Container","id":"c1c3c8c4c1m1r1a1","sN":1,"aN":"c3c8c4c1m1r1a1"}'>
+            <a id="School_leaders_overview" class="js-subm-uhf-nav-link" href="https://www.microsoft.com/zh-cn/education/school-leaders" data-m='{"cN":"CatNav_SchoolLeaders_Overview_nav","id":"n1c1c3c8c4c1m1r1a1","sN":1,"aN":"c1c3c8c4c1m1r1a1"}'>学校领导概览</a>
+            
+        </li>
+        <li class="js-nav-menu single-link" data-m='{"cN":"school-instructional-solutions_cont","cT":"Container","id":"c2c3c8c4c1m1r1a1","sN":2,"aN":"c3c8c4c1m1r1a1"}'>
+            <a id="school-instructional-solutions" class="js-subm-uhf-nav-link" href="https://www.microsoft.com/zh-cn/education/school-leaders/school-instructional-solutions" data-m='{"cN":"CatNav_school-instructional-solutions_nav","id":"n1c2c3c8c4c1m1r1a1","sN":1,"aN":"c2c3c8c4c1m1r1a1"}'>学校和教学解决方案</a>
+            
+        </li>
+        <li class="js-nav-menu single-link" data-m='{"cN":"Tools-for-schools_cont","cT":"Container","id":"c3c3c8c4c1m1r1a1","sN":3,"aN":"c3c8c4c1m1r1a1"}'>
+            <a id="Tools-for-schools" class="js-subm-uhf-nav-link" href="https://microsoft.com/zh-cn/education/school-leaders/tools-for-classroom" data-m='{"cN":"CatNav_Tools-for-schools_nav","id":"n1c3c3c8c4c1m1r1a1","sN":1,"aN":"c3c3c8c4c1m1r1a1"}'>学校工具</a>
+            
+        </li>
+        <li class="js-nav-menu single-link" data-m='{"cN":"SL_Training_and_community_cont","cT":"Container","id":"c4c3c8c4c1m1r1a1","sN":4,"aN":"c3c8c4c1m1r1a1"}'>
+            <a id="SL_Training_and_community" class="js-subm-uhf-nav-link" href="https://microsoft.com/zh-cn/education/school-leaders/training-and-programs" data-m='{"cN":"CatNav_SL_Training_and_community_nav","id":"n1c4c3c8c4c1m1r1a1","sN":1,"aN":"c4c3c8c4c1m1r1a1"}'>培训和社区</a>
+            
+        </li>
+        <li class="js-nav-menu single-link" data-m='{"cN":"SL_Transformation_guides_cont","cT":"Container","id":"c5c3c8c4c1m1r1a1","sN":5,"aN":"c3c8c4c1m1r1a1"}'>
+            <a id="SL_Transformation_guides" class="js-subm-uhf-nav-link" href="https://www.microsoft.com/zh-cn/education/school-leaders/k-12-microsoft-education-transformation-framework" data-m='{"cN":"CatNav_SL_Transformation_guides_nav","id":"n1c5c3c8c4c1m1r1a1","sN":1,"aN":"c5c3c8c4c1m1r1a1"}'>教育转型框架</a>
+            
+        </li>
+                                                    
+                                </ul>
+                            </div>
+                        </li>                        <li class="nested-menu uhf-menu-item">
+                            <div class="c-uhf-menu js-nav-menu">
+                                <button type="button" id="Educators"  aria-expanded="false" data-m='{"cN":"CatNav_Educators_nonnav","id":"nn4c8c4c1m1r1a1","sN":4,"aN":"c8c4c1m1r1a1"}'>教育工作者</button>
+
+                                <ul class="" data-class-idn="" aria-hidden="true" data-m='{"cN":"Educators_cont","cT":"Container","id":"c5c8c4c1m1r1a1","sN":5,"aN":"c8c4c1m1r1a1"}'>
+        <li class="js-nav-menu single-link" data-m='{"cN":"Educator_overview_offers_cont","cT":"Container","id":"c1c5c8c4c1m1r1a1","sN":1,"aN":"c5c8c4c1m1r1a1"}'>
+            <a id="Educator_overview_offers" class="js-subm-uhf-nav-link" href="https://www.microsoft.com/zh-cn/education/educators" data-m='{"cN":"CatNav_Educator_overview_offers_nav","id":"n1c1c5c8c4c1m1r1a1","sN":1,"aN":"c1c5c8c4c1m1r1a1"}'>教育工作者概览</a>
+            
+        </li>
+        <li class="js-nav-menu single-link" data-m='{"cN":"remote-learning_cont","cT":"Container","id":"c2c5c8c4c1m1r1a1","sN":2,"aN":"c5c8c4c1m1r1a1"}'>
+            <a id="remote-learning" class="js-subm-uhf-nav-link" href="https://www.microsoft.com/zh-cn/education/remote-learning" data-m='{"cN":"CatNav_remote-learning_nav","id":"n1c2c5c8c4c1m1r1a1","sN":1,"aN":"c2c5c8c4c1m1r1a1"}'>远程学习</a>
+            
+        </li>
+        <li class="js-nav-menu single-link" data-m='{"cN":"Educators_technology_in_your_classroom_cont","cT":"Container","id":"c3c5c8c4c1m1r1a1","sN":3,"aN":"c5c8c4c1m1r1a1"}'>
+            <a id="Educators_technology_in_your_classroom" class="js-subm-uhf-nav-link" href="https://microsoft.com/zh-cn/education/educators/classroom-technology" data-m='{"cN":"CatNav_Educators_technology_in_your_classroom_nav","id":"n1c3c5c8c4c1m1r1a1","sN":1,"aN":"c3c5c8c4c1m1r1a1"}'>课堂上的技术</a>
+            
+        </li>
+        <li class="js-nav-menu single-link" data-m='{"cN":"Educators_creativity_STEM_learning_cont","cT":"Container","id":"c4c5c8c4c1m1r1a1","sN":4,"aN":"c5c8c4c1m1r1a1"}'>
+            <a id="Educators_creativity_STEM_learning" class="js-subm-uhf-nav-link" href="https://www.microsoft.com/zh-cn/education/educators/stem" data-m='{"cN":"CatNav_Educators_creativity_STEM_learning_nav","id":"n1c4c5c8c4c1m1r1a1","sN":1,"aN":"c4c5c8c4c1m1r1a1"}'>STEM 和计算机科学</a>
+            
+        </li>
+        <li class="js-nav-menu single-link" data-m='{"cN":"Student-centered-learning_cont","cT":"Container","id":"c5c5c8c4c1m1r1a1","sN":5,"aN":"c5c8c4c1m1r1a1"}'>
+            <a id="Student-centered-learning" class="js-subm-uhf-nav-link" href="https://www.microsoft.com/zh-cn/education/educators/student-centered-learning" data-m='{"cN":"CatNav_Student-centered-learning_nav","id":"n1c5c5c8c4c1m1r1a1","sN":1,"aN":"c5c5c8c4c1m1r1a1"}'>以学生为中心的教学</a>
+            
+        </li>
+        <li class="js-nav-menu single-link" data-m='{"cN":"Educators_training_and_community_cont","cT":"Container","id":"c6c5c8c4c1m1r1a1","sN":6,"aN":"c5c8c4c1m1r1a1"}'>
+            <a id="Educators_training_and_community" class="js-subm-uhf-nav-link" href="https://microsoft.com/zh-cn/education/educators/training-and-community" data-m='{"cN":"CatNav_Educators_training_and_community_nav","id":"n1c6c5c8c4c1m1r1a1","sN":1,"aN":"c6c5c8c4c1m1r1a1"}'>培训和社区</a>
+            
+        </li>
+                                                    
+                                </ul>
+                            </div>
+                        </li>                        <li class="nested-menu uhf-menu-item">
+                            <div class="c-uhf-menu js-nav-menu">
+                                <button type="button" id="en-US_ITDM"  aria-expanded="false" data-m='{"cN":"CatNav_en-US_ITDM_nonnav","id":"nn6c8c4c1m1r1a1","sN":6,"aN":"c8c4c1m1r1a1"}'>IT</button>
+
+                                <ul class="" data-class-idn="" aria-hidden="true" data-m='{"cN":"en-US_ITDM_cont","cT":"Container","id":"c7c8c4c1m1r1a1","sN":7,"aN":"c8c4c1m1r1a1"}'>
+        <li class="js-nav-menu single-link" data-m='{"cN":"ITDM_overview_cont","cT":"Container","id":"c1c7c8c4c1m1r1a1","sN":1,"aN":"c7c8c4c1m1r1a1"}'>
+            <a id="ITDM_overview" class="js-subm-uhf-nav-link" href="https://www.microsoft.com/zh-cn/education/it-pro" data-m='{"cN":"CatNav_ITDM_overview_nav","id":"n1c1c7c8c4c1m1r1a1","sN":1,"aN":"c1c7c8c4c1m1r1a1"}'>IT 概览</a>
+            
+        </li>
+        <li class="js-nav-menu single-link" data-m='{"cN":"ITDM_Setup_and_management_cont","cT":"Container","id":"c2c7c8c4c1m1r1a1","sN":2,"aN":"c7c8c4c1m1r1a1"}'>
+            <a id="ITDM_Setup_and_management" class="js-subm-uhf-nav-link" href="https://www.microsoft.com/zh-cn/education/it-pro/deployment" data-m='{"cN":"CatNav_ITDM_Setup_and_management_nav","id":"n1c2c7c8c4c1m1r1a1","sN":1,"aN":"c2c7c8c4c1m1r1a1"}'>设置和管理</a>
+            
+        </li>
+        <li class="js-nav-menu single-link" data-m='{"cN":"ITDM_Security_solutions_cont","cT":"Container","id":"c3c7c8c4c1m1r1a1","sN":3,"aN":"c7c8c4c1m1r1a1"}'>
+            <a id="ITDM_Security_solutions" class="js-subm-uhf-nav-link" href="https://www.microsoft.com/zh-cn/education/it-pro/security-solutions" data-m='{"cN":"CatNav_ITDM_Security_solutions_nav","id":"n1c3c7c8c4c1m1r1a1","sN":1,"aN":"c3c7c8c4c1m1r1a1"}'>安全解决方案</a>
+            
+        </li>
+        <li class="js-nav-menu single-link" data-m='{"cN":"ITDM_training_and_support_cont","cT":"Container","id":"c4c7c8c4c1m1r1a1","sN":4,"aN":"c7c8c4c1m1r1a1"}'>
+            <a id="ITDM_training_and_support" class="js-subm-uhf-nav-link" href="https://www.microsoft.com/zh-cn/education/it-pro/training-and-support" data-m='{"cN":"CatNav_ITDM_training_and_support_nav","id":"n1c4c7c8c4c1m1r1a1","sN":1,"aN":"c4c7c8c4c1m1r1a1"}'>培训和支持</a>
+            
+        </li>
+                                                    
+                                </ul>
+                            </div>
+                        </li>                        <li class="single-link js-nav-menu uhf-menu-item">
+                            <a id="c-shellmenu_69" class="c-uhf-nav-link" href="https://www.microsoft.com/zh-cn/education/students" data-m='{"cN":"CatNav_Students_nav","id":"n8c8c4c1m1r1a1","sN":8,"aN":"c8c4c1m1r1a1"}'>学生</a>
+                        </li>
+                        <li class="nested-menu uhf-menu-item">
+                            <div class="c-uhf-menu js-nav-menu">
+                                <button type="button" id="Higher_Education"  aria-expanded="false" data-m='{"cN":"CatNav_L1_Higher_education_nonnav","id":"nn9c8c4c1m1r1a1","sN":9,"aN":"c8c4c1m1r1a1"}'>高等教育</button>
+
+                                <ul class="" data-class-idn="" aria-hidden="true" data-m='{"cN":"L1_Higher_education_cont","cT":"Container","id":"c10c8c4c1m1r1a1","sN":10,"aN":"c8c4c1m1r1a1"}'>
+        <li class="js-nav-menu single-link" data-m='{"cN":"Higher_education_overview_cont","cT":"Container","id":"c1c10c8c4c1m1r1a1","sN":1,"aN":"c10c8c4c1m1r1a1"}'>
+            <a id="Higher_Education_Overview" class="js-subm-uhf-nav-link" href="https://www.microsoft.com/zh-cn/education/higher-education" data-m='{"cN":"CatNav_Higher_education_overview_nav","id":"n1c1c10c8c4c1m1r1a1","sN":1,"aN":"c1c10c8c4c1m1r1a1"}'>高等教育概览</a>
+            
+        </li>
+        <li class="js-nav-menu single-link" data-m='{"cN":"HigherEd_Academic_research_cont","cT":"Container","id":"c2c10c8c4c1m1r1a1","sN":2,"aN":"c10c8c4c1m1r1a1"}'>
+            <a id="HigherEd_Academic_research" class="js-subm-uhf-nav-link" href="https://www.microsoft.com/zh-cn/education/higher-education/academic-research" data-m='{"cN":"CatNav_HigherEd_Academic_research_nav","id":"n1c2c10c8c4c1m1r1a1","sN":1,"aN":"c2c10c8c4c1m1r1a1"}'>学术研究</a>
+            
+        </li>
+        <li class="js-nav-menu single-link" data-m='{"cN":"Campus_safety_and_security_cont","cT":"Container","id":"c3c10c8c4c1m1r1a1","sN":3,"aN":"c10c8c4c1m1r1a1"}'>
+            <a id="Campus_safety_and_security" class="js-subm-uhf-nav-link" href="https://www.microsoft.com/zh-cn/education/higher-education/campus-security-and-student-safety" data-m='{"cN":"CatNav_Campus_safety_and_security_nav","id":"n1c3c10c8c4c1m1r1a1","sN":1,"aN":"c3c10c8c4c1m1r1a1"}'>校园安全和安保</a>
+            
+        </li>
+        <li class="js-nav-menu single-link" data-m='{"cN":"HigherEd_Connect_Campuses_cont","cT":"Container","id":"c4c10c8c4c1m1r1a1","sN":4,"aN":"c10c8c4c1m1r1a1"}'>
+            <a id="HigherEd_Connect_Campuses" class="js-subm-uhf-nav-link" href="https://www.microsoft.com/zh-cn/education/higher-education/campus-solutions" data-m='{"cN":"CatNav_HigherEd_Connect_Campuses_nav","id":"n1c4c10c8c4c1m1r1a1","sN":1,"aN":"c4c10c8c4c1m1r1a1"}'>校园解决方案</a>
+            
+        </li>
+        <li class="js-nav-menu single-link" data-m='{"cN":"HigherEd_student_lifecycle_cont","cT":"Container","id":"c5c10c8c4c1m1r1a1","sN":5,"aN":"c10c8c4c1m1r1a1"}'>
+            <a id="HigherEd_student_lifecycle" class="js-subm-uhf-nav-link" href="https://www.microsoft.com/zh-cn/education/higher-education/student-lifecycle" data-m='{"cN":"CatNav_HigherEd_student_lifecycle_nav","id":"n1c5c10c8c4c1m1r1a1","sN":1,"aN":"c5c10c8c4c1m1r1a1"}'>学生学习周期管理</a>
+            
+        </li>
+        <li class="js-nav-menu single-link" data-m='{"cN":"etf_cont","cT":"Container","id":"c6c10c8c4c1m1r1a1","sN":6,"aN":"c10c8c4c1m1r1a1"}'>
+            <a id="etf" class="js-subm-uhf-nav-link" href="https://www.microsoft.com/zh-cn/education/higher-education/education-transformation-framework" data-m='{"cN":"CatNav_etf_nav","id":"n1c6c10c8c4c1m1r1a1","sN":1,"aN":"c6c10c8c4c1m1r1a1"}'>教育转型框架</a>
+            
+        </li>
+        <li class="js-nav-menu single-link" data-m='{"cN":"Skills_cont","cT":"Container","id":"c7c10c8c4c1m1r1a1","sN":7,"aN":"c10c8c4c1m1r1a1"}'>
+            <a id="Skills" class="js-subm-uhf-nav-link" href="https://microsoft.com/zh-cn/education/higher-education/edu-skills" data-m='{"cN":"CatNav_Skills_nav","id":"n1c7c10c8c4c1m1r1a1","sN":1,"aN":"c7c10c8c4c1m1r1a1"}'>高等教育技能</a>
+            
+        </li>
+                                                    
+                                </ul>
+                            </div>
+                        </li>                        <li class="nested-menu uhf-menu-item">
+                            <div class="c-uhf-menu js-nav-menu">
+                                <button type="button" id="Products"  aria-expanded="false" data-m='{"cN":"CatNav_Products_nonnav","id":"nn11c8c4c1m1r1a1","sN":11,"aN":"c8c4c1m1r1a1"}'>产品</button>
+
+                                <ul class="" data-class-idn="" aria-hidden="true" data-m='{"cN":"Products_cont","cT":"Container","id":"c12c8c4c1m1r1a1","sN":12,"aN":"c8c4c1m1r1a1"}'>
+        <li class="js-nav-menu single-link" data-m='{"cN":"Products_Overview_cont","cT":"Container","id":"c1c12c8c4c1m1r1a1","sN":1,"aN":"c12c8c4c1m1r1a1"}'>
+            <a id="c-shellmenu_79" class="js-subm-uhf-nav-link" href="https://www.microsoft.com/zh-cn/education/products" data-m='{"cN":"CatNav_Products_Overview_nav","id":"n1c1c12c8c4c1m1r1a1","sN":1,"aN":"c1c12c8c4c1m1r1a1"}'>产品概览</a>
+            
+        </li>
+        <li class="js-nav-menu single-link" data-m='{"cN":"Devices_cont","cT":"Container","id":"c2c12c8c4c1m1r1a1","sN":2,"aN":"c12c8c4c1m1r1a1"}'>
+            <a id="Devices" class="js-subm-uhf-nav-link" href="https://www.microsoft.com/zh-cn/education/devices/overview" data-m='{"cN":"CatNav_Devices_nav","id":"n1c2c12c8c4c1m1r1a1","sN":1,"aN":"c2c12c8c4c1m1r1a1"}'>设备概览</a>
+            
+        </li>
+        <li class="js-nav-menu single-link" data-m='{"cN":"Microsoft 365_cont","cT":"Container","id":"c3c12c8c4c1m1r1a1","sN":3,"aN":"c12c8c4c1m1r1a1"}'>
+            <a id="Microsoft_365" class="js-subm-uhf-nav-link" href="https://www.microsoft.com/zh-cn/education/buy-license/microsoft365" data-m='{"cN":"CatNav_Microsoft 365_nav","id":"n1c3c12c8c4c1m1r1a1","sN":1,"aN":"c3c12c8c4c1m1r1a1"}'>Microsoft 365</a>
+            
+        </li>
+        <li class="js-nav-menu single-link" data-m='{"cN":"edge_cont","cT":"Container","id":"c4c12c8c4c1m1r1a1","sN":4,"aN":"c12c8c4c1m1r1a1"}'>
+            <a id="edge" class="js-subm-uhf-nav-link" href="https://www.microsoft.com/zh-cn/education/products/edge" data-m='{"cN":"CatNav_edge_nav","id":"n1c4c12c8c4c1m1r1a1","sN":1,"aN":"c4c12c8c4c1m1r1a1"}'>Edge</a>
+            
+        </li>
+        <li class="js-nav-menu single-link" data-m='{"cN":"Products_Intune_cont","cT":"Container","id":"c5c12c8c4c1m1r1a1","sN":5,"aN":"c12c8c4c1m1r1a1"}'>
+            <a id="c-shellmenu_83" class="js-subm-uhf-nav-link" href="https://www.microsoft.com/zh-cn/education/intune" data-m='{"cN":"CatNav_Products_Intune_nav","id":"n1c5c12c8c4c1m1r1a1","sN":1,"aN":"c5c12c8c4c1m1r1a1"}'>Intune</a>
+            
+        </li>
+        <li class="js-nav-menu single-link" data-m='{"cN":"learning_tools_cont","cT":"Container","id":"c6c12c8c4c1m1r1a1","sN":6,"aN":"c12c8c4c1m1r1a1"}'>
+            <a id="learning_tools" class="js-subm-uhf-nav-link" href="https://microsoft.com/zh-cn/education/products/learning-tools" data-m='{"cN":"CatNav_learning_tools_nav","id":"n1c6c12c8c4c1m1r1a1","sN":1,"aN":"c6c12c8c4c1m1r1a1"}'>Microsoft 学习工具</a>
+            
+        </li>
+        <li class="js-nav-menu single-link" data-m='{"cN":"Products_Office_cont","cT":"Container","id":"c7c12c8c4c1m1r1a1","sN":7,"aN":"c12c8c4c1m1r1a1"}'>
+            <a id="c-shellmenu_85" class="js-subm-uhf-nav-link" href="https://www.microsoft.com/zh-cn/education/products/office" data-m='{"cN":"CatNav_Products_Office_nav","id":"n1c7c12c8c4c1m1r1a1","sN":1,"aN":"c7c12c8c4c1m1r1a1"}'>Office</a>
+            
+        </li>
+        <li class="js-nav-menu single-link" data-m='{"cN":"Products_OneNote_cont","cT":"Container","id":"c8c12c8c4c1m1r1a1","sN":8,"aN":"c12c8c4c1m1r1a1"}'>
+            <a id="Products_OneNote" class="js-subm-uhf-nav-link" href="https://www.microsoft.com/zh-cn/education/products/onenote" data-m='{"cN":"CatNav_Products_OneNote_nav","id":"n1c8c12c8c4c1m1r1a1","sN":1,"aN":"c8c12c8c4c1m1r1a1"}'>OneNote</a>
+            
+        </li>
+        <li class="js-nav-menu single-link" data-m='{"cN":"Products_Teams_cont","cT":"Container","id":"c9c12c8c4c1m1r1a1","sN":9,"aN":"c12c8c4c1m1r1a1"}'>
+            <a id="Products_Teams" class="js-subm-uhf-nav-link" href="https://www.microsoft.com/zh-cn/education/products/teams" data-m='{"cN":"CatNav_Products_Teams_nav","id":"n1c9c12c8c4c1m1r1a1","sN":1,"aN":"c9c12c8c4c1m1r1a1"}'>Microsoft Teams</a>
+            
+        </li>
+        <li class="js-nav-menu single-link" data-m='{"cN":"Products_Windows_cont","cT":"Container","id":"c10c12c8c4c1m1r1a1","sN":10,"aN":"c12c8c4c1m1r1a1"}'>
+            <a id="Products_Windows" class="js-subm-uhf-nav-link" href="https://www.microsoft.com/zh-cn/education/products/windows" data-m='{"cN":"CatNav_Products_Windows_nav","id":"n1c10c12c8c4c1m1r1a1","sN":1,"aN":"c10c12c8c4c1m1r1a1"}'>Windows</a>
+            
+        </li>
+        <li class="js-nav-menu single-link" data-m='{"cN":"Mixed-Reality_cont","cT":"Container","id":"c11c12c8c4c1m1r1a1","sN":11,"aN":"c12c8c4c1m1r1a1"}'>
+            <a id="Mixed-Reality" class="js-subm-uhf-nav-link" href="https://www.microsoft.com/zh-cn/education/mixed-reality" data-m='{"cN":"CatNav_Mixed-Reality_nav","id":"n1c11c12c8c4c1m1r1a1","sN":1,"aN":"c11c12c8c4c1m1r1a1"}'>适用于教育的混合现实</a>
+            
+        </li>
+<li class="f-sub-menu js-nav-menu nested-menu" data-m='{"cN":"Products_MoreProducts_cont","cT":"Container","id":"c12c12c8c4c1m1r1a1","sN":12,"aN":"c12c8c4c1m1r1a1"}'>
+
+    <span id="uhf-navspn-c-shellmenu_90-span" style="display:none"   aria-expanded="false" data-m='{"cN":"CatNav_Products_MoreProducts_nonnav","id":"nn1c12c12c8c4c1m1r1a1","sN":1,"aN":"c12c12c8c4c1m1r1a1"}'>更多</span>
+    <button id="uhf-navbtn-c-shellmenu_90-button" type="button"   aria-expanded="false" data-m='{"cN":"CatNav_Products_MoreProducts_nonnav","id":"nn2c12c12c8c4c1m1r1a1","sN":2,"aN":"c12c12c8c4c1m1r1a1"}'>更多</button>
+    <ul aria-hidden="true">
+        <li class="js-nav-menu single-link" data-m='{"cN":"Products_MoreProducts_Minecraft_cont","cT":"Container","id":"c3c12c12c8c4c1m1r1a1","sN":3,"aN":"c12c12c8c4c1m1r1a1"}'>
+            <a id="c-shellmenu_91" class="js-subm-uhf-nav-link" href="http://education.minecraft.net/" data-m='{"cN":"CatNav_Products_MoreProducts_Minecraft_nav","id":"n1c3c12c12c8c4c1m1r1a1","sN":1,"aN":"c3c12c12c8c4c1m1r1a1"}'>Minecraft: Education Edition</a>
+            
+        </li>
+        <li class="js-nav-menu single-link" data-m='{"cN":"Products_Surface_cont","cT":"Container","id":"c4c12c12c8c4c1m1r1a1","sN":4,"aN":"c12c12c8c4c1m1r1a1"}'>
+            <a id="c-shellmenu_92" class="js-subm-uhf-nav-link" href="https://www.microsoft.com/zh-cn/surface" data-m='{"cN":"CatNav_Products_Surface_nav","id":"n1c4c12c12c8c4c1m1r1a1","sN":1,"aN":"c4c12c12c8c4c1m1r1a1"}'>Surface</a>
+            
+        </li>
+        <li class="js-nav-menu single-link" data-m='{"cN":"Products_MoreProducts_Sway_cont","cT":"Container","id":"c5c12c12c8c4c1m1r1a1","sN":5,"aN":"c12c12c8c4c1m1r1a1"}'>
+            <a id="c-shellmenu_93" class="js-subm-uhf-nav-link" href="https://sway.com/" data-m='{"cN":"CatNav_Products_MoreProducts_Sway_nav","id":"n1c5c12c12c8c4c1m1r1a1","sN":1,"aN":"c5c12c12c8c4c1m1r1a1"}'>Sway</a>
+            
+        </li>
+    </ul>
+    
+</li>
+                                                    
+                                </ul>
+                            </div>
+                        </li>                        <li class="nested-menu uhf-menu-item">
+                            <div class="c-uhf-menu js-nav-menu">
+                                <button type="button" id="c-shellmenu_94"  aria-expanded="false" data-m='{"cN":"CatNav_TrainingAndEvents_nonnav","id":"nn13c8c4c1m1r1a1","sN":13,"aN":"c8c4c1m1r1a1"}'>培训</button>
+
+                                <ul class="" data-class-idn="" aria-hidden="true" data-m='{"cN":"TrainingAndEvents_cont","cT":"Container","id":"c14c8c4c1m1r1a1","sN":14,"aN":"c8c4c1m1r1a1"}'>
+        <li class="js-nav-menu single-link" data-m='{"cN":"TrainingAndEvents_Overview_cont","cT":"Container","id":"c1c14c8c4c1m1r1a1","sN":1,"aN":"c14c8c4c1m1r1a1"}'>
+            <a id="TrainingAndEvents_Overview" class="js-subm-uhf-nav-link" href="http://www.microsoft.com/zh-cn/education/training-and-events" data-m='{"cN":"CatNav_TrainingAndEvents_Overview_nav","id":"n1c1c14c8c4c1m1r1a1","sN":1,"aN":"c1c14c8c4c1m1r1a1"}'>培训和活动概览</a>
+            
+        </li>
+        <li class="js-nav-menu single-link" data-m='{"cN":"TrainingAndEvents_CalendarOfEvents_cont","cT":"Container","id":"c2c14c8c4c1m1r1a1","sN":2,"aN":"c14c8c4c1m1r1a1"}'>
+            <a id="TrainingAndEvents_CalendarOfEvents" class="js-subm-uhf-nav-link" href="http://www.microsoft.com/zh-cn/education/training-and-events/events-calendar/default.aspx#eventSector=Education" data-m='{"cN":"CatNav_TrainingAndEvents_CalendarOfEvents_nav","id":"n1c2c14c8c4c1m1r1a1","sN":1,"aN":"c2c14c8c4c1m1r1a1"}'>活动日历</a>
+            
+        </li>
+        <li class="js-nav-menu single-link" data-m='{"cN":"Findatrainer_cont","cT":"Container","id":"c3c14c8c4c1m1r1a1","sN":3,"aN":"c14c8c4c1m1r1a1"}'>
+            <a id="Findatrainer" class="js-subm-uhf-nav-link" href="https://www.microsoft.com/zh-cn/education/training-and-events/trainers" data-m='{"cN":"CatNav_Findatrainer_nav","id":"n1c3c14c8c4c1m1r1a1","sN":1,"aN":"c3c14c8c4c1m1r1a1"}'>查找培训师</a>
+            
+        </li>
+        <li class="js-nav-menu single-link" data-m='{"cN":"ITAcademy_cont","cT":"Container","id":"c4c14c8c4c1m1r1a1","sN":4,"aN":"c14c8c4c1m1r1a1"}'>
+            <a id="ITAcademy" class="js-subm-uhf-nav-link" href="https://www.microsoft.com/zh-cn/education/imagine-academy" data-m='{"cN":"CatNav_ITAcademy_nav","id":"n1c4c14c8c4c1m1r1a1","sN":1,"aN":"c4c14c8c4c1m1r1a1"}'>Imagine Academy</a>
+            
+        </li>
+        <li class="js-nav-menu single-link" data-m='{"cN":"Microsoft_Education_Center_cont","cT":"Container","id":"c5c14c8c4c1m1r1a1","sN":5,"aN":"c14c8c4c1m1r1a1"}'>
+            <a id="Microsoft_Education_Center" class="js-subm-uhf-nav-link" href="https://education.microsoft.com/" data-m='{"cN":"CatNav_Microsoft_Education_Center_nav","id":"n1c5c14c8c4c1m1r1a1","sN":1,"aN":"c5c14c8c4c1m1r1a1"}'>Microsoft 教育中心</a>
+            
+        </li>
+                                                    
+                                </ul>
+                            </div>
+                        </li>                        <li class="single-link js-nav-menu uhf-menu-item">
+                            <a id="c-shellmenu_100" class="c-uhf-nav-link" href="https://www.microsoft.com/zh-cn/education/stories" data-m='{"cN":"CatNav_Stories_nav","id":"n15c8c4c1m1r1a1","sN":15,"aN":"c8c4c1m1r1a1"}'>故事</a>
+                        </li>
+                        <li class="single-link js-nav-menu uhf-menu-item">
+                            <a id="c-shellmenu_101" class="c-uhf-nav-link" href="https://www.microsoft.com/zh-cn/education/how-to-buy" data-m='{"cN":"CatNav_HowToBuy_nav","id":"n16c8c4c1m1r1a1","sN":16,"aN":"c8c4c1m1r1a1"}'>如何购买</a>
+                        </li>
+
+
+                <li id="overflow-menu" class="overflow-menu x-hidden uhf-menu-item">
+                        <div class="c-uhf-menu js-nav-menu">
+        <button data-m='{"pid":"更多","id":"nn17c8c4c1m1r1a1","sN":17,"aN":"c8c4c1m1r1a1"}' type="button" aria-label="更多" aria-expanded="false">更多</button>
+        <ul id="overflow-menu-list" aria-hidden="true" class="overflow-menu-list">
+        </ul>
+    </div>
+
+                </li>
+                            </ul>
+            
+        </nav>
+
+
+            <div class="c-uhfh-actions" data-m='{"cN":"Header actions_cont","cT":"Container","id":"c9c4c1m1r1a1","sN":9,"aN":"c4c1m1r1a1"}'>
+                <div class="wf-menu"></div>
+                            <form class="c-search" autocomplete="off" id="searchForm" name="searchForm" role="search" action="https://microsoft.com/zh-cn/education/search.aspx" method="GET" data-seAutoSuggest='{"queryParams":{"market":"zh-cn","clientId":"7F27B536-CF6B-4C65-8638-A0F8CBDFCA65","sources":"Microsoft-Terms,Iris-Products,DCatAll-Products","filter":"ExcludeDCatProducts:DCatDevices-Products,DCatSoftware-Products,DCatBundles-Products+ClientType:StoreWeb","counts":"5,1,5"},"familyNames":{"Apps":"应用","Books":"书籍","Bundles":"套装","Devices":"设备","Fees":"Fee","Games":"游戏","MusicAlbums":"专辑","MusicTracks":"歌曲","MusicVideos":"视频","MusicArtists":"艺术家","OperatingSystem":"操作系统","Software":"软件","Movies":"电影","TV":"电视","CSV":"礼品卡","VideoActor":"演员"}}' data-seautosuggestapi="https://www.microsoft.com/services/api/v3/suggest" data-m='{"cN":"GlobalNav_Search_cont","cT":"Container","id":"c1c9c4c1m1r1a1","sN":1,"aN":"c9c4c1m1r1a1"}' aria-expanded="false">
+                                <input  id="cli_shellHeaderSearchInput" aria-label="已展开搜索" aria-autocomplete="list" aria-controls="universal-header-search-auto-suggest-transparent" aria-owns="universal-header-search-auto-suggest-ul" type="search" name="query" placeholder="搜索微软教育" data-m='{"cN":"SearchBox_nav","id":"n1c1c9c4c1m1r1a1","sN":1,"aN":"c1c9c4c1m1r1a1"}' data-toggle="tooltip" data-placement="right" title="搜索微软教育" />
+                                    <input type="hidden" name="Form1" value="education" data-m='{"cN":"HiddenInput_nav","id":"n2c1c9c4c1m1r1a1","sN":2,"aN":"c1c9c4c1m1r1a1"}' />
+                                    <button id="search" aria-label="搜索微软教育" class="c-glyph" data-m='{"cN":"Search_nav","id":"n3c1c9c4c1m1r1a1","sN":3,"aN":"c1c9c4c1m1r1a1"}' data-bi-dnt="true" data-bi-mto="true" aria-expanded="false">
+                                        <span role="presentation">搜索</span>
+                                        <span role="tooltip" class="c-uhf-tooltip c-uhf-search-tooltip">搜索微软教育</span>
+                                    </button>
+                                <div class="m-auto-suggest" id="universal-header-search-auto-suggest-transparent" role="group">
+                                    <ul class="c-menu" id="universal-header-search-auto-suggest-ul" aria-label="搜索建议" aria-hidden="true" data-bi-dnt="true" data-bi-mto="true" data-js-auto-suggest-position="default" role="listbox" data-tel="jsll" data-m='{"cN":"search suggestions_cont","cT":"Container","id":"c4c1c9c4c1m1r1a1","sN":4,"aN":"c1c9c4c1m1r1a1"}'></ul>
+                                </div>
+                                
+                            </form>
+                        <button data-m='{"cN":"cancel-search","pid":"取消 搜索","id":"nn2c9c4c1m1r1a1","sN":2,"aN":"c9c4c1m1r1a1"}' id="cancel-search" class="cancel-search" aria-label="取消 搜索">
+                            <span>取消</span>
+                        </button>
+                
+            </div>
+        </div>
+        
+        
+    </div>
+    
+
+
+<a id="uhf-swp" aria-label="价格实惠的 windows 10 设备为教育而设" class="c-sitewide-promo theme-dark" href="https://microsoft.com/zh-cn/education/devices/overview" target="_blank" data-m='{"cN":"bsc_fy21_device_overviewlink_nav","id":"n5c1m1r1a1","sN":5,"aN":"c1m1r1a1"}'>
+    <p class="c-paragraph color-brand-blue" data-m='{"cT":"Container","id":"c6c1m1r1a1","sN":6,"aN":"c1m1r1a1"}'>
+        价格实惠的 Windows 10 设备为教育而设 &gt;
+    </p>
+    
+</a>
+</header>
+
+
+
+
+    </div>
+        </div>
+
+    </div>
+
+
+    <main id="mainContent" tabindex="-1">
+        
+
+<div data-grid="container" class="breadCrumbNav">
+	<nav aria-label="您在本网站上的位置。">
+		<ol class="c-breadcrumb">
+			<li>
+				<a class="c-hyperlink ctex-tap-disable" href="/zh-cn/education/default.aspx">教育</a>
+			</li>
+		
+			<li>
+				<a class="c-hyperlink ctex-tap-disable" href="/zh-cn/education/products/default.aspx">产品</a>
+			</li>
+		
+			<li>
+				<a class="c-hyperlink ctex-tap-disable" href="/zh-cn/education/products/office/default.aspx">Office 365</a>
+			</li>
+		</ol>
+	</nav>
+</div><div data-grid="container" class="">
+	<div class="m-banner margin-vertical-48 padding-top-0" data-grid="col-12">
+
+		
+        
+
+        <h1 class="c-heading-1 padding-top-0" data-use="true">Office 365 教育版</h1>
+        
+        
+        
+        
+        
+
+        
+
+        <div></div>
+	</div>
+</div><div data-grid="container" class="margin-bottom-84">
+	<section class="m-feature m-feature f-align-left f-image-priority margin-top-0 ctex-feature-bleed-fix">
+		<div>
+			
+
+			
+
+			
+			<h2 class="c-heading-2" data-use="true">开始免费使用 Office 365</h2>
+			
+			
+			
+			
+
+			<p class="c-paragraph-2 padding-vertical-25" data-hide="false">合格机构的学生和教育工作者可以免费注册 Office 365 教育版，包括 Word、Excel、PowerPoint、OneNote、Microsoft Teams 和更多课堂工具。 使用您的有效学校电子邮件地址，立即开始。</p>
+			
+			<form id="C1_officeSignUp_id" class="margin-top-10 ctex-cc-office-signup-form padding-bottom-30" method="post" action="https://signup.microsoft.com/signup?sku=Education" role="form" aria-label="在此处注册Office。">
+				<label for="pmgJS-Email" class="c-paragraph-2">输入您的学校电子邮件地址</label>
+				<div>
+					<p class="pmgJS-EmailDomainError c-paragraph-2 alerts-text-font-size" aria-live="assertive" role="alert">
+						请输入您的学校电子邮件地址 (如 john@contoso.edu)。
+					</p>
+					<input id="pmgJS-Email" class="c-text-field x-visible-inline trim margin-top-10 x-hidden-focus" type="text" name="StepsData.Email" aria-required="true" aria-label="">
+					<input id="HowToBuy-SignUpToOffice365-GetStarted" type="button" class="cc-office-signup-submit blue ctex-text-capitalize padding-bottom-10 margin-top-10" value="立即开始" aria-label="在这里提交您的学校电子邮件地址，免费获取 Office。">
+					<p class="pmgJS-EmailValidationError c-paragraph-2 alerts-text-font-size" aria-live="assertive" role="alert">
+						如果您遇到与学校电子邮件地址有关的问题，请联系学校管理员。
+					</p>
+				</div>
+			</form>
+
+			<div>
+				<a href="https://products.office.com/zh-cn/compare-all-microsoft-office-products?&amp;activetab=1" id="OfficePage-Hero-SeeMoreOptions" class="c-call-to-action c-glyph c-call-to-action ctex-cta-responsive ctex-text-uppercase f-lightweight c-glyph glyph-18x ctex-tap-disable" target="" aria-label="进入此链接，比较 Microsoft 产品。" data-hide="false" onclick="">
+					<span>不符合条件？ 查看更多选项</span>
+				</a>
+			
+				<a href="https://www.microsoft.com/en-us/microsoft-365/academic/compare-office-365-education-plans?activetab=tab%3aprimaryr1" id="OfficePage-Hero-learnHowToBuyForSchools" class="c-call-to-action c-glyph c-call-to-action ctex-cta-responsive ctex-text-uppercase f-lightweight c-glyph glyph-18x ctex-tap-disable" target="" aria-label="进一步了解为学校购买产品的方式" data-hide="false" onclick="">
+					<span>了解为学校购买产品的方式</span>
+				</a>
+			</div>
+			
+			
+		</div>
+		<picture data-hide="false">
+			<source media="(min-width: 1400px)" srcset="https://cortexonemsedu.azureedge.net/assets/panel2-featureheader-getstarted-1920/1/1920-Panel2-FeatureHeader-GetStarted.jpg">
+			<source media="(min-width: 1084px)" srcset="https://cortexonemsedu.azureedge.net/assets/panel2-featureheader-getstarted-1399/1/1399-Panel2-FeatureHeader-GetStarted.jpg">
+			<source media="(min-width: 768px)" srcset="https://cortexonemsedu.azureedge.net/assets/panel2-featureheader-getstarted-1083/1/1083-Panel2-FeatureHeader-GetStarted.jpg">
+			<source media="(min-width: 540px)" srcset="https://cortexonemsedu.azureedge.net/assets/panel2-featureheader-getstarted-767/1/767-Panel2-FeatureHeader-GetStarted.jpg">
+			<source media="(min-width:0)" srcset="https://cortexonemsedu.azureedge.net/assets/panel2-featureheader-getstarted-539/1/539-Panel2-FeatureHeader-GetStarted.jpg">
+			<img srcset="https://cortexonemsedu.azureedge.net/assets/panel2-featureheader-getstarted-1920/1/1920-Panel2-FeatureHeader-GetStarted.jpg" src="https://cortexonemsedu.azureedge.net/assets/panel2-featureheader-getstarted-1920/1/1920-Panel2-FeatureHeader-GetStarted.jpg" alt="" class="">
+		</picture>
+
+		
+	</section>
+</div><section data-grid="container" class=" #ctx1-components-container .m-banner margin-bottom-36">
+    <div data-grid="col-12" class="curvedContainedBorder border-yellow ctex-sif padding-vertical-48">
+        <div data-grid="container" class="ctex-sif">
+            <div>
+                <div data-grid="pad-6x stack-3">
+                    <div data-grid="col-4" class="ctex-sif-image">
+                        
+						<img src="https://cortexonemsedu.azureedge.net/assets/panel3-accolade-recentgrads-1920/1/1920-Panel3-Accolade-RecentGrads.jpg" data-hide="false" class="" alt="">
+                    </div>
+                    <div data-grid="col-7" class="ctex-small_image_feature-content">
+						
+						
+						
+						<h3 class="c-heading-3 padding-top-0" data-use="true">使用价格实惠的设备，让您的预算发挥最大作用</h3>
+						
+						
+						
+						<p class="c-paragraph-3" data-hide="false">
+							一系列坚固耐用、防液体泼溅、功能强大的笔记本电脑和二合一设备可供选择，随附免费的在线专业和支持。
+						</p>
+						
+						<div class="inline-block">
+							<a data-hide="false" href="https://www.microsoft.com/zh-cn/education/devices/overview" class="c-call-to-action f-lightweight c-glyph ctex-cta-responsive ctex-text-uppercase c-call-to-action f-lightweight c-glyph ctex-cta-responsive ctex-text-uppercase ctex-tap-disable" aria-label="进一步了解" id="OfficePage-GradOffer-AlumniLink" target="">
+								<span>进一步了解</span>
+							</a>
+						</div>
+                    </div>
+				</div>
+                <div class="col-1"></div>
+                <div class="x-clearfix"></div>
+            </div>
+        </div>
+    </div>
+</section><div data-grid="container" class="ctex-centered margin-bottom-48 margin-top-0">
+	<div class="m-banner " data-grid="col-12">
+
+		
+        
+
+        
+        <h2 class="c-heading-2 padding-vertical-0 padding-horizontal-0 word-break" data-use="true">面向学生和教育工作者的强大工具</h2>
+        
+        
+        
+        
+
+        <p class="c-paragraph-2 long-hero-800 pad-horizontal-25" data-hide="false">Office 365 像您一样： 无论在哪里，都能工作。 熟悉的应用程序和随时都能访问的文件实时更新，让您可以在 Windows、Android、iOS 或设备上轻松、顺畅地构建课程。</p>
+
+        <div></div>
+	</div>
+</div><div data-grid="container" class="">
+	<section class="m-feature f-align-left margin-bottom-48">
+		<div>
+			
+
+			
+
+			
+			
+			<h3 class="c-heading-3" data-use="true">远程学习</h3>
+			
+			
+			
+
+			<p class="c-paragraph-2" data-hide="false">获取 Office 365（其中包括 Microsoft Teams，可供整个学校免费使用），打造协作式课堂、与专业的学习社区交流，以及与同事沟通。 获得所需培训和支持，以创建安全、可靠和协作的学习环境。 </p>
+
+			<div>
+				<a href="https://www.microsoft.com/zh-cn/education/remote-learning" id="office-rlf1-remote-learning" class="c-call-to-action c-glyph " target="" aria-label="请点击此链接了解有关远程学习的更多详细信息。" data-hide="false" onclick="">
+					<span>进一步了解虚拟课堂</span>
+				</a>
+			</div>
+			
+			
+		</div>
+		<picture data-hide="false">
+			<source media="(min-width: 1400px)" srcset="https://cortexonemsedu.azureedge.net/assets/hero-remote-learning-surface-1920/1/hero_remote-learning_surface_1920.jpg">
+			<source media="(min-width: 1084px)" srcset="https://cortexonemsedu.azureedge.net/assets/hero-remote-learning-surface-1399/1/hero_remote-learning_surface_1399.jpg">
+			<source media="(min-width: 768px)" srcset="https://cortexonemsedu.azureedge.net/assets/hero-remote-learning-surface-1083/1/hero_remote-learning_surface_1083.jpg">
+			<source media="(min-width: 540px)" srcset="https://cortexonemsedu.azureedge.net/assets/hero-remote-learning-surface-767/1/hero_remote-learning_surface_767.jpg">
+			<source media="(min-width:0)" srcset="https://cortexonemsedu.azureedge.net/assets/hero-remote-learning-surface-539/1/hero_remote-learning_surface_539.jpg">
+			<img srcset="https://cortexonemsedu.azureedge.net/assets/hero-remote-learning-surface-1920/1/hero_remote-learning_surface_1920.jpg" src="https://cortexonemsedu.azureedge.net/assets/hero-remote-learning-surface-1920/1/hero_remote-learning_surface_1920.jpg" alt="" class="">
+		</picture>
+
+		
+	</section>
+</div><div data-grid="container" class="margin-bottom-48">
+	<div class="m-content-placement text-centered">
+		<div class="ctex-flex-container">
+			<div>
+				<section class="m-content-placement-item f-size-medium margin-top-0 margin-bottom-48">
+					
+					
+					<svg focusable="false" viewbox="" data-hide="false" class="padding-bottom-20">
+						
+					</svg>
+					
+					<div>
+						
+						<h3 data-use="true" class="c-heading-4 word-break padding-top-0">在同一个地方整理</h3>
+						
+						
+						
+						
+						<p data-hide="false" class="c-paragraph-2 padding-top-10">OneNote 是一款功能强大的数字笔记本，可帮助您整理课程资料并与学生和同事轻松协作。</p>
+
+						<div></div>						
+					</div>
+				</section>
+			</div>
+		
+			<div>
+				<section class="m-content-placement-item f-size-medium margin-top-0 margin-bottom-48">
+					
+					
+					<svg focusable="false" viewbox="" data-hide="false" class="padding-bottom-20">
+						
+					</svg>
+					
+					<div>
+						
+						<h3 data-use="true" class="c-heading-4 word-break padding-top-0">在任何设备上随时随地使用</h3>
+						
+						
+						
+						
+						<p data-hide="false" class="c-paragraph-2 padding-top-10">获得一如既往的 Office 365 教育体验，将对话、内容和应用程序整合到一起。 不受限制地实时协作，无需担心格式丢失。</p>
+
+						<div></div>						
+					</div>
+				</section>
+			</div>
+		
+			<div>
+				<section class="m-content-placement-item f-size-medium margin-top-0 margin-bottom-48">
+					
+					
+					<svg focusable="false" viewbox="" data-hide="false" class="padding-bottom-20">
+						
+					</svg>
+					
+					<div>
+						
+						<h3 data-use="true" class="c-heading-4 word-break padding-top-0">简化课堂管理</h3>
+						
+						
+						
+						
+						<p data-hide="false" class="c-paragraph-2 padding-top-10">借助 School Data Sync，免费为 Teams、Intune 教育版等创建课程和小组。</p>
+
+						<div></div>						
+					</div>
+				</section>
+			</div>
+		</div>
+	</div>
+</div><div data-grid="container" class="margin-bottom-48">
+	<div class="m-banner padding-top-0 margin-top-0" data-grid="col-12">
+
+		
+        
+
+        
+        <h2 class="c-heading-2 long-hero-800" data-use="true">省时省钱的工具</h2>
+        
+        
+        
+        
+
+        <p class="c-paragraph-2 long-hero-800" data-hide="false">Office 365 是一款经济实惠、功能强大的工具套件，专为教育工作者和学生设计，可通过您喜爱的设备访问。</p>
+
+        <div></div>
+	</div>
+</div><div data-grid="container" class="margin-bottom-84">
+	<section class="m-feature m-feature f-align-right f-image-priority margin-top-0 ctex-feature-bleed-fix">
+		<div>
+			
+
+			
+
+			
+			
+			<h3 class="c-heading-3 padding-top-10" data-use="true">让您的学生为现在和未来成功做好准备</h3>
+			
+			
+			
+
+			<p class="c-paragraph-2" data-hide="false">当您在课堂上使用 Office 365 教育版时，您的学生将学习雇主尤为重视的一系列技能和应用程序。 无论是 Outlook、Word、PowerPoint、Access 还是 OneNote，今天就让学生为明天做好准备。</p>
+
+			<div></div>
+			
+			
+		</div>
+		<picture data-hide="false">
+			<source media="(min-width: 1400px)" srcset="https://cortexonemsedu.azureedge.net/assets/panel6-featureheader-create-1920/1/1920-Panel6-FeatureHeader-Create.jpg">
+			<source media="(min-width: 1084px)" srcset="https://cortexonemsedu.azureedge.net/assets/panel6-featureheader-create-1399/1/1399-Panel6-FeatureHeader-Create.jpg">
+			<source media="(min-width: 768px)" srcset="https://cortexonemsedu.azureedge.net/assets/panel6-featureheader-create-1083/1/1083-Panel6-FeatureHeader-Create.jpg">
+			<source media="(min-width: 540px)" srcset="https://cortexonemsedu.azureedge.net/assets/panel6-featureheader-create-767/1/767-Panel6-FeatureHeader-Create.jpg">
+			<source media="(min-width:0)" srcset="https://cortexonemsedu.azureedge.net/assets/panel6-featureheader-create-539/1/539-Panel6-FeatureHeader-Create.jpg">
+			<img srcset="https://cortexonemsedu.azureedge.net/assets/panel6-featureheader-create-1920/1/1920-Panel6-FeatureHeader-Create.jpg" src="https://cortexonemsedu.azureedge.net/assets/panel6-featureheader-create-1920/1/1920-Panel6-FeatureHeader-Create.jpg" alt="" class="">
+		</picture>
+
+		
+	</section>
+</div><div data-grid="container" class="margin-bottom-84">
+	<div class="c-carousel f-single-slide  padding-right-12 padding-left-22 padding-bottom-10" role="region" aria-label="专为支持具体教育科目而定制的一系列 Microsoft 应用。">
+		<button class="c-flipper f-previous" aria-hidden="true" tabindex="-1"></button>
+		<button class="c-flipper f-next" aria-hidden="true" tabindex="-1"></button>
+		<div itemscope="" itemtype="https://schema.org/ItemList">
+			<ul class="c-group">
+				<li>
+					<section class="m-product-placement-item f-size-medium">
+						<a href="https://outlook.live.com/owa/" class="ctex-focus ctex-focus" aria-label="Placeholder aria." id="OfficePae-Carousel1-Office" target="">
+							
+							<picture data-hide="false">
+								<source srcset="https://cortexonemsedu.azureedge.net/assets/panel7-carousel-outlook-new-1920/2/Outlook_167x.png" media="(min-width:0)">
+								<img class="c-image " src="https://cortexonemsedu.azureedge.net/assets/panel7-carousel-outlook-new-1920/2/Outlook_167x.png" alt="">
+							</picture>
+							
+							
+							
+							<div>
+								
+								<h3 data-use="true" class="c-heading">Outlook</h3>
+								
+								
+								
+
+								
+							</div>							
+						</a>
+					</section>
+				</li>
+			
+				<li>
+					<section class="m-product-placement-item f-size-medium">
+						<a href="https://office.live.com/start/Word.aspx" class="ctex-focus ctex-focus" aria-label="Placeholder aria." id="OfficePae-Carousel1-Word" target="">
+							
+							<picture data-hide="false">
+								<source srcset="https://cortexonemsedu.azureedge.net/assets/panel7-carousel-word-new-1920/2/Word_167x.png" media="(min-width:0)">
+								<img class="c-image " src="https://cortexonemsedu.azureedge.net/assets/panel7-carousel-word-new-1920/2/Word_167x.png" alt="">
+							</picture>
+							
+							
+							
+							<div>
+								
+								<h3 data-use="true" class="c-heading">Word</h3>
+								
+								
+								
+
+								
+							</div>							
+						</a>
+					</section>
+				</li>
+			
+				<li>
+					<section class="m-product-placement-item f-size-medium">
+						<a href="https://office.live.com/start/Excel.aspx" class="ctex-focus ctex-focus" aria-label="Placeholder aria." id="OfficePae-Carousel1-Excel" target="">
+							
+							<picture data-hide="false">
+								<source srcset="https://cortexonemsedu.azureedge.net/assets/panel7-carousel-excel-new-1920/2/Excel_167x.png" media="(min-width:0)">
+								<img class="c-image " src="https://cortexonemsedu.azureedge.net/assets/panel7-carousel-excel-new-1920/2/Excel_167x.png" alt="">
+							</picture>
+							
+							
+							
+							<div>
+								
+								<h3 data-use="true" class="c-heading">Excel</h3>
+								
+								
+								
+
+								
+							</div>							
+						</a>
+					</section>
+				</li>
+			
+				<li>
+					<section class="m-product-placement-item f-size-medium">
+						<a href="https://office.live.com/start/PowerPoint.aspx" class="ctex-focus ctex-focus" aria-label="Placeholder aria." id="OfficePae-Carousel1-PowerPoint" target="">
+							
+							<picture data-hide="false">
+								<source srcset="https://cortexonemsedu.azureedge.net/assets/panel7-carousel-powerpoint-new-1920/2/Powerpoint_167x.png" media="(min-width:0)">
+								<img class="c-image " src="https://cortexonemsedu.azureedge.net/assets/panel7-carousel-powerpoint-new-1920/2/Powerpoint_167x.png" alt="">
+							</picture>
+							
+							
+							
+							<div>
+								
+								<h3 data-use="true" class="c-heading">PowerPoint</h3>
+								
+								
+								
+
+								
+							</div>							
+						</a>
+					</section>
+				</li>
+			
+				<li>
+					<section class="m-product-placement-item f-size-medium">
+						<a href="https://www.onenote.com/hrd" class="ctex-focus ctex-focus" aria-label="Placeholder aria." id="OfficePae-Carousel1-OneNote" target="">
+							
+							<picture data-hide="false">
+								<source srcset="https://cortexonemsedu.azureedge.net/assets/panel7-carousel-onenote-new-1920/2/OneNote_167x.png" media="(min-width:0)">
+								<img class="c-image " src="https://cortexonemsedu.azureedge.net/assets/panel7-carousel-onenote-new-1920/2/OneNote_167x.png" alt="">
+							</picture>
+							
+							
+							
+							<div>
+								
+								<h3 data-use="true" class="c-heading">OneNote</h3>
+								
+								
+								
+
+								
+							</div>							
+						</a>
+					</section>
+				</li>
+			
+				<li>
+					<section class="m-product-placement-item f-size-medium">
+						<a href="https://teams.microsoft.com/" class="ctex-focus ctex-focus" aria-label="Placeholder aria." id="OfficePae-Carousel1-Teams" target="">
+							
+							<picture data-hide="false">
+								<source srcset="https://cortexonemsedu.azureedge.net/assets/panel7-carousel-teams-new-1920/2/Teams_167x.png" media="(min-width:0)">
+								<img class="c-image " src="https://cortexonemsedu.azureedge.net/assets/panel7-carousel-teams-new-1920/2/Teams_167x.png" alt="">
+							</picture>
+							
+							
+							
+							<div>
+								
+								<h3 data-use="true" class="c-heading">Teams</h3>
+								
+								
+								
+
+								
+							</div>							
+						</a>
+					</section>
+				</li>
+			
+				<li>
+					<section class="m-product-placement-item f-size-medium">
+						<a href="https://products.office.com/en-us/publisher" class="ctex-focus ctex-focus" aria-label="Placeholder aria." id="OfficePae-Carousel1-Publisher" target="">
+							
+							<picture data-hide="false">
+								<source srcset="https://cortexonemsedu.azureedge.net/assets/panel7-carousel-publisher-new-1920/2/Publisher_167x.png" media="(min-width:0)">
+								<img class="c-image " src="https://cortexonemsedu.azureedge.net/assets/panel7-carousel-publisher-new-1920/2/Publisher_167x.png" alt="">
+							</picture>
+							
+							
+							
+							<div>
+								
+								<h3 data-use="true" class="c-heading">Publisher</h3>
+								
+								
+								
+
+								
+							</div>							
+						</a>
+					</section>
+				</li>
+			
+				<li>
+					<section class="m-product-placement-item f-size-medium">
+						<a href="https://products.office.com/en-us/publisher" class="ctex-focus ctex-focus" aria-label="Placeholder aria." id="OfficePae-Carousel1-Access" target="">
+							
+							<picture data-hide="false">
+								<source srcset="https://cortexonemsedu.azureedge.net/assets/panel7-carousel-access-new-1920/2/Access_167x.png" media="(min-width:0)">
+								<img class="c-image " src="https://cortexonemsedu.azureedge.net/assets/panel7-carousel-access-new-1920/2/Access_167x.png" alt="">
+							</picture>
+							
+							
+							
+							<div>
+								
+								<h3 data-use="true" class="c-heading">Access</h3>
+								
+								
+								
+
+								
+							</div>							
+						</a>
+					</section>
+				</li>
+			</ul>
+		</div>
+	</div>
+</div><div data-grid="container" class="margin-bottom-84">
+	<section class="m-feature m-feature f-align-left f-image-priority margin-top-0">
+		<div>
+			
+
+			
+
+			
+			<h2 class="c-heading-3" data-use="true">帮助打造现代化课堂的云服务</h2>
+			
+			
+			
+			
+
+			<p class="c-paragraph-2" data-hide="false">借助 OneDrive、Teams、等，打造协作式课堂，加入专业学习社区，并与学校员工交流。所有这一切，都来自 Office 365 教育版的一致体验。</p>
+
+			<div></div>
+			
+			
+		</div>
+		<picture data-hide="false">
+			<source media="(min-width: 1400px)" srcset="https://cortexonemsedu.azureedge.net/assets/panel8-featureheader-modernize-1920/1/1920-Panel8-FeatureHeader-Modernize.jpg">
+			<source media="(min-width: 1084px)" srcset="https://cortexonemsedu.azureedge.net/assets/panel8-featureheader-modernize-1399/1/1399-Panel8-FeatureHeader-Modernize.jpg">
+			<source media="(min-width: 768px)" srcset="https://cortexonemsedu.azureedge.net/assets/panel8-featureheader-modernize-1083/1/1083-Panel8-FeatureHeader-Modernize.jpg">
+			<source media="(min-width: 540px)" srcset="https://cortexonemsedu.azureedge.net/assets/panel8-featureheader-modernize-767/1/767-Panel8-FeatureHeader-Modernize.jpg">
+			<source media="(min-width:0)" srcset="https://cortexonemsedu.azureedge.net/assets/panel8-featureheader-modernize-539/1/539-Panel8-FeatureHeader-Modernize.jpg">
+			<img srcset="https://cortexonemsedu.azureedge.net/assets/panel8-featureheader-modernize-1920/1/1920-Panel8-FeatureHeader-Modernize.jpg" src="https://cortexonemsedu.azureedge.net/assets/panel8-featureheader-modernize-1920/1/1920-Panel8-FeatureHeader-Modernize.jpg" alt="" class="">
+		</picture>
+
+		
+	</section>
+</div><div data-grid="container" class="margin-bottom-84">
+	<div class="c-carousel f-single-slide padding-right-12 padding-left-22 padding-bottom-10" role="region" aria-label="专为支持具体教育科目而定制的一系列 Microsoft 应用。">
+		<button class="c-flipper f-previous" aria-hidden="true" tabindex="-1"></button>
+		<button class="c-flipper f-next" aria-hidden="true" tabindex="-1"></button>
+		<div itemscope="" itemtype="https://schema.org/ItemList">
+			<ul class="c-group">
+				<li>
+					<section class="m-product-placement-item f-size-medium">
+						<a href="https://products.office.com/en-us/exchange" class="ctex-focus ctex-focus" aria-label="Placeholder aria." id="OfficePae-Carousel2-Exchange" target="">
+							
+							<picture data-hide="false">
+								<source srcset="https://cortexonemsedu.azureedge.net/assets/panel9-carousel-exchange-new-1920/2/Exchange_167x.png" media="(min-width:0)">
+								<img class="c-image " src="https://cortexonemsedu.azureedge.net/assets/panel9-carousel-exchange-new-1920/2/Exchange_167x.png" alt="">
+							</picture>
+							
+							
+							
+							<div>
+								
+								<h3 data-use="true" class="c-heading">Exchange</h3>
+								
+								
+								
+
+								
+							</div>							
+						</a>
+					</section>
+				</li>
+			
+				<li>
+					<section class="m-product-placement-item f-size-medium">
+						<a href="https://www.onenote.com/hrd" class="ctex-focus ctex-focus" aria-label="Placeholder aria." id="OfficePae-Carousel2-OneDrive" target="">
+							
+							<picture data-hide="false">
+								<source srcset="https://cortexonemsedu.azureedge.net/assets/panel9-carousel-onedrive-new-1920/2/OneDrive_167x.png" media="(min-width:0)">
+								<img class="c-image " src="https://cortexonemsedu.azureedge.net/assets/panel9-carousel-onedrive-new-1920/2/OneDrive_167x.png" alt="">
+							</picture>
+							
+							
+							
+							<div>
+								
+								<h3 data-use="true" class="c-heading">OneDrive</h3>
+								
+								
+								
+
+								
+							</div>							
+						</a>
+					</section>
+				</li>
+			
+				<li>
+					<section class="m-product-placement-item f-size-medium">
+						<a href="https://products.office.com/en-us/sharepoint" class="ctex-focus ctex-focus" aria-label="Placeholder aria." id="OfficePae-Carousel2-SharePoint" target="">
+							
+							<picture data-hide="false">
+								<source srcset="https://cortexonemsedu.azureedge.net/assets/panel9-carousel-sharepoint-new-1920/2/Sharepoint_167x.png" media="(min-width:0)">
+								<img class="c-image " src="https://cortexonemsedu.azureedge.net/assets/panel9-carousel-sharepoint-new-1920/2/Sharepoint_167x.png" alt="">
+							</picture>
+							
+							
+							
+							<div>
+								
+								<h3 data-use="true" class="c-heading">SharePoint</h3>
+								
+								
+								
+
+								
+							</div>							
+						</a>
+					</section>
+				</li>
+			
+				<li>
+					<section class="m-product-placement-item f-size-medium">
+						<a href="https://sway.com/education/" class="ctex-focus ctex-focus" aria-label="Placeholder aria." id="OfficePae-Carousel2-Sway" target="">
+							
+							<picture data-hide="false">
+								<source srcset="https://cortexonemsedu.azureedge.net/assets/panel9-carousel-sway-new-1920/2/Sway_167x.png" media="(min-width:0)">
+								<img class="c-image " src="https://cortexonemsedu.azureedge.net/assets/panel9-carousel-sway-new-1920/2/Sway_167x.png" alt="">
+							</picture>
+							
+							
+							
+							<div>
+								
+								<h3 data-use="true" class="c-heading">Sway</h3>
+								
+								
+								
+
+								
+							</div>							
+						</a>
+					</section>
+				</li>
+			
+				<li>
+					<section class="m-product-placement-item f-size-medium">
+						<a href="https://forms.office.com/" class="ctex-focus ctex-focus" aria-label="Placeholder aria." id="OfficePae-Carousel2-Forms" target="">
+							
+							<picture data-hide="false">
+								<source srcset="https://cortexonemsedu.azureedge.net/assets/panel9-carousel-forms-new-1920/2/Forms_167x.png" media="(min-width:0)">
+								<img class="c-image " src="https://cortexonemsedu.azureedge.net/assets/panel9-carousel-forms-new-1920/2/Forms_167x.png" alt="">
+							</picture>
+							
+							
+							
+							<div>
+								
+								<h3 data-use="true" class="c-heading">Forms</h3>
+								
+								
+								
+
+								
+							</div>							
+						</a>
+					</section>
+				</li>
+			
+				<li>
+					<section class="m-product-placement-item f-size-medium">
+						<a href="https://products.office.com/en-us/microsoft-stream" class="ctex-focus ctex-focus" aria-label="Placeholder aria." id="OfficePae-Carousel2-Stream" target="">
+							
+							<picture data-hide="false">
+								<source srcset="https://cortexonemsedu.azureedge.net/assets/panel9-carousel-stream-new-1920/2/Stream_167x.png" media="(min-width:0)">
+								<img class="c-image " src="https://cortexonemsedu.azureedge.net/assets/panel9-carousel-stream-new-1920/2/Stream_167x.png" alt="">
+							</picture>
+							
+							
+							
+							<div>
+								
+								<h3 data-use="true" class="c-heading">Stream</h3>
+								
+								
+								
+
+								
+							</div>							
+						</a>
+					</section>
+				</li>
+			
+				<li>
+					<section class="m-product-placement-item f-size-medium">
+						<a href="https://flow.microsoft.com/en-us/" class="ctex-focus ctex-focus" aria-label="Placeholder aria." id="OfficePae-Carousel2-Flow" target="">
+							
+							<picture data-hide="false">
+								<source srcset="https://cortexonemsedu.blob.core.windows.net:443/assets/panel9-carousel-flow-new-1920/1/1920-Panel9-Carousel-Flow-New.jpg" media="(min-width:0)">
+								<img class="c-image " src="https://cortexonemsedu.blob.core.windows.net:443/assets/panel9-carousel-flow-new-1920/1/1920-Panel9-Carousel-Flow-New.jpg" alt="">
+							</picture>
+							
+							
+							
+							<div>
+								
+								<h3 data-use="true" class="c-heading">Flow</h3>
+								
+								
+								
+
+								
+							</div>							
+						</a>
+					</section>
+				</li>
+			
+				<li>
+					<section class="m-product-placement-item f-size-medium">
+						<a href="https://sds.microsoft.com/" class="ctex-focus ctex-focus" aria-label="Placeholder aria." id="OfficePae-Carousel2-SchoolDataSync" target="">
+							
+							<picture data-hide="false">
+								<source srcset="https://cortexonemsedu.blob.core.windows.net:443/assets/panel9-carousel-schooldatasync-new-1920/1/1920-Panel9-Carousel-SchoolDataSync-New.jpg" media="(min-width:0)">
+								<img class="c-image " src="https://cortexonemsedu.blob.core.windows.net:443/assets/panel9-carousel-schooldatasync-new-1920/1/1920-Panel9-Carousel-SchoolDataSync-New.jpg" alt="">
+							</picture>
+							
+							
+							
+							<div>
+								
+								<h3 data-use="true" class="c-heading">学校数据同步</h3>
+								
+								
+								
+
+								
+							</div>							
+						</a>
+					</section>
+				</li>
+			
+				<li>
+					<section class="m-product-placement-item f-size-medium">
+						<a href="https://powerapps.microsoft.com/en-us/" class="ctex-focus ctex-focus" aria-label="Placeholder aria." id="OfficePae-Carousel2-PowerApps" target="">
+							
+							<picture data-hide="false">
+								<source srcset="https://cortexonemsedu.blob.core.windows.net:443/assets/panel9-carousel-powerapps-new-1920/1/1920-Panel9-Carousel-PowerApps-New.jpg" media="(min-width:0)">
+								<img class="c-image " src="https://cortexonemsedu.blob.core.windows.net:443/assets/panel9-carousel-powerapps-new-1920/1/1920-Panel9-Carousel-PowerApps-New.jpg" alt="">
+							</picture>
+							
+							
+							
+							<div>
+								
+								<h3 data-use="true" class="c-heading">PowerApps</h3>
+								
+								
+								
+
+								
+							</div>							
+						</a>
+					</section>
+				</li>
+			
+				<li>
+					<section class="m-product-placement-item f-size-medium">
+						<a href="https://products.office.com/en-us/business/scheduling-and-booking-app" class="ctex-focus ctex-focus" aria-label="Placeholder aria." id="OfficePae-Carousel2-Bookings" target="">
+							
+							<picture data-hide="false">
+								<source srcset="https://cortexonemsedu.blob.core.windows.net:443/assets/panel9-carousel-bookings-new-1920/1/1920-Panel9-Carousel-Bookings-New.jpg" media="(min-width:0)">
+								<img class="c-image " src="https://cortexonemsedu.blob.core.windows.net:443/assets/panel9-carousel-bookings-new-1920/1/1920-Panel9-Carousel-Bookings-New.jpg" alt="">
+							</picture>
+							
+							
+							
+							<div>
+								
+								<h3 data-use="true" class="c-heading">Bookings</h3>
+								
+								
+								
+
+								
+							</div>							
+						</a>
+					</section>
+				</li>
+			
+				<li>
+					<section class="m-product-placement-item f-size-medium">
+						<a href="https://powerbi.microsoft.com/en-us/" class="ctex-focus ctex-focus" aria-label="Placeholder aria." id="OfficePae-Carousel2-PowerBi" target="">
+							
+							<picture data-hide="false">
+								<source srcset="https://cortexonemsedu.blob.core.windows.net:443/assets/panel9-carousel-powerbi-new-1920/1/1920-Panel9-Carousel-PowerBi-New.jpg" media="(min-width:0)">
+								<img class="c-image " src="https://cortexonemsedu.blob.core.windows.net:443/assets/panel9-carousel-powerbi-new-1920/1/1920-Panel9-Carousel-PowerBi-New.jpg" alt="">
+							</picture>
+							
+							
+							
+							<div>
+								
+								<h3 data-use="true" class="c-heading">Power BI</h3>
+								
+								
+								
+
+								
+							</div>							
+						</a>
+					</section>
+				</li>
+			</ul>
+		</div>
+	</div>
+</div><div data-grid="container" class="">
+	<hr class="c-divider  border-yellow margin-top-30">
+</div><section data-grid="container" class="partialBorder border-yellow ">
+    <div data-grid="col-12" class="margin-vertical-48">
+        <div data-grid="container" class="ctex-sif">
+            <div>
+                <div data-grid="pad-6x stack-3">
+                    <div data-grid="col-4" class="ctex-sif-image">
+                        <svg class="" focusable="false" viewbox="-10 -20 150 150" data-hide="false">
+                            <path d="m112 20v65.801h-61.734l-22.266 22.199v-22.199h-12v-65.801zm-6 5.982h-84v53.837h12v13.693l13.734-13.693h58.266zm-54 29.91h-6v-11.964h12v11.964c0 .841-.156 1.62-.469 2.337s-.742 1.347-1.289 1.893c-.547.545-1.18.974-1.898 1.285-.719.312-1.5.467-2.344.467zm24 0h-6v-11.964h12v11.964c0 .841-.156 1.62-.469 2.337s-.742 1.347-1.289 1.893c-.547.545-1.18.974-1.898 1.285-.719.312-1.5.467-2.344.467z"></path>
+                        </svg>
+						
+                    </div>
+                    <div data-grid="col-7" class="ctex-small_image_feature-content">
+						<strong class="c-badge f-small f-highlight c-badge f-small f-highlight" data-hide="false">案例研究</strong>
+						
+						
+						
+						
+						
+						
+						
+						<blockquote class="c-heading-4 padding-top-0 margin-horizontal-0 margin-vertical-0" data-hide="false">
+							<p>
+                          		通过 Exchange Online，我们能够将所有教师、员工和学生都集合在一个系统上。因此，我们可以轻松地交换信息、安排会议和增强协作。
+							</p>
+                            <cite class="c-heading-5 padding-top-0" data-hide="false">
+                               – Craig Jackson： 伊利诺伊州立大学基础架构、运营和网络总监
+                            </cite>
+                        </blockquote>
+						<div class="inline-block">
+							<a data-hide="false" href="https://customers.microsoft.com/en-us/story/illinois-state-university-edu-office365-exchange-online-us" class="c-call-to-action f-lightweight c-glyph ctex-cta-responsive ctex-text-uppercase c-call-to-action f-lightweight c-glyph ctex-cta-responsive ctex-text-uppercase ctex-tap-disable" aria-label="进一步了解伊利诺伊州立大学的案例研究。" id="OfficePae-CaseStudy-ReadCaseStudy" target="">
+								<span>阅读案例研究</span>
+							</a>
+						</div>
+                    </div>
+				</div>
+                <div class="col-1"></div>
+                <div class="x-clearfix"></div>
+            </div>
+        </div>
+    </div>
+</section><div data-grid="container" class="">
+	<hr class="c-divider  border-yellow margin-bottom-30">
+</div><div data-grid="container" class="margin-bottom-60 margin-top-60">
+	<section class="m-feature m-feature f-align-right f-image-priority margin-top-0">
+		<div>
+			
+
+			
+
+			
+			<h2 class="c-heading-3" data-use="true">为您的整个学校获得 Office 365 教育版。</h2>
+			
+			
+			
+			
+
+			<p class="c-paragraph-2" data-hide="false">在所有设备上，为每位教育工作者和学生提供 Office 365 教育版的强大功能，包括 Word、Excel、PowerPoint、OneNote、Microsoft Teams 和免费课堂工具。</p>
+
+			<div>
+				<a href="https://signup.microsoft.com/signup?sku=Education" id="OfficePae-Office365-GetStarted" class="c-call-to-action c-glyph c-call-to-action f-lightweight c-glyph ctex-cta-responsive ctex-text-uppercase ctex-tap-disable" target="" aria-label="开始使用您的 Microsoft 教育版账户。" data-hide="false" onclick="">
+					<span>立即开始</span>
+				</a>
+			</div>
+			
+			
+		</div>
+		<picture data-hide="false">
+			<source media="(min-width: 1400px)" srcset="https://cortexonemsedu.azureedge.net/assets/panel11-featureheader-signup-1920/1/1920-Panel11-FeatureHeader-SignUp.jpg">
+			<source media="(min-width: 1084px)" srcset="https://cortexonemsedu.azureedge.net/assets/panel11-featureheader-signup-1399/1/1399-Panel11-FeatureHeader-SignUp.jpg">
+			<source media="(min-width: 768px)" srcset="https://cortexonemsedu.azureedge.net/assets/panel11-featureheader-signup-1083/1/1083-Panel11-FeatureHeader-SignUp.jpg">
+			<source media="(min-width: 540px)" srcset="https://cortexonemsedu.azureedge.net/assets/panel11-featureheader-signup-767/1/767-Panel11-FeatureHeader-SignUp.jpg">
+			<source media="(min-width:0)" srcset="https://cortexonemsedu.azureedge.net/assets/panel11-featureheader-signup-539/1/539-Panel11-FeatureHeader-SignUp.jpg">
+			<img srcset="https://cortexonemsedu.azureedge.net/assets/panel11-featureheader-signup-1920/1/1920-Panel11-FeatureHeader-SignUp.jpg" src="https://cortexonemsedu.azureedge.net/assets/panel11-featureheader-signup-1920/1/1920-Panel11-FeatureHeader-SignUp.jpg" alt="" class="">
+		</picture>
+
+		
+	</section>
+</div><div data-grid="container" class="">
+	<div class="m-banner padding-top-0" data-grid="col-12">
+
+		
+        
+
+        
+        <h2 class="c-heading-2 padding-top-30" data-use="true">了解定价选项</h2>
+        
+        
+        
+        
+
+        <p class="c-paragraph-2 long-hero-800" data-hide="false">通过免费方案和低成本方案，选择适合您的预算和需求的定价选项。</p>
+
+        <div>
+        	<a class="c-call-to-action c-glyph c-call-to-action f-lightweight c-glyph ctex-cta-responsive ctex-text-uppercase ctex-tap-disable" data-hide="false" target="" id="OfficePae-Pricing-SeeOffice365Pricing" aria-label="点击此链接，进一步了解 Office 365 面向学校的定价选项。" href="https://products.office.com/zh-cn/academic/compare-office-365-education-plans" onclick="">
+            	<span>查看 OFFICE 365 面向学校的定价选项</span>
+            </a>
+        </div>
+	</div>
+</div><div data-grid="container" class="margin-bottom-84">
+	<div class="m-content-placement text-centered">
+		<div class="ctex-flex-container">
+			<div>
+				<section class="m-content-placement-item f-size-medium ">
+					
+					
+					
+					
+					<div>
+						<h2 data-use="true" class="c-heading-4 padding-top-0">Office 365 A1</h2>
+						
+						
+						
+						
+						
+						<p data-hide="false" class="c-paragraph-2 padding-top-10">这个免费的 Office 在线版包括 Office 下的所有工具，以及 Microsoft Teams。</p>
+
+						<div></div>						
+					</div>
+				</section>
+			</div>
+		
+			<div>
+				<section class="m-content-placement-item f-size-medium ">
+					
+					
+					
+					
+					<div>
+						<h2 data-use="true" class="c-heading-4 padding-top-0">Office 365 A3</h2>
+						
+						
+						
+						
+						
+						<p data-hide="false" class="c-paragraph-2 padding-top-10">使用 Office 的桌面应用，包括 Microsoft Teams，以及强大的管理和安全工具。</p>
+
+						<div></div>						
+					</div>
+				</section>
+			</div>
+		
+			<div>
+				<section class="m-content-placement-item f-size-medium ">
+					
+					
+					
+					
+					<div>
+						<h2 data-use="true" class="c-heading-4 padding-top-0">Office 365 A5</h2>
+						
+						
+						
+						
+						
+						<p data-hide="false" class="c-paragraph-2 padding-top-10">所有 Office 桌面应用，包括 Microsoft Teams，以及出色的安全、合规和分析工具。</p>
+
+						<div></div>						
+					</div>
+				</section>
+			</div>
+		</div>
+	</div>
+</div><div data-grid="container" class="">
+	<div class="m-banner padding-vertical-48 containedBorder border-lightGrey" data-grid="col-12">
+
+		
+        
+
+        
+        <h2 class="c-heading-3 padding-top-0" data-use="true">Office + Microsoft 365 教育版</h2>
+        
+        
+        
+        
+
+        <p class="c-paragraph-2 long-hero-800" data-hide="false">要购买 Office，Microsoft 365 教育版是理想之选。</p>
+
+        <div>
+        	<a class="c-call-to-action c-glyph c-call-to-action f-lightweight c-glyph ctex-cta-responsive ctex-text-uppercase ctex-tap-disable" data-hide="false" target="" id="OfficePae-OfficeandM365Banner-LearnMore" aria-label="进一步了解 Microsoft Office 365 教育版" href="https://www.microsoft.com/zh-cn/education/buy-license/microsoft365/default.aspx" onclick="">
+            	<span>进一步了解</span>
+            </a>
+        </div>
+	</div>
+</div><div data-grid="container" class="">
+	<div class="m-banner margin-top-64 padding-top-0 margin-bottom-0" data-grid="col-12">
+
+		
+        
+
+        
+        <h2 class="c-heading-2 padding-top-0" data-use="true">培训和资源</h2>
+        
+        
+        
+        
+
+        
+
+        <div></div>
+	</div>
+</div><section data-grid="container" class="">
+	<div data-grid="col-12" class="m-highlight-feature f-align-right">
+		<div>
+			
+			
+			<h3 data-use="true" class="c-heading padding-top-30">获取 Office 帮助</h3>
+			
+
+			<p class="c-paragraph-2 padding-top-10">下载和安装 Office、管理账户、排除故障等等，您需要的一切在线资源尽在这里。</p>
+
+			<div>
+				<a href="https://support.office.com/zh-cn/" id="OfficePae-GetHelp-GetSupport" class="c-call-to-action c-glyph c-call-to-action f-lightweight c-glyph ctex-text-uppercase ctex-tap-disable margin-top-0 padding-bottom-20" target="" aria-label="获取 Office 帮助。" data-hide="false" onclick="">
+					<span>获得支持</span>
+				</a>
+			</div>
+		</div>
+		
+		<picture class="c-image">
+			<source srcset="https://cortexonemsedu.azureedge.net/assets/panel16-highlightfeature-training-1920/1/1920-Panel16-HighlightFeature-Training.jpg" media="(min-width:1400px)">
+			<source srcset="https://cortexonemsedu.azureedge.net/assets/panel16-highlightfeature-training-1399/1/1399-Panel16-HighlightFeature-Training.jpg" media="(min-width:1084px)">
+			<source srcset="https://cortexonemsedu.azureedge.net/assets/panel16-highlightfeature-training-1083/1/1083-Panel16-HighlightFeature-Training.jpg" media="(min-width:768px)">
+			<source srcset="https://cortexonemsedu.azureedge.net/assets/panel16-highlightfeature-training-767/1/767-Panel16-HighlightFeature-Training.jpg" media="(min-width:540px)">
+			<source srcset="https://cortexonemsedu.azureedge.net/assets/panel16-highlightfeature-training-539/1/539-Panel16-HighlightFeature-Training.jpg" media="(min-width:0)">
+			<img srcset="https://cortexonemsedu.azureedge.net/assets/panel16-highlightfeature-training-1920/1/1920-Panel16-HighlightFeature-Training.jpg" src="https://cortexonemsedu.azureedge.net/assets/panel16-highlightfeature-training-1920/1/1920-Panel16-HighlightFeature-Training.jpg" alt="">
+		</picture>
+	</div>
+</section><div data-grid="container" class="margin-bottom-36">
+	<div class="m-content-placement ">
+		<div class="ctex-flex-container">
+			<div>
+				<section class="m-content-placement-item f-size-medium ">
+					
+					
+					<svg focusable="false" viewbox="" data-hide="false" class="">
+						
+					</svg>
+					
+					<div>
+						
+						<h3 data-use="true" class="c-heading-4 padding-top-20">Office 培训教程</h3>
+						
+						
+						
+						
+						<p data-hide="false" class="c-paragraph-2 padding-top-10">无论技能水平如何，了解如何充分利用您的 Microsoft Office 订阅。</p>
+
+						<div>
+							<a href="https://support.office.com/zh-cn/article/teacher-training-packs-7a9ee74a-8fe5-43d3-bc23-a55185896921" class="c-call-to-action c-glyph c-call-to-action c-glyph ctex-tap-disable" aria-label="了解如何充分利用您的 Microsoft Office 订阅。" id="OfficePae-resources4UP-GetTrained" target="" data-hide="false">
+								<span>获得培训</span>
+							</a>
+						</div>						
+					</div>
+				</section>
+			</div>
+		
+			<div>
+				<section class="m-content-placement-item f-size-medium ">
+					
+					
+					<svg focusable="false" viewbox="" data-hide="false" class="">
+						
+					</svg>
+					
+					<div>
+						
+						<h3 data-use="true" class="c-heading-4 padding-top-20">Office 面向未来的技能</h3>
+						
+						
+						
+						
+						<p data-hide="false" class="c-paragraph-2 padding-top-10">借助 Office 365 教育版，帮助学生学习雇主尤为重视的技能和应用程序。</p>
+
+						<div>
+							<a href="https://educationblog.microsoft.com/2016/06/new-research-highlights-most-in-demand-job-skills/" class="c-call-to-action c-glyph c-call-to-action c-glyph ctex-tap-disable" aria-label="通过 Office 365 教育版，了解雇主尤为重视哪些技能。" id="OfficePae-resources4UP-ReadReport" target="" data-hide="false">
+								<span>阅读报告</span>
+							</a>
+						</div>						
+					</div>
+				</section>
+			</div>
+		
+			<div>
+				<section class="m-content-placement-item f-size-medium ">
+					
+					
+					<svg focusable="false" viewbox="" data-hide="false" class="">
+						
+					</svg>
+					
+					<div>
+						
+						<h3 data-use="true" class="c-heading-4 padding-top-20">Microsoft 教育工作者社区</h3>
+						
+						
+						
+						
+						<p data-hide="false" class="c-paragraph-2 padding-top-10">通过免费的在线专业发展和交流，了解如何把技术带到您的课堂上。</p>
+
+						<div>
+							<a href="https://education.microsoft.com/" class="c-call-to-action c-glyph c-call-to-action c-glyph ctex-tap-disable" aria-label="点击此链接，进入 Microsoft 教育社区。" id="OfficePae-resources4UP-JoinCommunity" target="" data-hide="false">
+								<span>加入社区</span>
+							</a>
+						</div>						
+					</div>
+				</section>
+			</div>
+		</div>
+	</div>
+</div><div data-grid="container" class="margin-top-48 margin-bottom-84">
+    <div data-grid="col-12" class="">
+        <div>
+            <div class="m-banner">
+                
+                <h2 data-use="true" class="c-heading-2 padding-top-0 margin-bottom-48">常见问题解答</h2>
+                
+                
+                
+                
+            </div>
+
+            <div>
+                <div class="c-drawer">
+                    <button aria-controls="ProductsOfficeFAQDrawersPanel1" class="c-glyph">
+                        <span class="c-paragraph-2 padding-top-0">我可以使用这项计划多长时间？</span>
+                    </button>
+                    <div id="ProductsOfficeFAQDrawersPanel1" class="c-drawer-panel ">
+						<p data-hide="false" class="c-paragraph-2 padding-horizontal-25 padding-top-25">只要您在一所符合条件的学校工作，您就可以一直使用这项计划。 我们可能会随时验证您是否符合条件。 当您的 Office 365 教育版计划到期时：</p>
+						<ul class="c-list c-paragraph-2 padding-horizontal-25 padding-bottom-25 padding-top-10 margin-bottom-0">
+							<li>Office 应用程序进入功能缩减模式，这意味着您可以查看文档，但无法编辑或创建新文档。</li>
+						
+							<li>与学校电子邮件地址关联的在线服务（如 Office Online 和 OneDrive）将无法继续使用。</li>
+						
+							<li>如果您的计划已经到期，您可以重新验证您的教育工作者身份，或转移到 Office 365 个人版计划，以便为您的计划延期。</li>
+						</ul>
+					</div>
+				</div>
+			
+                <div class="c-drawer">
+                    <button aria-controls="ProductsOfficeFAQDrawersPanel2" class="c-glyph">
+                        <span class="c-paragraph-2 padding-top-0">审批教育机构是否符合条件需要多长时间？</span>
+                    </button>
+                    <div id="ProductsOfficeFAQDrawersPanel2" class="c-drawer-panel ">
+						<p data-hide="false" class="c-paragraph-2 padding-horizontal-25 padding-top-25">在很多情况下，通过自动验证过程，审批瞬时即可完成。 如果我们需要验证教育机构，审批最多可能需要一个月的时间。 如果您的 30 天试用期即将到期，而您尚未获得批准，请联系<a class='c-hyperlink' href='https://products.office.com/zh-cn/business/office-365-for-business-support-options'>客服</a>。</p>
+						<ul class="c-list c-paragraph-2 padding-horizontal-25 padding-bottom-25 padding-top-10 margin-bottom-0"></ul>
+					</div>
+				</div>
+			
+                <div class="c-drawer">
+                    <button aria-controls="ProductsOfficeFAQDrawersPanel3" class="c-glyph">
+                        <span class="c-paragraph-2 padding-top-0">如果我不符合条件，该怎么办？</span>
+                    </button>
+                    <div id="ProductsOfficeFAQDrawersPanel3" class="c-drawer-panel ">
+						<p data-hide="false" class="c-paragraph-2 padding-horizontal-25 padding-top-25">Office 为学生提供一系列选项，所以您可以轻松找到符合您预算的选项。<a class='c-hyperlink' href='https://products.office.com/zh-cn/student/office-for-students'>了解获得 Office 的各种方式</a>。</p>
+						<ul class="c-list c-paragraph-2 padding-horizontal-25 padding-bottom-25 padding-top-10 margin-bottom-0"></ul>
+					</div>
+				</div>
+			
+                <div class="c-drawer">
+                    <button aria-controls="ProductsOfficeFAQDrawersPanel4" class="c-glyph">
+                        <span class="c-paragraph-2 padding-top-0">随这项计划提供的 OneDrive 账户由谁管理？</span>
+                    </button>
+                    <div id="ProductsOfficeFAQDrawersPanel4" class="c-drawer-panel ">
+						<p data-hide="false" class="c-paragraph-2 padding-horizontal-25 padding-top-25">虽然 OneDrive 账户被分配给您，但它与学校关联，应当用于存储适合学校的内容。 学校的 IT 管理员可以随时更改使用权限。</p>
+						<ul class="c-list c-paragraph-2 padding-horizontal-25 padding-bottom-25 padding-top-10 margin-bottom-0"></ul>
+					</div>
+				</div>
+			
+                <div class="c-drawer">
+                    <button aria-controls="ProductsOfficeFAQDrawersPanel5" class="c-glyph">
+                        <span class="c-paragraph-2 padding-top-0">我可以与其他人共享这项计划吗？</span>
+                    </button>
+                    <div id="ProductsOfficeFAQDrawersPanel5" class="c-drawer-panel ">
+						<p data-hide="false" class="c-paragraph-2 padding-horizontal-25 padding-top-25">Office 365 教育版为个人许可计划，仅供符合条件的教师使用。 如果您有同事想要使用 Office 365 教育版，他们可以在 <a class='c-hyperlink' href='https://www.microsoft.com/zh-cn/education/products/office/default.aspx'>Office 365 教育版网页</a>上获得自己的许可证。</p>
+						<ul class="c-list c-paragraph-2 padding-horizontal-25 padding-bottom-25 padding-top-10 margin-bottom-0"></ul>
+					</div>
+				</div>
+			
+                <div class="c-drawer">
+                    <button aria-controls="ProductsOfficeFAQDrawersPanel6" class="c-glyph">
+                        <span class="c-paragraph-2 padding-top-0">Office 365 教育版的最低系统要求是什么？</span>
+                    </button>
+                    <div id="ProductsOfficeFAQDrawersPanel6" class="c-drawer-panel ">
+						<p data-hide="false" class="c-paragraph-2 padding-horizontal-25 padding-top-25">要安装 Office 365 教育版，您的 PC 或 Mac 必须满足最低系统要求。<a class='c-hyperlink' href='https://products.office.com/zh-cn/office-system-requirements'>查看系统要求</a>。</p>
+						<ul class="c-list c-paragraph-2 padding-horizontal-25 padding-bottom-25 padding-top-10 margin-bottom-0"></ul>
+					</div>
+				</div>
+			
+                <div class="c-drawer">
+                    <button aria-controls="ProductsOfficeFAQDrawersPanel7" class="c-glyph">
+                        <span class="c-paragraph-2 padding-top-0">如何将我的文件和设置迁移到 Office 365 个人版？</span>
+                    </button>
+                    <div id="ProductsOfficeFAQDrawersPanel7" class="c-drawer-panel ">
+						<p data-hide="false" class="c-paragraph-2 padding-horizontal-25 padding-top-25">查看以下系统的迁移指南： <a class='c-hyperlink' href='https://support.office.com/zh-cn/article/Migrate-from-Office-365-ProPlus-to-Office-365-Personal-for-Windows-10-692597ab-711e-459d-a916-663f5b8bdc30?ui=en-US&rs=en-US&ad=US'>Windows 10</a> | <a class='c-hyperlink' href='https://support.office.com/zh-cn/article/Migrate-from-Office-365-ProPlus-to-Office-365-Personal-for-Windows-8-1-15302428-eb62-4701-88c4-54a805078b83?ui=en-US&rs=en-US&ad=US'>Windows 8.1</a> | <a class='c-hyperlink' href='https://support.office.com/zh-cn/article/Migrate-from-Office-365-ProPlus-to-Office-365-Personal-for-Windows-7-e6997df0-d99b-45a4-bd49-5f68b391eb4d?ui=en-US&rs=en-US&ad=US'>Windows 7</a> | <a class='c-hyperlink' href='https://support.office.com/zh-cn/article/Migrate-From-Office-365-ProPlus-to-Office-365-Personal-for-Mac-f6bf12f2-f0eb-48c2-b98a-a45e9ddf4093?ui=en-US&rs=en-US&ad=US'>Mac</a></p>
+						<ul class="c-list c-paragraph-2 padding-horizontal-25 padding-bottom-25 padding-top-10 margin-bottom-0"></ul>
+					</div>
+				</div>
+			
+                <div class="c-drawer">
+                    <button aria-controls="ProductsOfficeFAQDrawersPanel8" class="c-glyph">
+                        <span class="c-paragraph-2 padding-top-0">资格要求是什么？</span>
+                    </button>
+                    <div id="ProductsOfficeFAQDrawersPanel8" class="c-drawer-panel ">
+						
+						<ul class="c-list c-paragraph-2 padding-horizontal-25 padding-bottom-25 padding-top-10 margin-bottom-0">
+							<li>拥有学校提供、可接收外部电子邮件的学校电子邮件地址（例如 contoso.edu）。</li>
+						
+							<li>达到法定年龄，个人可注册在线产品。</li>
+						
+							<li>可以访问互联网。</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div><div data-grid="container" class="margin-top-84">
+	<hr class="c-divider  ">
+</div><div data-grid="container">
+<section class="margin-vertical-48 x-type-center" aria-label="更多资源。">
+        <ul class="five-up-list">
+            <li>
+                <svg focusable="false" class="preFooterSVGIcons">
+                    <path d="M5,21.296v-2.469h10v2.469H5z M7.5,26.235v-2.469H15v2.469H7.5z M10,31.173v-2.469h5v2.469H10z M17.5,13.889 H45v22.222H17.5V13.889z M42.5,33.642V16.358H20v17.284H42.5z M40,18.827v2.469H22.5v-2.469H40z M30,23.765v2.469h-7.5v-2.469H30 z M30,28.704v2.469h-7.5v-2.469H30z M32.5,31.173v-7.407H40v7.407H32.5z M35,26.235v2.469h2.5v-2.469H35z"></path>
+                </svg>
+                <div>
+                    <a id="CommonControl-ITDM-Footer-WhatsNew" href="https://educationblog.microsoft.com/" aria-label="访问 Microsoft 教育博客。" class="c-hyperlink" target="_blank">
+                        <span>博客</span>
+                    </a>
+                </div>
+            </li>
+            <li>
+                <svg focusable="false" class="preFooterSVGIcons">
+                    <path d="M31.003,14.062l9.497,9.383V42.5H18.357v-6.563H9.5V7.5h12.646l6.642,6.562H31.003z M11.715,33.75h6.642 V14.062h7.283l-4.429-4.375h-9.497V33.75z M20.572,40.313h17.714V25h-8.857v-8.75h-8.857V40.313z M31.643,17.805v5.007h5.069 L31.643,17.805z"></path>
+                </svg>
+                <div>
+                    <a id="CommonControl-ITDM-Footer-SchoolStories" href="/zh-cn/education/stories/default.aspx" aria-label="阅读学校领导案例研究，了解更多信息。" class="c-hyperlink" target="_self">
+                        <span>学校事迹</span>
+                    </a>
+                </div>
+            </li>
+            <li>
+                <svg focusable="false" class="preFooterSVGIcons">
+                    <path d="M39,7.5v35H15.308c-0.595,0-1.153-0.114-1.674-0.342c-0.522-0.228-0.979-0.541-1.371-0.94 c-0.393-0.399-0.701-0.863-0.925-1.393c-0.224-0.53-0.337-1.097-0.337-1.7v-26.25c0-0.558,0.121-1.102,0.362-1.632 c0.241-0.53,0.561-0.997,0.959-1.401s0.855-0.729,1.371-0.974C14.208,7.622,14.747,7.5,15.308,7.5H39z M13.154,34.331 c0.673-0.387,1.391-0.581,2.154-0.581h21.538V9.688H15.308c-0.258,0-0.516,0.066-0.774,0.197s-0.488,0.299-0.69,0.504 s-0.367,0.439-0.496,0.701s-0.194,0.524-0.194,0.786V34.331z M36.846,35.938H15.308c-0.303,0-0.583,0.057-0.841,0.171 s-0.485,0.271-0.681,0.47s-0.351,0.43-0.463,0.692c-0.112,0.262-0.168,0.547-0.168,0.854s0.056,0.592,0.168,0.854 c0.112,0.262,0.266,0.493,0.463,0.692s0.423,0.356,0.681,0.47s0.538,0.171,0.841,0.171h21.538V35.938z M17.462,14.062h15.077 v6.562H17.462V14.062z M19.615,18.438h10.769V16.25H19.615V18.438z"></path>
+                </svg>
+                <div>
+                    <a id="CommonControl-ITDM-Footer-MicrosoftEducatorCommunity" href="https://education.microsoft.com/" aria-label="加入微軟教育中心。" class="c-hyperlink" target="_blank">
+                        <span>Microsoft 教育中心</span>
+                    </a>
+                </div>
+            </li>
+            <li data-hide="false">
+                <svg focusable="false" class="preFooterSVGIcons">
+                    <path d="M34.112,28.731a4.993,4.993,0,0,0-1.1.65,6.515,6.515,0,0,0-.9.853q-0.4.466-.791,0.853a5.167,5.167,0,0,1-.782.65,1.508,1.508,0,0,1-.853.264,1.557,1.557,0,0,1-1.143-.475L18.863,21.84a1.557,1.557,0,0,1-.475-1.143,1.508,1.508,0,0,1,.264-0.853,5.167,5.167,0,0,1,.65-0.782q0.386-.387.853-0.791a6.508,6.508,0,0,0,.853-0.9,4.993,4.993,0,0,0,.65-1.1,3.43,3.43,0,0,0,.264-1.38,3.9,3.9,0,0,0-.29-1.485,3.778,3.778,0,0,0-.835-1.257L16.929,8.287a3.9,3.9,0,0,0-1.257-.844,3.863,3.863,0,0,0-2.979,0,3.92,3.92,0,0,0-1.248.844q-1.02,1-1.8,1.819a9.794,9.794,0,0,0-1.318,1.705,7.206,7.206,0,0,0-.809,1.951,10.5,10.5,0,0,0-.272,2.575,15.75,15.75,0,0,0,.668,4.43,25.214,25.214,0,0,0,1.863,4.579,32.75,32.75,0,0,0,2.848,4.5,39.963,39.963,0,0,0,3.612,4.184A38.975,38.975,0,0,0,20.4,37.678a33.05,33.05,0,0,0,4.5,2.883,25.061,25.061,0,0,0,4.614,1.9,15.9,15.9,0,0,0,4.518.686,10.609,10.609,0,0,0,2.584-.272,7.054,7.054,0,0,0,1.951-.809,10.254,10.254,0,0,0,1.705-1.318q0.826-.782,1.828-1.8a3.776,3.776,0,0,0,.835-1.257,3.949,3.949,0,0,0,0-2.971,3.779,3.779,0,0,0-.835-1.257l-3.867-3.867a3.778,3.778,0,0,0-1.257-.835,3.9,3.9,0,0,0-1.485-.29A3.43,3.43,0,0,0,34.112,28.731Zm-4.043,11.54a22.646,22.646,0,0,1-4.148-1.74,31.82,31.82,0,0,1-4.113-2.646,37.763,37.763,0,0,1-3.858-3.34A36.66,36.66,0,0,1,14.574,28.7a31.84,31.84,0,0,1-2.681-4.122A22.833,22.833,0,0,1,10.118,20.4a13.811,13.811,0,0,1-.642-4.061,7.951,7.951,0,0,1,.237-2.1,5.188,5.188,0,0,1,.7-1.538,8.947,8.947,0,0,1,1.125-1.336q0.659-.65,1.5-1.494a1.557,1.557,0,0,1,1.143-.475,1.531,1.531,0,0,1,.747.255,6.615,6.615,0,0,1,.905.659q0.475,0.4.976,0.905T17.764,12.2q0.448,0.484.826,0.9T19.2,13.737a1.578,1.578,0,0,1,.475,1.16,1.467,1.467,0,0,1-.264.844,5.424,5.424,0,0,1-.65.773q-0.387.387-.853,0.8a6.932,6.932,0,0,0-.853.905,4.987,4.987,0,0,0-.65,1.1,3.43,3.43,0,0,0-.264,1.38,3.9,3.9,0,0,0,.29,1.485,3.771,3.771,0,0,0,.835,1.257l9.686,9.686a3.771,3.771,0,0,0,1.257.835,3.9,3.9,0,0,0,1.485.29,3.43,3.43,0,0,0,1.38-.264,4.987,4.987,0,0,0,1.1-.65,6.932,6.932,0,0,0,.905-0.852q0.413-.466.8-0.853a5.424,5.424,0,0,1,.773-0.65,1.467,1.467,0,0,1,.844-0.264,1.578,1.578,0,0,1,1.16.475q0.228,0.229.642,0.606t0.9,0.826q0.483,0.448.984,0.949t0.905,0.976a6.608,6.608,0,0,1,.659.905,1.531,1.531,0,0,1,.255.747,1.557,1.557,0,0,1-.475,1.143q-0.844.844-1.494,1.512a7.938,7.938,0,0,1-1.336,1.116,5.469,5.469,0,0,1-1.538.686,8.031,8.031,0,0,1-2.118.237A13.691,13.691,0,0,1,30.069,40.271Z"></path>
+                </svg>
+                <div>
+                    <a id="CommonControl-ITDM-Footer-ContactSales" href="https://www.microsoft.com/zh-cn/solution-providers
+" aria-label="点击此链接，查找 Microsoft 合作伙伴。" class="c-hyperlink" target="">
+                        <span>查找合作伙伴
+</span>
+                    </a>
+                </div>
+            </li>
+            <li>
+                <svg focusable="false" class="preFooterSVGIcons">
+                    <path d="M36.4,22.667c-0.338,0-0.65,0.061-0.938,0.182c-0.288,0.122-0.541,0.289-0.759,0.501 c-0.219,0.213-0.391,0.459-0.516,0.738C34.062,24.368,34,24.672,34,25s0.062,0.632,0.188,0.911 c0.125,0.28,0.297,0.526,0.516,0.738c0.219,0.213,0.472,0.38,0.759,0.501c0.287,0.122,0.6,0.182,0.938,0.182H40v9.333h-7.2v1.167 c0,0.644-0.125,1.249-0.375,1.814c-0.25,0.565-0.594,1.06-1.031,1.486s-0.947,0.76-1.528,1.003 C29.284,42.378,28.663,42.5,28,42.5s-1.284-0.122-1.866-0.365c-0.581-0.243-1.091-0.577-1.528-1.003s-0.781-0.921-1.031-1.486 c-0.25-0.565-0.375-1.17-0.375-1.814v-1.167H16v-7h-1.2c-0.663,0-1.284-0.122-1.866-0.365s-1.091-0.577-1.528-1.003 c-0.438-0.425-0.781-0.921-1.031-1.486C10.125,26.249,10,25.644,10,25s0.125-1.249,0.375-1.814 c0.25-0.565,0.594-1.06,1.031-1.486c0.438-0.425,0.947-0.76,1.528-1.003s1.203-0.365,1.866-0.365H16v-7h7.2v-1.167 c0-0.644,0.125-1.249,0.375-1.814c0.25-0.565,0.594-1.06,1.031-1.486s0.947-0.76,1.528-1.003C26.716,7.622,27.337,7.5,28,7.5 s1.284,0.122,1.866,0.365c0.581,0.243,1.091,0.577,1.528,1.003s0.781,0.921,1.031,1.486c0.25,0.565,0.375,1.17,0.375,1.814v1.167 H40v9.333H36.4z M36.4,29.667c-0.663,0-1.284-0.122-1.866-0.365s-1.091-0.577-1.528-1.003c-0.438-0.425-0.781-0.921-1.031-1.486 C31.725,26.249,31.6,25.644,31.6,25s0.125-1.249,0.375-1.814c0.25-0.565,0.594-1.06,1.031-1.486 c0.438-0.425,0.947-0.76,1.528-1.003s1.203-0.365,1.866-0.365h1.2v-4.667h-7.2v-3.5c0-0.328-0.062-0.632-0.188-0.911 c-0.125-0.28-0.297-0.526-0.516-0.738c-0.219-0.213-0.472-0.38-0.759-0.501S28.337,9.833,28,9.833s-0.65,0.061-0.938,0.182 s-0.541,0.289-0.759,0.501c-0.219,0.213-0.391,0.459-0.516,0.738c-0.125,0.28-0.188,0.583-0.188,0.911v3.5h-7.2v7h-3.6 c-0.338,0-0.65,0.061-0.938,0.182c-0.288,0.122-0.541,0.289-0.759,0.501c-0.219,0.213-0.391,0.459-0.516,0.738 C12.462,24.368,12.4,24.672,12.4,25s0.062,0.632,0.188,0.911c0.125,0.28,0.297,0.526,0.516,0.738 c0.219,0.213,0.472,0.38,0.759,0.501c0.287,0.122,0.6,0.182,0.938,0.182h3.6v7h7.2v3.5c0,0.328,0.062,0.632,0.188,0.911 s0.297,0.526,0.516,0.738s0.472,0.38,0.759,0.501s0.6,0.182,0.938,0.182s0.65-0.061,0.938-0.182s0.541-0.289,0.759-0.501 s0.391-0.459,0.516-0.738s0.188-0.583,0.188-0.911v-3.5h7.2v-4.667H36.4z"></path>
+                </svg>
+                <div>
+                    <a id="CommonControl-ITDM-Footer-Resources" href="/zh-cn/education/school-leaders/resource-center/default.aspx" aria-label="探索 Microsoft 教育面向学校领导的资源。" class="c-hyperlink" target="_self">
+                        <span>资源</span>
+                    </a>
+                </div>
+            </li>
+        </ul>
+    </section>
+</div><div data-grid="container" class="margin-bottom-84">
+	<hr class="c-divider  ">
+</div>
+
+<!-- Need to check for cookie comliance and init any videos that are on the page -->
+
+        
+    </main>
+    <div id="usFooter">
+    <section role="region" aria-label="Social media links.">
+        <div id="SocialFooterUS" class="margin-vertical-12" data-grid="container">
+            <div data-grid="col-12 pad-12x">
+                <div data-grid="col-6">
+                    <div class="float-left">
+                        <span class="c-paragraph-3 ">关注此页面</span>
+                    </div>
+                    <div class="float-left">
+                        <ul>
+                            <li>
+                                <a href="https://www.facebook.com/microsoftineducation" target="_blank" aria-label="关注 Microsoft 教育 Facebook 页面。">
+                                    <svg viewbox="0 0 32 32">
+                                        <path id="Facebook" data-name="facebook icon" class="ShareDark" d="M13.375,9.261v3.028H11v3.7h2.378V27H18.26V15.994h3.278s0.307-1.776.457-3.718H18.279V9.743a1.124,1.124,
+                                    0,0,1,1.059-.887H22V5H18.38c-5.125,0-5.005,3.707-5.005,4.261h0Zm0,0"></path>
+                                    </svg>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://twitter.com/MicrosoftEDU/" target="_blank" aria-label="关注 Microsoft 教育 Twitter 页面。">
+                                    <svg viewbox="0 0 32 32">
+                                        <path id="Twitter" data-name="twitter icon" class="ShareDark" d="M29,8.367a9.653,9.653,0,0,1-2.828.8,5.044,5.044,0,0,0,2.165-2.793A9.709,9.709,0,0,1,25.21,
+                                    7.594,4.862,4.862,0,0,0,21.616,6a4.988,4.988,0,0,0-4.924,5.049A5.187,5.187,0,0,0,16.82,12.2,
+                                    13.867,13.867,0,0,1,6.671,6.924a5.14,5.14,0,0,0,1.524,6.741,4.81,4.81,0,0,1-2.23-.632c0,0.021,
+                                    0,.042,0,0.064a5.022,5.022,0,0,0,3.95,4.951,4.812,4.812,0,0,1-2.224.087,4.947,4.947,0,0,0,4.6,
+                                    3.506A9.738,9.738,0,0,1,5,23.732,13.686,13.686,0,0,0,12.548,26c9.057,0,14.01-7.694,
+                                    14.01-14.366q0-.328-0.014-0.653A10.151,10.151,0,0,0,29,8.367Z"></path>
+                                    </svg>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://www.instagram.com/microsoftedu/" target="_blank" aria-label="关注 Microsoft 教育 Instagram。">
+                                    <svg viewbox="0 0 32 32">
+                                        <path id="Instagram" data-name="instagram icon" class="ShareDark" d="M16,6.162c3.2,0,3.584.012,4.849,0.07a6.64,6.64,0,0,1,2.228.413,3.973,3.973,0,0,1,2.278,
+                                    2.277,6.638,6.638,0,0,1,.413,2.228c0.058,1.265.07,1.645,0.07,4.849s-0.012,3.584-.07,4.849a6.639,
+                                    6.639,0,0,1-.413,2.228,3.974,3.974,0,0,1-2.277,2.277,6.64,6.64,0,0,1-2.228.413c-1.265.058-1.645,
+                                    0.07-4.849,0.07s-3.584-.012-4.849-0.07a6.641,6.641,0,0,1-2.228-.413,3.975,3.975,0,0,1-2.277-2.277,
+                                    6.642,6.642,0,0,1-.413-2.228C6.174,19.584,6.162,19.2,6.162,16s0.012-3.584.07-4.849a6.641,6.641,
+                                    0,0,1,.413-2.228A3.974,3.974,0,0,1,8.923,6.645a6.641,6.641,0,0,1,2.228-.413C12.416,6.174,12.8,
+                                    6.162,16,6.162M16,4c-3.259,0-3.668.014-4.948,0.072A8.807,8.807,0,0,0,8.14,4.63,6.137,6.137,0,
+                                    0,0,4.63,8.14a8.81,8.81,0,0,0-.558,2.913C4.014,12.332,4,12.741,4,16s0.014,3.668.072,4.948A8.81,
+                                    8.81,0,0,0,4.63,23.86a6.136,6.136,0,0,0,3.51,3.51,8.807,8.807,0,0,0,2.913.558C12.332,27.986,
+                                    12.741,28,16,28s3.668-.014,4.948-0.072a8.807,8.807,0,0,0,2.913-.558,6.135,6.135,0,0,0,3.51-3.51,
+                                    8.806,8.806,0,0,0,.558-2.913C27.986,19.668,28,19.259,28,16s-0.014-3.668-.072-4.948A8.807,8.807,
+                                    0,0,0,27.37,8.14a6.136,6.136,0,0,0-3.51-3.51,8.807,8.807,0,0,0-2.913-.558C19.668,4.014,19.259,
+                                    4,16,4h0Zm0,5.838A6.162,6.162,0,1,0,22.162,16,6.162,6.162,0,0,0,16,9.838ZM16,20a4,4,0,1,1,4-4A4,
+                                    4,0,0,1,16,20ZM22.406,8.154a1.44,1.44,0,1,0,1.44,1.44A1.44,1.44,0,0,0,22.406,8.154Z"></path>
+                                    </svg>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://www.linkedin.com/showcase/microsoft-in-education" target="_blank" aria-label="关注 Microsoft 教育 LinkedIn 页面。">
+                                    <svg viewbox="0 0 32 32">
+                                        <g id="linkedin_icon" data-name="linkedin icon">
+                                            <path id="backing" class="ShareDark" d="M5.778,4H26.23A1.77,1.77,0,0,1,28,5.77V26.23A1.77,1.77,0,0,1,26.23,28H5.778A1.778,1.778,0,0,
+                                        1,4,26.222V5.778A1.778,1.778,0,0,1,5.778,4Z"></path>
+                                            <path id="in" class="ShareLight" d="M10.815,24.636H7.221V13.068h3.593V24.636Zm-1.8-13.15A2.085,2.085,0,1,1,11.1,9.4,2.082,2.082,
+                                        0,0,1,9.019,11.486ZM24.258,24.636H20.672V19.011c0-1.341-.026-3.068-1.865-3.068-1.869,0-2.154,
+                                        1.461-2.154,2.97v5.723H13.067V13.068h3.441v1.58h0.049a3.77,3.77,0,0,1,3.4-1.869c3.632,0,4.3,
+                                        2.4,4.3,5.511v6.345Z"></path>
+                                        </g>
+                                    </svg>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://www.pinterest.com/microsoftedu/" target="_blank" aria-label="关注 Microsoft 教育 Pintrest 页面。">
+                                    <svg viewbox="0 0 32 32">
+                                        <g id="pinterest_icon" data-name="pinterest icon">
+                                            <circle class="ShareDark" cx="16" id="BackCircle" r="14" cy="16"></circle>
+                                            <path id="p" class="cls-1 ShareLight" d="M17.178,20.97a4.711,4.711,0,0,1-2.326-1.111c-0.455,2.4-1.01,4.692-2.656,5.891-0.509-3.62.746-6.34,
+                                        1.328-9.226-0.993-1.678.119-5.057,2.214-4.224,2.578,1.024-2.232,6.241,1,6.892,3.371,0.68,4.747-5.873,
+                                        2.657-8-3.02-3.077-8.792-.07-8.082,4.335,0.173,1.077,1.281,1.4.443,2.89-1.933-.43-2.51-1.961-2.436-4a6.519,
+                                        6.519,0,0,1,5.868-6c3.641-.409,7.058,1.342,7.529,4.78,0.531,3.88-1.644,8.083-5.536,7.781h0Z"></path>
+                                        </g>
+                                    </svg>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div data-grid="col-6" class="right-align">
+                    <div class="ShareTextFloat">
+                        <span class="c-paragraph-3 ">
+                           分享此页面
+                        </span>
+                    </div>
+                    <div class="shareListFloat">
+                        <ul>
+                            <li>
+                                <a aria-label="在Facebook上分享此页面。" class="btnShare" id="ShareFB" href="https://www.facebook.com/sharer/sharer.php?u=" onclick="window.open(this.getAttribute('data-href'),'sharer','toolbar=0,status=0,resizable=yes,width=955,height=442');return false;" data-href="https://www.facebook.com/sharer/sharer.php?u=//en-us/education">
+                                    <svg viewbox="0 0 32 32">
+                                        <path class="ShareDark" data-name="facebook icon" d="M13.375,9.261v3.028H11v3.7h2.378V27H18.26V15.994h3.278s0.307-1.776.457-3.718H18.279V9.743a1.124,1.124,
+                            0,0,1,1.059-.887H22V5H18.38c-5.125,0-5.005,3.707-5.005,4.261h0Zm0,0" id="FacebookShare"></path>
+                                    </svg>
+                                </a>
+                            </li>
+                            <li>
+                                <a aria-label="在 Twitter 上分享此页面。" class="" id="ShareTwitter" href="javascript:void(0)" onclick="window.open(this.getAttribute('data-href'),'sharer','toolbar=0,status=0,resizable=yes,width=955,height=442');return false;" data-href="http://twitter.com/share?url=//en-us/education&amp;text=Empowering students of today to create the world of tomorrow. Find affordable education technology and resources for your school and students. @MicrosoftEDU">
+                                    <svg viewbox="0 0 32 32">
+                                        <path id="TwitterShare" data-name="twitter icon" class="ShareDark" d="M29,8.367a9.653,9.653,0,0,1-2.828.8,5.044,5.044,0,0,0,2.165-2.793A9.709,9.709,0,0,1,25.21,
+                            7.594,4.862,4.862,0,0,0,21.616,6a4.988,4.988,0,0,0-4.924,5.049A5.187,5.187,0,0,0,16.82,12.2,
+                            13.867,13.867,0,0,1,6.671,6.924a5.14,5.14,0,0,0,1.524,6.741,4.81,4.81,0,0,1-2.23-.632c0,0.021,
+                            0,.042,0,0.064a5.022,5.022,0,0,0,3.95,4.951,4.812,4.812,0,0,1-2.224.087,4.947,4.947,0,0,0,4.6,
+                            3.506A9.738,9.738,0,0,1,5,23.732,13.686,13.686,0,0,0,12.548,26c9.057,0,14.01-7.694,
+                            14.01-14.366q0-.328-0.014-0.653A10.151,10.151,0,0,0,29,8.367Z"></path>
+                                    </svg>
+                                </a>
+                            </li>
+                            <li>
+                                <a aria-label="在 LinkedIn 上分享此页面。" class="" id="ShareLinkedIn" href="javascript:void(0)" onclick="window.open(this.getAttribute('data-href'),'sharer','toolbar=0,status=0,resizable=yes,width=955,height=442');return false;" data-href="https://www.linkedin.com/shareArticle?mini=true&url=//en-us/education">
+                                    <svg viewbox="0 0 32 32">
+                                        <g data-name="linkedin icon">
+                                            <path id="backingShare" class="ShareDark" d="M5.778,4H26.23A1.77,1.77,0,0,1,28,5.77V26.23A1.77,1.77,0,0,1,26.23,28H5.778A1.778,1.778,0,0,
+                                1,4,26.222V5.778A1.778,1.778,0,0,1,5.778,4Z"></path>
+                                            <path d="M10.815,24.636H7.221V13.068h3.593V24.636Zm-1.8-13.15A2.085,2.085,0,1,1,11.1,9.4,2.082,2.082,
+                                0,0,1,9.019,11.486ZM24.258,24.636H20.672V19.011c0-1.341-.026-3.068-1.865-3.068-1.869,0-2.154,
+                                1.461-2.154,2.97v5.723H13.067V13.068h3.441v1.58h0.049a3.77,3.77,0,0,1,3.4-1.869c3.632,0,4.3,
+                                2.4,4.3,5.511v6.345Z" id="inShare" class="ShareLight"></path>
+                                        </g>
+                                    </svg>
+                                </a>
+                            </li>
+                            <li>
+                                <a aria-label="在 Pintrest 上分享此页面。" class="" id="SharePintrest" href="javascript:void(0)" onclick="window.open(this.getAttribute('data-href'),'sharer','toolbar=0,status=0,resizable=yes,width=955,height=442');return false;" data-href="https://www.pinterest.com/pin/create/button/?url=//en-us/education&media=https://msfteducortexone.azureedge.net/assets/mobile-480x373-students-above-touchscreen/1/1/mobile-480x373-students-above-touchscreen-en-US.jpg&description=Empowering students of today to create the world of tomorrow. Find affordable education technology and resources for your school and students." data-pin-custom="true">
+                                    <svg viewbox="0 0 32 32">
+                                        <g id="PinterestShare" data-name="pinterest icon">
+                                            <circle id="BackCircleShare" class="ShareDark" cx="16" cy="16" r="14"></circle>
+                                            <path id="PShare" class="cls-1 ShareLight" d="M17.178,20.97a4.711,4.711,0,0,1-2.326-1.111c-0.455,2.4-1.01,4.692-2.656,5.891-0.509-3.62.746-6.34,
+                                1.328-9.226-0.993-1.678.119-5.057,2.214-4.224,2.578,1.024-2.232,6.241,1,6.892,3.371,0.68,4.747-5.873,
+                                2.657-8-3.02-3.077-8.792-.07-8.082,4.335,0.173,1.077,1.281,1.4.443,2.89-1.933-.43-2.51-1.961-2.436-4a6.519,
+                                6.519,0,0,1,5.868-6c3.641-.409,7.058,1.342,7.529,4.78,0.531,3.88-1.644,8.083-5.536,7.781h0Z"></path>
+                                        </g>
+                                    </svg>
+                                </a>
+                            </li>
+                        </ul>
+                        <div class="chatContainer">
+                            <div class="icon-customLink-sign" data-lpc="0" id="lpChatButton"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
+        <div id="footerArea" class="uhf"  data-m='{"cN":"footerArea","cT":"Area_coreuiArea","id":"a2Body","sN":2,"aN":"Body"}'>
+                <div id="footerRegion"     data-region-key="footerregion" data-m='{"cN":"footerRegion","cT":"Region_coreui-region","id":"r1a2","sN":1,"aN":"a2"}' >
+
+    <div  id="footerUniversalFooter" data-m='{"cN":"footerUniversalFooter","cT":"Module_coreui-universalfooter","id":"m1r1a2","sN":1,"aN":"r1a2"}'  data-module-id="Category|footerRegion|coreui-region|footerUniversalFooter|coreui-universalfooter">
+        
+
+
+
+<footer id="uhf-footer" class="c-uhff context-uhf"  data-uhf-mscc-rq="false" data-footer-footprint="/epgeam/epgeamfooter_edu, fromService: True" data-m='{"cN":"Uhf footer_cont","cT":"Container","id":"c1m1r1a2","sN":1,"aN":"m1r1a2"}'>
+        <nav class="c-uhff-nav" aria-label="页脚资源链接" data-m='{"cN":"Footer nav_cont","cT":"Container","id":"c1c1m1r1a2","sN":1,"aN":"c1m1r1a2"}'>
+            
+                <div class="c-uhff-nav-row">
+                    <div class="c-uhff-nav-group" data-m='{"cN":"footerNavColumn1_cont","cT":"Container","id":"c1c1c1m1r1a2","sN":1,"aN":"c1c1m1r1a2"}'>
+                        <div class="c-heading-4" role="heading" aria-level="4">新增内容</div>
+                        <ul class="c-list f-bare">
+                            <li>
+                                <a aria-label="Microsoft 365 新增内容" class="c-uhff-link" href="https://www.microsoft.com/microsoft-365" data-m='{"cN":"Whatsnew_Microsoft365_nav","id":"n1c1c1c1m1r1a2","sN":1,"aN":"c1c1c1m1r1a2"}'>Microsoft 365</a>
+                            </li>
+                            <li>
+                                <a aria-label="Surface Pro 6 新增内容" class="c-uhff-link" href="https://www.microsoft.com/zh-cn/surface/devices/surface-pro-6" data-m='{"cN":"Footer_WhatsNew_NewSurfacePro6_nav","id":"n2c1c1c1m1r1a2","sN":2,"aN":"c1c1c1m1r1a2"}'>Surface Pro 6</a>
+                            </li>
+                            <li>
+                                <a aria-label="Surface Laptop 2 新增内容" class="c-uhff-link" href="https://www.microsoft.com/zh-cn/surface/devices/surface-laptop-2" data-m='{"cN":"Footer_WhatsNew_SurfaceLaptop2_nav","id":"n3c1c1c1m1r1a2","sN":3,"aN":"c1c1c1m1r1a2"}'>Surface Laptop 2</a>
+                            </li>
+                            <li>
+                                <a aria-label="Surface Go 新增内容" class="c-uhff-link" href="https://www.microsoft.com/zh-cn/surface/devices/surface-go" data-m='{"cN":"Footer_WhatsNew_SurfaceGo_nav","id":"n4c1c1c1m1r1a2","sN":4,"aN":"c1c1c1m1r1a2"}'>Surface Go</a>
+                            </li>
+                            <li>
+                                <a aria-label="Windows 10 应用程序 新增内容" class="c-uhff-link" href="https://www.microsoft.com/zh-cn/windows/windows-10-apps" data-m='{"cN":"Footer_WhatsNew_Windows_10_apps_nav","id":"n5c1c1c1m1r1a2","sN":5,"aN":"c1c1c1m1r1a2"}'>Windows 10 应用程序</a>
+                            </li>
+
+                        </ul>
+                        
+                    </div>
+                    <div class="c-uhff-nav-group" data-m='{"cN":"footerNavColumn2_cont","cT":"Container","id":"c2c1c1m1r1a2","sN":2,"aN":"c1c1m1r1a2"}'>
+                        <div class="c-heading-4" role="heading" aria-level="4">Microsoft Store</div>
+                        <ul class="c-list f-bare">
+                            <li>
+                                <a aria-label="帐户个人资料 Microsoft Store" class="c-uhff-link" href="https://account.microsoft.com/" data-m='{"cN":"Footer_StoreandSupport_AccountProfile_nav","id":"n1c2c1c1m1r1a2","sN":1,"aN":"c2c1c1m1r1a2"}'>帐户个人资料</a>
+                            </li>
+                            <li>
+                                <a aria-label="下载中心 Microsoft Store" class="c-uhff-link" href="https://www.microsoft.com/zh-cn/download" data-m='{"cN":"Footer_StoreandSupport_DownloadCenter_nav","id":"n2c2c1c1m1r1a2","sN":2,"aN":"c2c1c1m1r1a2"}'>下载中心</a>
+                            </li>
+                            <li>
+                                <a aria-label="订单跟踪 Microsoft Store" class="c-uhff-link" href="https://account.microsoft.com/orders" data-m='{"cN":"Footer_StoreandSupport_OrderTracking_nav","id":"n3c2c1c1m1r1a2","sN":3,"aN":"c2c1c1m1r1a2"}'>订单跟踪</a>
+                            </li>
+
+                        </ul>
+                        
+                    </div>
+                    <div class="c-uhff-nav-group" data-m='{"cN":"footerNavColumn3_cont","cT":"Container","id":"c3c1c1m1r1a2","sN":3,"aN":"c1c1m1r1a2"}'>
+                        <div class="c-heading-4" role="heading" aria-level="4">教育</div>
+                        <ul class="c-list f-bare">
+                            <li>
+                                <a aria-label="Microsoft 教育领域 教育" class="c-uhff-link" href="https://www.microsoft.com/zh-cn/education" data-m='{"cN":"Footer_Education_MicrosoftInEducation_nav","id":"n1c3c1c1m1r1a2","sN":1,"aN":"c3c1c1m1r1a2"}'>Microsoft 教育领域</a>
+                            </li>
+                            <li>
+                                <a aria-label="适合学生的 Office 教育" class="c-uhff-link" href="https://www.microsoft.com/zh-cn/education/products/office/default.aspx" data-m='{"cN":"Footer_Education_OfficeForStudents_nav","id":"n2c3c1c1m1r1a2","sN":2,"aN":"c3c1c1m1r1a2"}'>适合学生的 Office</a>
+                            </li>
+                            <li>
+                                <a aria-label="适用于学校的 Office 365 教育" class="c-uhff-link" href="https://products.office.com/zh-cn/academic/compare-office-365-education-plans" data-m='{"cN":"Footer_Education_Office365ForSchools_nav","id":"n3c3c1c1m1r1a2","sN":3,"aN":"c3c1c1m1r1a2"}'>适用于学校的 Office 365</a>
+                            </li>
+                            <li>
+                                <a aria-label="Microsoft Azure 教育领域 教育" class="c-uhff-link" href="https://azure.microsoft.com/zh-cn/community/education/" data-m='{"cN":"Footer_MicrosoftAzureInEducation_nav","id":"n4c3c1c1m1r1a2","sN":4,"aN":"c3c1c1m1r1a2"}'>Microsoft Azure 教育领域</a>
+                            </li>
+
+                        </ul>
+                        
+                    </div>
+                </div>
+                <div class="c-uhff-nav-row">
+                    <div class="c-uhff-nav-group" data-m='{"cN":"footerNavColumn4_cont","cT":"Container","id":"c4c1c1m1r1a2","sN":4,"aN":"c1c1m1r1a2"}'>
+                        <div class="c-heading-4" role="heading" aria-level="4">企业</div>
+                        <ul class="c-list f-bare">
+                            <li>
+                                <a aria-label="Azure 企业" class="c-uhff-link" href="https://azure.microsoft.com/" data-m='{"cN":"Footer_Enterprise_MicrosoftAzure_nav","id":"n1c4c1c1m1r1a2","sN":1,"aN":"c4c1c1m1r1a2"}'>Azure</a>
+                            </li>
+                            <li>
+                                <a aria-label="AppSource 企业" class="c-uhff-link" href="https://go.microsoft.com/fwlink/?LinkID=808093" data-m='{"cN":"Footer_Enterprise_MicrosoftAppSource_nav","id":"n2c4c1c1m1r1a2","sN":2,"aN":"c4c1c1m1r1a2"}'>AppSource</a>
+                            </li>
+                            <li>
+                                <a aria-label="汽车 企业" class="c-uhff-link" href="https://www.microsoft.com/enterprise/automotive" data-m='{"cN":"Footer_Enterprise_Automotive_nav","id":"n3c4c1c1m1r1a2","sN":3,"aN":"c4c1c1m1r1a2"}'>汽车</a>
+                            </li>
+                            <li>
+                                <a aria-label="政府机构 企业" class="c-uhff-link" href="https://www.microsoft.com/enterprise/government" data-m='{"cN":"Footer_Enterprise_Government_nav","id":"n4c4c1c1m1r1a2","sN":4,"aN":"c4c1c1m1r1a2"}'>政府机构</a>
+                            </li>
+                            <li>
+                                <a aria-label="医疗保健 企业" class="c-uhff-link" href="https://www.microsoft.com/enterprise/health" data-m='{"cN":"Footer_Enterprise_Health_nav","id":"n5c4c1c1m1r1a2","sN":5,"aN":"c4c1c1m1r1a2"}'>医疗保健</a>
+                            </li>
+                            <li>
+                                <a aria-label="制造业 企业" class="c-uhff-link" href="https://www.microsoft.com/enterprise/manufacturing" data-m='{"cN":"Footer_Enterprise_Manufacturing_nav","id":"n6c4c1c1m1r1a2","sN":6,"aN":"c4c1c1m1r1a2"}'>制造业</a>
+                            </li>
+                            <li>
+                                <a aria-label="金融服务 企业" class="c-uhff-link" href="https://www.microsoft.com/enterprise/financial-services/banking-and-capital-markets" data-m='{"cN":"Footer_Enterprise_FinanciaServices_nav","id":"n7c4c1c1m1r1a2","sN":7,"aN":"c4c1c1m1r1a2"}'>金融服务</a>
+                            </li>
+                            <li>
+                                <a aria-label="零售业 企业" class="c-uhff-link" href="https://www.microsoft.com/enterprise/retail-consumer-goods" data-m='{"cN":"Footer_Enterprise_Retail_nav","id":"n8c4c1c1m1r1a2","sN":8,"aN":"c4c1c1m1r1a2"}'>零售业</a>
+                            </li>
+
+                        </ul>
+                        
+                    </div>
+                    <div class="c-uhff-nav-group" data-m='{"cN":"footerNavColumn5_cont","cT":"Container","id":"c5c1c1m1r1a2","sN":5,"aN":"c1c1m1r1a2"}'>
+                        <div class="c-heading-4" role="heading" aria-level="4">开发人员</div>
+                        <ul class="c-list f-bare">
+                            <li>
+                                <a aria-label="Microsoft Visual Studio 开发人员" class="c-uhff-link" href="https://visualstudio.microsoft.com/" data-m='{"cN":"Footer_Developer_MicrosoftVisualStudio_nav","id":"n1c5c1c1m1r1a2","sN":1,"aN":"c5c1c1m1r1a2"}'>Microsoft Visual Studio</a>
+                            </li>
+                            <li>
+                                <a aria-label="Windows 开发人员中心 开发人员" class="c-uhff-link" href="https://developer.microsoft.com/zh-cn/windows" data-m='{"cN":"Footer_Developer_WindowsDevCenter_nav","id":"n2c5c1c1m1r1a2","sN":2,"aN":"c5c1c1m1r1a2"}'>Windows 开发人员中心</a>
+                            </li>
+                            <li>
+                                <a aria-label="开发人员中心 开发人员" class="c-uhff-link" href="https://developer.microsoft.com/" data-m='{"cN":"Footer_Developer_DeveloperCenter_nav","id":"n3c5c1c1m1r1a2","sN":3,"aN":"c5c1c1m1r1a2"}'>开发人员中心</a>
+                            </li>
+                            <li>
+                                <a aria-label="Microsoft 开发人员计划 开发人员" class="c-uhff-link" href="https://developer.microsoft.com/zh-cn/store/register" data-m='{"cN":"Footer_Developer_MicrosoftDeveloperProgram_nav","id":"n4c5c1c1m1r1a2","sN":4,"aN":"c5c1c1m1r1a2"}'>Microsoft 开发人员计划</a>
+                            </li>
+                            <li>
+                                <a aria-label="第9频道 开发人员" class="c-uhff-link" href="https://channel9.msdn.com/" data-m='{"cN":"Footer_Developer_Channel9_nav","id":"n5c5c1c1m1r1a2","sN":5,"aN":"c5c1c1m1r1a2"}'>第9频道</a>
+                            </li>
+                            <li>
+                                <a aria-label="Office 开发人员中心 开发人员" class="c-uhff-link" href="https://developer.microsoft.com/zh-cn/office" data-m='{"cN":"Footer_Developer_OfficeDevCenter_nav","id":"n6c5c1c1m1r1a2","sN":6,"aN":"c5c1c1m1r1a2"}'>Office 开发人员中心</a>
+                            </li>
+
+                        </ul>
+                        
+                    </div>
+                    <div class="c-uhff-nav-group" data-m='{"cN":"footerNavColumn6_cont","cT":"Container","id":"c6c1c1m1r1a2","sN":6,"aN":"c1c1m1r1a2"}'>
+                        <div class="c-heading-4" role="heading" aria-level="4">公司</div>
+                        <ul class="c-list f-bare">
+                            <li>
+                                <a aria-label="招贤纳士 公司" class="c-uhff-link" href="https://careers.microsoft.com/" data-m='{"cN":"Footer_Company_Careers_nav","id":"n1c6c1c1m1r1a2","sN":1,"aN":"c6c1c1m1r1a2"}'>招贤纳士</a>
+                            </li>
+                            <li>
+                                <a aria-label="关于 Microsoft 公司" class="c-uhff-link" href="https://www.microsoft.com/zh-cn/about" data-m='{"cN":"Footer_Company_AboutMicrosoft_nav","id":"n2c6c1c1m1r1a2","sN":2,"aN":"c6c1c1m1r1a2"}'>关于 Microsoft</a>
+                            </li>
+                            <li>
+                                <a aria-label="公司新闻 公司" class="c-uhff-link" href="https://news.microsoft.com/zh-cn" data-m='{"cN":"Footer_Company_CompanyNews_nav","id":"n3c6c1c1m1r1a2","sN":3,"aN":"c6c1c1m1r1a2"}'>公司新闻</a>
+                            </li>
+                            <li>
+                                <a aria-label="Microsoft 隐私 公司" class="c-uhff-link" href="https://privacy.microsoft.com/zh-cn" data-m='{"cN":"Footer_Company_PrivacyAtMicrosoft_nav","id":"n4c6c1c1m1r1a2","sN":4,"aN":"c6c1c1m1r1a2"}'>Microsoft 隐私</a>
+                            </li>
+                            <li>
+                                <a aria-label="投资人 公司" class="c-uhff-link" href="https://www.microsoft.com/investor/default.aspx" data-m='{"cN":"Footer_Company_Investors_nav","id":"n5c6c1c1m1r1a2","sN":5,"aN":"c6c1c1m1r1a2"}'>投资人</a>
+                            </li>
+                            <li>
+                                <a aria-label="安全性 公司" class="c-uhff-link" href="https://www.microsoft.com/zh-cn/security/default.aspx" data-m='{"cN":"Footer_Company_Security_nav","id":"n6c6c1c1m1r1a2","sN":6,"aN":"c6c1c1m1r1a2"}'>安全性</a>
+                            </li>
+
+                        </ul>
+                        
+                    </div>
+                </div>
+        </nav>
+    <div class="c-uhff-base">
+                <a id="locale-picker-link" aria-label="内容语言选择器。当前设置为 中文(中国)" class="c-uhff-link c-uhff-lang-selector c-glyph glyph-world" href="https://www.microsoft.com/zh-cn/education/locale.aspx" data-m='{"cN":"locale_picker(CN)_nav","id":"n7c1c1m1r1a2","sN":7,"aN":"c1c1m1r1a2"}'>中文(中国)</a>
+
+        <nav aria-label="Microsoft 企业链接">
+            <ul class="c-list f-bare" data-m='{"cN":"Corp links_cont","cT":"Container","id":"c8c1c1m1r1a2","sN":8,"aN":"c1c1m1r1a2"}'>
+                                <li  id="c-uhff-footer_contactus">
+                    <a class="c-uhff-link" href="https://support.microsoft.com/contactus/?ws=support" data-mscc-ic="false" data-m='{"cN":"Footer_ContactUs_nav","id":"n1c8c1c1m1r1a2","sN":1,"aN":"c8c1c1m1r1a2"}'>与我们联系</a>
+                </li>
+                <li  id="c-uhff-footer_privacyandcookies">
+                    <a class="c-uhff-link" href="https://go.microsoft.com/fwlink/?LinkId=248681" data-mscc-ic="false" data-m='{"cN":"Footer_PrivacyandCookies_nav","id":"n2c8c1c1m1r1a2","sN":2,"aN":"c8c1c1m1r1a2"}'>隐私</a>
+                </li>
+                <li class=" x-hidden" id="c-uhff-footer_managecookies">
+                    <a class="c-uhff-link" href="#" data-mscc-ic="false" data-m='{"cN":"Footer_ManageCookies_nav","id":"n3c8c1c1m1r1a2","sN":3,"aN":"c8c1c1m1r1a2"}'>管理 Cookie</a>
+                </li>
+                <li  id="c-uhff-footer_termsofuse">
+                    <a class="c-uhff-link" href="https://go.microsoft.com/fwlink/?LinkID=530144" data-mscc-ic="false" data-m='{"cN":"Footer_TermsOfUse_nav","id":"n4c8c1c1m1r1a2","sN":4,"aN":"c8c1c1m1r1a2"}'>使用条款</a>
+                </li>
+                <li  id="c-uhff-footer_trademarks">
+                    <a class="c-uhff-link" href="https://www.microsoft.com/trademarks" data-mscc-ic="false" data-m='{"cN":"Footer_Trademarks_nav","id":"n5c8c1c1m1r1a2","sN":5,"aN":"c8c1c1m1r1a2"}'>商标</a>
+                </li>
+                <li  id="c-uhff-footer_aboutourads">
+                    <a class="c-uhff-link" href="https://choice.microsoft.com/zh-cn" data-mscc-ic="false" data-m='{"cN":"Footer_AboutourAds_nav","id":"n6c8c1c1m1r1a2","sN":6,"aN":"c8c1c1m1r1a2"}'>关于我们的广告</a>
+                </li>
+
+                <li>&#169; Microsoft 2021</li>
+                
+            </ul>
+        </nav>
+    </div>
+    
+</footer>
+
+
+
+
+    </div>
+        </div>
+
+    </div>
+
+    
+
+    
+
+    <script>
+        mwf.ComponentFactory.create([
+            { 'component': mwf.SingleSlideCarousel },
+            { 'component': mwf.Pivot },
+            { 'component': mwf.Drawer },
+            { 'component': mwf.RefineMenu },
+            { 'component': mwf.ContentToggle },
+            { 'component': mwf.Select },
+            { 'component': mwf.MultiFeature },
+            { 'component': mwf.Dialog },
+            { 'component': mwf.Tooltip },
+            { 'component': mwf.MultiSlideCarousel }
+        ]);
+
+        window.onload = function() {
+            Cortex.Generic.calculateComponentLength();
+            Cortex.Generic.setLinkTargets();
+            Cortex.Generic.stripEmptyAttrs();
+            Cortex.Generic.fixFeatureBleed();
+            Cortex.Generic.multiFeatureHandler();
+            Cortex.Generic.navContentPlacementAccessibilityHandler();
+            Cortex.Components.OfficeSignup.Init("C1_officeSignUp_id");
+            Cortex.Components.HowToBuyModule.init();
+            Cortex.Generic.MultiSlideCarousel();
+            Cortex.Generic.tabbedFeatureHandler();
+            //Cortex.Generic.featureSwap();
+            Cortex.Generic.bettCampaignPopup();
+            Cortex.Components.TeamsDemoParser.Init();
+        };
+
+        $(window).resize(function() {
+            Cortex.Generic.fixFeatureBleed();
+        });
+
+        function launchImmersiveReader() {
+            var text = document.getElementById('txtImmersiveReader').value;
+            var content = {
+                title: "Immersive Reader",
+                chunks: [
+                    {
+                        content: text
+                    }
+                ]
+            };
+            var token = "0";
+            //If token is an empty field, fallback to One Note Learning Tools page
+            if (token !== "") {
+                ImmersiveReader.launchAsync(token, content, { uiZIndex: 1000000 });
+            } else if (token == "noToken") {
+                window.open('https://www.onenote.com/learningtools', '_blank');
+            }
+        }
+
+    </script>
+
+    </body>
+</html>

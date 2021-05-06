@@ -1,0 +1,1477 @@
+﻿
+
+
+
+
+<!DOCTYPE html>
+<html lang="zh-CN" dir="ltr" class="no-js">
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<meta name="format-detection" content="telephone=no">
+
+		<meta name="360-site-verification" content="6cc44c63f0485333da3d68c64f40327e" />
+		<meta name="baidu-site-verification" content="OEtL59dJdg" />
+		<meta name="google-site-verification" content="q0yvU7Q1ye3C9wA5xvqUMRWbCfwQgf3HF6zz9KWB5EQ" />
+		<meta name="msvalidate.01" content="807DB211F373FA8944F95197B4C49C4A" />
+		<meta name="yandex-verification" content="4b769cdaed4df4ab" />
+
+	
+
+
+
+	<meta property="og:image" content="//support.office.com/SocImages/SOC_SharingImage_720x405.png" />
+
+
+
+		<title>Microsoft 支持</title>
+	<link href="/SocContent/webfont.css" rel="stylesheet"/>
+
+	<link href="/SocContent/css?v=2eS0xWHCnh8ZTVf3yTPnMESVvXHGGElosLhiM3B3g0E1" rel="stylesheet"/>
+
+	<link href="/SocContent/officeShared?v=pXCK6YdlIR7DPKm1oRk3LJWRsgycljqNR9K62ztcd0U1" rel="stylesheet"/>
+
+
+	
+<link href="/SocContent/homepageCss?v=7Dsy4f3mGRvFSihHiStZl1t2aH0poFMV0ZmbY0YXCOY1" rel="stylesheet"/>
+<link href="/SocContent/articleCss?v=sBHIkwrrd6AtXOxhOaiy6odHCJo4H9pxv5VizY0mSzY1" rel="stylesheet"/>
+
+	
+		<title>Microsoft 支持</title>
+		<meta name="description" content="Microsoft 可在此处帮助提供产品，包括 Office、Windows、Surface 等。查找文章、视频、培训、教程等。" />
+		<link rel="canonical" href="https://support.microsoft.com/zh-cn" />
+
+
+<link href="/SocContent/topNavCss?v=142q2YZzkgVR4FG0mNHEs1KOAsXrRqswIn30r8JE_D81" rel="stylesheet"/>
+	<link rel="shortcut icon" href="//www.microsoft.com/favicon.ico?v2" />
+	<link rel="icon" href="//www.microsoft.com/favicon.ico?v2">
+	<link rel="apple-touch-icon" href="//www.microsoft.com/favicon.ico?v2" />
+	
+
+
+
+<meta content="eb991fd9-b81c-43aa-b1fb-ccdf93c6bfbb" name="ms.correlationId" />
+
+<meta name="ms.lang" content="zh-CHS" />
+<meta name="ms.loc" content="CN" />
+<meta content="S.HP.smc-home" name="ms.ocpub.assetID" />
+<meta name="ms.pagetype" content="Home" />
+<meta name="ms.pltfrm" content="OCPub" />
+<meta name="ms.prod" content="Office" />
+<meta name="ms.sitesec" content="Support" />
+<meta name="ms.sitever" content="1601410437650" />
+
+
+
+	<meta name="contentlocation" content="https://osiprodeaodcspstoa01.blob.core.windows.net" />
+
+	
+
+
+<script type="text/javascript">
+	var varSegmentation = 0;
+	var varClickTracking = 0;
+	var varCustomerTracking = 1;
+	var varCustomerCookies = ["msresearch"];
+	var varAutoFirePV = 0;
+	var Route = '16000';
+	var Ctrl = '010';
+</script>
+	<script type="text/javascript">
+	var OOGlobal = {
+		AutoSuggestEndPoint: "//support.office.com/api/autosuggest",
+		AutoSuggestExperimentTags: "",
+		BaseDomain: location.protocol + "//" + location.host,
+		Culture: "zh-CN",
+		Language: "zh-CHS",
+		LCID: "2052",
+		IsAuthenticated: "False",
+		AuthParam: "0",
+		WebAppUrl: "https://office.com/start",
+		Platform: navigator.platform,
+		HostOrigin: ""
+	};
+	
+	</script>
+
+<script src="https://az725175.vo.msecnd.net/scripts/jsll-4.3.5.js"></script>
+<script>(window.awa)||document.write('<script src="/socbundles/jsll"><\/script>');</script>
+
+
+
+
+
+<meta name="awa-env" content="Production" />
+<meta name="awa-stv" content="1601410437650" />
+<meta name="awa-market" content="zh-CN" />
+<meta name="awa-asst" content="S.HP.smc-home" />
+
+<meta name="awa-pageType" content="Home" />
+<meta content="o365ww" name="awa-pagescope" />
+<meta content="office.com" name="awa-prdct" />
+
+
+
+
+
+
+
+
+	<meta name="awa-title" content="Microsoft 支持" />
+
+	<meta name="awa-expid" content="P-E-82494-2-5;P-E-65407-2-7;P-E-55055-2-97;P-E-80868-C1-7;P-E-76786-C1-18;P-E-75575-C1-7;P-E-73628-2-12;P-E-72824-4-7;P-E-69852-C1-9;P-R-81586-2-5;P-R-81534-1-2;P-R-80816-1-2;P-R-80813-1-2;P-R-73296-3-7;P-R-72164-1-2;P-R-63397-1-9;P-R-68455-1-2" />
+	<meta name="awa-variationid" content="ECS" />
+
+<meta content="False" name="awa-isAssistedHelpEnabled" /><meta content="False" name="awa-isDeepLinkingEnabled" /><meta content="Legacy" name="awa-themeName" />
+
+
+
+
+
+
+		<script src="https://az416426.vo.msecnd.net/scripts/c/ms.analytics-web-3.min.js"></script>
+
+<link href="/SocContent/floodgate?v=JzREktuAEVcWhhlNU-_ejiYX_KyxAoTdPHAq_nXcyRY1" rel="stylesheet"/>
+
+<link rel="stylesheet" href="https://www.microsoft.com/onerfstatics/marketingsites-eas-prod/chinese-simplified/shell/_scrf/css/themes=default.device=uplevel_web_pc/de-d4f5a9/33-fa7e00/4c-0b4a50/72-2965a5/41-e4e079/cd-a6d564/2b-bd61b8/64-b46b82?ver=2.0&amp;_cf=20210415" type="text/css" media="all" /><link rel='stylesheet' href='https://statics-marketingsites-eas-ms-com.akamaized.net/statics/override.css?c=7' type='text/css' />
+<link href="/SocContent/intl.css" rel="stylesheet"/>
+
+		<meta name="awa-selfHelpExp" content="win10m365_uhf" />
+</head>
+<body class="supCont ">
+
+
+<div id="uhf-upgrade-banner" class="uhfupgradeBanner win10m365_uhf ocHidden" 
+	data-bi-area="uhf_banner" data-bi-scn="M365Promo" data-bi-id="win10m365_uhf"
+	data-bi-title="管理约会、计划和预算 - 使用 Microsoft 365 轻松完成" data-bi-subtext="" data-bi-button="免费试用一个月">
+	<div class="grd zero-margin uhfbanner-container">
+		<div class="row uhfbanner-wrapper">
+			<div class="col-3-5 uhfbanner-content">
+				<p class="promoHeadingSubText promoHeadingNoSubText">管理约会、计划和预算 - 使用 Microsoft 365 轻松完成</p>
+				<p class="promoRun"></p>
+			</div>
+			<div class="col-2-5 uhfbanner-controls-wrapper">
+				<div class="uhfbanner-controls">
+					<a id="upgradeUhfBannerButton" class="buttonLink buttonNew blue buttonText" href="https://www.microsoft.com/microsoft-365/try?ocid=oo_support_mix_marvel_ups_support_uhfbannerm365free" data-bi-mto>
+						免费试用一个月
+					</a>
+					<button id="uhf-banner-close" aria-label="Close upgrade banner" class="bannerClose" data-bi-mto>
+						<span aria-hidden="true" tabindex="-1" id="banner-close-glyph" class="win-icon win-icon-Clear"></span>
+					</button>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+    <div id="headerArea" class="uhf"  data-m='{"cN":"headerArea","cT":"Area_coreuiArea","id":"a1Body","sN":1,"aN":"Body"}'>
+                <div id="headerRegion"     data-region-key="headerregion" data-m='{"cN":"headerRegion","cT":"Region_coreui-region","id":"r1a1","sN":1,"aN":"a1"}' >
+
+    <div  id="headerUniversalHeader" data-m='{"cN":"headerUniversalHeader","cT":"Module_coreui-universalheader","id":"m1r1a1","sN":1,"aN":"r1a1"}'  data-module-id="Category|headerRegion|coreui-region|headerUniversalHeader|coreui-universalheader">
+        
+
+
+                        <div data-m='{"cN":"cookiebanner_cont","cT":"Container","id":"c1m1r1a1","sN":1,"aN":"m1r1a1"}'>
+
+<div id="uhfCookieAlert" data-locale="zh-cn">
+    <div id="msccBannerV2"></div>
+</div>
+
+                            
+                        </div>
+
+
+
+        <a id="uhfSkipToMain" class="m-skip-to-main" href="javascript:void(0)" data-href="" tabindex="0" data-m='{"cN":"Skip to content_nonnav","id":"nn2m1r1a1","sN":2,"aN":"m1r1a1"}'>跳转至主内容</a>
+
+
+<header class="c-uhfh context-uhf no-js c-sgl-stck c-category-header " itemscope="itemscope" data-header-footprint="/SMCConvergence/MSSMCConvergenceHeader, fromService: True"   data-magict="true"  itemtype="http://schema.org/Organization">
+    <div class="theme-light js-global-head f-closed  global-head-cont" data-m='{"cN":"Universal Header_cont","cT":"Container","id":"c3m1r1a1","sN":3,"aN":"m1r1a1"}'>
+        <div class="c-uhfh-gcontainer-st">
+            <button type="button" class="c-action-trigger c-glyph glyph-global-nav-button" aria-label="所有 Microsoft 项目都会扩展以显示 Microsoft 产品和服务的列表" initialState-label="所有 Microsoft 项目都会扩展以显示 Microsoft 产品和服务的列表" toggleState-label="Close All Microsoft list" aria-expanded="false" data-m='{"cN":"Mobile menu button_nonnav","id":"nn1c3m1r1a1","sN":1,"aN":"c3m1r1a1"}'></button>
+            <button type="button" class="c-action-trigger c-glyph glyph-arrow-htmllegacy" aria-label="关闭搜索" aria-expanded="false" data-m='{"cN":"Close Search_nonnav","id":"nn2c3m1r1a1","sN":2,"aN":"c3m1r1a1"}'></button>
+                    <a id="uhfLogo" class="c-logo c-sgl-stk-uhfLogo" itemprop="url" href="https://www.microsoft.com" aria-label="Microsoft" data-m='{"cN":"GlobalNav_Logo_cont","cT":"Container","id":"c3c3m1r1a1","sN":3,"aN":"c3m1r1a1"}'>
+                        <img alt="" itemprop="logo" class="c-image" src="https://img-prod-cms-rt-microsoft-com.akamaized.net/cms/api/am/imageFileData/RE1Mu3b?ver=5c31" role="presentation" aria-hidden="true" />
+                        <span itemprop="name" role="presentation" aria-hidden="true">Microsoft</span>
+                    </a>
+            <div class="f-mobile-title">
+                <button type="button" class="c-action-trigger c-glyph glyph-chevron-left" aria-label="查看更多菜单选项" data-m='{"cN":"Mobile back button_nonnav","id":"nn4c3m1r1a1","sN":4,"aN":"c3m1r1a1"}'></button>
+                <span data-global-title="Microsoft 主页" class="js-mobile-title">支持</span>
+                <button type="button" class="c-action-trigger c-glyph glyph-chevron-right" aria-label="查看更多菜单选项" data-m='{"cN":"Mobile forward button_nonnav","id":"nn5c3m1r1a1","sN":5,"aN":"c3m1r1a1"}'></button>
+            </div>
+                    <div class="c-show-pipe x-hidden-vp-mobile-st">
+                        <a id="uhfCatLogo" class="c-logo c-cat-logo" href="/zh-cn/" aria-label="支持" itemprop="url" data-m='{"cN":"CatNav_支持_nav","id":"n6c3m1r1a1","sN":6,"aN":"c3m1r1a1"}'>
+                                <span>支持</span>
+                        </a>
+                    </div>
+                <div class="cat-logo-button-cont x-hidden">
+                        <button type="button" id="uhfCatLogoButton" class="c-cat-logo-button x-hidden" aria-expanded="false" aria-label="支持" data-m='{"cN":"支持_nonnav","id":"nn7c3m1r1a1","sN":7,"aN":"c3m1r1a1"}'>
+                            支持
+                        </button>
+                </div>
+
+
+
+                    <nav id="uhf-g-nav" aria-label="上下文菜单" class="c-uhfh-gnav" data-m='{"cN":"Category nav_cont","cT":"Container","id":"c8c3m1r1a1","sN":8,"aN":"c3m1r1a1"}'>
+            <ul class="js-paddle-items">
+                    <li class="single-link js-nav-menu x-hidden-none-mobile-vp uhf-menu-item">
+                        <a class="c-uhf-nav-link" href="/zh-cn/" data-m='{"cN":"CatNav_主页_nav","id":"n1c8c3m1r1a1","sN":1,"aN":"c8c3m1r1a1"}' > 主页 </a>
+                    </li>
+                                        <li class="single-link js-nav-menu uhf-menu-item">
+                            <a id="c-shellmenu_39" class="c-uhf-nav-link" href="https://www.microsoft.com/microsoft-365?ocid=oo_support_mix_marvel_ups_support_smcuhfm365" data-m='{"cN":"CatNav_Microsoft 365_nav","id":"n2c8c3m1r1a1","sN":2,"aN":"c8c3m1r1a1"}'>Microsoft 365</a>
+                        </li>
+                        <li class="single-link js-nav-menu uhf-menu-item">
+                            <a id="c-shellmenu_40" class="c-uhf-nav-link" href="https://www.microsoft.com/microsoft-365/microsoft-office?ocid=oo_support_mix_marvel_ups_support_smcuhfoffice" data-m='{"cN":"CatNav_Office_nav","id":"n3c8c3m1r1a1","sN":3,"aN":"c8c3m1r1a1"}'>Office</a>
+                        </li>
+                        <li class="single-link js-nav-menu uhf-menu-item">
+                            <a id="c-shellmenu_41" class="c-uhf-nav-link" href="https://www.microsoft.com/zh-cn/windows?ocid=smc_marvel_ups_support_uhfwindows" data-m='{"cN":"CatNav_Windows_nav","id":"n4c8c3m1r1a1","sN":4,"aN":"c8c3m1r1a1"}'>Windows</a>
+                        </li>
+                        <li class="single-link js-nav-menu uhf-menu-item">
+                            <a id="c-shellmenu_42" class="c-uhf-nav-link" href="https://www.microsoft.com/surface" data-m='{"cN":"CatNav_Surface_nav","id":"n5c8c3m1r1a1","sN":5,"aN":"c8c3m1r1a1"}'>Surface</a>
+                        </li>
+                        <li class="single-link js-nav-menu uhf-menu-item">
+                            <a id="c-shellmenu_43" class="c-uhf-nav-link" href="https://www.xbox.com/" data-m='{"cN":"CatNav_Xbox_nav","id":"n6c8c3m1r1a1","sN":6,"aN":"c8c3m1r1a1"}'>Xbox</a>
+                        </li>
+
+
+                <li id="overflow-menu" class="overflow-menu x-hidden uhf-menu-item">
+                        <div class="c-uhf-menu js-nav-menu">
+        <button data-m='{"pid":"更多","id":"nn7c8c3m1r1a1","sN":7,"aN":"c8c3m1r1a1"}' type="button" aria-label="更多" aria-expanded="false">更多</button>
+        <ul id="overflow-menu-list" aria-hidden="true" class="overflow-menu-list">
+        </ul>
+    </div>
+
+                </li>
+                                    <li class="single-link js-nav-menu" id="c-uhf-nav-cta">
+                        <a id="buyInstallButton" class="c-uhf-nav-link" href="https://go.microsoft.com/fwlink/?linkid=849747" data-m='{"cN":"CatNav_cta_购买 Microsoft 365_nav","id":"n8c8c3m1r1a1","sN":8,"aN":"c8c3m1r1a1"}'>购买 Microsoft 365</a>
+                    </li>
+            </ul>
+            
+        </nav>
+
+
+            <div class="c-uhfh-actions" data-m='{"cN":"Header actions_cont","cT":"Container","id":"c9c3m1r1a1","sN":9,"aN":"c3m1r1a1"}'>
+                <div class="wf-menu">        <nav id="uhf-c-nav" aria-label="所有 Microsoft 菜单" data-m='{"cN":"GlobalNav_cont","cT":"Container","id":"c1c9c3m1r1a1","sN":1,"aN":"c9c3m1r1a1"}'>
+            <ul class="js-paddle-items">
+                <li>
+                    <div class="c-uhf-menu js-nav-menu">
+                        <button type="button" class="c-button-logo all-ms-nav" aria-label="所有 Microsoft 项目都会扩展以显示 Microsoft 产品和服务的列表" aria-expanded="false" data-m='{"cN":"GlobalNav_More_nonnav","id":"nn1c1c9c3m1r1a1","sN":1,"aN":"c1c9c3m1r1a1"}'> <span>所有 Microsoft</span></button>
+                        <ul class="f-multi-column f-multi-column-6" aria-hidden="true" data-m='{"cN":"More_cont","cT":"Container","id":"c2c1c9c3m1r1a1","sN":2,"aN":"c1c9c3m1r1a1"}'>
+                                    <li class="c-w0-contr">
+            <ul class="c-w0">
+        <li class="js-nav-menu single-link" data-m='{"cN":"M365_cont","cT":"Container","id":"c1c2c1c9c3m1r1a1","sN":1,"aN":"c2c1c9c3m1r1a1"}'>
+            <a id="shellmenu_0" class="js-subm-uhf-nav-link" href="https://www.microsoft.com/microsoft-365" data-m='{"cN":"W0Nav_M365_nav","id":"n1c1c2c1c9c3m1r1a1","sN":1,"aN":"c1c2c1c9c3m1r1a1"}'>Microsoft 365</a>
+            
+        </li>
+        <li class="js-nav-menu single-link" data-m='{"cN":"Office_cont","cT":"Container","id":"c2c2c1c9c3m1r1a1","sN":2,"aN":"c2c1c9c3m1r1a1"}'>
+            <a id="shellmenu_1" class="js-subm-uhf-nav-link" href="https://www.microsoft.com/microsoft-365/microsoft-office" data-m='{"cN":"W0Nav_Office_nav","id":"n1c2c2c1c9c3m1r1a1","sN":1,"aN":"c2c2c1c9c3m1r1a1"}'>Office</a>
+            
+        </li>
+        <li class="js-nav-menu single-link" data-m='{"cN":"Windows_cont","cT":"Container","id":"c3c2c1c9c3m1r1a1","sN":3,"aN":"c2c1c9c3m1r1a1"}'>
+            <a id="shellmenu_2" class="js-subm-uhf-nav-link" href="https://www.microsoft.com/zh-cn/windows/" data-m='{"cN":"W0Nav_Windows_nav","id":"n1c3c2c1c9c3m1r1a1","sN":1,"aN":"c3c2c1c9c3m1r1a1"}'>Windows</a>
+            
+        </li>
+        <li class="js-nav-menu single-link" data-m='{"cN":"Surface_cont","cT":"Container","id":"c4c2c1c9c3m1r1a1","sN":4,"aN":"c2c1c9c3m1r1a1"}'>
+            <a id="shellmenu_3" class="js-subm-uhf-nav-link" href="https://www.microsoft.com/zh-cn/surface" data-m='{"cN":"W0Nav_Surface_nav","id":"n1c4c2c1c9c3m1r1a1","sN":1,"aN":"c4c2c1c9c3m1r1a1"}'>Surface</a>
+            
+        </li>
+        <li class="js-nav-menu single-link" data-m='{"cN":"Xbox_cont","cT":"Container","id":"c5c2c1c9c3m1r1a1","sN":5,"aN":"c2c1c9c3m1r1a1"}'>
+            <a id="shellmenu_4" class="js-subm-uhf-nav-link" href="https://www.xbox.com/" data-m='{"cN":"W0Nav_Xbox_nav","id":"n1c5c2c1c9c3m1r1a1","sN":1,"aN":"c5c2c1c9c3m1r1a1"}'>Xbox</a>
+            
+        </li>
+        <li class="js-nav-menu single-link" data-m='{"cN":"Deals_cont","cT":"Container","id":"c6c2c1c9c3m1r1a1","sN":6,"aN":"c2c1c9c3m1r1a1"}'>
+            <a id="shellmenu_5" class="js-subm-uhf-nav-link" href="https://www.microsoftstore.com.cn/promotion?WT.mc_id=msftcn_MSCOM_HP_DEALS_202103" data-m='{"cN":"W0Nav_Deals_nav","id":"n1c6c2c1c9c3m1r1a1","sN":1,"aN":"c6c2c1c9c3m1r1a1"}'>优惠</a>
+            
+        </li>
+        <li class="js-nav-menu single-link" data-m='{"cN":"Support_cont","cT":"Container","id":"c7c2c1c9c3m1r1a1","sN":7,"aN":"c2c1c9c3m1r1a1"}'>
+            <a id="l1_support" class="js-subm-uhf-nav-link" href="https://support.microsoft.com/zh-cn" data-m='{"cN":"W0Nav_Support_nav","id":"n1c7c2c1c9c3m1r1a1","sN":1,"aN":"c7c2c1c9c3m1r1a1"}'>支持</a>
+            
+        </li>
+            </ul>
+        </li>
+
+<li class="f-sub-menu js-nav-menu nested-menu" data-m='{"cT":"Container","id":"c8c2c1c9c3m1r1a1","sN":8,"aN":"c2c1c9c3m1r1a1"}'>
+
+    <span id="uhf-navspn-shellmenu_8-span" style="display:none"   f-multi-parent="true" aria-expanded="false" data-m='{"id":"nn1c8c2c1c9c3m1r1a1","sN":1,"aN":"c8c2c1c9c3m1r1a1"}'>软件</span>
+    <button id="uhf-navbtn-shellmenu_8-button" type="button"   f-multi-parent="true" aria-expanded="false" data-m='{"id":"nn2c8c2c1c9c3m1r1a1","sN":2,"aN":"c8c2c1c9c3m1r1a1"}'>软件</button>
+    <ul aria-hidden="true">
+        <li class="js-nav-menu single-link" data-m='{"cN":"More_Software_WindowsApps_cont","cT":"Container","id":"c3c8c2c1c9c3m1r1a1","sN":3,"aN":"c8c2c1c9c3m1r1a1"}'>
+            <a id="shellmenu_9" class="js-subm-uhf-nav-link" href="https://www.microsoft.com/zh-cn/store/apps/windows?icid=CNavAppsWindowsApps" data-m='{"cN":"GlobalNav_More_Software_WindowsApps_nav","id":"n1c3c8c2c1c9c3m1r1a1","sN":1,"aN":"c3c8c2c1c9c3m1r1a1"}'>Windows 应用</a>
+            
+        </li>
+        <li class="js-nav-menu single-link" data-m='{"cN":"More_Software_OneDrive_cont","cT":"Container","id":"c4c8c2c1c9c3m1r1a1","sN":4,"aN":"c8c2c1c9c3m1r1a1"}'>
+            <a id="shellmenu_10" class="js-subm-uhf-nav-link" href="https://onedrive.live.com/about/zh-CN/" data-m='{"cN":"GlobalNav_More_Software_OneDrive_nav","id":"n1c4c8c2c1c9c3m1r1a1","sN":1,"aN":"c4c8c2c1c9c3m1r1a1"}'>OneDrive</a>
+            
+        </li>
+        <li class="js-nav-menu single-link" data-m='{"cN":"More_Software_Outlook_cont","cT":"Container","id":"c5c8c2c1c9c3m1r1a1","sN":5,"aN":"c8c2c1c9c3m1r1a1"}'>
+            <a id="shellmenu_11" class="js-subm-uhf-nav-link" href="https://outlook.live.com/owa/" data-m='{"cN":"GlobalNav_More_Software_Outlook_nav","id":"n1c5c8c2c1c9c3m1r1a1","sN":1,"aN":"c5c8c2c1c9c3m1r1a1"}'>Outlook</a>
+            
+        </li>
+        <li class="js-nav-menu single-link" data-m='{"cN":"More_Software_Skype_cont","cT":"Container","id":"c6c8c2c1c9c3m1r1a1","sN":6,"aN":"c8c2c1c9c3m1r1a1"}'>
+            <a id="shellmenu_12" class="js-subm-uhf-nav-link" href="https://www.skype.com/zh-Hans/" data-m='{"cN":"GlobalNav_More_Software_Skype_nav","id":"n1c6c8c2c1c9c3m1r1a1","sN":1,"aN":"c6c8c2c1c9c3m1r1a1"}'>Skype</a>
+            
+        </li>
+        <li class="js-nav-menu single-link" data-m='{"cN":"More_Software_OneNote_cont","cT":"Container","id":"c7c8c2c1c9c3m1r1a1","sN":7,"aN":"c8c2c1c9c3m1r1a1"}'>
+            <a id="shellmenu_13" class="js-subm-uhf-nav-link" href="https://www.onenote.com/?omkt=zh-CN" data-m='{"cN":"GlobalNav_More_Software_OneNote_nav","id":"n1c7c8c2c1c9c3m1r1a1","sN":1,"aN":"c7c8c2c1c9c3m1r1a1"}'>OneNote</a>
+            
+        </li>
+        <li class="js-nav-menu single-link" data-m='{"cN":"More_Software_Microsoft Teams_cont","cT":"Container","id":"c8c8c2c1c9c3m1r1a1","sN":8,"aN":"c8c2c1c9c3m1r1a1"}'>
+            <a id="shellmenu_14" class="js-subm-uhf-nav-link" href="https://www.microsoft.com/zh-cn/microsoft-teams/free?icid=SSM_AS_Promo_Apps_MicrosoftTeams" data-m='{"cN":"GlobalNav_More_Software_Microsoft Teams_nav","id":"n1c8c8c2c1c9c3m1r1a1","sN":1,"aN":"c8c8c2c1c9c3m1r1a1"}'>Microsoft Teams</a>
+            
+        </li>
+    </ul>
+    
+</li>
+<li class="f-sub-menu js-nav-menu nested-menu" data-m='{"cN":"PCsAndDevices_cont","cT":"Container","id":"c9c2c1c9c3m1r1a1","sN":9,"aN":"c2c1c9c3m1r1a1"}'>
+
+    <span id="uhf-navspn-shellmenu_15-span" style="display:none"   f-multi-parent="true" aria-expanded="false" data-m='{"cN":"GlobalNav_PCsAndDevices_nonnav","id":"nn1c9c2c1c9c3m1r1a1","sN":1,"aN":"c9c2c1c9c3m1r1a1"}'>PC 和设备</span>
+    <button id="uhf-navbtn-shellmenu_15-button" type="button"   f-multi-parent="true" aria-expanded="false" data-m='{"cN":"GlobalNav_PCsAndDevices_nonnav","id":"nn2c9c2c1c9c3m1r1a1","sN":2,"aN":"c9c2c1c9c3m1r1a1"}'>PC 和设备</button>
+    <ul aria-hidden="true">
+        <li class="js-nav-menu single-link" data-m='{"cN":"More_PCAndDevices_ShopXbox_cont","cT":"Container","id":"c3c9c2c1c9c3m1r1a1","sN":3,"aN":"c9c2c1c9c3m1r1a1"}'>
+            <a id="shellmenu_16" class="js-subm-uhf-nav-link" href="https://www.microsoft.com/zh-cn/store/b/xbox?icid=CNavDevicesXbox" data-m='{"cN":"GlobalNav_More_PCAndDevices_ShopXbox_nav","id":"n1c3c9c2c1c9c3m1r1a1","sN":1,"aN":"c3c9c2c1c9c3m1r1a1"}'>购买 Xbox</a>
+            
+        </li>
+        <li class="js-nav-menu single-link" data-m='{"cN":"More_PCsAndDevices_PCsAndTablets_cont","cT":"Container","id":"c4c9c2c1c9c3m1r1a1","sN":4,"aN":"c9c2c1c9c3m1r1a1"}'>
+            <a id="shellmenu_17" class="js-subm-uhf-nav-link" href="https://www.microsoft.com/zh-cn/windows/devices" data-m='{"cN":"GlobalNav_More_PCsAndDevices_PCsAndTablets_nav","id":"n1c4c9c2c1c9c3m1r1a1","sN":1,"aN":"c4c9c2c1c9c3m1r1a1"}'>PC 和平板电脑</a>
+            
+        </li>
+        <li class="js-nav-menu single-link" data-m='{"cN":"More_PCAndDevices_Accessories_cont","cT":"Container","id":"c5c9c2c1c9c3m1r1a1","sN":5,"aN":"c9c2c1c9c3m1r1a1"}'>
+            <a id="shellmenu_18" class="js-subm-uhf-nav-link" href="https://www.microsoft.com/accessories/zh-cn" data-m='{"cN":"GlobalNav_More_PCAndDevices_Accessories_nav","id":"n1c5c9c2c1c9c3m1r1a1","sN":1,"aN":"c5c9c2c1c9c3m1r1a1"}'>配件</a>
+            
+        </li>
+    </ul>
+    
+</li>
+<li class="f-sub-menu js-nav-menu nested-menu" data-m='{"cT":"Container","id":"c10c2c1c9c3m1r1a1","sN":10,"aN":"c2c1c9c3m1r1a1"}'>
+
+    <span id="uhf-navspn-shellmenu_19-span" style="display:none"   f-multi-parent="true" aria-expanded="false" data-m='{"id":"nn1c10c2c1c9c3m1r1a1","sN":1,"aN":"c10c2c1c9c3m1r1a1"}'>娱乐</span>
+    <button id="uhf-navbtn-shellmenu_19-button" type="button"   f-multi-parent="true" aria-expanded="false" data-m='{"id":"nn2c10c2c1c9c3m1r1a1","sN":2,"aN":"c10c2c1c9c3m1r1a1"}'>娱乐</button>
+    <ul aria-hidden="true">
+        <li class="js-nav-menu single-link" data-m='{"cN":"Products_DevicesAndXbox_XboxAndGames_cont","cT":"Container","id":"c3c10c2c1c9c3m1r1a1","sN":3,"aN":"c10c2c1c9c3m1r1a1"}'>
+            <a id="shellmenu_20" class="js-subm-uhf-nav-link" href="https://www.xbox.com/zh-cn/games/xbox-one?xr=shellnav" data-m='{"cN":"GlobalNav_Products_DevicesAndXbox_XboxAndGames_nav","id":"n1c3c10c2c1c9c3m1r1a1","sN":1,"aN":"c3c10c2c1c9c3m1r1a1"}'>Xbox 与游戏</a>
+            
+        </li>
+        <li class="js-nav-menu single-link" data-m='{"cN":"Entertainment_PCGames_cont","cT":"Container","id":"c4c10c2c1c9c3m1r1a1","sN":4,"aN":"c10c2c1c9c3m1r1a1"}'>
+            <a id="shellmenu_21" class="js-subm-uhf-nav-link" href="https://www.microsoft.com/zh-cn/store/games/windows?icid=CNavGamesWindowsGames" data-m='{"cN":"GlobalNav_Entertainment_PCGames_nav","id":"n1c4c10c2c1c9c3m1r1a1","sN":1,"aN":"c4c10c2c1c9c3m1r1a1"}'>PC 游戏</a>
+            
+        </li>
+    </ul>
+    
+</li>
+<li class="f-sub-menu js-nav-menu nested-menu" data-m='{"cT":"Container","id":"c11c2c1c9c3m1r1a1","sN":11,"aN":"c2c1c9c3m1r1a1"}'>
+
+    <span id="uhf-navspn-shellmenu_22-span" style="display:none"   f-multi-parent="true" aria-expanded="false" data-m='{"id":"nn1c11c2c1c9c3m1r1a1","sN":1,"aN":"c11c2c1c9c3m1r1a1"}'>企业版</span>
+    <button id="uhf-navbtn-shellmenu_22-button" type="button"   f-multi-parent="true" aria-expanded="false" data-m='{"id":"nn2c11c2c1c9c3m1r1a1","sN":2,"aN":"c11c2c1c9c3m1r1a1"}'>企业版</button>
+    <ul aria-hidden="true">
+        <li class="js-nav-menu single-link" data-m='{"cN":"More_Business_MicrosoftAzure_cont","cT":"Container","id":"c3c11c2c1c9c3m1r1a1","sN":3,"aN":"c11c2c1c9c3m1r1a1"}'>
+            <a id="shellmenu_23" class="js-subm-uhf-nav-link" href="https://www.microsoft.com/china/azure/" data-m='{"cN":"GlobalNav_More_Business_MicrosoftAzure_nav","id":"n1c3c11c2c1c9c3m1r1a1","sN":1,"aN":"c3c11c2c1c9c3m1r1a1"}'>Microsoft Azure</a>
+            
+        </li>
+        <li class="js-nav-menu single-link" data-m='{"cN":"Business_Microsoft365_cont","cT":"Container","id":"c4c11c2c1c9c3m1r1a1","sN":4,"aN":"c11c2c1c9c3m1r1a1"}'>
+            <a id="shellmenu_24" class="js-subm-uhf-nav-link" href="https://www.microsoft.com/microsoft-365/business/all-business" data-m='{"cN":"GlobalNav_Business_Microsoft365_nav","id":"n1c4c11c2c1c9c3m1r1a1","sN":1,"aN":"c4c11c2c1c9c3m1r1a1"}'>Microsoft 365</a>
+            
+        </li>
+        <li class="js-nav-menu single-link" data-m='{"cN":"More_Business_Enterprise_cont","cT":"Container","id":"c5c11c2c1c9c3m1r1a1","sN":5,"aN":"c11c2c1c9c3m1r1a1"}'>
+            <a id="shellmenu_25" class="js-subm-uhf-nav-link" href="https://www.microsoft.com/zh-cn/enterprise" data-m='{"cN":"GlobalNav_More_Business_Enterprise_nav","id":"n1c5c11c2c1c9c3m1r1a1","sN":1,"aN":"c5c11c2c1c9c3m1r1a1"}'>Microsoft Industry</a>
+            
+        </li>
+        <li class="js-nav-menu single-link" data-m='{"cN":"More_Business_DataPlatform_cont","cT":"Container","id":"c6c11c2c1c9c3m1r1a1","sN":6,"aN":"c11c2c1c9c3m1r1a1"}'>
+            <a id="shellmenu_26" class="js-subm-uhf-nav-link" href="https://www.microsoft.com/zh-cn/sql-server/ " data-m='{"cN":"GlobalNav_More_Business_DataPlatform_nav","id":"n1c6c11c2c1c9c3m1r1a1","sN":1,"aN":"c6c11c2c1c9c3m1r1a1"}'>数据平台</a>
+            
+        </li>
+        <li class="js-nav-menu single-link" data-m='{"cN":"More_DeveloperAndIT_Power Platform_cont","cT":"Container","id":"c7c11c2c1c9c3m1r1a1","sN":7,"aN":"c11c2c1c9c3m1r1a1"}'>
+            <a id="shellmenu_27" class="js-subm-uhf-nav-link" href="https://powerplatform.microsoft.com/zh-cn" data-m='{"cN":"GlobalNav_More_DeveloperAndIT_Power Platform_nav","id":"n1c7c11c2c1c9c3m1r1a1","sN":1,"aN":"c7c11c2c1c9c3m1r1a1"}'>Power Platform</a>
+            
+        </li>
+        <li class="js-nav-menu single-link" data-m='{"cN":"More_Business_ShopBusiness_cont","cT":"Container","id":"c8c11c2c1c9c3m1r1a1","sN":8,"aN":"c11c2c1c9c3m1r1a1"}'>
+            <a id="shellmenu_28" class="js-subm-uhf-nav-link" href="https://www.microsoft.com/zh-cn/store/b/business?icid=CNavBusinessStore" data-m='{"cN":"GlobalNav_More_Business_ShopBusiness_nav","id":"n1c8c11c2c1c9c3m1r1a1","sN":1,"aN":"c8c11c2c1c9c3m1r1a1"}'>购买商业版</a>
+            
+        </li>
+    </ul>
+    
+</li>
+<li class="f-sub-menu js-nav-menu nested-menu" data-m='{"cT":"Container","id":"c12c2c1c9c3m1r1a1","sN":12,"aN":"c2c1c9c3m1r1a1"}'>
+
+    <span id="uhf-navspn-shellmenu_29-span" style="display:none"   f-multi-parent="true" aria-expanded="false" data-m='{"id":"nn1c12c2c1c9c3m1r1a1","sN":1,"aN":"c12c2c1c9c3m1r1a1"}'>开发人员与 IT</span>
+    <button id="uhf-navbtn-shellmenu_29-button" type="button"   f-multi-parent="true" aria-expanded="false" data-m='{"id":"nn2c12c2c1c9c3m1r1a1","sN":2,"aN":"c12c2c1c9c3m1r1a1"}'>开发人员与 IT</button>
+    <ul aria-hidden="true">
+        <li class="js-nav-menu single-link" data-m='{"cN":"More_DeveloperAndIT_.Net_cont","cT":"Container","id":"c3c12c2c1c9c3m1r1a1","sN":3,"aN":"c12c2c1c9c3m1r1a1"}'>
+            <a id="shellmenu_30" class="js-subm-uhf-nav-link" href="https://www.microsoft.com/net/" data-m='{"cN":"GlobalNav_More_DeveloperAndIT_.Net_nav","id":"n1c3c12c2c1c9c3m1r1a1","sN":1,"aN":"c3c12c2c1c9c3m1r1a1"}'>.NET</a>
+            
+        </li>
+        <li class="js-nav-menu single-link" data-m='{"cN":"More_DevelopersAndIT_VisualStudio_cont","cT":"Container","id":"c4c12c2c1c9c3m1r1a1","sN":4,"aN":"c12c2c1c9c3m1r1a1"}'>
+            <a id="shellmenu_31" class="js-subm-uhf-nav-link" href="https://visualstudio.microsoft.com/" data-m='{"cN":"GlobalNav_More_DevelopersAndIT_VisualStudio_nav","id":"n1c4c12c2c1c9c3m1r1a1","sN":1,"aN":"c4c12c2c1c9c3m1r1a1"}'>Visual Studio</a>
+            
+        </li>
+        <li class="js-nav-menu single-link" data-m='{"cN":"More_ProductsandServices_WindowsServer_cont","cT":"Container","id":"c5c12c2c1c9c3m1r1a1","sN":5,"aN":"c12c2c1c9c3m1r1a1"}'>
+            <a id="shellmenu_32" class="js-subm-uhf-nav-link" href="https://www.microsoft.com/cloud-platform/windows-server" data-m='{"cN":"GlobalNav_More_ProductsandServices_WindowsServer_nav","id":"n1c5c12c2c1c9c3m1r1a1","sN":1,"aN":"c5c12c2c1c9c3m1r1a1"}'>Windows Server</a>
+            
+        </li>
+        <li class="js-nav-menu single-link" data-m='{"cN":"More_DeveloperAndIT_WindowsDevCenter_cont","cT":"Container","id":"c6c12c2c1c9c3m1r1a1","sN":6,"aN":"c12c2c1c9c3m1r1a1"}'>
+            <a id="shellmenu_33" class="js-subm-uhf-nav-link" href="https://developer.microsoft.com/zh-cn/windows" data-m='{"cN":"GlobalNav_More_DeveloperAndIT_WindowsDevCenter_nav","id":"n1c6c12c2c1c9c3m1r1a1","sN":1,"aN":"c6c12c2c1c9c3m1r1a1"}'>开发 Windows 应用</a>
+            
+        </li>
+        <li class="js-nav-menu single-link" data-m='{"cN":"More_DeveloperAndIT_Docs.microsoft.com_cont","cT":"Container","id":"c7c12c2c1c9c3m1r1a1","sN":7,"aN":"c12c2c1c9c3m1r1a1"}'>
+            <a id="shellmenu_34" class="js-subm-uhf-nav-link" href="https://docs.microsoft.com/zh-cn/" data-m='{"cN":"GlobalNav_More_DeveloperAndIT_Docs.microsoft.com_nav","id":"n1c7c12c2c1c9c3m1r1a1","sN":1,"aN":"c7c12c2c1c9c3m1r1a1"}'>文档</a>
+            
+        </li>
+        <li class="js-nav-menu single-link" data-m='{"cN":"More_DeveloperAndIT_PowerApps_cont","cT":"Container","id":"c8c12c2c1c9c3m1r1a1","sN":8,"aN":"c12c2c1c9c3m1r1a1"}'>
+            <a id="shellmenu_35" class="js-subm-uhf-nav-link" href="https://powerapps.microsoft.com/zh-cn" data-m='{"cN":"GlobalNav_More_DeveloperAndIT_PowerApps_nav","id":"n1c8c12c2c1c9c3m1r1a1","sN":1,"aN":"c8c12c2c1c9c3m1r1a1"}'>Power Apps</a>
+            
+        </li>
+    </ul>
+    
+</li>
+<li class="f-sub-menu js-nav-menu nested-menu" data-m='{"cT":"Container","id":"c13c2c1c9c3m1r1a1","sN":13,"aN":"c2c1c9c3m1r1a1"}'>
+
+    <span id="uhf-navspn-shellmenu_36-span" style="display:none"   f-multi-parent="true" aria-expanded="false" data-m='{"id":"nn1c13c2c1c9c3m1r1a1","sN":1,"aN":"c13c2c1c9c3m1r1a1"}'>其他</span>
+    <button id="uhf-navbtn-shellmenu_36-button" type="button"   f-multi-parent="true" aria-expanded="false" data-m='{"id":"nn2c13c2c1c9c3m1r1a1","sN":2,"aN":"c13c2c1c9c3m1r1a1"}'>其他</button>
+    <ul aria-hidden="true">
+        <li class="js-nav-menu single-link" data-m='{"cN":"Products_SoftwareAndServices_FreeDownloadsAndSecurity_cont","cT":"Container","id":"c3c13c2c1c9c3m1r1a1","sN":3,"aN":"c13c2c1c9c3m1r1a1"}'>
+            <a id="shellmenu_37" class="js-subm-uhf-nav-link" href="https://www.microsoft.com/zh-cn/download/default.aspx" data-m='{"cN":"GlobalNav_Products_SoftwareAndServices_FreeDownloadsAndSecurity_nav","id":"n1c3c13c2c1c9c3m1r1a1","sN":1,"aN":"c3c13c2c1c9c3m1r1a1"}'>免费下载与安全性</a>
+            
+        </li>
+        <li class="js-nav-menu single-link" data-m='{"cN":"Products_ForStudentsAndEducators_Education_cont","cT":"Container","id":"c4c13c2c1c9c3m1r1a1","sN":4,"aN":"c13c2c1c9c3m1r1a1"}'>
+            <a id="shellmenu_38" class="js-subm-uhf-nav-link" href="https://www.microsoft.com/zh-cn/education?icid=CNavMSCOML0_Studentsandeducation" data-m='{"cN":"GlobalNav_Products_ForStudentsAndEducators_Education_nav","id":"n1c4c13c2c1c9c3m1r1a1","sN":1,"aN":"c4c13c2c1c9c3m1r1a1"}'>教育</a>
+            
+        </li>
+    </ul>
+    
+</li>
+                                                            <li class="f-multi-column-info">
+                                    <a data-m='{"id":"n14c2c1c9c3m1r1a1","sN":14,"aN":"c2c1c9c3m1r1a1"}' href="https://www.microsoft.com/zh-cn/sitemap.aspx" aria-label="" class="c-glyph">查看站点地图</a>
+                                </li>
+                            
+                        </ul>
+                    </div>
+                </li>
+            </ul>
+        </nav>
+</div>
+                            <form class="c-search" autocomplete="off" id="searchForm" name="searchForm" role="search" action="/zh-cn/Search/results" method="GET" data-seAutoSuggest='{"queryParams":{"market":"zh-cn","clientId":"7F27B536-CF6B-4C65-8638-A0F8CBDFCA65","sources":"Microsoft-Terms,Iris-Products,DCatAll-Products","filter":"ExcludeDCatProducts:DCatDevices-Products,DCatSoftware-Products,DCatBundles-Products+ClientType:StoreWeb","counts":"5,1,5"},"familyNames":{"Apps":"应用","Books":"书籍","Bundles":"套装","Devices":"设备","Fees":"Fee","Games":"游戏","MusicAlbums":"专辑","MusicTracks":"歌曲","MusicVideos":"视频","MusicArtists":"艺术家","OperatingSystem":"操作系统","Software":"软件","Movies":"电影","TV":"电视","CSV":"礼品卡","VideoActor":"演员"}}' data-seautosuggestapi="https://www.microsoft.com/services/api/v3/suggest" data-m='{"cN":"GlobalNav_Search_cont","cT":"Container","id":"c3c1c9c3m1r1a1","sN":3,"aN":"c1c9c3m1r1a1"}' aria-expanded="false">
+                                <input  id="cli_shellHeaderSearchInput" aria-label="已展开搜索" aria-autocomplete="list" aria-controls="universal-header-search-auto-suggest-transparent" aria-owns="universal-header-search-auto-suggest-ul" type="search" name="query" placeholder="Search for help" data-m='{"cN":"SearchBox_nav","id":"n1c3c1c9c3m1r1a1","sN":1,"aN":"c3c1c9c3m1r1a1"}' data-toggle="tooltip" data-placement="right" title="Search for help" />
+                                    <button id="search" aria-label="Search for help" class="c-glyph" data-m='{"cN":"Search_nav","id":"n2c3c1c9c3m1r1a1","sN":2,"aN":"c3c1c9c3m1r1a1"}' data-bi-dnt="true" data-bi-mto="true" aria-expanded="false">
+                                        <span role="presentation">搜索</span>
+                                        <span role="tooltip" class="c-uhf-tooltip c-uhf-search-tooltip">Search for help</span>
+                                    </button>
+                                <div class="m-auto-suggest" id="universal-header-search-auto-suggest-transparent" role="group">
+                                    <ul class="c-menu" id="universal-header-search-auto-suggest-ul" aria-label="搜索建议" aria-hidden="true" data-bi-dnt="true" data-bi-mto="true" data-js-auto-suggest-position="default" role="listbox" data-tel="jsll" data-m='{"cN":"search suggestions_cont","cT":"Container","id":"c3c3c1c9c3m1r1a1","sN":3,"aN":"c3c1c9c3m1r1a1"}'></ul>
+                                </div>
+                                
+                            </form>
+                        <button data-m='{"cN":"cancel-search","pid":"取消 搜索","id":"nn4c1c9c3m1r1a1","sN":4,"aN":"c1c9c3m1r1a1"}' id="cancel-search" class="cancel-search" aria-label="取消 搜索">
+                            <span>取消</span>
+                        </button>
+                        <div id="meControl" class="c-me"  data-signinsettings='{"containerId":"meControl","enabled":true,"headerHeight":48,"debug":false,"extensibleLinks":[{"string":"Order history","url":"https://www.microsoftstore.com/store/msca/en_CA/DisplayAccountOrderListPage","id":""},{"string":"Return history","url":"https://www.microsoftstore.com/store/msca/en_CA/DisplayAccountReturnListPage","id":""},{"string":"Digital content","url":"https://www.microsoftstore.com/store/msca/en_CA/DisplayDownloadHistoryPage","id":""},{"string":"Address book","url":"https://www.microsoftstore.com/store/msca/en_CA/DisplayEditProfilePage/tab.addressbook","id":""},{"string":"Payment","url":"https://www.microsoftstore.com/store/msca/en_CA/DisplayAddEditPaymentPage","id":""},{"string":"Account profile","url":"https://www.microsoftstore.com/store/msusa/en_US/DisplayEditProfilePage/tab.profile","id":""}],"userData":{"idp":"msa","firstName":"","lastName":"","memberName":"","cid":"","authenticatedState":"3"},"rpData":{"preferredIdp":"msa","msaInfo":{"signInUrl":"/zh-cn/store/signin","signOutUrl":"/zh-cn/store/signout","meUrl":"https://login.live.com/me.srf?wa=wsignin1.0"},"aadInfo":{"signOutUrl":"/zh-cn/store/signout","appId":"","siteUrl":"","blockMsaFed":true}}}' data-m='{"cN":"GlobalNav_Account_cont","cT":"Container","id":"c5c1c9c3m1r1a1","sN":5,"aN":"c1c9c3m1r1a1"}'>
+                            <div class="msame_Header">
+                                <div class="msame_Header_name st_msame_placeholder">登录</div>
+                            </div>
+                            
+                        </div>
+                
+            </div>
+        </div>
+        
+        
+    </div>
+    
+</header>
+
+
+
+
+    </div>
+        </div>
+
+    </div>
+
+
+
+<div id="mobile-uhf-upgrade-banner" class="mobileUhfUpgradeBanner win10m365_uhf"
+	 data-bi-area="mobile_uhf_banner" data-bi-scn="M365Promo" data-bi-id="win10m365_uhf">
+	<div class="border">
+		<a id="upgradeMobileUhfBannerText" class="mobileBannerLink mobileBannerText" href="https://www.microsoft.com/microsoft-365/buy/compare-all-microsoft-365-products?ocid=oo_support_mix_marvel_ups_support_smcmobilebanner" data-bi-mto>
+			使用 Microsoft 365 领先他人一步。立即订阅 &gt;
+		</a>
+	</div>
+</div>
+
+
+
+
+
+	<nav id="topNav" class="topNav " ms.pgarea="topnav" data-bi-area="topnav" aria-label="支持主题菜单">
+		<ul id="topNavCategories">
+						<li class="topNavCategory" ms.cmpgrp="submnu_products">
+							<a class="topNavDropdownTrigger" href="javascript:" ms.interactiontype="11" aria-expanded="false" aria-label="产品"
+							   data-bi-name="SUBMNU_PRODUCTS" data-bi-slot="100" data-bi-bhvr="EXPAND" data-bi-id="SUBMNU_PRODUCTS">
+								<span>产品</span>
+								<span class="topNavChevron ms-Icon--chevronThinDown"></span>
+							</a>
+							<ul class="topNavDropdownMenu">
+										<li class="topNavDropdownMenuItem">
+											<a href="https://support.microsoft.com/zh-cn/microsoft-365" class="topNavDropdownLink"
+											   data-bi-name="LNK_M365" data-bi-slot="101" data-bi-id="LNK_M365">Microsoft 365</a>
+										</li>
+										<li class="topNavDropdownMenuItem">
+											<a href="https://support.microsoft.com/zh-cn/office" class="topNavDropdownLink"
+											   data-bi-name="LNK_OFFICE_SUPPORT" data-bi-slot="102" data-bi-id="LNK_OFFICE_SUPPORT">Office</a>
+										</li>
+										<li class="topNavDropdownMenuItem">
+											<a href="https://support.microsoft.com/zh-cn/outlook" class="topNavDropdownLink"
+											   data-bi-name="LNK_OUTLOOK_SUPPORT" data-bi-slot="103" data-bi-id="LNK_OUTLOOK_SUPPORT">Outlook</a>
+										</li>
+										<li class="topNavDropdownMenuItem">
+											<a href="https://support.microsoft.com/zh-cn/teams" class="topNavDropdownLink"
+											   data-bi-name="LNK_TEAMS_SUPPORT" data-bi-slot="104" data-bi-id="LNK_TEAMS_SUPPORT">Microsoft Teams</a>
+										</li>
+										<li class="topNavDropdownMenuItem">
+											<a href="https://support.microsoft.com/zh-cn/onedrive" class="topNavDropdownLink"
+											   data-bi-name="LNK_ONEDRIVE_SUPPORT" data-bi-slot="105" data-bi-id="LNK_ONEDRIVE_SUPPORT">OneDrive</a>
+										</li>
+										<li class="topNavDropdownMenuItem">
+											<a href="https://support.microsoft.com/zh-cn/onenote" class="topNavDropdownLink"
+											   data-bi-name="LNK_ONENOTE_SUPPORT" data-bi-slot="106" data-bi-id="LNK_ONENOTE_SUPPORT">OneNote</a>
+										</li>
+										<li class="topNavDropdownMenuItem">
+											<a href="https://support.microsoft.com/zh-cn/windows" class="topNavDropdownLink"
+											   data-bi-name="LNK_WINDOWS_SUPPORT" data-bi-slot="107" data-bi-id="LNK_WINDOWS_SUPPORT">Windows</a>
+										</li>
+										<li class="topNavDropdownMenuItem">
+											<a href="https://support.microsoft.com/zh-cn/microsoft-edge" class="topNavDropdownLink"
+											   data-bi-name="LNK_EDGE_SUPPORT" data-bi-slot="108" data-bi-id="LNK_EDGE_SUPPORT">Microsoft Edge</a>
+										</li>
+										<li class="topNavDropdownMenuItem">
+											<a href="https://support.microsoft.com/zh-cn/all-products" class="topNavDropdownLink"
+											   data-bi-name="LNK_PRODUCT_SUPPORT_INDEX" data-bi-slot="109" data-bi-id="LNK_PRODUCT_SUPPORT_INDEX">更多 ...</a>
+										</li>
+
+							</ul>
+						</li>
+						<li class="topNavCategory" ms.cmpgrp="submnu_devices">
+							<a class="topNavDropdownTrigger" href="javascript:" ms.interactiontype="11" aria-expanded="false" aria-label="设备"
+							   data-bi-name="SUBMNU_DEVICES" data-bi-slot="200" data-bi-bhvr="EXPAND" data-bi-id="SUBMNU_DEVICES">
+								<span>设备</span>
+								<span class="topNavChevron ms-Icon--chevronThinDown"></span>
+							</a>
+							<ul class="topNavDropdownMenu">
+										<li class="topNavDropdownMenuItem">
+											<a href="https://support.microsoft.com/zh-cn/surface" class="topNavDropdownLink"
+											   data-bi-name="LNK_SURFACE_SUPPORT" data-bi-slot="201" data-bi-id="LNK_SURFACE_SUPPORT">Surface</a>
+										</li>
+										<li class="topNavDropdownMenuItem">
+											<a href="https://support.microsoft.com/zh-cn/pc-accessories" class="topNavDropdownLink"
+											   data-bi-name="LNK_PCACCESSORIES_SUPPORT" data-bi-slot="202" data-bi-id="LNK_PCACCESSORIES_SUPPORT">电脑配件</a>
+										</li>
+										<li class="topNavDropdownMenuItem">
+											<a href="https://support.microsoft.com/zh-cn/mobile-devices" class="topNavDropdownLink"
+											   data-bi-name="LNK_SURFACE_SUPPORT" data-bi-slot="203" data-bi-id="LNK_SURFACE_SUPPORT">移动设备</a>
+										</li>
+										<li class="topNavDropdownMenuItem">
+											<a href="https://support.xbox.com/" class="topNavDropdownLink"
+											   data-bi-name="LNK_XBOX_SUPPORT" data-bi-slot="204" data-bi-id="LNK_XBOX_SUPPORT">Xbox</a>
+										</li>
+										<li class="topNavDropdownMenuItem">
+											<a href="https://docs.microsoft.com/hololens/" class="topNavDropdownLink"
+											   data-bi-name="LNK_HOLOLENS_SUPPORT" data-bi-slot="205" data-bi-id="LNK_HOLOLENS_SUPPORT">HoloLens</a>
+										</li>
+										<li class="topNavDropdownMenuItem">
+											<a href="https://support.microsoft.com/zh-cn/warranty" class="topNavDropdownLink"
+											   data-bi-name="LNK_HARDWARE_WARRANTIES" data-bi-slot="206" data-bi-id="LNK_HARDWARE_WARRANTIES">硬件保修</a>
+										</li>
+
+							</ul>
+						</li>
+						<li class="topNavTopLevelMenuItem topNavDropdownMenuItem LNK_WHATSNEW_HUB">
+							<a href="https://support.microsoft.com/zh-cn/whats-new" class="topNavDropdownLink"
+							   data-bi-name="LNK_WHATSNEW_HUB" data-bi-slot="300" data-bi-id="LNK_WHATSNEW_HUB">新增功能</a>
+						</li>
+						<li class="topNavTopLevelMenuItem topNavDropdownMenuItem LNK_ACCOUNT_BILLING">
+							<a href="https://support.microsoft.com/zh-cn/account-and-billing" class="topNavDropdownLink"
+							   data-bi-name="LNK_ACCOUNT_BILLING" data-bi-slot="400" data-bi-id="LNK_ACCOUNT_BILLING">账户和账单</a>
+						</li>
+						<li class="topNavTopLevelMenuItem topNavDropdownMenuItem LNK_OFFICE_TEMPLATES">
+							<a href="https://templates.office.com/" class="topNavDropdownLink"
+							   data-bi-name="LNK_OFFICE_TEMPLATES" data-bi-slot="500" data-bi-id="LNK_OFFICE_TEMPLATES">模板</a>
+						</li>
+						<li class="topNavCategory" ms.cmpgrp="submnu_more_support">
+							<a class="topNavDropdownTrigger" href="javascript:" ms.interactiontype="11" aria-expanded="false" aria-label="更多支持"
+							   data-bi-name="SUBMNU_MORE_SUPPORT" data-bi-slot="600" data-bi-bhvr="EXPAND" data-bi-id="SUBMNU_MORE_SUPPORT">
+								<span>更多支持</span>
+								<span class="topNavChevron ms-Icon--chevronThinDown"></span>
+							</a>
+							<ul class="topNavDropdownMenu">
+										<li class="topNavDropdownMenuItem">
+											<a href="https://answers.microsoft.com" class="topNavDropdownLink"
+											   data-bi-name="LNK_COMMUNITY_FORUMS" data-bi-slot="601" data-bi-id="LNK_COMMUNITY_FORUMS">社区论坛</a>
+										</li>
+										<li class="topNavDropdownMenuItem">
+											<a href="https://portal.office.com/AdminPortal#/support" class="topNavDropdownLink"
+											   data-bi-name="LNK_M365_ADMINS_SUPPORT" data-bi-slot="602" data-bi-id="LNK_M365_ADMINS_SUPPORT">Microsoft 365 管理员</a>
+										</li>
+										<li class="topNavDropdownMenuItem">
+											<a href="https://portal.office.com/AdminPortal#/support" class="topNavDropdownLink"
+											   data-bi-name="LNK_SMLB_ADMINS_SUPPORT" data-bi-slot="603" data-bi-id="LNK_SMLB_ADMINS_SUPPORT">小型企业版管理员</a>
+										</li>
+										<li class="topNavDropdownMenuItem">
+											<a href="https://developer.microsoft.com/" class="topNavDropdownLink"
+											   data-bi-name="LNK_DEVELOPER_SUPPORT" data-bi-slot="604" data-bi-id="LNK_DEVELOPER_SUPPORT">开发人员</a>
+										</li>
+										<li class="topNavDropdownMenuItem">
+											<a href="https://support.microsoft.com/zh-cn/education" class="topNavDropdownLink"
+											   data-bi-name="LNK_EDUCATION_SUPPORT" data-bi-slot="605" data-bi-id="LNK_EDUCATION_SUPPORT">教育</a>
+										</li>
+										<li class="topNavDropdownMenuItem">
+											<a href="https://www.microsoft.com/reportascam/" class="topNavDropdownLink"
+											   data-bi-name="LNK_SUPPORT_SCAM" data-bi-slot="606" data-bi-id="LNK_SUPPORT_SCAM">举报支持欺诈</a>
+										</li>
+
+							</ul>
+						</li>
+
+		</ul>
+	</nav>
+
+	<div class="supCont">
+		
+		<div id="ocMainContent" class="content-wrapper main-content clear-fix" role="main">
+			
+
+
+
+
+<div class="supHomeAndLandingPageContainer">
+	
+
+<div id="supHomeAndLandingPageHeroContainer" class="supModularHeaderSearchHeroContainer supModularHeaderSearchHeroContainer-SMC-HOME" ms.cmpgrp="homepage_hero" data-bi-area="homepage_hero">
+	<div id="supHomeAndLandingPageHeaderContainer">
+			<h1 class="supHomeAndLandingPageHeader supModularHeaderSearchHeader-SMC-HOME">
+				欢迎使用 Microsoft 支持
+			</h1>
+		<form id="supHomeAndLandingPageSearchBoxForm" class="supHomeAndLandingPageSearchBoxForm" method="GET" action="/search/results" autocomplete="off" ng-controller="autoSuggestController as homepageSearch">
+	<div class="supHomeAndLandingPageSearchBoxContainer">
+		
+		
+		<input id="supHomeAndLandingPageSearchBox" class="supHomeAndLandingPageSearchBox" name="query" type="search" placeholder="我们可如何帮助你?" ng-model="homepageSearch.searchText" ng-change="homepageSearch.fireAutoSuggest()"
+			   aria-label="我们可如何帮助你?"/>
+		<input id="supHomeAndLandingPageProductName" type="hidden"/>
+		<input id="supHomeAndLandingPageIsEnrichedQuery" type="hidden" name="isEnrichedQuery" value="false"/>
+		<button class="supHomeAndLandingPageSearchButton" type="submit" title="搜索" data-bi-mto aria-label="搜索">
+			<span class="supHomeAndLandingPageSearchIcon"></span>
+		</button>
+	</div>
+	<input class="supHomeAndLandingPageSuggestionHider" type="text" ng-init="homepageSearch.tenant = 'Office-Web'" ng-model="homepageSearch.tenant"/>
+	<auto-suggest search-input-box='#supHomeAndLandingPageSearchBox' search-submit='#supHomeAndLandingPageSearchBoxForm' search-input-type='form' suggestions='homepageSearch.suggestions' search-text='homepageSearch.searchText' show-suggestions='homepageSearch.showSuggestions' selected-item='homepageSearch.selectedItem'></auto-suggest>
+</form>	</div>
+</div>
+
+	
+
+
+	<section role="contentinfo" aria-label="特色产品与服务支持中心链接">
+		<div id="supHomepageIconsBackgroundContainer">
+			<div id="supHomepageIconsContainer" data-bi-area="app_carousel">
+				<ul id="supHomepageIcons" class="supHomepageIcons" ms.cmpgrp="app_carousel">
+								<li class="supHomepageIcon">
+									<a href="/zh-cn/microsoft-365" data-bi-slot="1" data-bi-name="Microsoft 365">
+										<div class="supHomepageIconImageContainer">
+											<img alt="" src="/socimages/appicons/microsoft365.64x64.svg" class="supHomepageIconImage">
+										</div>
+										<div class="supHomepageIconCaptionContainer">
+											<span class="supHomeAndLandingPageIconTitle">Microsoft 365</span>
+										</div>
+									</a>
+								</li>
+								<li class="supHomepageIcon">
+									<a href="/zh-cn/office" data-bi-slot="2" data-bi-name="Office">
+										<div class="supHomepageIconImageContainer">
+											<img alt="" src="/socimages/appicons/office.64x64x32.png" class="supHomepageIconImage">
+										</div>
+										<div class="supHomepageIconCaptionContainer">
+											<span class="supHomeAndLandingPageIconTitle">Office</span>
+										</div>
+									</a>
+								</li>
+								<li class="supHomepageIcon">
+									<a href="/zh-cn/outlook" data-bi-slot="3" data-bi-name="Outlook">
+										<div class="supHomepageIconImageContainer">
+											<img alt="" src="/socimages/appicons/outlook.64x64x32.png" class="supHomepageIconImage">
+										</div>
+										<div class="supHomepageIconCaptionContainer">
+											<span class="supHomeAndLandingPageIconTitle">Outlook</span>
+										</div>
+									</a>
+								</li>
+								<li class="supHomepageIcon">
+									<a href="/zh-cn/onedrive" data-bi-slot="4" data-bi-name="OneDrive">
+										<div class="supHomepageIconImageContainer">
+											<img alt="" src="/socimages/appicons/onedrive.64x64x32.png" class="supHomepageIconImage">
+										</div>
+										<div class="supHomepageIconCaptionContainer">
+											<span class="supHomeAndLandingPageIconTitle">OneDrive</span>
+										</div>
+									</a>
+								</li>
+								<li class="supHomepageIcon">
+									<a href="/zh-cn/microsoft-edge" data-bi-slot="5" data-bi-name="Microsoft Edge">
+										<div class="supHomepageIconImageContainer">
+											<img alt="" src="/socimages/appicons/microsoft-edge.64x64x32.png" class="supHomepageIconImage">
+										</div>
+										<div class="supHomepageIconCaptionContainer">
+											<span class="supHomeAndLandingPageIconTitle">Microsoft Edge</span>
+										</div>
+									</a>
+								</li>
+								<li class="supHomepageIcon">
+									<a href="/zh-cn/teams" data-bi-slot="6" data-bi-name="Microsoft Teams">
+										<div class="supHomepageIconImageContainer">
+											<img alt="" src="/socimages/appicons/teams.64x64x32.png" class="supHomepageIconImage">
+										</div>
+										<div class="supHomepageIconCaptionContainer">
+											<span class="supHomeAndLandingPageIconTitle">Microsoft Teams</span>
+										</div>
+									</a>
+								</li>
+								<li class="supHomepageIcon">
+									<a href="https://support.xbox.com" data-bi-slot="7" data-bi-name="Xbox">
+										<div class="supHomepageIconImageContainer">
+											<img alt="" src="/socimages/appicons/xbox.64x64x32.png" class="supHomepageIconImage">
+										</div>
+										<div class="supHomepageIconCaptionContainer">
+											<span class="supHomeAndLandingPageIconTitle">Xbox</span>
+										</div>
+									</a>
+								</li>
+								<li class="supHomepageIcon">
+									<a href="/zh-cn/account-and-billing" data-bi-slot="8" data-bi-name="帐户和帐单">
+										<div class="supHomepageIconImageContainer">
+											<img alt="" src="/socimages/appicons/microsoft-account.64x64x32.png" class="supHomepageIconImage">
+										</div>
+										<div class="supHomepageIconCaptionContainer">
+											<span class="supHomeAndLandingPageIconTitle">帐户和帐单</span>
+										</div>
+									</a>
+								</li>
+								<li class="supHomepageIcon">
+									<a href="/zh-cn/surface" data-bi-slot="9" data-bi-name="Surface 设备">
+										<div class="supHomepageIconImageContainer">
+											<img alt="" src="/socimages/appicons/surface.64x64.png" class="supHomepageIconImage">
+										</div>
+										<div class="supHomepageIconCaptionContainer">
+											<span class="supHomeAndLandingPageIconTitle">Surface 设备</span>
+										</div>
+									</a>
+								</li>
+								<li class="supHomepageIcon">
+									<a href="https://support.microsoft.com/hub/4338813/windows-help" data-bi-slot="10" data-bi-name="Windows">
+										<div class="supHomepageIconImageContainer">
+											<img alt="" src="/socimages/appicons/windows.64x64x32.png" class="supHomepageIconImage">
+										</div>
+										<div class="supHomepageIconCaptionContainer">
+											<span class="supHomeAndLandingPageIconTitle">Windows</span>
+										</div>
+									</a>
+								</li>
+
+				</ul>
+
+					<a class="supHomepageIconMoreLink" href="/zh-cn/all-products">更多 Microsoft 产品</a>
+			</div>
+		</div>
+	</section>
+;
+
+	<div class="ocArticle">
+		<div class="zero-margin supHomeAndLandingPageModuleContainer">
+
+					<div class="supHomeAndLandingPageModuleThemeWrapper">
+						<div class="supHomeAndLandingPageModule grd zero-margin" ms.cmpgrp="module_1" data-bi-area="module_1" data-bi-compID="c91e832a-67a5-4c30-90e4-c8888f961d38">
+							<article class="ocpArticleContent">
+  <section class="ocpSection">
+    <h2>热门主题</h2>
+    <div class="supARG" xmlns:AntiXSS="urn:AntiXSSExtensions" xmlns:FriendlyTitleLookup="urn:FriendlyTitleLookup" xmlns:HrefAppend="urn:HrefExtensions">
+      <div class="supARG-row">
+        <div class="supARG-column-1-4">
+          <a name="___toc___1_t" aria-hidden="true">	</a>
+          <ul class="ocpTOC">
+            <li>
+              <p>
+                <a href="https://support.microsoft.com/office/4414eaaf-0478-48be-9c42-23adc4716658" target="_blank" class="ocpExternalLink">安装 Microsoft 365</a>
+              </p>
+            </li>
+            <li>
+              <p>
+                <a href="https://support.microsoft.com/office/5bd38f38-db92-448b-a982-ad170b1e187e" target="_blank" class="ocpExternalLink">激活 Office</a>
+              </p>
+            </li>
+            <li>
+              <p>
+                <a href="https://support.microsoft.com/office/e899cd8a-c9a2-4a4e-9440-7c8ff1adda2c" target="_blank" class="ocpExternalLink">管理 Microsoft 365 付款和帐单</a>
+              </p>
+            </li>
+          </ul>
+        </div>
+        <div class="supARG-column-1-4">
+          <a name="___toc___2_t" aria-hidden="true">	</a>
+          <ul class="ocpTOC">
+            <li>
+              <p>
+                <a href="https://support.microsoft.com/office/2b5f558b-fe24-4375-a373-aa3bc3282d5f" target="_blank" class="ocpExternalLink">管理订阅</a>
+              </p>
+            </li>
+            <li>
+              <p>
+                <a href="https://support.microsoft.com/account-billing/2ffedaca-6e1b-bc18-f28c-58539e1cb6d3" target="_blank" class="ocpExternalLink">登录到你的 Microsoft 帐户</a>
+              </p>
+            </li>
+            <li>
+              <p>
+                <a href="https://support.microsoft.com/account-billing/fdde885b-86da-2965-69fd-4871309ef1f1" target="_blank" class="ocpExternalLink">更改 Microsoft 帐户密码</a>
+              </p>
+            </li>
+            <li>
+              <p />
+            </li>
+            <li>
+              <p />
+            </li>
+          </ul>
+        </div>
+        <div class="supARG-column-1-4">
+          <a name="___toc___3_t" aria-hidden="true">	</a>
+          <ul class="ocpTOC">
+            <li>
+              <p>
+                <a href="https://account.microsoft.com/privacy" target="_blank" class="ocpExternalLink">管理隐私设置</a>
+              </p>
+            </li>
+            <li>
+              <p>
+                <a href="https://support.microsoft.com/windows/c39005d4-95ee-b91e-b399-2820fda32227" target="_blank" class="ocpExternalLink">激活 Windows 10</a>
+              </p>
+            </li>
+            <li>
+              <p>
+                <a href="https://support.microsoft.com/windows/851057d6-1ee9-b9e5-c30b-93baebeebc85" target="_blank" class="ocpExternalLink">启用 Windows 的 S 模式或退出 S 模式</a>
+              </p>
+            </li>
+          </ul>
+        </div>
+        <div class="supARG-column-1-4">
+          <a name="___toc___4_t" aria-hidden="true">	</a>
+          <ul class="ocpTOC">
+            <li>
+              <p>
+                <a href="https://support.microsoft.com/windows/7d20e88c-0568-483a-37bc-c3885390d212" target="_blank" class="ocpExternalLink">获取 Windows 10 2020 年 10 月更新</a>
+              </p>
+            </li>
+            <li>
+              <p>
+                <a href="https://support.microsoft.com/office/94275804-7147-4332-9ccd-5d421760a9ed" target="_blank" class="ocpExternalLink">阅读、撰写和发送电子邮件</a>
+              </p>
+            </li>
+            <li>
+              <p>
+                <a href="https://support.microsoft.com/topic/eedf7a23-84a7-1a47-480b-0e10503eedf5" target="_blank" class="ocpExternalLink">查找硬件保修</a>
+              </p>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+</article>
+						</div>
+					</div>
+					<div class="supHomeAndLandingPageModuleThemeWrapper">
+						<div class="supHomeAndLandingPageModule grd zero-margin" ms.cmpgrp="module_2" data-bi-area="module_2" data-bi-compID="adc57464-5aec-45d0-9543-2fdfbb3fcab4">
+							<article class="ocpArticleContent">
+  <section class="ocpSection">
+    <div class="supARG supHomeAndLandingPageFeaturedGrid" xmlns:AntiXSS="urn:AntiXSSExtensions" xmlns:FriendlyTitleLookup="urn:FriendlyTitleLookup" xmlns:HrefAppend="urn:HrefExtensions">
+      <div class="supARG-row">
+        <div class="supARG-column-1-2">
+          <div class="ocpVideo" data-channel="ALTENUS_MS_OFFICE" data-videoid="RE4vhvc" data-llcc="zh-cn" data-videotype="single" data-player="SP_MOD_OfficeCom" data-videotitle="什么是 Microsoft 365 家庭版？">
+            <img src="https://support.content.office.net/zh-cn/media/4873755a-8b1e-497e-bc54-101d1e75d3e7.png" alt="你的浏览器不支持视频。" />
+          </div>
+          <p />
+        </div>
+        <div class="supARG-column-1-2">
+          <h2>充分利用你的 365</h2>
+          <p>一个可随处使用的强大生产力应用的集合。 可让你的生活井然有序、扩展你的创造力并保护重要信息。</p>
+          <p>
+            <a href="/zh-cn/office/引入-microsoft-365-41cc5189-6ff4-41ef-bdd3-04ac49d2706f" class="ocpArticleLink supHomeAndLandingPageCTA">详细了解 Microsoft 365 应用和功能</a>
+          </p>
+          <p>
+            <a href="https://www.microsoft.com/microsoft-365/try?ocid=oo_support_mix_marvel_ups_support_smchome_hub" target="_blank" class="ocpExternalLink supHomeAndLandingPageCTAButton">免费试用 Microsoft 365</a>
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+</article>
+						</div>
+					</div>
+					<div class="supHomeAndLandingPageModuleThemeWrapper">
+						<div class="supHomeAndLandingPageModule grd zero-margin" ms.cmpgrp="module_3" data-bi-area="module_3" data-bi-compID="58c6e56a-9729-413b-9646-f86fbbd023f0">
+							<article class="ocpArticleContent">
+  <section class="ocpSection">
+    <h2>学习和培训</h2>
+    <div class="supARG" xmlns:AntiXSS="urn:AntiXSSExtensions" xmlns:FriendlyTitleLookup="urn:FriendlyTitleLookup" xmlns:HrefAppend="urn:HrefExtensions">
+      <div class="supARG-row">
+        <div class="supARG-column-1-4">
+          <p>
+<img src="https://support.content.office.net/zh-cn/media/e8353844-a8a1-4be1-8fca-18c6281bfb14.jpg" alt="一位女士和一位男士在一起工作" />
+</p>
+        </div>
+        <div class="supARG-column-1-4">
+          <p>
+            <b class="ocpLegacyBold">Microsoft 365 培训中心</b>
+          </p>
+          <p>使用这些 Microsoft 365 视频、教程和资源，快速实现高效工作。</p>
+          <p>
+            <a href="https://support.microsoft.com/training" target="_blank" class="ocpExternalLink supHomeAndLandingPageCTA">浏览培训选项</a>
+          </p>
+        </div>
+        <div class="supARG-column-1-4">
+          <p>
+<img src="https://support.content.office.net/zh-cn/media/a5fbc181-668c-4909-9702-6bdcbc033ef7.jpg" alt="一位微笑的男士" />
+</p>
+          <p />
+        </div>
+        <div class="supARG-column-1-4">
+          <p>
+            <b class="ocpLegacyBold">Microsoft 提示</b>
+          </p>
+          <p>浏览最新提示，以充分利用 Microsoft 产品。</p>
+          <p>
+            <a href="https://www.microsoft.com/tips/home" target="_blank" class="ocpExternalLink supHomeAndLandingPageCTA">获取有关 WINDOWS、SURFACE 和更多内容的提示</a>
+          </p>
+        </div>
+      </div>
+      <div class="supARG-row">
+        <div class="supARG-column-1-4">
+          <p>
+<img src="https://support.content.office.net/zh-cn/media/0c32de74-aabe-4cbe-8438-81fde48ce460.jpg" alt="一位老人戴着耳机并且正在使用电脑" />
+</p>
+        </div>
+        <div class="supARG-column-1-4">
+          <p>
+            <b class="ocpLegacyBold">辅助功能</b>
+          </p>
+          <p>了解有关辅助功能的详细信息，并对电脑进行个性化设置。</p>
+          <p>
+            <a href="https://support.microsoft.com/hub/4339839" target="_blank" class="ocpExternalLink supHomeAndLandingPageCTA">了解有关辅助功能的详细信息</a>
+          </p>
+        </div>
+        <div class="supARG-column-1-4">
+          <p>
+<img src="https://support.content.office.net/zh-cn/media/b359483c-b210-42fa-bc2d-da8b9a9b5fd6.jpg" alt="一位男士使用 Windows 10 笔记本电脑工作" />
+</p>
+        </div>
+        <div class="supARG-column-1-4">
+          <p>
+            <b class="ocpLegacyBold">Windows 10 中有哪些新增功能</b>
+          </p>
+          <p>Windows 更新可帮助你管理时间、提高安全性，并通过 Windows 10 获得更多创意。</p>
+          <p>
+            <a href="https://support.microsoft.com/help/4043948/" target="_blank" class="ocpExternalLink supHomeAndLandingPageCTA">查看 Windows 10 中有哪些新增功能</a>
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+</article>
+						</div>
+					</div>
+					<div class="supHomeAndLandingPageModuleThemeWrapper">
+						<div class="supHomeAndLandingPageModule grd zero-margin" ms.cmpgrp="module_4" data-bi-area="module_4" data-bi-compID="382f6c0f-15a8-4597-b97c-599369910dd7">
+							<article class="ocpArticleContent">
+  <section class="ocpSection">
+    <h2>更多支持选项</h2>
+    <div class="supARG" xmlns:AntiXSS="urn:AntiXSSExtensions" xmlns:FriendlyTitleLookup="urn:FriendlyTitleLookup" xmlns:HrefAppend="urn:HrefExtensions">
+      <div class="supARG-row">
+        <div class="supARG-column-1-4">
+          <a name="___toc___1_s" aria-hidden="true">	</a>
+          <ul class="ocpTOC">
+            <li>
+              <p>
+                <a href="https://support.microsoft.com/contactus" target="_blank" class="ocpExternalLink">联系我们</a>
+              </p>
+            </li>
+            <li>
+              <p>
+                <a href="https://answers.microsoft.com/" target="_blank" class="ocpExternalLink">咨询社区</a>
+              </p>
+            </li>
+          </ul>
+        </div>
+        <div class="supARG-column-1-4">
+          <a name="___toc___2_s" aria-hidden="true">	</a>
+          <ul class="ocpTOC">
+            <li>
+              <p>
+                <a href="https://support.microsoft.com/hub/4343728/support-for-business" target="_blank" class="ocpExternalLink">业务支持</a>
+              </p>
+            </li>
+            <li>
+              <p>
+                <a href="https://support.microsoft.com/security" target="_blank" class="ocpExternalLink">安全性</a>
+              </p>
+            </li>
+          </ul>
+        </div>
+        <div class="supARG-column-1-4">
+          <a name="___toc___3_s" aria-hidden="true">	</a>
+          <ul class="ocpTOC">
+            <li>
+              <p>
+                <a href="https://docs.microsoft.com/office365/admin/admin-home" target="_blank" class="ocpExternalLink">IT 专业人员和管理员</a>
+              </p>
+            </li>
+            <li>
+              <p>
+                <a href="https://www.microsoft.com/concern/privacy" target="_blank" class="ocpExternalLink">报告隐私问题</a>
+              </p>
+            </li>
+          </ul>
+        </div>
+        <div class="supARG-column-1-4">
+          <a name="___toc___4_s" aria-hidden="true">	</a>
+          <ul class="ocpTOC">
+            <li>
+              <p>
+                <a href="" target="_blank" class="ocpExternalLink">Microsoft YouTube 帮助https://www.youtube.com/c/MicrosoftCustomerSupport</a>
+              </p>
+            </li>
+            <li>
+              <p>
+                <a href="https://www.microsoft.com/reportascam/" target="_blank" class="ocpExternalLink">举报支持欺诈</a>
+              </p>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+</article>
+						</div>
+					</div>
+					</div>
+	</div>
+</div>
+
+<input id="ocSearchDefaultText" type="hidden" value="搜索" placeholder="搜索" />
+
+
+
+
+
+
+		</div>
+	</div>
+
+
+
+    <div id="footerArea" class="uhf"  data-m='{"cN":"footerArea","cT":"Area_coreuiArea","id":"a2Body","sN":2,"aN":"Body"}'>
+                <div id="footerRegion"     data-region-key="footerregion" data-m='{"cN":"footerRegion","cT":"Region_coreui-region","id":"r1a2","sN":1,"aN":"a2"}' >
+
+    <div  id="footerUniversalFooter" data-m='{"cN":"footerUniversalFooter","cT":"Module_coreui-universalfooter","id":"m1r1a2","sN":1,"aN":"r1a2"}'  data-module-id="Category|footerRegion|coreui-region|footerUniversalFooter|coreui-universalfooter">
+        
+
+
+
+<footer id="uhf-footer" class="c-uhff context-uhf"  data-uhf-mscc-rq="false" data-footer-footprint="/SMCConvergence/MSSMCConvergenceFooter, fromService: True" data-m='{"cN":"Uhf footer_cont","cT":"Container","id":"c1m1r1a2","sN":1,"aN":"m1r1a2"}'>
+        <nav class="c-uhff-nav" aria-label="页脚资源链接" data-m='{"cN":"Footer nav_cont","cT":"Container","id":"c1c1m1r1a2","sN":1,"aN":"c1m1r1a2"}'>
+            
+                <div class="c-uhff-nav-row">
+                    <div class="c-uhff-nav-group" data-m='{"cN":"footerNavColumn1_cont","cT":"Container","id":"c1c1c1m1r1a2","sN":1,"aN":"c1c1m1r1a2"}'>
+                        <div class="c-heading-4" role="heading" aria-level="4">新增内容</div>
+                        <ul class="c-list f-bare">
+                            <li>
+                                <a aria-label="Microsoft 365 新增内容" class="c-uhff-link" href="https://www.microsoft.com/microsoft-365" data-m='{"cN":"Whatsnew_Microsoft365_nav","id":"n1c1c1c1m1r1a2","sN":1,"aN":"c1c1c1m1r1a2"}'>Microsoft 365</a>
+                            </li>
+                            <li>
+                                <a aria-label="Surface Pro 6 新增内容" class="c-uhff-link" href="https://www.microsoft.com/zh-cn/surface/devices/surface-pro-6" data-m='{"cN":"Footer_WhatsNew_NewSurfacePro6_nav","id":"n2c1c1c1m1r1a2","sN":2,"aN":"c1c1c1m1r1a2"}'>Surface Pro 6</a>
+                            </li>
+                            <li>
+                                <a aria-label="Surface Laptop 2 新增内容" class="c-uhff-link" href="https://www.microsoft.com/zh-cn/surface/devices/surface-laptop-2" data-m='{"cN":"Footer_WhatsNew_SurfaceLaptop2_nav","id":"n3c1c1c1m1r1a2","sN":3,"aN":"c1c1c1m1r1a2"}'>Surface Laptop 2</a>
+                            </li>
+                            <li>
+                                <a aria-label="Surface Go 新增内容" class="c-uhff-link" href="https://www.microsoft.com/zh-cn/surface/devices/surface-go" data-m='{"cN":"Footer_WhatsNew_SurfaceGo_nav","id":"n4c1c1c1m1r1a2","sN":4,"aN":"c1c1c1m1r1a2"}'>Surface Go</a>
+                            </li>
+                            <li>
+                                <a aria-label="Windows 10 应用程序 新增内容" class="c-uhff-link" href="https://www.microsoft.com/zh-cn/windows/windows-10-apps" data-m='{"cN":"Footer_WhatsNew_Windows_10_apps_nav","id":"n5c1c1c1m1r1a2","sN":5,"aN":"c1c1c1m1r1a2"}'>Windows 10 应用程序</a>
+                            </li>
+
+                        </ul>
+                        
+                    </div>
+                    <div class="c-uhff-nav-group" data-m='{"cN":"footerNavColumn2_cont","cT":"Container","id":"c2c1c1m1r1a2","sN":2,"aN":"c1c1m1r1a2"}'>
+                        <div class="c-heading-4" role="heading" aria-level="4">Microsoft Store</div>
+                        <ul class="c-list f-bare">
+                            <li>
+                                <a aria-label="帐户个人资料 Microsoft Store" class="c-uhff-link" href="https://account.microsoft.com/" data-m='{"cN":"Footer_StoreandSupport_AccountProfile_nav","id":"n1c2c1c1m1r1a2","sN":1,"aN":"c2c1c1m1r1a2"}'>帐户个人资料</a>
+                            </li>
+                            <li>
+                                <a aria-label="下载中心 Microsoft Store" class="c-uhff-link" href="https://www.microsoft.com/zh-cn/download" data-m='{"cN":"Footer_StoreandSupport_DownloadCenter_nav","id":"n2c2c1c1m1r1a2","sN":2,"aN":"c2c1c1m1r1a2"}'>下载中心</a>
+                            </li>
+                            <li>
+                                <a aria-label="订单跟踪 Microsoft Store" class="c-uhff-link" href="https://account.microsoft.com/orders" data-m='{"cN":"Footer_StoreandSupport_OrderTracking_nav","id":"n3c2c1c1m1r1a2","sN":3,"aN":"c2c1c1m1r1a2"}'>订单跟踪</a>
+                            </li>
+
+                        </ul>
+                        
+                    </div>
+                    <div class="c-uhff-nav-group" data-m='{"cN":"footerNavColumn3_cont","cT":"Container","id":"c3c1c1m1r1a2","sN":3,"aN":"c1c1m1r1a2"}'>
+                        <div class="c-heading-4" role="heading" aria-level="4">教育</div>
+                        <ul class="c-list f-bare">
+                            <li>
+                                <a aria-label="Microsoft 教育领域 教育" class="c-uhff-link" href="https://www.microsoft.com/zh-cn/education" data-m='{"cN":"Footer_Education_MicrosoftInEducation_nav","id":"n1c3c1c1m1r1a2","sN":1,"aN":"c3c1c1m1r1a2"}'>Microsoft 教育领域</a>
+                            </li>
+                            <li>
+                                <a aria-label="适合学生的 Office 教育" class="c-uhff-link" href="https://www.microsoft.com/zh-cn/education/products/office/default.aspx" data-m='{"cN":"Footer_Education_OfficeForStudents_nav","id":"n2c3c1c1m1r1a2","sN":2,"aN":"c3c1c1m1r1a2"}'>适合学生的 Office</a>
+                            </li>
+                            <li>
+                                <a aria-label="适用于学校的 Office 365 教育" class="c-uhff-link" href="https://products.office.com/zh-cn/academic/compare-office-365-education-plans" data-m='{"cN":"Footer_Education_Office365ForSchools_nav","id":"n3c3c1c1m1r1a2","sN":3,"aN":"c3c1c1m1r1a2"}'>适用于学校的 Office 365</a>
+                            </li>
+                            <li>
+                                <a aria-label="Microsoft Azure 教育领域 教育" class="c-uhff-link" href="https://azure.microsoft.com/zh-cn/community/education/" data-m='{"cN":"Footer_MicrosoftAzureInEducation_nav","id":"n4c3c1c1m1r1a2","sN":4,"aN":"c3c1c1m1r1a2"}'>Microsoft Azure 教育领域</a>
+                            </li>
+
+                        </ul>
+                        
+                    </div>
+                </div>
+                <div class="c-uhff-nav-row">
+                    <div class="c-uhff-nav-group" data-m='{"cN":"footerNavColumn4_cont","cT":"Container","id":"c4c1c1m1r1a2","sN":4,"aN":"c1c1m1r1a2"}'>
+                        <div class="c-heading-4" role="heading" aria-level="4">企业</div>
+                        <ul class="c-list f-bare">
+                            <li>
+                                <a aria-label="Azure 企业" class="c-uhff-link" href="https://azure.microsoft.com/" data-m='{"cN":"Footer_Enterprise_MicrosoftAzure_nav","id":"n1c4c1c1m1r1a2","sN":1,"aN":"c4c1c1m1r1a2"}'>Azure</a>
+                            </li>
+                            <li>
+                                <a aria-label="AppSource 企业" class="c-uhff-link" href="https://go.microsoft.com/fwlink/?LinkID=808093" data-m='{"cN":"Footer_Enterprise_MicrosoftAppSource_nav","id":"n2c4c1c1m1r1a2","sN":2,"aN":"c4c1c1m1r1a2"}'>AppSource</a>
+                            </li>
+                            <li>
+                                <a aria-label="汽车 企业" class="c-uhff-link" href="https://www.microsoft.com/enterprise/automotive" data-m='{"cN":"Footer_Enterprise_Automotive_nav","id":"n3c4c1c1m1r1a2","sN":3,"aN":"c4c1c1m1r1a2"}'>汽车</a>
+                            </li>
+                            <li>
+                                <a aria-label="政府机构 企业" class="c-uhff-link" href="https://www.microsoft.com/enterprise/government" data-m='{"cN":"Footer_Enterprise_Government_nav","id":"n4c4c1c1m1r1a2","sN":4,"aN":"c4c1c1m1r1a2"}'>政府机构</a>
+                            </li>
+                            <li>
+                                <a aria-label="医疗保健 企业" class="c-uhff-link" href="https://www.microsoft.com/enterprise/health" data-m='{"cN":"Footer_Enterprise_Health_nav","id":"n5c4c1c1m1r1a2","sN":5,"aN":"c4c1c1m1r1a2"}'>医疗保健</a>
+                            </li>
+                            <li>
+                                <a aria-label="制造业 企业" class="c-uhff-link" href="https://www.microsoft.com/enterprise/manufacturing" data-m='{"cN":"Footer_Enterprise_Manufacturing_nav","id":"n6c4c1c1m1r1a2","sN":6,"aN":"c4c1c1m1r1a2"}'>制造业</a>
+                            </li>
+                            <li>
+                                <a aria-label="金融服务 企业" class="c-uhff-link" href="https://www.microsoft.com/enterprise/financial-services/banking-and-capital-markets" data-m='{"cN":"Footer_Enterprise_FinanciaServices_nav","id":"n7c4c1c1m1r1a2","sN":7,"aN":"c4c1c1m1r1a2"}'>金融服务</a>
+                            </li>
+                            <li>
+                                <a aria-label="零售业 企业" class="c-uhff-link" href="https://www.microsoft.com/enterprise/retail-consumer-goods" data-m='{"cN":"Footer_Enterprise_Retail_nav","id":"n8c4c1c1m1r1a2","sN":8,"aN":"c4c1c1m1r1a2"}'>零售业</a>
+                            </li>
+
+                        </ul>
+                        
+                    </div>
+                    <div class="c-uhff-nav-group" data-m='{"cN":"footerNavColumn5_cont","cT":"Container","id":"c5c1c1m1r1a2","sN":5,"aN":"c1c1m1r1a2"}'>
+                        <div class="c-heading-4" role="heading" aria-level="4">开发人员</div>
+                        <ul class="c-list f-bare">
+                            <li>
+                                <a aria-label="Microsoft Visual Studio 开发人员" class="c-uhff-link" href="https://visualstudio.microsoft.com/" data-m='{"cN":"Footer_Developer_MicrosoftVisualStudio_nav","id":"n1c5c1c1m1r1a2","sN":1,"aN":"c5c1c1m1r1a2"}'>Microsoft Visual Studio</a>
+                            </li>
+                            <li>
+                                <a aria-label="Windows 开发人员中心 开发人员" class="c-uhff-link" href="https://developer.microsoft.com/zh-cn/windows" data-m='{"cN":"Footer_Developer_WindowsDevCenter_nav","id":"n2c5c1c1m1r1a2","sN":2,"aN":"c5c1c1m1r1a2"}'>Windows 开发人员中心</a>
+                            </li>
+                            <li>
+                                <a aria-label="开发人员中心 开发人员" class="c-uhff-link" href="https://developer.microsoft.com/" data-m='{"cN":"Footer_Developer_DeveloperCenter_nav","id":"n3c5c1c1m1r1a2","sN":3,"aN":"c5c1c1m1r1a2"}'>开发人员中心</a>
+                            </li>
+                            <li>
+                                <a aria-label="Microsoft 开发人员计划 开发人员" class="c-uhff-link" href="https://developer.microsoft.com/zh-cn/store/register" data-m='{"cN":"Footer_Developer_MicrosoftDeveloperProgram_nav","id":"n4c5c1c1m1r1a2","sN":4,"aN":"c5c1c1m1r1a2"}'>Microsoft 开发人员计划</a>
+                            </li>
+                            <li>
+                                <a aria-label="第9频道 开发人员" class="c-uhff-link" href="https://channel9.msdn.com/" data-m='{"cN":"Footer_Developer_Channel9_nav","id":"n5c5c1c1m1r1a2","sN":5,"aN":"c5c1c1m1r1a2"}'>第9频道</a>
+                            </li>
+                            <li>
+                                <a aria-label="Office 开发人员中心 开发人员" class="c-uhff-link" href="https://developer.microsoft.com/zh-cn/office" data-m='{"cN":"Footer_Developer_OfficeDevCenter_nav","id":"n6c5c1c1m1r1a2","sN":6,"aN":"c5c1c1m1r1a2"}'>Office 开发人员中心</a>
+                            </li>
+
+                        </ul>
+                        
+                    </div>
+                    <div class="c-uhff-nav-group" data-m='{"cN":"footerNavColumn6_cont","cT":"Container","id":"c6c1c1m1r1a2","sN":6,"aN":"c1c1m1r1a2"}'>
+                        <div class="c-heading-4" role="heading" aria-level="4">公司</div>
+                        <ul class="c-list f-bare">
+                            <li>
+                                <a aria-label="招贤纳士 公司" class="c-uhff-link" href="https://careers.microsoft.com/" data-m='{"cN":"Footer_Company_Careers_nav","id":"n1c6c1c1m1r1a2","sN":1,"aN":"c6c1c1m1r1a2"}'>招贤纳士</a>
+                            </li>
+                            <li>
+                                <a aria-label="关于 Microsoft 公司" class="c-uhff-link" href="https://www.microsoft.com/zh-cn/about" data-m='{"cN":"Footer_Company_AboutMicrosoft_nav","id":"n2c6c1c1m1r1a2","sN":2,"aN":"c6c1c1m1r1a2"}'>关于 Microsoft</a>
+                            </li>
+                            <li>
+                                <a aria-label="公司新闻 公司" class="c-uhff-link" href="https://news.microsoft.com/zh-cn" data-m='{"cN":"Footer_Company_CompanyNews_nav","id":"n3c6c1c1m1r1a2","sN":3,"aN":"c6c1c1m1r1a2"}'>公司新闻</a>
+                            </li>
+                            <li>
+                                <a aria-label="Microsoft 隐私 公司" class="c-uhff-link" href="https://privacy.microsoft.com/zh-cn" data-m='{"cN":"Footer_Company_PrivacyAtMicrosoft_nav","id":"n4c6c1c1m1r1a2","sN":4,"aN":"c6c1c1m1r1a2"}'>Microsoft 隐私</a>
+                            </li>
+                            <li>
+                                <a aria-label="投资人 公司" class="c-uhff-link" href="https://www.microsoft.com/investor/default.aspx" data-m='{"cN":"Footer_Company_Investors_nav","id":"n5c6c1c1m1r1a2","sN":5,"aN":"c6c1c1m1r1a2"}'>投资人</a>
+                            </li>
+                            <li>
+                                <a aria-label="安全性 公司" class="c-uhff-link" href="https://www.microsoft.com/zh-cn/security/default.aspx" data-m='{"cN":"Footer_Company_Security_nav","id":"n6c6c1c1m1r1a2","sN":6,"aN":"c6c1c1m1r1a2"}'>安全性</a>
+                            </li>
+
+                        </ul>
+                        
+                    </div>
+                </div>
+        </nav>
+    <div class="c-uhff-base">
+                <a id="locale-picker-link" aria-label="内容语言选择器。当前设置为 中文(中国)" class="c-uhff-link c-uhff-lang-selector c-glyph glyph-world" href="https://support.microsoft.com/zh-cn/worldwide" data-m='{"cN":"locale_picker(CN)_nav","id":"n7c1c1m1r1a2","sN":7,"aN":"c1c1m1r1a2"}'>中文(中国)</a>
+
+        <nav aria-label="Microsoft 企业链接">
+            <ul class="c-list f-bare" data-m='{"cN":"Corp links_cont","cT":"Container","id":"c8c1c1m1r1a2","sN":8,"aN":"c1c1m1r1a2"}'>
+                                <li  id="c-uhff-footer_contactus">
+                    <a class="c-uhff-link" href="https://support.microsoft.com/contactus" data-mscc-ic="false" data-m='{"cN":"Footer_ContactUs_nav","id":"n1c8c1c1m1r1a2","sN":1,"aN":"c8c1c1m1r1a2"}'>与 Microsoft 联系</a>
+                </li>
+                <li  id="c-uhff-footer_privacyandcookies">
+                    <a class="c-uhff-link" href="https://go.microsoft.com/fwlink/?LinkId=521839" data-mscc-ic="false" data-m='{"cN":"Footer_PrivacyandCookies_nav","id":"n2c8c1c1m1r1a2","sN":2,"aN":"c8c1c1m1r1a2"}'>隐私</a>
+                </li>
+                <li class=" x-hidden" id="c-uhff-footer_managecookies">
+                    <a class="c-uhff-link" href="#" data-mscc-ic="false" data-m='{"cN":"Footer_ManageCookies_nav","id":"n3c8c1c1m1r1a2","sN":3,"aN":"c8c1c1m1r1a2"}'>管理 Cookie</a>
+                </li>
+                <li  id="c-uhff-footer_termsofuse">
+                    <a class="c-uhff-link" href="https://go.microsoft.com/fwlink/?LinkID=206977" data-mscc-ic="false" data-m='{"cN":"Footer_TermsOfUse_nav","id":"n4c8c1c1m1r1a2","sN":4,"aN":"c8c1c1m1r1a2"}'>使用条款</a>
+                </li>
+                <li  id="c-uhff-footer_trademarks">
+                    <a class="c-uhff-link" href="https://www.microsoft.com/trademarks" data-mscc-ic="false" data-m='{"cN":"Footer_Trademarks_nav","id":"n5c8c1c1m1r1a2","sN":5,"aN":"c8c1c1m1r1a2"}'>商标</a>
+                </li>
+                <li  id="c-uhff-footer_aboutourads">
+                    <a class="c-uhff-link" href="https://choice.microsoft.com/" data-mscc-ic="false" data-m='{"cN":"Footer_AboutourAds_nav","id":"n6c8c1c1m1r1a2","sN":6,"aN":"c8c1c1m1r1a2"}'>关于我们的广告</a>
+                </li>
+                <li  id="c-uhff-footer_special">
+                    <a class="c-uhff-link" href="http://www.beian.miit.gov.cn/" data-mscc-ic="false" data-m='{"cN":"Footer_Special_nav","id":"n7c8c1c1m1r1a2","sN":7,"aN":"c8c1c1m1r1a2"}'>京ICP备09042378号-6</a>
+                </li>
+                <li  id="c-uhff-footer_specialportal">
+                    <a class="c-uhff-link" href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=11010802023178" data-mscc-ic="false" data-m='{"cN":"Footer_SpecialPortal_nav","id":"n8c8c1c1m1r1a2","sN":8,"aN":"c8c1c1m1r1a2"}'>京公网安备 11010802023178</a>
+                </li>
+
+                <li>&#169; Microsoft 2021</li>
+                
+            </ul>
+        </nav>
+    </div>
+    
+</footer>
+
+
+
+
+    </div>
+        </div>
+
+    </div>
+
+
+	<script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.9.1.min.js"></script>
+<script>(window.jQuery)||document.write('<script src="/socbundles/jquery"><\/script>');</script>
+
+	
+
+
+	<script id="supResourcesScript" type="text/javascript">
+			$(function() {
+				if (occe && occe.Resources) {
+					occe.Resources.addLocalizedStrings({"L_ArticleTools_LiveIcon_Description":"Live button","L_ArticleTools_PreviewIcon_Description":"Preview button","L_TabControl_AriaLabel_FirstTab":"选项卡列表。有 {0} 个选项卡可用。","L_TabControl_AriaLabel_TabCollapsed":"{0}。已折叠。","L_TabControl_AriaLabel_TabExpanded":"{0}。已展开。","L_TabControl_AriaLabel_TabsOverflowDropdownIcon_Collapsed":"更多选项卡下拉列表。已折叠。按 Enter 键可展开下拉列表。","L_TabControl_AriaLabel_TabsOverflowDropdownIcon_Expanded":"更多选项卡下拉列表。已展开。按 Tab 键以通过可用选项卡进行导航。","L_CardControl_AriaLabel_DescriptiveCard_FooterText":"培训课程库。{0} 个培训课程(共 {1} 个)。{2}。每个课程有 {3} 个视频。按 Enter 键可启动课程，按 Tab 键可收听下一堂课。","L_CardControl_AriaLabel_DescriptiveCard_MinutesSeconds":"培训课程库。第 {0} 个培训课程，共 {1} 个。{2}。本课程共 {3} 分 {4} 秒。按 Enter 键启动课程，按 Tab 键收听下一课程。","L_CardControl_AriaLabel_DescriptiveCard_MinuteSeconds":"培训课程库。第 {0} 个培训课程，共 {1} 个。{2}。本课程共 {3} 分 {4} 秒。按 Enter 键启动课程，按 Tab 键收听下一课程。","L_CardControl_AriaLabel_DescriptiveCard_MinutesSecond":"培训课程库。第 {0} 个培训课程，共 {1} 个。{2}。本课程共 {3} 分 {4} 秒。按 Enter 键启动课程，按 Tab 键收听下一课程。","L_CardControl_AriaLabel_DescriptiveCard_MinuteSecond":"培训课程库。第 {0} 个培训课程，共 {1} 个。{2}。本课程共 {3} 分 {4} 秒。按 Enter 键启动课程，按 Tab 键收听下一课程。","L_CardControl_AriaLabel_Card_FooterText":"{0} 个课程(共 {1} 个)。{2}。存在 {3} 个视频。按 Enter 键可启动视频。","L_CardControl_AriaLabel_Card_MinutesSeconds":"第 {0} 个课程，共 {1} 个。{2}。课程长度: {3} 分 {4} 秒。","L_CardControl_AriaLabel_Card_MinuteSeconds":"第 {0} 个课程，共 {1} 个。{2}。课程长度: {3} 分 {4} 秒。","L_CardControl_AriaLabel_Card_MinutesSecond":"第 {0} 个课程，共 {1} 个。{2}。课程长度: {3} 分 {4} 秒。","L_CardControl_AriaLabel_Card_MinuteSecond":"第 {0} 个课程，共 {1} 个。{2}。课程长度: {3} 分 {4} 秒。","L_CardControl_AriaLabel_PreviousButton":"按 Enter 键收听之前的课程。","L_CardControl_AriaLabel_NextButton":"按 Enter 键收听更多可听课程。","L_EditInC3":"edit","L_IA_Feedback_Recorded":"感谢你提供反馈。","L_TrainingTips_AriaLabel_NextArrow":"按 Enter 键收听下一提示。","L_TrainingTips_AriaLabel_PrevArrow":"按 Enter 键收听上一提示。","L_TrainingTips_AriaLabel_Close":"对话框关闭按钮。按 Enter 键可折叠提示对话框。","L_LanguageFeedbackLoop_ImproveTranslation":"改进翻译","L_LanguageFeedbackLoop_SubmitSuggestion":"提交","L_LanguageFeedbackLoop_CancelSuggestionDialog":"取消","L_LanguageFeedbackLoop_SuggestionDisclaimer":"Microsoft 会收集你的反馈信息，并使用它来改进用户体验。若要保护你的隐私，请不要在你的反馈中包含个人信息。","L_LanguageFeedbackLoop_Acknowledgement":"感谢你的建议。我们非常感谢你帮助我们提供更好的翻译。","L_LanguageFeedbackLoop_CloseAcknowledgementDialog":"关闭","L_Floodgate_FollowUpQuestion_Question":"还有其他可帮助我们改进的反馈吗?","L_Floodgate_Prompt_Title":"我们期待你提供关于 Office 帮助的反馈！","L_Floodgate_Prompt_Question":"只需回答两个问题即可。","L_Floodgate_Prompt_YesLabel":"是的","L_Floodgate_Prompt_NoLabel":"不是现在 ","L_Floodgate_Question_LanguageQuality":"你对该网站的“帮助与培训”部分中的翻译质量的满意度如何? (例如用词, 风格太正式或太随意, 难以理解等等)","L_Floodgate_Question_TellUsMoreWhy":"请提供详细信息. 你为何选择此答案?","L_Floodgate_Rating_Question":"你使用 Office 帮助和培训网站的整体体验如何?","L_Floodgate_Rating_Value_1":"1—差","L_Floodgate_Rating_Value_5":"5—极好","L_Floodgate_Rating_Verbose_1":"非常不满意","L_Floodgate_Rating_Verbose_2":"不满意","L_Floodgate_Rating_Verbose_3":"中立","L_Floodgate_Rating_Verbose_4":"满意","L_Floodgate_Rating_Verbose_5":"非常满意"});
+					occe.Resources.addSettings({"OdcSup_C3EntryPoint_Enabled":"True","OdcSup_C3EntryPoint_UrlFormat":"https://c3web.trafficmanager.net/topic/{0}","OdcSup_Content_Route_Prefix":"SocContent","OdcSup_ContextTabActivation_SignIn":"True","OdcSup_FloodgateSurvey_Environment":"0","OdcSup_FloodgateSurveyService_Rollout_Enabled":"True","OdcSup_InAppLeftNav_UseOnlyExternalArticleLinks":"True","OdcSup_InAppSearchUX_LimitSearchBoxEnabled":"False","OdcSup_Script_Route_Prefix":"SocScripts","OdcSup_VideoPlayer_SetIframeDomain":"False","OdcSup_WhatsNew_EnabledHelpIds":"148810,76874,148810,76874,148810,76874,148810,76874,148810,76874,148810,76874,148810,76874,148810,76874,148810,76874,148810,76874,148810,76874,148810,76874,148810,76874,148810,76874,148810,76874,148810,76874,148810,76874,148810,76874,148810,76874,148810,76874,148810,76874,148810,76874,148810,76874,148810,76874,148810,76874,148810,76874,148810,76874,148810,76874,148810,76874,148810,76874,148810,76874,148810,76874,148810,76874,148810,76874,148810,76874,148810,76874,148810,76874,148810,76874,148810,76874,148810,76874","OdcSup_FloodgateSurvey_CampaignId":"8a3be85e-d31e-47cb-955a-9e6ab77a3ff8","OdcSup_FloodgateSurvey_StartTimeUtc":"2020-07-20T00:00:00Z","OdcSup_FloodgateSurvey_EndTimeUtc":"2021-07-20T00:00:00Z","OdcSup_FloodgateSurvey_GovernedChannelType":"0","OdcSup_FloodgateSurvey_NominationPercentage":"15","OdcSup_FloodgateSurvey_NominationPeriod":"2592000","OdcSup_FloodgateSurvey_CooldownPeriod":"233280000","OdcSup_FloodgateSurvey_ActivationActivity":"AppUsageTime","OdcSup_FloodgateSurvey_ActivationActivityCount":"180","OdcSup_FloodgateSurvey_ActivityInterval":"1000"});
+				}
+			});
+	</script>
+
+
+
+
+
+<script src="https://wcpstatic.microsoft.com/mscc/lib/v2/wcp-consent.js"></script><script src="https://www.microsoft.com/onerfstatics/marketingsites-eas-prod/shell/_scrf/js/themes=default/54-af9f9f/c0-247156/de-099401/e1-a50eee/e7-954872/d8-97d509/f0-251fe2/46-be1318/77-04a268/11-240c7b/63-077520/a4-34de62/bb-d7480b/db-bc0148/dc-7e9864/6d-c07ea1/9d-b58f60/f6-aa5278/cd-23d3b0/6d-1e7ed0/b7-cadaa7/c4-898cf2/ca-40b7b0/4e-ee3a55/3e-f5c39b/c3-6454d7/f9-7592d3/92-10345d/79-499886/7e-cda2d3/69-13871c/b7-0ad59f/e0-3c9860/91-97a04f/1f-100dea/33-abe4df/17-f90ef1?ver=2.0&_cf=20210415&iife=1"></script><script src="https://mem.gfx.ms/meversion?partner=SMCConvergence&market=zh-cn&uhf=1" defer></script>			<script type="text/javascript">
+				$(function() {
+					var msPageAreaValue = "Header";
+					var msSignInInteractionValue = "11";
+					var wcsSignInTextValue = "Sign in";
+
+					var shellOptions = function() {
+						return {
+							currentMenuItemId: 'shell-main-tab',
+							meControlOptions: {
+								rpData: {
+									msaInfo: {
+										signInUrl: "https://login.live.com/login.srf?wa=wsignin1.0\u0026rpsnv=13\u0026ct=1620310936\u0026rver=7.3.6963.0\u0026wp=MBI_SSL\u0026wreply=https:%2F%2Fsupport.microsoft.com%2Fauthredir%3Furl%3Dhttps%253a%252f%252fsupport.microsoft.com%253a443%252fzh-cn%253fui%253dzh-CN%2526rs%253dzh-CN%2526ad%253dCN%26hurl%3DKxiya6%252fwJpaLNaVn%252b1fH4fDY%252b00a359Jo3cBK6DG0Gk%253d.lle1teNH4vXeaqonV7709PqlWut46OxSNwVLaxjtmNQ%253d%26ipt%3D0%26sn%3Dalternate%26si%3D1%26wctx%3Dcd066422-8c4d-42ee-b5b8-beb99f144d0e\u0026lc=1033\u0026id=288908\u0026aadredir=1",
+										signOutUrl: "https://login.live.com/logout.srf?ct=1620310937\u0026rver=7.3.6963.0\u0026lc=1033\u0026id=288908\u0026ru=https:%2F%2Fsupport.microsoft.com%2Fauthredir%3Furl%3Dhttps%253a%252f%252fsupport.microsoft.com%253a443%252fzh-cn%253fui%253dzh-CN%2526rs%253dzh-CN%2526ad%253dCN%26hurl%3DKxiya6%252fwJpaLNaVn%252b1fH4fDY%252b00a359Jo3cBK6DG0Gk%253d.lle1teNH4vXeaqonV7709PqlWut46OxSNwVLaxjtmNQ%253d%26ipt%3D0%26sn%3Dalternate%26so%3D1"
+									},
+									aadInfo: {
+										signInUrl: "https://login.microsoftonline.com/common/oauth2/authorize?response_mode=form_post\u0026response_type=id_token+code\u0026scope=openid\u0026nonce=896cb750-99ea-47f6-a584-02e98d395e42.637559077363750761\u0026state=https:%2f%2fsupport.microsoft.com%2fzh-cn%3fui%3dzh-CN%26rs%3dzh-CN%26ad%3dCN\u0026client_id=4b233688-031c-404b-9a80-a4f3f2351f90\u0026redirect_uri=https:%2f%2fsupport.microsoft.com%2fauth%2fsignin",
+										signOutUrl: ""
+									},
+									preferredIdp: window.msCommonShell.SupportedAuthIdp.MSA
+								},
+								userData: {
+								},
+								events: {
+									onEventLog: function (eventId) {
+										if (eventId.toLowerCase() === "signin") {
+											var tags = {
+												actionType: 'CL',
+												content: { contentName: 'Sign in button', areaName: 'Me control header' }
+											}
+
+											if (typeof window.awa === 'object') {
+												tags['behavior'] = window.awa.behavior.SIGNIN;
+												awa.ct.captureContentPageAction(tags);
+											}
+
+											if (typeof window.analytics === 'object') {
+												tags['behavior'] = oneDS.Behavior.SIGNIN;
+												window.analytics.capturePageAction(null, tags, null);
+											}
+										}
+									}
+								}
+							},
+							events: {
+								onSearch: function (searchForm) {
+									occe.AutoSuggestSearchEvent(searchForm, msPageAreaValue, 'false');
+								}
+							},
+							as: {
+								callback: function () {}
+							}
+						};
+					};
+
+					// If msCommonShell already exists, load it
+					if (window.msCommonShell) {
+						window.msCommonShell.load(shellOptions());
+					}
+
+					// If msCommonShell doesn't yet exist...
+					else {
+
+						// Load the me control once msCommonShell is ready
+						window.onShellReadyToLoad = function () {
+							window.onShellReadyToLoad = null;
+							window.msCommonShell.load(shellOptions());
+						};
+					}
+
+					// Append returnURL query param to change language control on footer
+					// Add returnURL to click instead of updating the URL to hide the encoded return url on hover over change language control
+					(function () {
+						var returnUrlForChangeLanguageHref = window.location.href;
+						var $idOfChangeLanguageonFooter = $('#locale-picker-link');
+						var hrefOfChangeLanguageOnFooter = $idOfChangeLanguageonFooter.attr('href');
+
+						if (hrefOfChangeLanguageOnFooter) {
+							$idOfChangeLanguageonFooter.on('click keypress', function (e) {
+								e.preventDefault();
+								if (occe.eventHelpers.eventIsClick(e) || occe.eventHelpers.eventIsEnterKeypress(e)) {
+									var newChangeLanguageOnFooterUrl = occe.updateQueryStringParameter('returnURL', encodeURIComponent(returnUrlForChangeLanguageHref), hrefOfChangeLanguageOnFooter);
+									window.location.href = newChangeLanguageOnFooterUrl;
+								}
+							});
+						}
+					})();
+				});
+			</script>
+				<iframe src="https://login.microsoftonline.com/common/oauth2/authorize?response_mode=form_post&amp;response_type=id_token+code&amp;scope=openid&amp;nonce=896cb750-99ea-47f6-a584-02e98d395e42.637559077363750761&amp;state=https:%2f%2fsupport.microsoft.com%2fzh-cn%2fhome%2fbackgroundauth%3fprovider%3dAAD%26end%3dFalse&amp;client_id=4b233688-031c-404b-9a80-a4f3f2351f90&amp;redirect_uri=https:%2f%2fsupport.microsoft.com%2fauth%2fsignin&amp;prompt=none" width="1" height="1" style="display: none"></iframe>
+
+<script src="https://wcpstatic.microsoft.com/mscc/lib/v2/wcp-consent.js"></script><script src="https://www.microsoft.com/onerfstatics/marketingsites-eas-prod/shell/_scrf/js/themes=default/54-af9f9f/c0-247156/de-099401/e1-a50eee/e7-954872/d8-97d509/f0-251fe2/46-be1318/77-04a268/11-240c7b/63-077520/a4-34de62/bb-d7480b/db-bc0148/dc-7e9864/6d-c07ea1/9d-b58f60/f6-aa5278/cd-23d3b0/6d-1e7ed0/b7-cadaa7/c4-898cf2/ca-40b7b0/4e-ee3a55/3e-f5c39b/c3-6454d7/f9-7592d3/92-10345d/79-499886/7e-cda2d3/69-13871c/b7-0ad59f/e0-3c9860/91-97a04f/1f-100dea/33-abe4df/17-f90ef1?ver=2.0&_cf=20210415&iife=1"></script><script src="https://mem.gfx.ms/meversion?partner=SMCConvergence&market=zh-cn&uhf=1" defer></script>			<script type="text/javascript">
+				$(function() {
+				})
+			</script>
+
+	<script src="/socbundles/support?v=PmiEda7Wf1t8LMZ0o9LlwJapqg4xqCjnxZtzAahsuyI1"></script>
+
+
+<script defer src="/socbundles/topNav?v=XYJZrw0yvSWJRlrR7vC3uLGzcXwCX5AMXhrSLUSZJ9s1"></script>
+
+<script defer src="/socbundles/autoSuggest?v=TrjWgBpbqSVnsY8NWPkXzoT_DDPbXdmWeLTXcH2lyLw1"></script>
+
+	
+<script defer src="/socbundles/homepage?v=N9X8CpttuYxA-WFpR7qNVSOFmakQgOkiPCC654V5KjU1"></script>
+<script defer src="/socbundles/article?v=w1GFAIVBbeUiYiYl1KtCYe1TxjqHWHl0RLhe2msophI1"></script>
+
+
+	
+		<script type="text/javascript" src="//videoplayercdn.osi.office.net/s/js/vxp.js" defer referrerpolicy="no-referrer-when-downgrade"></script>
+
+
+<script type="text/javascript">
+(function () {
+	var config = {
+		syncMuid: typeof window.siteConsent !== "undefined" ? window.siteConsent.getConsentFor(WcpConsent.consentCategories.Analytics) : typeof window.mscc !== "undefined" ? window.mscc.hasConsent() : false,
+		autoCapture: {
+			assets: false,
+			scroll: false,
+			resize: true,
+			addin: navigator.userAgent.search("MSAppHost") === -1	// If we are running in a WinRT host, disable collection of addins - causes APPHOST9603 error
+		},
+		coreData: {
+			appId: 'support.office.com',
+			pageName: "",
+			pageTags: {}
+		},
+		isLoggedIn: false,
+		authMethod: Number(0),
+		callback: {
+			pageViewPageTags: returnPageInfo,
+			pageActionPageTags: returnPageInfo,
+			contentUpdatePageTags: returnPageInfo,
+			userConsentDetailsCallback: function () {
+				return window.siteConsent ? window.siteConsent.getConsent() : null;
+			}
+		}
+	};
+
+	if (document.getElementsByClassName('ocpEditArticleLink').length > 0) {
+		config.coreData.pageTags['ver'] = 'editShown';
+	}
+
+
+	awa.init(config);
+
+	function returnPageInfo() {
+		return config.coreData.pageTags;
+	};
+})();
+</script>
+<script type="text/javascript">
+	(function () {
+		window.analytics = new oneDS.ApplicationInsights();
+		var config = {
+			instrumentationKey: "83328b3c5ab7488692991e7d63483cff-e640bd11-2392-49b1-b739-ed8e62bcb870-7240",
+			channelConfiguration:{ // Post channel configuration
+				eventsLimitInMem: 50
+			},
+			webAnalyticsConfiguration:{ // Web Analytics Plugin configuration
+				autoCapture: {
+					pageView: true,
+					onLoad: true,
+					onUnload: true,
+					click: true,
+					resize: true,
+					jsError: true
+				},
+				isLoggedIn: false,
+				urlCollectHash: true,
+				urlCollectQuery: true,
+				useShortNameForContentBlob: false, //TODO vso 4857604(acheng): update property to allow mix mode
+				syncMuid: typeof window.siteConsent !== "undefined" ? window.siteConsent.getConsentFor(WcpConsent.consentCategories.Analytics) : typeof window.mscc !== "undefined" ? window.mscc.hasConsent() : false
+			}
+		};
+
+		window.analytics.initialize(config, []);
+	})();
+</script>
+<script defer src="/socbundles/floodgate?v=N7a-gpEJQkN6bthY4nvjISnR62g8lnmiDB2WXm1P3aI1"></script>
+</body>
+</html>
