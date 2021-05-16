@@ -200,11 +200,5 @@ namespace homework08_1
 
 
 
-    class Program
-    {
-        static void Main(string[] args)
-        {
-
-        }
-    }
+   
 }
