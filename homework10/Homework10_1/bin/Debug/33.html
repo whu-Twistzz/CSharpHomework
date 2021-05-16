@@ -1,0 +1,671 @@
+﻿<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="referrer" content="origin-when-crossorigin" />
+    
+    
+    <meta http-equiv="Cache-Control" content="no-transform" />
+    <meta http-equiv="Cache-Control" content="no-siteapp" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>程序猿DD - 博客园</title>
+    <link id="favicon" rel="shortcut icon" href="//common.cnblogs.com/favicon.svg" type="image/svg+xml" />
+    
+    <link rel="stylesheet" href="/css/blog-common.min.css?v=zS6-e1bxywlu3kpHvpr1J6MySwya3ztFtEnS7RYQ0Fk" />
+    <link id="MainCss" rel="stylesheet" href="/skins/simplememory/bundle-simplememory.min.css?v=uknaX_hejnSu-njQgx4Hj1R0JiPLwUhFPUlwWNmWyB4" />
+    
+    <link id="mobile-style" media="only screen and (max-width: 767px)" type="text/css" rel="stylesheet" href="/skins/SimpleMemory/bundle-SimpleMemory-mobile.min.css" />
+    
+    <link type="application/rss+xml" rel="alternate" href="https://www.cnblogs.com/didispace/rss" />
+    <link type="application/rsd+xml" rel="EditURI" href="https://www.cnblogs.com/didispace/rsd.xml" />
+    <link type="application/wlwmanifest+xml" rel="wlwmanifest" href="https://www.cnblogs.com/didispace/wlwmanifest.xml" />
+    <script>
+        var currentBlogId = 426593;
+        var currentBlogApp = 'didispace';
+        var cb_enable_mathjax = false;
+        var isLogined = false;
+        var isBlogOwner = false;
+        var skinName = 'SimpleMemory';
+        var visitorUserId = '';
+    </script>
+    <script src="https://common.cnblogs.com/scripts/jquery-2.2.0.min.js"></script>
+    <script src="/js/blog-common.min.js?v=2Mic1VLeHXarpdzASbXqFMIMVLEBiWXNO5yiTHUcmhw"></script>
+    
+    
+    
+</head>
+<body class="has-navbar">
+    <a name="top"></a>
+    <div id="top_nav" class="navbar forpc">
+        <nav id="nav_main" class="navbar-main">
+            <ul id="nav_left" class="navbar-list navbar-left">
+                <li class="navbar-branding"><a href="https://www.cnblogs.com/" title="开发者的网上家园"><img src="/images/logo.svg?v=R9M0WmLAIPVydmdzE2keuvnjl-bPR7_35oHqtiBzGsM" alt="博客园Logo" /></a></li>
+                <li><a href="/" onclick="ga('send', 'event', 'Link', 'click', 'skin-navbar-sitehome')">首页</a></li>
+                <li><a href="https://news.cnblogs.com/" onclick="ga('send', 'event', 'Link', 'click', 'skin-navbar-news')">新闻</a></li>
+                <li><a href="https://q.cnblogs.com/" onclick="ga('send', 'event', 'Link', 'click', 'skin-navbar-q')">博问</a></li>
+                <li><a id="nav_brandzone" href="https://brands.cnblogs.com/" onclick="ga('send', 'event', 'Link', 'click', 'skin-navbar-brands')">专区</a></li>
+                <li><a href="https://ing.cnblogs.com/" onclick="ga('send', 'event', 'Link', 'click', 'skin-navbar-ing')">闪存</a></li>
+                <li><a href="https://edu.cnblogs.com/" onclick="ga('send', 'event', 'Link', 'click', 'skin-navbar-edu')">班级</a></li>
+            </ul>
+            <ul id="nav_right" class="navbar-list navbar-right">
+                <li>
+                    <form id="zzk_search" class="navbar-search" action="https://zzk.cnblogs.com/s" method="get">
+                        <input name="w" id="zzk_search_input" placeholder="代码改变世界" type="text" tabindex="3" />
+                        <button type="submit" id="zzk_search_button">
+                            <img src="/images/aggsite/search.svg" alt="搜索" />
+                        </button>
+                    </form>
+                </li>
+                <li id="navbar_login_status" class="navbar-list">
+                    <a class="navbar-user-info navbar-blog" href="https://i.cnblogs.com/EditPosts.aspx?opt=1" alt="写随笔" title="写随笔">
+                        <img id="new_post_icon" class="navbar-icon" src="/images/aggsite/newpost.svg" alt="写随笔" />
+                    </a>
+                    <a id="navblog-myblog-icon" class="navbar-user-info navbar-blog" href="https://passport.cnblogs.com/GetBlogApplyStatus.aspx" alt="我的博客" title="我的博客">
+                        <img id="myblog_icon" class="navbar-icon" src="/images/aggsite/myblog.svg" alt="我的博客" />
+                    </a>
+                    <a class="navbar-user-info navbar-message navbar-icon-wrapper" href="https://msg.cnblogs.com/" alt="短消息" title="短消息">
+                        <img id="msg_icon" class="navbar-icon" src="/images/aggsite/message.svg?v=J0WS2P2iPgaIVgXxcAhliw4AFZIpaTWxtdoNAv9eiCA" alt="短消息" />
+                        <span id="msg_count" style="display: none"></span>
+                    </a>
+                    <div id="user_info" class="navbar-user-info dropdown">
+                        <a class="dropdown-button" href="https://home.cnblogs.com/">
+                            <img id="user_icon" class="navbar-avatar" src="/images/aggsite/avatar-default.svg" alt="用户头像" />
+                        </a>
+                        <div class="dropdown-menu">
+                            <a id="navblog-myblog-text" href="https://passport.cnblogs.com/GetBlogApplyStatus.aspx">我的博客</a>
+                            <a href="https://home.cnblogs.com/">我的园子</a>
+                            <a href="https://account.cnblogs.com/settings/account">账号设置</a>
+                            <a href="javascript:void(0)" id="navbar_lite_mode_toggle" title="简洁模式会使用简洁款皮肤显示所有博客">
+    简洁模式 <img id="navbar_lite_mode_on" src="/images/lite-mode-check.svg" class="hide" /><span id="navbar_lite_mode_spinner" class="hide">...</span>
+</a>
+                            <a href="javascript:void(0)" onclick="account.logout();">退出登录</a>
+                        </div>
+                    </div>
+                    <a class="navbar-anonymous" href="https://account.cnblogs.com/signup/">注册</a>
+                    <a class="navbar-anonymous" href="javascript:void(0);" onclick="account.login()">登录</a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+
+    
+    <!--done-->
+<div id="home">
+<div id="header">
+	<div id="blogTitle">
+        <a id="lnkBlogLogo" href="https://www.cnblogs.com/didispace/"><img id="blogLogo" src="/skins/custom/images/logo.gif" alt="返回主页" /></a>		
+		
+<!--done-->
+<h1><a id="Header1_HeaderTitle" class="headermaintitle HeaderMainTitle" href="https://www.cnblogs.com/didispace/">程序猿DD</a>
+</h1>
+<h2>Spring Boot | Spring Cloud | 干货分享</h2>
+
+
+
+
+		
+	</div><!--end: blogTitle 博客的标题和副标题 -->
+	<div id="navigator">
+		
+<ul id="navList">
+<li><a id="blog_nav_sitehome" class="menu" href="https://www.cnblogs.com/">
+博客园</a>
+</li>
+<li>
+<a id="blog_nav_myhome" class="menu" href="https://www.cnblogs.com/didispace/">
+首页</a>
+</li>
+<li>
+
+<a id="blog_nav_newpost" class="menu" href="https://i.cnblogs.com/EditPosts.aspx?opt=1">
+新随笔</a>
+</li>
+<li>
+<a id="blog_nav_contact" class="menu" href="https://msg.cnblogs.com/send/%E7%A8%8B%E5%BA%8F%E7%8C%BFDD">
+联系</a></li>
+<li>
+<a id="blog_nav_rss" class="menu" href="javascript:void(0)" data-rss="https://www.cnblogs.com/didispace/rss/">
+订阅</a>
+<!--<partial name="./Shared/_XmlLink.cshtml" model="Model" /></li>--></li>
+<li>
+<a id="blog_nav_admin" class="menu" href="https://i.cnblogs.com/">
+管理</a>
+</li>
+</ul>
+
+
+		<div class="blogStats">
+			<div id="blog_stats_place_holder"><script>loadBlogStats();</script></div>
+		</div><!--end: blogStats -->
+	</div><!--end: navigator 博客导航栏 -->
+</div><!--end: header 头部 -->
+<div id="main">
+	<div id="mainContent">
+	<div class="forFlow">
+		
+
+
+
+
+
+		
+
+
+<div class="day">
+    <div class="dayTitle">
+        <a href="https://www.cnblogs.com/didispace/archive/2019/06/03.html">2019年6月3日</a>
+    </div>
+
+        <div class="postTitle">
+            
+
+<a class="postTitle2 vertical-middle" href="https://www.cnblogs.com/didispace/p/10966131.html">
+    <span>
+            <span>[置顶]</span>
+        独立博客，从零到千万访问，这三年我都做了什么
+    </span>
+    
+
+
+
+</a>
+
+        </div>
+        <div class="postCon">
+
+    <div class="c_b_p_desc">
+摘要：初衷 写博这件事，其实从大学开始就一直断断续续的有在做，几大博客平台都有玩过，但是都不持久。真正想要认真地好好维护一个自己的博客是在2015年年底。 为什么突然就想好好写博客呢？其实与过去三年的工作经历直接相关。我的技术学习之路可以与很多人都不太一样。由于那三年里，我的工作都在工商银行任职，虽然，工        <a href="https://www.cnblogs.com/didispace/p/10966131.html" class="c_b_p_desc_readmore">阅读全文</a>
+    </div>
+</div>
+        <div class="clear"></div>
+        <div class="postDesc">posted @ 2019-06-03 10:25
+程序猿DD
+<span data-post-id="10966131" class="post-view-count">阅读(4195)</span> 
+<span data-post-id="10966131" class="post-comment-count">评论(6)</span> 
+<span data-post-id="10966131" class="post-digg-count">推荐(12)</span> 
+<a href="https://i.cnblogs.com/EditPosts.aspx?postid=10966131" rel="nofollow">
+    编辑
+</a>
+</div>
+        <div class="clear"></div>
+</div>
+
+
+		
+
+
+<div class="day">
+    <div class="dayTitle">
+        <a href="https://www.cnblogs.com/didispace/archive/2021/05/14.html">2021年5月14日</a>
+    </div>
+
+        <div class="postTitle">
+            
+
+<a class="postTitle2 vertical-middle" href="https://www.cnblogs.com/didispace/p/14767494.html">
+    <span>
+        低代码平台如何一步步摧毁开发团队的效率与创新！
+    </span>
+    
+
+
+
+</a>
+
+        </div>
+        <div class="postCon">
+
+    <div class="c_b_p_desc">
+摘要：关于低代码平台，之前我也推送过两篇相关的文章，我的观点很简单：东西是好的，有它所擅长和适用的领域，但软件产品不存在银弹，低代码平台一样如此！ 现在在搜索引擎上搜“低代码”这样的关键词，你会看到很多夸张的标题，比如： “人人都是产品经理”之后，“人人都是程序员”的时代要来了？ 阿里、腾讯都在押注的新赛        <a href="https://www.cnblogs.com/didispace/p/14767494.html" class="c_b_p_desc_readmore">阅读全文</a>
+    </div>
+</div>
+        <div class="clear"></div>
+        <div class="postDesc">posted @ 2021-05-14 10:26
+程序猿DD
+<span data-post-id="14767494" class="post-view-count">阅读(6)</span> 
+<span data-post-id="14767494" class="post-comment-count">评论(0)</span> 
+<span data-post-id="14767494" class="post-digg-count">推荐(0)</span> 
+<a href="https://i.cnblogs.com/EditPosts.aspx?postid=14767494" rel="nofollow">
+    编辑
+</a>
+</div>
+        <div class="clear"></div>
+</div>
+
+
+		
+
+
+<div class="day">
+    <div class="dayTitle">
+        <a href="https://www.cnblogs.com/didispace/archive/2021/04/29.html">2021年4月29日</a>
+    </div>
+
+        <div class="postTitle">
+            
+
+<a class="postTitle2 vertical-middle" href="https://www.cnblogs.com/didispace/p/14717490.html">
+    <span>
+        注册中心与API网关不是这样用的！
+    </span>
+    
+
+
+
+</a>
+
+        </div>
+        <div class="postCon">
+
+    <div class="c_b_p_desc">
+摘要：之前在做顾问和咨询项目的时候，见到了一种非常经典的关于API网关和注册中心的错误用法。这个案例在我的星球里已经分享过，没想到最近又碰到了两个类似的使用姿势。也许这样的问题还存在不少团队的应用中，所以拿出来再分享一下，希望可以帮助读者更好的理解注册中心与API网关的作用，并将它们用对地方！ 在微服务架        <a href="https://www.cnblogs.com/didispace/p/14717490.html" class="c_b_p_desc_readmore">阅读全文</a>
+    </div>
+</div>
+        <div class="clear"></div>
+        <div class="postDesc">posted @ 2021-04-29 12:27
+程序猿DD
+<span data-post-id="14717490" class="post-view-count">阅读(820)</span> 
+<span data-post-id="14717490" class="post-comment-count">评论(1)</span> 
+<span data-post-id="14717490" class="post-digg-count">推荐(3)</span> 
+<a href="https://i.cnblogs.com/EditPosts.aspx?postid=14717490" rel="nofollow">
+    编辑
+</a>
+</div>
+        <div class="clear"></div>
+</div>
+
+
+		
+
+
+<div class="day">
+    <div class="dayTitle">
+        <a href="https://www.cnblogs.com/didispace/archive/2021/03/12.html">2021年3月12日</a>
+    </div>
+
+        <div class="postTitle">
+            
+
+<a class="postTitle2 vertical-middle" href="https://www.cnblogs.com/didispace/p/14522302.html">
+    <span>
+        你以为在做的是微服务？不！你只是做了个比单体还糟糕的分布式单体！
+    </span>
+    
+
+
+
+</a>
+
+        </div>
+        <div class="postCon">
+
+    <div class="c_b_p_desc">
+摘要：昨晚睡觉前，顺手撸了几个群聊的聊天记录。发现一个很有意思的名词“分布式单体”，顺藤摸瓜看了一下之前的聊天记录，由于内容骂骂咧咧，我就不贴出来了。。。大致内容就是某公司在做微服务改造，但改的不伦不类，形式上像微服务，而本质上依然是单体，甚至连单体都不如。 这样的改造现象，其实在国内还是蛮多见的。下面就        <a href="https://www.cnblogs.com/didispace/p/14522302.html" class="c_b_p_desc_readmore">阅读全文</a>
+    </div>
+</div>
+        <div class="clear"></div>
+        <div class="postDesc">posted @ 2021-03-12 10:16
+程序猿DD
+<span data-post-id="14522302" class="post-view-count">阅读(2543)</span> 
+<span data-post-id="14522302" class="post-comment-count">评论(21)</span> 
+<span data-post-id="14522302" class="post-digg-count">推荐(11)</span> 
+<a href="https://i.cnblogs.com/EditPosts.aspx?postid=14522302" rel="nofollow">
+    编辑
+</a>
+</div>
+        <div class="clear"></div>
+</div>
+
+
+		
+
+
+<div class="day">
+    <div class="dayTitle">
+        <a href="https://www.cnblogs.com/didispace/archive/2021/03/04.html">2021年3月4日</a>
+    </div>
+
+        <div class="postTitle">
+            
+
+<a class="postTitle2 vertical-middle" href="https://www.cnblogs.com/didispace/p/14478744.html">
+    <span>
+        Spring Boot 2.x基础教程：使用MongoDB
+    </span>
+    
+
+
+
+</a>
+
+        </div>
+        <div class="postCon">
+
+    <div class="c_b_p_desc">
+摘要：前段时间因为团队调整，大部分时间放在了团队上，这系列的更新又耽误了一下。但既然承诺持久更新，那就不会落下，今天开始继续更新这部分的内容！ 过了年，重申一下这个系列的目标：目前主要任务就是把Spring Boot 1.x部分没有升级的内容做完升级。我会将因为版本升级而产生的变化做一些说明，这样不论低版        <a href="https://www.cnblogs.com/didispace/p/14478744.html" class="c_b_p_desc_readmore">阅读全文</a>
+    </div>
+</div>
+        <div class="clear"></div>
+        <div class="postDesc">posted @ 2021-03-04 10:25
+程序猿DD
+<span data-post-id="14478744" class="post-view-count">阅读(336)</span> 
+<span data-post-id="14478744" class="post-comment-count">评论(0)</span> 
+<span data-post-id="14478744" class="post-digg-count">推荐(0)</span> 
+<a href="https://i.cnblogs.com/EditPosts.aspx?postid=14478744" rel="nofollow">
+    编辑
+</a>
+</div>
+        <div class="clear"></div>
+</div>
+
+
+		
+
+
+<div class="day">
+    <div class="dayTitle">
+        <a href="https://www.cnblogs.com/didispace/archive/2021/03/01.html">2021年3月1日</a>
+    </div>
+
+        <div class="postTitle">
+            
+
+<a class="postTitle2 vertical-middle" href="https://www.cnblogs.com/didispace/p/14463731.html">
+    <span>
+        银行科技到底怎么样？我曾经的四年告诉你 ！
+    </span>
+    
+
+
+
+</a>
+
+        </div>
+        <div class="postCon">
+
+    <div class="c_b_p_desc">
+摘要：又到了春节后的跳槽旺季，之前在知乎上有这样一个话题为什么说银行科技岗是程序员好的就业选择？。 之前做的回答最近又是每天好几万的阅读，看来对于银行科技这样的围城还是有很多人好奇的。趁这个机会，转到这边跟大家聊聊我四年银行科技生涯的感悟吧！ 我从研究生毕业，第一份工作就去了工行，一干就是四年，体会比较深        <a href="https://www.cnblogs.com/didispace/p/14463731.html" class="c_b_p_desc_readmore">阅读全文</a>
+    </div>
+</div>
+        <div class="clear"></div>
+        <div class="postDesc">posted @ 2021-03-01 15:10
+程序猿DD
+<span data-post-id="14463731" class="post-view-count">阅读(2685)</span> 
+<span data-post-id="14463731" class="post-comment-count">评论(11)</span> 
+<span data-post-id="14463731" class="post-digg-count">推荐(5)</span> 
+<a href="https://i.cnblogs.com/EditPosts.aspx?postid=14463731" rel="nofollow">
+    编辑
+</a>
+</div>
+        <div class="clear"></div>
+</div>
+
+
+		
+
+
+<div class="day">
+    <div class="dayTitle">
+        <a href="https://www.cnblogs.com/didispace/archive/2021/02/05.html">2021年2月5日</a>
+    </div>
+
+        <div class="postTitle">
+            
+
+<a class="postTitle2 vertical-middle" href="https://www.cnblogs.com/didispace/p/14376638.html">
+    <span>
+        一个可以在多平台运行的任天堂GameBoy模拟器
+    </span>
+    
+
+
+
+</a>
+
+        </div>
+        <div class="postCon">
+
+    <div class="c_b_p_desc">
+摘要：今天为大家带来一个很有趣的游戏模拟器GoBoy GoBoy GoBoy是一个可以在多平台运行的任天堂GameBoy和GameBoy Color的模拟器，目前这个模拟器可以运行大多数的GameBoy游戏和一部分GameBoy Color的游戏。同时还有声音和颜色的支持，是不是很多80后小时候偷偷玩Ga        <a href="https://www.cnblogs.com/didispace/p/14376638.html" class="c_b_p_desc_readmore">阅读全文</a>
+    </div>
+</div>
+        <div class="clear"></div>
+        <div class="postDesc">posted @ 2021-02-05 11:11
+程序猿DD
+<span data-post-id="14376638" class="post-view-count">阅读(453)</span> 
+<span data-post-id="14376638" class="post-comment-count">评论(1)</span> 
+<span data-post-id="14376638" class="post-digg-count">推荐(0)</span> 
+<a href="https://i.cnblogs.com/EditPosts.aspx?postid=14376638" rel="nofollow">
+    编辑
+</a>
+</div>
+        <div class="clear"></div>
+</div>
+
+
+		
+
+
+<div class="day">
+    <div class="dayTitle">
+        <a href="https://www.cnblogs.com/didispace/archive/2021/02/03.html">2021年2月3日</a>
+    </div>
+
+        <div class="postTitle">
+            
+
+<a class="postTitle2 vertical-middle" href="https://www.cnblogs.com/didispace/p/14367449.html">
+    <span>
+        Spring Boot 2.x基础教程：使用JTA实现多数据源的事务管理
+    </span>
+    
+
+
+
+</a>
+
+        </div>
+        <div class="postCon">
+
+    <div class="c_b_p_desc">
+摘要：在一个Spring Boot项目中，连接多个数据源还是比较常见的。之前也介绍了如何在几种常用框架的场景下配置多数据源，具体可见： Spring Boot 2.x基础教程：JdbcTemplate的多数据源配置 Spring Boot 2.x基础教程：Spring Data JPA的多数据源配置 Sp        <a href="https://www.cnblogs.com/didispace/p/14367449.html" class="c_b_p_desc_readmore">阅读全文</a>
+    </div>
+</div>
+        <div class="clear"></div>
+        <div class="postDesc">posted @ 2021-02-03 15:48
+程序猿DD
+<span data-post-id="14367449" class="post-view-count">阅读(381)</span> 
+<span data-post-id="14367449" class="post-comment-count">评论(0)</span> 
+<span data-post-id="14367449" class="post-digg-count">推荐(2)</span> 
+<a href="https://i.cnblogs.com/EditPosts.aspx?postid=14367449" rel="nofollow">
+    编辑
+</a>
+</div>
+        <div class="clear"></div>
+</div>
+
+
+		
+
+
+<div class="day">
+    <div class="dayTitle">
+        <a href="https://www.cnblogs.com/didispace/archive/2021/01/29.html">2021年1月29日</a>
+    </div>
+
+        <div class="postTitle">
+            
+
+<a class="postTitle2 vertical-middle" href="https://www.cnblogs.com/didispace/p/14343419.html">
+    <span>
+        重磅：保姆级Java技术图谱发布！够学到元宵节了，赶紧收藏！
+    </span>
+    
+
+
+
+</a>
+
+        </div>
+        <div class="postCon">
+
+    <div class="c_b_p_desc">
+摘要：最近因为参与社群交流的时间比较多，除了唠唠白酒的嗑之外，很大一部分时间都是看到群里问到一些关于Spring Boot和Spring Cloud应用过程中碰到的问题以及一些开发过程中的报错信息。在这些帮助分析和排查问题的过程中，我发现有好多问题之所以开发者无法自己解决，或者没有方法解决的根本原因还是对        <a href="https://www.cnblogs.com/didispace/p/14343419.html" class="c_b_p_desc_readmore">阅读全文</a>
+    </div>
+</div>
+        <div class="clear"></div>
+        <div class="postDesc">posted @ 2021-01-29 10:13
+程序猿DD
+<span data-post-id="14343419" class="post-view-count">阅读(280)</span> 
+<span data-post-id="14343419" class="post-comment-count">评论(0)</span> 
+<span data-post-id="14343419" class="post-digg-count">推荐(1)</span> 
+<a href="https://i.cnblogs.com/EditPosts.aspx?postid=14343419" rel="nofollow">
+    编辑
+</a>
+</div>
+        <div class="clear"></div>
+</div>
+
+
+		
+
+
+<div class="day">
+    <div class="dayTitle">
+        <a href="https://www.cnblogs.com/didispace/archive/2021/01/27.html">2021年1月27日</a>
+    </div>
+
+        <div class="postTitle">
+            
+
+<a class="postTitle2 vertical-middle" href="https://www.cnblogs.com/didispace/p/14333865.html">
+    <span>
+        聊一聊：Service层你觉得有用吗？
+    </span>
+    
+
+
+
+</a>
+
+        </div>
+        <div class="postCon">
+
+    <div class="c_b_p_desc">
+摘要：前段日子在社群（点击加入）里看到有人讨论关于Service层接口的问题，DD也经常碰到周围的新人有问过一些类似的问题：一定要写个Service层的接口吗？Service层的接口到底用做什么用的呢？好像都没什么用啊？ 说说我的看法： Service层在业务逻辑不复杂的时候，似乎是没有什么用，但是随着应        <a href="https://www.cnblogs.com/didispace/p/14333865.html" class="c_b_p_desc_readmore">阅读全文</a>
+    </div>
+</div>
+        <div class="clear"></div>
+        <div class="postDesc">posted @ 2021-01-27 10:54
+程序猿DD
+<span data-post-id="14333865" class="post-view-count">阅读(141)</span> 
+<span data-post-id="14333865" class="post-comment-count">评论(2)</span> 
+<span data-post-id="14333865" class="post-digg-count">推荐(0)</span> 
+<a href="https://i.cnblogs.com/EditPosts.aspx?postid=14333865" rel="nofollow">
+    编辑
+</a>
+</div>
+        <div class="clear"></div>
+</div>
+
+
+		
+
+
+<div class="day">
+    <div class="dayTitle">
+        <a href="https://www.cnblogs.com/didispace/archive/2021/01/22.html">2021年1月22日</a>
+    </div>
+
+        <div class="postTitle">
+            
+
+<a class="postTitle2 vertical-middle" href="https://www.cnblogs.com/didispace/p/14311643.html">
+    <span>
+        Spring Initializr中生成的mvnw是干吗的？
+    </span>
+    
+
+
+
+</a>
+
+        </div>
+        <div class="postCon">
+
+    <div class="c_b_p_desc">
+摘要：当我们使用Spring Initializr来创建Spring Boot工程的时候，有没有发现在工程根目录下有两个名为mvnw的文件： 从命名、图标、扩展名来猜测，这两个文件的作用应该是一样的，只是cmd文件应该是用在windows下跑的，而另外一个则是用于linux环境下跑的。 欢迎关注Sprin        <a href="https://www.cnblogs.com/didispace/p/14311643.html" class="c_b_p_desc_readmore">阅读全文</a>
+    </div>
+</div>
+        <div class="clear"></div>
+        <div class="postDesc">posted @ 2021-01-22 09:41
+程序猿DD
+<span data-post-id="14311643" class="post-view-count">阅读(87)</span> 
+<span data-post-id="14311643" class="post-comment-count">评论(0)</span> 
+<span data-post-id="14311643" class="post-digg-count">推荐(0)</span> 
+<a href="https://i.cnblogs.com/EditPosts.aspx?postid=14311643" rel="nofollow">
+    编辑
+</a>
+</div>
+        <div class="clear"></div>
+</div>
+
+
+
+<div class="topicListFooter">
+    <div id="nav_next_page">
+        
+    <a href="https://www.cnblogs.com/didispace/default.html?page=2">
+        下一页
+    </a>
+
+    </div>    
+</div>
+
+
+
+
+
+
+<script>
+    updatePostStats(
+        $(".post-view-count").map(function () { return this.dataset.postId }).get(),
+        function(id, count) { $(".post-view-count[data-post-id=" + id + "]").text("阅读(" + count + ")") },
+        function(id, count) { $(".post-comment-count[data-post-id=" + id + "]").text("评论(" + count + ")") },
+        function(id, count) { $(".post-digg-count[data-post-id=" + id + "]").text("推荐(" + count + ")") });
+</script>
+	</div><!--end: forFlow -->
+	</div><!--end: mainContent 主体内容容器-->
+	<div id="sideBar">
+		<div id="sideBarMain">
+			<div id="sidebar_news" class="newsItem">
+            <script>loadBlogNews();</script>
+</div>
+<div id="sidebar_c3"></div>
+			<div id="blog-calendar" style="display:none"></div><script>loadBlogDefaultCalendar();</script>			
+			<div id="leftcontentcontainer">
+				<div id="blog-sidecolumn"></div>
+                    <script>loadBlogSideColumn();</script>
+			</div>			
+		</div><!--end: sideBarMain -->
+	</div><!--end: sideBar 侧边栏容器 -->
+	<div class="clear"></div>
+	</div><!--end: main -->
+	<div class="clear"></div>
+	<div id="footer">
+		<!--done-->
+Copyright &copy; 2021 程序猿DD
+<br /><span id="poweredby">Powered by .NET 5.0 on Kubernetes</span>
+
+
+
+	</div><!--end: footer -->
+</div><!--end: home 自定义的最大容器 -->
+
+
+    
+
+    <input type="hidden" id="antiforgery_token" value="CfDJ8L-rpLgFVEJMgssCVvNUAjvMd7aNJNXA4Adx9Et80Od3QJaXrQ0nFS-l5DaokLC1VlBZRRw9n-wqmQuwl0g0t7zdA9Lod2x1U0bDb7jaBVL1VOm4bjvguH12GSYpvcxUapCktRikINTu-fPY6ebp_2U" />
+</body>
+</html>

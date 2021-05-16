@@ -1,0 +1,302 @@
+﻿<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="referrer" content="origin-when-crossorigin" />
+    <meta name="description" content="Hash算法 Hash算法将任意长度的二进制值映射为较短的固定长度的二进制值，这个小的二进制值称为哈希值。哈希值是一段数据唯一且极其紧凑的数值表示形式——百度百科 通俗点说就是让任意长度的数据映射成为" />
+    <meta property="og:description" content="Hash算法 Hash算法将任意长度的二进制值映射为较短的固定长度的二进制值，这个小的二进制值称为哈希值。哈希值是一段数据唯一且极其紧凑的数值表示形式——百度百科 通俗点说就是让任意长度的数据映射成为" />
+    <meta http-equiv="Cache-Control" content="no-transform" />
+    <meta http-equiv="Cache-Control" content="no-siteapp" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>一致性哈希算法 - Acx7 - 博客园</title>
+    <link id="favicon" rel="shortcut icon" href="//common.cnblogs.com/favicon.svg" type="image/svg+xml" />
+    
+    <link rel="stylesheet" href="/css/blog-common.min.css?v=zS6-e1bxywlu3kpHvpr1J6MySwya3ztFtEnS7RYQ0Fk" />
+    <link id="MainCss" rel="stylesheet" href="/skins/codinglife/bundle-codinglife.min.css?v=2uJkpdACLVfstRQ7zeCFK19brTwKuDEaNBLgKz9nm3A" />
+    
+    <link id="mobile-style" media="only screen and (max-width: 767px)" type="text/css" rel="stylesheet" href="/skins/codinglife/bundle-codinglife-mobile.min.css?v=DwDRKMd1bmjnJZ4iQqrTCO9QLlYb6OZaUAzHoHIIihg" />
+    
+    <link type="application/rss+xml" rel="alternate" href="https://www.cnblogs.com/Acx7/rss" />
+    <link type="application/rsd+xml" rel="EditURI" href="https://www.cnblogs.com/Acx7/rsd.xml" />
+    <link type="application/wlwmanifest+xml" rel="wlwmanifest" href="https://www.cnblogs.com/Acx7/wlwmanifest.xml" />
+    <script>
+        var currentBlogId = 675045;
+        var currentBlogApp = 'Acx7';
+        var cb_enable_mathjax = false;
+        var isLogined = false;
+        var isBlogOwner = false;
+        var skinName = 'CodingLife';
+        var visitorUserId = '';
+    </script>
+        <script>
+            var currentPostDateAdded = '2021-05-14 11:10';
+        </script>
+    <script src="https://common.cnblogs.com/scripts/jquery-2.2.0.min.js"></script>
+    <script src="/js/blog-common.min.js?v=2Mic1VLeHXarpdzASbXqFMIMVLEBiWXNO5yiTHUcmhw"></script>
+    
+    
+    
+</head>
+<body class="has-navbar">
+    <a name="top"></a>
+    <div id="top_nav" class="navbar forpc">
+        <nav id="nav_main" class="navbar-main">
+            <ul id="nav_left" class="navbar-list navbar-left">
+                <li class="navbar-branding"><a href="https://www.cnblogs.com/" title="开发者的网上家园"><img src="/images/logo.svg?v=R9M0WmLAIPVydmdzE2keuvnjl-bPR7_35oHqtiBzGsM" alt="博客园Logo" /></a></li>
+                <li><a href="/" onclick="ga('send', 'event', 'Link', 'click', 'skin-navbar-sitehome')">首页</a></li>
+                <li><a href="https://news.cnblogs.com/" onclick="ga('send', 'event', 'Link', 'click', 'skin-navbar-news')">新闻</a></li>
+                <li><a href="https://q.cnblogs.com/" onclick="ga('send', 'event', 'Link', 'click', 'skin-navbar-q')">博问</a></li>
+                <li><a id="nav_brandzone" href="https://brands.cnblogs.com/" onclick="ga('send', 'event', 'Link', 'click', 'skin-navbar-brands')">专区</a></li>
+                <li><a href="https://ing.cnblogs.com/" onclick="ga('send', 'event', 'Link', 'click', 'skin-navbar-ing')">闪存</a></li>
+                <li><a href="https://edu.cnblogs.com/" onclick="ga('send', 'event', 'Link', 'click', 'skin-navbar-edu')">班级</a></li>
+            </ul>
+            <ul id="nav_right" class="navbar-list navbar-right">
+                <li>
+                    <form id="zzk_search" class="navbar-search" action="https://zzk.cnblogs.com/s" method="get">
+                        <input name="w" id="zzk_search_input" placeholder="代码改变世界" type="text" tabindex="3" />
+                        <button type="submit" id="zzk_search_button">
+                            <img src="/images/aggsite/search.svg" alt="搜索" />
+                        </button>
+                    </form>
+                </li>
+                <li id="navbar_login_status" class="navbar-list">
+                    <a class="navbar-user-info navbar-blog" href="https://i.cnblogs.com/EditPosts.aspx?opt=1" alt="写随笔" title="写随笔">
+                        <img id="new_post_icon" class="navbar-icon" src="/images/aggsite/newpost.svg" alt="写随笔" />
+                    </a>
+                    <a id="navblog-myblog-icon" class="navbar-user-info navbar-blog" href="https://passport.cnblogs.com/GetBlogApplyStatus.aspx" alt="我的博客" title="我的博客">
+                        <img id="myblog_icon" class="navbar-icon" src="/images/aggsite/myblog.svg" alt="我的博客" />
+                    </a>
+                    <a class="navbar-user-info navbar-message navbar-icon-wrapper" href="https://msg.cnblogs.com/" alt="短消息" title="短消息">
+                        <img id="msg_icon" class="navbar-icon" src="/images/aggsite/message.svg?v=J0WS2P2iPgaIVgXxcAhliw4AFZIpaTWxtdoNAv9eiCA" alt="短消息" />
+                        <span id="msg_count" style="display: none"></span>
+                    </a>
+                    <div id="user_info" class="navbar-user-info dropdown">
+                        <a class="dropdown-button" href="https://home.cnblogs.com/">
+                            <img id="user_icon" class="navbar-avatar" src="/images/aggsite/avatar-default.svg" alt="用户头像" />
+                        </a>
+                        <div class="dropdown-menu">
+                            <a id="navblog-myblog-text" href="https://passport.cnblogs.com/GetBlogApplyStatus.aspx">我的博客</a>
+                            <a href="https://home.cnblogs.com/">我的园子</a>
+                            <a href="https://account.cnblogs.com/settings/account">账号设置</a>
+                            <a href="javascript:void(0)" id="navbar_lite_mode_toggle" title="简洁模式会使用简洁款皮肤显示所有博客">
+    简洁模式 <img id="navbar_lite_mode_on" src="/images/lite-mode-check.svg" class="hide" /><span id="navbar_lite_mode_spinner" class="hide">...</span>
+</a>
+                            <a href="javascript:void(0)" onclick="account.logout();">退出登录</a>
+                        </div>
+                    </div>
+                    <a class="navbar-anonymous" href="https://account.cnblogs.com/signup/">注册</a>
+                    <a class="navbar-anonymous" href="javascript:void(0);" onclick="account.login()">登录</a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+
+    
+    <!--done-->
+<div id="home">
+<div id="header">
+	<div id="blogTitle">
+        <a id="lnkBlogLogo" href="https://www.cnblogs.com/Acx7/"><img id="blogLogo" src="/skins/custom/images/logo.gif" alt="返回主页" /></a>		
+		
+<!--done-->
+<h1><a id="Header1_HeaderTitle" class="headermaintitle HeaderMainTitle" href="https://www.cnblogs.com/Acx7/">Acx7</a>
+</h1>
+<h2></h2>
+
+
+
+
+		
+	</div><!--end: blogTitle 博客的标题和副标题 -->
+	<div id="navigator">
+		
+<ul id="navList">
+<li><a id="blog_nav_sitehome" class="menu" href="https://www.cnblogs.com/">
+博客园</a>
+</li>
+<li>
+<a id="blog_nav_myhome" class="menu" href="https://www.cnblogs.com/Acx7/">
+首页</a>
+</li>
+<li>
+
+<a id="blog_nav_newpost" class="menu" href="https://i.cnblogs.com/EditPosts.aspx?opt=1">
+新随笔</a>
+</li>
+<li>
+<a id="blog_nav_contact" class="menu" href="https://msg.cnblogs.com/send/Acx7">
+联系</a></li>
+<li>
+<a id="blog_nav_rss" class="menu" href="javascript:void(0)" data-rss="https://www.cnblogs.com/Acx7/rss/">
+订阅</a>
+<!--<partial name="./Shared/_XmlLink.cshtml" model="Model" /></li>--></li>
+<li>
+<a id="blog_nav_admin" class="menu" href="https://i.cnblogs.com/">
+管理</a>
+</li>
+</ul>
+
+
+		<div class="blogStats">
+			<div id="blog_stats_place_holder"><script>loadBlogStats();</script></div>
+		</div><!--end: blogStats -->
+	</div><!--end: navigator 博客导航栏 -->
+</div><!--end: header 头部 -->
+<div id="main">
+	<div id="mainContent">
+	<div class="forFlow">
+		<div id="post_detail">
+    <!--done-->
+    <div id="topics">
+        <div class="post">
+            <h1 class = "postTitle">
+                
+<a id="cb_post_title_url" class="postTitle2 vertical-middle" href="https://www.cnblogs.com/Acx7/p/14766774.html">
+    <span>一致性哈希算法</span>
+    
+
+
+
+</a>
+
+            </h1>
+            <div class="clear"></div>
+            <div class="postBody">
+                <div id="cnblogs_post_body" class="blogpost-body blogpost-body-html">
+<p><span style="font-family: &quot;Microsoft YaHei&quot;"><strong><span style="font-size: 18pt">Hash算法</span></strong></span></p>
+<p><span style="font-size: 14pt; font-family: 宋体">　　<strong>Hash算法将任意长度的二进制值映射为较短的固定长度的二进制值，这个小的二进制值称为哈希值。哈希值是一段数据唯一且极其紧凑的数值表示形式——百度百科　</strong></span></p>
+<p><strong><span style="font-size: 14pt; font-family: 宋体">　　通俗点说就是让任意长度的数据映射成为长度固定的值。</span></strong></p>
+<p><strong><span style="font-family: &quot;Microsoft YaHei&quot;; font-size: 18pt">Hash算法的作用</span></strong></p>
+<p><span style="font-size: 14pt">　<span style="font-family: &quot;Microsoft YaHei&quot;">　<strong><span style="font-family: 宋体">一、就是数据的快速存储以及插入、删除、查找。一般使用数据结构Map(Dictionary/Hashtable)。它是根据key来直接访问value的数据结构。将key通过一定的Hash函数计算变成通用一致的格式（索引），就可以实现类似数组的快速查找。</span></strong></span></span></p>
+<p><strong><span style="font-size: 14pt; font-family: 宋体">　　二、Hash算法也可以看做是一种加密算法，但是这个加密算法只有加密的过程没有解密的过程，是不可逆的。各种加密货币中的密钥体系或多或少都用到了Hash算法，其中比较有名的像：MD4，MD5，SHA-1，SHA-2，SHA-3等。除了加密货币，Hash的加密算法在文件校验，数字签名，鉴权协议等方面都有非常重要的作用。</span></strong></p>
+<p><strong><span style="font-family: &quot;Microsoft YaHei&quot;; font-size: 18pt">Hash算法在分布式应用中的不足</span></strong></p>
+<p><span style="font-family: 宋体; font-size: 14pt">　　<strong>在分布式系统中，如果数据是存储在很多个节点中，由于节点的状态是不稳定的，可能新增节点也可能随时有节点下线，节点的个数和在线时间都是不稳定的。要将数据存储到具体的节点上，如果我们采用普通的Hash算法进行路由，将数据映射到具体的节点上，如key % N，key是数据的key，N是节点数，如果有一个节点加入或退出这个集群，则所有的数据映射都无效了，如果是持久化存储则要做数据迁移，如果是分布式缓存，则其他缓存就失效了。如何在这样的不稳定的环境中保证数据的正确命中，不会因为节点个数的增减而导致大部分数据的失效，这就是一致性Hash算法需要解决的问题。</strong></span><span style="font-family: 宋体; font-size: 14pt"><br></span></p>
+<p><span style="font-family: &quot;Microsoft YaHei&quot;"><strong><span style="font-size: 18pt">一致性哈希算法</span></strong></span></p>
+<p><span style="font-family: 宋体; font-size: 14pt"><strong>　　一致性哈希提出了在动态变化的Cache环境中，哈希算法应该满足的4个适应条件——百度百科</strong></span></p>
+<p><strong><span style="font-family: 宋体; font-size: 14pt">　　1、平衡性(Balance)：平衡性是指哈希的结果能够尽可能分布到所有的缓冲中去，即均匀分布。这样可以使得所有的缓冲空间都得到利用。很多哈希算法都能够满足这一条件。</span></strong></p>
+<p><strong><span style="font-family: 宋体; font-size: 14pt">　　2、单调性(Monotonicity)：单调性是指如果已经有一些内容通过哈希分派到了相应的缓冲中，又有新的缓冲加入到系统中。哈希的结果应能够保证原有已分配的内容可以被映射到原有的或者新的缓冲中去，而不会被映射到旧的缓冲集合中的其他缓冲区。&nbsp;</span></strong></p>
+<p><strong><span style="font-family: 宋体; font-size: 14pt">　　3、分散性(Spread)：</span><span style="font-family: 宋体; font-size: 14pt">在分布式环境中，终端有可能看不到所有的缓冲，而是只能看到其中的一部分。当终端希望通过哈希过程将内容映射到缓冲上时，由于不同终端所见的缓冲范围有可能不同，从而导致哈希的结果不一致，最终的结果是相同的内容被不同的终端映射到不同的缓冲区中。这种情况显然是应该避免的，因为它导致相同内容被存储到不同缓冲中去，降低了系统存储的效率。分散性的定义就是上述情况发生的严重程度。好的哈希算法应能够尽量避免不一致的情况发生，也就是尽量降低分散性。</span>&nbsp;</strong></p>
+<p><strong><span style="font-family: 宋体; font-size: 14pt">　　4、负载(Load)：负载问题实际上是从另一个角度看待分散性问题。既然不同的终端可能将相同的内容映射到不同的缓冲区中，那么对于一个特定的缓冲区而言，也可能被不同的用户映射为不同的内容。与分散性一样，这种情况也是应当避免的，因此好的哈希算法应能够尽量降低缓冲的负荷。</span></strong></p>
+<p><span style="font-size: 18pt; font-family: &quot;Microsoft YaHei&quot;"><strong><strong>一致性哈希算法</strong>原理：</strong></span></p>
+<p><span style="font-size: 14pt; font-family: 宋体">　</span><strong><span style="font-family: 宋体; font-size: 14pt">　一致性Hash算法是在1997年由麻省理工学院提出的一种分布式Hash实现算法。</span></strong></p>
+<p><span style="font-family: &quot;Microsoft YaHei&quot;"><strong><span style="font-size: 14pt">环形Hash空间</span></strong></span></p>
+<p><strong><span style="font-size: 14pt; font-family: 宋体">　　<strong>一致性哈希算法</strong>核心就是使用常用的Hash算法将key映射到一个具有2^32次方个桶空间中，即0-(2^32-1)的数字空间中。</span></strong><strong><span style="font-size: 14pt; font-family: 宋体">我们可以将这些数字头尾相连，想象成一个闭合的环形。圆环上面有2^32个节点位置。算法首先计算出存储节点在圆环上的位置。具体可以选择服务器的ip或主机名作为关键字进行哈希，这样每台机器就能确定其在哈希环上的位置。这一点是为了保证算法的分散性：节点的位置跟具体多少个节点没关系，只跟节点的内在特性有关系。</span></strong></p>
+<p><span style="font-size: 14pt"><strong><span style="font-family: 宋体"><img src="https://img2020.cnblogs.com/blog/1865749/202105/1865749-20210514002433219-1854232885.png" alt="" loading="lazy" style="display: block; margin-left: auto; margin-right: auto"></span></strong></span></p>
+<h3><span style="font-family: &quot;Microsoft YaHei&quot;; font-size: 14pt">将数据通过Hash算法映射到环上</span></h3>
+<p>&nbsp;　　<strong><span style="font-family: 宋体; font-size: 14pt">我们假设有4个节点：node1，node2，node3，node4。计算好他们的位置之后，接下来我们就需要就计算出各个不同的key的存储位置，将key用同样的算法计算出Hash值，从而确定其在数据环上的位置，然后从此位置沿着顺时针寻找，遇到的第一个服务器就是该数据应该存储的节点。</span></strong></p>
+<p><strong><span style="font-family: 宋体; font-size: 14pt">　　</span></strong><strong><span style="font-family: 宋体; font-size: 14pt">如下图所示，有A，B，C，D四个数据对象，经过Hash计算之后，其在图中的位置和应该存在的节点位置如下：其中A存储在node1节点，B存储在node2节点，C存储在node3节点，D存储在node4节点。</span></strong></p>
+<p><span style="font-family: 宋体; font-size: 14pt"><strong><img src="https://img2020.cnblogs.com/blog/1865749/202105/1865749-20210514003509713-362734641.png" alt="" loading="lazy" style="display: block; margin-left: auto; margin-right: auto"></strong></span></p>
+<p><strong><span style="font-size: 14pt; font-family: &quot;Microsoft YaHei&quot;">节点的删除</span></strong></p>
+<p>　　<strong><span style="font-family: 宋体; font-size: 14pt">下面我们考虑下节点挂掉的情况，如下图所示，当node4节点挂掉之后，按照一致性hash算法的原则，A，B，C存储节点不做任何变化，只有D节点会重新存储到node1上。如下图所示：</span></strong></p>
+<p><img src="https://img2020.cnblogs.com/blog/1865749/202105/1865749-20210514003525407-2025515518.png" alt="" loading="lazy" style="display: block; margin-left: auto; margin-right: auto"></p>
+<p><span style="font-size: 14pt"><strong><span style="font-family: &quot;Microsoft YaHei&quot;">节点的增加</span></strong></span></p>
+<p>&nbsp;　　<strong><span style="font-family: 宋体; font-size: 14pt">同样的，假如我们添加了一个node5节点，其hash值在C和node3之间，则只有C的存储位置需要转移。如下图所示：</span></strong></p>
+<p><img src="https://img2020.cnblogs.com/blog/1865749/202105/1865749-20210514003535325-682297642.png" alt="" loading="lazy" style="display: block; margin-left: auto; margin-right: auto"></p>
+<p><strong><span style="font-family: 宋体; font-size: 14pt">　　由此可见，一致性hash算法在系统节点变化的时候，只需要重定向一小部分数据的存储位置，具有较强的容错性和可扩展性。</span></strong></p>
+<p><strong><span id="%E8%99%9A%E6%8B%9F%E8%8A%82%E7%82%B9" class="ez-toc-section" style="font-family: &quot;Microsoft YaHei&quot;; font-size: 14pt">虚拟节点</span></strong></p>
+<p>　　<strong><span style="font-family: 宋体; font-size: 14pt">当系统中节点很少的情况下，或者现有的节点计算出来的Hash值比较接近的情况下，如上图所示，所有A-B这一段路径上的数据都会存储在node1上面，很明显这会导致node1上面数据过多，不满足系统分散性的需求。</span></strong></p>
+<p><img src="https://img2020.cnblogs.com/blog/1865749/202105/1865749-20210514003546605-662610370.png" alt="" loading="lazy" style="display: block; margin-left: auto; margin-right: auto"></p>
+<p>&nbsp;　　<strong><span style="font-family: 宋体; font-size: 14pt">解决办法就是我们可以创建一些虚拟节点，即对每一个服务节点计算多个哈希，每个计算结果位置都放置一个此服务节点，这样就可以解决数据倾斜的问题。如下图所示：</span></strong></p>
+<p><img src="https://img2020.cnblogs.com/blog/1865749/202105/1865749-20210514003557936-1599420980.png" alt="" loading="lazy" style="display: block; margin-left: auto; margin-right: auto"></p>
+</div>
+<div id="MySignature"></div>
+<div class="clear"></div>
+<div id="blog_post_info_block">
+    <div id="blog_post_info"></div>
+    <div class="clear"></div>
+    <div id="post_next_prev"></div>
+</div>
+            </div>
+            <div class="postDesc">posted @ 
+<span id="post-date">2021-05-14 11:10</span>&nbsp;
+<a href="https://www.cnblogs.com/Acx7/">Acx7</a>&nbsp;
+阅读(<span id="post_view_count">0</span>)&nbsp;
+评论(<span id="post_comment_count">0</span>)&nbsp;
+<a href="https://i.cnblogs.com/EditPosts.aspx?postid=14766774" rel="nofollow">编辑</a>&nbsp;
+<a href="javascript:void(0)" onclick="AddToWz(14766774);return false;">收藏</a></div>
+        </div>
+	    
+	    
+    </div><!--end: topics 文章、评论容器-->
+</div>
+<script src="https://common.cnblogs.com/highlight/10.3.1/highlight.min.js"></script>
+<script>markdown_highlight();</script>
+<script>
+    var allowComments = true, cb_blogId = 675045, cb_blogApp = 'Acx7', cb_blogUserGuid = '0d7e0e02-07a7-4b51-37aa-08d765b211a6';
+    var cb_entryId = 14766774, cb_entryCreatedDate = '2021-05-14 11:10', cb_postType = 1;
+    updatePostStats(
+        [cb_entryId],
+        function(id, count) { $("#post_view_count").text(count) },
+        function(id, count) { $("#post_comment_count").text(count) })
+    zoomManager.apply("#cnblogs_post_body img:not(.code_img_closed):not(.code_img_opened)");
+</script>
+<a name="!comments"></a>
+<div id="blog-comments-placeholder"></div>
+<div id="comment_form" class="commentform">
+    <a name="commentform"></a>
+    <div id="divCommentShow"></div>
+    <div id="comment_nav"><span id="span_refresh_tips"></span><a href="javascript:void(0);" onclick="return RefreshCommentList();" id="lnk_RefreshComments" runat="server" clientidmode="Static">刷新评论</a><a href="#" onclick="return RefreshPage();">刷新页面</a><a href="#top">返回顶部</a></div>
+    <div id="comment_form_container"></div>
+    <div class="ad_text_commentbox" id="ad_text_under_commentbox"></div>
+    <div id="ad_t2"></div>
+    <div id="opt_under_post"></div>
+    <div id="cnblogs_c1" class="under-post-card">
+        <div id='div-gpt-ad-1592365906576-0' style='width: 300px; height: 250px;'></div>
+    </div>
+    <div id="under_post_card1"></div>
+    <div id="cnblogs_c2" class="under-post-card">
+        <div id='div-gpt-ad-1592366332455-0' style='width: 468px; height: 60px;'></div>
+    </div>
+    <div id="under_post_card2"></div>
+    <div id="HistoryToday" class="under-post-card"></div>
+    <script type="text/javascript">
+       var commentManager = new blogCommentManager();
+       commentManager.renderComments(0);
+       fixPostBody();
+       deliverBigBanner();
+setTimeout(function() { incrementViewCount(cb_entryId); }, 50);       deliverT2();
+       deliverC1C2();
+       loadNewsAndKb();
+       loadBlogSignature();
+LoadPostCategoriesTags(cb_blogId, cb_entryId);       LoadPostInfoBlock(cb_blogId, cb_entryId, cb_blogApp, cb_blogUserGuid);
+       GetPrevNextPost(cb_entryId, cb_blogId, cb_entryCreatedDate, cb_postType);
+       loadOptUnderPost();
+       GetHistoryToday(cb_blogId, cb_blogApp, cb_entryCreatedDate);
+    </script>
+</div>
+
+	</div><!--end: forFlow -->
+	</div><!--end: mainContent 主体内容容器-->
+	<div id="sideBar">
+		<div id="sideBarMain">
+			<div id="sidebar_news" class="newsItem">
+            <script>loadBlogNews();</script>
+</div>
+<div id="sidebar_c3"></div>
+			<div id="blog-calendar" style="display:none"></div><script>loadBlogDefaultCalendar();</script>			
+			<div id="leftcontentcontainer">
+				<div id="blog-sidecolumn"></div>
+                    <script>loadBlogSideColumn();</script>
+			</div>			
+		</div><!--end: sideBarMain -->
+	</div><!--end: sideBar 侧边栏容器 -->
+	<div class="clear"></div>
+	</div><!--end: main -->
+	<div class="clear"></div>
+	<div id="footer">
+		<!--done-->
+Copyright &copy; 2021 Acx7
+<br /><span id="poweredby">Powered by .NET 5.0 on Kubernetes</span>
+
+
+
+	</div><!--end: footer -->
+</div><!--end: home 自定义的最大容器 -->
+
+
+    
+
+    <input type="hidden" id="antiforgery_token" value="CfDJ8L-rpLgFVEJMgssCVvNUAjsrbBlnxWjNfBD4Mta8N0WPJoKBbL-cnifxE91xyTSBFPXFoel3lFCRJV496Hm18AdbBNzZbPLq93eO8RdlTnVEUH0142Luf_N2D9131AXfXNIMEUsu1Mw12tkzddSN3BQ" />
+</body>
+</html>

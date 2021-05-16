@@ -1,0 +1,361 @@
+﻿<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="referrer" content="never" />
+    <meta name="description" content="在本文中，我们将简单了解k3d，这是一款可让您在安装了Docker的任何地方运行一次性Kubernetes集群的工具，此外在本文中我们还将探讨在使用k3d中可能会出现的一切问题。 什么是k3d？ k3" />
+    <meta property="og:description" content="在本文中，我们将简单了解k3d，这是一款可让您在安装了Docker的任何地方运行一次性Kubernetes集群的工具，此外在本文中我们还将探讨在使用k3d中可能会出现的一切问题。 什么是k3d？ k3" />
+    <meta http-equiv="Cache-Control" content="no-transform" />
+    <meta http-equiv="Cache-Control" content="no-siteapp" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>k3d入门指南：在Docker中运行K3s - k3s中文社区 - 博客园</title>
+    <link id="favicon" rel="shortcut icon" href="//common.cnblogs.com/favicon.svg" type="image/svg+xml" />
+    
+    <link rel="stylesheet" href="/css/blog-common.min.css?v=zS6-e1bxywlu3kpHvpr1J6MySwya3ztFtEnS7RYQ0Fk" />
+    <link id="MainCss" rel="stylesheet" href="/skins/simpleblue/bundle-simpleblue.min.css?v=2hjghzSZyhYA1HxvSxKnXih3JbC120DBjeO9V9T_nSs" />
+    
+    <link id="mobile-style" media="only screen and (max-width: 767px)" type="text/css" rel="stylesheet" href="/skins/simpleblue/bundle-simpleblue-mobile.min.css?v=3tvwgOOqUo3RpS6gGzEdK0LbptOPv4Bx7M85_UAnFGs" />
+    
+    <link type="application/rss+xml" rel="alternate" href="https://www.cnblogs.com/k3s2019/rss" />
+    <link type="application/rsd+xml" rel="EditURI" href="https://www.cnblogs.com/k3s2019/rsd.xml" />
+    <link type="application/wlwmanifest+xml" rel="wlwmanifest" href="https://www.cnblogs.com/k3s2019/wlwmanifest.xml" />
+    <script>
+        var currentBlogId = 570850;
+        var currentBlogApp = 'k3s2019';
+        var cb_enable_mathjax = false;
+        var isLogined = false;
+        var isBlogOwner = false;
+        var skinName = 'SimpleBlue';
+        var visitorUserId = '';
+    </script>
+        <script>
+            var currentPostDateAdded = '2021-05-14 10:38';
+        </script>
+    <script src="https://common.cnblogs.com/scripts/jquery-2.2.0.min.js"></script>
+    <script src="/js/blog-common.min.js?v=2Mic1VLeHXarpdzASbXqFMIMVLEBiWXNO5yiTHUcmhw"></script>
+    
+    
+    
+</head>
+<body class="has-navbar">
+    <a name="top"></a>
+    <div id="top_nav" class="navbar forpc">
+        <nav id="nav_main" class="navbar-main">
+            <ul id="nav_left" class="navbar-list navbar-left">
+                <li class="navbar-branding"><a href="https://www.cnblogs.com/" title="开发者的网上家园"><img src="/images/logo.svg?v=R9M0WmLAIPVydmdzE2keuvnjl-bPR7_35oHqtiBzGsM" alt="博客园Logo" /></a></li>
+                <li><a href="/" onclick="ga('send', 'event', 'Link', 'click', 'skin-navbar-sitehome')">首页</a></li>
+                <li><a href="https://news.cnblogs.com/" onclick="ga('send', 'event', 'Link', 'click', 'skin-navbar-news')">新闻</a></li>
+                <li><a href="https://q.cnblogs.com/" onclick="ga('send', 'event', 'Link', 'click', 'skin-navbar-q')">博问</a></li>
+                <li><a id="nav_brandzone" href="https://brands.cnblogs.com/" onclick="ga('send', 'event', 'Link', 'click', 'skin-navbar-brands')">专区</a></li>
+                <li><a href="https://ing.cnblogs.com/" onclick="ga('send', 'event', 'Link', 'click', 'skin-navbar-ing')">闪存</a></li>
+                <li><a href="https://edu.cnblogs.com/" onclick="ga('send', 'event', 'Link', 'click', 'skin-navbar-edu')">班级</a></li>
+            </ul>
+            <ul id="nav_right" class="navbar-list navbar-right">
+                <li>
+                    <form id="zzk_search" class="navbar-search" action="https://zzk.cnblogs.com/s" method="get">
+                        <input name="w" id="zzk_search_input" placeholder="代码改变世界" type="text" tabindex="3" />
+                        <button type="submit" id="zzk_search_button">
+                            <img src="/images/aggsite/search.svg" alt="搜索" />
+                        </button>
+                    </form>
+                </li>
+                <li id="navbar_login_status" class="navbar-list">
+                    <a class="navbar-user-info navbar-blog" href="https://i.cnblogs.com/EditPosts.aspx?opt=1" alt="写随笔" title="写随笔">
+                        <img id="new_post_icon" class="navbar-icon" src="/images/aggsite/newpost.svg" alt="写随笔" />
+                    </a>
+                    <a id="navblog-myblog-icon" class="navbar-user-info navbar-blog" href="https://passport.cnblogs.com/GetBlogApplyStatus.aspx" alt="我的博客" title="我的博客">
+                        <img id="myblog_icon" class="navbar-icon" src="/images/aggsite/myblog.svg" alt="我的博客" />
+                    </a>
+                    <a class="navbar-user-info navbar-message navbar-icon-wrapper" href="https://msg.cnblogs.com/" alt="短消息" title="短消息">
+                        <img id="msg_icon" class="navbar-icon" src="/images/aggsite/message.svg?v=J0WS2P2iPgaIVgXxcAhliw4AFZIpaTWxtdoNAv9eiCA" alt="短消息" />
+                        <span id="msg_count" style="display: none"></span>
+                    </a>
+                    <div id="user_info" class="navbar-user-info dropdown">
+                        <a class="dropdown-button" href="https://home.cnblogs.com/">
+                            <img id="user_icon" class="navbar-avatar" src="/images/aggsite/avatar-default.svg" alt="用户头像" />
+                        </a>
+                        <div class="dropdown-menu">
+                            <a id="navblog-myblog-text" href="https://passport.cnblogs.com/GetBlogApplyStatus.aspx">我的博客</a>
+                            <a href="https://home.cnblogs.com/">我的园子</a>
+                            <a href="https://account.cnblogs.com/settings/account">账号设置</a>
+                            <a href="javascript:void(0)" id="navbar_lite_mode_toggle" title="简洁模式会使用简洁款皮肤显示所有博客">
+    简洁模式 <img id="navbar_lite_mode_on" src="/images/lite-mode-check.svg" class="hide" /><span id="navbar_lite_mode_spinner" class="hide">...</span>
+</a>
+                            <a href="javascript:void(0)" onclick="account.logout();">退出登录</a>
+                        </div>
+                    </div>
+                    <a class="navbar-anonymous" href="https://account.cnblogs.com/signup/">注册</a>
+                    <a class="navbar-anonymous" href="javascript:void(0);" onclick="account.login()">登录</a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+
+    
+    <div id="home">
+    <div id="header">
+        <div id="blogTitle">
+            <div class="title"><a id="Header1_HeaderTitle" class="headermaintitle HeaderMainTitle" href="https://www.cnblogs.com/k3s2019/">k3s中文社区</a>
+</div>
+<div class="subtitle"></div>
+
+        </div>
+        <div id="navigator">
+            
+<ul id="navList">
+    <li id="nav_sitehome"><a id="blog_nav_sitehome" class="menu" href="https://www.cnblogs.com/">
+博客园</a>
+</li>
+    <li id="nav_myhome">
+<a id="blog_nav_myhome" class="menu" href="https://www.cnblogs.com/k3s2019/">
+首页</a>
+</li>
+    <li id="nav_newpost">
+
+<a id="blog_nav_newpost" class="menu" href="https://i.cnblogs.com/EditPosts.aspx?opt=1">
+新随笔</a>
+</li>
+    <li id="nav_contact">
+<a id="blog_nav_contact" class="menu" href="https://msg.cnblogs.com/send/k3s%E4%B8%AD%E6%96%87%E7%A4%BE%E5%8C%BA">
+联系</a></li>
+    <li id="nav_rss">
+<a id="blog_nav_rss" class="menu" href="javascript:void(0)" data-rss="https://www.cnblogs.com/k3s2019/rss/">
+订阅</a></li>
+    <li id="nav_admin">
+<a id="blog_nav_admin" class="menu" href="https://i.cnblogs.com/">
+管理</a>
+</li>
+</ul>
+
+            <div class="blogStats">
+                <div id="blog_stats_place_holder"><script>loadBlogStats();</script></div>
+            </div>
+        </div>
+    </div>
+    <div id="main">
+        <div id="mainContent">
+            <div class="forFlow">
+                <div id="post_detail">
+    <div id="topics">
+        <div class="post">
+            <h1 class="postTitle">
+                
+<a id="cb_post_title_url" class="postTitle2 vertical-middle" href="https://www.cnblogs.com/k3s2019/p/14767563.html">
+    <span>k3d入门指南：在Docker中运行K3s</span>
+    
+
+
+
+</a>
+
+            </h1>
+            <div class="clear"></div>
+            <div class="postBody">
+                <div id="cnblogs_post_body" class="blogpost-body cnblogs-markdown">
+<p><img src="https://img-blog.csdnimg.cn/20210514103015645.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQyMjA2ODEz,size_16,color_FFFFFF,t_70#pic_center" alt="在这里插入图片描述" loading="lazy"><br>
+在本文中，我们将简单了解k3d，这是一款可让您在安装了Docker的任何地方运行一次性Kubernetes集群的工具，此外在本文中我们还将探讨在使用k3d中可能会出现的一切问题。</p>
+<h2 id="什么是k3d？">什么是k3d？</h2>
+<p>k3d是一个小型程序，用于在Docker中运行K3s集群。 K3s是经过CNCF认证的轻量级Kubernetes发行和沙箱项目。它是为资源有限环境设计的，被打包为单个二进制文件，所需RAM小于512MB。 要了解有关K3s的更多信息，请查看我们之前的公众号文章及B站上的视频。</p>
+<p>k3d借助从K3s仓库构建的Docker镜像在安装了Docker的任何机器上的Docker容器中启动多个K3s节点。 这样，一台物理（或虚拟）机（称为Docker Host）可以运行多个K3s集群，每个集群同时有多个server和agent节点。</p>
+<h2 id="k3d能做什么？">k3d能做什么？</h2>
+<p>2021年1月，发布k3dv4.0.0，包含以下功能：</p>
+<ul>
+<li>创建/停止/启动/删除/扩大/缩小K3s集群（和单个节点）</li>
+<li>通过命令行标志</li>
+<li>通过配置文件</li>
+<li>管理可与集群一起使用的容器镜像仓库并与之交互</li>
+<li>管理集群的Kubeconfigs</li>
+<li>将本地Docker daemon中的镜像导入集群中运行的容器运行时中</li>
+</ul>
+<p>显然，还有更多的方法，您可以用来对使用过程中的细节进行调整。</p>
+<h2 id="k3d的用途是什么？">k3d的用途是什么？</h2>
+<p>k3d的主要应用场景是在Kubernetes上进行本地开发，因为k3d轻量、简单的特性，在这一场景下几乎不会遇到麻烦和资源使用问题。 开发k3d的初衷是为开发人员提供一个简单的工具，使他们能够在开发环境的机器上运行轻量级的Kubernetes集群，从而在类似于生产的环境中获得快速的迭代时间（相对于在本地运行docker-compose与生产中的Kubernetes要快得多）。</p>
+<p>随着时间的推移，k3d还发展成为一种运维工具，用于在隔离的环境中测试某些Kubernetes（或特别是K3s）功能。 例如，使用k3d，您可以轻松地创建多节点集群，在其上部署一些应用程序，轻松停止一个节点并查看Kubernetes的反应，还能够将您的应用重新调度到其他节点上。</p>
+<p>此外，您可以在持续集成系统中使用k3d来快速启动集群，在其上部署测试堆栈并运行集成测试。完成操作后，您就可以轻松地停用整个集群。无需担心适当的清理和可能的残留。</p>
+<p>我们还提供了一个k3d-dind镜像（类似于电影《盗梦空间》中的梦中的梦，我们在容器内的容器中放置了容器。）通过此操作，您可以创建一个运行k3d的docker-in-docker环境，该环境会在Docker中生成一个K3s集群。这意味着您只有一个容器（k3d-dind）在您的Docker主机上运行，而该容器又在其中运行了整个K3s / Kubernetes集群。</p>
+<h2 id="如何使用k3d？">如何使用k3d？</h2>
+<p>1、安装k3d（如需使用也可安装kubectl）</p>
+<blockquote>
+<p>注意：本文介绍内容对版本有要求，请至少使用k3d v4.1.1以上版本</p>
+</blockquote>
+<p>2、可以尝试以下其中一个示例，或使用文档或CLI帮助文本找到适合您自己的方式（k3d [command] --help）</p>
+<p><strong>“简单”的方式</strong></p>
+<p><strong>k3d cluster create</strong></p>
+<p>该命令将创建一个带有两个容器的K3s集群：一个Kubernetes控制平面节点（server）和一个位于其前面的负载均衡器（serverlb）。 它将它们都放置在专用的Docker网络中，并在Docker主机上随机选择的免费端口上暴露Kubernetes API。 它还在后台创建了一个名为Docker的卷，作为镜像导入的准备。</p>
+<p>默认情况下，如果不提供name参数，集群将被命名为k3s-default，并且容器将显示为k3d-<cluster-name>-<role>-&lt;#&gt;，因此在本例中，两个容器将显示为 k3d- k3s-default-serverlb和k3d-k3s-default-server-0</role></cluster-name></p>
+<p>k3d等待一切准备就绪，从集群中拉取Kubeconfig并将其与默认的Kubeconfig合并（通常位于$ HOME / .kube / config或者KUBECONFIG环境变量指向的任何路径中）。<br>
+不用担心，您也可以调整该行为。</p>
+<p>使用kubectl查看您刚创建的用于显示节点的内容：. kubectl get nodes<br>
+k3d还为您提供了一些命令来列出您所创建的东西：.k3d cluster | node | registry list</p>
+<p><strong>“简单但精妙”的方式</strong></p>
+<pre><code>k3d cluster create mycluster --api-port 127.0.0.1:6445 --servers 3 --agents 2 --volume '/home/me/mycode:/code@agent[*]' --port '8080:80@loadbalancer'
+</code></pre>
+<p>此命令生成带有六个容器的K3s集群：* 1个负载均衡器* 3个server（控制平面节点）* 2个agent（以前为worker节点）</p>
+<p>通过--api-port 127.0.0.1:6445，您可以使用k3d将Kubernetes API端口（6443内部）映射到127.0.0.1 / localhost的端口6445。这意味着随后将在Kubeconfig中包含以下连接字符串：server: https://127.0.0.1:6445以连接到此集群。<br>
+该端口将从负载均衡器映射到您的主机系统。请求将从那里被代理到server节点，从而有效地模拟生产环境设置，在该环境中server节点也可能发生故障，并且希望故障转移到另一个server上。</p>
+<p>--volume /home/me/mycode:/code@agent[<em>] 绑定将你的本地目录/home/me/mycode挂载到所有（[</em>] agent 节点）内部的路径/code。使用索引（0或1）替换*，以便只把它挂载到其中一个节点。<br>
+告诉k3d应该将卷安装到哪个节点的规范称为“节点过滤器”，它也用于其他标志，例如端口映射的--port标志。</p>
+<p>也就是说，--port '8080:80@loadbalancer'将本地主机的端口8080映射到负载均衡器（serverlb）上的端口80，该负载均衡器可用于将HTTP ingress流量转发到集群。 例如，可以将Web应用程序部署到集群（Deployment）中，该集群通过一个 Ingress（如myapp.k3d.localhost）在外部暴露（Service）。</p>
+<p>然后（前提是一切都设置为将该域解析为本地主机IP），则可以将浏览器指向http://myapp.k3d.localhost:8080 访问您的应用程序。 然后，流量从您的主机通过Docker桥接口流向负载均衡器。 从那里，它被代理到集群，并通过Ingress和Service传递到您的应用程序Pod。</p>
+<blockquote>
+<p>注意：你必须设置一些机制，将myapp.k3d.localhost路由到本地主机IP（127.0.0.1）。<br>
+最常见的方法是在你的/etc/hosts文件中使用127.0.0.1<br>
+myapp.k3d.localhost的条目（C:\Windows\System32\drivers\etc/hosts）。。<br>
+但是，这不允许使用通配符（<em>.localhost），因此一段时间后可能会变得有些麻烦，因此您可能需要了解dnsmasq（MacOS /<br>
+UNIX）或Acrylic（Windows）之类的工具来减轻负担。  提示：可以在某些系统（至少是Linux操作系统，包括SUSE<br>
+Linux和openSUSE）上安装libnss-myhostname软件包，以将</em>.localhost域自动解析为127.0.0.1，这意味着您不必再手动操作。例如<br>
+，如果您希望通过Ingress进行测试，则需要在其中设置域。</p>
+</blockquote>
+<p>在此处，需要注意的事是：如果创建多个server节点，则K3s将被分配到--cluster-init标志，这意味着它将K3s的默认内部数据库（默认为SQLite）更改为etcd。</p>
+<p><strong>“配置即编码”方式</strong></p>
+<p>从k3d v4.0.0（发布于2021年1月）开始，我们支持使用配置文件，来配置一切您以前通过命令行标志所做的代码（不久之后甚至可能支持更多）。在撰写本文时，您可以在repo中找到用于验证配置文件的JSON模式：<br>
+<a href="https://github.com/rancher/k3d/blob/092f26a4e27eaf9d3a5bc32b249f897f448bc1ce/pkg/config/v1alpha2/schema.json" target="_blank">https://github.com/rancher/k3d/blob/092f26a4e27eaf9d3a5bc32b249f897f448bc1ce/pkg/config/v1alpha2/schema.json</a></p>
+<p>示例配置文件：</p>
+<pre><code># k3d configuration file, saved as e.g. /home/me/myk3dcluster.yaml
+apiVersion: k3d.io/v1alpha2  # this will change in the future as we make everything more stable
+kind: Simple  # internally, we also have a Cluster config, which is not yet available externally
+name: mycluster  # name that you want to give to your cluster (will still be prefixed with `k3d-`)
+servers: 1  # same as `--servers 1`
+agents: 2  # same as `--agents 2`
+kubeAPI:  # same as `--api-port 127.0.0.1:6445`
+  hostIP: "127.0.0.1"
+  hostPort: "6445"
+ports:
+  - port: 8080:80  # same as `--port 8080:80@loadbalancer
+    nodeFilters:
+      - loadbalancer
+options:
+  k3d:  # k3d runtime settings
+    wait: true  # wait for cluster to be usable before returining; same as `--wait` (default: true)
+    timeout: "60s"  # wait timeout before aborting; same as `--timeout 60s`
+  k3s:  # options passed on to K3s itself
+    extraServerArgs:  # additional arguments passed to the `k3s server` command
+      - --tls-san=my.host.domain
+    extraAgentArgs: []  # addditional arguments passed to the `k3s agent` command
+  kubeconfig:
+    updateDefaultKubeconfig: true  # add new cluster to your default Kubeconfig; same as `--kubeconfig-update-default` (default: true)
+switchCurrentContext: true  # also set current-context to the new cluster's context; same as `--kubeconfig-switch-context` (default: true)
+</code></pre>
+<p>假设我们将其另存为/home/me/myk3dcluster.yaml，我们可以使用它来配置新集群<br>
+k3d cluster create --config /home/me/myk3dcluster.yaml</p>
+<p>注意：您仍然可以设置额外的参数或标志，这些参数或标志将优先于（或将被合并）你在配置文件中定义的任何参数。</p>
+<h2 id="k3d还能做什么？">k3d还能做什么？</h2>
+<p>你可以在很多场景下使用k3d，例如：</p>
+<ul>
+<li>与k3d托管的容器仓库一起创建集群</li>
+<li>使用集群通过热代码重载进行快速开发</li>
+<li>将k3d与其他开发工具（例如Tilt或Skaffold）结合使用</li>
+<li>两者都可以通过k3d image import利用镜像导入的功能</li>
+<li>两者都可以利用k3d托管的仓库来加快开发周期</li>
+<li>在您的CI系统中使用k3d（为此我们提供了PoC：<a href="https://github.com/iwilltry42/k3d-demo/blob/main/.drone.yml%EF%BC%89" target="_blank">https://github.com/iwilltry42/k3d-demo/blob/main/.drone.yml）</a></li>
+<li>使用社区维护的vscode扩展程序（<a href="https://github.com/inercia/vscode-k3d%EF%BC%89%E5%B0%86%E5%85%B6%E9%9B%86%E6%88%90%E5%88%B0%E6%82%A8%E7%9A%84" target="_blank">https://github.com/inercia/vscode-k3d）将其集成到您的</a></li>
+<li>vscode工作流程中 用它来设置K3s的高可用性</li>
+</ul>
+<p>您可以通过使用在此demo repo中准备好的脚本来自己尝试所有这些操作：<br>
+<a href="https://github.com/iwilltry42/k3d-demo%E3%80%82" target="_blank">https://github.com/iwilltry42/k3d-demo。</a></p>
+<blockquote>
+<p>THORSTEN KLEIN<br>
+trivago的DevOps工程师，SUSE自由软件工程师，也是k3d的维护者。</p>
+</blockquote>
+
+</div>
+<div id="MySignature"></div>
+<div class="clear"></div>
+<div id="blog_post_info_block">
+    <div id="blog_post_info"></div>
+    <div class="clear"></div>
+    <div id="post_next_prev"></div>
+</div>
+            </div>
+            <div class="postDesc">posted @ 
+<span id="post-date">2021-05-14 10:38</span>&nbsp;
+<a href="https://www.cnblogs.com/k3s2019/">k3s中文社区</a>&nbsp;
+阅读(<span id="post_view_count">3</span>)&nbsp;
+评论(<span id="post_comment_count">0</span>)&nbsp;
+<a href="https://i.cnblogs.com/EditPosts.aspx?postid=14767563" rel="nofollow">编辑</a>&nbsp;
+<a href="javascript:void(0)" onclick="AddToWz(14767563);return false;">收藏</a></div>
+        </div>
+        <script src="https://common.cnblogs.com/highlight/10.3.1/highlight.min.js"></script>
+<script>markdown_highlight();</script>
+<script>
+    var allowComments = true, cb_blogId = 570850, cb_blogApp = 'k3s2019', cb_blogUserGuid = '19b5d09b-26ed-4305-3399-08d789d7fa8d';
+    var cb_entryId = 14767563, cb_entryCreatedDate = '2021-05-14 10:38', cb_postType = 1;
+    updatePostStats(
+        [cb_entryId],
+        function(id, count) { $("#post_view_count").text(count) },
+        function(id, count) { $("#post_comment_count").text(count) })
+    zoomManager.apply("#cnblogs_post_body img:not(.code_img_closed):not(.code_img_opened)");
+</script>
+        <a name="!comments"></a>
+<div id="blog-comments-placeholder"></div>
+<div id="comment_form" class="commentform">
+    <a name="commentform"></a>
+    <div id="divCommentShow"></div>
+    <div id="comment_nav"><span id="span_refresh_tips"></span><a href="javascript:void(0);" onclick="return RefreshCommentList();" id="lnk_RefreshComments" runat="server" clientidmode="Static">刷新评论</a><a href="#" onclick="return RefreshPage();">刷新页面</a><a href="#top">返回顶部</a></div>
+    <div id="comment_form_container"></div>
+    <div class="ad_text_commentbox" id="ad_text_under_commentbox"></div>
+    <div id="ad_t2"></div>
+    <div id="opt_under_post"></div>
+    <div id="cnblogs_c1" class="under-post-card">
+        <div id='div-gpt-ad-1592365906576-0' style='width: 300px; height: 250px;'></div>
+    </div>
+    <div id="under_post_card1"></div>
+    <div id="cnblogs_c2" class="under-post-card">
+        <div id='div-gpt-ad-1592366332455-0' style='width: 468px; height: 60px;'></div>
+    </div>
+    <div id="under_post_card2"></div>
+    <div id="HistoryToday" class="under-post-card"></div>
+    <script type="text/javascript">
+       var commentManager = new blogCommentManager();
+       commentManager.renderComments(0);
+       fixPostBody();
+       deliverBigBanner();
+setTimeout(function() { incrementViewCount(cb_entryId); }, 50);       deliverT2();
+       deliverC1C2();
+       loadNewsAndKb();
+       loadBlogSignature();
+LoadPostCategoriesTags(cb_blogId, cb_entryId);       LoadPostInfoBlock(cb_blogId, cb_entryId, cb_blogApp, cb_blogUserGuid);
+       GetPrevNextPost(cb_entryId, cb_blogId, cb_entryCreatedDate, cb_postType);
+       loadOptUnderPost();
+       GetHistoryToday(cb_blogId, cb_blogApp, cb_entryCreatedDate);
+    </script>
+</div>
+
+    </div>
+</div>
+            </div>
+        </div>
+
+        <div id="sideBar">
+            <div id="sideBarMain">
+                <div id="sidebar_news" class="newsItem">
+            <script>loadBlogNews();</script>
+</div>
+<div id="sidebar_c3"></div>
+                <div id="calendar"><div id="blog-calendar" style="display:none"></div></div>                
+                <script>loadBlogDefaultCalendar();</script>
+                <div id="leftcontentcontainer">
+                    <!-- begin:SingleColumn -->
+                    <div id="blog-sidecolumn"></div>
+                    <script>loadBlogSideColumn();</script>
+                    <!-- end:  SingleColumn -->
+                </div>
+            </div>
+        </div>
+        <div class="clear"></div>
+    </div>
+    <div class="clear"></div>
+    <div id="footer">
+        <!--done-->
+Copyright &copy; 2021 k3s中文社区
+<br /><span id="poweredby">Powered by .NET 5.0 on Kubernetes</span>
+
+    </div>
+</div>
+
+    
+
+    <input type="hidden" id="antiforgery_token" value="CfDJ8L-rpLgFVEJMgssCVvNUAjtS3twgctcl0AQE_-BNXVvjWyk3azXx_5ChWX2Qjtr8XUda8vYDE5BtcPUORGHxWktT2g4flu7PJRrE47M3cSkoYNvcnUYLgOqj4QFXWkHB43jf-4XNNbjOy5gm4Youfow" />
+</body>
+</html>

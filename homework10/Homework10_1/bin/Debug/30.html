@@ -1,0 +1,628 @@
+﻿<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="referrer" content="origin-when-crossorigin" />
+    
+    
+    <meta http-equiv="Cache-Control" content="no-transform" />
+    <meta http-equiv="Cache-Control" content="no-siteapp" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>k3s中文社区 - 博客园</title>
+    <link id="favicon" rel="shortcut icon" href="//common.cnblogs.com/favicon.svg" type="image/svg+xml" />
+    
+    <link rel="stylesheet" href="/css/blog-common.min.css?v=zS6-e1bxywlu3kpHvpr1J6MySwya3ztFtEnS7RYQ0Fk" />
+    <link id="MainCss" rel="stylesheet" href="/skins/simpleblue/bundle-simpleblue.min.css?v=2hjghzSZyhYA1HxvSxKnXih3JbC120DBjeO9V9T_nSs" />
+    
+    <link id="mobile-style" media="only screen and (max-width: 767px)" type="text/css" rel="stylesheet" href="/skins/simpleblue/bundle-simpleblue-mobile.min.css?v=3tvwgOOqUo3RpS6gGzEdK0LbptOPv4Bx7M85_UAnFGs" />
+    
+    <link type="application/rss+xml" rel="alternate" href="https://www.cnblogs.com/k3s2019/rss" />
+    <link type="application/rsd+xml" rel="EditURI" href="https://www.cnblogs.com/k3s2019/rsd.xml" />
+    <link type="application/wlwmanifest+xml" rel="wlwmanifest" href="https://www.cnblogs.com/k3s2019/wlwmanifest.xml" />
+    <script>
+        var currentBlogId = 570850;
+        var currentBlogApp = 'k3s2019';
+        var cb_enable_mathjax = false;
+        var isLogined = false;
+        var isBlogOwner = false;
+        var skinName = 'SimpleBlue';
+        var visitorUserId = '';
+    </script>
+    <script src="https://common.cnblogs.com/scripts/jquery-2.2.0.min.js"></script>
+    <script src="/js/blog-common.min.js?v=2Mic1VLeHXarpdzASbXqFMIMVLEBiWXNO5yiTHUcmhw"></script>
+    
+    
+    
+</head>
+<body class="has-navbar">
+    <a name="top"></a>
+    <div id="top_nav" class="navbar forpc">
+        <nav id="nav_main" class="navbar-main">
+            <ul id="nav_left" class="navbar-list navbar-left">
+                <li class="navbar-branding"><a href="https://www.cnblogs.com/" title="开发者的网上家园"><img src="/images/logo.svg?v=R9M0WmLAIPVydmdzE2keuvnjl-bPR7_35oHqtiBzGsM" alt="博客园Logo" /></a></li>
+                <li><a href="/" onclick="ga('send', 'event', 'Link', 'click', 'skin-navbar-sitehome')">首页</a></li>
+                <li><a href="https://news.cnblogs.com/" onclick="ga('send', 'event', 'Link', 'click', 'skin-navbar-news')">新闻</a></li>
+                <li><a href="https://q.cnblogs.com/" onclick="ga('send', 'event', 'Link', 'click', 'skin-navbar-q')">博问</a></li>
+                <li><a id="nav_brandzone" href="https://brands.cnblogs.com/" onclick="ga('send', 'event', 'Link', 'click', 'skin-navbar-brands')">专区</a></li>
+                <li><a href="https://ing.cnblogs.com/" onclick="ga('send', 'event', 'Link', 'click', 'skin-navbar-ing')">闪存</a></li>
+                <li><a href="https://edu.cnblogs.com/" onclick="ga('send', 'event', 'Link', 'click', 'skin-navbar-edu')">班级</a></li>
+            </ul>
+            <ul id="nav_right" class="navbar-list navbar-right">
+                <li>
+                    <form id="zzk_search" class="navbar-search" action="https://zzk.cnblogs.com/s" method="get">
+                        <input name="w" id="zzk_search_input" placeholder="代码改变世界" type="text" tabindex="3" />
+                        <button type="submit" id="zzk_search_button">
+                            <img src="/images/aggsite/search.svg" alt="搜索" />
+                        </button>
+                    </form>
+                </li>
+                <li id="navbar_login_status" class="navbar-list">
+                    <a class="navbar-user-info navbar-blog" href="https://i.cnblogs.com/EditPosts.aspx?opt=1" alt="写随笔" title="写随笔">
+                        <img id="new_post_icon" class="navbar-icon" src="/images/aggsite/newpost.svg" alt="写随笔" />
+                    </a>
+                    <a id="navblog-myblog-icon" class="navbar-user-info navbar-blog" href="https://passport.cnblogs.com/GetBlogApplyStatus.aspx" alt="我的博客" title="我的博客">
+                        <img id="myblog_icon" class="navbar-icon" src="/images/aggsite/myblog.svg" alt="我的博客" />
+                    </a>
+                    <a class="navbar-user-info navbar-message navbar-icon-wrapper" href="https://msg.cnblogs.com/" alt="短消息" title="短消息">
+                        <img id="msg_icon" class="navbar-icon" src="/images/aggsite/message.svg?v=J0WS2P2iPgaIVgXxcAhliw4AFZIpaTWxtdoNAv9eiCA" alt="短消息" />
+                        <span id="msg_count" style="display: none"></span>
+                    </a>
+                    <div id="user_info" class="navbar-user-info dropdown">
+                        <a class="dropdown-button" href="https://home.cnblogs.com/">
+                            <img id="user_icon" class="navbar-avatar" src="/images/aggsite/avatar-default.svg" alt="用户头像" />
+                        </a>
+                        <div class="dropdown-menu">
+                            <a id="navblog-myblog-text" href="https://passport.cnblogs.com/GetBlogApplyStatus.aspx">我的博客</a>
+                            <a href="https://home.cnblogs.com/">我的园子</a>
+                            <a href="https://account.cnblogs.com/settings/account">账号设置</a>
+                            <a href="javascript:void(0)" id="navbar_lite_mode_toggle" title="简洁模式会使用简洁款皮肤显示所有博客">
+    简洁模式 <img id="navbar_lite_mode_on" src="/images/lite-mode-check.svg" class="hide" /><span id="navbar_lite_mode_spinner" class="hide">...</span>
+</a>
+                            <a href="javascript:void(0)" onclick="account.logout();">退出登录</a>
+                        </div>
+                    </div>
+                    <a class="navbar-anonymous" href="https://account.cnblogs.com/signup/">注册</a>
+                    <a class="navbar-anonymous" href="javascript:void(0);" onclick="account.login()">登录</a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+
+    
+    <div id="home">
+    <div id="header">
+        <div id="blogTitle">
+            <div class="title"><a id="Header1_HeaderTitle" class="headermaintitle HeaderMainTitle" href="https://www.cnblogs.com/k3s2019/">k3s中文社区</a>
+</div>
+<div class="subtitle"></div>
+
+        </div>
+        <div id="navigator">
+            
+<ul id="navList">
+    <li id="nav_sitehome"><a id="blog_nav_sitehome" class="menu" href="https://www.cnblogs.com/">
+博客园</a>
+</li>
+    <li id="nav_myhome">
+<a id="blog_nav_myhome" class="menu" href="https://www.cnblogs.com/k3s2019/">
+首页</a>
+</li>
+    <li id="nav_newpost">
+
+<a id="blog_nav_newpost" class="menu" href="https://i.cnblogs.com/EditPosts.aspx?opt=1">
+新随笔</a>
+</li>
+    <li id="nav_contact">
+<a id="blog_nav_contact" class="menu" href="https://msg.cnblogs.com/send/k3s%E4%B8%AD%E6%96%87%E7%A4%BE%E5%8C%BA">
+联系</a></li>
+    <li id="nav_rss">
+<a id="blog_nav_rss" class="menu" href="javascript:void(0)" data-rss="https://www.cnblogs.com/k3s2019/rss/">
+订阅</a></li>
+    <li id="nav_admin">
+<a id="blog_nav_admin" class="menu" href="https://i.cnblogs.com/">
+管理</a>
+</li>
+</ul>
+
+            <div class="blogStats">
+                <div id="blog_stats_place_holder"><script>loadBlogStats();</script></div>
+            </div>
+        </div>
+    </div>
+    <div id="main">
+        <div id="mainContent">
+            <div class="forFlow">
+                
+
+
+
+
+
+
+    
+
+
+<div class="day">
+    <div class="dayTitle">
+        <a href="https://www.cnblogs.com/k3s2019/archive/2021/05/14.html">2021年5月14日</a>
+    </div>
+        <div class="postTitle">
+            
+
+<a class="postTitle2 vertical-middle" href="https://www.cnblogs.com/k3s2019/p/14767563.html">
+    <span>
+        k3d入门指南：在Docker中运行K3s
+    </span>
+    
+
+
+
+</a>
+
+        </div>
+        <div class="postCon">
+            
+
+    <div class="c_b_p_desc">
+摘要：在本文中，我们将简单了解k3d，这是一款可让您在安装了Docker的任何地方运行一次性Kubernetes集群的工具，此外在本文中我们还将探讨在使用k3d中可能会出现的一切问题。 什么是k3d？ k3d是一个小型程序，用于在Docker中运行K3s集群。 K3s是经过CNCF认证的轻量级Kubern        <a href="https://www.cnblogs.com/k3s2019/p/14767563.html" class="c_b_p_desc_readmore">阅读全文</a>
+    </div>
+
+        </div>
+        <div class="clear"></div>
+        <div class="postDesc">
+            posted @ 2021-05-14 10:38
+k3s中文社区
+<span data-post-id="14767563" class="post-view-count">阅读(3)</span> 
+<span data-post-id="14767563" class="post-comment-count">评论(0)</span> 
+<span data-post-id="14767563" class="post-digg-count">推荐(0)</span> 
+<a href="https://i.cnblogs.com/EditPosts.aspx?postid=14767563" rel="nofollow">
+    编辑
+</a>
+
+        </div>
+        <div class="clear"></div>
+</div>
+    
+
+
+<div class="day">
+    <div class="dayTitle">
+        <a href="https://www.cnblogs.com/k3s2019/archive/2021/05/12.html">2021年5月12日</a>
+    </div>
+        <div class="postTitle">
+            
+
+<a class="postTitle2 vertical-middle" href="https://www.cnblogs.com/k3s2019/p/14758396.html">
+    <span>
+        一文搞定完整的云原生边缘基础设施堆栈
+    </span>
+    
+
+
+
+</a>
+
+        </div>
+        <div class="postCon">
+            
+
+    <div class="c_b_p_desc">
+摘要：作者简介 Janakiram MSV是Janakiram &amp; Associates的首席分析师，也是国际信息技术学院的兼职教师。他也是Google Qualified Developer、亚马逊认证解决方案架构师、亚马逊认证开发者、亚马逊认证SysOps管理员和微软认证Azure专业人员。 Jana        <a href="https://www.cnblogs.com/k3s2019/p/14758396.html" class="c_b_p_desc_readmore">阅读全文</a>
+    </div>
+
+        </div>
+        <div class="clear"></div>
+        <div class="postDesc">
+            posted @ 2021-05-12 09:26
+k3s中文社区
+<span data-post-id="14758396" class="post-view-count">阅读(19)</span> 
+<span data-post-id="14758396" class="post-comment-count">评论(0)</span> 
+<span data-post-id="14758396" class="post-digg-count">推荐(0)</span> 
+<a href="https://i.cnblogs.com/EditPosts.aspx?postid=14758396" rel="nofollow">
+    编辑
+</a>
+
+        </div>
+        <div class="clear"></div>
+</div>
+    
+
+
+<div class="day">
+    <div class="dayTitle">
+        <a href="https://www.cnblogs.com/k3s2019/archive/2021/05/08.html">2021年5月8日</a>
+    </div>
+        <div class="postTitle">
+            
+
+<a class="postTitle2 vertical-middle" href="https://www.cnblogs.com/k3s2019/p/14746535.html">
+    <span>
+        硬核干货| 如何利用K3s低成本在流水线中添加测试
+    </span>
+    
+
+
+
+</a>
+
+        </div>
+        <div class="postCon">
+            
+
+    <div class="c_b_p_desc">
+摘要：作者介绍 Petro Kashlikov，AWS技术客户经理。十分热衷于容器技术，并与客户一起设计、部署和管理他们的工作负载/架构。 现代化的微服务应用程序堆栈、CI/CD流水线、Kubernetes作为编排引擎以及每天成千上百的部署……这些听起来十分美好，直到你发现你的Kubernetes开发或s        <a href="https://www.cnblogs.com/k3s2019/p/14746535.html" class="c_b_p_desc_readmore">阅读全文</a>
+    </div>
+
+        </div>
+        <div class="clear"></div>
+        <div class="postDesc">
+            posted @ 2021-05-08 21:20
+k3s中文社区
+<span data-post-id="14746535" class="post-view-count">阅读(6)</span> 
+<span data-post-id="14746535" class="post-comment-count">评论(0)</span> 
+<span data-post-id="14746535" class="post-digg-count">推荐(0)</span> 
+<a href="https://i.cnblogs.com/EditPosts.aspx?postid=14746535" rel="nofollow">
+    编辑
+</a>
+
+        </div>
+        <div class="clear"></div>
+</div>
+    
+
+
+<div class="day">
+    <div class="dayTitle">
+        <a href="https://www.cnblogs.com/k3s2019/archive/2021/04/26.html">2021年4月26日</a>
+    </div>
+        <div class="postTitle">
+            
+
+<a class="postTitle2 vertical-middle" href="https://www.cnblogs.com/k3s2019/p/14706563.html">
+    <span>
+        K3s+Jetson Nano，在边缘端实现实时视频分析！
+    </span>
+    
+
+
+
+</a>
+
+        </div>
+        <div class="postCon">
+            
+
+    <div class="c_b_p_desc">
+摘要：随着越来越多功能强大的新设备开始支持GPU，边缘场景的用例不断扩展到各行各业。随着技术的发展，边缘的规模越来越大，效率越来越高。NVIDIA凭借其行业领先的GPU携手领先的处理器IP技术提供商ARM在边缘生态系统领域进行重大创新和投资。NVIDIA Jetson Nano便是其中的代表产品之一，它功        <a href="https://www.cnblogs.com/k3s2019/p/14706563.html" class="c_b_p_desc_readmore">阅读全文</a>
+    </div>
+
+        </div>
+        <div class="clear"></div>
+        <div class="postDesc">
+            posted @ 2021-04-26 21:15
+k3s中文社区
+<span data-post-id="14706563" class="post-view-count">阅读(36)</span> 
+<span data-post-id="14706563" class="post-comment-count">评论(0)</span> 
+<span data-post-id="14706563" class="post-digg-count">推荐(0)</span> 
+<a href="https://i.cnblogs.com/EditPosts.aspx?postid=14706563" rel="nofollow">
+    编辑
+</a>
+
+        </div>
+        <div class="clear"></div>
+</div>
+    
+
+
+<div class="day">
+    <div class="dayTitle">
+        <a href="https://www.cnblogs.com/k3s2019/archive/2021/04/21.html">2021年4月21日</a>
+    </div>
+        <div class="postTitle">
+            
+
+<a class="postTitle2 vertical-middle" href="https://www.cnblogs.com/k3s2019/p/14686646.html">
+    <span>
+        15分钟连接Jetson Nano与K8S，轻松搭建机器学习集群
+    </span>
+    
+
+
+
+</a>
+
+        </div>
+        <div class="postCon">
+            
+
+    <div class="c_b_p_desc">
+摘要：在本文中我将展示如何将Jetson Nano开发板连接到Kubernetes集群以作为一个GPU节点。我将介绍使用GPU运行容器所需的NVIDIA docker设置，以及将Jetson连接到Kubernetes集群。在成功将节点连接到集群后，我还将展示如何在Jetson Nano上使用GPU运行简单        <a href="https://www.cnblogs.com/k3s2019/p/14686646.html" class="c_b_p_desc_readmore">阅读全文</a>
+    </div>
+
+        </div>
+        <div class="clear"></div>
+        <div class="postDesc">
+            posted @ 2021-04-21 19:45
+k3s中文社区
+<span data-post-id="14686646" class="post-view-count">阅读(22)</span> 
+<span data-post-id="14686646" class="post-comment-count">评论(0)</span> 
+<span data-post-id="14686646" class="post-digg-count">推荐(0)</span> 
+<a href="https://i.cnblogs.com/EditPosts.aspx?postid=14686646" rel="nofollow">
+    编辑
+</a>
+
+        </div>
+        <div class="clear"></div>
+</div>
+    
+
+
+<div class="day">
+    <div class="dayTitle">
+        <a href="https://www.cnblogs.com/k3s2019/archive/2021/04/19.html">2021年4月19日</a>
+    </div>
+        <div class="postTitle">
+            
+
+<a class="postTitle2 vertical-middle" href="https://www.cnblogs.com/k3s2019/p/14678697.html">
+    <span>
+        配置高可用K3s集群完全攻略
+    </span>
+    
+
+
+
+</a>
+
+        </div>
+        <div class="postCon">
+            
+
+    <div class="c_b_p_desc">
+摘要：前 言 在本文中，我们将简要介绍在高可用性（HA）配置中设置K3s的参考架构。这意味着你的K3s集群可以容忍故障，并保持启动和运行，为你的用户提供流量。你的应用程序也应该针对高可用性进行构建和配置，但这部分内容不在本文的范围内。 在本教程中，我们将使用CLI工具在DigitalOcean上配置一个H        <a href="https://www.cnblogs.com/k3s2019/p/14678697.html" class="c_b_p_desc_readmore">阅读全文</a>
+    </div>
+
+        </div>
+        <div class="clear"></div>
+        <div class="postDesc">
+            posted @ 2021-04-19 21:09
+k3s中文社区
+<span data-post-id="14678697" class="post-view-count">阅读(99)</span> 
+<span data-post-id="14678697" class="post-comment-count">评论(0)</span> 
+<span data-post-id="14678697" class="post-digg-count">推荐(0)</span> 
+<a href="https://i.cnblogs.com/EditPosts.aspx?postid=14678697" rel="nofollow">
+    编辑
+</a>
+
+        </div>
+        <div class="clear"></div>
+</div>
+    
+
+
+<div class="day">
+    <div class="dayTitle">
+        <a href="https://www.cnblogs.com/k3s2019/archive/2021/04/15.html">2021年4月15日</a>
+    </div>
+        <div class="postTitle">
+            
+
+<a class="postTitle2 vertical-middle" href="https://www.cnblogs.com/k3s2019/p/14664812.html">
+    <span>
+        K3s+Sysdig，8分钟部署并保护集群安全！
+    </span>
+    
+
+
+
+</a>
+
+        </div>
+        <div class="postCon">
+            
+
+    <div class="c_b_p_desc">
+摘要：K3s因其易于部署、小型二进制文件以及能够用于特定用例，如边缘环境（在这些场景下使用K8S会过于复杂）而在全球开发者社区中备受欢迎。K3s是一个通过CNCF认证的Kubernetes发行版，这意味着K3s集群上的工作方式与在Kubernetes上完全相同。 在本篇文章中，我们将介绍如何部署K3s，然        <a href="https://www.cnblogs.com/k3s2019/p/14664812.html" class="c_b_p_desc_readmore">阅读全文</a>
+    </div>
+
+        </div>
+        <div class="clear"></div>
+        <div class="postDesc">
+            posted @ 2021-04-15 22:33
+k3s中文社区
+<span data-post-id="14664812" class="post-view-count">阅读(29)</span> 
+<span data-post-id="14664812" class="post-comment-count">评论(0)</span> 
+<span data-post-id="14664812" class="post-digg-count">推荐(0)</span> 
+<a href="https://i.cnblogs.com/EditPosts.aspx?postid=14664812" rel="nofollow">
+    编辑
+</a>
+
+        </div>
+        <div class="clear"></div>
+</div>
+    
+
+
+<div class="day">
+    <div class="dayTitle">
+        <a href="https://www.cnblogs.com/k3s2019/archive/2021/04/13.html">2021年4月13日</a>
+    </div>
+        <div class="postTitle">
+            
+
+<a class="postTitle2 vertical-middle" href="https://www.cnblogs.com/k3s2019/p/14655542.html">
+    <span>
+        1款工具助力Rancher HA快速部署，极速提升研发测试效率
+    </span>
+    
+
+
+
+</a>
+
+        </div>
+        <div class="postCon">
+            
+
+    <div class="c_b_p_desc">
+摘要：AutoK3s是一款K3s集群自动化部署工具，可以方便开发者自助管理云环境中的K3s集群，可支持AWS/Aliyun/TencentCloud等主流公有云，随用随部署，用完即释放，对于在平时工作过程中需要各种K8s环境的开发测试人员，可以从很大程度上节省重复部署环境的时间，提升工作效率。 新发布的         <a href="https://www.cnblogs.com/k3s2019/p/14655542.html" class="c_b_p_desc_readmore">阅读全文</a>
+    </div>
+
+        </div>
+        <div class="clear"></div>
+        <div class="postDesc">
+            posted @ 2021-04-13 21:57
+k3s中文社区
+<span data-post-id="14655542" class="post-view-count">阅读(56)</span> 
+<span data-post-id="14655542" class="post-comment-count">评论(0)</span> 
+<span data-post-id="14655542" class="post-digg-count">推荐(0)</span> 
+<a href="https://i.cnblogs.com/EditPosts.aspx?postid=14655542" rel="nofollow">
+    编辑
+</a>
+
+        </div>
+        <div class="clear"></div>
+</div>
+    
+
+
+<div class="day">
+    <div class="dayTitle">
+        <a href="https://www.cnblogs.com/k3s2019/archive/2021/04/09.html">2021年4月9日</a>
+    </div>
+        <div class="postTitle">
+            
+
+<a class="postTitle2 vertical-middle" href="https://www.cnblogs.com/k3s2019/p/14638491.html">
+    <span>
+        除了边缘场景，你还能在哪里使用K3s？
+    </span>
+    
+
+
+
+</a>
+
+        </div>
+        <div class="postCon">
+            
+
+    <div class="c_b_p_desc">
+摘要：也也许你已经听说过轻量级Kubernetes发行版K3s。它十分有意思，并且极易安装。另一方面，它简易的特性意味着它也许无法像正常的K8S设置那样进行各种自定义或者拥有丰富的功能。那么，你什么时候应该考虑使用K3s呢？本文将介绍一些关于K3s的用例。如果你发现你处于其中任何一种情况，那么就赶紧试试K        <a href="https://www.cnblogs.com/k3s2019/p/14638491.html" class="c_b_p_desc_readmore">阅读全文</a>
+    </div>
+
+        </div>
+        <div class="clear"></div>
+        <div class="postDesc">
+            posted @ 2021-04-09 19:16
+k3s中文社区
+<span data-post-id="14638491" class="post-view-count">阅读(45)</span> 
+<span data-post-id="14638491" class="post-comment-count">评论(0)</span> 
+<span data-post-id="14638491" class="post-digg-count">推荐(0)</span> 
+<a href="https://i.cnblogs.com/EditPosts.aspx?postid=14638491" rel="nofollow">
+    编辑
+</a>
+
+        </div>
+        <div class="clear"></div>
+</div>
+    
+
+
+<div class="day">
+    <div class="dayTitle">
+        <a href="https://www.cnblogs.com/k3s2019/archive/2021/04/02.html">2021年4月2日</a>
+    </div>
+        <div class="postTitle">
+            
+
+<a class="postTitle2 vertical-middle" href="https://www.cnblogs.com/k3s2019/p/14611233.html">
+    <span>
+        基础指南：如何在K3s中配置Traefik?
+    </span>
+    
+
+
+
+</a>
+
+        </div>
+        <div class="postCon">
+            
+
+    <div class="c_b_p_desc">
+摘要：云由临时的服务器组和向服务器分配容器的方法组成。容器是一种将应用程序打包到标准化单元中的方法，以便该应用程序可以在云中的任何服务器上平稳运行。经常出现的问题是需要将外部客户端的流量定向到云内的容器中，同时确保外部客户端不与云绑定。针对该问题，一个常见的解决方案是创建一个Ingress control        <a href="https://www.cnblogs.com/k3s2019/p/14611233.html" class="c_b_p_desc_readmore">阅读全文</a>
+    </div>
+
+        </div>
+        <div class="clear"></div>
+        <div class="postDesc">
+            posted @ 2021-04-02 16:17
+k3s中文社区
+<span data-post-id="14611233" class="post-view-count">阅读(86)</span> 
+<span data-post-id="14611233" class="post-comment-count">评论(0)</span> 
+<span data-post-id="14611233" class="post-digg-count">推荐(0)</span> 
+<a href="https://i.cnblogs.com/EditPosts.aspx?postid=14611233" rel="nofollow">
+    编辑
+</a>
+
+        </div>
+        <div class="clear"></div>
+</div>
+
+<div class="topicListFooter">
+    <div id="nav_next_page">
+        
+    <a href="https://www.cnblogs.com/k3s2019/default.html?page=2">
+        下一页
+    </a>
+
+    </div>    
+</div>
+
+
+
+
+<script>
+    updatePostStats(
+        $(".post-view-count").map(function () { return this.dataset.postId }).get(),
+        function(id, count) { $(".post-view-count[data-post-id=" + id + "]").text("阅读(" + count + ")") },
+        function(id, count) { $(".post-comment-count[data-post-id=" + id + "]").text("评论(" + count + ")") },
+        function(id, count) { $(".post-digg-count[data-post-id=" + id + "]").text("推荐(" + count + ")") });
+</script>
+            </div>
+        </div>
+
+        <div id="sideBar">
+            <div id="sideBarMain">
+                <div id="sidebar_news" class="newsItem">
+            <script>loadBlogNews();</script>
+</div>
+<div id="sidebar_c3"></div>
+                <div id="calendar"><div id="blog-calendar" style="display:none"></div></div>                
+                <script>loadBlogDefaultCalendar();</script>
+                <div id="leftcontentcontainer">
+                    <!-- begin:SingleColumn -->
+                    <div id="blog-sidecolumn"></div>
+                    <script>loadBlogSideColumn();</script>
+                    <!-- end:  SingleColumn -->
+                </div>
+            </div>
+        </div>
+        <div class="clear"></div>
+    </div>
+    <div class="clear"></div>
+    <div id="footer">
+        <!--done-->
+Copyright &copy; 2021 k3s中文社区
+<br /><span id="poweredby">Powered by .NET 5.0 on Kubernetes</span>
+
+    </div>
+</div>
+
+    
+
+    <input type="hidden" id="antiforgery_token" value="CfDJ8L-rpLgFVEJMgssCVvNUAjtaPv5Ybxor-5oVG7y7iu-GIJ4Tq6F2BxHJ5qzcYZ-fbuuc90HwEC4KkfgQbZPBJJPywBIG18hAgGKcGMIyHaTHUSMM3uO4X8eSOUERDR-m8r37yyx4Dbx2qNpP-JJvSjc" />
+</body>
+</html>

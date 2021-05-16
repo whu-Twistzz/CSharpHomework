@@ -1,0 +1,508 @@
+﻿<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="referrer" content="origin-when-crossorigin" />
+    <meta name="description" content="一、两个装饰器@classmethod、@staticmethod @classmethod：把类中的绑定方法变成一个类方法，cls 就等于类名 有什么用？ 1、在方法中任然可以引用类中的静态变量 2" />
+    <meta property="og:description" content="一、两个装饰器@classmethod、@staticmethod @classmethod：把类中的绑定方法变成一个类方法，cls 就等于类名 有什么用？ 1、在方法中任然可以引用类中的静态变量 2" />
+    <meta http-equiv="Cache-Control" content="no-transform" />
+    <meta http-equiv="Cache-Control" content="no-siteapp" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>类的两个装饰器classmethod、staticethod和内置魔术方法 - 小杨-先生 - 博客园</title>
+    <link id="favicon" rel="shortcut icon" href="//common.cnblogs.com/favicon.svg" type="image/svg+xml" />
+    
+    <link rel="stylesheet" href="/css/blog-common.min.css?v=zS6-e1bxywlu3kpHvpr1J6MySwya3ztFtEnS7RYQ0Fk" />
+    <link id="MainCss" rel="stylesheet" href="/skins/buildtowin/bundle-buildtowin.min.css?v=Tgl1d--mRuaeqinLMFZ2zu1KEazOmNWHLTJIcXu4SXU" />
+    
+    <link id="mobile-style" media="only screen and (max-width: 767px)" type="text/css" rel="stylesheet" href="/skins/buildtowin/bundle-buildtowin-mobile.min.css?v=iPf_XHQsJ-ofZZ2RiaeMCHG0JEaMNLa9yhkUGK3xTSQ" />
+    
+    <link type="application/rss+xml" rel="alternate" href="https://www.cnblogs.com/XiaoYang-sir/rss" />
+    <link type="application/rsd+xml" rel="EditURI" href="https://www.cnblogs.com/XiaoYang-sir/rsd.xml" />
+    <link type="application/wlwmanifest+xml" rel="wlwmanifest" href="https://www.cnblogs.com/XiaoYang-sir/wlwmanifest.xml" />
+    <script>
+        var currentBlogId = 634722;
+        var currentBlogApp = 'XiaoYang-sir';
+        var cb_enable_mathjax = false;
+        var isLogined = false;
+        var isBlogOwner = false;
+        var skinName = 'BuildtoWin';
+        var visitorUserId = '';
+    </script>
+        <script>
+            var currentPostDateAdded = '2021-05-14 10:26';
+        </script>
+    <script src="https://common.cnblogs.com/scripts/jquery-2.2.0.min.js"></script>
+    <script src="/js/blog-common.min.js?v=2Mic1VLeHXarpdzASbXqFMIMVLEBiWXNO5yiTHUcmhw"></script>
+    
+    
+    
+</head>
+<body class="has-navbar">
+    <a name="top"></a>
+    <div id="top_nav" class="navbar forpc">
+        <nav id="nav_main" class="navbar-main">
+            <ul id="nav_left" class="navbar-list navbar-left">
+                <li class="navbar-branding"><a href="https://www.cnblogs.com/" title="开发者的网上家园"><img src="/images/logo.svg?v=R9M0WmLAIPVydmdzE2keuvnjl-bPR7_35oHqtiBzGsM" alt="博客园Logo" /></a></li>
+                <li><a href="/" onclick="ga('send', 'event', 'Link', 'click', 'skin-navbar-sitehome')">首页</a></li>
+                <li><a href="https://news.cnblogs.com/" onclick="ga('send', 'event', 'Link', 'click', 'skin-navbar-news')">新闻</a></li>
+                <li><a href="https://q.cnblogs.com/" onclick="ga('send', 'event', 'Link', 'click', 'skin-navbar-q')">博问</a></li>
+                <li><a id="nav_brandzone" href="https://brands.cnblogs.com/" onclick="ga('send', 'event', 'Link', 'click', 'skin-navbar-brands')">专区</a></li>
+                <li><a href="https://ing.cnblogs.com/" onclick="ga('send', 'event', 'Link', 'click', 'skin-navbar-ing')">闪存</a></li>
+                <li><a href="https://edu.cnblogs.com/" onclick="ga('send', 'event', 'Link', 'click', 'skin-navbar-edu')">班级</a></li>
+            </ul>
+            <ul id="nav_right" class="navbar-list navbar-right">
+                <li>
+                    <form id="zzk_search" class="navbar-search" action="https://zzk.cnblogs.com/s" method="get">
+                        <input name="w" id="zzk_search_input" placeholder="代码改变世界" type="text" tabindex="3" />
+                        <button type="submit" id="zzk_search_button">
+                            <img src="/images/aggsite/search.svg" alt="搜索" />
+                        </button>
+                    </form>
+                </li>
+                <li id="navbar_login_status" class="navbar-list">
+                    <a class="navbar-user-info navbar-blog" href="https://i.cnblogs.com/EditPosts.aspx?opt=1" alt="写随笔" title="写随笔">
+                        <img id="new_post_icon" class="navbar-icon" src="/images/aggsite/newpost.svg" alt="写随笔" />
+                    </a>
+                    <a id="navblog-myblog-icon" class="navbar-user-info navbar-blog" href="https://passport.cnblogs.com/GetBlogApplyStatus.aspx" alt="我的博客" title="我的博客">
+                        <img id="myblog_icon" class="navbar-icon" src="/images/aggsite/myblog.svg" alt="我的博客" />
+                    </a>
+                    <a class="navbar-user-info navbar-message navbar-icon-wrapper" href="https://msg.cnblogs.com/" alt="短消息" title="短消息">
+                        <img id="msg_icon" class="navbar-icon" src="/images/aggsite/message.svg?v=J0WS2P2iPgaIVgXxcAhliw4AFZIpaTWxtdoNAv9eiCA" alt="短消息" />
+                        <span id="msg_count" style="display: none"></span>
+                    </a>
+                    <div id="user_info" class="navbar-user-info dropdown">
+                        <a class="dropdown-button" href="https://home.cnblogs.com/">
+                            <img id="user_icon" class="navbar-avatar" src="/images/aggsite/avatar-default.svg" alt="用户头像" />
+                        </a>
+                        <div class="dropdown-menu">
+                            <a id="navblog-myblog-text" href="https://passport.cnblogs.com/GetBlogApplyStatus.aspx">我的博客</a>
+                            <a href="https://home.cnblogs.com/">我的园子</a>
+                            <a href="https://account.cnblogs.com/settings/account">账号设置</a>
+                            <a href="javascript:void(0)" id="navbar_lite_mode_toggle" title="简洁模式会使用简洁款皮肤显示所有博客">
+    简洁模式 <img id="navbar_lite_mode_on" src="/images/lite-mode-check.svg" class="hide" /><span id="navbar_lite_mode_spinner" class="hide">...</span>
+</a>
+                            <a href="javascript:void(0)" onclick="account.logout();">退出登录</a>
+                        </div>
+                    </div>
+                    <a class="navbar-anonymous" href="https://account.cnblogs.com/signup/">注册</a>
+                    <a class="navbar-anonymous" href="javascript:void(0);" onclick="account.login()">登录</a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+
+    <div id="page_begin_html">
+        <link type="text/css" rel="stylesheet" href="https://blog-static.cnblogs.com/files/XiaoYang-sir/custom.css">
+<style>ul, li { display: block; position: relative }</style>
+
+    </div>
+    <!--done-->
+<div id="home">
+<div id="header">
+	<div id="blogTitle">
+        <a id="lnkBlogLogo" href="https://www.cnblogs.com/XiaoYang-sir/"><img id="blogLogo" src="/skins/custom/images/logo.gif" alt="返回主页" /></a>		
+		
+<!--done-->
+<h1><a id="Header1_HeaderTitle" class="headermaintitle HeaderMainTitle" href="https://www.cnblogs.com/XiaoYang-sir/">小杨-先生</a>
+</h1>
+<h2></h2>
+
+
+
+
+		
+	</div><!--end: blogTitle 博客的标题和副标题 -->
+	<div id="navigator">
+		
+<ul id="navList">
+<li><a id="blog_nav_sitehome" class="menu" href="https://www.cnblogs.com/">
+博客园</a>
+</li>
+<li>
+<a id="blog_nav_myhome" class="menu" href="https://www.cnblogs.com/XiaoYang-sir/">
+首页</a>
+</li>
+<li>
+
+<a id="blog_nav_newpost" class="menu" href="https://i.cnblogs.com/EditPosts.aspx?opt=1">
+新随笔</a>
+</li>
+<li>
+<a id="blog_nav_contact" class="menu" href="https://msg.cnblogs.com/send/%E5%B0%8F%E6%9D%A8-%E5%85%88%E7%94%9F">
+联系</a></li>
+<li>
+<a id="blog_nav_rss" class="menu" href="javascript:void(0)" data-rss="https://www.cnblogs.com/XiaoYang-sir/rss/">
+订阅</a>
+<!--<partial name="./Shared/_XmlLink.cshtml" model="Model" /></li>--></li>
+<li>
+<a id="blog_nav_admin" class="menu" href="https://i.cnblogs.com/">
+管理</a>
+</li>
+</ul>
+
+
+		<div class="blogStats">
+			<div id="blog_stats_place_holder"><script>loadBlogStats();</script></div>
+		</div><!--end: blogStats -->
+	</div><!--end: navigator 博客导航栏 -->
+</div><!--end: header 头部 -->
+<div id="main">
+	<div id="mainContent">
+	<div class="forFlow">
+		<div id="post_detail">
+    <!--done-->
+    <div id="topics">
+        <div class="post">
+            <h1 class = "postTitle">
+                
+<a id="cb_post_title_url" class="postTitle2 vertical-middle" href="https://www.cnblogs.com/XiaoYang-sir/p/14767490.html">
+    <span>类的两个装饰器classmethod、staticethod和内置魔术方法</span>
+    
+
+
+
+</a>
+
+            </h1>
+            <div class="clear"></div>
+            <div class="postBody">
+                <div id="cnblogs_post_body" class="blogpost-body blogpost-body-html">
+<h2 class="md-end-block md-heading"><span class="md-plain md-expand">一、两个装饰器@classmethod、@staticmethod</span></h2>
+<p class="md-end-block md-p"><span><strong>@classmethod：</strong><span class="md-plain">把类中的绑定方法变成一个类方法，cls 就等于类名</span></span></p>
+<p class="md-end-block md-p"><span class="md-plain">有什么用？</span></p>
+<p class="md-end-block md-p"><span class="md-tab"> <span class="md-plain">1、在方法中任然可以引用类中的静态变量</span></span></p>
+<p class="md-end-block md-p"><span class="md-tab"> <span class="md-plain">2、可以不用实例化对象，就直接用类名在外部调用这个方法</span></span></p>
+<p class="md-end-block md-p"><span class="md-plain">什么时候用？</span></p>
+<p class="md-end-block md-p"><span class="md-tab"> <span class="md-plain">1、定义了一个方法，默认传 self ，但这个 self 没有被使用。</span></span></p>
+<p class="md-end-block md-p"><span class="md-tab"> <span class="md-plain">2、并且你在这个方法里用到了当前类名，或者你准备使用这个类的内存空间中的名字的时候</span></span></p>
+<div class="cnblogs_code">
+<pre><span style="color: rgba(0, 128, 0, 1)">#</span><span style="color: rgba(0, 128, 0, 1)"> 商品打折：</span>
+<span style="color: rgba(0, 0, 255, 1)">class</span><span style="color: rgba(0, 0, 0, 1)"> Goods:
+    </span><span style="color: rgba(128, 0, 128, 1)">__discount</span> = 0.8<span style="color: rgba(0, 0, 0, 1)">
+​
+    </span><span style="color: rgba(0, 0, 255, 1)">def</span> <span style="color: rgba(128, 0, 128, 1)">__init__</span><span style="color: rgba(0, 0, 0, 1)">(self, original_price):
+        self.original_price </span>=<span style="color: rgba(0, 0, 0, 1)"> original_price
+        self.price </span>= self.original_price * self.<span style="color: rgba(128, 0, 128, 1)">__discount</span><span style="color: rgba(0, 0, 0, 1)">
+​
+    @classmethod        </span><span style="color: rgba(0, 128, 0, 1)">#</span><span style="color: rgba(0, 128, 0, 1)"> 把一个对象的绑定方法改成一个类方法</span>
+    <span style="color: rgba(0, 0, 255, 1)">def</span><span style="color: rgba(0, 0, 0, 1)"> change_discount(cls, count):
+        cls.</span><span style="color: rgba(128, 0, 128, 1)">__discount</span> = count  <span style="color: rgba(0, 128, 0, 1)">#</span><span style="color: rgba(0, 128, 0, 1)"> 相当于Goods.__discount = count</span>
+<span style="color: rgba(0, 0, 0, 1)">​
+​
+Goods.change_discount(</span>0.6)      <span style="color: rgba(0, 128, 0, 1)">#</span><span style="color: rgba(0, 128, 0, 1)"> 类方法可以通过类名调用</span>
+<span style="color: rgba(0, 0, 0, 1)">​
+</span><span style="color: rgba(0, 128, 0, 1)">#</span><span style="color: rgba(0, 128, 0, 1)"> 实例化一个华为手机对象</span>
+huawei = Goods(20<span style="color: rgba(0, 0, 0, 1)">)
+</span><span style="color: rgba(0, 0, 255, 1)">print</span><span style="color: rgba(0, 0, 0, 1)">(int(huawei.price))
+​
+huawei.change_discount(</span>0.4)     <span style="color: rgba(0, 128, 0, 1)">#</span><span style="color: rgba(0, 128, 0, 1)"> 类方法可以通过对象调用</span>
+<span style="color: rgba(0, 0, 0, 1)">​
+</span><span style="color: rgba(0, 128, 0, 1)">#</span><span style="color: rgba(0, 128, 0, 1)"> 实例化一个苹果手机对象</span>
+apple = Goods(20<span style="color: rgba(0, 0, 0, 1)">)
+</span><span style="color: rgba(0, 0, 255, 1)">print</span><span style="color: rgba(0, 0, 0, 1)">(int(apple.price))
+​
+</span><span style="color: rgba(0, 128, 0, 1)">#</span><span style="color: rgba(0, 128, 0, 1)"> 输出</span>
+12
+8</pre>
+</div>
+<p class="md-end-block md-p"><span><strong>扩展：</strong></span></p>
+<p class="md-end-block md-p"><span><strong>在掉用类的函数的时候就实例化了一个对象</strong></span></p>
+<div class="cnblogs_code">
+<pre><span style="color: rgba(0, 0, 255, 1)">import</span><span style="color: rgba(0, 0, 0, 1)"> time
+​
+</span><span style="color: rgba(0, 0, 255, 1)">class</span><span style="color: rgba(0, 0, 0, 1)"> Date:
+    </span><span style="color: rgba(0, 0, 255, 1)">def</span> <span style="color: rgba(128, 0, 128, 1)">__init__</span><span style="color: rgba(0, 0, 0, 1)">(self, year, month, day):
+        self.year </span>=<span style="color: rgba(0, 0, 0, 1)"> year
+        self.month </span>=<span style="color: rgba(0, 0, 0, 1)"> month
+        self.day </span>=<span style="color: rgba(0, 0, 0, 1)"> day
+​
+    @classmethod
+    </span><span style="color: rgba(0, 0, 255, 1)">def</span><span style="color: rgba(0, 0, 0, 1)"> today(cls):
+        structure </span>=<span style="color: rgba(0, 0, 0, 1)"> time.localtime()
+        </span><span style="color: rgba(0, 128, 0, 1)">#</span><span style="color: rgba(0, 128, 0, 1)"> 在方法中创建一个对象</span>
+        obj =<span style="color: rgba(0, 0, 0, 1)"> cls(structure.tm_year, structure.tm_mon, structure.tm_mday)
+        </span><span style="color: rgba(0, 0, 255, 1)">return</span><span style="color: rgba(0, 0, 0, 1)"> obj
+​
+​
+</span><span style="color: rgba(0, 128, 0, 1)">#</span><span style="color: rgba(0, 128, 0, 1)"> 当调用类中的today方法就会返回一个对象（对象属性不用自己填，today方法已经填好了）</span>
+data对象 =<span style="color: rgba(0, 0, 0, 1)"> Date.today()
+</span><span style="color: rgba(0, 0, 255, 1)">print</span><span style="color: rgba(0, 0, 0, 1)">(data对象.year)
+</span><span style="color: rgba(0, 0, 255, 1)">print</span><span style="color: rgba(0, 0, 0, 1)">(data对象.month)
+</span><span style="color: rgba(0, 0, 255, 1)">print</span><span style="color: rgba(0, 0, 0, 1)">(data对象.day)
+​
+</span><span style="color: rgba(0, 128, 0, 1)">#</span><span style="color: rgba(0, 128, 0, 1)"> 输出</span>
+2021
+5
+4</pre>
+</div>
+<p class="md-end-block md-p"><span><strong>@staticmethod：</strong><span class="md-plain">被装饰的方法会成为一个静态方法</span></span></p>
+<p class="md-end-block md-p"><span class="md-plain">本身是一个普通函数，被挪到类的内部执行，那么直接给这个函数添加 @staticmethod 装饰器就可以了</span></p>
+<p class="md-end-block md-p"><span class="md-plain">在函数的内部即用不到 self 变量，也用不到 cls 类</span></p>
+<div class="cnblogs_code">
+<pre><span style="color: rgba(0, 0, 255, 1)">class</span><span style="color: rgba(0, 0, 0, 1)"> User:
+    </span><span style="color: rgba(0, 0, 255, 1)">pass</span><span style="color: rgba(0, 0, 0, 1)">
+​
+    @staticmethod
+    </span><span style="color: rgba(0, 0, 255, 1)">def</span><span style="color: rgba(0, 0, 0, 1)"> login(user):
+        </span><span style="color: rgba(0, 0, 255, 1)">print</span>(f<span style="color: rgba(128, 0, 0, 1)">'</span><span style="color: rgba(128, 0, 0, 1)">{user}，登录成功</span><span style="color: rgba(128, 0, 0, 1)">'</span><span style="color: rgba(0, 0, 0, 1)">)
+​
+User.login(</span><span style="color: rgba(128, 0, 0, 1)">'</span><span style="color: rgba(128, 0, 0, 1)">Alen</span><span style="color: rgba(128, 0, 0, 1)">'</span>)   <span style="color: rgba(0, 128, 0, 1)">#</span><span style="color: rgba(0, 128, 0, 1)"> 类可以调佣</span>
+Bob =<span style="color: rgba(0, 0, 0, 1)"> User()
+Bob.login(</span><span style="color: rgba(128, 0, 0, 1)">'</span><span style="color: rgba(128, 0, 0, 1)">Bob</span><span style="color: rgba(128, 0, 0, 1)">'</span>)     <span style="color: rgba(0, 128, 0, 1)">#</span><span style="color: rgba(0, 128, 0, 1)"> 对象可以调佣</span><span style="color: rgba(0, 128, 0, 1)">
+#</span><span style="color: rgba(0, 128, 0, 1)"> 输出</span>
+<span style="color: rgba(0, 0, 0, 1)">Alen，登录成功
+Bob，登录成功</span></pre>
+</div>
+<p class="md-end-block md-p"><span><strong>总结：能定义到类中的内容。</strong></span></p>
+<p class="md-end-block md-p"><span class="md-plain">1、静态变量：是个所有的对象共享的变量<span class="md-tab"> <span class="md-plain">——由对象、类调用</span></span></span></p>
+<p class="md-end-block md-p"><span class="md-plain">2、实例变量：是对象的属性变量<span class="md-tab"> <span class="md-plain">——由对象调用</span></span></span></p>
+<p class="md-end-block md-p"><span class="md-plain">3、绑定方法：是个自带self参数的函数<span class="md-tab"> <span class="md-plain"> ——由对象调用</span></span></span></p>
+<p class="md-end-block md-p"><span class="md-plain">4、类方法：是个自带cls参数的函数<span class="md-tab"> <span class="md-plain">——由对象、类调用</span></span></span></p>
+<p class="md-end-block md-p"><span class="md-plain">5、property属性：是个伪装属性的方法<span class="md-tab"> <span class="md-plain"> ——由对象调用，但不加括号</span></span></span></p>
+<h2 class="md-end-block md-heading"><span class="md-plain">二、内置魔术方法</span></h2>
+<p class="md-end-block md-p"><span><strong><span><code>__call__</code><span class="md-plain">方法：</span></span></strong><span class="md-plain">对象 + ( ) 调用这个类中的<span><code>__call__</code><span class="md-plain">方法</span></span></span></span></p>
+<div class="cnblogs_code">
+<pre><span style="color: rgba(0, 0, 255, 1)">class</span><span style="color: rgba(0, 0, 0, 1)"> User:
+    </span><span style="color: rgba(0, 0, 255, 1)">pass</span><span style="color: rgba(0, 0, 0, 1)">
+​
+    @staticmethod
+    </span><span style="color: rgba(0, 0, 255, 1)">def</span><span style="color: rgba(0, 0, 0, 1)"> login(user):
+        </span><span style="color: rgba(0, 0, 255, 1)">print</span>(f<span style="color: rgba(128, 0, 0, 1)">'</span><span style="color: rgba(128, 0, 0, 1)">{user}，登录成功</span><span style="color: rgba(128, 0, 0, 1)">'</span><span style="color: rgba(0, 0, 0, 1)">)
+​
+User.login(</span><span style="color: rgba(128, 0, 0, 1)">'</span><span style="color: rgba(128, 0, 0, 1)">Alen</span><span style="color: rgba(128, 0, 0, 1)">'</span>)   <span style="color: rgba(0, 128, 0, 1)">#</span><span style="color: rgba(0, 128, 0, 1)"> 类可以调佣</span>
+Bob =<span style="color: rgba(0, 0, 0, 1)"> User()
+Bob.login(</span><span style="color: rgba(128, 0, 0, 1)">'</span><span style="color: rgba(128, 0, 0, 1)">Bob</span><span style="color: rgba(128, 0, 0, 1)">'</span>)     <span style="color: rgba(0, 128, 0, 1)">#</span><span style="color: rgba(0, 128, 0, 1)"> 对象可以调佣</span><span style="color: rgba(0, 128, 0, 1)">
+#</span><span style="color: rgba(0, 128, 0, 1)"> 输出</span>
+<span style="color: rgba(0, 0, 0, 1)">Alen，登录成功
+Bob，登录成功</span></pre>
+</div>
+<p class="md-end-block md-p"><span><strong><span><code>__len__</code><span class="md-plain">方法：</span></span></strong><span class="md-plain">len (对象) 需要实现这个类中的<span><code>__len__</code><span class="md-plain">方法</span></span></span></span></p>
+<div class="cnblogs_code">
+<pre><span style="color: rgba(0, 0, 255, 1)">class</span><span style="color: rgba(0, 0, 0, 1)"> A:
+    </span><span style="color: rgba(0, 0, 255, 1)">def</span> <span style="color: rgba(128, 0, 128, 1)">__init__</span><span style="color: rgba(0, 0, 0, 1)">(self):
+        self.lis </span>= [1, 2, 3, 4, 5<span style="color: rgba(0, 0, 0, 1)">]
+​
+    </span><span style="color: rgba(0, 0, 255, 1)">def</span><span style="color: rgba(0, 0, 0, 1)"> len(self):
+        </span><span style="color: rgba(0, 0, 255, 1)">return</span><span style="color: rgba(0, 0, 0, 1)"> len(self.lis)
+​
+    </span><span style="color: rgba(0, 0, 255, 1)">def</span> <span style="color: rgba(128, 0, 128, 1)">__len__</span><span style="color: rgba(0, 0, 0, 1)">(self):
+        </span><span style="color: rgba(0, 0, 255, 1)">return</span><span style="color: rgba(0, 0, 0, 1)"> len(self.lis)
+​
+​
+a </span>=<span style="color: rgba(0, 0, 0, 1)"> A()
+</span><span style="color: rgba(0, 0, 255, 1)">print</span>(len(a))       <span style="color: rgba(0, 128, 0, 1)">#</span><span style="color: rgba(0, 128, 0, 1)"> 可以直接len（a）就可以查看lis里面值的个数</span>
+<span style="color: rgba(0, 0, 255, 1)">print</span>(a.len())      <span style="color: rgba(0, 128, 0, 1)">#</span><span style="color: rgba(0, 128, 0, 1)"> 不然就要使用类中的len方法才可以查看</span>
+<span style="color: rgba(0, 0, 0, 1)">​
+</span><span style="color: rgba(0, 128, 0, 1)">#</span><span style="color: rgba(0, 128, 0, 1)"> 输出</span>
+5
+5<span style="color: rgba(0, 0, 0, 1)">
+​
+</span><span style="color: rgba(0, 128, 0, 1)">#</span><span style="color: rgba(0, 128, 0, 1)"> -------------------------------------------------------------------------------------</span><span style="color: rgba(0, 128, 0, 1)">
+#</span><span style="color: rgba(0, 128, 0, 1)"> 扩展：也可以使用自定义的函数</span>
+<span style="color: rgba(0, 0, 0, 1)">​
+</span><span style="color: rgba(0, 0, 255, 1)">class</span><span style="color: rgba(0, 0, 0, 1)"> A:
+    </span><span style="color: rgba(0, 0, 255, 1)">def</span> <span style="color: rgba(128, 0, 128, 1)">__init__</span><span style="color: rgba(0, 0, 0, 1)">(self, count):
+        self.count </span>=<span style="color: rgba(0, 0, 0, 1)"> count
+​
+    </span><span style="color: rgba(0, 0, 255, 1)">def</span> <span style="color: rgba(128, 0, 128, 1)">__square__</span><span style="color: rgba(0, 0, 0, 1)">(self):
+        value </span>= self.count ** 2
+        <span style="color: rgba(0, 0, 255, 1)">return</span><span style="color: rgba(0, 0, 0, 1)"> value
+​
+</span><span style="color: rgba(0, 0, 255, 1)">def</span><span style="color: rgba(0, 0, 0, 1)"> square(count):
+    </span><span style="color: rgba(0, 0, 255, 1)">return</span> A.<span style="color: rgba(128, 0, 128, 1)">__square__</span><span style="color: rgba(0, 0, 0, 1)">(count)
+​
+a </span>= A(5<span style="color: rgba(0, 0, 0, 1)">)
+​
+</span><span style="color: rgba(0, 0, 255, 1)">print</span><span style="color: rgba(0, 0, 0, 1)">(square(a))
+​
+</span><span style="color: rgba(0, 128, 0, 1)">#</span><span style="color: rgba(0, 128, 0, 1)"> 输出</span>
+25</pre>
+</div>
+<p class="md-end-block md-p"><span><strong><span><code>__new__</code><span class="md-plain">方法：</span></span></strong><span class="md-plain">实例化的时候会先执行<span><code>__new__</code><span class="md-plain">方法<span><strong>用来创建一个对象需要的空间</strong></span></span></span></span></span></p>
+<div class="cnblogs_code">
+<pre><span style="color: rgba(0, 0, 255, 1)">class</span><span style="color: rgba(0, 0, 0, 1)"> A:
+    </span><span style="color: rgba(0, 0, 255, 1)">def</span> <span style="color: rgba(128, 0, 128, 1)">__new__</span>(cls, *args, **<span style="color: rgba(0, 0, 0, 1)">kwargs):
+        o </span>= super().<span style="color: rgba(128, 0, 128, 1)">__new__</span><span style="color: rgba(0, 0, 0, 1)">(cls)
+        </span><span style="color: rgba(0, 0, 255, 1)">print</span>(o)                    <span style="color: rgba(0, 128, 0, 1)">#</span><span style="color: rgba(0, 128, 0, 1)"> 内存地址和 self 的内存地址一样</span>
+        <span style="color: rgba(0, 0, 255, 1)">print</span>(<span style="color: rgba(128, 0, 0, 1)">'</span><span style="color: rgba(128, 0, 0, 1)">执行了__new__方法</span><span style="color: rgba(128, 0, 0, 1)">'</span><span style="color: rgba(0, 0, 0, 1)">)
+        </span><span style="color: rgba(0, 0, 255, 1)">return</span><span style="color: rgba(0, 0, 0, 1)"> o
+​
+    </span><span style="color: rgba(0, 0, 255, 1)">def</span> <span style="color: rgba(128, 0, 128, 1)">__init__</span><span style="color: rgba(0, 0, 0, 1)">(self):
+        </span><span style="color: rgba(0, 0, 255, 1)">print</span><span style="color: rgba(0, 0, 0, 1)">(self)
+        </span><span style="color: rgba(0, 0, 255, 1)">print</span>(<span style="color: rgba(128, 0, 0, 1)">'</span><span style="color: rgba(128, 0, 0, 1)">执行了__init__方法</span><span style="color: rgba(128, 0, 0, 1)">'</span><span style="color: rgba(0, 0, 0, 1)">)
+​
+A()     </span><span style="color: rgba(0, 128, 0, 1)">#</span><span style="color: rgba(0, 128, 0, 1)"> 实例化对象</span>
+<span style="color: rgba(0, 0, 0, 1)">​
+</span><span style="color: rgba(0, 128, 0, 1)">#</span><span style="color: rgba(0, 128, 0, 1)"> 输出</span>
+&lt;<span style="color: rgba(128, 0, 128, 1)">__main__</span>.A object at 0x014E0970&gt;<span style="color: rgba(0, 0, 0, 1)">
+执行了__new__方法
+</span>&lt;<span style="color: rgba(128, 0, 128, 1)">__main__</span>.A object at 0x014E0970&gt;<span style="color: rgba(0, 0, 0, 1)">
+执行了__init__方法</span></pre>
+</div>
+<p class="md-end-block md-p"><span><strong><span><code>__new__</code><span class="md-plain">方法的设计模式：————&gt;单例模式</span></span></strong></span></p>
+<p class="md-end-block md-p"><span class="md-plain">一个类，从头到尾，只会创建一次 self 的空间</span></p>
+<p class="md-end-block md-p md-focus"><span class="md-plain md-expand">例如：我有一辆车（有且只有一辆），小红要拿去用，我就给她了，她拿去随便怎么改装，换个红色车漆，换蓝色车轮都可以。但是小明又过来找我要用车，那我就去把我的车给拿回来在给小明，也随小明随便改装。</span></p>
+<div class="cnblogs_code">
+<pre><span style="color: rgba(0, 0, 255, 1)">class</span><span style="color: rgba(0, 0, 0, 1)"> Car:
+    </span><span style="color: rgba(128, 0, 128, 1)">__attribute</span> =<span style="color: rgba(0, 0, 0, 1)"> None
+​
+    </span><span style="color: rgba(0, 0, 255, 1)">def</span> <span style="color: rgba(128, 0, 128, 1)">__new__</span>(cls, *args, **<span style="color: rgba(0, 0, 0, 1)">kwargs):
+        </span><span style="color: rgba(0, 0, 255, 1)">if</span> cls.<span style="color: rgba(128, 0, 128, 1)">__attribute</span> <span style="color: rgba(0, 0, 255, 1)">is</span> None:         <span style="color: rgba(0, 128, 0, 1)">#</span><span style="color: rgba(0, 128, 0, 1)"> 当第一次开空间的时候__attribute肯定是空的</span>
+            <span style="color: rgba(0, 128, 0, 1)">#</span><span style="color: rgba(0, 128, 0, 1)"> 所以就会开一个新的空间。并把__attribute给赋值，那么以后的都不是第一次了。</span>
+            cls.<span style="color: rgba(128, 0, 128, 1)">__attribute</span> = super().<span style="color: rgba(128, 0, 128, 1)">__new__</span><span style="color: rgba(0, 0, 0, 1)">(cls)  
+        </span><span style="color: rgba(0, 0, 255, 1)">return</span> cls.<span style="color: rgba(128, 0, 128, 1)">__attribute</span>                      <span style="color: rgba(0, 128, 0, 1)">#</span><span style="color: rgba(0, 128, 0, 1)"> 把新空间返回给self</span>
+<span style="color: rgba(0, 0, 0, 1)">​
+    </span><span style="color: rgba(0, 0, 255, 1)">def</span> <span style="color: rgba(128, 0, 128, 1)">__init__</span><span style="color: rgba(0, 0, 0, 1)">(self, car_paint, cartwheel_colour):
+        self.car_paint </span>=<span style="color: rgba(0, 0, 0, 1)"> car_paint
+        self.cartwheel_colour </span>=<span style="color: rgba(0, 0, 0, 1)"> cartwheel_colour
+​
+​
+xiao_hong </span>= Car(<span style="color: rgba(128, 0, 0, 1)">'</span><span style="color: rgba(128, 0, 0, 1)">红色的车漆</span><span style="color: rgba(128, 0, 0, 1)">'</span>, <span style="color: rgba(128, 0, 0, 1)">'</span><span style="color: rgba(128, 0, 0, 1)">蓝色的车轮</span><span style="color: rgba(128, 0, 0, 1)">'</span><span style="color: rgba(0, 0, 0, 1)">)
+</span><span style="color: rgba(0, 0, 255, 1)">print</span>(<span style="color: rgba(128, 0, 0, 1)">'</span><span style="color: rgba(128, 0, 0, 1)">小红的内存地址：</span><span style="color: rgba(128, 0, 0, 1)">'</span>, xiao_hong)    <span style="color: rgba(0, 128, 0, 1)">#</span><span style="color: rgba(0, 128, 0, 1)"> 他们的内存地址都是一样的</span>
+<span style="color: rgba(0, 0, 255, 1)">print</span>(xiao_hong.car_paint)          <span style="color: rgba(0, 128, 0, 1)">#</span><span style="color: rgba(0, 128, 0, 1)"> 红色的车漆————&gt;小红刚拿到的时候还是红色的</span>
+xiao_ming = Car(<span style="color: rgba(128, 0, 0, 1)">'</span><span style="color: rgba(128, 0, 0, 1)">白色的车漆</span><span style="color: rgba(128, 0, 0, 1)">'</span>, <span style="color: rgba(128, 0, 0, 1)">'</span><span style="color: rgba(128, 0, 0, 1)">黑色的车轮</span><span style="color: rgba(128, 0, 0, 1)">'</span><span style="color: rgba(0, 0, 0, 1)">)
+</span><span style="color: rgba(0, 0, 255, 1)">print</span>(<span style="color: rgba(128, 0, 0, 1)">'</span><span style="color: rgba(128, 0, 0, 1)">小名的内存地址：</span><span style="color: rgba(128, 0, 0, 1)">'</span><span style="color: rgba(0, 0, 0, 1)">, xiao_ming)
+</span><span style="color: rgba(0, 0, 255, 1)">print</span>(xiao_hong.car_paint)          <span style="color: rgba(0, 128, 0, 1)">#</span><span style="color: rgba(0, 128, 0, 1)"> 白色的车漆————&gt;小明在拿过来，把颜色给改成白的了</span>
+<span style="color: rgba(0, 0, 255, 1)">print</span>(xiao_ming.car_paint)          <span style="color: rgba(0, 128, 0, 1)">#</span><span style="color: rgba(0, 128, 0, 1)"> 白色的车漆————&gt;小红的也变了，应为他们都是同一个车</span>
+<span style="color: rgba(0, 0, 0, 1)">​
+</span><span style="color: rgba(0, 128, 0, 1)">#</span><span style="color: rgba(0, 128, 0, 1)"> 输出</span>
+小红的内存地址： &lt;<span style="color: rgba(128, 0, 128, 1)">__main__</span>.Car object at 0x01A70A60&gt;<span style="color: rgba(0, 0, 0, 1)">
+红色的车漆
+小名的内存地址： </span>&lt;<span style="color: rgba(128, 0, 128, 1)">__main__</span>.Car object at 0x01A70A60&gt;<span style="color: rgba(0, 0, 0, 1)">
+白色的车漆
+白色的车漆</span></pre>
+</div>
+<p class="md-end-block md-p"><span><strong><span><code>__str__</code><span class="md-plain">和<span><code>__repr__</code><span class="md-plain">方法：</span></span></span></span></strong></span></p>
+<p class="md-end-block md-p"><span><strong>str方法：帮助我们在打印或展示对象的时候更加直观的显示对象内容</strong></span></p>
+<p class="md-end-block md-p"><span class="md-plain">1、在打印一个对象的时候，调用<span><code>__str__</code><span class="md-plain">方法</span></span></span></p>
+<p class="md-end-block md-p"><span class="md-plain">2、在 %s 拼接一个对象的时候，调用<span><code>__str__</code><span class="md-plain">方法</span></span></span></p>
+<p class="md-end-block md-p"><span class="md-plain">3、在str一个对象的时候，调用<span><code>__str__</code><span class="md-plain">方法</span></span></span></p>
+<p class="md-end-block md-p"><span class="md-plain">当打印一个对象的时候，希望这个对象显示的值是什么，那么你就必须在这个对象内部实现一个<span><code>__str__</code><span class="md-plain"> ，这样的话你就能做到，你在打印这个对象的时候你就能查看到他的内容是多少（查看的内容由你自己在 str 中定义），不然就只能答应一堆内存地址。</span></span></span></p>
+<p class="md-end-block md-p"><span><strong>repr方法：是 str 的备胎（有str的时候打印str，没有就打印rper），同时 %r 和 repr 有合作关系</strong></span></p>
+<div class="cnblogs_code">
+<pre><span style="color: rgba(0, 0, 255, 1)">class</span><span style="color: rgba(0, 0, 0, 1)"> User:
+    </span><span style="color: rgba(0, 0, 255, 1)">def</span> <span style="color: rgba(128, 0, 128, 1)">__init__</span><span style="color: rgba(0, 0, 0, 1)">(self, name, age):
+        self.name </span>=<span style="color: rgba(0, 0, 0, 1)"> name
+        self.age </span>=<span style="color: rgba(0, 0, 0, 1)"> age
+​
+    </span><span style="color: rgba(0, 0, 255, 1)">def</span> <span style="color: rgba(128, 0, 128, 1)">__str__</span><span style="color: rgba(0, 0, 0, 1)">(self):
+        </span><span style="color: rgba(0, 0, 255, 1)">return</span><span style="color: rgba(0, 0, 0, 1)"> self.name
+​
+    </span><span style="color: rgba(0, 0, 255, 1)">def</span> <span style="color: rgba(128, 0, 128, 1)">__repr__</span><span style="color: rgba(0, 0, 0, 1)">(self):
+        </span><span style="color: rgba(0, 0, 255, 1)">return</span><span style="color: rgba(0, 0, 0, 1)"> self.age
+​
+​
+Bob </span>= User(<span style="color: rgba(128, 0, 0, 1)">'</span><span style="color: rgba(128, 0, 0, 1)">鲍勃</span><span style="color: rgba(128, 0, 0, 1)">'</span>, <span style="color: rgba(128, 0, 0, 1)">'</span><span style="color: rgba(128, 0, 0, 1)">18</span><span style="color: rgba(128, 0, 0, 1)">'</span><span style="color: rgba(0, 0, 0, 1)">)
+​
+</span><span style="color: rgba(0, 0, 255, 1)">print</span>(Bob)  <span style="color: rgba(0, 128, 0, 1)">#</span><span style="color: rgba(0, 128, 0, 1)"> 现在就可以直接打印对象了，——不设置str方法，打印的就是是一堆内存地址，优先打印 str 方法</span>
+<span style="color: rgba(0, 0, 0, 1)">​
+</span><span style="color: rgba(0, 0, 255, 1)">print</span>(<span style="color: rgba(128, 0, 0, 1)">'</span><span style="color: rgba(128, 0, 0, 1)">我的名字是%s</span><span style="color: rgba(128, 0, 0, 1)">'</span> % Bob)  <span style="color: rgba(0, 128, 0, 1)">#</span><span style="color: rgba(0, 128, 0, 1)"> 在 %s 拼接一个对象的时候，调用__str__方法</span>
+<span style="color: rgba(0, 0, 255, 1)">print</span>(<span style="color: rgba(128, 0, 0, 1)">'</span><span style="color: rgba(128, 0, 0, 1)">我的年龄是%r</span><span style="color: rgba(128, 0, 0, 1)">'</span> % Bob)  <span style="color: rgba(0, 128, 0, 1)">#</span><span style="color: rgba(0, 128, 0, 1)"> 在 %r 拼接一个对象的时候，调用__repr__方法</span>
+<span style="color: rgba(0, 0, 0, 1)">​
+</span><span style="color: rgba(0, 128, 0, 1)">#</span><span style="color: rgba(0, 128, 0, 1)"> 输出</span>
+<span style="color: rgba(0, 0, 0, 1)">鲍勃
+我的名字是鲍勃
+我的年龄是18</span></pre>
+</div>
+</div>
+<div id="MySignature"></div>
+<div class="clear"></div>
+<div id="blog_post_info_block">
+    <div id="blog_post_info"></div>
+    <div class="clear"></div>
+    <div id="post_next_prev"></div>
+</div>
+            </div>
+            <div class="postDesc">posted @ 
+<span id="post-date">2021-05-14 10:26</span>&nbsp;
+<a href="https://www.cnblogs.com/XiaoYang-sir/">小杨-先生</a>&nbsp;
+阅读(<span id="post_view_count">50</span>)&nbsp;
+评论(<span id="post_comment_count">0</span>)&nbsp;
+<a href="https://i.cnblogs.com/EditPosts.aspx?postid=14767490" rel="nofollow">编辑</a>&nbsp;
+<a href="javascript:void(0)" onclick="AddToWz(14767490);return false;">收藏</a></div>
+        </div>
+	    
+	    
+    </div><!--end: topics 文章、评论容器-->
+</div>
+<script src="https://common.cnblogs.com/highlight/10.3.1/highlight.min.js"></script>
+<script>markdown_highlight();</script>
+<script>
+    var allowComments = true, cb_blogId = 634722, cb_blogApp = 'XiaoYang-sir', cb_blogUserGuid = '8405299e-d654-46f9-c48d-08d861ce0c98';
+    var cb_entryId = 14767490, cb_entryCreatedDate = '2021-05-14 10:26', cb_postType = 1;
+    updatePostStats(
+        [cb_entryId],
+        function(id, count) { $("#post_view_count").text(count) },
+        function(id, count) { $("#post_comment_count").text(count) })
+    zoomManager.apply("#cnblogs_post_body img:not(.code_img_closed):not(.code_img_opened)");
+</script>
+<a name="!comments"></a>
+<div id="blog-comments-placeholder"></div>
+<div id="comment_form" class="commentform">
+    <a name="commentform"></a>
+    <div id="divCommentShow"></div>
+    <div id="comment_nav"><span id="span_refresh_tips"></span><a href="javascript:void(0);" onclick="return RefreshCommentList();" id="lnk_RefreshComments" runat="server" clientidmode="Static">刷新评论</a><a href="#" onclick="return RefreshPage();">刷新页面</a><a href="#top">返回顶部</a></div>
+    <div id="comment_form_container"></div>
+    <div class="ad_text_commentbox" id="ad_text_under_commentbox"></div>
+    <div id="ad_t2"></div>
+    <div id="opt_under_post"></div>
+    <div id="cnblogs_c1" class="under-post-card">
+        <div id='div-gpt-ad-1592365906576-0' style='width: 300px; height: 250px;'></div>
+    </div>
+    <div id="under_post_card1"></div>
+    <div id="cnblogs_c2" class="under-post-card">
+        <div id='div-gpt-ad-1592366332455-0' style='width: 468px; height: 60px;'></div>
+    </div>
+    <div id="under_post_card2"></div>
+    <div id="HistoryToday" class="under-post-card"></div>
+    <script type="text/javascript">
+       var commentManager = new blogCommentManager();
+       commentManager.renderComments(0);
+       fixPostBody();
+       deliverBigBanner();
+setTimeout(function() { incrementViewCount(cb_entryId); }, 50);       deliverT2();
+       deliverC1C2();
+       loadNewsAndKb();
+       loadBlogSignature();
+LoadPostCategoriesTags(cb_blogId, cb_entryId);       LoadPostInfoBlock(cb_blogId, cb_entryId, cb_blogApp, cb_blogUserGuid);
+       GetPrevNextPost(cb_entryId, cb_blogId, cb_entryCreatedDate, cb_postType);
+       loadOptUnderPost();
+       GetHistoryToday(cb_blogId, cb_blogApp, cb_entryCreatedDate);
+    </script>
+</div>
+
+	</div><!--end: forFlow -->
+	</div><!--end: mainContent 主体内容容器-->
+	<div id="sideBar">
+		<div id="sideBarMain">
+			<div id="sidebar_news" class="newsItem">
+            <script>loadBlogNews();</script>
+</div>
+<div id="sidebar_c3"></div>
+			<div id="blog-calendar" style="display:none"></div><script>loadBlogDefaultCalendar();</script>			
+			<div id="leftcontentcontainer">
+				<div id="blog-sidecolumn"></div>
+                    <script>loadBlogSideColumn();</script>
+			</div>			
+		</div><!--end: sideBarMain -->
+	</div><!--end: sideBar 侧边栏容器 -->
+	<div class="clear"></div>
+	</div><!--end: main -->
+	<div class="clear"></div>
+	<div id="footer">
+		<!--done-->
+Copyright &copy; 2021 小杨-先生
+<br /><span id="poweredby">Powered by .NET 5.0 on Kubernetes</span>
+
+
+
+	</div><!--end: footer -->
+</div><!--end: home 自定义的最大容器 -->
+
+
+    
+
+    <input type="hidden" id="antiforgery_token" value="CfDJ8L-rpLgFVEJMgssCVvNUAjuC41iEbXFVN6ylpEMxWH7O676g6S-qqT4uUS8VDWgZ0b7C2veZ4TQVTW0dbk5yw-TIVJOtoBjjp1BqLF_6vS-P2CenBrv1qTAXpjGY-iuG9J_e62Z-MAyu1desg3SUg0o" />
+</body>
+</html>

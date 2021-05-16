@@ -1,0 +1,444 @@
+﻿<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="referrer" content="origin-when-crossorigin" />
+    <meta name="description" content="####先来一个较全的模板 &amp;lt;?xml version=&amp;quot;1.0&amp;quot; encoding=&amp;quot;UTF-8&amp;quot;?&amp;gt; &amp;lt;!--Configuration后" />
+    <meta property="og:description" content="####先来一个较全的模板 &amp;lt;?xml version=&amp;quot;1.0&amp;quot; encoding=&amp;quot;UTF-8&amp;quot;?&amp;gt; &amp;lt;!--Configuration后" />
+    <meta http-equiv="Cache-Control" content="no-transform" />
+    <meta http-equiv="Cache-Control" content="no-siteapp" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>log4j2文件配置 - 飞飞乐园 - 博客园</title>
+    <link id="favicon" rel="shortcut icon" href="//common.cnblogs.com/favicon.svg" type="image/svg+xml" />
+    
+    <link rel="stylesheet" href="/css/blog-common.min.css?v=zS6-e1bxywlu3kpHvpr1J6MySwya3ztFtEnS7RYQ0Fk" />
+    <link id="MainCss" rel="stylesheet" href="/skins/clover/bundle-clover.min.css?v=gNL1SP-_mT63SdzBZABu3y6W6mHGeh4U6abpdhqghl4" />
+    
+    <link id="mobile-style" media="only screen and (max-width: 767px)" type="text/css" rel="stylesheet" href="/skins/clover/bundle-clover-mobile.min.css?v=mqNqC_FankkYSF65W2WPdLYJ-oT1c7Z97ct2hw3JgQg" />
+    
+    <link type="application/rss+xml" rel="alternate" href="https://www.cnblogs.com/tangtang-benben/rss" />
+    <link type="application/rsd+xml" rel="EditURI" href="https://www.cnblogs.com/tangtang-benben/rsd.xml" />
+    <link type="application/wlwmanifest+xml" rel="wlwmanifest" href="https://www.cnblogs.com/tangtang-benben/wlwmanifest.xml" />
+    <script>
+        var currentBlogId = 633571;
+        var currentBlogApp = 'tangtang-benben';
+        var cb_enable_mathjax = false;
+        var isLogined = false;
+        var isBlogOwner = false;
+        var skinName = 'clover';
+        var visitorUserId = '';
+    </script>
+        <script>
+            var currentPostDateAdded = '2021-05-14 11:29';
+        </script>
+    <script src="https://common.cnblogs.com/scripts/jquery-2.2.0.min.js"></script>
+    <script src="/js/blog-common.min.js?v=2Mic1VLeHXarpdzASbXqFMIMVLEBiWXNO5yiTHUcmhw"></script>
+    
+    
+    
+</head>
+<body class="has-navbar">
+    <a name="top"></a>
+    <div id="top_nav" class="navbar forpc">
+        <nav id="nav_main" class="navbar-main">
+            <ul id="nav_left" class="navbar-list navbar-left">
+                <li class="navbar-branding"><a href="https://www.cnblogs.com/" title="开发者的网上家园"><img src="/images/logo.svg?v=R9M0WmLAIPVydmdzE2keuvnjl-bPR7_35oHqtiBzGsM" alt="博客园Logo" /></a></li>
+                <li><a href="/" onclick="ga('send', 'event', 'Link', 'click', 'skin-navbar-sitehome')">首页</a></li>
+                <li><a href="https://news.cnblogs.com/" onclick="ga('send', 'event', 'Link', 'click', 'skin-navbar-news')">新闻</a></li>
+                <li><a href="https://q.cnblogs.com/" onclick="ga('send', 'event', 'Link', 'click', 'skin-navbar-q')">博问</a></li>
+                <li><a id="nav_brandzone" href="https://brands.cnblogs.com/" onclick="ga('send', 'event', 'Link', 'click', 'skin-navbar-brands')">专区</a></li>
+                <li><a href="https://ing.cnblogs.com/" onclick="ga('send', 'event', 'Link', 'click', 'skin-navbar-ing')">闪存</a></li>
+                <li><a href="https://edu.cnblogs.com/" onclick="ga('send', 'event', 'Link', 'click', 'skin-navbar-edu')">班级</a></li>
+            </ul>
+            <ul id="nav_right" class="navbar-list navbar-right">
+                <li>
+                    <form id="zzk_search" class="navbar-search" action="https://zzk.cnblogs.com/s" method="get">
+                        <input name="w" id="zzk_search_input" placeholder="代码改变世界" type="text" tabindex="3" />
+                        <button type="submit" id="zzk_search_button">
+                            <img src="/images/aggsite/search.svg" alt="搜索" />
+                        </button>
+                    </form>
+                </li>
+                <li id="navbar_login_status" class="navbar-list">
+                    <a class="navbar-user-info navbar-blog" href="https://i.cnblogs.com/EditPosts.aspx?opt=1" alt="写随笔" title="写随笔">
+                        <img id="new_post_icon" class="navbar-icon" src="/images/aggsite/newpost.svg" alt="写随笔" />
+                    </a>
+                    <a id="navblog-myblog-icon" class="navbar-user-info navbar-blog" href="https://passport.cnblogs.com/GetBlogApplyStatus.aspx" alt="我的博客" title="我的博客">
+                        <img id="myblog_icon" class="navbar-icon" src="/images/aggsite/myblog.svg" alt="我的博客" />
+                    </a>
+                    <a class="navbar-user-info navbar-message navbar-icon-wrapper" href="https://msg.cnblogs.com/" alt="短消息" title="短消息">
+                        <img id="msg_icon" class="navbar-icon" src="/images/aggsite/message.svg?v=J0WS2P2iPgaIVgXxcAhliw4AFZIpaTWxtdoNAv9eiCA" alt="短消息" />
+                        <span id="msg_count" style="display: none"></span>
+                    </a>
+                    <div id="user_info" class="navbar-user-info dropdown">
+                        <a class="dropdown-button" href="https://home.cnblogs.com/">
+                            <img id="user_icon" class="navbar-avatar" src="/images/aggsite/avatar-default.svg" alt="用户头像" />
+                        </a>
+                        <div class="dropdown-menu">
+                            <a id="navblog-myblog-text" href="https://passport.cnblogs.com/GetBlogApplyStatus.aspx">我的博客</a>
+                            <a href="https://home.cnblogs.com/">我的园子</a>
+                            <a href="https://account.cnblogs.com/settings/account">账号设置</a>
+                            <a href="javascript:void(0)" id="navbar_lite_mode_toggle" title="简洁模式会使用简洁款皮肤显示所有博客">
+    简洁模式 <img id="navbar_lite_mode_on" src="/images/lite-mode-check.svg" class="hide" /><span id="navbar_lite_mode_spinner" class="hide">...</span>
+</a>
+                            <a href="javascript:void(0)" onclick="account.logout();">退出登录</a>
+                        </div>
+                    </div>
+                    <a class="navbar-anonymous" href="https://account.cnblogs.com/signup/">注册</a>
+                    <a class="navbar-anonymous" href="javascript:void(0);" onclick="account.login()">登录</a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+
+    
+    <table cellpadding="0" cellspacing="0" border="0" align="center" width="100%">
+    <tr>
+        <td width="299" background="/skins/clover/images/banner1.jpg"></td>
+        <td background="/skins/clover/images/banner.jpg">
+<!--done-->
+<div class="header">
+	<div class="headerText">
+		<a id="Header1_HeaderTitle" class="headermaintitle HeaderMainTitle" href="https://www.cnblogs.com/tangtang-benben/">非比寻常</a>
+<br>
+		
+	</div>
+</div>
+
+</td>
+        <TtdD width="296" background="/skins/clover/images/banner2.jpg"></TtdD>
+    </tr>
+</table>
+<div id="mylinks"><a id="blog_nav_sitehome" class="menu" href="https://www.cnblogs.com/">
+博客园</a>
+&nbsp; &nbsp;
+
+<a id="blog_nav_myhome" class="menu" href="https://www.cnblogs.com/tangtang-benben/">
+首页</a>
+&nbsp; &nbsp;
+<a href="http://q.cnblogs.com/" class="menu" target="_blank">博问</a>&nbsp; &nbsp;
+<a href="http://home.cnblogs.com/ing/" class="menu" target="_blank">闪存</a>&nbsp; &nbsp;
+
+
+<a id="blog_nav_newpost" class="menu" href="https://i.cnblogs.com/EditPosts.aspx?opt=1">
+新随笔</a>
+&nbsp; &nbsp;
+
+<a id="blog_nav_rss" class="menu" href="javascript:void(0)" data-rss="https://www.cnblogs.com/tangtang-benben/rss/">
+订阅</a>
+
+<a id="blog_nav_rss_image" href="https://www.cnblogs.com/tangtang-benben/rss/">
+    <img src="/skins/clover/images/xml.gif" alt="订阅" />
+</a>&nbsp; &nbsp;
+
+<a id="blog_nav_admin" class="menu" href="https://i.cnblogs.com/">
+管理</a>
+
+
+
+</div>
+<div id="mytopmenu">
+    <div id="mystats">
+        <div id="blog_stats_place_holder"><script>loadBlogStats();</script></div>
+    </div>
+</div>
+<div id="centercontent">
+    <div id="post_detail">
+    <div class="post">
+        <div class="postTitle">
+            
+<a id="cb_post_title_url" class="postTitle2 vertical-middle" href="https://www.cnblogs.com/tangtang-benben/p/14764373.html">
+    <span>log4j2文件配置</span>
+    
+
+
+
+</a>
+
+        </div>
+        <div id="cnblogs_post_body" class="blogpost-body cnblogs-markdown">
+<h4 id="先来一个较全的模板">先来一个较全的模板</h4>
+<pre><code>&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+ &lt;!--Configuration后面的status，这个用于设置log4j2自身内部的信息输出，可以不设置--&gt;
+ &lt;!--monitorInterval：Log4j能够自动检测修改配置 文件和重新配置本身，设置间隔秒数--&gt;
+ &lt;!-- 优先级从高到低分别是 OFF、FATAL、ERROR、WARN、INFO、DEBUG、ALL --&gt;
+ &lt;!-- 单词解释： Match：匹配 DENY：拒绝 Mismatch：不匹配 ACCEPT：接受 --&gt;
+ &lt;!-- DENY，日志将立即被抛弃不再经过其他过滤器； NEUTRAL，有序列表里的下个过滤器过接着处理日志； ACCEPT，日志会被立即处理，不再经过剩余过滤器。 --&gt;
+ &lt;configuration status="WARN" monitorInterval="30"&gt;
+    &lt;!--定义log文件输出路径（工程所在盘符下）--&gt;
+    &lt;Properties&gt;
+        &lt;Property name="log-path"&gt;/log4j2/logs&lt;/Property&gt;
+    &lt;/Properties&gt;
+    &lt;!--先定义所有的appender--&gt;
+     &lt;appenders&gt;
+	 &lt;!--输出到控制台 如果是部署到tomcat下，这部分内容会输出到tomcat下的tomcat8-stdout.yyyy-mm-dd.log文件中--&gt;
+         &lt;console name="Console" target="SYSTEM_OUT"&gt;
+             &lt;!--输出日志的格式--&gt;
+             &lt;PatternLayout pattern="[%d{HH:mm:ss:SSS}] [%p] - %l - %m%n"/&gt;
+         &lt;/console&gt;
+	 &lt;!--打印到文件中，这个log每次运行程序会自动清空，由append属性决定false清空，true追加。 一般不用--&gt;
+	 &lt;File name="log" fileName="log/test.log" append="false"&gt;
+	     &lt;PatternLayout pattern="%d{HH:mm:ss.SSS} %-5level %class{36} %L %M - %msg%xEx%n"/&gt;
+	 &lt;/File&gt;
+	 &lt;!--文件滚动, 这个会打印出所有的info及以下级别的信息，每次大小超过size，则这size大小的日志会自动存入按年份-月份建立的文件夹下面并进行压缩，作为存档--&gt;
+         &lt;RollingFile name="RollingFileInfo" fileName="${log-path}/info.log"
+                      filePattern="${log-path}/info_%d{yyyy-MM-dd}-%i.log"&gt;
+             &lt;!--控制台只输出level及以上级别的信息（onMatch），其他的直接拒绝（onMismatch）--&gt;        
+             &lt;Filters&gt;
+                &lt;ThresholdFilter level="debug" onMatch="ACCEPT" onMismatch="DENY"/&gt;
+             &lt;/Filters&gt;
+             &lt;PatternLayout pattern="[%d][%-5p][%t] %m (%F:%L)%n"/&gt;
+             &lt;Policies&gt;
+                 &lt;!--文件夹下最多的文件个数--&gt;
+		 &lt;DefaultRolloverStrategy max="20"/&gt;   
+                 &lt;!--多长时间滚动一次--&gt;
+                 &lt;TimeBasedTriggeringPolicy interval="1" modulate="true"/&gt;
+                 &lt;!-- 一个日志文件的最大大小 --&gt;		
+                 &lt;SizeBasedTriggeringPolicy size="100 MB"/&gt;		
+             &lt;/Policies&gt;
+         &lt;/RollingFile&gt;
+         &lt;!--设置另一个log文件--&gt;
+         &lt;RollingFile name="FileDetail" fileName="${log-path}/infoDetail.log"
+                     filePattern="${log-path}/infoDetail_%d{yyyy-MM-dd}-%i.log"&gt;
+            &lt;PatternLayout pattern="[%d][%-5p][%t] %m (%F:%L)%n"/&gt;
+            &lt;Policies&gt;
+                &lt;TimeBasedTriggeringPolicy interval="1" modulate="true"/&gt;
+                &lt;SizeBasedTriggeringPolicy size="50 MB"/&gt;
+            &lt;/Policies&gt;
+            &lt;DefaultRolloverStrategy max="30"&gt;
+                &lt;Delete basePath="${log-path}" maxDepth="1"&gt;
+                    &lt;IfFileName glob="infoDetail_*.log"/&gt;
+                    &lt;IfLastModified age="15d"/&gt;
+                &lt;/Delete&gt;
+            &lt;/DefaultRolloverStrategy&gt;
+        &lt;/RollingFile&gt;
+     &lt;/appenders&gt;
+     &lt;!--然后定义logger，只有定义了logger并引入的appender，appender才会生效--&gt;
+     &lt;loggers&gt;
+         &lt;!--关联FileDetail，com.lianxi.detail包下的类输出的log都输出到FileDetail的Appender指定文件--&gt;
+         &lt;logger level="debug" name="com.lianxi.detail"&gt;
+            &lt;AppenderRef ref="FileDetail"/&gt;
+         &lt;/logger&gt;
+         &lt;!--没有关联的，com.lianxi包下的类输出的log都输出到RollingFileInfo的Appender指定文件--&gt;
+         &lt;logger level="debug" name="com.lianxi"&gt;&lt;/logger&gt;
+         &lt;root level="all"&gt;		 
+            &lt;appender-ref ref="Console"/&gt;
+            &lt;appender-ref ref="RollingFileInfo"/&gt;
+         &lt;/root&gt;
+     &lt;/loggers&gt;
+ &lt;/configuration&gt;
+</code></pre>
+<h4 id="配置文件节点解析">配置文件节点解析</h4>
+<p>1.根节点Configuration有两个属性:status和monitorinterval,有两个子节点:Appenders和Loggers(表明可以定义多个Appender和Logger).<br>
+status用来指定log4j本身的打印日志的级别.<br>
+monitorinterval用于指定log4j自动重新配置的监测间隔时间，单位是s,最小是5s.<br>
+2.Appenders节点，常见的有三种子节点:Console、RollingFile、File.<br>
+　Console节点用来定义输出到控制台的Appender.<br>
+　    name:指定Appender的名字.<br>
+　　　target:SYSTEM_OUT 或 SYSTEM_ERR,一般只设置默认:SYSTEM_OUT.<br>
+　　　PatternLayout:输出格式，不设置默认为:%m%n.<br>
+　File节点用来定义输出到指定位置的文件的Appender.<br>
+　　　name:指定Appender的名字.<br>
+　　　fileName:指定输出日志的目的文件带全路径的文件名.<br>
+　　　PatternLayout:输出格式，不设置默认为:%m%n.<br>
+　RollingFile节点用来定义超过指定大小自动删除旧的创建新的的Appender.<br>
+　　　name:指定Appender的名字.<br>
+　　　fileName:指定输出日志的目的文件带全路径的文件名.<br>
+　　　PatternLayout:输出格式，不设置默认为:%m%n.<br>
+　　　filePattern:指定新建日志文件的名称格式.<br>
+　　　Policies:指定滚动日志的策略，就是什么时候进行新建日志文件输出日志.<br>
+　　　TimeBasedTriggeringPolicy:Policies子节点，基于时间的滚动策略，interval属性用来指定多久滚动一次，默认是1 hour。modulate=true用来调整时间：比如现在是早上3am，interval是4，那么第一次滚动是在4am，接着是8am，12am...而不是7am.<br>
+　　　SizeBasedTriggeringPolicy:Policies子节点，基于指定文件大小的滚动策略，size属性用来定义每个日志文件的大小.<br>
+　　　DefaultRolloverStrategy:用来指定同一个文件夹下最多有几个日志文件时开始删除最旧的，创建新的(通过max属性),默认是7个文件。<br>
+3.Loggers节点，常见的有两种:Root和Logger.<br>
+　　　Root节点用来指定项目的根日志，如果没有单独指定Logger，那么就会默认使用该Root日志输出<br>
+　　　　　level:日志输出级别，共有8个级别，按照从低到高为：All &lt; Trace &lt; Debug &lt; Info &lt; Warn &lt; Error &lt; Fatal &lt; OFF.<br>
+　　　　　AppenderRef：Root的子节点，用来指定该日志输出到哪个Appender.<br>
+　　　Logger节点用来单独指定日志的形式，比如要为指定包下的class指定不同的日志级别等。<br>
+　　　　　level:日志输出级别，共有8个级别，按照从低到高为：All &lt; Trace &lt; Debug &lt; Info &lt; Warn &lt; Error &lt; Fatal &lt; OFF.<br>
+　　　　　name:用来指定该Logger所适用的类或者类所在的包全路径,继承自Root节点.<br>
+　　　　　AppenderRef：Logger的子节点，用来指定该日志输出到哪个Appender,如果没有指定，就会默认继承自Root.如果指定了，那么会在指定的这个Appender和Root的Appender中都会输出，此时我们可以设置Logger的additivity="false"只在自定义的Appender中进行输出。<br>
+4.关于日志level.<br>
+　　　共有8个级别，按照从低到高为：All &lt; Trace &lt; Debug &lt; Info &lt; Warn &lt; Error &lt; Fatal &lt; OFF.<br>
+　　　　　　All:最低等级的，用于打开所有日志记录.<br>
+　　　　　　Trace:是追踪，就是程序推进以下，你就可以写个trace输出，所以trace应该会特别多，不过没关系，我们可以设置最低日志级别不让他输出.<br>
+　　　　　　Debug:指出细粒度信息事件对调试应用程序是非常有帮助的.<br>
+　　　　　　Info:消息在粗粒度级别上突出强调应用程序的运行过程.<br>
+　　　　　　Warn:输出警告及warn以下级别的日志.<br>
+　　　　　　Error:输出错误信息日志.<br>
+　　　　　　Fatal:输出每个严重的错误事件将会导致应用程序的退出的日志.<br>
+　　　　　　OFF:最高等级的，用于关闭所有日志记录.</p>
+<h4 id="输出格式">输出格式</h4>
+<table>
+<thead>
+<tr>
+<th>格式</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>%d{yyyy-MM-dd HH:mm:ss, SSS}</td>
+<td>日志产生时间,{&lt;日期格式&gt;}使用ISO8601定义的日期格式</td>
+</tr>
+<tr>
+<td>%p</td>
+<td>显示该条日志的优先级，如INFO，DEBUG等</td>
+</tr>
+<tr>
+<td>%c</td>
+<td>logger的名称,列出logger名字空间的全称，如果加上{&lt;层数&gt;}表示列出从最内层算起的指定层数的名字空间</td>
+</tr>
+<tr>
+<td>%m</td>
+<td>日志内容，即 logger.info("message")</td>
+</tr>
+<tr>
+<td>%M</td>
+<td>显示调用logger的方法名</td>
+</tr>
+<tr>
+<td>%n</td>
+<td>当前平台下的换行符</td>
+</tr>
+<tr>
+<td>%C</td>
+<td>Java类名,列出调用logger的类的全名（包含包路径）</td>
+</tr>
+<tr>
+<td>%L</td>
+<td>日志输出调用logger的代码所在行数</td>
+</tr>
+<tr>
+<td>%F</td>
+<td>显示调用logger的源文件名</td>
+</tr>
+<tr>
+<td>%I</td>
+<td>输出日志事件的发生位置，包括类目名、发生的线程，以及在代码中的行数</td>
+</tr>
+<tr>
+<td>%r</td>
+<td>显示从程序启动时到记录该条日志时已经经过的毫秒数</td>
+</tr>
+<tr>
+<td>%t</td>
+<td>输出产生该日志事件的线程名</td>
+</tr>
+<tr>
+<td>%x</td>
+<td>按NDC（Nested Diagnostic Context，线程堆栈）顺序输出日志</td>
+</tr>
+<tr>
+<td>%X</td>
+<td>按MDC输出日志。通常用于多个客户端连接同一台服务器，方便服务器区分是那个客户端访问留下来的日志。</td>
+</tr>
+<tr>
+<td>%M</td>
+<td>日志输出所在方法名</td>
+</tr>
+<tr>
+<td>hostName</td>
+<td>本地机器名</td>
+</tr>
+<tr>
+<td>hostAddress</td>
+<td>本地ip地址</td>
+</tr>
+</tbody>
+</table>
+
+</div>
+<div id="MySignature"></div>
+<div class="clear"></div>
+<div id="blog_post_info_block">
+    <div id="blog_post_info"></div>
+    <div class="clear"></div>
+    <div id="post_next_prev"></div>
+</div>
+        <div class="postDesc">posted on 
+<span id="post-date">2021-05-14 11:29</span>&nbsp;
+<a href="https://www.cnblogs.com/tangtang-benben/">飞飞乐园</a>&nbsp;
+阅读(<span id="post_view_count">0</span>)&nbsp;
+评论(<span id="post_comment_count">0</span>)&nbsp;
+<a href="https://i.cnblogs.com/EditPosts.aspx?postid=14764373" rel="nofollow">编辑</a>&nbsp;
+<a href="javascript:void(0)" onclick="AddToWz(14764373);return false;">收藏</a></div>
+    </div>
+    <script src="https://common.cnblogs.com/highlight/10.3.1/highlight.min.js"></script>
+<script>markdown_highlight();</script>
+<script>
+    var allowComments = true, cb_blogId = 633571, cb_blogApp = 'tangtang-benben', cb_blogUserGuid = '6a31a83e-d7ca-de11-ba8f-001cf0cd104b';
+    var cb_entryId = 14764373, cb_entryCreatedDate = '2021-05-14 11:29', cb_postType = 1;
+    updatePostStats(
+        [cb_entryId],
+        function(id, count) { $("#post_view_count").text(count) },
+        function(id, count) { $("#post_comment_count").text(count) })
+    zoomManager.apply("#cnblogs_post_body img:not(.code_img_closed):not(.code_img_opened)");
+</script>
+    <a name="!comments"></a>
+<div id="blog-comments-placeholder"></div>
+<div id="comment_form" class="commentform">
+    <a name="commentform"></a>
+    <div id="divCommentShow"></div>
+    <div id="comment_nav"><span id="span_refresh_tips"></span><a href="javascript:void(0);" onclick="return RefreshCommentList();" id="lnk_RefreshComments" runat="server" clientidmode="Static">刷新评论</a><a href="#" onclick="return RefreshPage();">刷新页面</a><a href="#top">返回顶部</a></div>
+    <div id="comment_form_container"></div>
+    <div class="ad_text_commentbox" id="ad_text_under_commentbox"></div>
+    <div id="ad_t2"></div>
+    <div id="opt_under_post"></div>
+    <div id="cnblogs_c1" class="under-post-card">
+        <div id='div-gpt-ad-1592365906576-0' style='width: 300px; height: 250px;'></div>
+    </div>
+    <div id="under_post_card1"></div>
+    <div id="cnblogs_c2" class="under-post-card">
+        <div id='div-gpt-ad-1592366332455-0' style='width: 468px; height: 60px;'></div>
+    </div>
+    <div id="under_post_card2"></div>
+    <div id="HistoryToday" class="under-post-card"></div>
+    <script type="text/javascript">
+       var commentManager = new blogCommentManager();
+       commentManager.renderComments(0);
+       fixPostBody();
+       deliverBigBanner();
+setTimeout(function() { incrementViewCount(cb_entryId); }, 50);       deliverT2();
+       deliverC1C2();
+       loadNewsAndKb();
+       loadBlogSignature();
+LoadPostCategoriesTags(cb_blogId, cb_entryId);       LoadPostInfoBlock(cb_blogId, cb_entryId, cb_blogApp, cb_blogUserGuid);
+       GetPrevNextPost(cb_entryId, cb_blogId, cb_entryCreatedDate, cb_postType);
+       loadOptUnderPost();
+       GetHistoryToday(cb_blogId, cb_blogApp, cb_entryCreatedDate);
+    </script>
+</div>
+
+</div>
+
+
+</div>
+<div id="leftcontent">
+    <div id="leftcontentcontainer">
+        <div id="sidebar_news" class="newsItem">
+            <script>loadBlogNews();</script>
+</div>
+<div id="sidebar_c3"></div><br>
+        <div id="blog-calendar" style="display:none"></div>
+        <script>loadBlogDefaultCalendar();</script>
+        <div id="blog-sidecolumn"></div>
+        <script>loadBlogSideColumn();</script>
+    </div>
+</div>
+<!--done-->
+<div class="footer">
+	Copyright &copy; 2021 飞飞乐园
+<br /><span id="poweredby">Powered by .NET 5.0 on Kubernetes</span>
+ Powered By<a href="/">博客园</a>
+</div>
+
+
+
+
+    
+
+    <input type="hidden" id="antiforgery_token" value="CfDJ8L-rpLgFVEJMgssCVvNUAjsAnFuIbhS5cFlsvZkOP37GAsFfPFBK4cBWOpGUwgnk8W-SZjR80XTXAu_XYJeVg-aRXnG9sXB6hNyaIW7Wum7J21py8P618VO7OTC93IMte17aHrS_SB2W7S9IpLBmfww" />
+</body>
+</html>

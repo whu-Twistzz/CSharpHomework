@@ -1,0 +1,870 @@
+﻿<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="referrer" content="origin-when-crossorigin" />
+    
+    
+    <meta http-equiv="Cache-Control" content="no-transform" />
+    <meta http-equiv="Cache-Control" content="no-siteapp" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>kiba518 - 博客园</title>
+    <link id="favicon" rel="shortcut icon" href="//common.cnblogs.com/favicon.svg" type="image/svg+xml" />
+    
+    <link rel="stylesheet" href="/css/blog-common.min.css?v=zS6-e1bxywlu3kpHvpr1J6MySwya3ztFtEnS7RYQ0Fk" />
+    <link id="MainCss" rel="stylesheet" href="/skins/codinglife/bundle-codinglife.min.css?v=2uJkpdACLVfstRQ7zeCFK19brTwKuDEaNBLgKz9nm3A" />
+    <link type="text/css" rel="stylesheet" href="https://www.cnblogs.com/kiba/custom.css?v=0oaM8e/ksggH3nzSmmNoVg6Viqw=" />
+    <link id="mobile-style" media="only screen and (max-width: 767px)" type="text/css" rel="stylesheet" href="/skins/codinglife/bundle-codinglife-mobile.min.css?v=DwDRKMd1bmjnJZ4iQqrTCO9QLlYb6OZaUAzHoHIIihg" />
+    
+    <link type="application/rss+xml" rel="alternate" href="https://www.cnblogs.com/kiba/rss" />
+    <link type="application/rsd+xml" rel="EditURI" href="https://www.cnblogs.com/kiba/rsd.xml" />
+    <link type="application/wlwmanifest+xml" rel="wlwmanifest" href="https://www.cnblogs.com/kiba/wlwmanifest.xml" />
+    <script>
+        var currentBlogId = 105918;
+        var currentBlogApp = 'kiba';
+        var cb_enable_mathjax = false;
+        var isLogined = false;
+        var isBlogOwner = false;
+        var skinName = 'CodingLife';
+        var visitorUserId = '';
+    </script>
+    <script src="https://common.cnblogs.com/scripts/jquery-2.2.0.min.js"></script>
+    <script src="/js/blog-common.min.js?v=2Mic1VLeHXarpdzASbXqFMIMVLEBiWXNO5yiTHUcmhw"></script>
+    
+    
+    
+</head>
+<body class="no-navbar">
+    <a name="top"></a>
+    <div id="top_nav" class="navbar forpc navbar-custom">
+        <nav id="nav_main" class="navbar-main">
+            <ul id="nav_left" class="navbar-list navbar-left">
+                <li class="navbar-branding"><a href="https://www.cnblogs.com/" title="开发者的网上家园"><img src="/images/logo.svg?v=R9M0WmLAIPVydmdzE2keuvnjl-bPR7_35oHqtiBzGsM" alt="博客园Logo" /></a></li>
+                <li><a href="/" onclick="ga('send', 'event', 'Link', 'click', 'skin-navbar-sitehome')">首页</a></li>
+                <li><a href="https://news.cnblogs.com/" onclick="ga('send', 'event', 'Link', 'click', 'skin-navbar-news')">新闻</a></li>
+                <li><a href="https://q.cnblogs.com/" onclick="ga('send', 'event', 'Link', 'click', 'skin-navbar-q')">博问</a></li>
+                <li><a id="nav_brandzone" href="https://brands.cnblogs.com/" onclick="ga('send', 'event', 'Link', 'click', 'skin-navbar-brands')">专区</a></li>
+                <li><a href="https://ing.cnblogs.com/" onclick="ga('send', 'event', 'Link', 'click', 'skin-navbar-ing')">闪存</a></li>
+                <li><a href="https://edu.cnblogs.com/" onclick="ga('send', 'event', 'Link', 'click', 'skin-navbar-edu')">班级</a></li>
+            </ul>
+            <ul id="nav_right" class="navbar-list navbar-right">
+                <li>
+                    <form id="zzk_search" class="navbar-search" action="https://zzk.cnblogs.com/s" method="get">
+                        <input name="w" id="zzk_search_input" placeholder="代码改变世界" type="text" tabindex="3" />
+                        <button type="submit" id="zzk_search_button">
+                            <img src="/images/aggsite/search.svg" alt="搜索" />
+                        </button>
+                    </form>
+                </li>
+                <li id="navbar_login_status" class="navbar-list">
+                    <a class="navbar-user-info navbar-blog" href="https://i.cnblogs.com/EditPosts.aspx?opt=1" alt="写随笔" title="写随笔">
+                        <img id="new_post_icon" class="navbar-icon" src="/images/aggsite/newpost.svg" alt="写随笔" />
+                    </a>
+                    <a id="navblog-myblog-icon" class="navbar-user-info navbar-blog" href="https://passport.cnblogs.com/GetBlogApplyStatus.aspx" alt="我的博客" title="我的博客">
+                        <img id="myblog_icon" class="navbar-icon" src="/images/aggsite/myblog.svg" alt="我的博客" />
+                    </a>
+                    <a class="navbar-user-info navbar-message navbar-icon-wrapper" href="https://msg.cnblogs.com/" alt="短消息" title="短消息">
+                        <img id="msg_icon" class="navbar-icon" src="/images/aggsite/message.svg?v=J0WS2P2iPgaIVgXxcAhliw4AFZIpaTWxtdoNAv9eiCA" alt="短消息" />
+                        <span id="msg_count" style="display: none"></span>
+                    </a>
+                    <div id="user_info" class="navbar-user-info dropdown">
+                        <a class="dropdown-button" href="https://home.cnblogs.com/">
+                            <img id="user_icon" class="navbar-avatar" src="/images/aggsite/avatar-default.svg" alt="用户头像" />
+                        </a>
+                        <div class="dropdown-menu">
+                            <a id="navblog-myblog-text" href="https://passport.cnblogs.com/GetBlogApplyStatus.aspx">我的博客</a>
+                            <a href="https://home.cnblogs.com/">我的园子</a>
+                            <a href="https://account.cnblogs.com/settings/account">账号设置</a>
+                            <a href="javascript:void(0)" id="navbar_lite_mode_toggle" title="简洁模式会使用简洁款皮肤显示所有博客">
+    简洁模式 <img id="navbar_lite_mode_on" src="/images/lite-mode-check.svg" class="hide" /><span id="navbar_lite_mode_spinner" class="hide">...</span>
+</a>
+                            <a href="javascript:void(0)" onclick="account.logout();">退出登录</a>
+                        </div>
+                    </div>
+                    <a class="navbar-anonymous" href="https://account.cnblogs.com/signup/">注册</a>
+                    <a class="navbar-anonymous" href="javascript:void(0);" onclick="account.login()">登录</a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+
+    <div id="page_begin_html">
+        <div class="c-portrait">
+  <img src="https://pic.cnblogs.com/avatar/243596/20180629143127.png" alt="Kiba518" />
+
+  <h1><a href="https://www.cnblogs.com/kiba/">Kiba518</a></h1>
+  <h2>   博文原创，力求真实，无谓是非，只为留痕。</h2>
+
+  <div class="c-social">
+    
+  </div>
+</div>
+
+<a href="https://github.com/kiba518/KibaFramework">  
+<img style="position: absolute; top: 0; right: 0; border: 0;" 
+    src="https://camo.githubusercontent.com/e7bbb0521b397edbd5fe43e7f760759336b5e05f/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f677265656e5f3030373230302e706e67" 
+    alt="Fork me on GitHub" 
+    data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_right_green_007200.png">
+</a>
+    </div>
+    <!--done-->
+<div id="home">
+<div id="header">
+	<div id="blogTitle">
+        <a id="lnkBlogLogo" href="https://www.cnblogs.com/kiba/"><img id="blogLogo" src="/skins/custom/images/logo.gif" alt="返回主页" /></a>		
+		
+<!--done-->
+<h1><a id="Header1_HeaderTitle" class="headermaintitle HeaderMainTitle" href="https://www.cnblogs.com/kiba/">kiba518</a>
+</h1>
+<h2>天下多少有情事，满眼尽是无奈人。</h2>
+
+
+
+
+		
+	</div><!--end: blogTitle 博客的标题和副标题 -->
+	<div id="navigator">
+		
+<ul id="navList">
+<li><a id="blog_nav_sitehome" class="menu" href="https://www.cnblogs.com/">
+博客园</a>
+</li>
+<li>
+<a id="blog_nav_myhome" class="menu" href="https://www.cnblogs.com/kiba/">
+首页</a>
+</li>
+<li>
+
+<a id="blog_nav_newpost" class="menu" href="https://i.cnblogs.com/EditPosts.aspx?opt=1">
+新随笔</a>
+</li>
+<li>
+<a id="blog_nav_contact" class="menu" href="https://msg.cnblogs.com/send/kiba518">
+联系</a></li>
+<li>
+<a id="blog_nav_rss" class="menu" href="javascript:void(0)" data-rss="https://www.cnblogs.com/kiba/rss/">
+订阅</a>
+<!--<partial name="./Shared/_XmlLink.cshtml" model="Model" /></li>--></li>
+<li>
+<a id="blog_nav_admin" class="menu" href="https://i.cnblogs.com/">
+管理</a>
+</li>
+</ul>
+
+
+		<div class="blogStats">
+			<div id="blog_stats_place_holder"><script>loadBlogStats();</script></div>
+		</div><!--end: blogStats -->
+	</div><!--end: navigator 博客导航栏 -->
+</div><!--end: header 头部 -->
+<div id="main">
+	<div id="mainContent">
+	<div class="forFlow">
+		
+
+
+
+
+
+		
+
+
+<div class="day">
+    <div class="dayTitle">
+        <a href="https://www.cnblogs.com/kiba/archive/2021/05/14.html">2021年5月14日</a>
+    </div>
+
+        <div class="postTitle">
+            
+
+<a class="postTitle2 vertical-middle" href="https://www.cnblogs.com/kiba/p/14767430.html">
+    <span>
+        干货，使用布隆过滤器实现高效缓存！
+    </span>
+    
+
+
+
+</a>
+
+        </div>
+        <div class="postCon">
+
+    <div class="c_b_p_desc">
+摘要：前言 本文主要描述，使用布隆过滤实现高效缓存。文中采用数组做为缓存，如果需要高并发命中，则需将文中的数组换成Redis数据库。 布隆过滤 布隆缓存的创建过程如下： 1，先定义缓存bit数组（BitArray），数组的长度就是缓存数据的最大数量。 2，然后将字符串通过哈希运算，求出它的HashCode        <a href="https://www.cnblogs.com/kiba/p/14767430.html" class="c_b_p_desc_readmore">阅读全文</a>
+    </div>
+</div>
+        <div class="clear"></div>
+        <div class="postDesc">posted @ 2021-05-14 10:26
+kiba518
+<span data-post-id="14767430" class="post-view-count">阅读(186)</span> 
+<span data-post-id="14767430" class="post-comment-count">评论(5)</span> 
+<span data-post-id="14767430" class="post-digg-count">推荐(1)</span> 
+<a href="https://i.cnblogs.com/EditPosts.aspx?postid=14767430" rel="nofollow">
+    编辑
+</a>
+</div>
+        <div class="clear"></div>
+</div>
+
+
+		
+
+
+<div class="day">
+    <div class="dayTitle">
+        <a href="https://www.cnblogs.com/kiba/archive/2021/03/15.html">2021年3月15日</a>
+    </div>
+
+        <div class="postTitle">
+            
+
+<a class="postTitle2 vertical-middle" href="https://www.cnblogs.com/kiba/p/14518906.html">
+    <span>
+        一个C#开发编写Java框架的心路历程
+    </span>
+    
+
+
+
+</a>
+
+        </div>
+        <div class="postCon">
+
+    <div class="c_b_p_desc">
+摘要：前言 这一篇絮絮叨叨，逻辑不太清晰的编写Java框架的的一个过程，主要描述我作为一个java初学者，在编写Java框架时的一些心得感悟。 因为我是C#的开发者，所以，在编写Java框架时，或多或少会带入一些C#的固有观念，所以，这也是一个C#观念与Java观念碰撞的一个框架。 Java与C#的一些小        <a href="https://www.cnblogs.com/kiba/p/14518906.html" class="c_b_p_desc_readmore">阅读全文</a>
+    </div>
+</div>
+        <div class="clear"></div>
+        <div class="postDesc">posted @ 2021-03-15 10:00
+kiba518
+<span data-post-id="14518906" class="post-view-count">阅读(2488)</span> 
+<span data-post-id="14518906" class="post-comment-count">评论(17)</span> 
+<span data-post-id="14518906" class="post-digg-count">推荐(25)</span> 
+<a href="https://i.cnblogs.com/EditPosts.aspx?postid=14518906" rel="nofollow">
+    编辑
+</a>
+</div>
+        <div class="clear"></div>
+</div>
+
+
+		
+
+
+<div class="day">
+    <div class="dayTitle">
+        <a href="https://www.cnblogs.com/kiba/archive/2021/03/08.html">2021年3月8日</a>
+    </div>
+
+        <div class="postTitle">
+            
+
+<a class="postTitle2 vertical-middle" href="https://www.cnblogs.com/kiba/p/14497894.html">
+    <span>
+        C#使用OpenCV剪切图像中的圆形和矩形
+    </span>
+    
+
+
+
+</a>
+
+        </div>
+        <div class="postCon">
+
+    <div class="c_b_p_desc">
+摘要：前言 本文主要介绍如何使用OpenCV剪切图像中的圆形和矩形。 准备工作 首先创建一个Wpf项目——WpfOpenCV，这里版本使用Framework4.7.2。 然后使用Nuget搜索【Emgu.CV】，如下图。 这里的Emgu.CV选择4.3.0.3890版本，然后安装Emgu.CV和Emgu.        <a href="https://www.cnblogs.com/kiba/p/14497894.html" class="c_b_p_desc_readmore">阅读全文</a>
+    </div>
+</div>
+        <div class="clear"></div>
+        <div class="postDesc">posted @ 2021-03-08 09:44
+kiba518
+<span data-post-id="14497894" class="post-view-count">阅读(607)</span> 
+<span data-post-id="14497894" class="post-comment-count">评论(0)</span> 
+<span data-post-id="14497894" class="post-digg-count">推荐(10)</span> 
+<a href="https://i.cnblogs.com/EditPosts.aspx?postid=14497894" rel="nofollow">
+    编辑
+</a>
+</div>
+        <div class="clear"></div>
+</div>
+
+
+		
+
+
+<div class="day">
+    <div class="dayTitle">
+        <a href="https://www.cnblogs.com/kiba/archive/2021/03/01.html">2021年3月1日</a>
+    </div>
+
+        <div class="postTitle">
+            
+
+<a class="postTitle2 vertical-middle" href="https://www.cnblogs.com/kiba/p/14461836.html">
+    <span>
+        C#实现JWT无状态验证的实战应用
+    </span>
+    
+
+
+
+</a>
+
+        </div>
+        <div class="postCon">
+
+    <div class="c_b_p_desc">
+摘要：前言 本文主要介绍JWT的实战运用。 准备工作 首先我们创建一个Asp.Net的，包含MVC和WebApi的Web项目。 然后使用Nuget搜索JWT，安装JWT类库，如下图。 设计思路 这里我们简单的做了一个token验证的设计，设计思路如下图所示： 代码实现 缓存 首先，我们先开发工具类，根据设        <a href="https://www.cnblogs.com/kiba/p/14461836.html" class="c_b_p_desc_readmore">阅读全文</a>
+    </div>
+</div>
+        <div class="clear"></div>
+        <div class="postDesc">posted @ 2021-03-01 09:33
+kiba518
+<span data-post-id="14461836" class="post-view-count">阅读(917)</span> 
+<span data-post-id="14461836" class="post-comment-count">评论(2)</span> 
+<span data-post-id="14461836" class="post-digg-count">推荐(4)</span> 
+<a href="https://i.cnblogs.com/EditPosts.aspx?postid=14461836" rel="nofollow">
+    编辑
+</a>
+</div>
+        <div class="clear"></div>
+</div>
+
+
+		
+
+
+<div class="day">
+    <div class="dayTitle">
+        <a href="https://www.cnblogs.com/kiba/archive/2021/02/22.html">2021年2月22日</a>
+    </div>
+
+        <div class="postTitle">
+            
+
+<a class="postTitle2 vertical-middle" href="https://www.cnblogs.com/kiba/p/14428557.html">
+    <span>
+        C#使用OpenCV剪切图片中的人物头像
+    </span>
+    
+
+
+
+</a>
+
+        </div>
+        <div class="postCon">
+
+    <div class="c_b_p_desc">
+摘要：前言 本文主要介绍如何使用OpenCV剪切图形中的人物头像。 准备工作 首先创建一个Wpf项目——OpenCV_Face_Wpf，这里版本使用Framework4.7.2。 然后使用Nuget搜索【Emgu.CV】，如下图。 这里的Emgu.CV选择4.3.0.3890版本，然后安装Emgu.CV和        <a href="https://www.cnblogs.com/kiba/p/14428557.html" class="c_b_p_desc_readmore">阅读全文</a>
+    </div>
+</div>
+        <div class="clear"></div>
+        <div class="postDesc">posted @ 2021-02-22 09:54
+kiba518
+<span data-post-id="14428557" class="post-view-count">阅读(3165)</span> 
+<span data-post-id="14428557" class="post-comment-count">评论(10)</span> 
+<span data-post-id="14428557" class="post-digg-count">推荐(51)</span> 
+<a href="https://i.cnblogs.com/EditPosts.aspx?postid=14428557" rel="nofollow">
+    编辑
+</a>
+</div>
+        <div class="clear"></div>
+</div>
+
+
+		
+
+
+<div class="day">
+    <div class="dayTitle">
+        <a href="https://www.cnblogs.com/kiba/archive/2021/01/28.html">2021年1月28日</a>
+    </div>
+
+        <div class="postTitle">
+            
+
+<a class="postTitle2 vertical-middle" href="https://www.cnblogs.com/kiba/p/14338183.html">
+    <span>
+        架构中那些需要注意的事儿
+    </span>
+    
+
+
+
+</a>
+
+        </div>
+        <div class="postCon">
+
+    <div class="c_b_p_desc">
+摘要：架构的定义 架构这个词最早是跟随着建筑出现的，进入到软件行业后，它的含义有了一些变化，但最基础的含义还是没有变的。本质上来说，架构是一个设计动作和实现动作；设计动作描述的是勾勒出满足客户战略规划需求的产品；实现动作描述的是将构件组合成结构的过程。 架构的分类 依据架构的定义，可以将架构分类为产品架构        <a href="https://www.cnblogs.com/kiba/p/14338183.html" class="c_b_p_desc_readmore">阅读全文</a>
+    </div>
+</div>
+        <div class="clear"></div>
+        <div class="postDesc">posted @ 2021-01-28 10:27
+kiba518
+<span data-post-id="14338183" class="post-view-count">阅读(495)</span> 
+<span data-post-id="14338183" class="post-comment-count">评论(0)</span> 
+<span data-post-id="14338183" class="post-digg-count">推荐(3)</span> 
+<a href="https://i.cnblogs.com/EditPosts.aspx?postid=14338183" rel="nofollow">
+    编辑
+</a>
+</div>
+        <div class="clear"></div>
+</div>
+
+
+		
+
+
+<div class="day">
+    <div class="dayTitle">
+        <a href="https://www.cnblogs.com/kiba/archive/2020/12/08.html">2020年12月8日</a>
+    </div>
+
+        <div class="postTitle">
+            
+
+<a class="postTitle2 vertical-middle" href="https://www.cnblogs.com/kiba/p/14097006.html">
+    <span>
+        C#使用ML.Net完成人工智能预测
+    </span>
+    
+
+
+
+</a>
+
+        </div>
+        <div class="postCon">
+
+    <div class="c_b_p_desc">
+摘要：前言 Visual Studio2019 Preview中提供了图形界面的ML.Net，所以，只要我们安装Visual Studio2019 Preview就能简单的使用ML.Net了，因为我的电脑已经安装了Visual Studio2019，所以我不需要重头安装Visual Studio2019         <a href="https://www.cnblogs.com/kiba/p/14097006.html" class="c_b_p_desc_readmore">阅读全文</a>
+    </div>
+</div>
+        <div class="clear"></div>
+        <div class="postDesc">posted @ 2020-12-08 09:21
+kiba518
+<span data-post-id="14097006" class="post-view-count">阅读(2026)</span> 
+<span data-post-id="14097006" class="post-comment-count">评论(1)</span> 
+<span data-post-id="14097006" class="post-digg-count">推荐(5)</span> 
+<a href="https://i.cnblogs.com/EditPosts.aspx?postid=14097006" rel="nofollow">
+    编辑
+</a>
+</div>
+        <div class="clear"></div>
+</div>
+
+
+		
+
+
+<div class="day">
+    <div class="dayTitle">
+        <a href="https://www.cnblogs.com/kiba/archive/2020/11/24.html">2020年11月24日</a>
+    </div>
+
+        <div class="postTitle">
+            
+
+<a class="postTitle2 vertical-middle" href="https://www.cnblogs.com/kiba/p/14028476.html">
+    <span>
+        那些常用的加密算法
+    </span>
+    
+
+
+
+</a>
+
+        </div>
+        <div class="postCon">
+
+    <div class="c_b_p_desc">
+摘要：前言 本文主要讲解一下C#常用的那些加密算法。 MD5加密 MD5加密是最常见的加密方式，因为MD5是不可逆的，所以很多系统的密码都是用MD5加密保存的。 虽然MD5是不可以解码的，但因为MD5加密的字符串是固定的，所以，理论上只需要建立一个庞大的数据库，把所有的字符串都加密一遍，那就可以解码所有的        <a href="https://www.cnblogs.com/kiba/p/14028476.html" class="c_b_p_desc_readmore">阅读全文</a>
+    </div>
+</div>
+        <div class="clear"></div>
+        <div class="postDesc">posted @ 2020-11-24 09:30
+kiba518
+<span data-post-id="14028476" class="post-view-count">阅读(928)</span> 
+<span data-post-id="14028476" class="post-comment-count">评论(5)</span> 
+<span data-post-id="14028476" class="post-digg-count">推荐(7)</span> 
+<a href="https://i.cnblogs.com/EditPosts.aspx?postid=14028476" rel="nofollow">
+    编辑
+</a>
+</div>
+        <div class="clear"></div>
+</div>
+
+
+		
+
+
+<div class="day">
+    <div class="dayTitle">
+        <a href="https://www.cnblogs.com/kiba/archive/2020/10/12.html">2020年10月12日</a>
+    </div>
+
+        <div class="postTitle">
+            
+
+<a class="postTitle2 vertical-middle" href="https://www.cnblogs.com/kiba/p/13728088.html">
+    <span>
+        超详细的TCP、Sokcket和SuperSocket入门指导
+    </span>
+    
+
+
+
+</a>
+
+        </div>
+        <div class="postCon">
+
+    <div class="c_b_p_desc">
+摘要：前言 本文主要介绍TCP、Sokcket和SuperSocket的基础使用。 创建实例模式的SuperSocket服务 首先创建控制台项目，然后Nuget添加引用SuperSocket.Engine。 然后编写服务代码，SuperSocket的服务代码主要是配置AppServer对象，因为AppSe        <a href="https://www.cnblogs.com/kiba/p/13728088.html" class="c_b_p_desc_readmore">阅读全文</a>
+    </div>
+</div>
+        <div class="clear"></div>
+        <div class="postDesc">posted @ 2020-10-12 09:16
+kiba518
+<span data-post-id="13728088" class="post-view-count">阅读(1369)</span> 
+<span data-post-id="13728088" class="post-comment-count">评论(1)</span> 
+<span data-post-id="13728088" class="post-digg-count">推荐(14)</span> 
+<a href="https://i.cnblogs.com/EditPosts.aspx?postid=13728088" rel="nofollow">
+    编辑
+</a>
+</div>
+        <div class="clear"></div>
+</div>
+
+
+		
+
+
+<div class="day">
+    <div class="dayTitle">
+        <a href="https://www.cnblogs.com/kiba/archive/2020/09/16.html">2020年9月16日</a>
+    </div>
+
+        <div class="postTitle">
+            
+
+<a class="postTitle2 vertical-middle" href="https://www.cnblogs.com/kiba/p/13673631.html">
+    <span>
+        用后台开发的逻辑理念学习VUE
+    </span>
+    
+
+
+
+</a>
+
+        </div>
+        <div class="postCon">
+
+    <div class="c_b_p_desc">
+摘要：前言 近些年前端开发快速发展，现在学习前端已经不像以前那样仅仅学习一个语法就可以了，它已经是一门编程技术了，它们有自己独立的类似Main函数的入口，有像MVC一样规范好的层次结构，有自己的开发工具可以发布打包程序，甚至还可以独立连接数据库，当然了，优点与缺点共存，不能向其他语言那样断点调试导致了，它        <a href="https://www.cnblogs.com/kiba/p/13673631.html" class="c_b_p_desc_readmore">阅读全文</a>
+    </div>
+</div>
+        <div class="clear"></div>
+        <div class="postDesc">posted @ 2020-09-16 09:13
+kiba518
+<span data-post-id="13673631" class="post-view-count">阅读(858)</span> 
+<span data-post-id="13673631" class="post-comment-count">评论(2)</span> 
+<span data-post-id="13673631" class="post-digg-count">推荐(6)</span> 
+<a href="https://i.cnblogs.com/EditPosts.aspx?postid=13673631" rel="nofollow">
+    编辑
+</a>
+</div>
+        <div class="clear"></div>
+</div>
+
+
+		
+
+
+<div class="day">
+    <div class="dayTitle">
+        <a href="https://www.cnblogs.com/kiba/archive/2020/09/14.html">2020年9月14日</a>
+    </div>
+
+        <div class="postTitle">
+            
+
+<a class="postTitle2 vertical-middle" href="https://www.cnblogs.com/kiba/p/13664937.html">
+    <span>
+        一线架构师的一些项目管理心得
+    </span>
+    
+
+
+
+</a>
+
+        </div>
+        <div class="postCon">
+
+    <div class="c_b_p_desc">
+摘要：项目管理 现代的项目管理通常是4个部分：需求、软件设计、软件开发、产品交付与维护。通常情况下，整个过程是中间重两头轻。 1，需求 每个项目都是要明确需求的，因为没有明确的需求，就没有项目结束的时间。 需求需要分享 在项目的初始阶段，是进行需求整理和需求分析，把需求整理和分析的结果分享给团队，可以使团        <a href="https://www.cnblogs.com/kiba/p/13664937.html" class="c_b_p_desc_readmore">阅读全文</a>
+    </div>
+</div>
+        <div class="clear"></div>
+        <div class="postDesc">posted @ 2020-09-14 09:17
+kiba518
+<span data-post-id="13664937" class="post-view-count">阅读(1137)</span> 
+<span data-post-id="13664937" class="post-comment-count">评论(5)</span> 
+<span data-post-id="13664937" class="post-digg-count">推荐(5)</span> 
+<a href="https://i.cnblogs.com/EditPosts.aspx?postid=13664937" rel="nofollow">
+    编辑
+</a>
+</div>
+        <div class="clear"></div>
+</div>
+
+
+		
+
+
+<div class="day">
+    <div class="dayTitle">
+        <a href="https://www.cnblogs.com/kiba/archive/2020/09/01.html">2020年9月1日</a>
+    </div>
+
+        <div class="postTitle">
+            
+
+<a class="postTitle2 vertical-middle" href="https://www.cnblogs.com/kiba/p/13596436.html">
+    <span>
+        Vue开源项目使用探索
+    </span>
+    
+
+
+
+</a>
+
+        </div>
+        <div class="postCon">
+
+    <div class="c_b_p_desc">
+摘要：前言 本文记录一次使用Vue开源项目的过程。 寻找Vue开源项目 要使用Vue开源项目就必须先找到一个，我们去Github上搜索【后台】，然后使用Vue分类进行检索，找到排名第一的开源框架进行下载—vue-framework-wz 然后新建一个文件夹，将下载解压后的文件放进去，如下图： 运行项目 运        <a href="https://www.cnblogs.com/kiba/p/13596436.html" class="c_b_p_desc_readmore">阅读全文</a>
+    </div>
+</div>
+        <div class="clear"></div>
+        <div class="postDesc">posted @ 2020-09-01 15:36
+kiba518
+<span data-post-id="13596436" class="post-view-count">阅读(1140)</span> 
+<span data-post-id="13596436" class="post-comment-count">评论(1)</span> 
+<span data-post-id="13596436" class="post-digg-count">推荐(2)</span> 
+<a href="https://i.cnblogs.com/EditPosts.aspx?postid=13596436" rel="nofollow">
+    编辑
+</a>
+</div>
+        <div class="clear"></div>
+</div>
+
+
+		
+
+
+<div class="day">
+    <div class="dayTitle">
+        <a href="https://www.cnblogs.com/kiba/archive/2020/08/10.html">2020年8月10日</a>
+    </div>
+
+        <div class="postTitle">
+            
+
+<a class="postTitle2 vertical-middle" href="https://www.cnblogs.com/kiba/p/13467704.html">
+    <span>
+        记一次项目重构
+    </span>
+    
+
+
+
+</a>
+
+        </div>
+        <div class="postCon">
+
+    <div class="c_b_p_desc">
+摘要：前言 本文主要记录，刚刚步入架构师岗位4个月的我，重构项目的一些经历。 项目重构的过程 重构项目这件事，最重要的其实是心态，只要心态良好，这事儿十有八九能干成。 因为，我们要面对困难，往往并不仅仅是代码。比如，你在项目重构开始后，发现，重构项目组只剩你一个人。。。 01熟悉表结构 对于这一次重构的项        <a href="https://www.cnblogs.com/kiba/p/13467704.html" class="c_b_p_desc_readmore">阅读全文</a>
+    </div>
+</div>
+        <div class="clear"></div>
+        <div class="postDesc">posted @ 2020-08-10 09:02
+kiba518
+<span data-post-id="13467704" class="post-view-count">阅读(736)</span> 
+<span data-post-id="13467704" class="post-comment-count">评论(4)</span> 
+<span data-post-id="13467704" class="post-digg-count">推荐(2)</span> 
+<a href="https://i.cnblogs.com/EditPosts.aspx?postid=13467704" rel="nofollow">
+    编辑
+</a>
+</div>
+        <div class="clear"></div>
+</div>
+
+
+		
+
+
+<div class="day">
+    <div class="dayTitle">
+        <a href="https://www.cnblogs.com/kiba/archive/2020/07/07.html">2020年7月7日</a>
+    </div>
+
+        <div class="postTitle">
+            
+
+<a class="postTitle2 vertical-middle" href="https://www.cnblogs.com/kiba/p/13258817.html">
+    <span>
+        通过手写服务器的方式，立体学习Http
+    </span>
+    
+
+
+
+</a>
+
+        </div>
+        <div class="postCon">
+
+    <div class="c_b_p_desc">
+摘要：前言 Http我们都已经耳熟能详了，而关于Http学习的文章网上有很多，各个知识点的讲解也可说是深入浅出。然而，学习过后，我们对Http还是一知半解。问题出在了哪？ Http是一个客户机与服务器之间的通信的协议，真的想学习Http，就必须把客户机和服务器也学了，也就是说，必须立体的学习，不然我们永远        <a href="https://www.cnblogs.com/kiba/p/13258817.html" class="c_b_p_desc_readmore">阅读全文</a>
+    </div>
+</div>
+        <div class="clear"></div>
+        <div class="postDesc">posted @ 2020-07-07 09:31
+kiba518
+<span data-post-id="13258817" class="post-view-count">阅读(850)</span> 
+<span data-post-id="13258817" class="post-comment-count">评论(1)</span> 
+<span data-post-id="13258817" class="post-digg-count">推荐(1)</span> 
+<a href="https://i.cnblogs.com/EditPosts.aspx?postid=13258817" rel="nofollow">
+    编辑
+</a>
+</div>
+        <div class="clear"></div>
+</div>
+
+
+		
+
+
+<div class="day">
+    <div class="dayTitle">
+        <a href="https://www.cnblogs.com/kiba/archive/2020/06/22.html">2020年6月22日</a>
+    </div>
+
+        <div class="postTitle">
+            
+
+<a class="postTitle2 vertical-middle" href="https://www.cnblogs.com/kiba/p/13141981.html">
+    <span>
+        最通俗易懂的RSA加密解密指导
+    </span>
+    
+
+
+
+</a>
+
+        </div>
+        <div class="postCon">
+
+    <div class="c_b_p_desc">
+摘要：前言 RSA加密算法是一种非对称加密算法，简单来说，就是加密时使用一个钥匙，解密时使用另一个钥匙。 因为加密的钥匙是公开的，所又称公钥，解密的钥匙是不公开的，所以称为私钥。 密钥 关于RSA加密有很多文章，但几乎都只介绍了RSACryptoServiceProvider类的使用方法，如果只是走走看看        <a href="https://www.cnblogs.com/kiba/p/13141981.html" class="c_b_p_desc_readmore">阅读全文</a>
+    </div>
+</div>
+        <div class="clear"></div>
+        <div class="postDesc">posted @ 2020-06-22 09:37
+kiba518
+<span data-post-id="13141981" class="post-view-count">阅读(1021)</span> 
+<span data-post-id="13141981" class="post-comment-count">评论(1)</span> 
+<span data-post-id="13141981" class="post-digg-count">推荐(3)</span> 
+<a href="https://i.cnblogs.com/EditPosts.aspx?postid=13141981" rel="nofollow">
+    编辑
+</a>
+</div>
+        <div class="clear"></div>
+</div>
+
+
+
+<div class="topicListFooter">
+    <div id="nav_next_page">
+        
+    <a href="https://www.cnblogs.com/kiba/default.html?page=2">
+        下一页
+    </a>
+
+    </div>    
+</div>
+
+
+
+
+
+
+<script>
+    updatePostStats(
+        $(".post-view-count").map(function () { return this.dataset.postId }).get(),
+        function(id, count) { $(".post-view-count[data-post-id=" + id + "]").text("阅读(" + count + ")") },
+        function(id, count) { $(".post-comment-count[data-post-id=" + id + "]").text("评论(" + count + ")") },
+        function(id, count) { $(".post-digg-count[data-post-id=" + id + "]").text("推荐(" + count + ")") });
+</script>
+	</div><!--end: forFlow -->
+	</div><!--end: mainContent 主体内容容器-->
+	<div id="sideBar">
+		<div id="sideBarMain">
+			<div id="sidebar_news" class="newsItem">
+            <script>loadBlogNews();</script>
+</div>
+<div id="sidebar_c3"></div>
+			<div id="blog-calendar" style="display:none"></div><script>loadBlogDefaultCalendar();</script>			
+			<div id="leftcontentcontainer">
+				<div id="blog-sidecolumn"></div>
+                    <script>loadBlogSideColumn();</script>
+			</div>			
+		</div><!--end: sideBarMain -->
+	</div><!--end: sideBar 侧边栏容器 -->
+	<div class="clear"></div>
+	</div><!--end: main -->
+	<div class="clear"></div>
+	<div id="footer">
+		<!--done-->
+Copyright &copy; 2021 kiba518
+<br /><span id="poweredby">Powered by .NET 5.0 on Kubernetes</span>
+
+
+
+	</div><!--end: footer -->
+</div><!--end: home 自定义的最大容器 -->
+
+
+    <div id="page_end_html">
+        <script>
+window.tctipConfig = {
+staticPrefix: "http://static.tctip.com",
+cssPrefix: "http://static.tctip.com",
+buttonImageId: 5,
+buttonTip: "dashang",
+list:{
+alipay: {qrimg: "https://img2018.cnblogs.com/blog/243596/201908/243596-20190807102706448-1098463005.jpg"},
+weixin:{qrimg: "https://img2018.cnblogs.com/blog/243596/201908/243596-20190807102706448-1098463005.jpg"},
+}
+};
+</script>
+<script src="http://static.tctip.com/js/tctip.min.js"></script>
+    </div>
+
+    <input type="hidden" id="antiforgery_token" value="CfDJ8L-rpLgFVEJMgssCVvNUAjtPIhaUMBjcUWGJLrDXns_20yX37dejhGV_ojZyDOaNTonO8RRBWf8r_kaa1qelRPVRn4903oZFxARRMIZUqWUvQZMHV3qxxIhFHeKaLNXhMCpfYdXwBjrlWH7jjHKdi-w" />
+</body>
+</html>

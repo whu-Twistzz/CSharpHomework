@@ -1,0 +1,331 @@
+﻿<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="referrer" content="never" />
+    <meta name="description" content="Flutter 是 Google 的开源 UI 工具包。利用它，只需一套代码库，就能开发出适合移动设备、桌面设备、嵌入式设备以及 web 等多个平台的精美应用。过去几年，对于想要打造多平台应用的开发者" />
+    <meta property="og:description" content="Flutter 是 Google 的开源 UI 工具包。利用它，只需一套代码库，就能开发出适合移动设备、桌面设备、嵌入式设备以及 web 等多个平台的精美应用。过去几年，对于想要打造多平台应用的开发者" />
+    <meta http-equiv="Cache-Control" content="no-transform" />
+    <meta http-equiv="Cache-Control" content="no-siteapp" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>XD to Flutter 2.0 现已发布！ - Flutter社区 - 博客园</title>
+    <link id="favicon" rel="shortcut icon" href="//common.cnblogs.com/favicon.svg" type="image/svg+xml" />
+    
+    <link rel="stylesheet" href="/css/blog-common.min.css?v=zS6-e1bxywlu3kpHvpr1J6MySwya3ztFtEnS7RYQ0Fk" />
+    <link id="MainCss" rel="stylesheet" href="/skins/anothereon001/bundle-anothereon001.min.css?v=9x2ZP2K8SSBJowZA6xv0D5FvOmlvd5g21u0NBEAEwfQ" />
+    
+    <link id="mobile-style" media="only screen and (max-width: 767px)" type="text/css" rel="stylesheet" href="/skins/anothereon001/bundle-anothereon001-mobile.min.css?v=xFiYH0_zTHqf_pk9Nf2PvR4VdQ1qJnJcRVcot-VdM-8" />
+    
+    <link type="application/rss+xml" rel="alternate" href="https://www.cnblogs.com/flutterdev/rss" />
+    <link type="application/rsd+xml" rel="EditURI" href="https://www.cnblogs.com/flutterdev/rsd.xml" />
+    <link type="application/wlwmanifest+xml" rel="wlwmanifest" href="https://www.cnblogs.com/flutterdev/wlwmanifest.xml" />
+    <script>
+        var currentBlogId = 533908;
+        var currentBlogApp = 'flutterdev';
+        var cb_enable_mathjax = false;
+        var isLogined = false;
+        var isBlogOwner = false;
+        var skinName = 'AnotherEon001';
+        var visitorUserId = '';
+    </script>
+        <script>
+            var currentPostDateAdded = '2021-05-14 12:04';
+        </script>
+    <script src="https://common.cnblogs.com/scripts/jquery-2.2.0.min.js"></script>
+    <script src="/js/blog-common.min.js?v=2Mic1VLeHXarpdzASbXqFMIMVLEBiWXNO5yiTHUcmhw"></script>
+    
+    
+    
+</head>
+<body class="has-navbar">
+    <a name="top"></a>
+    <div id="top_nav" class="navbar forpc">
+        <nav id="nav_main" class="navbar-main">
+            <ul id="nav_left" class="navbar-list navbar-left">
+                <li class="navbar-branding"><a href="https://www.cnblogs.com/" title="开发者的网上家园"><img src="/images/logo.svg?v=R9M0WmLAIPVydmdzE2keuvnjl-bPR7_35oHqtiBzGsM" alt="博客园Logo" /></a></li>
+                <li><a href="/" onclick="ga('send', 'event', 'Link', 'click', 'skin-navbar-sitehome')">首页</a></li>
+                <li><a href="https://news.cnblogs.com/" onclick="ga('send', 'event', 'Link', 'click', 'skin-navbar-news')">新闻</a></li>
+                <li><a href="https://q.cnblogs.com/" onclick="ga('send', 'event', 'Link', 'click', 'skin-navbar-q')">博问</a></li>
+                <li><a id="nav_brandzone" href="https://brands.cnblogs.com/" onclick="ga('send', 'event', 'Link', 'click', 'skin-navbar-brands')">专区</a></li>
+                <li><a href="https://ing.cnblogs.com/" onclick="ga('send', 'event', 'Link', 'click', 'skin-navbar-ing')">闪存</a></li>
+                <li><a href="https://edu.cnblogs.com/" onclick="ga('send', 'event', 'Link', 'click', 'skin-navbar-edu')">班级</a></li>
+            </ul>
+            <ul id="nav_right" class="navbar-list navbar-right">
+                <li>
+                    <form id="zzk_search" class="navbar-search" action="https://zzk.cnblogs.com/s" method="get">
+                        <input name="w" id="zzk_search_input" placeholder="代码改变世界" type="text" tabindex="3" />
+                        <button type="submit" id="zzk_search_button">
+                            <img src="/images/aggsite/search.svg" alt="搜索" />
+                        </button>
+                    </form>
+                </li>
+                <li id="navbar_login_status" class="navbar-list">
+                    <a class="navbar-user-info navbar-blog" href="https://i.cnblogs.com/EditPosts.aspx?opt=1" alt="写随笔" title="写随笔">
+                        <img id="new_post_icon" class="navbar-icon" src="/images/aggsite/newpost.svg" alt="写随笔" />
+                    </a>
+                    <a id="navblog-myblog-icon" class="navbar-user-info navbar-blog" href="https://passport.cnblogs.com/GetBlogApplyStatus.aspx" alt="我的博客" title="我的博客">
+                        <img id="myblog_icon" class="navbar-icon" src="/images/aggsite/myblog.svg" alt="我的博客" />
+                    </a>
+                    <a class="navbar-user-info navbar-message navbar-icon-wrapper" href="https://msg.cnblogs.com/" alt="短消息" title="短消息">
+                        <img id="msg_icon" class="navbar-icon" src="/images/aggsite/message.svg?v=J0WS2P2iPgaIVgXxcAhliw4AFZIpaTWxtdoNAv9eiCA" alt="短消息" />
+                        <span id="msg_count" style="display: none"></span>
+                    </a>
+                    <div id="user_info" class="navbar-user-info dropdown">
+                        <a class="dropdown-button" href="https://home.cnblogs.com/">
+                            <img id="user_icon" class="navbar-avatar" src="/images/aggsite/avatar-default.svg" alt="用户头像" />
+                        </a>
+                        <div class="dropdown-menu">
+                            <a id="navblog-myblog-text" href="https://passport.cnblogs.com/GetBlogApplyStatus.aspx">我的博客</a>
+                            <a href="https://home.cnblogs.com/">我的园子</a>
+                            <a href="https://account.cnblogs.com/settings/account">账号设置</a>
+                            <a href="javascript:void(0)" id="navbar_lite_mode_toggle" title="简洁模式会使用简洁款皮肤显示所有博客">
+    简洁模式 <img id="navbar_lite_mode_on" src="/images/lite-mode-check.svg" class="hide" /><span id="navbar_lite_mode_spinner" class="hide">...</span>
+</a>
+                            <a href="javascript:void(0)" onclick="account.logout();">退出登录</a>
+                        </div>
+                    </div>
+                    <a class="navbar-anonymous" href="https://account.cnblogs.com/signup/">注册</a>
+                    <a class="navbar-anonymous" href="javascript:void(0);" onclick="account.login()">登录</a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+
+    
+    <div id="wrapper">
+<div id="header">
+
+<div id="top">
+<h1><a id="Header1_HeaderTitle" class="headermaintitle HeaderMainTitle" href="https://www.cnblogs.com/flutterdev/">Flutter社区</a>
+</h1>
+<div id="subtitle"></div>
+</div>
+<div id="sub"><div id="blog_stats_place_holder"><script>loadBlogStats();</script></div></div>
+
+
+
+
+</div>
+<div id="main_container">
+<div id="main_content">
+<div id="content">
+	<div id="post_detail">
+    <div class="post">
+        <h2>
+            
+<a id="cb_post_title_url" class="postTitle2 vertical-middle" href="https://www.cnblogs.com/flutterdev/p/announcing-xd-to-flutter-v2-0.html">
+    <span>XD to Flutter 2.0 现已发布！</span>
+    
+
+
+
+</a>
+
+        </h2>
+        <div class="postbody">
+            <div id="cnblogs_post_body" class="blogpost-body cnblogs-markdown">
+<p><img src="https://devrel.andfun.cn/devrel/posts/2021/05/JEUpoL.jpg" alt="" loading="lazy"></p>
+<p>Flutter 是 Google 的开源 UI 工具包。利用它，只需一套代码库，就能开发出适合移动设备、桌面设备、嵌入式设备以及 web 等多个平台的精美应用。过去几年，对于想要打造多平台应用的开发者来说，Flutter 已成为他们的首选。但设计师们需要的是一个视觉工具来建立原型和构建 Flutter UI，而不是精雕细琢 Dart 源代码，于是 <a href="https://github.com/AdobeXD/xd-to-flutter-plugin" target="_blank">XD to Flutter</a> 应运而生！</p>
+<p>此插件的首个预览版推出已近一年。这期间，我们一直在通过一些小更新对它进行优化和改进；如今，继去年夏天 1.0 版的重大发布之后，我们推出了此插件的 2.0 版以配合 Flutter 2 的发布。</p>
+<h2 id="等等，什么是-xd-to-flutter？"><strong>等等，什么是 XD to Flutter？</strong></h2>
+<p>顾名思义，<a href="https://youtu.be/raG7NjM0p0k" target="_blank">XD to Flutter</a> 插件是一个功能强大、易于使用的工具，可将您的 <a href="https://www.adobe.com/products/xd.html" target="_blank">Adobe XD</a> 设计导出为简洁、有效的 Flutter 代码。您可以从自己的设计中复制特定视觉元素的代码，导出各种可再利用的 Widgets，甚至可以将一些视图整个导出。</p>
+<p>这意味着，利用 XD to Flutter 插件，您只需点击一个按钮，即可让您的设计在任意设备上运行。此插件虽不能为您完成整个应用的编码，但可让您有个极好的开端。</p>
+<p>XD to Flutter 由 <a href="https://gskinner.com/" target="_blank">gskinner</a> 与 Adobe 联合开发，作为 Adobe XD 本身的插件发布，因此，您可将它用于您正在打造的任何现有的 Adobe XD 设计。</p>
+<h2 id="太棒了！有哪些新功能？"><strong>太棒了！有哪些新功能？</strong></h2>
+<p>最初发布的 XD to Flutter 版本非常有助于输出设计中所有不同的视觉元素，比如矢量图形、图片、富文本、背景模糊效果、混合模式、阴影及其他类似元素，只可惜输出结果是静态的，且不够灵活。</p>
+<p>尽管抓取图标或文本样式不费什么功夫，但我们仍希望它能发挥更大功效。XD 不仅可让设计师创建动态 UI，还提供有自适应布局、可滚动区域、堆栈及网格之类的工具；我们希望此插件能支持上述每一种功能，而在 2.0 版中，我们取得了许多进展。</p>
+<p><strong>响应式调整尺寸</strong></p>
+<p>XD to Flutter 支持 XD 的响应式布局功能，您可将元素 "固定" 在其所属父元素内，并精确控制其调整尺寸的方式。</p>
+<p><img src="https://devrel.andfun.cn/devrel/posts/2021/05/2oeEuB.png" alt="Adobe XD 中的响应式设计" loading="lazy"></p>
+<blockquote>
+<p>Adobe XD 中的响应式设计</p>
+</blockquote>
+<p><img src="https://devrel.andfun.cn/devrel/posts/2021/05/T0Kwo6.gif" alt="Flutter 中的响应式设计" loading="lazy"></p>
+<blockquote>
+<p>Flutter 中的响应式设计</p>
+</blockquote>
+<p>Flutter 使用 <a href="https://pub.dev/packages/adobe_xd" target="_blank">adobe_xd</a> 开源软件包中的自定义 Pinned 布局 Widget 实现了这一功能，开发者可直接在其项目中使用。</p>
+<p><img src="https://devrel.andfun.cn/devrel/posts/2021/05/nzmZOr.jpg" alt="Pinned Widget 代码示例" loading="lazy"></p>
+<blockquote>
+<p>Pinned Widget 代码示例</p>
+</blockquote>
+<p><strong>堆栈和滚动组</strong></p>
+<p>"堆栈" 和 "滚动组" 让开发者可以运用一些新的方式来在 Adobe XD 中动态布局屏幕内容。通过 XD 中的 "堆栈"，您可以将一堆形形色色的元素以横向或纵向列表排列，元素之间可以有不同的间距；相较于与其同名的 <code>Stack</code> Widget，"堆栈" 更类似于 Flutter 中的 <code>Flex</code> Widget。</p>
+<p>如您所料，利用 "滚动组"，可直接在您的设计内定义一个区域来横向或纵向滚动一大组内容。</p>
+<p>XD to Flutter 2.0 版对这些功能都支持，可将它们转换成常见的 Flutter Widget (<code>Column</code>、<code>Row</code> 以及 <code>SingleChildScrollView</code>)。您甚至可以将某个堆栈放入一个滚动组内，从而轻松创建一个滚动项列表。</p>
+<p><img src="https://devrel.andfun.cn/devrel/posts/2021/05/GRBLhW.gif" alt="XD (左) 和 Flutter (右) 中的堆栈和滚动组" loading="lazy"></p>
+<blockquote>
+<p>XD (左) 和 Flutter (右) 中的堆栈和滚动组</p>
+</blockquote>
+<p><strong>内边距和背景元素</strong></p>
+<p>另一项新功能是背景元素，也就是说，您可以指定一个视觉元素作为另一组元素的背景。背景元素可以和内边距配对使用，以界定背景的边缘与其内容之间的距离。</p>
+<p>Flutter 导出工具使用 <code>Stack</code> Widget 将背景元素分层放置在内容之后，而后者则放置在一个 <code>Padding</code> Widget 内。</p>
+<p><img src="https://devrel.andfun.cn/devrel/posts/2021/05/RIaeJC.gif" alt="XD (左) 和 Flutter 中的内边距和背景" loading="lazy"></p>
+<blockquote>
+<p>XD (左) 和 Flutter 中的内边距和背景</p>
+</blockquote>
+<p><strong>Flutter 2 和空安全机制</strong></p>
+<p>正是有了上述布局功能，才能成就响应式更强的 UI，也增强了 Flutter 2 对桌面设备和 web 等平台的支持。</p>
+<p>Flutter 2 还引入了健全的空安全机制 ，这一语言特性可帮助开发者先行捕捉不可为空的变量却为空的问题，避免其在应用中引发问题。XD to Flutter 2.0 版包含一个新设置 "Export Null Safe Code" (导出空安全代码)；导出时选中该设置，可确保生成的代码未来可用。</p>
+<p><img src="https://devrel.andfun.cn/devrel/posts/2021/05/mEFck0.png" alt="" loading="lazy"></p>
+<blockquote>
+<p>"Export Null Safe Code" 设置和输出</p>
+</blockquote>
+<p><strong>听起来不错啊！怎样开始使用？</strong></p>
+<p>无论您是要使用它来复制某个构思精妙的渐变效果的代码，还是要导出完全响应式、参数化、交互式的 Widget，都非常简单，不过是加入到成千上万已经在使用 XD to Flutter 插件的创意专业人才大军而已。</p>
+<p>您只需从 Adobe XD 的 "Plugin" (插件) 菜单选择 "Browse Plugins…" (浏览插件)，然后搜索 "Flutter" (奇怪的是，搜索 "XD to Flutter" 不起作用)，或前往 <a href="https://adobe.com/go/xd_to_flutter" target="_blank">adobe.com/go/xd_to_flutter</a>，即可安装此插件。</p>
+<p><img src="https://devrel.andfun.cn/devrel/posts/2021/05/r9kl7p.png" alt="" loading="lazy"></p>
+<p>安装好后，从插件面板中打开 XD to Flutter 面板，点按 "Need help" (需要帮助？) 链接，可查阅 <a href="https://github.com/AdobeXD/xd-to-flutter-plugin/blob/master/README.md" target="_blank">plugin documentation</a> (插件帮助文档)。</p>
+<p>我们一直专注于打造可在任何平台上实际运行的精美应用，Flutter 2 就是我们在这一框架上迈出的可喜一步。<a href="https://gskinner.com/" target="_blank">gskinner</a> 的各团队非常开心能够与 Adobe 和 Google 合作，共同确保 XD to Flutter 进一步简化将设计转换成可运行产品的过程。</p>
+
+</div>
+<div id="MySignature"></div>
+<div class="clear"></div>
+<div id="blog_post_info_block">
+    <div id="blog_post_info"></div>
+    <div class="clear"></div>
+    <div id="post_next_prev"></div>
+</div>
+        </div>
+        <p class="postfoot">
+            posted on 
+<span id="post-date">2021-05-14 12:04</span>&nbsp;
+<a href="https://www.cnblogs.com/flutterdev/">Flutter社区</a>&nbsp;
+阅读(<span id="post_view_count">0</span>)&nbsp;
+评论(<span id="post_comment_count">0</span>)&nbsp;
+<a href="https://i.cnblogs.com/EditPosts.aspx?postid=14768033" rel="nofollow">编辑</a>&nbsp;
+<a href="javascript:void(0)" onclick="AddToWz(14768033);return false;">收藏</a>
+        </p>
+    </div>
+</div>
+
+<script src="https://common.cnblogs.com/highlight/10.3.1/highlight.min.js"></script>
+<script>markdown_highlight();</script>
+<script>
+    var allowComments = true, cb_blogId = 533908, cb_blogApp = 'flutterdev', cb_blogUserGuid = '11b1e88b-6541-4a8d-edf2-08d7006bad27';
+    var cb_entryId = 14768033, cb_entryCreatedDate = '2021-05-14 12:04', cb_postType = 1;
+    updatePostStats(
+        [cb_entryId],
+        function(id, count) { $("#post_view_count").text(count) },
+        function(id, count) { $("#post_comment_count").text(count) })
+    zoomManager.apply("#cnblogs_post_body img:not(.code_img_closed):not(.code_img_opened)");
+</script>
+<a name="!comments"></a>
+<div id="blog-comments-placeholder"></div>
+<div id="comment_form" class="commentform">
+    <a name="commentform"></a>
+    <div id="divCommentShow"></div>
+    <div id="comment_nav"><span id="span_refresh_tips"></span><a href="javascript:void(0);" onclick="return RefreshCommentList();" id="lnk_RefreshComments" runat="server" clientidmode="Static">刷新评论</a><a href="#" onclick="return RefreshPage();">刷新页面</a><a href="#top">返回顶部</a></div>
+    <div id="comment_form_container"></div>
+    <div class="ad_text_commentbox" id="ad_text_under_commentbox"></div>
+    <div id="ad_t2"></div>
+    <div id="opt_under_post"></div>
+    <div id="cnblogs_c1" class="under-post-card">
+        <div id='div-gpt-ad-1592365906576-0' style='width: 300px; height: 250px;'></div>
+    </div>
+    <div id="under_post_card1"></div>
+    <div id="cnblogs_c2" class="under-post-card">
+        <div id='div-gpt-ad-1592366332455-0' style='width: 468px; height: 60px;'></div>
+    </div>
+    <div id="under_post_card2"></div>
+    <div id="HistoryToday" class="under-post-card"></div>
+    <script type="text/javascript">
+       var commentManager = new blogCommentManager();
+       commentManager.renderComments(0);
+       fixPostBody();
+       deliverBigBanner();
+setTimeout(function() { incrementViewCount(cb_entryId); }, 50);       deliverT2();
+       deliverC1C2();
+       loadNewsAndKb();
+       loadBlogSignature();
+LoadPostCategoriesTags(cb_blogId, cb_entryId);       LoadPostInfoBlock(cb_blogId, cb_entryId, cb_blogApp, cb_blogUserGuid);
+       GetPrevNextPost(cb_entryId, cb_blogId, cb_entryCreatedDate, cb_postType);
+       loadOptUnderPost();
+       GetHistoryToday(cb_blogId, cb_blogApp, cb_entryCreatedDate);
+    </script>
+</div>
+
+
+
+</div>
+</div>
+<div id="leftmenu">
+
+
+<h3>导航</h3>
+<ul>
+    <li>
+        <a id="blog_nav_sitehome" class="menu" href="https://www.cnblogs.com/">
+博客园</a>
+
+    </li>
+    <li>
+        
+<a id="blog_nav_myhome" class="menu" href="https://www.cnblogs.com/flutterdev/">
+首页</a>
+
+    </li>
+    <li>
+        
+
+<a id="blog_nav_newpost" class="menu" href="https://i.cnblogs.com/EditPosts.aspx?opt=1">
+新随笔</a>
+
+    </li>
+    <li>
+        
+<a id="blog_nav_contact" class="menu" href="https://msg.cnblogs.com/send/Flutter%E7%A4%BE%E5%8C%BA">
+联系</a>
+    </li>
+    <li>
+        
+<a id="blog_nav_rss" class="menu" href="javascript:void(0)" data-rss="https://www.cnblogs.com/flutterdev/rss/">
+订阅</a>
+        
+<a id="blog_nav_rss_image" href="https://www.cnblogs.com/flutterdev/rss/">
+    <img src="/skins/anothereon001/images/xml.gif" alt="订阅" />
+</a>
+    </li>
+    <li>
+        
+<a id="blog_nav_admin" class="menu" href="https://i.cnblogs.com/">
+管理</a>
+
+    </li>
+</ul>
+
+
+<div id="blog-calendar" style="display:none"></div><script>loadBlogDefaultCalendar();</script>
+<div id="sidebar_news" class="newsItem">
+            <script>loadBlogNews();</script>
+</div>
+<div id="sidebar_c3"></div>
+<div id="blog-sidecolumn"></div>
+                    <script>loadBlogSideColumn();</script>
+
+</div>
+</div>
+<div class="clear"></div>
+<div id="footer">
+<p id="footer">
+	Powered by: 
+	<br />
+	
+	<a href="https://www.cnblogs.com/" id="footer_site_link">博客园</a>
+	<br />
+	Copyright &copy; 2021 Flutter社区
+<br /><span id="poweredby">Powered by .NET 5.0 on Kubernetes</span>
+
+</p>
+
+
+</div>
+</div>
+
+
+    
+
+    <input type="hidden" id="antiforgery_token" value="CfDJ8L-rpLgFVEJMgssCVvNUAju3i0wFMKJTLhcUyOvpNl3Qn--622QtURMNz_RUyP2x17adju67KsTGsEucJjGi7TO3B8gFSK4t66j8rBtLDspSdRroDkzDP-YdWZYb_3TJWpMMTe8Xr_FJonwIxFI0jLE" />
+</body>
+</html>

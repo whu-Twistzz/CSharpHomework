@@ -1,0 +1,339 @@
+﻿<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="referrer" content="origin-when-crossorigin" />
+    <meta name="description" content="关于低代码平台，之前我也推送过两篇相关的文章，我的观点很简单：东西是好的，有它所擅长和适用的领域，但软件产品不存在银弹，低代码平台一样如此！ 现在在搜索引擎上搜“低代码”这样的关键词，你会看到很多夸张" />
+    <meta property="og:description" content="关于低代码平台，之前我也推送过两篇相关的文章，我的观点很简单：东西是好的，有它所擅长和适用的领域，但软件产品不存在银弹，低代码平台一样如此！ 现在在搜索引擎上搜“低代码”这样的关键词，你会看到很多夸张" />
+    <meta http-equiv="Cache-Control" content="no-transform" />
+    <meta http-equiv="Cache-Control" content="no-siteapp" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>低代码平台如何一步步摧毁开发团队的效率与创新！ - 程序猿DD - 博客园</title>
+    <link id="favicon" rel="shortcut icon" href="//common.cnblogs.com/favicon.svg" type="image/svg+xml" />
+    
+    <link rel="stylesheet" href="/css/blog-common.min.css?v=zS6-e1bxywlu3kpHvpr1J6MySwya3ztFtEnS7RYQ0Fk" />
+    <link id="MainCss" rel="stylesheet" href="/skins/simplememory/bundle-simplememory.min.css?v=uknaX_hejnSu-njQgx4Hj1R0JiPLwUhFPUlwWNmWyB4" />
+    
+    <link id="mobile-style" media="only screen and (max-width: 767px)" type="text/css" rel="stylesheet" href="/skins/SimpleMemory/bundle-SimpleMemory-mobile.min.css" />
+    
+    <link type="application/rss+xml" rel="alternate" href="https://www.cnblogs.com/didispace/rss" />
+    <link type="application/rsd+xml" rel="EditURI" href="https://www.cnblogs.com/didispace/rsd.xml" />
+    <link type="application/wlwmanifest+xml" rel="wlwmanifest" href="https://www.cnblogs.com/didispace/wlwmanifest.xml" />
+    <script>
+        var currentBlogId = 426593;
+        var currentBlogApp = 'didispace';
+        var cb_enable_mathjax = false;
+        var isLogined = false;
+        var isBlogOwner = false;
+        var skinName = 'SimpleMemory';
+        var visitorUserId = '';
+    </script>
+        <script>
+            var currentPostDateAdded = '2021-05-14 10:26';
+        </script>
+    <script src="https://common.cnblogs.com/scripts/jquery-2.2.0.min.js"></script>
+    <script src="/js/blog-common.min.js?v=2Mic1VLeHXarpdzASbXqFMIMVLEBiWXNO5yiTHUcmhw"></script>
+    
+    
+    
+</head>
+<body class="has-navbar">
+    <a name="top"></a>
+    <div id="top_nav" class="navbar forpc">
+        <nav id="nav_main" class="navbar-main">
+            <ul id="nav_left" class="navbar-list navbar-left">
+                <li class="navbar-branding"><a href="https://www.cnblogs.com/" title="开发者的网上家园"><img src="/images/logo.svg?v=R9M0WmLAIPVydmdzE2keuvnjl-bPR7_35oHqtiBzGsM" alt="博客园Logo" /></a></li>
+                <li><a href="/" onclick="ga('send', 'event', 'Link', 'click', 'skin-navbar-sitehome')">首页</a></li>
+                <li><a href="https://news.cnblogs.com/" onclick="ga('send', 'event', 'Link', 'click', 'skin-navbar-news')">新闻</a></li>
+                <li><a href="https://q.cnblogs.com/" onclick="ga('send', 'event', 'Link', 'click', 'skin-navbar-q')">博问</a></li>
+                <li><a id="nav_brandzone" href="https://brands.cnblogs.com/" onclick="ga('send', 'event', 'Link', 'click', 'skin-navbar-brands')">专区</a></li>
+                <li><a href="https://ing.cnblogs.com/" onclick="ga('send', 'event', 'Link', 'click', 'skin-navbar-ing')">闪存</a></li>
+                <li><a href="https://edu.cnblogs.com/" onclick="ga('send', 'event', 'Link', 'click', 'skin-navbar-edu')">班级</a></li>
+            </ul>
+            <ul id="nav_right" class="navbar-list navbar-right">
+                <li>
+                    <form id="zzk_search" class="navbar-search" action="https://zzk.cnblogs.com/s" method="get">
+                        <input name="w" id="zzk_search_input" placeholder="代码改变世界" type="text" tabindex="3" />
+                        <button type="submit" id="zzk_search_button">
+                            <img src="/images/aggsite/search.svg" alt="搜索" />
+                        </button>
+                    </form>
+                </li>
+                <li id="navbar_login_status" class="navbar-list">
+                    <a class="navbar-user-info navbar-blog" href="https://i.cnblogs.com/EditPosts.aspx?opt=1" alt="写随笔" title="写随笔">
+                        <img id="new_post_icon" class="navbar-icon" src="/images/aggsite/newpost.svg" alt="写随笔" />
+                    </a>
+                    <a id="navblog-myblog-icon" class="navbar-user-info navbar-blog" href="https://passport.cnblogs.com/GetBlogApplyStatus.aspx" alt="我的博客" title="我的博客">
+                        <img id="myblog_icon" class="navbar-icon" src="/images/aggsite/myblog.svg" alt="我的博客" />
+                    </a>
+                    <a class="navbar-user-info navbar-message navbar-icon-wrapper" href="https://msg.cnblogs.com/" alt="短消息" title="短消息">
+                        <img id="msg_icon" class="navbar-icon" src="/images/aggsite/message.svg?v=J0WS2P2iPgaIVgXxcAhliw4AFZIpaTWxtdoNAv9eiCA" alt="短消息" />
+                        <span id="msg_count" style="display: none"></span>
+                    </a>
+                    <div id="user_info" class="navbar-user-info dropdown">
+                        <a class="dropdown-button" href="https://home.cnblogs.com/">
+                            <img id="user_icon" class="navbar-avatar" src="/images/aggsite/avatar-default.svg" alt="用户头像" />
+                        </a>
+                        <div class="dropdown-menu">
+                            <a id="navblog-myblog-text" href="https://passport.cnblogs.com/GetBlogApplyStatus.aspx">我的博客</a>
+                            <a href="https://home.cnblogs.com/">我的园子</a>
+                            <a href="https://account.cnblogs.com/settings/account">账号设置</a>
+                            <a href="javascript:void(0)" id="navbar_lite_mode_toggle" title="简洁模式会使用简洁款皮肤显示所有博客">
+    简洁模式 <img id="navbar_lite_mode_on" src="/images/lite-mode-check.svg" class="hide" /><span id="navbar_lite_mode_spinner" class="hide">...</span>
+</a>
+                            <a href="javascript:void(0)" onclick="account.logout();">退出登录</a>
+                        </div>
+                    </div>
+                    <a class="navbar-anonymous" href="https://account.cnblogs.com/signup/">注册</a>
+                    <a class="navbar-anonymous" href="javascript:void(0);" onclick="account.login()">登录</a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+
+    
+    <!--done-->
+<div id="home">
+<div id="header">
+	<div id="blogTitle">
+        <a id="lnkBlogLogo" href="https://www.cnblogs.com/didispace/"><img id="blogLogo" src="/skins/custom/images/logo.gif" alt="返回主页" /></a>		
+		
+<!--done-->
+<h1><a id="Header1_HeaderTitle" class="headermaintitle HeaderMainTitle" href="https://www.cnblogs.com/didispace/">程序猿DD</a>
+</h1>
+<h2>Spring Boot | Spring Cloud | 干货分享</h2>
+
+
+
+
+		
+	</div><!--end: blogTitle 博客的标题和副标题 -->
+	<div id="navigator">
+		
+<ul id="navList">
+<li><a id="blog_nav_sitehome" class="menu" href="https://www.cnblogs.com/">
+博客园</a>
+</li>
+<li>
+<a id="blog_nav_myhome" class="menu" href="https://www.cnblogs.com/didispace/">
+首页</a>
+</li>
+<li>
+
+<a id="blog_nav_newpost" class="menu" href="https://i.cnblogs.com/EditPosts.aspx?opt=1">
+新随笔</a>
+</li>
+<li>
+<a id="blog_nav_contact" class="menu" href="https://msg.cnblogs.com/send/%E7%A8%8B%E5%BA%8F%E7%8C%BFDD">
+联系</a></li>
+<li>
+<a id="blog_nav_rss" class="menu" href="javascript:void(0)" data-rss="https://www.cnblogs.com/didispace/rss/">
+订阅</a>
+<!--<partial name="./Shared/_XmlLink.cshtml" model="Model" /></li>--></li>
+<li>
+<a id="blog_nav_admin" class="menu" href="https://i.cnblogs.com/">
+管理</a>
+</li>
+</ul>
+
+
+		<div class="blogStats">
+			<div id="blog_stats_place_holder"><script>loadBlogStats();</script></div>
+		</div><!--end: blogStats -->
+	</div><!--end: navigator 博客导航栏 -->
+</div><!--end: header 头部 -->
+<div id="main">
+	<div id="mainContent">
+	<div class="forFlow">
+		<div id="post_detail">
+    <!--done-->
+    <div id="topics">
+        <div class="post">
+            <h1 class = "postTitle">
+                
+<a id="cb_post_title_url" class="postTitle2 vertical-middle" href="https://www.cnblogs.com/didispace/p/14767494.html">
+    <span>低代码平台如何一步步摧毁开发团队的效率与创新！</span>
+    
+
+
+
+</a>
+
+            </h1>
+            <div class="clear"></div>
+            <div class="postBody">
+                <div id="cnblogs_post_body" class="blogpost-body cnblogs-markdown">
+<p>关于低代码平台，之前我也推送过两篇相关的文章，我的观点很简单：东西是好的，有它所擅长和适用的领域，但软件产品不存在银弹，低代码平台一样如此！</p>
+<p>现在在搜索引擎上搜“低代码”这样的关键词，你会看到很多夸张的标题，比如：</p>
+<ul>
+<li>“人人都是产品经理”之后，“人人都是程序员”的时代要来了？</li>
+<li>阿里、腾讯都在押注的新赛道，能让程序员告别脱发和996吗？</li>
+<li>还有诸多低代码平台的公司拿到各种融资或地区性政府补贴的新闻</li>
+</ul>
+<p>甚至我还在福报长的抖音账号中，看到了程序员下午坐在外面喝咖啡，说有了低代码，现在大把时间休息的短视频。。。</p>
+<p>低代码平台真的这么神奇？我们在企业数字化转型过程中的开发任务都可以用低代码平台来解决吗？我们开发者996的宿命就这样被搞定了？</p>
+<p>如果你正对低代码平台抱有上面幻想的话，一定要好好看看下面的内容！</p>
+<p>先表明观点：如果你试图使用低代码平台去解决所有开发问题的时候，很有可能这样的决定将在2-3年之后带来巨大的灾难！</p>
+<p>为什么这样说呢？下面结合我们10年前的实践，给大家说道说道！</p>
+<h2 id="伪新技术">伪新技术</h2>
+<p>你没看错，是结合10年前的实践！所以，低代码平台并不是什么新概念，我们10年前就玩过了！</p>
+<p>记得以前在宇宙行的时候，就有一阵推行过一套开发平台，里面也是提倡大家用拖拽的方式去实现各项业务功能。</p>
+<p>领导们也都非常推崇，希望通过这套平台的使用，对开发效率带来革命性的变化。</p>
+<p>当然当时的平台，与如今的低代码平台还是有一些差距，目前所见的平台会更加完善（界面好看了，控件也多了），但从一名从业十多年的开发人员角度去看，并没有质的进步，这样的程度距离淘汰开发者还有很长的路要走。</p>
+<h2 id="效率毒药">效率毒药</h2>
+<p>低代码平台是效率毒药！</p>
+<p>按照各种产品的宣传来看，低代码平台的目标是要解放我们，让我们更快的开发产品，那为什么说低代码平台是效率毒药呢？宣传是骗人的吗？</p>
+<p>宣传并没有骗人，当我们实际去使用的时候，你会发现，开发一些简单应用的时候，确实会快很多！</p>
+<p>同时，在我们过去的实践过程中，开始时候的效率是可以的！这取决于两方面的功劳：</p>
+<ol>
+<li>小范围的试错</li>
+<li>简单应用的先行</li>
+</ol>
+<p>但随着推广的铺开，也逐步的会面临这几个问题：</p>
+<ol>
+<li>平台支持成了瓶颈：大量使用问题、各种平台报错都堆积到低代码平台的负责团队。对于平台的人员支持，不可能给每个业务系统都配置一个支持人员吧？所以当应用面一旦扩撒，平台支持团队很快会成为整个系统内的效率瓶颈。</li>
+<li>扯皮问题开始增多：当出了线上事故开始定则的时候，原本系统之间可能会存在扯皮，但有了低代码平台之后，系统内的实现也多了一个扯皮方向。到底是组件Bug还是使用问题？使用问题的话，文档写清楚这种特殊情况不行了吗？这种新扯皮姿势的出现，阻碍了解决问题的效率。</li>
+</ol>
+<p>之所以说低代码平台是效率毒药，因为在一开始的时候，你是感觉不到的，只有在逐步深化应用，全面推行的时候，它的毒性就开始发作了！</p>
+<h2 id="创新毒药">创新毒药</h2>
+<p>低代码平台是创新毒药！</p>
+<p>关于创新，第一点弊端，你一定会想到，就是固化组件的问题，让所有的实现都千篇一律。</p>
+<p>但这个在如今的低代码平台上，其实有好的解决方案，那就是各种自定义实现。</p>
+<p>既然用平台是为了让业务开发更专注业务，同时在使用低代码平台之后，这样的组件创新任务，往往又都回到了平台侧的支持上。</p>
+<p>于是，最经典的一幕就出现了：</p>
+<p>产品经理：这个功能，我们想这样...这样...再这样...可以不？<br>
+开发人员：平台没这个模块，实现不了<br>
+...<br>
+产品经理：平台能做个模块支持下吗？<br>
+低代码平台：这个需求，我们下个版本可以考虑下<br>
+产品经理：下个版本什么时候？<br>
+低代码平台：半年后...要么你先用xxx组件 + yyy组件这样...那样...最后...先凑合一下？<br>
+产品经理：...</p>
+<p>这是当时很真实且频繁出现的场景！业务总是千变万化的，然而平台的新功能总是滞后的，作为业务开发，必须通过平台实现，很多时候因为缺乏灵活性，让开发失去了原有的创新能力。同时，也成了开发人员拒绝业务需求的神兵利器。</p>
+<p>记得在那个时期，基本上所有的项目都是差不多的样子...毫无新意可言，这怎么会促进业务创新呢？这样的平台几乎成为了创新的毒药！</p>
+<h2 id="摆正姿态">摆正姿态</h2>
+<p>为什么效率、创新这些低代码平台原本所要追求的愿景最终会成为毒药，给团队带来负面影响呢？</p>
+<p>这里固然有销售方的过渡吹嘘，就如前几年阿里中台的乱吹乱用，让不少买单企业骂娘！但作为引入这类平台的管理者来说，也有不可推卸的责任。</p>
+<p>根据过去的负面经历，不妨思考一下：为什么推荐给开发人员会出现那么多反面的效果？</p>
+<p>我认为造成这个核心问题还是由于平台提供能力与使用人员能力的不匹配所造成的。</p>
+<p>回想一下低代码平台的目标是什么？</p>
+<ul>
+<li>上手速度快</li>
+<li>开发效率高</li>
+<li>研发成本低</li>
+<li>部署时间短</li>
+<li>维护成本低</li>
+</ul>
+<p>综合起来就是：有效提高团队效率。但到底是提高什么团队的效率呢？既然推向开发团队，受到如此多的白眼，那么推向产品侧？运营侧？是否可行呢？</p>
+<p>试想一下，低代码平台的目标是要降低了上手门槛，那么对于开发人员而言，他好不容易具备了门槛知识，突然又用低代码平台来给他用，然后告诉他，你之前的开发方式不用了，可以花更多精力专注于业务的思考了。是不是这样的目标就很奇特呢？从原本更灵活的开发手段，到使用低代码平台的限制方式，不是浪费了原有开发人员所具备的更灵活的开发能力？然后还要开发人员专注去学习业务？那么学习业务的效率和准确度能有保证吗？是不是有种好不容易招了批练武奇才，学会了九阴白骨爪，然后给发了副手套，去挠痒痒么？这是不是一种<strong>人才的降级使用</strong>呢？</p>
+<p>再换个角度想想，如果低代码平台推向产品侧呢？本身他们有更专业的业务背景，然后依靠低代码平台，拖拖拽拽就能完成一套业务系统的开发，这样的使用方式，似乎更配得上低代码平台降低上手门槛的目标？因为没有占用开发人员的资源，因此也为公司极大的降低了研发成本？大大提高了业务系统的开发效率？而开发团队更应该去做的是低代码平台无法做到的那些更具有创新意义，或更具备挑战的开发任务，不是吗？</p>
+<p>似乎把低代码平台推向产品侧会得到很好的效果？愿景很美好，但现实也是很骨感的！最近，我就尝试着给几位产品经理朋友，搞了一些小合作，因为正好公司运作也需要一些工具，然后推荐了几个低代码平台让他们去尝试，但结果并不完全令人满意，不过似乎我也从中得到了一些新的启示！</p>
+<p>我发现，如果产品经理拥有一些开发背景、学过编程、或是软件专业毕业的话，在使用低代码平台的时候，效果就尤为突出。也许是因为他们的知识背景<strong>具备一定软件开发的思维模式</strong>，结合对业务的理解，所以对于低代码平台的应用就更为友好！</p>
+<p>所以，对于低代码平台，好东西是无可厚非的，但使用姿势一定要正确！<strong>任何东西只有用对了地方，才能成为神器！放错位置的神器，有时候连垃圾都不如</strong>。</p>
+<p>那么你觉得低代码平台如何呢？你们的使用姿势是怎么样的？有没有不舒服的地方呢？留言说说你的想法吧！如果你想与更多有趣的灵魂碰撞，也可以加入我们的<a href="https://mp.weixin.qq.com/s/h2Z1Pf4OJy-Jat1fy-U-7g" target="_blank">技术交流群</a>一起探讨我们的技术人生！</p>
+<blockquote>
+<p>欢迎关注我的公众号：程序猿DD，分享外面看不到的干货与思考！</p>
+</blockquote>
+
+</div>
+<div id="MySignature"></div>
+<div class="clear"></div>
+<div id="blog_post_info_block">
+    <div id="blog_post_info"></div>
+    <div class="clear"></div>
+    <div id="post_next_prev"></div>
+</div>
+            </div>
+            <div class="postDesc">posted @ 
+<span id="post-date">2021-05-14 10:26</span>&nbsp;
+<a href="https://www.cnblogs.com/didispace/">程序猿DD</a>&nbsp;
+阅读(<span id="post_view_count">6</span>)&nbsp;
+评论(<span id="post_comment_count">0</span>)&nbsp;
+<a href="https://i.cnblogs.com/EditPosts.aspx?postid=14767494" rel="nofollow">编辑</a>&nbsp;
+<a href="javascript:void(0)" onclick="AddToWz(14767494);return false;">收藏</a></div>
+        </div>
+	    
+	    
+    </div><!--end: topics 文章、评论容器-->
+</div>
+<script src="https://common.cnblogs.com/highlight/10.3.1/highlight.min.js"></script>
+<script>markdown_highlight();</script>
+<script>
+    var allowComments = true, cb_blogId = 426593, cb_blogApp = 'didispace', cb_blogUserGuid = 'bfda589c-d1c9-e311-8d02-90b11c0b17d6';
+    var cb_entryId = 14767494, cb_entryCreatedDate = '2021-05-14 10:26', cb_postType = 1;
+    updatePostStats(
+        [cb_entryId],
+        function(id, count) { $("#post_view_count").text(count) },
+        function(id, count) { $("#post_comment_count").text(count) })
+    zoomManager.apply("#cnblogs_post_body img:not(.code_img_closed):not(.code_img_opened)");
+</script>
+<a name="!comments"></a>
+<div id="blog-comments-placeholder"></div>
+<div id="comment_form" class="commentform">
+    <a name="commentform"></a>
+    <div id="divCommentShow"></div>
+    <div id="comment_nav"><span id="span_refresh_tips"></span><a href="javascript:void(0);" onclick="return RefreshCommentList();" id="lnk_RefreshComments" runat="server" clientidmode="Static">刷新评论</a><a href="#" onclick="return RefreshPage();">刷新页面</a><a href="#top">返回顶部</a></div>
+    <div id="comment_form_container"></div>
+    <div class="ad_text_commentbox" id="ad_text_under_commentbox"></div>
+    <div id="ad_t2"></div>
+    <div id="opt_under_post"></div>
+    <div id="cnblogs_c1" class="under-post-card">
+        <div id='div-gpt-ad-1592365906576-0' style='width: 300px; height: 250px;'></div>
+    </div>
+    <div id="under_post_card1"></div>
+    <div id="cnblogs_c2" class="under-post-card">
+        <div id='div-gpt-ad-1592366332455-0' style='width: 468px; height: 60px;'></div>
+    </div>
+    <div id="under_post_card2"></div>
+    <div id="HistoryToday" class="under-post-card"></div>
+    <script type="text/javascript">
+       var commentManager = new blogCommentManager();
+       commentManager.renderComments(0);
+       fixPostBody();
+       deliverBigBanner();
+setTimeout(function() { incrementViewCount(cb_entryId); }, 50);       deliverT2();
+       deliverC1C2();
+       loadNewsAndKb();
+       loadBlogSignature();
+LoadPostCategoriesTags(cb_blogId, cb_entryId);       LoadPostInfoBlock(cb_blogId, cb_entryId, cb_blogApp, cb_blogUserGuid);
+       GetPrevNextPost(cb_entryId, cb_blogId, cb_entryCreatedDate, cb_postType);
+       loadOptUnderPost();
+       GetHistoryToday(cb_blogId, cb_blogApp, cb_entryCreatedDate);
+    </script>
+</div>
+
+	</div><!--end: forFlow -->
+	</div><!--end: mainContent 主体内容容器-->
+	<div id="sideBar">
+		<div id="sideBarMain">
+			<div id="sidebar_news" class="newsItem">
+            <script>loadBlogNews();</script>
+</div>
+<div id="sidebar_c3"></div>
+			<div id="blog-calendar" style="display:none"></div><script>loadBlogDefaultCalendar();</script>			
+			<div id="leftcontentcontainer">
+				<div id="blog-sidecolumn"></div>
+                    <script>loadBlogSideColumn();</script>
+			</div>			
+		</div><!--end: sideBarMain -->
+	</div><!--end: sideBar 侧边栏容器 -->
+	<div class="clear"></div>
+	</div><!--end: main -->
+	<div class="clear"></div>
+	<div id="footer">
+		<!--done-->
+Copyright &copy; 2021 程序猿DD
+<br /><span id="poweredby">Powered by .NET 5.0 on Kubernetes</span>
+
+
+
+	</div><!--end: footer -->
+</div><!--end: home 自定义的最大容器 -->
+
+
+    
+
+    <input type="hidden" id="antiforgery_token" value="CfDJ8L-rpLgFVEJMgssCVvNUAjsqF0yOnWWtpchlZH747VR9mMN_M_FISXLTc23bXA84BY35RszafjNBpeM6jop6EshdT9UR_ugtiLlJrL1g6sPfxSmlHLOUB59v4kFn0V07igYJQS83lAwhT0QjxzUKBmo" />
+</body>
+</html>

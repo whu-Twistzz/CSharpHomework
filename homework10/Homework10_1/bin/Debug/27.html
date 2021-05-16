@@ -1,0 +1,463 @@
+﻿<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="referrer" content="origin-when-crossorigin" />
+    <meta name="description" content="Redis 节点分别维护自己负责的槽和对应的数据。伸缩原理：Redis 槽和对应数据在不同节点之间移动 环境：CentOS7 搭建 Redis 集群 一、集群扩容 1. 手动扩容 (1) 准备节点 9" />
+    <meta property="og:description" content="Redis 节点分别维护自己负责的槽和对应的数据。伸缩原理：Redis 槽和对应数据在不同节点之间移动 环境：CentOS7 搭建 Redis 集群 一、集群扩容 1. 手动扩容 (1) 准备节点 9" />
+    <meta http-equiv="Cache-Control" content="no-transform" />
+    <meta http-equiv="Cache-Control" content="no-siteapp" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Redis 集群伸缩原理 - LB477 - 博客园</title>
+    <link id="favicon" rel="shortcut icon" href="//common.cnblogs.com/favicon.svg" type="image/svg+xml" />
+    
+    <link rel="stylesheet" href="/css/blog-common.min.css?v=zS6-e1bxywlu3kpHvpr1J6MySwya3ztFtEnS7RYQ0Fk" />
+    
+    <link type="text/css" rel="stylesheet" href="https://www.cnblogs.com/lb477/custom.css?v=ZmEXQV8AidrHOD&#x2B;5SzYdKlaVjEc=" />
+    <link id="mobile-style" media="only screen and (max-width: 767px)" type="text/css" rel="stylesheet" href="/skins/custom/bundle-custom-mobile.min.css?v=OayYBbtUbH4FYkn_bTL4VVf4DsEOiTHSWhbl11KyY6Y" />
+    
+    <link type="application/rss+xml" rel="alternate" href="https://www.cnblogs.com/lb477/rss" />
+    <link type="application/rsd+xml" rel="EditURI" href="https://www.cnblogs.com/lb477/rsd.xml" />
+    <link type="application/wlwmanifest+xml" rel="wlwmanifest" href="https://www.cnblogs.com/lb477/wlwmanifest.xml" />
+    <script>
+        var currentBlogId = 495396;
+        var currentBlogApp = 'lb477';
+        var cb_enable_mathjax = false;
+        var isLogined = false;
+        var isBlogOwner = false;
+        var skinName = 'Custom';
+        var visitorUserId = '';
+    </script>
+        <script>
+            var currentPostDateAdded = '2021-05-14 11:05';
+        </script>
+    <script src="https://common.cnblogs.com/scripts/jquery-2.2.0.min.js"></script>
+    <script src="/js/blog-common.min.js?v=2Mic1VLeHXarpdzASbXqFMIMVLEBiWXNO5yiTHUcmhw"></script>
+    
+    
+    
+</head>
+<body class="no-navbar">
+    <a name="top"></a>
+    <div id="top_nav" class="navbar forpc navbar-custom">
+        <nav id="nav_main" class="navbar-main">
+            <ul id="nav_left" class="navbar-list navbar-left">
+                <li class="navbar-branding"><a href="https://www.cnblogs.com/" title="开发者的网上家园"><img src="/images/logo.svg?v=R9M0WmLAIPVydmdzE2keuvnjl-bPR7_35oHqtiBzGsM" alt="博客园Logo" /></a></li>
+                <li><a href="/" onclick="ga('send', 'event', 'Link', 'click', 'skin-navbar-sitehome')">首页</a></li>
+                <li><a href="https://news.cnblogs.com/" onclick="ga('send', 'event', 'Link', 'click', 'skin-navbar-news')">新闻</a></li>
+                <li><a href="https://q.cnblogs.com/" onclick="ga('send', 'event', 'Link', 'click', 'skin-navbar-q')">博问</a></li>
+                <li><a id="nav_brandzone" href="https://brands.cnblogs.com/" onclick="ga('send', 'event', 'Link', 'click', 'skin-navbar-brands')">专区</a></li>
+                <li><a href="https://ing.cnblogs.com/" onclick="ga('send', 'event', 'Link', 'click', 'skin-navbar-ing')">闪存</a></li>
+                <li><a href="https://edu.cnblogs.com/" onclick="ga('send', 'event', 'Link', 'click', 'skin-navbar-edu')">班级</a></li>
+            </ul>
+            <ul id="nav_right" class="navbar-list navbar-right">
+                <li>
+                    <form id="zzk_search" class="navbar-search" action="https://zzk.cnblogs.com/s" method="get">
+                        <input name="w" id="zzk_search_input" placeholder="代码改变世界" type="text" tabindex="3" />
+                        <button type="submit" id="zzk_search_button">
+                            <img src="/images/aggsite/search.svg" alt="搜索" />
+                        </button>
+                    </form>
+                </li>
+                <li id="navbar_login_status" class="navbar-list">
+                    <a class="navbar-user-info navbar-blog" href="https://i.cnblogs.com/EditPosts.aspx?opt=1" alt="写随笔" title="写随笔">
+                        <img id="new_post_icon" class="navbar-icon" src="/images/aggsite/newpost.svg" alt="写随笔" />
+                    </a>
+                    <a id="navblog-myblog-icon" class="navbar-user-info navbar-blog" href="https://passport.cnblogs.com/GetBlogApplyStatus.aspx" alt="我的博客" title="我的博客">
+                        <img id="myblog_icon" class="navbar-icon" src="/images/aggsite/myblog.svg" alt="我的博客" />
+                    </a>
+                    <a class="navbar-user-info navbar-message navbar-icon-wrapper" href="https://msg.cnblogs.com/" alt="短消息" title="短消息">
+                        <img id="msg_icon" class="navbar-icon" src="/images/aggsite/message.svg?v=J0WS2P2iPgaIVgXxcAhliw4AFZIpaTWxtdoNAv9eiCA" alt="短消息" />
+                        <span id="msg_count" style="display: none"></span>
+                    </a>
+                    <div id="user_info" class="navbar-user-info dropdown">
+                        <a class="dropdown-button" href="https://home.cnblogs.com/">
+                            <img id="user_icon" class="navbar-avatar" src="/images/aggsite/avatar-default.svg" alt="用户头像" />
+                        </a>
+                        <div class="dropdown-menu">
+                            <a id="navblog-myblog-text" href="https://passport.cnblogs.com/GetBlogApplyStatus.aspx">我的博客</a>
+                            <a href="https://home.cnblogs.com/">我的园子</a>
+                            <a href="https://account.cnblogs.com/settings/account">账号设置</a>
+                            <a href="javascript:void(0)" id="navbar_lite_mode_toggle" title="简洁模式会使用简洁款皮肤显示所有博客">
+    简洁模式 <img id="navbar_lite_mode_on" src="/images/lite-mode-check.svg" class="hide" /><span id="navbar_lite_mode_spinner" class="hide">...</span>
+</a>
+                            <a href="javascript:void(0)" onclick="account.logout();">退出登录</a>
+                        </div>
+                    </div>
+                    <a class="navbar-anonymous" href="https://account.cnblogs.com/signup/">注册</a>
+                    <a class="navbar-anonymous" href="javascript:void(0);" onclick="account.login()">登录</a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+
+    <div id="page_begin_html">
+        <div class="dark-loading">
+  <div class="box">
+    <h2>Loading</h2>
+    <span></span><span></span><span></span><span></span><span></span><span></span><span></span>
+  </div>
+</div>
+    </div>
+    <!--done-->
+<div id="home">
+<div id="header">
+	<div id="blogTitle">
+        <a id="lnkBlogLogo" href="https://www.cnblogs.com/lb477/"><img id="blogLogo" src="/skins/custom/images/logo.gif" alt="返回主页" /></a>		
+		
+<!--done-->
+<h1><a id="Header1_HeaderTitle" class="headermaintitle HeaderMainTitle" href="https://www.cnblogs.com/lb477/">LB's Blog</a>
+</h1>
+<h2></h2>
+
+
+
+
+		
+	</div><!--end: blogTitle 博客的标题和副标题 -->
+	<div id="navigator">
+		
+<ul id="navList">
+<li>
+</li>
+<li>
+<a id="blog_nav_myhome" class="menu" href="https://www.cnblogs.com/lb477/">
+首页</a>
+</li>
+<li>
+
+
+</li>
+<li>
+</li>
+<li>
+<a id="blog_nav_rss" class="menu" href="javascript:void(0)" data-rss="https://www.cnblogs.com/lb477/rss/">
+订阅</a>
+<!--<partial name="./Shared/_XmlLink.cshtml" model="Model" /></li>--></li>
+<li>
+<a id="blog_nav_admin" class="menu" href="https://i.cnblogs.com/">
+管理</a>
+</li>
+</ul>
+
+
+		<div class="blogStats">
+			<div id="blog_stats_place_holder"><script>loadBlogStats();</script></div>
+		</div><!--end: blogStats -->
+	</div><!--end: navigator 博客导航栏 -->
+</div><!--end: header 头部 -->
+<div id="main">
+	<div id="mainContent">
+	<div class="forFlow">
+		<div id="post_detail">
+    <!--done-->
+    <div id="topics">
+        <div class="post">
+            <h1 class = "postTitle">
+                
+<a id="cb_post_title_url" class="postTitle2 vertical-middle" href="https://www.cnblogs.com/lb477/p/14767695.html">
+    <span>Redis 集群伸缩原理</span>
+    
+
+
+
+</a>
+
+            </h1>
+            <div class="clear"></div>
+            <div class="postBody">
+                <div id="cnblogs_post_body" class="blogpost-body cnblogs-markdown">
+<p>Redis 节点分别维护自己负责的槽和对应的数据。伸缩原理：<u>Redis 槽和对应数据在不同节点之间移动</u></p>
+<p>环境：<a href="https://www.cnblogs.com/lb477/p/14755475.html" target="_blank">CentOS7 搭建 Redis 集群</a></p>
+<h2 id="一、集群扩容">一、集群扩容</h2>
+<h3 id="1-手动扩容">1. 手动扩容</h3>
+<h4 id="1-准备节点-9007，并加入集群">(1) 准备节点 9007，并加入集群</h4>
+<pre><code class="language-bash">192.168.11.40:9001&gt; cluster meet 192.168.11.40 9007
+</code></pre>
+<p><strong>【注意】<u>若 cluster meet 加入已存在于其它集群的节点，会导致集群合并，造成数据错乱！</u></strong>。建议使用 redis-cli 的 add-node：</p>
+<pre><code class="language-bash"># 若节点已加入其它集群或包含数据，会报错
+add-node    new_host:new_port existing_host:existing_port
+            --cluster-slave  # 直接添加为从节点
+            --cluster-master-id &lt;arg&gt;  # 从节点对应的主节点id
+</code></pre>
+<h4 id="2-迁移槽和数据">(2) 迁移槽和数据</h4>
+<ul>
+<li><u>槽在迁移过程中集群可以正常提供读写服务</u></li>
+<li>首先确定原有节点的哪些槽需要迁移到新节点。确保每个节点负责相似数量的槽，保证各节点的数据均匀</li>
+<li><u>槽是 Redis 集群管理数据的基本单位</u>。数据迁移是<strong>逐槽进行</strong>的</li>
+</ul>
+<p>槽迁移流程：</p>
+<p><img src="https://img2020.cnblogs.com/blog/1614145/202105/1614145-20210514105604664-508974107.png" alt="槽迁移流程" loading="lazy"></p>
+<ul>
+<li>目标节点准备导入槽的数据：目标节点执行<code>cluster setslot {slot} importing {sourceNodeId}</code></li>
+<li>源节点准备迁出槽的数据：源节点执行<code>cluster setslot {slot} migrating {targetNodeId}</code></li>
+<li>获取 count 个属于槽 slot 的键：源节点执行<code>cluster getkeysinslot {slot} {count}</code></li>
+<li>迁移键：源节点执行<code>migrate {targetIp} {targetPort} "" 0 {timeout} keys {keys...}</code>，把键通过流水线（pipeline）机制批量迁移到目标节点。Redis3.0.6 后才支持批量迁移</li>
+<li>重复上两步，直到槽下所有的键值数据迁移到目标节点</li>
+<li>向集群所有主节点通知槽被分配给目标节点：集群内所有主节点执行<code>cluster setslot {slot} node {targetNodeId}</code></li>
+</ul>
+<p>内部伪代码：</p>
+<pre><code class="language-python">def move_slot(source,target,slot):
+    # 目标节点准备导入槽
+    target.cluster("setslot",slot,"importing",source.nodeId);
+    # 目标节点准备全出槽
+    source.cluster("setslot",slot,"migrating",target.nodeId);
+    while true :
+        # 批量从源节点获取键
+        keys = source.cluster("getkeysinslot",slot,pipeline_size);
+        if keys.length == 0:
+            # 键列表为空时，退出循环
+            break;
+        # 批量迁移键到目标节点
+        source.call("migrate",target.host,target.port,"",0,timeout,"keys",keys);
+        # 向集群所有主节点通知槽被分配给目标节点
+        for node in nodes:
+            if node.flag == "slave":
+                continue;
+            node.cluster("setslot",slot,"node",target.nodeId);
+</code></pre>
+<h4 id="3-将-9001-的槽-4096-迁移到-9007-中">(3) 将 9001 的槽 4096 迁移到 9007 中</h4>
+<p>准备数据</p>
+<pre><code class="language-bash">192.168.11.40:9001&gt; set key:test:5028 value:5028
+192.168.11.40:9001&gt; set key:test:68253 value:68253
+</code></pre>
+<p>目标节点准备工作</p>
+<pre><code class="language-bash">192.168.11.40:9007&gt; cluster nodes
+8ccdb0963411ebd05ce21952bdd4b7597825afdc 192.168.11.40:9001@19001 master - 0 1620928869000 2 connected 0-5461
+bb1bb0f5f9e0ee67846ba8ec94a38da700e2e80d 192.168.11.40:9007@19007 myself,master - 0 1620928868000 0 connected
+...
+# 9007 准备导入槽 4096 的数据
+192.168.11.40:9007&gt; cluster setslot 4096 importing 8ccdb0963411ebd05ce21952bdd4b7597825afdc
+OK
+# 槽 4096 已开启导入状态
+192.168.11.40:9007&gt; cluster nodes
+bb1bb0f5f9e0ee67846ba8ec94a38da700e2e80d 192.168.11.40:9007@19007 myself,master - 0 1620928959000 0 connected [4096-&lt;-8ccdb0963411ebd05ce21952bdd4b7597825afdc]
+...
+</code></pre>
+<p>源节点准备工作</p>
+<pre><code class="language-bash"># 9001 准备导出槽 4096 数据
+192.168.11.40:9001&gt; cluster setslot 4096 migrating bb1bb0f5f9e0ee67846ba8ec94a38da700e2e80d
+OK
+# 槽 4096 已开启导出状态
+192.168.11.40:9001&gt; cluster nodes
+8ccdb0963411ebd05ce21952bdd4b7597825afdc 192.168.11.40:9001@19001 myself,master - 0 1620929179000 2 connected 0-5461 [4096-&gt;-bb1bb0f5f9e0ee67846ba8ec94a38da700e2e80d]
+...
+</code></pre>
+<p>导出数据</p>
+<pre><code class="language-bash"># 获取 100 个属于槽 4096 的键
+192.168.11.40:9001&gt; cluster getkeysinslot 4096 100
+1) "key:test:5028"
+2) "key:test:68253"
+# 查看数据
+192.168.11.40:9001&gt; mget key:test:5028 key:test:68253
+1) "value:5028"
+2) "value:68253"
+# 迁移这2个键：migrate 命令保证了每个键迁移过程的原子性
+192.168.11.40:9001&gt; migrate 192.168.11.40 9007 "" 0 5000 keys key:test:5028 key:test:68253
+OK
+# 再次查询会报 ASK 错误：引导客户端找到数据所在的节点
+192.168.11.40:9001&gt; mget key:test:5028 key:test:68253
+(error) ASK 4096 192.168.11.40:9007
+</code></pre>
+<p>通知所有主节点：槽 4096 指派给 9007</p>
+<pre><code class="language-bash">192.168.11.40:9001&gt; cluster setslot 4096 node bb1bb0f5f9e0ee67846ba8ec94a38da700e2e80d
+192.168.11.40:9002&gt; cluster setslot 4096 node bb1bb0f5f9e0ee67846ba8ec94a38da700e2e80d
+192.168.11.40:9003&gt; cluster setslot 4096 node bb1bb0f5f9e0ee67846ba8ec94a38da700e2e80d
+192.168.11.40:9007&gt; cluster setslot 4096 node bb1bb0f5f9e0ee67846ba8ec94a38da700e2e80d
+</code></pre>
+<p>查看最终结果</p>
+<pre><code class="language-bash">192.168.11.40:9007&gt; cluster nodes
+8ccdb0963411ebd05ce21952bdd4b7597825afdc 192.168.11.40:9001@19001 master - 0 1620931743303 7 connected 0-4095 4097-5461
+bb1bb0f5f9e0ee67846ba8ec94a38da700e2e80d 192.168.11.40:9007@19007 myself,master - 0 1620931741000 8 connected 4096
+...
+</code></pre>
+<h3 id="2-使用-redis-cli-扩容">2. 使用 redis-cli 扩容</h3>
+<p>redis-cli 提供了<strong>槽重分片</strong>功能</p>
+<p>reshard 命令参数详解：</p>
+<pre><code class="language-bash">reshard    host:port  # 集群内任意节点地址
+           --cluster-from &lt;arg&gt;  # 源节点id，逗号分隔
+           --cluster-to &lt;arg&gt;  # 目标节点id，只有一个
+           --cluster-slots &lt;arg&gt;  # 迁移多少个槽
+           --cluster-yes  # 确认执行reshard
+           --cluster-timeout &lt;arg&gt;  # 每次 migrate 操作的超时时间，默认 60000ms
+           --cluster-pipeline &lt;arg&gt;  # 每次批量迁移键的数量，默认 10
+           --cluster-replace
+</code></pre>
+<p>将 9001、9002、9003 的槽迁移到 9007，共迁移 4096 个</p>
+<pre><code class="language-bash">$ /usr/local/redis/bin/redis-cli --cluster reshard 192.168.11.40:9001
+M: 8ccdb0963411ebd05ce21952bdd4b7597825afdc 192.168.11.40:9001
+   slots:[0-4095],[4097-5461] (5461 slots) master
+   1 additional replica(s)
+M: bb1bb0f5f9e0ee67846ba8ec94a38da700e2e80d 192.168.11.40:9007
+   slots:[4096] (1 slots) master
+...
+[OK] All 16384 slots covered.
+How many slots do you want to move (from 1 to 16384)? 4096
+What is the receiving node ID? bb1bb0f5f9e0ee67846ba8ec94a38da700e2e80d
+Please enter all the source node IDs.
+  Type 'all' to use all the nodes as source nodes for the hash slots.
+  Type 'done' once you entered all the source nodes IDs.
+Source node #1: 8ccdb0963411ebd05ce21952bdd4b7597825afdc
+Source node #2: 5786e3237c7fa413ed22465d15be721f95e72cfa
+Source node #3: 85ceb9826e8aa003169c46fb4ba115c72002d4f9
+Source node #4: done
+    Moving slot 0 from 8ccdb0963411ebd05ce21952bdd4b7597825afdc
+    ...
+    Moving slot 12287 from 85ceb9826e8aa003169c46fb4ba115c72002d4f9
+Do you want to proceed with the proposed reshard plan (yes/no)? yes
+Moving slot 0 from 192.168.11.40:9001 to 192.168.11.40:9007:
+...
+Moving slot 12287 from 192.168.11.40:9003 to 192.168.11.40:9007:
+</code></pre>
+<p>查看最终结果</p>
+<pre><code class="language-bash">192.168.11.40:9007&gt; cluster nodes
+8ccdb0963411ebd05ce21952bdd4b7597825afdc 192.168.11.40:9001@19001 master - 0 1620933907753 7 connected 1366-4095 4097-5461
+5786e3237c7fa413ed22465d15be721f95e72cfa 192.168.11.40:9002@19002 master - 0 1620933906733 1 connected 6827-10922
+85ceb9826e8aa003169c46fb4ba115c72002d4f9 192.168.11.40:9003@19003 master - 0 1620933905000 3 connected 12288-16383
+bb1bb0f5f9e0ee67846ba8ec94a38da700e2e80d 192.168.11.40:9007@19007 myself,master - 0 1620933900000 8 connected 0-1365 4096 5462-6826 10923-12287
+...
+</code></pre>
+<p>检查节点之间槽的均衡性</p>
+<pre><code class="language-bash">$ /usr/local/redis/bin/redis-cli --cluster rebalance 192.168.11.40:9001
+...
+[OK] All 16384 slots covered.
+*** No rebalancing needed! All nodes are within the 2.00% threshold.
+</code></pre>
+<p>迁移之后所有主节点负责的槽数量差异在 2% 以内，因此集群节点数据相对均匀，无需调整</p>
+<h2 id="二、集群收缩">二、集群收缩</h2>
+<p><img src="https://img2020.cnblogs.com/blog/1614145/202105/1614145-20210514105705752-1417901248.png" alt="节点下线流程" loading="lazy"></p>
+<h3 id="1-迁移槽">1. 迁移槽</h3>
+<p>执行 reshard 三次，将数据平均分布到其他三个节点</p>
+<h3 id="2-忘记节点">2. 忘记节点</h3>
+<p>60s 内对所有节点执行如下操作：（不建议）</p>
+<pre><code class="language-bash"># 执行后，会将该节点加入禁用列表（持续 60s），不再向其发送 Gossip 消息
+cluster forget {nodeId}
+</code></pre>
+<p>建议使用 redis-cli 的 del-node 忘记节点：</p>
+<pre><code class="language-bash">/usr/local/redis/bin/redis-cli --cluster del-node {host:port} {nodeId}
+</code></pre>
+<p>内部伪代码</p>
+<pre><code class="language-python">def delnode_cluster_cmd(downNode):
+    # 下线节点不允许包含slots
+    if downNode.slots.length != 0
+        exit 1
+    end
+    # 向集群内节点发送cluster forget
+    for n in nodes:
+        if n.id == downNode.id:
+            # 不能对自己做forget操作
+            continue;
+        # 如果下线节点有从节点则把从节点指向其他主节点
+        if n.replicate &amp;&amp; n.replicate.nodeId == downNode.id :
+            # 指向拥有最少从节点的主节点
+            master = get_master_with_least_replicas();
+            n.cluster("replicate",master.nodeId);
+        #发送忘记节点命令
+        n.cluster('forget',downNode.id)
+    # 节点关闭
+    downNode.shutdown();
+</code></pre>
+<p>若主从节点都要下线，先下线从，避免全量复制</p>
+
+</div>
+<div id="MySignature"></div>
+<div class="clear"></div>
+<div id="blog_post_info_block">
+    <div id="blog_post_info"></div>
+    <div class="clear"></div>
+    <div id="post_next_prev"></div>
+</div>
+            </div>
+            <div class="postDesc">posted @ 
+<span id="post-date">2021-05-14 11:05</span>&nbsp;
+<a href="https://www.cnblogs.com/lb477/">LB477</a>&nbsp;
+阅读(<span id="post_view_count">18</span>)&nbsp;
+评论(<span id="post_comment_count">0</span>)&nbsp;
+<a href="https://i.cnblogs.com/EditPosts.aspx?postid=14767695" rel="nofollow">编辑</a>&nbsp;
+<a href="javascript:void(0)" onclick="AddToWz(14767695);return false;">收藏</a></div>
+        </div>
+	    
+	    
+    </div><!--end: topics 文章、评论容器-->
+</div>
+<script src="https://common.cnblogs.com/highlight/10.3.1/highlight.min.js"></script>
+<script>markdown_highlight();</script>
+<script>
+    var allowComments = true, cb_blogId = 495396, cb_blogApp = 'lb477', cb_blogUserGuid = 'd6200025-a336-497e-1a00-08d69c580dca';
+    var cb_entryId = 14767695, cb_entryCreatedDate = '2021-05-14 11:05', cb_postType = 1;
+    updatePostStats(
+        [cb_entryId],
+        function(id, count) { $("#post_view_count").text(count) },
+        function(id, count) { $("#post_comment_count").text(count) })
+    zoomManager.apply("#cnblogs_post_body img:not(.code_img_closed):not(.code_img_opened)");
+</script>
+<a name="!comments"></a>
+<div id="blog-comments-placeholder"></div>
+<div id="comment_form" class="commentform">
+    <a name="commentform"></a>
+    <div id="divCommentShow"></div>
+    <div id="comment_nav"><span id="span_refresh_tips"></span><a href="javascript:void(0);" onclick="return RefreshCommentList();" id="lnk_RefreshComments" runat="server" clientidmode="Static">刷新评论</a><a href="#" onclick="return RefreshPage();">刷新页面</a><a href="#top">返回顶部</a></div>
+    <div id="comment_form_container"></div>
+    <div class="ad_text_commentbox" id="ad_text_under_commentbox"></div>
+    <div id="ad_t2"></div>
+    <div id="opt_under_post"></div>
+    <div id="cnblogs_c1" class="under-post-card">
+        <div id='div-gpt-ad-1592365906576-0' style='width: 300px; height: 250px;'></div>
+    </div>
+    <div id="under_post_card1"></div>
+    <div id="cnblogs_c2" class="under-post-card">
+        <div id='div-gpt-ad-1592366332455-0' style='width: 468px; height: 60px;'></div>
+    </div>
+    <div id="under_post_card2"></div>
+    <div id="HistoryToday" class="under-post-card"></div>
+    <script type="text/javascript">
+       var commentManager = new blogCommentManager();
+       commentManager.renderComments(0);
+       fixPostBody();
+       deliverBigBanner();
+setTimeout(function() { incrementViewCount(cb_entryId); }, 50);       deliverT2();
+       deliverC1C2();
+       loadNewsAndKb();
+       loadBlogSignature();
+LoadPostCategoriesTags(cb_blogId, cb_entryId);       LoadPostInfoBlock(cb_blogId, cb_entryId, cb_blogApp, cb_blogUserGuid);
+       GetPrevNextPost(cb_entryId, cb_blogId, cb_entryCreatedDate, cb_postType);
+       loadOptUnderPost();
+       GetHistoryToday(cb_blogId, cb_blogApp, cb_entryCreatedDate);
+    </script>
+</div>
+
+	</div><!--end: forFlow -->
+	</div><!--end: mainContent 主体内容容器-->
+	<div id="sideBar">
+		<div id="sideBarMain">
+			<div id="sidebar_news" class="newsItem">
+            <script>loadBlogNews();</script>
+</div>
+<div id="sidebar_c3"></div>
+			<div id="blog-calendar" style="display:none"></div><script>loadBlogDefaultCalendar();</script>			
+			<div id="leftcontentcontainer">
+				<div id="blog-sidecolumn"></div>
+                    <script>loadBlogSideColumn();</script>
+			</div>			
+		</div><!--end: sideBarMain -->
+	</div><!--end: sideBar 侧边栏容器 -->
+	<div class="clear"></div>
+	</div><!--end: main -->
+	<div class="clear"></div>
+	<div id="footer">
+		<!--done-->
+Copyright &copy; 2021 LB477
+<br /><span id="poweredby">Powered by .NET 5.0 on Kubernetes</span>
+
+
+
+	</div><!--end: footer -->
+</div><!--end: home 自定义的最大容器 -->
+
+
+    
+
+    <input type="hidden" id="antiforgery_token" value="CfDJ8L-rpLgFVEJMgssCVvNUAjuNbdLRx9wqfuLTGM_0ZDsHMFe4RHIxQGEEAcuBT-QzQp_ivAubY0HPml_zDloXG0EfDBIwIINqFY0ddwc1_HxV7VE8PrU3569xngLJuAvxfmWjjzrR1ZgNCF69XnFtkFI" />
+</body>
+</html>

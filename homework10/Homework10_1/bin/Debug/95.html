@@ -1,0 +1,592 @@
+﻿<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="referrer" content="origin-when-crossorigin" />
+    
+    
+    <meta http-equiv="Cache-Control" content="no-transform" />
+    <meta http-equiv="Cache-Control" content="no-siteapp" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Caution_X - 博客园</title>
+    <link id="favicon" rel="shortcut icon" href="//common.cnblogs.com/favicon.svg" type="image/svg+xml" />
+    
+    <link rel="stylesheet" href="/css/blog-common.min.css?v=zS6-e1bxywlu3kpHvpr1J6MySwya3ztFtEnS7RYQ0Fk" />
+    <link id="MainCss" rel="stylesheet" href="/skins/book/bundle-book.min.css?v=jeIWFbREsBywulLasTpkQaxky-lM6nSP4v7QSo89d0Y" />
+    
+    <link id="mobile-style" media="only screen and (max-width: 767px)" type="text/css" rel="stylesheet" href="/skins/book/bundle-book-mobile.min.css?v=VScK2RSKmlDZjHFFPrzU6xRmTprJestCE7-RZpLjaKU" />
+    
+    <link type="application/rss+xml" rel="alternate" href="https://www.cnblogs.com/cautx/rss" />
+    <link type="application/rsd+xml" rel="EditURI" href="https://www.cnblogs.com/cautx/rsd.xml" />
+    <link type="application/wlwmanifest+xml" rel="wlwmanifest" href="https://www.cnblogs.com/cautx/wlwmanifest.xml" />
+    <script>
+        var currentBlogId = 514487;
+        var currentBlogApp = 'cautx';
+        var cb_enable_mathjax = true;
+        var isLogined = false;
+        var isBlogOwner = false;
+        var skinName = 'BOOK';
+        var visitorUserId = '';
+    </script>
+    <script src="https://common.cnblogs.com/scripts/jquery-2.2.0.min.js"></script>
+    <script src="/js/blog-common.min.js?v=2Mic1VLeHXarpdzASbXqFMIMVLEBiWXNO5yiTHUcmhw"></script>
+    <script type="text/x-mathjax-config">
+        MathJax.Hub.Config({
+        tex2jax: { inlineMath: [['$','$'], ['\\(','\\)']], processClass: 'math', processEscapes: true },
+        TeX: {
+        equationNumbers: { autoNumber: ['AMS'], useLabelIds: true },
+        extensions: ['extpfeil.js', 'mediawiki-texvc.js'],
+        Macros: {bm: "\\boldsymbol"}
+        },
+        'HTML-CSS': { linebreaks: { automatic: true } },
+        SVG: { linebreaks: { automatic: true } }
+        });
+    </script>
+    <script src="https://mathjax.cnblogs.com/2_7_5/MathJax.js?config=TeX-AMS-MML_HTMLorMML&amp;v=20200504"></script>
+    
+</head>
+<body class="has-navbar">
+    <a name="top"></a>
+    <div id="top_nav" class="navbar forpc">
+        <nav id="nav_main" class="navbar-main">
+            <ul id="nav_left" class="navbar-list navbar-left">
+                <li class="navbar-branding"><a href="https://www.cnblogs.com/" title="开发者的网上家园"><img src="/images/logo.svg?v=R9M0WmLAIPVydmdzE2keuvnjl-bPR7_35oHqtiBzGsM" alt="博客园Logo" /></a></li>
+                <li><a href="/" onclick="ga('send', 'event', 'Link', 'click', 'skin-navbar-sitehome')">首页</a></li>
+                <li><a href="https://news.cnblogs.com/" onclick="ga('send', 'event', 'Link', 'click', 'skin-navbar-news')">新闻</a></li>
+                <li><a href="https://q.cnblogs.com/" onclick="ga('send', 'event', 'Link', 'click', 'skin-navbar-q')">博问</a></li>
+                <li><a id="nav_brandzone" href="https://brands.cnblogs.com/" onclick="ga('send', 'event', 'Link', 'click', 'skin-navbar-brands')">专区</a></li>
+                <li><a href="https://ing.cnblogs.com/" onclick="ga('send', 'event', 'Link', 'click', 'skin-navbar-ing')">闪存</a></li>
+                <li><a href="https://edu.cnblogs.com/" onclick="ga('send', 'event', 'Link', 'click', 'skin-navbar-edu')">班级</a></li>
+            </ul>
+            <ul id="nav_right" class="navbar-list navbar-right">
+                <li>
+                    <form id="zzk_search" class="navbar-search" action="https://zzk.cnblogs.com/s" method="get">
+                        <input name="w" id="zzk_search_input" placeholder="代码改变世界" type="text" tabindex="3" />
+                        <button type="submit" id="zzk_search_button">
+                            <img src="/images/aggsite/search.svg" alt="搜索" />
+                        </button>
+                    </form>
+                </li>
+                <li id="navbar_login_status" class="navbar-list">
+                    <a class="navbar-user-info navbar-blog" href="https://i.cnblogs.com/EditPosts.aspx?opt=1" alt="写随笔" title="写随笔">
+                        <img id="new_post_icon" class="navbar-icon" src="/images/aggsite/newpost.svg" alt="写随笔" />
+                    </a>
+                    <a id="navblog-myblog-icon" class="navbar-user-info navbar-blog" href="https://passport.cnblogs.com/GetBlogApplyStatus.aspx" alt="我的博客" title="我的博客">
+                        <img id="myblog_icon" class="navbar-icon" src="/images/aggsite/myblog.svg" alt="我的博客" />
+                    </a>
+                    <a class="navbar-user-info navbar-message navbar-icon-wrapper" href="https://msg.cnblogs.com/" alt="短消息" title="短消息">
+                        <img id="msg_icon" class="navbar-icon" src="/images/aggsite/message.svg?v=J0WS2P2iPgaIVgXxcAhliw4AFZIpaTWxtdoNAv9eiCA" alt="短消息" />
+                        <span id="msg_count" style="display: none"></span>
+                    </a>
+                    <div id="user_info" class="navbar-user-info dropdown">
+                        <a class="dropdown-button" href="https://home.cnblogs.com/">
+                            <img id="user_icon" class="navbar-avatar" src="/images/aggsite/avatar-default.svg" alt="用户头像" />
+                        </a>
+                        <div class="dropdown-menu">
+                            <a id="navblog-myblog-text" href="https://passport.cnblogs.com/GetBlogApplyStatus.aspx">我的博客</a>
+                            <a href="https://home.cnblogs.com/">我的园子</a>
+                            <a href="https://account.cnblogs.com/settings/account">账号设置</a>
+                            <a href="javascript:void(0)" id="navbar_lite_mode_toggle" title="简洁模式会使用简洁款皮肤显示所有博客">
+    简洁模式 <img id="navbar_lite_mode_on" src="/images/lite-mode-check.svg" class="hide" /><span id="navbar_lite_mode_spinner" class="hide">...</span>
+</a>
+                            <a href="javascript:void(0)" onclick="account.logout();">退出登录</a>
+                        </div>
+                    </div>
+                    <a class="navbar-anonymous" href="https://account.cnblogs.com/signup/">注册</a>
+                    <a class="navbar-anonymous" href="javascript:void(0);" onclick="account.login()">登录</a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+
+    
+    <script type="text/javascript">
+	try {
+		if (screen.availWidth > 1200) {
+			document.getElementById("MainCss").href = '/skins/book/bundle-book-2.min.css';
+		}
+	} catch (e) { }
+</script>
+
+<div id="header">
+<div id="HeaderTitle">
+<div id="Title">
+<a id="Header1_HeaderTitle" class="headermaintitle HeaderMainTitle" href="https://www.cnblogs.com/cautx/">Caution_X</a>
+
+</div>
+<div id="subTitle"></div>
+</div>
+</div>
+
+
+<div id="main">
+	
+
+
+
+
+
+		
+<p class="date">
+	<a href="https://www.cnblogs.com/cautx/archive/2021/05/14.html"></a>
+	2021年5月14日		  
+</p>
+
+		<div class="post">
+			<h2>
+
+<a class="postTitle2 vertical-middle" href="https://www.cnblogs.com/cautx/p/14767765.html">
+    <span>
+        Git命令行常用命令【持续更新】
+    </span>
+    
+
+
+
+</a>
+</h2>
+			
+			
+
+    <div class="c_b_p_desc">
+摘要：1.	#切换分支	$ git chaeckout &lt;分支名&gt; 2.	#清除缓存	$ git rm -r --cached . 3.	#连接远程仓库	$ git remote add origin &lt;SSH地址&gt; 4.	#查看链接远程仓库的情况||也可以通过.git文件夹下的config文件查看	$         <a href="https://www.cnblogs.com/cautx/p/14767765.html" class="c_b_p_desc_readmore">阅读全文</a>
+    </div>
+
+			
+			<p class="postfoot">		
+				posted @ 2021-05-14 11:08
+Caution_X
+<span data-post-id="14767765" class="post-view-count">阅读(0)</span> 
+<span data-post-id="14767765" class="post-comment-count">评论(0)</span> 
+<span data-post-id="14767765" class="post-digg-count">推荐(0)</span> 
+<a href="https://i.cnblogs.com/EditPosts.aspx?postid=14767765" rel="nofollow">
+    编辑
+</a>
+
+			</p>
+		</div>
+		<div class="post">
+			<h2>
+
+<a class="postTitle2 vertical-middle" href="https://www.cnblogs.com/cautx/p/14767719.html">
+    <span>
+        如何解决Git中的合并冲突
+    </span>
+    
+
+
+
+</a>
+</h2>
+			
+			
+
+    <div class="c_b_p_desc">
+摘要：合并冲突 首先介绍一下什么是合并冲突，为了避免问题复杂化，简单来说，就是这个项目有很多人在修改，现在针对其中一部分文件同时有多人进行了修改，此时git不能执行快速合并，就会发生合并冲突，这时需要我们手动添加有冲突的文件 问题描述： 以华为云的git为例，现在我想把一个分支合并到主分支上，执行 $ g        <a href="https://www.cnblogs.com/cautx/p/14767719.html" class="c_b_p_desc_readmore">阅读全文</a>
+    </div>
+
+			
+			<p class="postfoot">		
+				posted @ 2021-05-14 11:01
+Caution_X
+<span data-post-id="14767719" class="post-view-count">阅读(0)</span> 
+<span data-post-id="14767719" class="post-comment-count">评论(0)</span> 
+<span data-post-id="14767719" class="post-digg-count">推荐(0)</span> 
+<a href="https://i.cnblogs.com/EditPosts.aspx?postid=14767719" rel="nofollow">
+    编辑
+</a>
+
+			</p>
+		</div>
+
+
+		
+<p class="date">
+	<a href="https://www.cnblogs.com/cautx/archive/2020/04/28.html"></a>
+	2020年4月28日		  
+</p>
+
+		<div class="post">
+			<h2>
+
+<a class="postTitle2 vertical-middle" href="https://www.cnblogs.com/cautx/p/12792509.html">
+    <span>
+        ch 2101 可达性统计 拓扑排序+状压dp
+    </span>
+    
+
+
+
+</a>
+</h2>
+			
+			
+
+    <div class="c_b_p_desc">
+摘要：题目： 描述 给定一张N个点M条边的有向无环图，分别统计从每个点出发能够到达的点的数量。N,M≤30000。 输入格式 第一行两个整数N,M，接下来M行每行两个整数x,y，表示从x到y的一条有向边。 输出格式 共N行，表示每个点能够到达的点的数量。 样例输入 10 10 3 8 2 3 2 5 5         <a href="https://www.cnblogs.com/cautx/p/12792509.html" class="c_b_p_desc_readmore">阅读全文</a>
+    </div>
+
+			
+			<p class="postfoot">		
+				posted @ 2020-04-28 10:44
+Caution_X
+<span data-post-id="12792509" class="post-view-count">阅读(104)</span> 
+<span data-post-id="12792509" class="post-comment-count">评论(0)</span> 
+<span data-post-id="12792509" class="post-digg-count">推荐(0)</span> 
+<a href="https://i.cnblogs.com/EditPosts.aspx?postid=12792509" rel="nofollow">
+    编辑
+</a>
+
+			</p>
+		</div>
+
+
+		
+<p class="date">
+	<a href="https://www.cnblogs.com/cautx/archive/2019/11/21.html"></a>
+	2019年11月21日		  
+</p>
+
+		<div class="post">
+			<h2>
+
+<a class="postTitle2 vertical-middle" href="https://www.cnblogs.com/cautx/p/11908733.html">
+    <span>
+        poj-2299
+    </span>
+    
+
+
+
+</a>
+</h2>
+			
+			
+
+    <div class="c_b_p_desc">
+摘要：Ultra-QuickSort Time Limit: 7000MS Memory Limit: 65536K Total Submissions: 80412 Accepted: 30110 Description In this problem, you have to analyze a pa        <a href="https://www.cnblogs.com/cautx/p/11908733.html" class="c_b_p_desc_readmore">阅读全文</a>
+    </div>
+
+			
+			<p class="postfoot">		
+				posted @ 2019-11-21 22:05
+Caution_X
+<span data-post-id="11908733" class="post-view-count">阅读(70)</span> 
+<span data-post-id="11908733" class="post-comment-count">评论(0)</span> 
+<span data-post-id="11908733" class="post-digg-count">推荐(0)</span> 
+<a href="https://i.cnblogs.com/EditPosts.aspx?postid=11908733" rel="nofollow">
+    编辑
+</a>
+
+			</p>
+		</div>
+		<div class="post">
+			<h2>
+
+<a class="postTitle2 vertical-middle" href="https://www.cnblogs.com/cautx/p/11908731.html">
+    <span>
+        ch-0503
+    </span>
+    
+
+
+
+</a>
+</h2>
+			
+			
+
+    <div class="c_b_p_desc">
+摘要：内容来源《算法竞赛进阶指南》date of submission：20191121tags：归排description modelling：你一定玩过八数码游戏，它实际上是在一个3*3的网格中进行的，1个空格和1~8这8个数字恰好不重不漏地分布在这3*3的网格中。例如：5 2 81 3 _4 6 7        <a href="https://www.cnblogs.com/cautx/p/11908731.html" class="c_b_p_desc_readmore">阅读全文</a>
+    </div>
+
+			
+			<p class="postfoot">		
+				posted @ 2019-11-21 22:04
+Caution_X
+<span data-post-id="11908731" class="post-view-count">阅读(68)</span> 
+<span data-post-id="11908731" class="post-comment-count">评论(0)</span> 
+<span data-post-id="11908731" class="post-digg-count">推荐(0)</span> 
+<a href="https://i.cnblogs.com/EditPosts.aspx?postid=11908731" rel="nofollow">
+    编辑
+</a>
+
+			</p>
+		</div>
+
+
+		
+<p class="date">
+	<a href="https://www.cnblogs.com/cautx/archive/2019/11/18.html"></a>
+	2019年11月18日		  
+</p>
+
+		<div class="post">
+			<h2>
+
+<a class="postTitle2 vertical-middle" href="https://www.cnblogs.com/cautx/p/11885654.html">
+    <span>
+        CodeForces-670C Cinema 
+    </span>
+    
+
+
+
+</a>
+</h2>
+			
+			
+
+    <div class="c_b_p_desc">
+摘要：Moscow is hosting a major international conference, which is attended by n scientists from different countries. Each of the scientists knows exactly o        <a href="https://www.cnblogs.com/cautx/p/11885654.html" class="c_b_p_desc_readmore">阅读全文</a>
+    </div>
+
+			
+			<p class="postfoot">		
+				posted @ 2019-11-18 21:44
+Caution_X
+<span data-post-id="11885654" class="post-view-count">阅读(74)</span> 
+<span data-post-id="11885654" class="post-comment-count">评论(0)</span> 
+<span data-post-id="11885654" class="post-digg-count">推荐(0)</span> 
+<a href="https://i.cnblogs.com/EditPosts.aspx?postid=11885654" rel="nofollow">
+    编辑
+</a>
+
+			</p>
+		</div>
+		<div class="post">
+			<h2>
+
+<a class="postTitle2 vertical-middle" href="https://www.cnblogs.com/cautx/p/11885624.html">
+    <span>
+        POJ-2018 Authors Register Update your info Authors ranklist
+    </span>
+    
+
+
+
+</a>
+</h2>
+			
+			
+
+    <div class="c_b_p_desc">
+摘要：Best Cow Fences Time Limit: 1000MS Memory Limit: 30000K Total Submissions: 16945 Accepted: 5425 Description Farmer John&#39;s farm consists of a long row         <a href="https://www.cnblogs.com/cautx/p/11885624.html" class="c_b_p_desc_readmore">阅读全文</a>
+    </div>
+
+			
+			<p class="postfoot">		
+				posted @ 2019-11-18 21:41
+Caution_X
+<span data-post-id="11885624" class="post-view-count">阅读(125)</span> 
+<span data-post-id="11885624" class="post-comment-count">评论(0)</span> 
+<span data-post-id="11885624" class="post-digg-count">推荐(0)</span> 
+<a href="https://i.cnblogs.com/EditPosts.aspx?postid=11885624" rel="nofollow">
+    编辑
+</a>
+
+			</p>
+		</div>
+
+
+		
+<p class="date">
+	<a href="https://www.cnblogs.com/cautx/archive/2019/11/17.html"></a>
+	2019年11月17日		  
+</p>
+
+		<div class="post">
+			<h2>
+
+<a class="postTitle2 vertical-middle" href="https://www.cnblogs.com/cautx/p/11879200.html">
+    <span>
+        CH-0304 IncDec Sequence
+    </span>
+    
+
+
+
+</a>
+</h2>
+			
+			
+
+    <div class="c_b_p_desc">
+摘要：0304 IncDec Sequence 0x00「基本算法」例题 描述 给定一个长度为 n(n≤10^5 ) 的数列 {a_1,a_2,…,a_n}，每次可以选择一个区间 [l,r]，使下标在这个区间内的数都加一或者都减一。 求至少需要多少次操作才能使数列中的所有数都一样，并求出在保证最少次数的前        <a href="https://www.cnblogs.com/cautx/p/11879200.html" class="c_b_p_desc_readmore">阅读全文</a>
+    </div>
+
+			
+			<p class="postfoot">		
+				posted @ 2019-11-17 23:15
+Caution_X
+<span data-post-id="11879200" class="post-view-count">阅读(139)</span> 
+<span data-post-id="11879200" class="post-comment-count">评论(0)</span> 
+<span data-post-id="11879200" class="post-digg-count">推荐(0)</span> 
+<a href="https://i.cnblogs.com/EditPosts.aspx?postid=11879200" rel="nofollow">
+    编辑
+</a>
+
+			</p>
+		</div>
+		<div class="post">
+			<h2>
+
+<a class="postTitle2 vertical-middle" href="https://www.cnblogs.com/cautx/p/11879134.html">
+    <span>
+        POJ-3263 Tallest Cow
+    </span>
+    
+
+
+
+</a>
+</h2>
+			
+			
+
+    <div class="c_b_p_desc">
+摘要：Tallest Cow Time Limit: 2000MS Memory Limit: 65536K Total Submissions: 5425 Accepted: 2500 Description FJ&#39;s N (1 ≤ N ≤ 10,000) cows conveniently index        <a href="https://www.cnblogs.com/cautx/p/11879134.html" class="c_b_p_desc_readmore">阅读全文</a>
+    </div>
+
+			
+			<p class="postfoot">		
+				posted @ 2019-11-17 23:03
+Caution_X
+<span data-post-id="11879134" class="post-view-count">阅读(69)</span> 
+<span data-post-id="11879134" class="post-comment-count">评论(0)</span> 
+<span data-post-id="11879134" class="post-digg-count">推荐(0)</span> 
+<a href="https://i.cnblogs.com/EditPosts.aspx?postid=11879134" rel="nofollow">
+    编辑
+</a>
+
+			</p>
+		</div>
+		<div class="post">
+			<h2>
+
+<a class="postTitle2 vertical-middle" href="https://www.cnblogs.com/cautx/p/11879089.html">
+    <span>
+        POJ-1050 To the Max
+    </span>
+    
+
+
+
+</a>
+</h2>
+			
+			
+
+    <div class="c_b_p_desc">
+摘要：To the Max Time Limit: 1000MS Memory Limit: 10000K Total Submissions: 56579 Accepted: 29921 Description Given a two-dimensional array of positive and         <a href="https://www.cnblogs.com/cautx/p/11879089.html" class="c_b_p_desc_readmore">阅读全文</a>
+    </div>
+
+			
+			<p class="postfoot">		
+				posted @ 2019-11-17 22:55
+Caution_X
+<span data-post-id="11879089" class="post-view-count">阅读(78)</span> 
+<span data-post-id="11879089" class="post-comment-count">评论(0)</span> 
+<span data-post-id="11879089" class="post-digg-count">推荐(0)</span> 
+<a href="https://i.cnblogs.com/EditPosts.aspx?postid=11879089" rel="nofollow">
+    编辑
+</a>
+
+			</p>
+		</div>
+
+
+
+<div class="topicListFooter">
+    <div id="nav_next_page">
+        
+    <a href="https://www.cnblogs.com/cautx/default.html?page=2">
+        下一页
+    </a>
+
+    </div>    
+</div>
+
+
+
+
+
+
+<script>
+    updatePostStats(
+        $(".post-view-count").map(function () { return this.dataset.postId }).get(),
+        function(id, count) { $(".post-view-count[data-post-id=" + id + "]").text("阅读(" + count + ")") },
+        function(id, count) { $(".post-comment-count[data-post-id=" + id + "]").text("评论(" + count + ")") },
+        function(id, count) { $(".post-digg-count[data-post-id=" + id + "]").text("推荐(" + count + ")") });
+</script>
+	<p id="footer">
+	Powered by: 
+	<br />
+	
+	<a href="https://www.cnblogs.com/" id="footer_site_link">博客园</a>
+	<br />
+	Copyright &copy; 2021 Caution_X
+<br /><span id="poweredby">Powered by .NET 5.0 on Kubernetes</span>
+
+</p>
+
+
+</div>
+<div id="rightmenu">
+	
+		<div id="blog-calendar" style="display:none"></div><script>loadBlogDefaultCalendar();</script>
+		
+<h3>导航</h3>
+<ul>
+			<li><a id="blog_nav_sitehome" class="menu" href="https://www.cnblogs.com/">
+博客园</a>
+</li>
+			<li>
+<a id="blog_nav_myhome" class="menu" href="https://www.cnblogs.com/cautx/">
+首页</a>
+</li>
+			<li>
+
+<a id="blog_nav_newpost" class="menu" href="https://i.cnblogs.com/EditPosts.aspx?opt=1">
+新随笔</a>
+</li>
+			<li>
+<a id="blog_nav_contact" class="menu" href="https://msg.cnblogs.com/send/Caution_X">
+联系</a></li>
+			<li>
+<a id="blog_nav_rss" class="menu" href="javascript:void(0)" data-rss="https://www.cnblogs.com/cautx/rss/">
+订阅</a>
+<a id="blog_nav_rss_image" href="https://www.cnblogs.com/cautx/rss/">
+    <img src="/skins/book/images/xml.gif" alt="订阅" />
+</a></li>
+			<li>
+<a id="blog_nav_admin" class="menu" href="https://i.cnblogs.com/">
+管理</a>
+</li>
+</ul>
+
+
+		<div id="blog_stats_place_holder"><script>loadBlogStats();</script></div>
+		<div id="sidebar_news" class="newsItem">
+            <script>loadBlogNews();</script>
+</div>
+<div id="sidebar_c3"></div>
+		<div id="blog-sidecolumn"></div>
+                    <script>loadBlogSideColumn();</script>
+	
+</div>
+			
+			
+			
+			
+			 
+
+	
+
+
+    
+
+    <input type="hidden" id="antiforgery_token" value="CfDJ8L-rpLgFVEJMgssCVvNUAjvluoCc6ot204HMnpUqg2Wl9GdiW_4nfbuJyKFq0JTht6zfP9jYrFKzkKJXipX0xQzFNRWcz1GY7xHQ-VIluWwM2-ovjLCPysIFZc-JVFyNt534lvKue40W2ernQnnmtG4" />
+</body>
+</html>

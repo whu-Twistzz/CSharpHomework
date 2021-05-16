@@ -1,0 +1,387 @@
+﻿<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="referrer" content="origin-when-crossorigin" />
+    <meta name="description" content="&amp;gt; 线上用户存储数据后查看提示无权限 前言 不知道什么时候年轻的我曾一度认为Java没啥难度，没有我实现不了的需求，没有我解不了的bug 直到我遇到至今难忘的一个bug 。 线上用户存储数据后查" />
+    <meta property="og:description" content="&amp;gt; 线上用户存储数据后查看提示无权限 前言 不知道什么时候年轻的我曾一度认为Java没啥难度，没有我实现不了的需求，没有我解不了的bug 直到我遇到至今难忘的一个bug 。 线上用户存储数据后查" />
+    <meta http-equiv="Cache-Control" content="no-transform" />
+    <meta http-equiv="Cache-Control" content="no-siteapp" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>ThreadLocal引起的一次线上事故 - 烟花散尽13141 - 博客园</title>
+    <link id="favicon" rel="shortcut icon" href="//common.cnblogs.com/favicon.svg" type="image/svg+xml" />
+    
+    <link rel="stylesheet" href="/css/blog-common.min.css?v=zS6-e1bxywlu3kpHvpr1J6MySwya3ztFtEnS7RYQ0Fk" />
+    <link id="MainCss" rel="stylesheet" href="/skins/darkgreentrip/bundle-darkgreentrip.min.css?v=eoZATbPKwJCL5eWVDTQIYC6CIxJPcFz191dkzN2tSyQ" />
+    <link type="text/css" rel="stylesheet" href="https://www.cnblogs.com/zhangxinhua/custom.css?v=F1baNswwTQR4WGib/9N2OdHm89o=" />
+    <link id="mobile-style" media="only screen and (max-width: 767px)" type="text/css" rel="stylesheet" href="/skins/darkgreentrip/bundle-darkgreentrip-mobile.min.css?v=lU86o8mZVn3FOSdFt7nHKYTD8gzeKaiQIIZ6lSjEFyo" />
+    
+    <link type="application/rss+xml" rel="alternate" href="https://www.cnblogs.com/zhangxinhua/rss" />
+    <link type="application/rsd+xml" rel="EditURI" href="https://www.cnblogs.com/zhangxinhua/rsd.xml" />
+    <link type="application/wlwmanifest+xml" rel="wlwmanifest" href="https://www.cnblogs.com/zhangxinhua/wlwmanifest.xml" />
+    <script>
+        var currentBlogId = 385809;
+        var currentBlogApp = 'zhangxinhua';
+        var cb_enable_mathjax = true;
+        var isLogined = false;
+        var isBlogOwner = false;
+        var skinName = 'darkgreentrip';
+        var visitorUserId = '';
+    </script>
+        <script>
+            var currentPostDateAdded = '2021-05-14 08:48';
+        </script>
+    <script src="https://common.cnblogs.com/scripts/jquery-2.2.0.min.js"></script>
+    <script src="/js/blog-common.min.js?v=2Mic1VLeHXarpdzASbXqFMIMVLEBiWXNO5yiTHUcmhw"></script>
+    <script type="text/x-mathjax-config">
+        MathJax.Hub.Config({
+        tex2jax: { inlineMath: [['$','$'], ['\\(','\\)']], processClass: 'math', processEscapes: true },
+        TeX: {
+        equationNumbers: { autoNumber: ['AMS'], useLabelIds: true },
+        extensions: ['extpfeil.js', 'mediawiki-texvc.js'],
+        Macros: {bm: "\\boldsymbol"}
+        },
+        'HTML-CSS': { linebreaks: { automatic: true } },
+        SVG: { linebreaks: { automatic: true } }
+        });
+    </script>
+    <script src="https://mathjax.cnblogs.com/2_7_5/MathJax.js?config=TeX-AMS-MML_HTMLorMML&amp;v=20200504"></script>
+    
+</head>
+<body class="no-navbar">
+    <a name="top"></a>
+    <div id="top_nav" class="navbar forpc navbar-custom">
+        <nav id="nav_main" class="navbar-main">
+            <ul id="nav_left" class="navbar-list navbar-left">
+                <li class="navbar-branding"><a href="https://www.cnblogs.com/" title="开发者的网上家园"><img src="/images/logo.svg?v=R9M0WmLAIPVydmdzE2keuvnjl-bPR7_35oHqtiBzGsM" alt="博客园Logo" /></a></li>
+                <li><a href="/" onclick="ga('send', 'event', 'Link', 'click', 'skin-navbar-sitehome')">首页</a></li>
+                <li><a href="https://news.cnblogs.com/" onclick="ga('send', 'event', 'Link', 'click', 'skin-navbar-news')">新闻</a></li>
+                <li><a href="https://q.cnblogs.com/" onclick="ga('send', 'event', 'Link', 'click', 'skin-navbar-q')">博问</a></li>
+                <li><a id="nav_brandzone" href="https://brands.cnblogs.com/" onclick="ga('send', 'event', 'Link', 'click', 'skin-navbar-brands')">专区</a></li>
+                <li><a href="https://ing.cnblogs.com/" onclick="ga('send', 'event', 'Link', 'click', 'skin-navbar-ing')">闪存</a></li>
+                <li><a href="https://edu.cnblogs.com/" onclick="ga('send', 'event', 'Link', 'click', 'skin-navbar-edu')">班级</a></li>
+            </ul>
+            <ul id="nav_right" class="navbar-list navbar-right">
+                <li>
+                    <form id="zzk_search" class="navbar-search" action="https://zzk.cnblogs.com/s" method="get">
+                        <input name="w" id="zzk_search_input" placeholder="代码改变世界" type="text" tabindex="3" />
+                        <button type="submit" id="zzk_search_button">
+                            <img src="/images/aggsite/search.svg" alt="搜索" />
+                        </button>
+                    </form>
+                </li>
+                <li id="navbar_login_status" class="navbar-list">
+                    <a class="navbar-user-info navbar-blog" href="https://i.cnblogs.com/EditPosts.aspx?opt=1" alt="写随笔" title="写随笔">
+                        <img id="new_post_icon" class="navbar-icon" src="/images/aggsite/newpost.svg" alt="写随笔" />
+                    </a>
+                    <a id="navblog-myblog-icon" class="navbar-user-info navbar-blog" href="https://passport.cnblogs.com/GetBlogApplyStatus.aspx" alt="我的博客" title="我的博客">
+                        <img id="myblog_icon" class="navbar-icon" src="/images/aggsite/myblog.svg" alt="我的博客" />
+                    </a>
+                    <a class="navbar-user-info navbar-message navbar-icon-wrapper" href="https://msg.cnblogs.com/" alt="短消息" title="短消息">
+                        <img id="msg_icon" class="navbar-icon" src="/images/aggsite/message.svg?v=J0WS2P2iPgaIVgXxcAhliw4AFZIpaTWxtdoNAv9eiCA" alt="短消息" />
+                        <span id="msg_count" style="display: none"></span>
+                    </a>
+                    <div id="user_info" class="navbar-user-info dropdown">
+                        <a class="dropdown-button" href="https://home.cnblogs.com/">
+                            <img id="user_icon" class="navbar-avatar" src="/images/aggsite/avatar-default.svg" alt="用户头像" />
+                        </a>
+                        <div class="dropdown-menu">
+                            <a id="navblog-myblog-text" href="https://passport.cnblogs.com/GetBlogApplyStatus.aspx">我的博客</a>
+                            <a href="https://home.cnblogs.com/">我的园子</a>
+                            <a href="https://account.cnblogs.com/settings/account">账号设置</a>
+                            <a href="javascript:void(0)" id="navbar_lite_mode_toggle" title="简洁模式会使用简洁款皮肤显示所有博客">
+    简洁模式 <img id="navbar_lite_mode_on" src="/images/lite-mode-check.svg" class="hide" /><span id="navbar_lite_mode_spinner" class="hide">...</span>
+</a>
+                            <a href="javascript:void(0)" onclick="account.logout();">退出登录</a>
+                        </div>
+                    </div>
+                    <a class="navbar-anonymous" href="https://account.cnblogs.com/signup/">注册</a>
+                    <a class="navbar-anonymous" href="javascript:void(0);" onclick="account.login()">登录</a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+
+    <div id="page_begin_html">
+        
+<div id="zxhUserName">页首html</div>
+    </div>
+    <!--done-->
+<div id="home">
+<div id="header">
+	<div id="blogTitle">
+        <a id="lnkBlogLogo" href="https://www.cnblogs.com/zhangxinhua/"><img id="blogLogo" src="/skins/custom/images/logo.gif" alt="返回主页" /></a>		
+		
+<!--done-->
+<h1><a id="Header1_HeaderTitle" class="headermaintitle HeaderMainTitle" href="https://www.cnblogs.com/zhangxinhua/">烟花散尽13141</a>
+</h1>
+<h2>心里有座坟，葬着未亡人</h2>
+
+
+
+
+		
+	</div><!--end: blogTitle 博客的标题和副标题 -->
+	<div id="navigator">
+		
+<ul id="navList">
+<li><a id="blog_nav_sitehome" class="menu" href="https://www.cnblogs.com/">
+博客园</a>
+</li>
+<li>
+<a id="blog_nav_myhome" class="menu" href="https://www.cnblogs.com/zhangxinhua/">
+首页</a>
+</li>
+<li>
+
+<a id="blog_nav_newpost" class="menu" href="https://i.cnblogs.com/EditPosts.aspx?opt=1">
+新随笔</a>
+</li>
+<li>
+<a id="blog_nav_contact" class="menu" href="https://msg.cnblogs.com/send/%E7%83%9F%E8%8A%B1%E6%95%A3%E5%B0%BD13141">
+联系</a></li>
+<li>
+<a id="blog_nav_rss" class="menu" href="javascript:void(0)" data-rss="https://www.cnblogs.com/zhangxinhua/rss/">
+订阅</a>
+<!--<partial name="./Shared/_XmlLink.cshtml" model="Model" /></li>--></li>
+<li>
+<a id="blog_nav_admin" class="menu" href="https://i.cnblogs.com/">
+管理</a>
+</li>
+</ul>
+
+
+		<div class="blogStats">
+			<div id="blog_stats_place_holder"><script>loadBlogStats();</script></div>
+		</div><!--end: blogStats -->
+	</div><!--end: navigator 博客导航栏 -->
+</div><!--end: header 头部 -->
+<div id="main">
+	<div id="mainContent">
+	<div class="forFlow">
+		<div id="post_detail">
+    <!--done-->
+    <div id="topics">
+        <div class="post">
+            <h1 class = "postTitle">
+                
+<a id="cb_post_title_url" class="postTitle2 vertical-middle" href="https://www.cnblogs.com/zhangxinhua/p/14767096.html">
+    <span>ThreadLocal引起的一次线上事故</span>
+    
+
+
+
+</a>
+
+            </h1>
+            <div class="clear"></div>
+            <div class="postBody">
+                <div id="cnblogs_post_body" class="blogpost-body cnblogs-markdown">
+<p>&gt; <em>线上用户存储数据后查看提示无权限</em></p>
+<h1 id="前言">前言</h1>
+<ul>
+<li>
+<p>不知道什么时候年轻的我曾一度认为Java没啥难度，没有我实现不了的需求，没有我解不了的bug</p>
+</li>
+<li>
+<p>直到我遇到至今难忘的一个bug 。 <em>线上用户存储数据后查看提示无权限</em></p>
+</li>
+</ul>
+<h1 id="初次定位">初次定位</h1>
+<ul>
+<li>明明自己添加的数据，为什么提示自己没有权限呢？我一开始自信的认为是我们的客户操作有问题、或者是我们权限配置有问题</li>
+<li>但是带我自己亲自验证了一下之后发现这个问题时现时不现，属于一个偶发的问题。这个在开发阶段还真的不容易发现。</li>
+</ul>
+<h2 id="问题升级">问题升级</h2>
+<ul>
+<li>
+<p>经过自己的测试后让我更加怀疑人生了，你要么就有问题要么就没问题。一会有一会没有到底又是几个意思呢？偶先的问题真的很难解决啊。问题定位到这里我已经精疲力竭了。然后就放弃了定位</p>
+</li>
+<li>
+<p>但是问题还是得解决，第二天我又硬着头皮开始研究了。可能第二天头脑比较清醒我发现我们系统中在插入数据的时候会自动获取到当前登录用户并在数据库中记录次数据的创建者及最新的修改者。这更应该说明我们的问题离谱 。但是问题在我们获取当前登录用户的时候出现了问题</p>
+</li>
+<li>
+<p>对，我将问题追踪了一下，终于将问题本质找到了。我们获取当前登录用户是通过<code>ThreadLocal</code> 来实现的。那么问题就是``ThreadLocal` 获取用户有问题</p>
+</li>
+<li>
+<p>我们分布式开发系统。我们会在每个模块里添加一个aop拦截器，通过请求头的token再去user模块查询用户基本信息。然后放到``ThreadLocal<code>中。这样我们的系统中随处都可以通过</code>ThreadLocal` 这个对象获取我们的登陆用户。</p>
+</li>
+<li>
+<p>别问我为什么要在每个模块都这样做？别问我为什么用<code>ThreadLocal</code>？别问我为什么是分布式还要这样做？ 因为今天我们重点是解决bug</p>
+<p><img src="https://img2020.cnblogs.com/blog/1002125/202105/1002125-20210514084804980-137312039.png" alt="image-20210508165554760" loading="lazy"></p>
+</li>
+</ul>
+<h2 id="开门见山">开门见山</h2>
+<ul>
+<li>问题就出现在getUser那块逻辑里。因为我们的设计就是在系统中随处都可以获取到User对象。当然我们这里指的是任何请求里。对于MQ、定时器这些模块里肯定是没有User的。因为这些没法走AOP拦截</li>
+</ul>
+<p><em>ThreadLocal获取用户信息乱串，导致用户新增数据权限异常</em></p>
+<h1 id="最终定位">最终定位</h1>
+<ul>
+<li>我们的<code>ThreadLocal</code> 是个对象，我们系统中是通过一个工具类获取这个对象的属性的。在这个对象我们提供set、get方法。</li>
+</ul>
+<p><img src="https://img2020.cnblogs.com/blog/1002125/202105/1002125-20210514084805317-2029183788.png" alt="image-20210508171309957" loading="lazy"></p>
+<ul>
+<li>上面的流程展示了在获取到User用户之后就会加入到工厂。如果工厂已经存在了就不会加入。否则就会加入我们的用户</li>
+<li>这样也是避免我们不断加入重复用户信息。因为同一个线程对应的只可能是一个用户。</li>
+</ul>
+<h2 id="思考">思考</h2>
+<pre><code class="language-java">public static UserInfo getUser() {
+    return userThreadLocal.get();
+}
+</code></pre>
+<ul>
+<li>上面是我们工具类的get方法。这就是将<code>ThreadLocal</code>对象存储的内容返回出去。这一步应该不会出现问题。</li>
+<li>在getUser中很明显没有问题，我们利用排除法只剩下了setUser了。虽然排除了别人的嫌疑但是setUser我还是看不出有什么问题。经过一阵debug断点跟踪后我发现我们setUser逻辑的确有问题</li>
+<li>setUser是将用户信息保存到``Threadlocal<code> 对象中，但是前提是</code>ThreadLocal`中没有用户。对就是这个问题，如果已经有了用户呢？那么我们真正的用户就会无法添加进去</li>
+<li>到了这里问题逐渐的明朗起来。使我们<code>ThreadLocal</code>对象管理的有问题。导致保存了上次的用户信息从而导致用户信息乱串的现象</li>
+</ul>
+<h1 id="解决问题">解决问题</h1>
+<ul>
+<li>既然我们已经定位到<code>ThreadLocal</code>的管理问题，那么我们就好办了。</li>
+</ul>
+<h2 id="threadlocal简单梳理">ThreadLocal简单梳理</h2>
+<p><img src="https://img2020.cnblogs.com/blog/1002125/202105/1002125-20210514084805513-81682450.png" alt="image-20210509151703058" loading="lazy"></p>
+<ul>
+<li><code>ThreadLocal</code> 将对象保存在线程中。换句话说就是每个线程的数据会相互隔离。基于这个特性我们可以将用户信息存储在这里，这样我们能保证我们的当前线程下执行分各种方法都能通过他获取到用户信息</li>
+<li><code>ThreadLocal</code>内部是将已自己为key， 存储对象为value存储到当前线程中的map中。这个map会随着线程的销毁而被JVM回收。</li>
+<li>但是在我们实际开发中经常会使用线程池来避免线程的重复创建及销毁。那么线程往往是不会被销毁的</li>
+<li>在Spring中集成的类似Tomcat、JBoss等web容器中都是默认使用的一定数量的线程数的。而我们在spring中使用的线程复用功能就导致了我们在获取当前线程的用户时因为此线程被别人使用过从未导致用户信息没有被更新成功。从而引发我们上面提到的奇怪的问题</li>
+<li>那么既然是没有被更新，到这里我们就很好解决了，要么每次使用完成后都将<code>ThreadLocal</code>中的数据remove。因为他内部是弱引用在下次回收就会将对象回收这样也不会造成内存泄漏的问题</li>
+<li>或者我们在我们的AOP中setUser之前先将用户<code>ThreadLocal</code>清空。两种方式都可以完美解决我们的问题</li>
+</ul>
+<h2 id="具体代码实现">具体代码实现</h2>
+<pre><code class="language-java">/**
+ * 请求生命周期最后一步销毁是做的回调事件
+ * 用于销毁在线用户信息，防止在线用户信息互相干扰(在多线程复用时)
+ */
+@WebListener
+@Primary
+public class SysServletRequestListener implements ServletRequestListener {
+    @Override
+    public void requestDestroyed(ServletRequestEvent requestEvent) {
+        UserInfoUtil.clearUserInfo();
+    }
+
+    @Override
+    public void requestInitialized(ServletRequestEvent sre) {
+
+    }
+}
+</code></pre>
+<ul>
+<li>我们可以通过spring提供的监听器，监听一个请求的生命周期在这个请求完成之后将我们的<code>ThreadLocal</code>进行remove。 为什么我推荐这种做法呢。因为请求结束就清空可以快速的让出内存让他去做更加有用的事情。</li>
+<li>如果是第二种方法那么如果我们没有人在登录，或者说在下一次登录之前这块不需要的内存永远被占着</li>
+</ul>
+<h1 id="总结忠告">总结忠告</h1>
+<ul>
+<li>这次问题出现的很是奇怪，一度让我怀疑人生，但是永远相信程序是不会无缘无故的出问题的。</li>
+<li>出问题的只能是我们的代码有问题，要善于解析问题，将问题细化，细化到我们代码层面而不是业务层面</li>
+<li>使用一个技术时最好能先了解他内部的一个原理。或者最起码先了解他的大概逻辑</li>
+<li>别看这篇文章寥寥几字就解决了我们的问题，但是实际上我在解决他的过程中吃了不少的苦。好几个夜晚都是我在陪他战斗</li>
+<li>我在定位到时<code>ThreadLocal</code>后就花了一个小时学习了下他的逻辑并跟踪了他的源码。最后结合我们的业务才发现了眉目</li>
+<li>总之有问题是好事情，有了问题我们才能成长。至少在这次的问题中我学习到了<code>ThreadLocal</code>。我的这次问题也是使用他的典型问题，另外还有一个内存泄漏的问题这是在学习他源码的过程领悟到的一点。关于内存泄漏我们有时间在看吧。问题解决。终于可以继续happy了。</li>
+</ul>
+
+</div>
+<div id="MySignature"></div>
+<div class="clear"></div>
+<div id="blog_post_info_block">
+    <div id="blog_post_info"></div>
+    <div class="clear"></div>
+    <div id="post_next_prev"></div>
+</div>
+            </div>
+            <div class="postDesc">posted @ 
+<span id="post-date">2021-05-14 08:48</span>&nbsp;
+<a href="https://www.cnblogs.com/zhangxinhua/">烟花散尽13141</a>&nbsp;
+阅读(<span id="post_view_count">53</span>)&nbsp;
+评论(<span id="post_comment_count">0</span>)&nbsp;
+<a href="https://i.cnblogs.com/EditPosts.aspx?postid=14767096" rel="nofollow">编辑</a>&nbsp;
+<a href="javascript:void(0)" onclick="AddToWz(14767096);return false;">收藏</a></div>
+        </div>
+	    
+	    
+    </div><!--end: topics 文章、评论容器-->
+</div>
+<script src="https://common.cnblogs.com/highlight/10.3.1/highlight.min.js"></script>
+<script>markdown_highlight();</script>
+<script>
+    var allowComments = true, cb_blogId = 385809, cb_blogApp = 'zhangxinhua', cb_blogUserGuid = 'af8becaf-df57-e611-9fc1-ac853d9f53cc';
+    var cb_entryId = 14767096, cb_entryCreatedDate = '2021-05-14 08:48', cb_postType = 1;
+    updatePostStats(
+        [cb_entryId],
+        function(id, count) { $("#post_view_count").text(count) },
+        function(id, count) { $("#post_comment_count").text(count) })
+    zoomManager.apply("#cnblogs_post_body img:not(.code_img_closed):not(.code_img_opened)");
+</script>
+<a name="!comments"></a>
+<div id="blog-comments-placeholder"></div>
+<div id="comment_form" class="commentform">
+    <a name="commentform"></a>
+    <div id="divCommentShow"></div>
+    <div id="comment_nav"><span id="span_refresh_tips"></span><a href="javascript:void(0);" onclick="return RefreshCommentList();" id="lnk_RefreshComments" runat="server" clientidmode="Static">刷新评论</a><a href="#" onclick="return RefreshPage();">刷新页面</a><a href="#top">返回顶部</a></div>
+    <div id="comment_form_container"></div>
+    <div class="ad_text_commentbox" id="ad_text_under_commentbox"></div>
+    <div id="ad_t2"></div>
+    <div id="opt_under_post"></div>
+    <div id="cnblogs_c1" class="under-post-card">
+        <div id='div-gpt-ad-1592365906576-0' style='width: 300px; height: 250px;'></div>
+    </div>
+    <div id="under_post_card1"></div>
+    <div id="cnblogs_c2" class="under-post-card">
+        <div id='div-gpt-ad-1592366332455-0' style='width: 468px; height: 60px;'></div>
+    </div>
+    <div id="under_post_card2"></div>
+    <div id="HistoryToday" class="under-post-card"></div>
+    <script type="text/javascript">
+       var commentManager = new blogCommentManager();
+       commentManager.renderComments(0);
+       fixPostBody();
+       deliverBigBanner();
+setTimeout(function() { incrementViewCount(cb_entryId); }, 50);       deliverT2();
+       deliverC1C2();
+       loadNewsAndKb();
+       loadBlogSignature();
+LoadPostCategoriesTags(cb_blogId, cb_entryId);       LoadPostInfoBlock(cb_blogId, cb_entryId, cb_blogApp, cb_blogUserGuid);
+       GetPrevNextPost(cb_entryId, cb_blogId, cb_entryCreatedDate, cb_postType);
+       loadOptUnderPost();
+       GetHistoryToday(cb_blogId, cb_blogApp, cb_entryCreatedDate);
+    </script>
+</div>
+
+	</div><!--end: forFlow -->
+	</div><!--end: mainContent 主体内容容器-->
+	<div id="sideBar">
+		<div id="sideBarMain">
+			<div id="sidebar_news" class="newsItem">
+            <script>loadBlogNews();</script>
+</div>
+<div id="sidebar_c3"></div>
+			<div id="blog-calendar" style="display:none"></div><script>loadBlogDefaultCalendar();</script>			
+			<div id="leftcontentcontainer">
+				<div id="blog-sidecolumn"></div>
+                    <script>loadBlogSideColumn();</script>
+			</div>			
+		</div><!--end: sideBarMain -->
+	</div><!--end: sideBar 侧边栏容器 -->
+	<div class="clear"></div>
+	</div><!--end: main -->
+	<div class="clear"></div>
+	<div id="footer">
+		<!--done-->
+Copyright &copy; 2021 烟花散尽13141
+<br /><span id="poweredby">Powered by .NET 5.0 on Kubernetes</span>
+
+
+
+	</div><!--end: footer -->
+</div><!--end: home 自定义的最大容器 -->
+
+
+    
+
+    <input type="hidden" id="antiforgery_token" value="CfDJ8L-rpLgFVEJMgssCVvNUAjs1a47yxvfdV_Qn0YiRplg-p488o_HJ456x2mm_CjjueKC-PWTu0_er0ct5KXkQ1hV3bFx67sYDCcZ2ueZR1B3TfJu57TwYaSg-BG6b8J3qpahGESLlKNq1xQDKq_NW_4Y" />
+</body>
+</html>

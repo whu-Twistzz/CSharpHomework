@@ -1,0 +1,434 @@
+﻿<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="referrer" content="origin-when-crossorigin" />
+    <meta name="description" content="前言 本文主要描述，使用布隆过滤实现高效缓存。文中采用数组做为缓存，如果需要高并发命中，则需将文中的数组换成Redis数据库。 布隆过滤 布隆缓存的创建过程如下： 1，先定义缓存bit数组（BitAr" />
+    <meta property="og:description" content="前言 本文主要描述，使用布隆过滤实现高效缓存。文中采用数组做为缓存，如果需要高并发命中，则需将文中的数组换成Redis数据库。 布隆过滤 布隆缓存的创建过程如下： 1，先定义缓存bit数组（BitAr" />
+    <meta http-equiv="Cache-Control" content="no-transform" />
+    <meta http-equiv="Cache-Control" content="no-siteapp" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>干货，使用布隆过滤器实现高效缓存！ - kiba518 - 博客园</title>
+    <link id="favicon" rel="shortcut icon" href="//common.cnblogs.com/favicon.svg" type="image/svg+xml" />
+    
+    <link rel="stylesheet" href="/css/blog-common.min.css?v=zS6-e1bxywlu3kpHvpr1J6MySwya3ztFtEnS7RYQ0Fk" />
+    <link id="MainCss" rel="stylesheet" href="/skins/codinglife/bundle-codinglife.min.css?v=2uJkpdACLVfstRQ7zeCFK19brTwKuDEaNBLgKz9nm3A" />
+    <link type="text/css" rel="stylesheet" href="https://www.cnblogs.com/kiba/custom.css?v=0oaM8e/ksggH3nzSmmNoVg6Viqw=" />
+    <link id="mobile-style" media="only screen and (max-width: 767px)" type="text/css" rel="stylesheet" href="/skins/codinglife/bundle-codinglife-mobile.min.css?v=DwDRKMd1bmjnJZ4iQqrTCO9QLlYb6OZaUAzHoHIIihg" />
+    
+    <link type="application/rss+xml" rel="alternate" href="https://www.cnblogs.com/kiba/rss" />
+    <link type="application/rsd+xml" rel="EditURI" href="https://www.cnblogs.com/kiba/rsd.xml" />
+    <link type="application/wlwmanifest+xml" rel="wlwmanifest" href="https://www.cnblogs.com/kiba/wlwmanifest.xml" />
+    <script>
+        var currentBlogId = 105918;
+        var currentBlogApp = 'kiba';
+        var cb_enable_mathjax = false;
+        var isLogined = false;
+        var isBlogOwner = false;
+        var skinName = 'CodingLife';
+        var visitorUserId = '';
+    </script>
+        <script>
+            var currentPostDateAdded = '2021-05-14 10:26';
+        </script>
+    <script src="https://common.cnblogs.com/scripts/jquery-2.2.0.min.js"></script>
+    <script src="/js/blog-common.min.js?v=2Mic1VLeHXarpdzASbXqFMIMVLEBiWXNO5yiTHUcmhw"></script>
+    
+    
+    
+</head>
+<body class="no-navbar">
+    <a name="top"></a>
+    <div id="top_nav" class="navbar forpc navbar-custom">
+        <nav id="nav_main" class="navbar-main">
+            <ul id="nav_left" class="navbar-list navbar-left">
+                <li class="navbar-branding"><a href="https://www.cnblogs.com/" title="开发者的网上家园"><img src="/images/logo.svg?v=R9M0WmLAIPVydmdzE2keuvnjl-bPR7_35oHqtiBzGsM" alt="博客园Logo" /></a></li>
+                <li><a href="/" onclick="ga('send', 'event', 'Link', 'click', 'skin-navbar-sitehome')">首页</a></li>
+                <li><a href="https://news.cnblogs.com/" onclick="ga('send', 'event', 'Link', 'click', 'skin-navbar-news')">新闻</a></li>
+                <li><a href="https://q.cnblogs.com/" onclick="ga('send', 'event', 'Link', 'click', 'skin-navbar-q')">博问</a></li>
+                <li><a id="nav_brandzone" href="https://brands.cnblogs.com/" onclick="ga('send', 'event', 'Link', 'click', 'skin-navbar-brands')">专区</a></li>
+                <li><a href="https://ing.cnblogs.com/" onclick="ga('send', 'event', 'Link', 'click', 'skin-navbar-ing')">闪存</a></li>
+                <li><a href="https://edu.cnblogs.com/" onclick="ga('send', 'event', 'Link', 'click', 'skin-navbar-edu')">班级</a></li>
+            </ul>
+            <ul id="nav_right" class="navbar-list navbar-right">
+                <li>
+                    <form id="zzk_search" class="navbar-search" action="https://zzk.cnblogs.com/s" method="get">
+                        <input name="w" id="zzk_search_input" placeholder="代码改变世界" type="text" tabindex="3" />
+                        <button type="submit" id="zzk_search_button">
+                            <img src="/images/aggsite/search.svg" alt="搜索" />
+                        </button>
+                    </form>
+                </li>
+                <li id="navbar_login_status" class="navbar-list">
+                    <a class="navbar-user-info navbar-blog" href="https://i.cnblogs.com/EditPosts.aspx?opt=1" alt="写随笔" title="写随笔">
+                        <img id="new_post_icon" class="navbar-icon" src="/images/aggsite/newpost.svg" alt="写随笔" />
+                    </a>
+                    <a id="navblog-myblog-icon" class="navbar-user-info navbar-blog" href="https://passport.cnblogs.com/GetBlogApplyStatus.aspx" alt="我的博客" title="我的博客">
+                        <img id="myblog_icon" class="navbar-icon" src="/images/aggsite/myblog.svg" alt="我的博客" />
+                    </a>
+                    <a class="navbar-user-info navbar-message navbar-icon-wrapper" href="https://msg.cnblogs.com/" alt="短消息" title="短消息">
+                        <img id="msg_icon" class="navbar-icon" src="/images/aggsite/message.svg?v=J0WS2P2iPgaIVgXxcAhliw4AFZIpaTWxtdoNAv9eiCA" alt="短消息" />
+                        <span id="msg_count" style="display: none"></span>
+                    </a>
+                    <div id="user_info" class="navbar-user-info dropdown">
+                        <a class="dropdown-button" href="https://home.cnblogs.com/">
+                            <img id="user_icon" class="navbar-avatar" src="/images/aggsite/avatar-default.svg" alt="用户头像" />
+                        </a>
+                        <div class="dropdown-menu">
+                            <a id="navblog-myblog-text" href="https://passport.cnblogs.com/GetBlogApplyStatus.aspx">我的博客</a>
+                            <a href="https://home.cnblogs.com/">我的园子</a>
+                            <a href="https://account.cnblogs.com/settings/account">账号设置</a>
+                            <a href="javascript:void(0)" id="navbar_lite_mode_toggle" title="简洁模式会使用简洁款皮肤显示所有博客">
+    简洁模式 <img id="navbar_lite_mode_on" src="/images/lite-mode-check.svg" class="hide" /><span id="navbar_lite_mode_spinner" class="hide">...</span>
+</a>
+                            <a href="javascript:void(0)" onclick="account.logout();">退出登录</a>
+                        </div>
+                    </div>
+                    <a class="navbar-anonymous" href="https://account.cnblogs.com/signup/">注册</a>
+                    <a class="navbar-anonymous" href="javascript:void(0);" onclick="account.login()">登录</a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+
+    <div id="page_begin_html">
+        <div class="c-portrait">
+  <img src="https://pic.cnblogs.com/avatar/243596/20180629143127.png" alt="Kiba518" />
+
+  <h1><a href="https://www.cnblogs.com/kiba/">Kiba518</a></h1>
+  <h2>   博文原创，力求真实，无谓是非，只为留痕。</h2>
+
+  <div class="c-social">
+    
+  </div>
+</div>
+
+<a href="https://github.com/kiba518/KibaFramework">  
+<img style="position: absolute; top: 0; right: 0; border: 0;" 
+    src="https://camo.githubusercontent.com/e7bbb0521b397edbd5fe43e7f760759336b5e05f/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f677265656e5f3030373230302e706e67" 
+    alt="Fork me on GitHub" 
+    data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_right_green_007200.png">
+</a>
+    </div>
+    <!--done-->
+<div id="home">
+<div id="header">
+	<div id="blogTitle">
+        <a id="lnkBlogLogo" href="https://www.cnblogs.com/kiba/"><img id="blogLogo" src="/skins/custom/images/logo.gif" alt="返回主页" /></a>		
+		
+<!--done-->
+<h1><a id="Header1_HeaderTitle" class="headermaintitle HeaderMainTitle" href="https://www.cnblogs.com/kiba/">kiba518</a>
+</h1>
+<h2>天下多少有情事，满眼尽是无奈人。</h2>
+
+
+
+
+		
+	</div><!--end: blogTitle 博客的标题和副标题 -->
+	<div id="navigator">
+		
+<ul id="navList">
+<li><a id="blog_nav_sitehome" class="menu" href="https://www.cnblogs.com/">
+博客园</a>
+</li>
+<li>
+<a id="blog_nav_myhome" class="menu" href="https://www.cnblogs.com/kiba/">
+首页</a>
+</li>
+<li>
+
+<a id="blog_nav_newpost" class="menu" href="https://i.cnblogs.com/EditPosts.aspx?opt=1">
+新随笔</a>
+</li>
+<li>
+<a id="blog_nav_contact" class="menu" href="https://msg.cnblogs.com/send/kiba518">
+联系</a></li>
+<li>
+<a id="blog_nav_rss" class="menu" href="javascript:void(0)" data-rss="https://www.cnblogs.com/kiba/rss/">
+订阅</a>
+<!--<partial name="./Shared/_XmlLink.cshtml" model="Model" /></li>--></li>
+<li>
+<a id="blog_nav_admin" class="menu" href="https://i.cnblogs.com/">
+管理</a>
+</li>
+</ul>
+
+
+		<div class="blogStats">
+			<div id="blog_stats_place_holder"><script>loadBlogStats();</script></div>
+		</div><!--end: blogStats -->
+	</div><!--end: navigator 博客导航栏 -->
+</div><!--end: header 头部 -->
+<div id="main">
+	<div id="mainContent">
+	<div class="forFlow">
+		<div id="post_detail">
+    <!--done-->
+    <div id="topics">
+        <div class="post">
+            <h1 class = "postTitle">
+                
+<a id="cb_post_title_url" class="postTitle2 vertical-middle" href="https://www.cnblogs.com/kiba/p/14767430.html">
+    <span>干货，使用布隆过滤器实现高效缓存！</span>
+    
+
+
+
+</a>
+
+            </h1>
+            <div class="clear"></div>
+            <div class="postBody">
+                <div id="cnblogs_post_body" class="blogpost-body blogpost-body-html">
+<p style="width: 100%; background: rgba(65, 105, 225, 1); color: rgba(255, 255, 255, 1); height: 50px; font-size: 30px; line-height: 50px">前言</p>
+<p class="md-end-block md-p"><span class="md-plain">本文主要描述，使用布隆过滤实现高效缓存。文中采用数组做为缓存，如果需要高并发命中，则需将文中的数组换成Redis数据库。</span></p>
+<p style="width: 100%; background: rgba(65, 105, 225, 1); color: rgba(255, 255, 255, 1); height: 50px; font-size: 30px; line-height: 50px">布隆过滤</p>
+<p class="md-end-block md-p"><span class="md-plain">布隆缓存的创建过程如下：</span></p>
+<p class="md-end-block md-p"><span class="md-plain">1，先定义缓存bit数组（BitArray），数组的长度就是缓存数据的最大数量。</span></p>
+<p class="md-end-block md-p"><span class="md-plain">2，然后将字符串通过哈希运算，求出它的HashCode。</span></p>
+<p class="md-end-block md-p"><span class="md-plain">3，然后将HashCode作为伪随机数生成器（Random）的种子，生成一个小于最大数量的正数x。</span></p>
+<p class="md-end-block md-p"><span class="md-plain">4，然后将这x作为缓存数组的索引，将数组[x]的值设置为true。</span></p>
+<p class="md-end-block md-p"><strong><span class="md-plain">布隆过滤</span></strong></p>
+<p class="md-end-block md-p md-focus"><span class="md-plain md-expand">将获取到的字符串，通过上述前三步运算，计算出数组索引，然后在布隆缓存里取出指定索引的值，如果为True，则缓存存在，可以使用这个字符串去真正的数据缓存中取数据，如果未Fasle，则缓存不存在则去数据库中取数据。</span></p>
+<p style="width: 100%; background: rgba(65, 105, 225, 1); color: rgba(255, 255, 255, 1); height: 50px; font-size: 30px; line-height: 50px">代码实现</p>
+<p class="md-end-block md-p"><span class="md-plain">首先建立WinForm项目BloomTest。</span></p>
+<p class="md-end-block md-p"><span class="md-plain">然后编写布隆过滤器，代码如下：</span></p>
+<div class="cnblogs_code">
+<pre><span style="color: rgba(0, 0, 255, 1)">public</span> <span style="color: rgba(0, 0, 255, 1)">class</span><span style="color: rgba(0, 0, 0, 1)"> BloomFilter
+{
+    </span><span style="color: rgba(0, 128, 0, 1)">//</span><span style="color: rgba(0, 128, 0, 1)">布隆缓存数组</span>
+    <span style="color: rgba(0, 0, 255, 1)">public</span><span style="color: rgba(0, 0, 0, 1)"> BitArray BloomCache;
+    </span><span style="color: rgba(0, 128, 0, 1)">//</span><span style="color: rgba(0, 128, 0, 1)">布隆缓存数组的长度</span>
+    <span style="color: rgba(0, 0, 255, 1)">public</span> Int64 BloomCacheLength { <span style="color: rgba(0, 0, 255, 1)">get</span><span style="color: rgba(0, 0, 0, 1)">; } 
+    </span><span style="color: rgba(0, 0, 255, 1)">public</span> Int64 HashCount { <span style="color: rgba(0, 0, 255, 1)">get</span><span style="color: rgba(0, 0, 0, 1)">; }
+     
+    </span><span style="color: rgba(128, 128, 128, 1)">///</span> <span style="color: rgba(128, 128, 128, 1)">&lt;summary&gt;</span>
+    <span style="color: rgba(128, 128, 128, 1)">///</span> 
+    <span style="color: rgba(128, 128, 128, 1)">///</span> <span style="color: rgba(128, 128, 128, 1)">&lt;/summary&gt;</span>
+    <span style="color: rgba(128, 128, 128, 1)">///</span> <span style="color: rgba(128, 128, 128, 1)">&lt;param name="bloomCacheLength"&gt;</span><span style="color: rgba(0, 128, 0, 1)">布隆缓存数组的长度，默认20000</span><span style="color: rgba(128, 128, 128, 1)">&lt;/param&gt;</span> 
+    <span style="color: rgba(128, 128, 128, 1)">///</span> <span style="color: rgba(128, 128, 128, 1)">&lt;param name="hashCount"&gt;</span><span style="color: rgba(0, 128, 0, 1)">hash运算次数，默认3</span><span style="color: rgba(128, 128, 128, 1)">&lt;/param&gt;</span>
+    <span style="color: rgba(0, 0, 255, 1)">public</span> BloomFilter(<span style="color: rgba(0, 0, 255, 1)">int</span> bloomCacheLength = <span style="color: rgba(128, 0, 128, 1)">20000</span>,  <span style="color: rgba(0, 0, 255, 1)">int</span> hashCount = <span style="color: rgba(128, 0, 128, 1)">3</span><span style="color: rgba(0, 0, 0, 1)">)
+    {
+        BloomCache </span>= <span style="color: rgba(0, 0, 255, 1)">new</span><span style="color: rgba(0, 0, 0, 1)"> BitArray(bloomCacheLength);
+        BloomCacheLength </span>=<span style="color: rgba(0, 0, 0, 1)"> bloomCacheLength; 
+        HashCount </span>=<span style="color: rgba(0, 0, 0, 1)"> hashCount;
+    }
+    </span><span style="color: rgba(0, 0, 255, 1)">public</span> <span style="color: rgba(0, 0, 255, 1)">void</span> Add(<span style="color: rgba(0, 0, 255, 1)">string</span><span style="color: rgba(0, 0, 0, 1)"> str)
+    {
+        </span><span style="color: rgba(0, 0, 255, 1)">var</span> hashCode =<span style="color: rgba(0, 0, 0, 1)">str.GetHashCode();
+        Random random </span>= <span style="color: rgba(0, 0, 255, 1)">new</span><span style="color: rgba(0, 0, 0, 1)"> Random(hashCode);
+        </span><span style="color: rgba(0, 0, 255, 1)">for</span> (<span style="color: rgba(0, 0, 255, 1)">int</span> i = <span style="color: rgba(128, 0, 128, 1)">0</span>; i &lt; HashCount; i++<span style="color: rgba(0, 0, 0, 1)">)
+        {
+            </span><span style="color: rgba(0, 0, 255, 1)">var</span> x = random.Next((<span style="color: rgba(0, 0, 255, 1)">int</span>)(BloomCacheLength - <span style="color: rgba(128, 0, 128, 1)">1</span><span style="color: rgba(0, 0, 0, 1)">));
+            BloomCache[x] </span>= <span style="color: rgba(0, 0, 255, 1)">true</span><span style="color: rgba(0, 0, 0, 1)">;
+        }
+    }
+​
+    </span><span style="color: rgba(0, 0, 255, 1)">public</span> <span style="color: rgba(0, 0, 255, 1)">bool</span> IsExist(<span style="color: rgba(0, 0, 255, 1)">string</span><span style="color: rgba(0, 0, 0, 1)"> str)
+    {
+        </span><span style="color: rgba(0, 0, 255, 1)">var</span> hashCode =<span style="color: rgba(0, 0, 0, 1)"> str.GetHashCode();
+        Random random </span>= <span style="color: rgba(0, 0, 255, 1)">new</span><span style="color: rgba(0, 0, 0, 1)"> Random(hashCode);
+        </span><span style="color: rgba(0, 0, 255, 1)">for</span> (<span style="color: rgba(0, 0, 255, 1)">int</span> i = <span style="color: rgba(128, 0, 128, 1)">0</span>; i &lt; HashCount; i++<span style="color: rgba(0, 0, 0, 1)">)
+        {
+            </span><span style="color: rgba(0, 0, 255, 1)">if</span> (!BloomCache[random.Next((<span style="color: rgba(0, 0, 255, 1)">int</span>)(BloomCacheLength - <span style="color: rgba(128, 0, 128, 1)">1</span><span style="color: rgba(0, 0, 0, 1)">))])
+            {
+                </span><span style="color: rgba(0, 0, 255, 1)">return</span> <span style="color: rgba(0, 0, 255, 1)">false</span><span style="color: rgba(0, 0, 0, 1)">;
+            }
+        }
+        </span><span style="color: rgba(0, 0, 255, 1)">return</span> <span style="color: rgba(0, 0, 255, 1)">true</span><span style="color: rgba(0, 0, 0, 1)">;
+    }
+​
+    </span><span style="color: rgba(0, 128, 0, 1)">//</span><span style="color: rgba(0, 128, 0, 1)">错误率查看</span>
+    <span style="color: rgba(0, 0, 255, 1)">public</span> <span style="color: rgba(0, 0, 255, 1)">double</span> GetFalsePositiveProbability(<span style="color: rgba(0, 0, 255, 1)">double</span><span style="color: rgba(0, 0, 0, 1)"> setSize)
+    {
+        </span><span style="color: rgba(0, 128, 0, 1)">//</span><span style="color: rgba(0, 128, 0, 1)"> (1 - e^(-k * n / m)) ^ k</span>
+        <span style="color: rgba(0, 0, 255, 1)">return</span> Math.Pow((<span style="color: rgba(128, 0, 128, 1)">1</span> - Math.Exp(-HashCount * setSize /<span style="color: rgba(0, 0, 0, 1)"> BloomCacheLength)), HashCount);
+    }
+    </span><span style="color: rgba(0, 128, 0, 1)">//</span><span style="color: rgba(0, 128, 0, 1)">计算基于布隆过滤器散列的最佳数量，即hashCount的最佳值</span>
+    <span style="color: rgba(0, 0, 255, 1)">public</span> <span style="color: rgba(0, 0, 255, 1)">int</span> OptimalNumberOfHashes(<span style="color: rgba(0, 0, 255, 1)">int</span><span style="color: rgba(0, 0, 0, 1)"> setSize)
+    {
+        </span><span style="color: rgba(0, 0, 255, 1)">return</span> (<span style="color: rgba(0, 0, 255, 1)">int</span>)Math.Ceiling((BloomCacheLength / setSize) * Math.Log(<span style="color: rgba(128, 0, 128, 1)">2.0</span><span style="color: rgba(0, 0, 0, 1)">));
+    }
+​
+}</span></pre>
+</div>
+<p class="md-end-block md-p"><span class="md-plain">然后编写布隆过滤器的使用代码，如下：</span></p>
+<div class="cnblogs_code">
+<pre> <span style="color: rgba(0, 0, 255, 1)">public</span> <span style="color: rgba(0, 0, 255, 1)">partial</span> <span style="color: rgba(0, 0, 255, 1)">class</span><span style="color: rgba(0, 0, 0, 1)"> Form1 : Form
+    {
+        BloomFilter bloom </span>= <span style="color: rgba(0, 0, 255, 1)">new</span> BloomFilter(<span style="color: rgba(128, 0, 128, 1)">20000</span>, <span style="color: rgba(128, 0, 128, 1)">3</span><span style="color: rgba(0, 0, 0, 1)">);
+        </span><span style="color: rgba(0, 0, 255, 1)">int</span> setSize = <span style="color: rgba(128, 0, 128, 1)">2000</span><span style="color: rgba(0, 0, 0, 1)">;
+        </span><span style="color: rgba(0, 0, 255, 1)">public</span><span style="color: rgba(0, 0, 0, 1)"> Form1()
+        {
+            InitializeComponent();
+            </span><span style="color: rgba(0, 128, 0, 1)">//</span><span style="color: rgba(0, 128, 0, 1)">生成布隆缓存数组</span>
+            <span style="color: rgba(0, 0, 255, 1)">for</span> (<span style="color: rgba(0, 0, 255, 1)">int</span> i = <span style="color: rgba(128, 0, 128, 1)">0</span>; i &lt; setSize; i++<span style="color: rgba(0, 0, 0, 1)">)
+            {
+                bloom.Add(</span><span style="color: rgba(128, 0, 0, 1)">"</span><span style="color: rgba(128, 0, 0, 1)">kiba</span><span style="color: rgba(128, 0, 0, 1)">"</span> +<span style="color: rgba(0, 0, 0, 1)"> i);
+            }
+        } 
+        </span><span style="color: rgba(0, 0, 255, 1)">private</span> <span style="color: rgba(0, 0, 255, 1)">void</span> btnSearch_Click(<span style="color: rgba(0, 0, 255, 1)">object</span><span style="color: rgba(0, 0, 0, 1)"> sender, EventArgs e)
+        { 
+            Stopwatch sw </span>= <span style="color: rgba(0, 0, 255, 1)">new</span><span style="color: rgba(0, 0, 0, 1)"> Stopwatch();
+            sw.Start();
+            </span><span style="color: rgba(0, 0, 255, 1)">string</span> con =<span style="color: rgba(0, 0, 0, 1)"> tbCon.Text.Trim();
+            </span><span style="color: rgba(0, 0, 255, 1)">var</span> ret =<span style="color: rgba(0, 0, 0, 1)"> bloom.IsExist(con);
+            sw.Stop();
+            lblRet.Text </span>= $<span style="color: rgba(128, 0, 0, 1)">@"</span><span style="color: rgba(128, 0, 0, 1)">结果:{ret}{Environment.NewLine}
+耗时:{sw.ElapsedTicks}{Environment.NewLine}
+错误概率:{bloom.GetFalsePositiveProbability(setSize)}{Environment.NewLine} 
+最佳数量:{bloom.OptimalNumberOfHashes(setSize)}</span><span style="color: rgba(128, 0, 0, 1)">"</span><span style="color: rgba(0, 0, 0, 1)">; 
+        } 
+    }</span></pre>
+</div>
+<h4 class="md-end-block md-heading"><span class="md-plain">测试结果</span></h4>
+<p class="md-end-block md-p"><span class="md-plain">运行项目，点击查询数据。</span></p>
+<p class="md-end-block md-p"><img src="https://img2020.cnblogs.com/blog/243596/202105/243596-20210514101237869-1762835188.png" alt="" loading="lazy"></p>
+<p class="md-end-block md-p"><span class="md-plain">如上图所示，我们成功命中了，如果在项目中，命中了就可以查询真实缓存了。</span></p>
+<h4 class="md-end-block md-heading"><span class="md-plain">错误概率</span></h4>
+<p class="md-end-block md-p"><span class="md-plain">布隆缓存存在命中错误，即如果两个数据的哈希运算后值相同，那么久会存在命中失败的问题。</span></p>
+<p class="md-end-block md-p"><span class="md-plain">错误概率可以通过哈希运算次数和布隆缓存数组长度和插入数据数量计算出来。</span></p>
+<h4 class="md-end-block md-heading"><span class="md-plain">最佳数量</span></h4>
+<p class="md-end-block md-p"><span class="md-plain">布隆缓存建议我们多做几次哈希运算，即多存几个缓存索引，文中默认创建3个。</span></p>
+<p class="md-end-block md-p"><span class="md-plain">我们代码中，向布隆缓存数组中插入了2000个数据，通过计算得出，最佳的哈希运算次数为7，即当插入数量为2000，布隆缓存数组长度为20000时，HashCount的最优值为7。</span></p>
+<h4 class="md-end-block md-heading"><span class="md-plain">应用场景</span></h4>
+<p class="md-end-block md-p"><span class="md-plain">布隆缓存有很多场景可以应用，比如重复URL检测，黑名单验证，垃圾邮件过滤等等。</span></p>
+<p class="md-end-block md-p"><span class="md-plain">举个例子，爬虫在爬取网站之前，会先通过布隆过滤计算出该Url是否已经爬取过，再确定是否发起Http请求。</span></p>
+<p style="width: 100%; background: rgba(65, 105, 225, 1); color: rgba(255, 255, 255, 1); height: 50px; font-size: 30px; line-height: 50px">关于缓存穿透、缓存击穿、缓存雪崩</p>
+<h4 class="md-end-block md-heading"><span class="md-plain">缓存穿透</span></h4>
+<p class="md-end-block md-p"><span class="md-plain">缓存穿透是指缓存和数据库中都没有的数据，这时用户不断的发起这样的请求，会对数据库和缓存造成比较大的压力。</span></p>
+<p class="md-end-block md-p"><span class="md-plain">解决方案：增加更多，更有效的数据校验，让这些请求在进入查询前被拦截。将缓存和数据库中都没有的数据写入缓存，并设置一个较短的有效期，用来防止该请求多次进入到数据库。</span></p>
+<h4 class="md-end-block md-heading"><span class="md-plain">缓存击穿</span></h4>
+<p class="md-end-block md-p"><span class="md-plain">缓存击穿是指缓存中的数据正好到期，然后又突然出现大量该数据的访问。导致大量请求直接发送到数据库。</span></p>
+<p class="md-end-block md-p"><span class="md-plain">解决方案：对数据进行热点标记，然后对热点数据进行特殊有效期设置。对普通数据进行有效期延长处理，比如被请求过一次，加长固定时间的有效期。</span></p>
+<h4 class="md-end-block md-heading"><span class="md-plain">缓存雪崩</span></h4>
+<p class="md-end-block md-p"><span class="md-plain">缓存雪崩与缓存击穿的意思类似，区别在于，缓存击穿指的是只有一条数据直接请求数据库，而雪崩指的是很多这样的数据直接请求数据库。</span></p>
+<p class="md-end-block md-p"><span class="md-plain">解决方案：缓存数据库分布式部署。</span></p>
+<p style="width: 100%; background: rgba(65, 105, 225, 1); color: rgba(255, 255, 255, 1); height: 50px; font-size: 30px; line-height: 50px">结语</p>
+<p class="md-end-block md-p"><span class="md-plain">布隆缓存因为存在误判，所以不能用于百分之百定位数据的场景，但如果该场景可以容错，那布隆缓存将大大提升性能。</span></p>
+<p>----------------------------------------------------------------------------------------------------</p>
+<p class="md-end-block md-p">到此，到此布隆过滤就已经介绍完了。</p>
+<p>代码已经传到Github上了，欢迎大家下载。</p>
+<p style="border: 2px solid rgba(115, 191, 0, 1); padding: 10px 40px; background: rgba(204, 255, 128, 1); border-radius: 15px; -moz-border-radius: 15px">Github地址：&nbsp;<a href="https://github.com/kiba518/BloomFilter_Kiba">https://github.com/kiba518/BloomFilter_Kiba</a></p>
+<p>----------------------------------------------------------------------------------------------------</p>
+<p>注：此文章为原创，任何形式的转载都请联系作者获得授权并注明出处！<br>若您觉得这篇文章还不错，请点击下方的<span style="color: rgba(255, 0, 0, 1)">【<strong>推荐】</strong></span>，非常感谢！</p>
+<p><a href="https://www.cnblogs.com/kiba/p/14767430.html" target="_blank">https://www.cnblogs.com/kiba/p/14767430.html</a></p>
+<p>&nbsp;<img src="https://img2018.cnblogs.com/blog/243596/201909/243596-20190904083750507-629449790.png" alt=""></p>
+<p>&nbsp;</p>
+</div>
+<div id="MySignature"></div>
+<div class="clear"></div>
+<div id="blog_post_info_block">
+    <div id="blog_post_info"></div>
+    <div class="clear"></div>
+    <div id="post_next_prev"></div>
+</div>
+            </div>
+            <div class="postDesc">posted @ 
+<span id="post-date">2021-05-14 10:26</span>&nbsp;
+<a href="https://www.cnblogs.com/kiba/">kiba518</a>&nbsp;
+阅读(<span id="post_view_count">162</span>)&nbsp;
+评论(<span id="post_comment_count">5</span>)&nbsp;
+<a href="https://i.cnblogs.com/EditPosts.aspx?postid=14767430" rel="nofollow">编辑</a>&nbsp;
+<a href="javascript:void(0)" onclick="AddToWz(14767430);return false;">收藏</a></div>
+        </div>
+	    
+	    
+    </div><!--end: topics 文章、评论容器-->
+</div>
+<script src="https://common.cnblogs.com/highlight/10.3.1/highlight.min.js"></script>
+<script>markdown_highlight();</script>
+<script>
+    var allowComments = true, cb_blogId = 105918, cb_blogApp = 'kiba', cb_blogUserGuid = '7b27ca91-b908-e011-ac81-842b2b196315';
+    var cb_entryId = 14767430, cb_entryCreatedDate = '2021-05-14 10:26', cb_postType = 1;
+    updatePostStats(
+        [cb_entryId],
+        function(id, count) { $("#post_view_count").text(count) },
+        function(id, count) { $("#post_comment_count").text(count) })
+    zoomManager.apply("#cnblogs_post_body img:not(.code_img_closed):not(.code_img_opened)");
+</script>
+<a name="!comments"></a>
+<div id="blog-comments-placeholder"></div>
+<div id="comment_form" class="commentform">
+    <a name="commentform"></a>
+    <div id="divCommentShow"></div>
+    <div id="comment_nav"><span id="span_refresh_tips"></span><a href="javascript:void(0);" onclick="return RefreshCommentList();" id="lnk_RefreshComments" runat="server" clientidmode="Static">刷新评论</a><a href="#" onclick="return RefreshPage();">刷新页面</a><a href="#top">返回顶部</a></div>
+    <div id="comment_form_container"></div>
+    <div class="ad_text_commentbox" id="ad_text_under_commentbox"></div>
+    <div id="ad_t2"></div>
+    <div id="opt_under_post"></div>
+    <div id="cnblogs_c1" class="under-post-card">
+        <div id='div-gpt-ad-1592365906576-0' style='width: 300px; height: 250px;'></div>
+    </div>
+    <div id="under_post_card1"></div>
+    <div id="cnblogs_c2" class="under-post-card">
+        <div id='div-gpt-ad-1592366332455-0' style='width: 468px; height: 60px;'></div>
+    </div>
+    <div id="under_post_card2"></div>
+    <div id="HistoryToday" class="under-post-card"></div>
+    <script type="text/javascript">
+       var commentManager = new blogCommentManager();
+       commentManager.renderComments(0);
+       fixPostBody();
+       deliverBigBanner();
+setTimeout(function() { incrementViewCount(cb_entryId); }, 50);       deliverT2();
+       deliverC1C2();
+       loadNewsAndKb();
+       loadBlogSignature();
+LoadPostCategoriesTags(cb_blogId, cb_entryId);       LoadPostInfoBlock(cb_blogId, cb_entryId, cb_blogApp, cb_blogUserGuid);
+       GetPrevNextPost(cb_entryId, cb_blogId, cb_entryCreatedDate, cb_postType);
+       loadOptUnderPost();
+       GetHistoryToday(cb_blogId, cb_blogApp, cb_entryCreatedDate);
+    </script>
+</div>
+
+	</div><!--end: forFlow -->
+	</div><!--end: mainContent 主体内容容器-->
+	<div id="sideBar">
+		<div id="sideBarMain">
+			<div id="sidebar_news" class="newsItem">
+            <script>loadBlogNews();</script>
+</div>
+<div id="sidebar_c3"></div>
+			<div id="blog-calendar" style="display:none"></div><script>loadBlogDefaultCalendar();</script>			
+			<div id="leftcontentcontainer">
+				<div id="blog-sidecolumn"></div>
+                    <script>loadBlogSideColumn();</script>
+			</div>			
+		</div><!--end: sideBarMain -->
+	</div><!--end: sideBar 侧边栏容器 -->
+	<div class="clear"></div>
+	</div><!--end: main -->
+	<div class="clear"></div>
+	<div id="footer">
+		<!--done-->
+Copyright &copy; 2021 kiba518
+<br /><span id="poweredby">Powered by .NET 5.0 on Kubernetes</span>
+
+
+
+	</div><!--end: footer -->
+</div><!--end: home 自定义的最大容器 -->
+
+
+    <div id="page_end_html">
+        <script>
+window.tctipConfig = {
+staticPrefix: "http://static.tctip.com",
+cssPrefix: "http://static.tctip.com",
+buttonImageId: 5,
+buttonTip: "dashang",
+list:{
+alipay: {qrimg: "https://img2018.cnblogs.com/blog/243596/201908/243596-20190807102706448-1098463005.jpg"},
+weixin:{qrimg: "https://img2018.cnblogs.com/blog/243596/201908/243596-20190807102706448-1098463005.jpg"},
+}
+};
+</script>
+<script src="http://static.tctip.com/js/tctip.min.js"></script>
+    </div>
+
+    <input type="hidden" id="antiforgery_token" value="CfDJ8L-rpLgFVEJMgssCVvNUAjvj0xtML-2-ODu80aIMHaGTxGA9urk_nEZJb14ue_jA9ccFJ0yyOROZms2v5XkpQPbfE2lhS3sFK_CAvfrt2RkAtKT0LWJVCCEk7NWhiFxPVu0GJGPZTmtxz6g3uSBEqec" />
+</body>
+</html>

@@ -1,0 +1,2152 @@
+﻿<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="referrer" content="origin-when-crossorigin" />
+    <meta name="description" content="本文所有代码，均上传至github，如果你想直接看源代码，请到github下载，下载地址：https://github.com/vitalitylee/TextEditor “C语言只能写有一个黑框的" />
+    <meta property="og:description" content="本文所有代码，均上传至github，如果你想直接看源代码，请到github下载，下载地址：https://github.com/vitalitylee/TextEditor “C语言只能写有一个黑框的" />
+    <meta http-equiv="Cache-Control" content="no-transform" />
+    <meta http-equiv="Cache-Control" content="no-siteapp" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>曾经我认为C语言就是个弟弟 - plle - 博客园</title>
+    <link id="favicon" rel="shortcut icon" href="//common.cnblogs.com/favicon.svg" type="image/svg+xml" />
+    
+    <link rel="stylesheet" href="/css/blog-common.min.css?v=zS6-e1bxywlu3kpHvpr1J6MySwya3ztFtEnS7RYQ0Fk" />
+    <link id="MainCss" rel="stylesheet" href="/skins/blacklowkey/bundle-blacklowkey.min.css?v=1gj9-XJKL9BZFkjdvROYQPiPWjQXk-hsXXZGtqkfaSc" />
+    
+    <link id="mobile-style" media="only screen and (max-width: 767px)" type="text/css" rel="stylesheet" href="/skins/blacklowkey/bundle-blacklowkey-mobile.min.css?v=zrVn_w7PYXoSvEFaixHbQGlNNXNZ3h27-9PpkXZLYns" />
+    
+    <link type="application/rss+xml" rel="alternate" href="https://www.cnblogs.com/lee2014/rss" />
+    <link type="application/rsd+xml" rel="EditURI" href="https://www.cnblogs.com/lee2014/rsd.xml" />
+    <link type="application/wlwmanifest+xml" rel="wlwmanifest" href="https://www.cnblogs.com/lee2014/wlwmanifest.xml" />
+    <script>
+        var currentBlogId = 201721;
+        var currentBlogApp = 'lee2014';
+        var cb_enable_mathjax = false;
+        var isLogined = false;
+        var isBlogOwner = false;
+        var skinName = 'BlackLowKey';
+        var visitorUserId = '';
+    </script>
+        <script>
+            var currentPostDateAdded = '2021-05-13 01:57';
+        </script>
+    <script src="https://common.cnblogs.com/scripts/jquery-2.2.0.min.js"></script>
+    <script src="/js/blog-common.min.js?v=2Mic1VLeHXarpdzASbXqFMIMVLEBiWXNO5yiTHUcmhw"></script>
+    
+    
+    
+</head>
+<body class="has-navbar">
+    <a name="top"></a>
+    <div id="top_nav" class="navbar forpc">
+        <nav id="nav_main" class="navbar-main">
+            <ul id="nav_left" class="navbar-list navbar-left">
+                <li class="navbar-branding"><a href="https://www.cnblogs.com/" title="开发者的网上家园"><img src="/images/logo.svg?v=R9M0WmLAIPVydmdzE2keuvnjl-bPR7_35oHqtiBzGsM" alt="博客园Logo" /></a></li>
+                <li><a href="/" onclick="ga('send', 'event', 'Link', 'click', 'skin-navbar-sitehome')">首页</a></li>
+                <li><a href="https://news.cnblogs.com/" onclick="ga('send', 'event', 'Link', 'click', 'skin-navbar-news')">新闻</a></li>
+                <li><a href="https://q.cnblogs.com/" onclick="ga('send', 'event', 'Link', 'click', 'skin-navbar-q')">博问</a></li>
+                <li><a id="nav_brandzone" href="https://brands.cnblogs.com/" onclick="ga('send', 'event', 'Link', 'click', 'skin-navbar-brands')">专区</a></li>
+                <li><a href="https://ing.cnblogs.com/" onclick="ga('send', 'event', 'Link', 'click', 'skin-navbar-ing')">闪存</a></li>
+                <li><a href="https://edu.cnblogs.com/" onclick="ga('send', 'event', 'Link', 'click', 'skin-navbar-edu')">班级</a></li>
+            </ul>
+            <ul id="nav_right" class="navbar-list navbar-right">
+                <li>
+                    <form id="zzk_search" class="navbar-search" action="https://zzk.cnblogs.com/s" method="get">
+                        <input name="w" id="zzk_search_input" placeholder="代码改变世界" type="text" tabindex="3" />
+                        <button type="submit" id="zzk_search_button">
+                            <img src="/images/aggsite/search.svg" alt="搜索" />
+                        </button>
+                    </form>
+                </li>
+                <li id="navbar_login_status" class="navbar-list">
+                    <a class="navbar-user-info navbar-blog" href="https://i.cnblogs.com/EditPosts.aspx?opt=1" alt="写随笔" title="写随笔">
+                        <img id="new_post_icon" class="navbar-icon" src="/images/aggsite/newpost.svg" alt="写随笔" />
+                    </a>
+                    <a id="navblog-myblog-icon" class="navbar-user-info navbar-blog" href="https://passport.cnblogs.com/GetBlogApplyStatus.aspx" alt="我的博客" title="我的博客">
+                        <img id="myblog_icon" class="navbar-icon" src="/images/aggsite/myblog.svg" alt="我的博客" />
+                    </a>
+                    <a class="navbar-user-info navbar-message navbar-icon-wrapper" href="https://msg.cnblogs.com/" alt="短消息" title="短消息">
+                        <img id="msg_icon" class="navbar-icon" src="/images/aggsite/message.svg?v=J0WS2P2iPgaIVgXxcAhliw4AFZIpaTWxtdoNAv9eiCA" alt="短消息" />
+                        <span id="msg_count" style="display: none"></span>
+                    </a>
+                    <div id="user_info" class="navbar-user-info dropdown">
+                        <a class="dropdown-button" href="https://home.cnblogs.com/">
+                            <img id="user_icon" class="navbar-avatar" src="/images/aggsite/avatar-default.svg" alt="用户头像" />
+                        </a>
+                        <div class="dropdown-menu">
+                            <a id="navblog-myblog-text" href="https://passport.cnblogs.com/GetBlogApplyStatus.aspx">我的博客</a>
+                            <a href="https://home.cnblogs.com/">我的园子</a>
+                            <a href="https://account.cnblogs.com/settings/account">账号设置</a>
+                            <a href="javascript:void(0)" id="navbar_lite_mode_toggle" title="简洁模式会使用简洁款皮肤显示所有博客">
+    简洁模式 <img id="navbar_lite_mode_on" src="/images/lite-mode-check.svg" class="hide" /><span id="navbar_lite_mode_spinner" class="hide">...</span>
+</a>
+                            <a href="javascript:void(0)" onclick="account.logout();">退出登录</a>
+                        </div>
+                    </div>
+                    <a class="navbar-anonymous" href="https://account.cnblogs.com/signup/">注册</a>
+                    <a class="navbar-anonymous" href="javascript:void(0);" onclick="account.login()">登录</a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+
+    
+    <!--done-->
+<div id="home">
+<div id="header">
+	<div id="blogTitle">
+        <a id="lnkBlogLogo" href="https://www.cnblogs.com/lee2014/"><img id="blogLogo" src="/skins/custom/images/logo.gif" alt="返回主页" /></a>		
+		
+<!--done-->
+<h1><a id="Header1_HeaderTitle" class="headermaintitle HeaderMainTitle" href="https://www.cnblogs.com/lee2014/">plle</a>
+</h1>
+<h2></h2>
+
+
+
+
+		
+	</div><!--end: blogTitle 博客的标题和副标题 -->
+	<div id="navigator">
+		
+<ul id="navList">
+<li><a id="blog_nav_sitehome" class="menu" href="https://www.cnblogs.com/">
+博客园</a>
+</li>
+<li>
+<a id="blog_nav_myhome" class="menu" href="https://www.cnblogs.com/lee2014/">
+首页</a>
+</li>
+<li>
+
+<a id="blog_nav_newpost" class="menu" href="https://i.cnblogs.com/EditPosts.aspx?opt=1">
+新随笔</a>
+</li>
+<li>
+<a id="blog_nav_contact" class="menu" href="https://msg.cnblogs.com/send/plle">
+联系</a></li>
+<li>
+<a id="blog_nav_rss" class="menu" href="javascript:void(0)" data-rss="https://www.cnblogs.com/lee2014/rss/">
+订阅</a>
+<!--<partial name="./Shared/_XmlLink.cshtml" model="Model" /></li>--></li>
+<li>
+<a id="blog_nav_admin" class="menu" href="https://i.cnblogs.com/">
+管理</a>
+</li>
+</ul>
+
+
+		<div class="blogStats">
+			<div id="blog_stats_place_holder"><script>loadBlogStats();</script></div>
+		</div><!--end: blogStats -->
+	</div><!--end: navigator 博客导航栏 -->
+</div><!--end: header 头部 -->
+<div id="main">
+	<div id="mainContent">
+	<div class="forFlow">
+		<div id="post_detail">
+    <!--done-->
+    <div id="topics">
+        <div class="post">
+            <h1 class = "postTitle">
+                
+<a id="cb_post_title_url" class="postTitle2 vertical-middle" href="https://www.cnblogs.com/lee2014/p/14764280.html">
+    <span>曾经我认为C语言就是个弟弟</span>
+    
+
+
+
+</a>
+
+            </h1>
+            <div class="clear"></div>
+            <div class="postBody">
+                <div id="cnblogs_post_body" class="blogpost-body cnblogs-markdown">
+<p>本文所有代码，均上传至github，如果你想直接看源代码，请到github下载，下载地址：<code>https://github.com/vitalitylee/TextEditor</code></p>
+<p>“C语言只能写有一个黑框的命令行程序，如果要写图形界面的话，要用Java或者C#”，在2009年左右，我对同学这么说。</p>
+<p>都2021年了，说这句话导致的羞愧感，一直在我脑海徘徊。</p>
+<p>在这里，就让我们一起用C写一个GUI应用程序，以正视听。</p>
+<p>但是，写什么呢？</p>
+<p>首先，这个程序不应该太复杂，不然的话没有办法在一篇文章内实现；</p>
+<p>其次，这个程序又要具有一定的实用性；</p>
+<p>考虑到这两点，记事本应该是个不错的选择，既不太大，也比较常用。</p>
+<p>那么，就让我们开始吧。</p>
+<p>对于我们要实现的记事本，应该有如下功能：</p>
+<ol>
+<li>能够打开一个文本文件（通过打开文件对话框）;</li>
+<li>能够对文本进行编辑；</li>
+<li>能够将文件保存；</li>
+<li>文件保存时，如果当前没有已打开任何文件，则显示文件保存对话框。</li>
+<li>能够将文件另存为另外路径，保存后打开内容为另存为路径；</li>
+<li>在主窗体显示当前打开文件的文件名；</li>
+<li>如果文件已编辑，并且未保存，主窗体标题前加'*'；</li>
+<li>如果文件保存，则去除主窗体标题前的'*'；</li>
+</ol>
+<p>为了能够对我们接下来要做的事情有一个整体印象，让我们在这里对本文要实现一个简单记事本功能的计划说明，我们的简单步骤如下：</p>
+<ol>
+<li>说说如何对一个C语言项目进行设置，以创建一个GUI应用程序；</li>
+<li>聊聊入口函数；</li>
+<li>使用C语言创建一个窗体；</li>
+<li>为我们的窗体添加一个菜单，并添加菜单命令；</li>
+<li>添加编辑器；</li>
+<li>响应菜单命令；</li>
+<li>实现退出命令;</li>
+<li>实现打开文件命令；</li>
+<li>响应编辑器内容变化事件；</li>
+<li>实现保存命令;</li>
+<li>实现另存为命令；</li>
+<li>整理我们的代码，按照功能进行分离；</li>
+<li>最后，我们聊聊整个过程中可能遇到的问题；</li>
+</ol>
+<p>如果完成以上步骤，那么我们就有了一个可以简单工作的文本编辑器了，接下来，让我们开始吧。</p>
+<p>在开始写代码之前，开发环境自然是少不了的。在这里，我们用Visual Studio Community 2019作为我们的开发环境。</p>
+<p>安装包可以到官网下载，地址如下：<br>
+<code>https://visualstudio.microsoft.com/zh-hans/thank-you-downloading-visual-studio/?sku=Community&amp;rel=16</code></p>
+<p>也可以到 Visual Studio 官网搜索下载，界面如下:<br>
+<img src="https://img2020.cnblogs.com/blog/456172/202105/456172-20210513131407156-1388263948.bmp" alt="" loading="lazy"></p>
+<p>点击图中红框处的按钮下载。<br>
+待下载完成后，需要选中“使用C++的桌面开发”选择框，如下图所示：<br>
+<img src="https://img2020.cnblogs.com/blog/456172/202105/456172-20210513131440834-402022005.bmp" alt="" loading="lazy"></p>
+<p>具体的安装步骤，可参考：</p>
+<p><code>https://docs.microsoft.com/en-us/visualstudio/install/install-visual-studio?view=vs-2019</code></p>
+<h1 id="一、说说如何对一个c语言项目进行设置，以创建一个gui应用程序">一、说说如何对一个C语言项目进行设置，以创建一个GUI应用程序</h1>
+<p>安装完我们的环境之后，我们就可以创建我们的项目了。主要步骤如下：</p>
+<ol>
+<li>启动 Visual Studio，并点击“创建新项目”按钮</li>
+<li>选择项目类型</li>
+<li>设置项目源代码目录以及项目名称</li>
+<li>设置项目类型</li>
+<li>新建一个主程序文件</li>
+<li>编辑开始代码</li>
+<li>编译运行</li>
+</ol>
+<p>接下来，我们详细看看各个步骤的操作。</p>
+<h2 id="1-启动-visual-studio，并点击创建新项目按钮">1. 启动 Visual Studio，并点击“创建新项目”按钮</h2>
+<p><img src="https://img2020.cnblogs.com/blog/456172/202105/456172-20210513131616916-2130318332.bmp" alt="" loading="lazy"></p>
+<h2 id="2-选择项目类型">2. 选择项目类型</h2>
+<p><img src="https://img2020.cnblogs.com/blog/456172/202105/456172-20210513131641961-763033648.bmp" alt="" loading="lazy"></p>
+<h2 id="3-设置项目源代码目录以及项目名称">3. 设置项目源代码目录以及项目名称</h2>
+<p><img src="https://img2020.cnblogs.com/blog/456172/202105/456172-20210513131700040-268891871.bmp" alt="" loading="lazy"></p>
+<h2 id="4-设置项目类型">4. 设置项目类型</h2>
+<p>由于Visual Studio默认的项目类型为Console类型，但是我们要创建一个GUI的文本编辑器，所以这里我们要设置项目类型为GUI类型。具体设置方法如下：</p>
+<p>a. 打开解决方案管理器，如下</p>
+<p><img src="https://img2020.cnblogs.com/blog/456172/202105/456172-20210513132326491-1170541755.bmp" alt="" loading="lazy"></p>
+<p>b. 右键项目TextEditor，选择属性</p>
+<p><img src="https://img2020.cnblogs.com/blog/456172/202105/456172-20210513132341477-668941256.bmp" alt="" loading="lazy"></p>
+<p>c. 将“系统”选项由控制台修改为窗口，最后点击“确定”</p>
+<p><img src="https://img2020.cnblogs.com/blog/456172/202105/456172-20210513132353374-680536262.bmp" alt="" loading="lazy"></p>
+<h2 id="5-新建一个主程序文件">5. 新建一个主程序文件</h2>
+<p>在设置好项目类型之后，我们就可以新建我们的主程序文件了，在这里，我们将主程序文件命名为 <code>main.c</code>。</p>
+<p>a. 在解决方案资源管理器中，右键“源文件”</p>
+<p><img src="https://img2020.cnblogs.com/blog/456172/202105/456172-20210513132449771-671158262.bmp" alt="" loading="lazy"></p>
+<p>b. 在弹出的菜单中依次选择“添加”-&gt;“新建项”</p>
+<p><img src="https://img2020.cnblogs.com/blog/456172/202105/456172-20210513132505643-1136555851.bmp" alt="" loading="lazy"></p>
+<p>c. 在新建项对话框中，按照下图步骤添加源文件</p>
+<p><img src="https://img2020.cnblogs.com/blog/456172/202105/456172-20210513132518059-1037299049.bmp" alt="" loading="lazy"></p>
+<h2 id="6-编辑代码">6. 编辑代码</h2>
+<p>我们知道，在C语言中，程序是从main函数开始执行的。但是对于一个GUI应用程序来说，我们的程序入口变成了如下形式：</p>
+<pre><code class="language-C">int wWinMain(
+  _In_ HINSTANCE hInstance,
+  _In_opt_ HINSTANCE hPrevInstance,
+  _In_ LPWSTR lpCmdLine,
+  _In_ int nShowCmd
+);
+</code></pre>
+<p>你可以到 <code>winbase.h</code> 文件中找到此函数的定义，如下：</p>
+<pre><code class="language-C">int
+#if !defined(_MAC)
+#if defined(_M_CEE_PURE)
+__clrcall
+#else
+WINAPI
+#endif
+#else
+CALLBACK
+#endif
+WinMain (
+    _In_ HINSTANCE hInstance,
+    _In_opt_ HINSTANCE hPrevInstance,
+    _In_ LPSTR lpCmdLine,
+    _In_ int nShowCmd
+    );
+
+int
+#if defined(_M_CEE_PURE)
+__clrcall
+#else
+WINAPI
+#endif
+wWinMain(
+    _In_ HINSTANCE hInstance,
+    _In_opt_ HINSTANCE hPrevInstance,
+    _In_ LPWSTR lpCmdLine,
+    _In_ int nShowCmd
+    );
+
+#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP) */
+</code></pre>
+<p>我们可以发现，这里定义了两个主函数，至于要用哪一个，取决于我们程序运行平台的选择，<code>WinMain</code> 主要用于<code>ANSI</code>环境，<code>wWinMain</code> 主要用于 <code>Unicode</code> 环境。由于 <code>Windows</code> 内核均采用 <code>Unicode</code> 编码，而且非 <code>Unicode</code> 字符在真正调用 <code>Windows API</code> 时，均会转化为 <code>Unicode</code> 版本，所以对于我们的程序，采用 <code>Unicode</code> 会更快（省略了转换步骤），所以这里我们采用 <code>Unicode</code> 版本的主程序。<br>
+好了，准备好环境之后，让我们把如下代码添加到源文件中：</p>
+<pre><code class="language-C">#include &lt;Windows.h&gt;
+
+// 我们的窗体需要一个消息处理函数来处理各种动作。
+// 由于我们要将消息处理函数入口赋值给窗体对象，
+// 这里需要提前声明。
+LRESULT CALLBACK mainWinProc(
+  HWND hWnd, UINT unit, WPARAM wParam, LPARAM lParam);
+
+int wWinMain(
+  _In_ HINSTANCE hInstance,
+  _In_opt_ HINSTANCE hPrevInstance,
+  _In_ LPWSTR lpCmdLine,
+  _In_ int nShowCmd
+) {
+  return 0;
+}
+</code></pre>
+<p>我们的主程序，只是返回了一个0，没有做任何操作。</p>
+<h2 id="7-编译运行">7. 编译运行</h2>
+<p>要编译我们的C语言程序，和平时我们编译C#应用程序没有区别，在这里，我们直接按下 <code>Ctrl+F5</code> 执行程序，我们发现，没有任何反应，这个时候，我们去 <code>Debug</code> 目录下去看看，我们发现，<code>Visual Studio</code> 为我们生成了如下文件：</p>
+<p><img src="https://img2020.cnblogs.com/blog/456172/202105/456172-20210513132819022-1041186228.bmp" alt="" loading="lazy"></p>
+<p>其中文件的作用如下：</p>
+<ul>
+<li>TextEditor.exe: 我们的可执行文件；</li>
+<li>TextEditor.ilk: 为链接器提供包含对象、导入和标准库、资源、模块定义和命令输入；</li>
+<li>TextEditor.pdb:保存.exe文件或者.dll文件的调试信息。</li>
+</ul>
+<p>之所以在我们运行程序之后，什么都没有看到，是因为我们的程序没有做任何事情。</p>
+<h1 id="二、-聊聊入口函数">二、 聊聊入口函数</h1>
+<p>对于入口函数，在之前我们编辑代码时已经有了说明，我们可以在 WinBase.h 包含文件中找到其定义。并且我们还知道了，在ANSI字符编码和Unicode字符编码环境下，我们要分别定义不同的入口函数名。</p>
+<p>接下来，我们来聊聊我们主函数的参数以及返回值。</p>
+<h3 id="参数：">参数：</h3>
+<p>对于一个 Win32 GUI 应用程序主函数来说，一共有四个参数，说明如下：</p>
+<p>hInstance</p>
+<p>类型：HINSTANCE</p>
+<p>说明：</p>
+<pre><code>当前应用程序实例的句柄。
+</code></pre>
+<p>hPrevinstance</p>
+<p>类型：HINSTANCE</p>
+<p>说明：</p>
+<pre><code>当前应用程序的上一个实例的句柄。这个参数始终为 NULL。如果要判断是否有另外一个已经运行的当前应用程序的实例，需要使用 CreateMutex 函数，创建一个具有唯一命名的互斥锁。
+
+如果互斥锁已经存在，CreateMutex 函数也会成功执行，但是返回值为 ERROR_ALREADY_EXISTS. 这说明你的应用程序的另外一个实例正在运行，因为另一个实例已经创建了该互斥锁。
+
+然而，恶意用户可以在你的应用程序启动之前，先创建一个互斥锁，从而阻止你的应用程序启动。如果要防止这种情况，请创建一个随机命名的互斥锁，并保存该名称，从而使得只有指定应用可以使用该互斥锁。
+
+如果要限定一个用户只能启动一个应用程序实例，更好的方法是在用户的配置文件中创建一个锁定文件。
+</code></pre>
+<p>lpCmdLine</p>
+<p>类型：LPSTR/LPWSTR</p>
+<p>说明：<br>
+对于我们的 Unicode 应用程序来说，这个参数的类型应为 LPWSTR，对于ANSI 应用程序来说，这个参数类型为 LPSTR。</p>
+<pre><code>本参数表示启动当前应用程序时，传入的命令行参数，包括当前应用程序的名称。如果要获取某一个命令行参数，可以通过调用 GetCommandLine 函数实现。
+</code></pre>
+<p>nShowCmd</p>
+<p>类型：int</p>
+<p>说明：</p>
+<pre><code>用于控制程序启动之后的窗体如何显示。
+
+当前参数可以是 ShowWindow 函数的 nCmdShow 参数允许的任何值。
+</code></pre>
+<p>返回值：</p>
+<p>类型：int</p>
+<p>说明：<br>
+如果程序在进入消息循环之前结束，那么主程序应该返回0。如果程序成功，并且因为收到了 WM_QUIT 消息而结束，那么主程序应该返回消息的 wParam 字段值。</p>
+<h1 id="使用c语言创建一个窗体">使用C语言创建一个窗体</h1>
+<p>在了解如何使用C语言创建一个窗体之前，让我们先看一看Windows是如何组织窗体的。</p>
+<p>在 Windows 启动的时候，操作系统会自动创建一个窗体-桌面窗体(Desktop Window)。桌面窗体是一个由操作系统定义，用于绘制显示器背景，并作为所有其它应用程序窗体基础窗体的窗体。</p>
+<p>桌面窗体使用一个 Bitmap 文件来绘制显示器的背景。这个图片，被称为桌面壁纸。</p>
+<p>说完桌面窗体，接下来，让我们聊聊其它窗体。</p>
+<p>在 Windows 下，窗体被分为三类：系统窗体，全局窗体和本地窗体。</p>
+<ul>
+<li>
+<p>系统窗体为操作系统注册的窗体，大部分这类窗体可以由所有应用程序使用，另外还有一些，供操作系统内部使用。由于这些窗体由操作系统注册，所以我们的应用程序不能销毁他们。</p>
+</li>
+<li>
+<p>全局窗体是由一个可执行文件或者DLL文件注册，并可以被所有其它进程使用的窗体。比如，你可以在一个DLL中注册一个窗体，在要使用这个窗体的应用程序中，加载该dll，然后使用该窗体。当然，你也可以通过在如下注册表键的 AppInit_DLLs 值中添加当前dll路径实现：</p>
+</li>
+</ul>
+<p><code>HKEY_LOCAL_MACHINE\Software\Microsoft\WindowsNT\CurrentVersion\Windows</code></p>
+<p>这样的话，每当一个进程启动，操作系统就会在调用应用的主函数之前，加载指定的DLL。给定的DLL必须在其 Initialization 函数中注册窗体，并设置窗体类型的样式为 CS_GLOBALCLASS。</p>
+<p>如果要销毁全局窗体并释放其内存，可以通过调用 UnregisterClass 函数实现。</p>
+<ul>
+<li>本地窗体是可执行文件或者 DLL 注册的，当前进程独占使用的窗体，虽然可以注册多个，但是通常情况下，一个应用程序只注册一个本地窗体类。这个本地窗体类用于处理应用程序的主窗体逻辑。</li>
+</ul>
+<p>操作系统会在进程结束之前，注销本地窗体类。应用程序也可以使用 UnregisterClass 函数注销本地窗体类。</p>
+<p>操作系统会为以上三种窗体类型分别创建一个结构链表。当一个应用程序调用CreateWindow 或者 CreateWindowEx 函数，以创建窗体时，操作系统会先从本地窗体类链表中，查找给定的窗体类。</p>
+<p>经过以上介绍，不难发现，如果要创建一个窗体，要么使用系统已经注册过的窗体类，要么使用一个自己注册的窗体类。</p>
+<p>在这里，我们需要一个自定义窗体，系统中不存在该窗体类型，所以需要我们自己注册。而又由于此窗体不进行共享，只是在我们的应用程序中使用，所以我们需要注册一个自定义的类型。</p>
+<p>注册一个窗体类型，需要使用 WNDCLASSEX 结构体，通过 RegisterClassEx 函数进行注册。其中 WNDCLASSEX 结构体用于设置我们窗体的基础属性，如所属进程的应用实例，类名，样式，关联的菜单等。</p>
+<p>由于注册窗体类型和其他过程没有关系，所以这里我们将本过程抽出，写出如下函数：</p>
+<pre><code class="language-C">LPCWSTR mainWIndowClassName = L"TextEditorMainWindow";
+
+/**
+* 作用：
+*  主窗体消息处理函数
+* 
+* 参数：
+*  hWnd
+*    消息目标窗体的句柄。
+*  msg
+*    具体的消息的整型值定义，要了解系统
+*    支持的消息列表，请参考 WinUser.h 中
+*    以 WM_ 开头的宏定义。
+* 
+*  wParam
+*    根据不同的消息，此参数的意义不同，
+*    主要用于传递消息的附加信息。
+* 
+*  lParam
+*    根据不同的消息，此参数的意义不同，
+*    主要用于传递消息的附加信息。
+* 
+* 返回值：
+*  本函数返回值根据发送消息的不同而不同，
+*  具体的返回值意义，请参考 MSDN 对应消息
+*  文档。
+*/
+LRESULT CALLBACK mainWindowProc(
+  HWND hWnd,
+  UINT msg,
+  WPARAM wParam,
+  LPARAM lParam) {
+  return DefWindowProc(hWnd, msg, wParam, lParam);
+}
+
+/**
+* 作用：
+*   注册主窗体类型。
+*
+* 参数：
+*   hInstance
+*       当前应用程序的实例句柄，通常情况下在
+*       进入主函数时，由操作系统传入。
+*
+* 返回值：
+*   类型注册成功，返回 TRUE，否则返回 FALSE。
+*/
+BOOL InitMainWindowClass(HINSTANCE hInstance) {
+  WNDCLASSEX wcx;
+  // 在初始化之前，我们先将结构体的所有字段
+  // 均设置为 0.
+  ZeroMemory(&amp;wcx, sizeof(wcx));
+
+  // 标识此结构体的大小，用于属性扩展。
+  wcx.cbSize = sizeof(wcx);
+  // 当窗体的大小发生改变时，重绘窗体。
+  wcx.style = CS_HREDRAW | CS_VREDRAW;
+  // 在注册窗体类型时，要设置一个窗体消息
+  // 处理函数，以处理窗体消息。
+  // 如果此字段为 NULL，则程序运行时会抛出
+  // 空指针异常。
+  wcx.lpfnWndProc = mainWindowProc;
+  // 设置窗体背景色为白色。
+  wcx.hbrBackground = GetStockObject(WHITE_BRUSH);
+  // 指定主窗体类型的名称，之后创建窗体实例时
+  // 也需要传入此名称。
+  wcx.lpszClassName = mainWIndowClassName;
+
+  return RegisterClassEx(&amp;wcx) != 0;
+}
+</code></pre>
+<p>其中，InitMainWindowClass 函数用于注册本应用程序的主窗体类型，由于注册窗体类型时，需要一个窗体消息处理函数，所以在这里，我们又新增了一个 mainWindowProc 函数，该函数调用 DefWindowProc 函数，让操作系统采用默认的消息处理。</p>
+<p>通过以上代码，我们可以看到，虽然我们通过返回一个 BOOL 类型值，判断注册类型是否成功，但是我们并不知道具体失败的原因，所以在这里，我们再添加一个函数，以调用 GetLastError 函数，获取最后的错误，并弹出对应消息：</p>
+<pre><code class="language-C">/**
+* 作用：
+*  显示最后一次函数调用产生的错误消息。
+*
+* 参数：
+*  lpszFunction
+*    最后一次调用的函数名称。
+*
+*  hParent
+*    弹出消息窗体的父窗体，通常情况下，
+*    应该指定为我们应用程序的主窗体，这样
+*    当消息弹出时，将禁止用户对主窗体进行
+*    操作。
+*
+* 返回值：
+*  无
+*/
+VOID DisplayError(LPWSTR lpszFunction, HWND hParent) {
+  LPVOID lpMsgBuff = NULL;
+  LPVOID lpDisplayBuff = NULL;
+  DWORD  errCode = GetLastError();
+
+  if (!FormatMessage(
+    FORMAT_MESSAGE_ALLOCATE_BUFFER |
+    FORMAT_MESSAGE_FROM_SYSTEM |
+    FORMAT_MESSAGE_IGNORE_INSERTS,
+    NULL,
+    errCode,
+    MAKELANGID(LANG_NEUTRAL, SUBLANG_DEFAULT),
+    (LPTSTR)&amp;lpMsgBuff,
+    0,
+    NULL
+  )) {
+    return;
+  }
+  lpDisplayBuff = LocalAlloc(
+    LMEM_ZEROINIT,
+    (lstrlen((LPCTSTR)lpMsgBuff)
+      + lstrlenW((LPCTSTR)lpszFunction)
+      + 40
+      ) * sizeof(TCHAR)
+  );
+  if (NULL == lpDisplayBuff) {
+    MessageBox(
+      hParent,
+      TEXT("LocalAlloc failed."),
+      TEXT("ERR"),
+      MB_OK
+    );
+    goto RETURN;
+  }
+
+  if (FAILED(
+    StringCchPrintf(
+      (LPTSTR)lpDisplayBuff,
+      LocalSize(lpDisplayBuff) / sizeof(TCHAR),
+      TEXT("%s failed with error code %d as follows:\n%s"),
+      lpszFunction,
+      errCode,
+      (LPTSTR)lpMsgBuff
+    )
+  )) {
+    goto EXIT;
+  }
+
+  MessageBox(hParent, lpDisplayBuff, TEXT("ERROR"), MB_OK);
+EXIT:
+  LocalFree(lpDisplayBuff);
+RETURN:
+  LocalFree(lpMsgBuff);
+}
+</code></pre>
+<p>当我们格式化错误消息失败时，由于已经没有了其他的补救措施，当前我们直接退出程序。</p>
+<p>经过以上步骤，我们创建了一个主窗体类，接下来，让我们创建一个实例，并显示窗体。要实现目标，我们需要使用 CreateWindow 函数创建一个窗体实例，并获取到窗体句柄，然后通过调用 ShowWindow 函数显示窗体，然后通过一个消息循环，不断地处理消息。</p>
+<p>添加创建主窗体函数如下：</p>
+<pre><code class="language-C">/**
+* 作用：
+*  创建一个主窗体的实例，并显示。
+* 
+* 参数：
+*  hInstance
+*    当前应用程序的实例句柄。
+* 
+*  cmdShow
+*    控制窗体如何显示的一个标识。
+* 
+* 返回值：
+*  创建窗体成功，并成功显示成功，返回 TRUE，
+*  否则返回 FALSE。
+*/
+BOOL CreateMainWindow(HINSTANCE hInstance, int cmdShow) {
+  HWND mainWindowHwnd = NULL;
+  // 创建一个窗体对象实例。
+  mainWindowHwnd = CreateWindowEx(
+    WS_EX_APPWINDOW,
+    mainWIndowClassName,
+    TEXT("TextEditor"),
+    WS_OVERLAPPEDWINDOW,
+    CW_USEDEFAULT,
+    CW_USEDEFAULT,
+    CW_USEDEFAULT,
+    CW_USEDEFAULT,
+    NULL,
+    NULL,
+    hInstance,
+    NULL
+  );
+
+  if (NULL == mainWindowHwnd) {
+    DisplayError(TEXT("CreateWindowEx"), NULL);
+    return FALSE;
+  }
+
+  // 由于返回值只是标识窗体是否已经显示，对于我们
+  // 来说没有意义，所以这里丢弃返回值。
+  ShowWindow(mainWindowHwnd, cmdShow);
+
+  if (!UpdateWindow(mainWindowHwnd)) {
+    DisplayError(TEXT("UpdateWindow"), mainWindowHwnd);
+    return FALSE;
+  }
+  
+  return TRUE;
+}
+</code></pre>
+<p>修改我们的主函数如下：</p>
+<pre><code class="language-C">int WINAPI wWinMain(
+  _In_ HINSTANCE hInstance,
+  _In_opt_ HINSTANCE hPrevInstance,
+  _In_ LPWSTR lpCmdLine,
+  _In_ int nShowCmd
+) {
+  MSG msg;
+  BOOL fGotMessage = FALSE;
+
+  if (!InitMainWindowClass(hInstance)
+    || !CreateMainWindow(hInstance, nShowCmd)) {
+    return FALSE;
+  }
+
+  while ((fGotMessage = GetMessage(&amp;msg, (HWND)NULL, 0, 0)) != 0 
+    &amp;&amp; fGotMessage != -1)
+  {
+    TranslateMessage(&amp;msg);
+    DispatchMessage(&amp;msg);
+  }
+
+  return msg.wParam;
+}
+</code></pre>
+<p>由于我们使用了一些Windows API，所以需要在我们的源代码中包含API声明，当前，我们只需要 Windows.h 和 StrSafe.h 两个头文件，所以需要在我们 main.c 文件头部添加如下两行：</p>
+<pre><code class="language-C">#include &lt;Windows.h&gt;
+#include &lt;strsafe.h&gt;
+</code></pre>
+<p>好了，点击运行按钮，我们发现，程序成功启动，并弹出了一个窗体，如下：</p>
+<p><img src="https://img2020.cnblogs.com/blog/456172/202105/456172-20210513133416569-209130855.bmp" alt="" loading="lazy"></p>
+<p>我们可以看到，弹出的窗体有它的默认行为，我们可以拖动窗体位置，可以调整大小，可以最小化，最大化和关闭按钮，并且它有一个标题 “TextEditor”。现在，让我们关闭窗体，这个时候，问题出现了：虽然窗体关闭了，但是我们的进程怎么没有结束？</p>
+<p>那是因为，我们的消息循环没有收到退出消息，要在关闭窗体时，退出程序，我们需要处理窗体的 WM_DESTORY 事件，当销毁窗体时，向我们的应用程序发送一个退出消息。</p>
+<p>这可以通过修改我们之前注册的消息处理函数实现，修改我们的 mainWindowProc 函数如下：</p>
+<pre><code class="language-C">LRESULT CALLBACK mainWindowProc(
+  HWND hWnd,
+  UINT msg,
+  WPARAM wParam,
+  LPARAM lParam) {
+  switch (msg) {
+  case WM_DESTROY:
+    PostQuitMessage(0);
+    return 0;
+  default:
+    return DefWindowProc(hWnd, msg, wParam, lParam);
+  }
+}
+</code></pre>
+<p>再次运行我们的程序，当关闭窗体后，程序就终止了。</p>
+<p>通过之前的内容，不难意识到，对于每一个消息，它的 lParam 和 wParam 分别代表的意义不同，并且消息处理函数的返回值代表的意义也不同，那么对于每一个窗体消息，是不是都要查询文档，并将参数进行强制类型转换后，获取对应信息，最后返回我们的处理结果呢？当然，这么做是可以的，但是会增加我们程序的复杂度，并且容易出错。这个时候，我们就可以使用平台提供的一个头文件 "windowsx.h" 来解决这个问题，这个文件定义了一系列的宏，用于消息的转换，在头部包含 "windowsx.h" 头文件之后，我们的消息处理函数就可以改成如下形式：</p>
+<pre><code class="language-C">LRESULT CALLBACK mainWindowProc(
+  HWND hWnd,
+  UINT msg,
+  WPARAM wParam,
+  LPARAM lParam) {
+  switch (msg) {
+  case WM_DESTROY:
+    return HANDLE_WM_DESTROY(
+      hWnd,
+      wParam,
+      lParam,
+      MainWindow_Cls_OnDestroy
+    );
+  default:
+    return DefWindowProc(hWnd, msg, wParam, lParam);
+  }
+}
+</code></pre>
+<p>其中，HANDLE_WM_DESTROY 是 windowsx.h 头文件定义的一个宏，用于处理 WM_DESTROY 消息，其中前三个函数分别为消息处理函数的三个同名参数，最后一个参数是我们定义的消息处理函数名称，消息函数的签名可以到消息处理宏的定义处查看，对应注释就是我们的消息处理函数的定义形式，名称可以不一样，但是签名需要一样，比如，HANDLE_WM_DESTROY 宏的注释如下：</p>
+<pre><code class="language-C">/* void Cls_OnDestroy(HWND hwnd) */
+</code></pre>
+<p>那么，我们的消息处理函数就应该定义为一个 HWND 参数，并且没有返回值的函数。所以，我们的窗体销毁函数定义如下：</p>
+<pre><code class="language-C">void MainWindow_Cls_OnDestroy(HWND hwnd) {
+  PostQuitMessage(0);
+}
+</code></pre>
+<p>运行程序，我们发现和之前是一样的效果。</p>
+<h1 id="四、添加一个菜单，并添加菜单命令">四、添加一个菜单，并添加菜单命令</h1>
+<p>在上一节，我们了解了创建一个窗体的方法，本节，我们聊聊菜单。</p>
+<p>在 Visual Studio  中，菜单是以资源的形式存在和编译的，要增加菜单，其实就是添加一个菜单资源。</p>
+<p>添加过程如下：</p>
+<h2 id="1-解决方案资源管理器中，鼠标右键项目名---添加---资源，弹出添加资源对话框：">1. 解决方案资源管理器中，鼠标右键项目名 -&gt; 添加 -&gt; 资源，弹出添加资源对话框：</h2>
+<p><img src="https://img2020.cnblogs.com/blog/456172/202105/456172-20210513133636476-60400986.bmp" alt="" loading="lazy"></p>
+<p><img src="https://img2020.cnblogs.com/blog/456172/202105/456172-20210513133643121-200551710.bmp" alt="" loading="lazy"></p>
+<h2 id="2-在弹出的添加资源对话框左侧，选择-menu，点击右侧新建按钮，弹出菜单编辑界面">2. 在弹出的添加资源对话框左侧，选择 Menu，点击右侧”新建“按钮，弹出菜单编辑界面</h2>
+<p><img src="https://img2020.cnblogs.com/blog/456172/202105/456172-20210513133705397-1303197189.bmp" alt="" loading="lazy"></p>
+<p>我们会发现，有一个”请在此键入“的框，在这里，输入我们的菜单项，比如，输入”文件“，界面将变成下面的样子：</p>
+<p><img src="https://img2020.cnblogs.com/blog/456172/202105/456172-20210513133723875-1985235896.bmp" alt="" loading="lazy"></p>
+<p>其中，在”文件“下方的输入框输入的项，为”文件“菜单项的子项，右侧为同级菜单项，当我们在”文件“菜单子项中新增项目之后，子项的下方和右方也会出现对应的输入框，这时候，下方的为统计项，右侧的为子项。</p>
+<p>按照之前我们定义的程序功能，分别为每一个功能添加一个菜单项，结果如下：</p>
+<p><img src="https://img2020.cnblogs.com/blog/456172/202105/456172-20210513133747335-616806941.bmp" alt="" loading="lazy"></p>
+<p>添加完成之后，在属性工具栏，我们分别修改对应的菜单项ID名称，以便之后识别命令，修改过程为选择一个菜单项，然后在属性工具栏中修改ID项，我们依次修改菜单项的ID如下：</p>
+<pre><code>- 打开：ID_OPEN
+- 保存：ID_SAVE
+- 另存为：ID_SAVEAS
+- 退出：ID_EXIT
+</code></pre>
+<p>虽然IDE为我们提供了可视化的修改方法，但是可视化修改，当我们改ID之后，IDE就会新增一个ID，而不是将原来的ID替换，更好的办法是直接编辑资源文件。</p>
+<p>在我们新增菜单资源的时候，仔细观察的话，会发现，IDE为我们添加了两个文件：resource.h 和 TextEditor.rc。</p>
+<p>首先，让我们打开 resource.h文件，发现文件内容如下：</p>
+<pre><code class="language-C">//{{NO_DEPENDENCIES}}
+// Microsoft Visual C++ 生成的包含文件。
+// 供 TextEditor.rc 使用
+//
+#define IDR_MENU1                       101
+#define ID_Menu                         40001
+#define ID_40002                        40002
+#define ID_40003                        40003
+#define ID_40004                        40004
+#define ID_40005                        40005
+#define ID_OPEN                         40006
+#define ID_SAVE                         40007
+#define ID_SAVE_AS                      40008
+#define ID_EXIT                         40009
+
+// Next default values for new objects
+// 
+#ifdef APSTUDIO_INVOKED
+#ifndef APSTUDIO_READONLY_SYMBOLS
+#define _APS_NEXT_RESOURCE_VALUE        102
+#define _APS_NEXT_COMMAND_VALUE         40010
+#define _APS_NEXT_CONTROL_VALUE         1001
+#define _APS_NEXT_SYMED_VALUE           101
+#endif
+#endif
+</code></pre>
+<p>这里，我们去除无用声明，将其修改如下：</p>
+<pre><code class="language-C">//{{NO_DEPENDENCIES}}
+// Microsoft Visual C++ 生成的包含文件。
+// 供 TextEditor.rc 使用
+//
+#define IDR_MENU_MAIN                   101
+#define ID_OPEN                         40001
+#define ID_SAVE                         40002
+#define ID_SAVE_AS                      40003
+#define ID_EXIT                         40004
+
+// Next default values for new objects
+// 
+#ifdef APSTUDIO_INVOKED
+#ifndef APSTUDIO_READONLY_SYMBOLS
+#define _APS_NEXT_RESOURCE_VALUE        102
+#define _APS_NEXT_COMMAND_VALUE         40010
+#define _APS_NEXT_CONTROL_VALUE         1001
+#define _APS_NEXT_SYMED_VALUE           101
+#endif
+#endif
+</code></pre>
+<p>注意，在这里，我们不止修改了子菜单项的ID，而且还修改了菜单资源的ID名为 IDR_MENU_MAIN。</p>
+<p>修改 resource.h 的同时，我们还要同步修改 TextEditor.rc文件，extEditor.rc文件不能通过双击打开，要通过右键-&gt;查看代码打开，否则会显示文件已经在其他编辑器打开，或者打开资源编辑器。</p>
+<p>打开extEditor.rc文件，你看到的内容可能如下：</p>
+<pre><code class="language-C">// Microsoft Visual C++ generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "winres.h"
+
+/////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////
+// 中文(简体，中国) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)
+LANGUAGE LANG_CHINESE, SUBLANG_CHINESE_SIMPLIFIED
+#pragma code_page(936)
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#include ""winres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+/////////////////////////////////////////////////
+//
+// Menu
+//
+
+IDR_MENU1 MENU
+BEGIN
+    POPUP "文件"
+    BEGIN
+        MENUITEM "打开",                          ID_OPEN
+        MENUITEM "保存",                          ID_SAVE
+        MENUITEM "另存为",                         ID_SAVE_AS
+        MENUITEM "退出",                          ID_EXIT
+    END
+END
+
+#endif    // 中文(简体，中国) resources
+/////////////////////////////////////////////////
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+
+/////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+</code></pre>
+<p>其中，第52行到61行定义了我们的菜单资源，这里我们要将菜单资源的ID修改为我们之前在  TextEditor.rc文件中定义的名称，同时，我们还要修改资源的编码声明（20行），不然编译的时候会出现乱码。</p>
+<p>最终，我们修改该文件内容为：</p>
+<pre><code class="language-C">// Microsoft Visual C++ generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "winres.h"
+
+///////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+///////////////////////////////////////////////////////
+// 中文(简体，中国) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)
+LANGUAGE LANG_CHINESE, SUBLANG_CHINESE_SIMPLIFIED
+#pragma code_page(65001)
+
+#ifdef APSTUDIO_INVOKED
+//////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#include ""winres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////
+//
+// Menu
+//
+
+IDR_MENU_MAIN MENU
+BEGIN
+    POPUP "文件"
+    BEGIN
+        MENUITEM "打开",                          ID_OPEN
+        MENUITEM "保存",                          ID_SAVE
+        MENUITEM "另存为",                        ID_SAVE_AS
+        MENUITEM "退出",                          ID_EXIT
+    END
+END
+
+#endif    // 中文(简体，中国) resources
+//////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+
+
+/////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+</code></pre>
+<p>其中，第20行声明我们资源文件的编码为 UTF-8。</p>
+<p>做完以上操作之后，我们就完成了我们菜单资源的添加，接下来，怎么将菜单添加到我们弹出的窗体上呢？</p>
+<p>在之前注册窗体类的时候，我们可以看到，在 WNDCLASSEX 结构体中，有一个 lpszMenuName 字段，我们通过设置该字段，就可以实现将我们新增的菜单资源和我们的主窗体绑定的操作。</p>
+<p>在 InitMainWindowClass 函数中添加如下代码：</p>
+<pre><code class="language-C">  // 将主窗体的菜单设置为主菜单
+  wcx.lpszMenuName = MAKEINTRESOURCE(IDR_MENU_MAIN);
+</code></pre>
+<p>运行程序，就可以看到，我们的主窗体现在已经有了我们要的菜单，如下：</p>
+<p><img src="https://img2020.cnblogs.com/blog/456172/202105/456172-20210513134014822-1047342787.bmp" alt="" loading="lazy"></p>
+<h1 id="五、添加编辑器">五、添加编辑器</h1>
+<p>还记得之前我们说过，在Windows下，有一些窗体是操作系统注册的吗？其中就有一个窗体，叫做 EDIT，就是用于文本编辑的控件。没错，文本编辑控件，本身也是一个窗体。那么添加编辑器的操作就简单了，只需要创建一个 EDIT 窗体，并将其作为我们主窗体的子窗体即可。</p>
+<p>要实现这一点，和创建我们的主窗体的代码没有什么不同。为了在创建主窗体的时候，同时创建编辑器控件，我们将编辑器的创建，放到主窗体的 WM_CREATE 事件处理函数中，在 mainWindowProc 函数中添加如下处理：</p>
+<pre><code class="language-C">  case WM_CREATE:
+    return HANDLE_WM_CREATE(
+      hWnd, wParam, lParam, MainWindow_Cls_OnCreate
+    );
+</code></pre>
+<p>然后定义主窗体的创建消息处理函数如下：</p>
+<pre><code class="language-C">BOOL MainWindow_Cls_OnCreate(
+  HWND hwnd, LPCREATESTRUCT lpCreateStruct) {
+  return NULL != CreateTextEditor(GetWindowInstance(hwnd), hwnd);
+}
+</code></pre>
+<p>通过查看 WM_CREATE 消息的说明，我们可以知道，当 WM_CREATE 消息的处理结果为-1时，操作系统将销毁已经创建的窗体对象实例，如果为 0，才会继续执行，所以这里当我们创建文本编辑器成功之后，返回0，否则返回 -1。</p>
+<p>接下来，添加创建编辑器的函数，以及创建默认字体的函数如下：</p>
+<pre><code class="language-C">/**
+* 作用：
+*  创建编辑器使用的字体，这里默认为 "Courier New"
+*
+* 参数：
+*  无
+*
+* 返回值：
+*  新建字体的句柄。
+*/
+HANDLE CreateDefaultFont() {
+  LOGFONT lf;
+  ZeroMemory(&amp;lf, sizeof(lf));
+
+  // 设置字体为Courier New
+  lf.lfHeight = 16;
+  lf.lfWidth = 8;
+  lf.lfWeight = 400;
+  lf.lfOutPrecision = 3;
+  lf.lfClipPrecision = 2;
+  lf.lfQuality = 1;
+  lf.lfPitchAndFamily = 1;
+  StringCchCopy((STRSAFE_LPWSTR)&amp;lf.lfFaceName, 32, L"Courier New");
+
+  return CreateFontIndirect(&amp;lf);
+}
+
+/**
+* 作用：
+*  创建编辑器窗体
+*
+* 参数：
+*  hInstance
+*    当前应用程序实例的句柄
+*
+*  hParent
+*    当前控件的所属父窗体
+*
+* 返回值：
+*  创建成功，返回新建编辑器的句柄，否则返回 NULL。
+*/
+HWND CreateTextEditor(
+  HINSTANCE hInstance, HWND hParnet) {
+  RECT rect;
+  HWND hEdit;
+
+  // 获取窗体工作区的大小，以备调整编辑控件的大小
+  GetClientRect(hParnet, &amp;rect);
+
+  hEdit = CreateWindowEx(
+    0,
+    TEXT("EDIT"),
+    TEXT(""),
+    WS_CHILDWINDOW |
+    WS_VISIBLE |
+    WS_VSCROLL |
+    ES_LEFT |
+    ES_MULTILINE |
+    ES_NOHIDESEL,
+    0,
+    0,
+    rect.right,
+    rect.bottom,
+    hParnet,
+    NULL,
+    hInstance,
+    NULL
+  );
+
+  gHFont = CreateDefaultFont();
+  if (NULL != gHFont) {
+    // 设置文本编辑器的字体。并且在设置之后立刻重绘。
+    SendMessage(hEdit, WM_SETFONT, (WPARAM)gHFont, TRUE);
+  }
+
+  return hEdit;
+}
+</code></pre>
+<p>再运行一下，我们可以看到，编辑器已经添加到我们的窗体中了：</p>
+<p><img src="https://img2020.cnblogs.com/blog/456172/202105/456172-20210513134235178-222370109.bmp" alt="" loading="lazy"></p>
+<h1 id="六、响应菜单命令">六、响应菜单命令</h1>
+<p>通过之前的内容，我们已经可以显示我们的主窗体、编辑文字了，接下来，我们怎么响应菜单的命令呢？</p>
+<p>自然是通过消息处理函数！</p>
+<p>当我们点击了一个菜单，操作系统就会发送向我们的主窗体发送一个 WM_COMMAND 消息，所以，我们可以通过处理 WM_COMMAND 消息来响应菜单点击。</p>
+<p>为了响应 WM_COMMAND 消息，向我们的消息处理函数添加如下分支代码：</p>
+<pre><code class="language-C">  case WM_COMMAND:
+    return HANDLE_WM_COMMAND(
+      hWnd, wParam, lParam, MainWindow_Cls_OnCommand
+    );
+</code></pre>
+<p>然后添加我们的命令消息处理函数骨架，如下：</p>
+<pre><code class="language-C">/**
+* 作用：
+*  处理主窗体的菜单命令
+* 
+* 参数：
+*  hwnd
+*    主窗体的句柄
+*  id
+*    点击菜单的ID
+*
+*  hwndCtl
+*    如果消息来自一个控件，则此值为该控件的句柄，
+*    否则这个值为 NULL
+* 
+*  codeNotify
+*    如果消息来自一个控件，此值表示通知代码，如果
+*    此值来自一个快捷菜单，此值为1，如果消息来自菜单
+*    此值为0
+* 
+* 返回值：
+*  无
+*/
+void MainWindow_Cls_OnCommand(
+  HWND hwnd, int id, HWND hwndCtl, UINT codeNotify) {
+  switch (id) {
+  case ID_OPEN:
+    MessageBox(
+      hwnd,
+      TEXT("ID_OPEN"),
+      TEXT("MainWindow_Cls_OnCommand"),
+      MB_OK
+    );
+    break;
+  case ID_SAVE:
+    MessageBox(
+      hwnd,
+      TEXT("ID_SAVE"),
+      TEXT("MainWindow_Cls_OnCommand"),
+      MB_OK
+    );
+    break;
+  case ID_SAVE_AS:
+    MessageBox(
+      hwnd,
+      TEXT("ID_SAVE_AS"),
+      TEXT("MainWindow_Cls_OnCommand"),
+      MB_OK
+    );
+    break;
+  case ID_EXIT:
+    MessageBox(
+      hwnd,
+      TEXT("ID_EXIT"),
+      TEXT("MainWindow_Cls_OnCommand"),
+      MB_OK
+    );
+    break;
+  default:
+    break;
+  }
+}
+</code></pre>
+<p>在命令处理函数中，每当我们收到要给命令时，就弹出对应命令的 ID，以确认命令正确到达，并忽略任何我们不需要处理的命令。</p>
+<p>运行程序,看看是不是弹出了正确消息?</p>
+<h1 id="七、实现退出命令">七、实现退出命令</h1>
+<p>在我们要实现的功能中，最容易实现的应该就是保存命令了。在收到 ID_EXIT 命令时，我们只需要调用之前窗体关闭的处理逻辑即可。将命令处理函数的 ID_EXIT 分支代码改成调用窗体关闭函数，如下：</p>
+<pre><code class="language-C">  case ID_EXIT:
+    MainWindow_Cls_OnDestroy(hwnd);
+    break;
+</code></pre>
+<p>再次运行，并点击菜单 "文件" -&gt; "退出"，可以看到，我们的程序正常关闭了。</p>
+<h1 id="八、实现打开文件命令">八、实现打开文件命令</h1>
+<p>要实现打开文件功能，我们可以将其分成如下步骤：</p>
+<ol>
+<li>弹出打开文件对话框；</li>
+<li>获取文件大小；</li>
+<li>分配文件大小相等的内存；</li>
+<li>将文件内容读取到分配的内存；</li>
+<li>设置主窗体标题为文件名；</li>
+<li>设置编辑器控件的文本；</li>
+</ol>
+<h2 id="1-弹出打开文件对话框">1. 弹出打开文件对话框</h2>
+<p>在Windows中，可以通过调用 GetOpenFileName 函数弹出打开文件对话框，并获取到用户选择的文件路径，但是根据 MSDN 文档，建议使用 COM 组件的方式弹出打开文件对话框，这里我们采取 COM 组件的方式。</p>
+<p>添加如下代码：</p>
+<pre><code class="language-C">// 支持的编辑文件类型，当前我们只支持文本文件(*.txt).
+COMDLG_FILTERSPEC SUPPORTED_FILE_TYPES[] = {
+  { TEXT("text"), TEXT("*.txt") }
+};
+
+// 包含一个类型为 PWSTR 参数，没有返回值的函数指针
+typedef VOID(*Func_PWSTR)(PWSTR parameter, HWND hwnd);
+/**
+* 作用：
+*  选择一个文件，选择成功之后，调用传入的回调函数 pfCallback
+* 
+* 参数：
+*  pfCallback
+*    当用户成功选择一个文件，并获取到文件路径之后，本函数
+*    将回调 pfCallback 函数指针指向的函数，并将获取到的文
+*    路径作为参数传入。
+* 
+*  hwnd
+*    打开文件对话框的父窗体句柄。
+* 
+* 返回值：
+*  无
+*/
+VOID EditFile(Func_PWSTR pfCallback, HWND hwnd) {
+  // 每次调用之前，应该先初始化 COM 组件环境
+  HRESULT hr = CoInitializeEx(
+    NULL,
+    COINIT_APARTMENTTHREADED | COINIT_DISABLE_OLE1DDE
+  );
+  if (SUCCEEDED(hr))
+  {
+    IFileOpenDialog* pFileOpen = NULL;
+
+    // 创建一个 FileOpenDialog 实例
+    hr = CoCreateInstance(
+      &amp;CLSID_FileOpenDialog,
+      NULL,
+      CLSCTX_ALL,
+      &amp;IID_IFileOpenDialog,
+      &amp;pFileOpen
+    );
+
+    if (SUCCEEDED(hr))
+    {
+      // 设置打开文件扩展名
+      pFileOpen-&gt;lpVtbl-&gt;SetFileTypes(
+        pFileOpen,
+        _countof(SUPPORTED_FILE_TYPES),
+        SUPPORTED_FILE_TYPES
+      );
+      // 显示选择文件对话框
+      hr = pFileOpen-&gt;lpVtbl-&gt;Show(pFileOpen, hwnd);
+
+      // Get the file name from the dialog box.
+      if (SUCCEEDED(hr))
+      {
+        IShellItem* pItem;
+        hr = pFileOpen-&gt;lpVtbl-&gt;GetResult(pFileOpen, &amp;pItem);
+        if (SUCCEEDED(hr))
+        {
+          PWSTR pszFilePath;
+          hr = pItem-&gt;lpVtbl-&gt;GetDisplayName(
+            pItem, SIGDN_FILESYSPATH, &amp;pszFilePath);
+
+          // Display the file name to the user.
+          if (SUCCEEDED(hr))
+          {
+            if (pfCallback) {
+              pfCallback(pszFilePath, hwnd);
+            }
+            CoTaskMemFree(pszFilePath);
+          }
+          pItem-&gt;lpVtbl-&gt;Release(pItem);
+        }
+      }
+      pFileOpen-&gt;lpVtbl-&gt;Release(pFileOpen);
+    }
+    CoUninitialize();
+  }
+}
+</code></pre>
+<p>在这里，需要注意的是，为了方便，我们将回调函数指针声明和文件类型声明与编辑文件函数定义放到了一起，在真是状态下，我们会将声明放到源文件开头。</p>
+<p>另外，为了使用COM，我们需要引入两个头文件，stdlib.h 和 ShlObj.h，其中_countof 宏定义在 stdlib.h 中，其他的COM相关定义，在 ShlObj.h 文件中。</p>
+<p>现在，我们已经实现了弹出打开文件对话框的功能，但是还没有调用。接下来，让我们调用它，并试一下，是否正常弹出了打开文件对话框。</p>
+<p>首先，修改 ID_OPEN 命令的响应分支如下：</p>
+<pre><code class="language-C">  case ID_OPEN:
+    EditFile(OpenNewFile, hwnd);
+    break;
+</code></pre>
+<p>然后，我们添加一个新函数: OpenNewFile， 它接收一个字符串和父窗体句柄，用于读取文件，并将文件内容添加到编辑器控件内，其基础定义如下：</p>
+<pre><code class="language-C">/**
+* 作用：
+*  如果当前已经有了打开的文件，并且内容已经被修改，
+*  则弹出对话框，让用户确认是否保存以打开文件，并打开
+*  新文件。
+*  如果当前没有已打开文件或者当前已打开文件未修改，
+*  则直接打开传入路径指定文件。
+*
+* 参数：
+*  fileName
+*    要新打开的目标文件路径。
+*
+*  hwnd
+*    弹出对话框时，指定的父窗体，对于本应用来说，
+*    应该为主窗体的句柄。
+*
+* 返回值：
+*  无
+*/
+VOID OpenNewFile(PWSTR fileName, HWND hwnd) {
+  MessageBox(hwnd, fileName, TEXT("打开新文件"), MB_OK);
+}
+</code></pre>
+<p>在这里，为了演示打开文件对话框的函数是否正常工作，我们暂时是弹出一个对话框，显示传入的文件路径，没有做任何操作。运行代码，点击"文件" -&gt; "打开" 菜单，我们可以看到，程序正确弹出了打开文件对话框，且在选择文件之后，弹出了选中路径：</p>
+<p><img src="https://img2020.cnblogs.com/blog/456172/202105/456172-20210513134558722-1580833009.bmp" alt="" loading="lazy"></p>
+<p><img src="https://img2020.cnblogs.com/blog/456172/202105/456172-20210513134606609-1687206638.bmp" alt="" loading="lazy"></p>
+<p>由于在内存中，字符串是以 UTF-16 宽字符进行编码，所以在读取文件之后，我们需要将读取到的内容转换为宽字符表示，另外我们将内存分配的逻辑也抽取出来，封装成我一个函数，于是，得到以下两个辅助函数：</p>
+<pre><code class="language-C">/**
+* 作用：
+*  从默认进程堆中分配给定大小的内存，大小的单位为 BYTE。
+*  如，要分配 100 byte 的内存，可以通过如下方式调用：
+*    NewMemory(100, NULL)
+*
+* 参数：
+*  size
+*    以 byte 为单位的内存大小。
+*
+*  hwnd
+*    如果分配出错，弹出消息框的父窗体句柄。
+*
+* 返回值：
+*  如果内存分配成功，返回分配内存的起始指针，否则返回 NULL。
+*/
+PBYTE NewMemory(size_t size, HWND hwnd) {
+  HANDLE processHeap;
+  PBYTE buff = NULL;
+  if ((processHeap = GetProcessHeap()) == NULL) {
+    DisplayError(TEXT("GetProcessHeap"), hwnd);
+    return buff;
+  }
+
+  buff = (PBYTE)HeapAlloc(processHeap, HEAP_ZERO_MEMORY, size);
+  if (NULL == buff) {
+    // 由于 HeapAlloc 函数不设置错误码，所以这里
+    // 只能直接弹出一个错误消息，但是并不知道具体
+    // 错误原因。
+    MessageBox(
+      hwnd,
+      TEXT("alloc memory error."),
+      TEXT("Error"),
+      MB_OK
+    );
+  }
+  return buff;
+}
+
+/**
+* 作用：
+*  从内存 buff 中读取字符串，并将其转换为 UTF16 编码，
+*  返回编码后的宽字符字符。
+*
+* 参数：
+*  buff
+*    文本原始内容。
+* 
+*  hwnd
+*    操作出错时，弹框的父窗体句柄。
+*
+* 返回值：
+*  无论原始内容是否为 UTF16 编码字符串，本函数均会
+*  重新分配内存，并返回新内存。
+*/
+PTSTR Normalise(PBYTE buff, HWND hwnd) {
+  PWSTR pwStr;
+  PTSTR ptText;
+  size_t size;
+
+  pwStr = (PWSTR)buff;
+  // 检查BOM头
+  if (*pwStr == 0xfffe || *pwStr == 0xfeff) {
+    // 如果是大端序，要转换为小端序
+    if (*pwStr == 0xfffe) {
+      WCHAR wc;
+      for (; (wc = *pwStr); pwStr++) {
+        *pwStr = (wc &gt;&gt; 8) | (wc &lt;&lt; 8);
+      }
+      // 跳过 BOM 头
+      pwStr = (PWSTR)(buff + 2);
+    }
+    size = (wcslen(pwStr) + 1) * sizeof(WCHAR);
+    ptText = (PWSTR)NewMemory(size, hwnd);
+    if (!ptText) {
+      return NULL;
+    }
+    memcpy_s(ptText, size, pwStr, size);
+    return ptText;
+  }
+
+  size =
+    MultiByteToWideChar(
+      CP_UTF8,
+      0,
+      buff,
+      -1,
+      NULL,
+      0
+    );
+
+  ptText = (PWSTR)NewMemory(size * sizeof(WCHAR), hwnd);
+
+  if (!ptText) {
+    return NULL;
+  }
+
+  MultiByteToWideChar(
+    CP_UTF8,
+    0,
+    buff,
+    -1,
+    ptText,
+    size
+  );
+
+  return ptText;
+}
+</code></pre>
+<p>有了以上两个辅助函数，接下来，我们新增两个全局变量，如下：</p>
+<pre><code class="language-C">LPCSTR currentFileName = NULL;
+HWND hTextEditor = NULL;
+</code></pre>
+<p>其中，currentFileName 指向当前以打开文件的路径，hTextEditor 为我们文本编辑器实例的句柄。</p>
+<p>由于我们在设置编辑器文本的时候，需要获取到编辑器句柄，所以在创建编辑器窗体的时候，使用 hTextEditor 记录句柄，修改主窗体创建事件处理函数，添加赋值：</p>
+<pre><code class="language-C">BOOL MainWindow_Cls_OnCreate(
+  HWND hwnd, LPCREATESTRUCT lpCreateStruct) {
+  return NULL != (
+    hTextEditor = CreateTextEditor(
+      GetWindowInstance(hwnd), hwnd)
+  );
+}
+</code></pre>
+<p>最后，修改 OpenNewFile 函数代码如下：</p>
+<pre><code class="language-C">VOID OpenNewFile(PWSTR fileName, HWND hwnd) {
+  LARGE_INTEGER size;
+  PBYTE buff = NULL;
+  HANDLE processHeap = NULL;
+  DWORD readSize = 0;
+  HANDLE hFile = CreateFile(
+    fileName,
+    GENERIC_ALL,
+    0,
+    NULL,
+    OPEN_ALWAYS,
+    FILE_ATTRIBUTE_NORMAL,
+    NULL
+  );
+
+  if (INVALID_HANDLE_VALUE == hFile) {
+    DisplayError(TEXT("CreateFile"), hwnd);
+    return;
+  }
+
+  if (!GetFileSizeEx(hFile, &amp;size)) {
+    DisplayError(TEXT("GetFileSizeEx"), hwnd);
+    goto Exit;
+  }
+
+  if ((processHeap = GetProcessHeap()) == NULL) {
+    DisplayError(TEXT("GetProcessHeap"), hwnd);
+    goto Exit;
+  }
+
+  buff = (PBYTE)HeapAlloc(
+    processHeap,
+    HEAP_ZERO_MEMORY,
+    (SIZE_T)(size.QuadPart + 8));
+  if (NULL == buff) {
+    MessageBox(
+      hwnd,
+      TEXT("alloc memory error."),
+      TEXT("Error"),
+      MB_OK
+    );
+    goto Exit;
+  }
+
+  if (!ReadFile(
+    hFile, buff,
+    (DWORD)size.QuadPart,
+    &amp;readSize,
+    NULL
+  )) {
+    MessageBox(
+      hwnd,
+      TEXT("ReadFile error."),
+      TEXT("Error"),
+      MB_OK
+    );
+    goto FreeBuff;
+  }
+
+  // 因为对话框关闭之后，将会释放掉文件路径的内存
+  // 所以这里，我们重新分配内存，并拷贝一份路径
+  // 在这之前，需要判断当前文件名是否指向了一个地址，
+  // 如果有指向，应将其释放。
+  if (currentFileName) {
+    HeapFree(GetProcessHeap(), 0, currentFileName);
+  }
+  size_t bsize = (wcslen(fileName) + 1) * sizeof(WCHAR);
+  currentFileName = (PWSTR)NewMemory(bsize, hwnd);
+  if (!currentFileName) {
+    goto FreeBuff;
+  }
+  StringCbCopy(currentFileName, bsize, fileName);
+
+  PTSTR str = Normalise(buff, hwnd);
+  SendMessage(hTextEditor, WM_SETTEXT, 0, (WPARAM)str);
+  SendMessage(hwnd, WM_SETTEXT, 0, (WPARAM)currentFileName);
+  if (str) {
+    HeapFree(processHeap, 0, str);
+  }
+
+FreeBuff:
+  HeapFree(processHeap, 0, buff);
+
+Exit:
+  CloseHandle(hFile);
+}
+</code></pre>
+<p>运行代码，并打开文件，可以看到，程序读取了文件内容，并将内容显示在编辑器内，并且主窗体的标题变为当前打开的文件路径：</p>
+<p><img src="https://img2020.cnblogs.com/blog/456172/202105/456172-20210513134734944-1817969872.bmp" alt="" loading="lazy"></p>
+<h1 id="九、响应编辑器内容变化事件">九、响应编辑器内容变化事件</h1>
+<p>虽然我们已经实现了读取并显示文本文件内容的功能，但是如果你对编辑器内的文本进行修改，就会发现，我们主窗体的标题没有发生变化。</p>
+<p>如果要在文本编辑器内的文本发生变化之后，响应该变化，应该怎么办呢？</p>
+<p>还记得之前，我们在处理命令消息的时候，有 hwndCtl 和 codeNotify参数吗？当编辑器控件的内容发生变化后，该控件会向其父窗体（也就是我们的主窗体）发送一个 WM_COMMAND 消息，并且传入 EN_CHANGE 通知参数，处理命令函数中，响应 EN_CHANGE 通知，修改我们的标题即可。</p>
+<p>由于在修改文本之后，我们需要固定在标题之前添加一个 '*'，其他部分和文件名是完全一样的，所以，我们在分配路径内存时，多分配一个字符的空间，将 currentFileName 指针指向新内存的第一个字符，这样，之后修改标题文本的时候，就不选哟重新分配内存了。</p>
+<p>我们把打开文件的代码修改如下：</p>
+<pre><code class="language-C">VOID OpenNewFile(PWSTR fileName, HWND hwnd) {
+  LARGE_INTEGER size;
+  PBYTE buff = NULL;
+  HANDLE processHeap = NULL;
+  DWORD readSize = 0;
+  HANDLE hFile = CreateFile(
+    fileName,
+    GENERIC_ALL,
+    0,
+    NULL,
+    OPEN_ALWAYS,
+    FILE_ATTRIBUTE_NORMAL,
+    NULL
+  );
+
+  if (INVALID_HANDLE_VALUE == hFile) {
+    DisplayError(TEXT("CreateFile"), hwnd);
+    return;
+  }
+
+  if (!GetFileSizeEx(hFile, &amp;size)) {
+    DisplayError(TEXT("GetFileSizeEx"), hwnd);
+    goto Exit;
+  }
+
+  if ((processHeap = GetProcessHeap()) == NULL) {
+    DisplayError(TEXT("GetProcessHeap"), hwnd);
+    goto Exit;
+  }
+
+  buff = (PBYTE)HeapAlloc(
+    processHeap,
+    HEAP_ZERO_MEMORY,
+    (SIZE_T)(size.QuadPart + 8));
+  if (NULL == buff) {
+    MessageBox(
+      hwnd,
+      TEXT("alloc memory error."),
+      TEXT("Error"),
+      MB_OK
+    );
+    goto Exit;
+  }
+
+  if (!ReadFile(
+    hFile, buff,
+    (DWORD)size.QuadPart,
+    &amp;readSize,
+    NULL
+  )) {
+    MessageBox(
+      hwnd,
+      TEXT("ReadFile error."),
+      TEXT("Error"),
+      MB_OK
+    );
+    goto FreeBuff;
+  }
+
+  // 因为对话框关闭之后，将会释放掉文件路径的内存
+  // 所以这里，我们重新分配内存，并拷贝一份路径
+  // 在这之前，需要判断当前文件名是否指向了一个地址，
+  // 如果有指向，应将其释放。
+  if (currentFileName) {
+    HeapFree(GetProcessHeap(), 0, currentFileName - 1);
+  }
+  size_t bsize = (wcslen(fileName) + 2) * sizeof(WCHAR);
+  currentFileName = (PWSTR)NewMemory(bsize, hwnd);
+  if (!currentFileName) {
+    goto FreeBuff;
+  }
+  currentFileName[0] = (WCHAR)'*';
+  currentFileName = ((PWCHAR)currentFileName) + 1;
+
+  StringCbCopy(currentFileName, bsize, fileName);
+
+  PTSTR str = Normalise(buff, hwnd);
+  SendMessage(hTextEditor, WM_SETTEXT, 0, (WPARAM)str);
+  SendMessage(hwnd, WM_SETTEXT, 0, (WPARAM)currentFileName);
+
+  if (str) {
+    HeapFree(processHeap, 0, str);
+  }
+
+FreeBuff:
+  HeapFree(processHeap, 0, buff);
+
+Exit:
+  CloseHandle(hFile);
+}
+</code></pre>
+<p>重点关注72-73行，我们多分配了一个字符；</p>
+<p>另外，还需要关注第65行，因为 currentFileName 指向的是分配内存起始地址之后，所以释放内存的时候，要传入 currentFileName - 1。</p>
+<p>同时，我们新增一个标识文本是否变更的变量，如下：</p>
+<pre><code class="language-C">BOOL textChanged = FALSE;
+</code></pre>
+<p>然后，修改我们的命令处理程序的默认分支如下：</p>
+<pre><code class="language-C">  default:
+    if (hwndCtl != NULL) {
+      switch (codeNotify)
+      {
+      case EN_CHANGE:
+        if (!textChanged &amp;&amp; currentFileName != NULL) {
+          SendMessage(
+            hwnd,
+            WM_SETTEXT,
+            0,
+            (LPARAM)((((PWCHAR)currentFileName)) - 1)
+          );
+        }
+        textChanged = TRUE;
+        break;
+      default:
+        break;
+      }
+    }
+    break;
+</code></pre>
+<p>在这里，当我们没有打开文件时，标题时不会发生变更的，但是变更标识会同步变更。</p>
+<p>接下来，运行程序，打开一个文件，做出任何的编辑，可以看到，在编辑之后，我们主窗体的标题均发生了变化。</p>
+<p><img src="https://img2020.cnblogs.com/blog/456172/202105/456172-20210513134908082-575824534.bmp" alt="" loading="lazy"></p>
+<p>补充一句，在调整窗体大小时，发现编辑器的大小没有随主窗体的大小发生变化，这是因为，我们没有处理主窗体的大小变化消息，在主消息处理函数中，添加如下分支：</p>
+<pre><code class="language-C">  case WM_SIZE:
+    // 主窗体大小发生变化，我们要调整编辑控件大小。
+    return HANDLE_WM_SIZE(
+      hWnd, wParam, lParam, MainWindow_Cls_OnSize);
+</code></pre>
+<p>添加如下函数定义：</p>
+<pre><code class="language-C">/**
+* 作用：
+*  处理主窗体的大小变更事件，这里只是调整文本编辑器
+*  的大小。
+* 
+* 参数:
+*  hwnd
+*    主窗体的句柄
+*  
+*  state
+*    窗体大小发生变化的类型，如：最大化，最小化等
+* 
+*  cx
+*    窗体工作区的新宽度
+* 
+*  cy
+*    窗体工作区的新高度
+* 
+* 返回值：
+*  无
+*/
+VOID MainWindow_Cls_OnSize(
+  HWND hwnd, UINT state, int cx, int cy) { 
+  MoveWindow(
+    hTextEditor,
+    0,
+    0,
+    cx,
+    cy,
+    TRUE
+  );
+}
+</code></pre>
+<p>修改完成代码，并保存，运行程序，现在，我们的文本编辑器大小就会随着主窗体大小的变化而变化了。</p>
+<h1 id="十、实现保存命令">十、实现保存命令</h1>
+<p>类似于打开文件的处理，我们先写一个获取编辑器内容，并将内容写入文件（UTF8)的函数，如下：</p>
+<pre><code class="language-C">/**
+* 作用：
+*  将给定的 byte 数组中的 bSize 个子接，写入 file 指定
+*  的文件中。
+*
+* 参数：
+*  bytes
+*    要写入目标文件的 byte 数组。
+*
+*  bSize
+*    要写入目标文件的字节数量。
+*
+*  file
+*    要写入内容的目标文件名。
+*
+*  hwnd
+*    出现错误时，本函数会弹出对话框，
+*    此参数为对话框的父窗体句柄。
+*
+* 返回值：
+*  无
+*/
+VOID WriteBytesToFile(
+  PBYTE bytes,
+  size_t bSize,
+  PWSTR file,
+  HWND hwnd
+) {
+  DWORD numberOfBytesWritten = 0;
+  HANDLE hFile = CreateFile(
+    file,
+    GENERIC_WRITE,
+    0,
+    NULL,
+    CREATE_ALWAYS,
+    FILE_ATTRIBUTE_NORMAL,
+    NULL
+  );
+  if (INVALID_HANDLE_VALUE == hFile) {
+    DisplayError(TEXT("CreateFile"), hwnd);
+    return;
+  }
+
+  if (!WriteFile(
+    hFile,
+    bytes,
+    bSize,
+    &amp;numberOfBytesWritten,
+    NULL
+  )) {
+    DisplayError(TEXT("WriteFile"), hwnd);
+    goto Exit;
+  }
+
+Exit:
+  CloseHandle(hFile);
+}
+
+/**
+* 作用：
+*  保存当前已经打开的文件，如果当前没有已打开文件，
+*  则调用另存为逻辑。
+* 
+* 参数：
+*  hwnd
+*    出现错误时，本函数会弹出对话框，
+*    此参数为对话框的父窗体句柄。
+* 
+* 返回值：
+*  无
+*/
+VOID SaveFile(HWND hwnd) {
+  size_t cch = 0;
+  size_t bSize = 0;
+  PWCHAR buffWStr = NULL;
+  PBYTE utf8Buff = NULL;
+
+  // 如果当前没有打开任何文件，当前忽略
+  if (!currentFileName) {
+    return;
+  }
+
+  // 获取文本编辑器的文本字符数量。
+  cch = SendMessage(
+    hTextEditor, WM_GETTEXTLENGTH, 0, 0);
+  // 获取字符时，我们是通过 UTF16 格式（WCHAR)获取，
+  // 我们要在最后添加一个空白结尾标志字符
+  buffWStr = (PWCHAR)NewMemory(
+    cch * sizeof(WCHAR) + sizeof(WCHAR), hwnd);
+
+  if (buffWStr == NULL) {
+    return;
+  }
+  // 获取到编辑器的文本
+  SendMessage(
+    hTextEditor,
+    WM_GETTEXT,
+    cch + 1, 
+    (WPARAM)buffWStr
+  );
+
+  // 获取将文本以 UTF8 格式编码后所需的内存大小（BYTE）
+  bSize = WideCharToMultiByte(
+    CP_UTF8,
+    0,
+    buffWStr,
+    cch,
+    NULL,
+    0,
+    NULL,
+    NULL
+  );
+
+  utf8Buff = NewMemory(bSize, hwnd);
+  if (utf8Buff == NULL) {
+    goto Exit;
+  }
+  // 将文本格式化到目标缓存
+  WideCharToMultiByte(
+    CP_UTF8,
+    0,
+    buffWStr,
+    cch,
+    utf8Buff,
+    bSize,
+    NULL,
+    NULL
+  );
+
+  // 将内容覆盖到目标文件。
+  WriteBytesToFile(
+    utf8Buff, bSize, currentFileName, hwnd);
+
+  // 保存完成之后，设置文本变更标识为 FALSE，
+  // 并设置主窗体标题为当前文件路径。
+  SendMessage(hwnd, WM_SETTEXT, 0, (LPARAM)currentFileName);
+
+  HeapFree(GetProcessHeap(), 0, utf8Buff);
+Exit:
+  HeapFree(GetProcessHeap(), 0, buffWStr);
+}
+</code></pre>
+<p>接下来，将我们的保存命令处理分支稍作修改，调用 SaveFile 函数，如下：</p>
+<pre><code class="language-C">  case ID_SAVE:
+    SaveFile(hwnd);
+    break;
+</code></pre>
+<p>运行程序，打开一个文件，编辑，保存，看看标题的 * 是否按照预想显示和消失，文件是否正常保存？</p>
+<p>在这里，如果没有已经打开的文件，我们是忽略保存命令的，这我们将在实现另存为命令之后，再回来解决这个问题。</p>
+<h1 id="十一、实现另存为命令">十一、实现另存为命令</h1>
+<p>对于另存为命令，和保存命令的主要区别，就是另存为命令需要让用户选择一个保存目标文件名，然后，其他逻辑就和保存的逻辑一样了。</p>
+<p>让我们实现另存为函数，如下：</p>
+<pre><code class="language-C">/**
+* 作用：
+*  弹出另存为对话框，在用户选择一个文件路径之后，
+*  回调 pfCallback 函数指针指向的函数。
+* 
+* 参数：
+*  pfCallback
+*    一个函数指针，用于执行用户选择一个保存路径
+*    之后的操作。
+* 
+*  hwnd
+*    出错情况下，弹出错误对话框的父窗体句柄。
+* 
+* 返回值：
+*  无
+*/
+VOID SaveFileAs(Func_PWSTR_HWND pfCallback, HWND hwnd) {
+  // 每次调用之前，应该先初始化 COM 组件环境
+  HRESULT hr = CoInitializeEx(
+    NULL,
+    COINIT_APARTMENTTHREADED | COINIT_DISABLE_OLE1DDE
+  );
+  if (SUCCEEDED(hr))
+  {
+    IFileSaveDialog* pFileSave = NULL;
+
+    // 创建一个 FileOpenDialog 实例
+    hr = CoCreateInstance(
+      &amp;CLSID_FileSaveDialog,
+      NULL,
+      CLSCTX_ALL,
+      &amp;IID_IFileSaveDialog,
+      &amp;pFileSave
+    );
+
+    if (SUCCEEDED(hr))
+    {
+      // 设置打开文件扩展名
+      pFileSave-&gt;lpVtbl-&gt;SetFileTypes(
+        pFileSave,
+        _countof(SUPPORTED_FILE_TYPES),
+        SUPPORTED_FILE_TYPES
+      );
+      // 显示选择文件对话框
+      hr = pFileSave-&gt;lpVtbl-&gt;Show(pFileSave, hwnd);
+
+      // Get the file name from the dialog box.
+      if (SUCCEEDED(hr))
+      {
+        IShellItem* pItem;
+        hr = pFileSave-&gt;lpVtbl-&gt;GetResult(pFileSave, &amp;pItem);
+        if (SUCCEEDED(hr))
+        {
+          PWSTR pszFilePath;
+          hr = pItem-&gt;lpVtbl-&gt;GetDisplayName(
+            pItem, SIGDN_FILESYSPATH, &amp;pszFilePath);
+
+          // Display the file name to the user.
+          if (SUCCEEDED(hr))
+          {
+            if (pfCallback) {
+              pfCallback(pszFilePath, hwnd);
+            }
+            CoTaskMemFree(pszFilePath);
+          }
+          pItem-&gt;lpVtbl-&gt;Release(pItem);
+        }
+      }
+      pFileSave-&gt;lpVtbl-&gt;Release(pFileSave);
+    }
+    CoUninitialize();
+  }
+}
+</code></pre>
+<p>以上函数只是实现了弹出对话框，获取另存为路径的功能，让我们再添加一个获取路径之后的处理函数，如下：</p>
+<pre><code class="language-C">/**
+* 作用：
+*  将当前内容保存到 fileName，并且设置 currentFileName
+*  为 fileName。
+* 
+* 参数：
+*  fileName
+*    要将当前内容保存到的目标路径
+* 
+*  hwnd
+*    出错弹出消息框时，消息框的父窗体句柄。
+* 
+* 返回值：
+*  无
+*/
+VOID SaveFileTo(PWSTR fileName, HWND hwnd) {
+  size_t len = lstrlen(fileName);
+  int bSize = len * sizeof(WCHAR);
+  int appendSuffix = !(
+    fileName[len - 4] == '.' &amp;&amp;
+    fileName[len - 3] == 't' &amp;&amp;
+    fileName[len - 2] == 'x' &amp;&amp;
+    fileName[len - 1] == 't');
+
+  if (appendSuffix) {
+    bSize += 5 * sizeof(WCHAR);
+  }
+
+  if (currentFileName) {
+    HeapFree(GetProcessHeap(), 0, currentFileName);
+    currentFileName = NULL;
+  }
+
+  currentFileName = (PWSTR)NewMemory(bSize, hwnd);
+  if (!currentFileName) {
+    return;
+  }
+
+  StringCbCopy(currentFileName, bSize, fileName);
+  if (appendSuffix) {
+    currentFileName[len + 0] = '.';
+    currentFileName[len + 1] = 't';
+    currentFileName[len + 2] = 'x';
+    currentFileName[len + 3] = 't';
+    currentFileName[len + 4] = '\0';
+  }
+
+  SaveFile(hwnd);
+}
+</code></pre>
+<p>该函数的工作很简单，就是解析获取到的路径，如果路径最后不是以 ".txt" 结尾，则添加 ".txt" 扩展，最后调用保存文件的逻辑。</p>
+<p>接下来，让我们修改 ID_SAVE_AS 命令分支代码：</p>
+<pre><code class="language-C">  case ID_SAVE_AS:
+    SaveFileAs(SaveFileTo, hwnd);
+    break;
+</code></pre>
+<p>最后，还记得之前我们编辑保存逻辑时，省略了当前打开文件名为 NULL  时的处理吗？现在是时候处理这种情况了，处理方式很简单，就是掉哟个另存为逻辑。</p>
+<p>将SaveFile 函数做如下修改：</p>
+<pre><code class="language-C">VOID SaveFile(HWND hwnd) {
+  size_t cch = 0;
+  size_t bSize = 0;
+  PWCHAR buffWStr = NULL;
+  PBYTE utf8Buff = NULL;
+
+  // 如果当前没有打开任何文件，则调用另存为逻辑，
+  // 让用户选择一个文件名进行保存，然后退出。
+  if (!currentFileName) {
+    SaveFileAs(SaveFileTo, hwnd);
+    return;
+  }
+
+  // 获取文本编辑器的文本字符数量。
+  cch = SendMessage(
+    hTextEditor, WM_GETTEXTLENGTH, 0, 0);
+  // 获取字符时，我们是通过 UTF16 格式（WCHAR)获取，
+  // 我们要在最后添加一个空白结尾标志字符
+  buffWStr = (PWCHAR)NewMemory(
+    cch * sizeof(WCHAR) + sizeof(WCHAR), hwnd);
+
+  if (buffWStr == NULL) {
+    return;
+  }
+  // 获取到编辑器的文本
+  SendMessage(
+    hTextEditor,
+    WM_GETTEXT,
+    cch + 1, 
+    (WPARAM)buffWStr
+  );
+
+  // 获取将文本以 UTF8 格式编码后所需的内存大小（BYTE）
+  bSize = WideCharToMultiByte(
+    CP_UTF8,
+    0,
+    buffWStr,
+    cch,
+    NULL,
+    0,
+    NULL,
+    NULL
+  );
+
+  utf8Buff = NewMemory(bSize, hwnd);
+  if (utf8Buff == NULL) {
+    goto Exit;
+  }
+  // 将文本格式化到目标缓存
+  WideCharToMultiByte(
+    CP_UTF8,
+    0,
+    buffWStr,
+    cch,
+    utf8Buff,
+    bSize,
+    NULL,
+    NULL
+  );
+
+  // 将内容覆盖到目标文件。
+  WriteBytesToFile(
+    utf8Buff, bSize, currentFileName, hwnd);
+
+  // 保存完成之后，设置文本变更标识为 FALSE，
+  // 并设置主窗体标题为当前文件路径。
+  SendMessage(hwnd, WM_SETTEXT, 0, (LPARAM)currentFileName);
+
+  HeapFree(GetProcessHeap(), 0, utf8Buff);
+Exit:
+  HeapFree(GetProcessHeap(), 0, buffWStr);
+}
+</code></pre>
+<p>在第10行，我们添加了调用另存为逻辑的代码。</p>
+<p>另外需要说明的是，由于 SaveFileTo函数调用了SaveFile函数，SaveFile 函数也调用了 SaveFileTo 函数，由于在C语言中，必须先声明，才能够使用，所以需要按照你代码的为止，对函数进行提前声明。</p>
+<p>在这里，我将SaveFileTo函数的实现放到了 SaveFile函数的后面，所以需要在SaveFile之前添加SaveFileTo函数的额声明，如下：</p>
+<pre><code class="language-C">VOID SaveFileTo(PWSTR fileName, HWND hwnd);
+</code></pre>
+<p>到此为止，运行我们的程序，看看它是否能够正常工作？</p>
+<p>我们先点击另存为，保存一个新文件，然后再打开另一个文件，然后，程序报异常了。</p>
+<p>为什么？</p>
+<p>还记得之前我们处理打开文件的逻辑吗？每次分配内存的时候，我们都多分配了一个字符的空间，currentFileName 指向的不是分配内存的起始地址。</p>
+<p>让我们看看SaveFileTo 函数的逻辑，发现我们没有做相同的处理，所以释放内存的时候，报错了。</p>
+<p>让我们将SaveFileTo的代码改成这样：</p>
+<pre><code class="language-C">VOID SaveFileTo(PWSTR fileName, HWND hwnd) {
+  size_t len = lstrlen(fileName);
+  int bSize = len * sizeof(WCHAR);
+  int appendSuffix = !(
+    fileName[len - 4] == '.' &amp;&amp;
+    fileName[len - 3] == 't' &amp;&amp;
+    fileName[len - 2] == 'x' &amp;&amp;
+    fileName[len - 1] == 't');
+
+  if (appendSuffix) {
+    bSize += 5 * sizeof(WCHAR);
+  }
+
+  if (currentFileName) {
+    HeapFree(GetProcessHeap(), 0, currentFileName - 1);
+    currentFileName = NULL;
+  }
+
+  currentFileName = (PWSTR)NewMemory(bSize + sizeof(WCHAR), hwnd);
+  if (!currentFileName) {
+    return;
+  }
+  currentFileName = currentFileName + 1;
+  StringCbCopy(currentFileName, bSize, fileName);
+  if (appendSuffix) {
+    currentFileName[len + 0] = '.';
+    currentFileName[len + 1] = 't';
+    currentFileName[len + 2] = 'x';
+    currentFileName[len + 3] = 't';
+    currentFileName[len + 4] = '\0';
+  }
+
+  SaveFile(hwnd);
+}
+</code></pre>
+<p>再试试？</p>
+<p>为什么第一次保存之前，文本变化的反应是正确的，一旦调用保存之后，文本变化之后，主窗体的标题没有变化？</p>
+<p>原来是保存文件成功之后，没有更新内容变化标识。修改SaveFile函数，在保存完成后，添加如下语句：</p>
+<pre><code class="language-C">  textChanged = FALSE;
+</code></pre>
+<p>再试试？终于正常工作了。</p>
+<h1 id="十二、整理我们的代码，按照功能进行分离">十二、整理我们的代码，按照功能进行分离</h1>
+<p>至此，我们已经得到了一个正常工作的基础编辑器。但所有代码合在一起，有些凌乱，让我们整理下结构。</p>
+<p>首先，我们将和编辑功能，窗体显示功能相关的代码，都放到 WinTextEditor.c 中，然后添加一个 InitEnv 函数，在主程序中调用该函数以初始化ii能够。</p>
+<p>现在，main.c 中只剩下了主程序，如下:</p>
+<pre><code class="language-C">#include "WinTextEditor.h"
+
+int WINAPI wWinMain(
+  _In_ HINSTANCE hInstance,
+  _In_opt_ HINSTANCE hPrevInstance,
+  _In_ LPWSTR lpCmdLine,
+  _In_ int nShowCmd
+) {
+  MSG msg;
+  BOOL fGotMessage = FALSE;
+
+  if (!InitEnv(hInstance, nShowCmd)) {
+    return 0;
+  }
+
+  while ((fGotMessage = GetMessage(&amp;msg, (HWND)NULL, 0, 0)) != 0
+    &amp;&amp; fGotMessage != -1)
+  {
+    TranslateMessage(&amp;msg);
+    DispatchMessage(&amp;msg);
+  }
+
+  return msg.wParam;
+}
+</code></pre>
+<p>在头文件 WinTextEditor.h 中，我们对外声明了一个 InitEnv 函数，其内容如下：</p>
+<pre><code class="language-C">#include &lt;Windows.h&gt;
+#include &lt;windowsx.h&gt;
+#include &lt;strsafe.h&gt;
+
+#include &lt;stdlib.h&gt;
+#include &lt;ShlObj.h&gt;
+ 
+#include "resource.h"
+
+BOOL InitEnv(HINSTANCE hInstance, int nShowCmd);
+</code></pre>
+<p>接下来，按照相同的步骤，分别抽象出，错误处理、文件操作等模块，最终，我们的文件结构如下：</p>
+<p><img src="https://img2020.cnblogs.com/blog/456172/202105/456172-20210513135432979-2016426051.bmp" alt="" loading="lazy"></p>
+<h1 id="十三、可能遇到的问题">十三、可能遇到的问题</h1>
+<ul>
+<li>编译器警告（等级 1）C4819</li>
+</ul>
+<p>这个问题是由于源代码文件保存编码不是Unicode字符集造成的，当前Visual Studio内没有合适的配置能够解决这个问题。<br>
+但是，通过测试，可以通过记事本打开文件，并将源代码保存为带BOM的UTF8编码，解决这个问题。</p>
+<ul>
+<li>编辑资源文件的时候，提示错误</li>
+</ul>
+<p>这个问题，在之前编辑文件的时候说过了，可以通过在资源文件中添加字符编码声明解决。</p>
+<p>最后的最后，欢迎关注公众号 [编程之路漫漫]，下次，让我们不通过使用Win32控件，实现一个二进制编辑器。</p>
+<p><img src="https://img2020.cnblogs.com/blog/456172/202105/456172-20210513135648203-519995211.png" alt="" loading="lazy"></p>
+<p>码途求知己，天涯觅一心。</p>
+
+</div>
+<div id="MySignature"></div>
+<div class="clear"></div>
+<div id="blog_post_info_block">
+    <div id="blog_post_info"></div>
+    <div class="clear"></div>
+    <div id="post_next_prev"></div>
+</div>
+            </div>
+            <div class="postDesc">posted @ 
+<span id="post-date">2021-05-13 13:57</span>&nbsp;
+<a href="https://www.cnblogs.com/lee2014/">plle</a>&nbsp;
+阅读(<span id="post_view_count">2272</span>)&nbsp;
+评论(<span id="post_comment_count">33</span>)&nbsp;
+<a href="https://i.cnblogs.com/EditPosts.aspx?postid=14764280" rel="nofollow">编辑</a>&nbsp;
+<a href="javascript:void(0)" onclick="AddToWz(14764280);return false;">收藏</a></div>
+        </div>
+	    
+	    
+    </div><!--end: topics 文章、评论容器-->
+</div>
+<script src="https://common.cnblogs.com/highlight/10.3.1/highlight.min.js"></script>
+<script>markdown_highlight();</script>
+<script>
+    var allowComments = true, cb_blogId = 201721, cb_blogApp = 'lee2014', cb_blogUserGuid = '8a8225cc-6b14-e211-aa3f-842b2b196315';
+    var cb_entryId = 14764280, cb_entryCreatedDate = '2021-05-13 13:57', cb_postType = 1;
+    updatePostStats(
+        [cb_entryId],
+        function(id, count) { $("#post_view_count").text(count) },
+        function(id, count) { $("#post_comment_count").text(count) })
+    zoomManager.apply("#cnblogs_post_body img:not(.code_img_closed):not(.code_img_opened)");
+</script>
+<a name="!comments"></a>
+<div id="blog-comments-placeholder"></div>
+<div id="comment_form" class="commentform">
+    <a name="commentform"></a>
+    <div id="divCommentShow"></div>
+    <div id="comment_nav"><span id="span_refresh_tips"></span><a href="javascript:void(0);" onclick="return RefreshCommentList();" id="lnk_RefreshComments" runat="server" clientidmode="Static">刷新评论</a><a href="#" onclick="return RefreshPage();">刷新页面</a><a href="#top">返回顶部</a></div>
+    <div id="comment_form_container"></div>
+    <div class="ad_text_commentbox" id="ad_text_under_commentbox"></div>
+    <div id="ad_t2"></div>
+    <div id="opt_under_post"></div>
+    <div id="cnblogs_c1" class="under-post-card">
+        <div id='div-gpt-ad-1592365906576-0' style='width: 300px; height: 250px;'></div>
+    </div>
+    <div id="under_post_card1"></div>
+    <div id="cnblogs_c2" class="under-post-card">
+        <div id='div-gpt-ad-1592366332455-0' style='width: 468px; height: 60px;'></div>
+    </div>
+    <div id="under_post_card2"></div>
+    <div id="HistoryToday" class="under-post-card"></div>
+    <script type="text/javascript">
+       var commentManager = new blogCommentManager();
+       commentManager.renderComments(0);
+       fixPostBody();
+       deliverBigBanner();
+setTimeout(function() { incrementViewCount(cb_entryId); }, 50);       deliverT2();
+       deliverC1C2();
+       loadNewsAndKb();
+       loadBlogSignature();
+LoadPostCategoriesTags(cb_blogId, cb_entryId);       LoadPostInfoBlock(cb_blogId, cb_entryId, cb_blogApp, cb_blogUserGuid);
+       GetPrevNextPost(cb_entryId, cb_blogId, cb_entryCreatedDate, cb_postType);
+       loadOptUnderPost();
+       GetHistoryToday(cb_blogId, cb_blogApp, cb_entryCreatedDate);
+    </script>
+</div>
+
+	</div><!--end: forFlow -->
+	</div><!--end: mainContent 主体内容容器-->
+	<div id="sideBar">
+		<div id="sideBarMain">
+			<div id="sidebar_news" class="newsItem">
+            <script>loadBlogNews();</script>
+</div>
+<div id="sidebar_c3"></div>
+			<div id="blog-calendar" style="display:none"></div><script>loadBlogDefaultCalendar();</script>			
+			<div id="leftcontentcontainer">
+				<div id="blog-sidecolumn"></div>
+                    <script>loadBlogSideColumn();</script>
+			</div>			
+		</div><!--end: sideBarMain -->
+	</div><!--end: sideBar 侧边栏容器 -->
+	<div class="clear"></div>
+	</div><!--end: main -->
+	<div class="clear"></div>
+	<div id="footer">
+		<!--done-->
+Copyright &copy; 2021 plle
+<br /><span id="poweredby">Powered by .NET 5.0 on Kubernetes</span>
+
+
+
+	</div><!--end: footer -->
+</div><!--end: home 自定义的最大容器 -->
+
+
+    
+
+    <input type="hidden" id="antiforgery_token" value="CfDJ8L-rpLgFVEJMgssCVvNUAjsDahT112K_00qIrZ0jLcRgVkrAc88fd5PFeQI-zSN2tQnwpbo7QWj_pV6_P2Smm5RxHPSCQTBavp_vRYx38Il5pSyENPbRGBX7sOa7eqjfKxViuecEkPYvHcq59_P-ve8" />
+</body>
+</html>

@@ -1,0 +1,302 @@
+﻿<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="referrer" content="never" />
+    <meta name="description" content="提及 Ward Cunningham，我们可能会想到 Wiki、代码集体所有……但 Wiki 是如何诞生的呢？他在这一领域还有哪些值得我们研究和借鉴的思想呢？" />
+    <meta property="og:description" content="提及 Ward Cunningham，我们可能会想到 Wiki、代码集体所有……但 Wiki 是如何诞生的呢？他在这一领域还有哪些值得我们研究和借鉴的思想呢？" />
+    <meta http-equiv="Cache-Control" content="no-transform" />
+    <meta http-equiv="Cache-Control" content="no-siteapp" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>敏捷史话（十七）：维基（Wiki）背后的灵感来源—— Ward Cunningham - 吃个药丸儿 - 博客园</title>
+    <link id="favicon" rel="shortcut icon" href="//common.cnblogs.com/favicon.svg" type="image/svg+xml" />
+    
+    <link rel="stylesheet" href="/css/blog-common.min.css?v=zS6-e1bxywlu3kpHvpr1J6MySwya3ztFtEnS7RYQ0Fk" />
+    <link id="MainCss" rel="stylesheet" href="/skins/bluefresh/bundle-bluefresh.min.css?v=C2Y6kvNjJlDgQH4FFxKqI_gUkQi_FDjkUFTlWXYQLzA" />
+    
+    <link id="mobile-style" media="only screen and (max-width: 767px)" type="text/css" rel="stylesheet" href="/skins/bluefresh/bundle-bluefresh-mobile.min.css?v=Aa_saxiZoRXiD2Y8N-2_6xMVBVYofS6DUqzQiovE-AU" />
+    
+    <link type="application/rss+xml" rel="alternate" href="https://www.cnblogs.com/minjieagile/rss" />
+    <link type="application/rsd+xml" rel="EditURI" href="https://www.cnblogs.com/minjieagile/rsd.xml" />
+    <link type="application/wlwmanifest+xml" rel="wlwmanifest" href="https://www.cnblogs.com/minjieagile/wlwmanifest.xml" />
+    <script>
+        var currentBlogId = 601682;
+        var currentBlogApp = 'minjieagile';
+        var cb_enable_mathjax = false;
+        var isLogined = false;
+        var isBlogOwner = false;
+        var skinName = 'BlueFresh';
+        var visitorUserId = '';
+    </script>
+        <script>
+            var currentPostDateAdded = '2021-05-14 09:38';
+        </script>
+    <script src="https://common.cnblogs.com/scripts/jquery-2.2.0.min.js"></script>
+    <script src="/js/blog-common.min.js?v=2Mic1VLeHXarpdzASbXqFMIMVLEBiWXNO5yiTHUcmhw"></script>
+    
+    
+    
+</head>
+<body class="has-navbar">
+    <a name="top"></a>
+    <div id="top_nav" class="navbar forpc">
+        <nav id="nav_main" class="navbar-main">
+            <ul id="nav_left" class="navbar-list navbar-left">
+                <li class="navbar-branding"><a href="https://www.cnblogs.com/" title="开发者的网上家园"><img src="/images/logo.svg?v=R9M0WmLAIPVydmdzE2keuvnjl-bPR7_35oHqtiBzGsM" alt="博客园Logo" /></a></li>
+                <li><a href="/" onclick="ga('send', 'event', 'Link', 'click', 'skin-navbar-sitehome')">首页</a></li>
+                <li><a href="https://news.cnblogs.com/" onclick="ga('send', 'event', 'Link', 'click', 'skin-navbar-news')">新闻</a></li>
+                <li><a href="https://q.cnblogs.com/" onclick="ga('send', 'event', 'Link', 'click', 'skin-navbar-q')">博问</a></li>
+                <li><a id="nav_brandzone" href="https://brands.cnblogs.com/" onclick="ga('send', 'event', 'Link', 'click', 'skin-navbar-brands')">专区</a></li>
+                <li><a href="https://ing.cnblogs.com/" onclick="ga('send', 'event', 'Link', 'click', 'skin-navbar-ing')">闪存</a></li>
+                <li><a href="https://edu.cnblogs.com/" onclick="ga('send', 'event', 'Link', 'click', 'skin-navbar-edu')">班级</a></li>
+            </ul>
+            <ul id="nav_right" class="navbar-list navbar-right">
+                <li>
+                    <form id="zzk_search" class="navbar-search" action="https://zzk.cnblogs.com/s" method="get">
+                        <input name="w" id="zzk_search_input" placeholder="代码改变世界" type="text" tabindex="3" />
+                        <button type="submit" id="zzk_search_button">
+                            <img src="/images/aggsite/search.svg" alt="搜索" />
+                        </button>
+                    </form>
+                </li>
+                <li id="navbar_login_status" class="navbar-list">
+                    <a class="navbar-user-info navbar-blog" href="https://i.cnblogs.com/EditPosts.aspx?opt=1" alt="写随笔" title="写随笔">
+                        <img id="new_post_icon" class="navbar-icon" src="/images/aggsite/newpost.svg" alt="写随笔" />
+                    </a>
+                    <a id="navblog-myblog-icon" class="navbar-user-info navbar-blog" href="https://passport.cnblogs.com/GetBlogApplyStatus.aspx" alt="我的博客" title="我的博客">
+                        <img id="myblog_icon" class="navbar-icon" src="/images/aggsite/myblog.svg" alt="我的博客" />
+                    </a>
+                    <a class="navbar-user-info navbar-message navbar-icon-wrapper" href="https://msg.cnblogs.com/" alt="短消息" title="短消息">
+                        <img id="msg_icon" class="navbar-icon" src="/images/aggsite/message.svg?v=J0WS2P2iPgaIVgXxcAhliw4AFZIpaTWxtdoNAv9eiCA" alt="短消息" />
+                        <span id="msg_count" style="display: none"></span>
+                    </a>
+                    <div id="user_info" class="navbar-user-info dropdown">
+                        <a class="dropdown-button" href="https://home.cnblogs.com/">
+                            <img id="user_icon" class="navbar-avatar" src="/images/aggsite/avatar-default.svg" alt="用户头像" />
+                        </a>
+                        <div class="dropdown-menu">
+                            <a id="navblog-myblog-text" href="https://passport.cnblogs.com/GetBlogApplyStatus.aspx">我的博客</a>
+                            <a href="https://home.cnblogs.com/">我的园子</a>
+                            <a href="https://account.cnblogs.com/settings/account">账号设置</a>
+                            <a href="javascript:void(0)" id="navbar_lite_mode_toggle" title="简洁模式会使用简洁款皮肤显示所有博客">
+    简洁模式 <img id="navbar_lite_mode_on" src="/images/lite-mode-check.svg" class="hide" /><span id="navbar_lite_mode_spinner" class="hide">...</span>
+</a>
+                            <a href="javascript:void(0)" onclick="account.logout();">退出登录</a>
+                        </div>
+                    </div>
+                    <a class="navbar-anonymous" href="https://account.cnblogs.com/signup/">注册</a>
+                    <a class="navbar-anonymous" href="javascript:void(0);" onclick="account.login()">登录</a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+
+    
+    <!--done-->
+<div id="home">
+<div id="header">
+	<div id="blogTitle">
+        <a id="lnkBlogLogo" href="https://www.cnblogs.com/minjieagile/"><img id="blogLogo" src="/skins/custom/images/logo.gif" alt="返回主页" /></a>		
+		
+<!--done-->
+<h1><a id="Header1_HeaderTitle" class="headermaintitle HeaderMainTitle" href="https://www.cnblogs.com/minjieagile/">吃个药丸儿</a>
+</h1>
+<h2></h2>
+
+
+
+
+		
+	</div><!--end: blogTitle 博客的标题和副标题 -->
+	<div id="navigator">
+		
+<ul id="navList">
+<li><a id="blog_nav_sitehome" class="menu" href="https://www.cnblogs.com/">
+博客园</a>
+</li>
+<li>
+<a id="blog_nav_myhome" class="menu" href="https://www.cnblogs.com/minjieagile/">
+首页</a>
+</li>
+<li>
+
+<a id="blog_nav_newpost" class="menu" href="https://i.cnblogs.com/EditPosts.aspx?opt=1">
+新随笔</a>
+</li>
+<li>
+<a id="blog_nav_contact" class="menu" href="https://msg.cnblogs.com/send/%E5%90%83%E4%B8%AA%E8%8D%AF%E4%B8%B8%E5%84%BF">
+联系</a></li>
+<li>
+<a id="blog_nav_rss" class="menu" href="javascript:void(0)" data-rss="https://www.cnblogs.com/minjieagile/rss/">
+订阅</a>
+<!--<partial name="./Shared/_XmlLink.cshtml" model="Model" /></li>--></li>
+<li>
+<a id="blog_nav_admin" class="menu" href="https://i.cnblogs.com/">
+管理</a>
+</li>
+</ul>
+
+
+		<div class="blogStats">
+			<div id="blog_stats_place_holder"><script>loadBlogStats();</script></div>
+		</div><!--end: blogStats -->
+	</div><!--end: navigator 博客导航栏 -->
+</div><!--end: header 头部 -->
+<div id="main">
+	<div id="mainContent">
+	<div class="forFlow">
+		<div id="post_detail">
+    <!--done-->
+    <div id="topics">
+        <div class="post">
+            <h1 class = "postTitle">
+                
+<a id="cb_post_title_url" class="postTitle2 vertical-middle" href="https://www.cnblogs.com/minjieagile/p/14767235.html">
+    <span>敏捷史话（十七）：维基（Wiki）背后的灵感来源—— Ward Cunningham</span>
+    
+
+
+
+</a>
+
+            </h1>
+            <div class="clear"></div>
+            <div class="postBody">
+                    <div id="cnblogs_post_description" style="display: none">
+        提及 Ward Cunningham，我们可能会想到 Wiki、代码集体所有……但 Wiki 是如何诞生的呢？他在这一领域还有哪些值得我们研究和借鉴的思想呢？
+    </div>
+<div id="cnblogs_post_body" class="blogpost-body blogpost-body-html">
+<p>在软件开发领域，&nbsp;Ward&nbsp;Cunningham 有许多独到的见解与成就。</p>
+<p><br>1949年，Ward Cunningham 出生于印第安纳州的密歇根市，并在莱克县的一个小镇中长大。怀揣着对计算机浓厚的兴趣，在普渡大学学习期间，他获得了跨学科工程（电子工程和计算机科学）学士学位以及计算机科学硕士学位。1978年，Ward Cunningham 完成了全部学业。&nbsp;</p>
+<p><img src="https://cdn.easycorp.cn/minjie/data/upload/minjiekaifa/202105/f_d3f684eecf71280ebc8a99a9ff0a0602.png" alt="" width="300" height="302" title="" align="" style="display: block; margin-left: auto; margin-right: auto"></p>
+<p style="text-align: center">（&nbsp;普渡大学校徽）</p>
+<p>
+毕业后的 Ward Cunningham 先后担任过研发总监、首席工程师等职位，也自己创办了 Cunningham&amp;Cunningham,Inc.——专门从事面向对象编程的咨询公司，以及一个面向软件开发人员的教育性非盈利组织：The Hillside Group。<br><br>在自己丰富的软件开发实践的基础上，Ward 总结出了很多经验以及独到的思想，而这些思想也成为日后软件开发人员进行开发实践的准则。<br><br></p>
+<h2>Cunningham 定律与 Wiki</h2>
+<p>
+<br>Ward Cunningham 认为：“&nbsp;在互联网上获得正确答案的最佳方法不是提出问题，而是发布错误的答案。”这就是 Cunningham 定律，指人们更正错误的答案比回答问题更快。在日后的工作中，Cunningham 也在一直贯彻这个想法。<br><br>20世纪80年代末，Cunningham 在使用一个名为 HyperCard 的程序时，发现了这样一个问题：虽然 HyperCard 程序管理了许多称为“卡片”的资料，每张卡片都可划分字段、上传图片，且支持修改编辑。这个类似网页的程序对当时的人们来说很有用，但要想创建卡片与卡片之间的链接，就非常难了。</p>
+<div><img src="https://cdn.easycorp.cn/minjie/data/upload/minjiekaifa/202105/f_4255b41d711212c8c8adfb7ea417163c.png" alt="" width="600" height="401" title="" align="" style="display: block; margin-left: auto; margin-right: auto"></div>
+<p>
+为了解决这个问题，他在原有程序的基础上增添了一个新的链接功能。用户只需将链接输入卡片上的一个特殊字段，原有每一字段的按钮便会引导用户去新的目标卡片。链接功能加上 HyperCard 卡片的应用，能够让用户更正卡片上的错误内容，并链接到正确的卡片上。<br><br>这个在 HyperCard 的程序上写出的小功能，就是 Ward Cunningham 对 Wiki 的最初构想。<br><br>1995年，Ward Cunningham 正式推出了第一个 Wiki 网站：WikiWikiWeb，方便程序员们进行思想交流。<br><br>关于为什么要创建 Wiki 这一问题，Cunningham 有话要说：“&nbsp;起初创建 Wiki，我的目的就是创建一个能够将彼此经验联系起来的环境，从而发现编程的模式语言。”这个想法在他看来稀松平常。以至于后来接受采访时，被问及是否考虑过为 Wiki 的概念申请专利，Cunningham 解释说：“这个想法听起来就像是没人愿意为之付费的东西。”<br><br>尽管 Ward Cunningham 不考虑为 Wiki 申请专利，但这并不表明他放弃了 Wiki。自Wiki 诞生之后，他就一直希望在全世界范围内推广 Wiki。</p>
+<div><img src="https://cdn.easycorp.cn/minjie/data/upload/minjiekaifa/202105/f_738f40c4ecb5928485926d40c0413701.png" alt="" width="600" height="447" title="" align="" style="display: block; margin-left: auto; margin-right: auto"></div>
+<p>
+2001年，Cunningham 与他人合著了一本名为《The Wiki Way》的书，书中主要介绍了如何安装、创建并管理 Wiki 系统。2011年，他又启动了 Smallest Federated Wiki 项目——用于 Wiki 联合的软件平台，他为 Wiki 添加了源代码控制系统，以及其他软件开发工具中的分叉功能……<br><br>至今，Ward Cunningham 仍在致力于推广 Wiki 技术。<br><br></p>
+<h2>Cunningham 与面向对象编程</h2>
+<p>
+<br>作为一名程序员，Ward Cunningham 几乎对所有的编程模式都有所涉猎，包括面向对象和敏捷建模。<br><br>他支持面向对象编程中长期关注代码设计的实践，更偏向于注重代码和人的关系。为了推动模式语言的运用，Cunningham 发布了一个新的网站：&nbsp;模式共享社区，希望将不同作者的软件模式集中在一起，展示现有模式之间的关系，以鼓励用户贡献更多的模式，获得更好的软件。<br><br></p>
+<h2>Cunningham 与极限编程</h2>
+<p>
+<br>在创建 Wiki 的前几个月，Ward Cunningham、Kent Beck 一直与坚持软件工程的教条主义者们争论，争论的内容主要在于是否实践代码集体所有权。<br><br>Cunningham 认为，“代码集体所有权有很大的好处，不仅能够降低风险，还可以提升开发效率……”而教条主义者们认为，“这简直太荒谬了！实行代码集体所有权后，你永远不会有责任。如果你没有责任，你永远不会有质量。唯一能让你负起责任的方法就是承担责任。如果你不想再让一些人写出 Bug，你就必须把这个责任放在他的身上……”双方并没有说服彼此，但这场争论让&nbsp;&nbsp;Cunningham 更坚定了维护代码集体所有权的信念。</p>
+<div><img src="https://cdn.easycorp.cn/minjie/data/upload/minjiekaifa/202105/f_4c6e6220cd4e720d9eee0f0d41bb9fec.png" alt="" width="600" height="508" title="" align="" style="display: block; margin-left: auto; margin-right: auto"></div>
+<p>
+在设计 Wiki 的时候，Cunningham 认为 Wiki 也应该实现在大型代码库中协作的过程。例如，你在一堆代码中发现了一个问题，并且知道这个问题的解决方案。但是当你想去解决这个问题的时候，必须同这些代码作者们去沟通、协商，这是一个非常困难且麻烦的过程。而实现代码集体所有，实际上就会大大地减少沟通的成本。<br><br>因此，Wiki 中应用了代码集体所有权的理念。Wiki “&nbsp;开放”的特点决定了当内容不完整或者出现错误的时候，所有人都可以用他们认为合适的方式加以编辑。&nbsp;在 Wiki 中，所有参与者都对此负责。<br><br></p>
+<h2>Cunningham 与《敏捷宣言》</h2>
+<p>
+<br>“&nbsp;我宁愿转向下一个想法，也不愿为保持最后一个想法的纯正而奋斗。”<br><br></p>
+<p>敏捷真正带给软件的是一种能力，通过使团队中的成员达成共同的目标，实现高质量的产品交付。“当《敏捷宣言》的四个价值观被整齐地列在黑板上时，我们只是在感慨，虽然我们是十七个不同的个体，但写在黑板上的内容是我们共同想要表达的东西。”回忆起2001年的雪鸟会议，Cunningham 这样说。</p>
+<p><img src="https://cdn.easycorp.cn/minjie/data/upload/minjiekaifa/202105/f_21896b27cb31ba8a9b4ee7d6ce2c2a81.jpg" alt="" width="600" height="497" title="" align="" style="display: block; margin-left: auto; margin-right: auto"></p>
+<div>&nbsp;</div>
+<p>
+而对于“&nbsp;稀释”，也就是新想法的注入，他认为，这一行业是在不断发展的，如果不能不停地尝试用多种方法去做事情，就不再会有新的创造力。因此，作为一名极限编程的狂热爱好者，Cunningham 极力支持将敏捷与极限编程的工程实践结合使用。<br><br>不论是 Wiki、面向对象编程、极限编程还是《敏捷宣言》，对于这些新的尝试，Ward Cunningham 选择迎难而上。对此，他也有自己的一套看法：“&nbsp;如果你想要做的好，那就想办法每天都去做&nbsp;。选择你害怕的事情，而不是选择你擅长的事情，然后克服它，这就是推动我前行的动力。”</p>
+</div>
+<div id="MySignature"></div>
+<div class="clear"></div>
+<div id="blog_post_info_block">
+    <div id="blog_post_info"></div>
+    <div class="clear"></div>
+    <div id="post_next_prev"></div>
+</div>
+            </div>
+            <div class="postDesc">posted @ 
+<span id="post-date">2021-05-14 09:38</span>&nbsp;
+<a href="https://www.cnblogs.com/minjieagile/">吃个药丸儿</a>&nbsp;
+阅读(<span id="post_view_count">0</span>)&nbsp;
+评论(<span id="post_comment_count">0</span>)&nbsp;
+<a href="https://i.cnblogs.com/EditPosts.aspx?postid=14767235" rel="nofollow">编辑</a>&nbsp;
+<a href="javascript:void(0)" onclick="AddToWz(14767235);return false;">收藏</a></div>
+        </div>
+	    
+	    
+    </div><!--end: topics 文章、评论容器-->
+</div>
+<script src="https://common.cnblogs.com/highlight/10.3.1/highlight.min.js"></script>
+<script>markdown_highlight();</script>
+<script>
+    var allowComments = true, cb_blogId = 601682, cb_blogApp = 'minjieagile', cb_blogUserGuid = 'd1ecfe36-f945-4e43-5e3b-08d7ecbd2c7f';
+    var cb_entryId = 14767235, cb_entryCreatedDate = '2021-05-14 09:38', cb_postType = 1;
+    updatePostStats(
+        [cb_entryId],
+        function(id, count) { $("#post_view_count").text(count) },
+        function(id, count) { $("#post_comment_count").text(count) })
+    zoomManager.apply("#cnblogs_post_body img:not(.code_img_closed):not(.code_img_opened)");
+</script>
+<a name="!comments"></a>
+<div id="blog-comments-placeholder"></div>
+<div id="comment_form" class="commentform">
+    <a name="commentform"></a>
+    <div id="divCommentShow"></div>
+    <div id="comment_nav"><span id="span_refresh_tips"></span><a href="javascript:void(0);" onclick="return RefreshCommentList();" id="lnk_RefreshComments" runat="server" clientidmode="Static">刷新评论</a><a href="#" onclick="return RefreshPage();">刷新页面</a><a href="#top">返回顶部</a></div>
+    <div id="comment_form_container"></div>
+    <div class="ad_text_commentbox" id="ad_text_under_commentbox"></div>
+    <div id="ad_t2"></div>
+    <div id="opt_under_post"></div>
+    <div id="cnblogs_c1" class="under-post-card">
+        <div id='div-gpt-ad-1592365906576-0' style='width: 300px; height: 250px;'></div>
+    </div>
+    <div id="under_post_card1"></div>
+    <div id="cnblogs_c2" class="under-post-card">
+        <div id='div-gpt-ad-1592366332455-0' style='width: 468px; height: 60px;'></div>
+    </div>
+    <div id="under_post_card2"></div>
+    <div id="HistoryToday" class="under-post-card"></div>
+    <script type="text/javascript">
+       var commentManager = new blogCommentManager();
+       commentManager.renderComments(0);
+       fixPostBody();
+       deliverBigBanner();
+setTimeout(function() { incrementViewCount(cb_entryId); }, 50);       deliverT2();
+       deliverC1C2();
+       loadNewsAndKb();
+       loadBlogSignature();
+LoadPostCategoriesTags(cb_blogId, cb_entryId);       LoadPostInfoBlock(cb_blogId, cb_entryId, cb_blogApp, cb_blogUserGuid);
+       GetPrevNextPost(cb_entryId, cb_blogId, cb_entryCreatedDate, cb_postType);
+       loadOptUnderPost();
+       GetHistoryToday(cb_blogId, cb_blogApp, cb_entryCreatedDate);
+    </script>
+</div>
+
+	</div><!--end: forFlow -->
+	</div><!--end: mainContent 主体内容容器-->
+	<div id="sideBar">
+		<div id="sideBarMain">
+			<div id="sidebar_news" class="newsItem">
+            <script>loadBlogNews();</script>
+</div>
+<div id="sidebar_c3"></div>
+			<div id="blog-calendar" style="display:none"></div><script>loadBlogDefaultCalendar();</script>			
+			<div id="leftcontentcontainer">
+				<div id="blog-sidecolumn"></div>
+                    <script>loadBlogSideColumn();</script>
+			</div>			
+		</div><!--end: sideBarMain -->
+	</div><!--end: sideBar 侧边栏容器 -->
+	<div class="clear"></div>
+	</div><!--end: main -->
+	<div class="clear"></div>
+	<div id="footer">
+		<!--done-->
+Copyright &copy; 2021 吃个药丸儿
+<br /><span id="poweredby">Powered by .NET 5.0 on Kubernetes</span>
+
+
+
+	</div><!--end: footer -->
+</div><!--end: home 自定义的最大容器 -->
+
+
+    
+
+    <input type="hidden" id="antiforgery_token" value="CfDJ8L-rpLgFVEJMgssCVvNUAjsxVY1FI_0EFy3kcu0-C2B-Bg7nj1Hu7yBrv2RgiXjp5hlUHDA--csa10X8QCNOk2CrYX_tVaXQQ9OiUombL9Q6TmCZ5Ifvg-poAwgsaxu9BDupmY2cRqDqi2mYU2mhPdk" />
+</body>
+</html>

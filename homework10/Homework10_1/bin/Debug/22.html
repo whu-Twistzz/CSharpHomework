@@ -1,0 +1,1309 @@
+﻿<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="referrer" content="never" />
+    <meta name="description" content="元组 Python中的元组容器序列（tuple）与列表容器序列（list）具有极大的相似之处，因此也常被称为不可变的列表。 但是两者之间也有很多的差距，元组侧重于数据的展示，而列表侧重于数据的存储与操" />
+    <meta property="og:description" content="元组 Python中的元组容器序列（tuple）与列表容器序列（list）具有极大的相似之处，因此也常被称为不可变的列表。 但是两者之间也有很多的差距，元组侧重于数据的展示，而列表侧重于数据的存储与操" />
+    <meta http-equiv="Cache-Control" content="no-transform" />
+    <meta http-equiv="Cache-Control" content="no-siteapp" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>老Python带你从浅入深探究Tuple - 云崖先生 - 博客园</title>
+    <link id="favicon" rel="shortcut icon" href="//common.cnblogs.com/favicon.svg" type="image/svg+xml" />
+    
+    <link rel="stylesheet" href="/css/blog-common.min.css?v=zS6-e1bxywlu3kpHvpr1J6MySwya3ztFtEnS7RYQ0Fk" />
+    
+    <link type="text/css" rel="stylesheet" href="https://www.cnblogs.com/Yunya-Cnblogs/custom.css?v=RQZmXpp4yXZkm/yVJRG6kfh6iLs=" />
+    <link id="mobile-style" media="only screen and (max-width: 767px)" type="text/css" rel="stylesheet" href="/skins/custom/bundle-custom-mobile.min.css?v=OayYBbtUbH4FYkn_bTL4VVf4DsEOiTHSWhbl11KyY6Y" />
+    
+    <link type="application/rss+xml" rel="alternate" href="https://www.cnblogs.com/Yunya-Cnblogs/rss" />
+    <link type="application/rsd+xml" rel="EditURI" href="https://www.cnblogs.com/Yunya-Cnblogs/rsd.xml" />
+    <link type="application/wlwmanifest+xml" rel="wlwmanifest" href="https://www.cnblogs.com/Yunya-Cnblogs/wlwmanifest.xml" />
+    <script>
+        var currentBlogId = 569467;
+        var currentBlogApp = 'Yunya-Cnblogs';
+        var cb_enable_mathjax = false;
+        var isLogined = false;
+        var isBlogOwner = false;
+        var skinName = 'Custom';
+        var visitorUserId = '';
+    </script>
+        <script>
+            var currentPostDateAdded = '2021-05-14 11:42';
+        </script>
+    <script src="https://common.cnblogs.com/scripts/jquery-2.2.0.min.js"></script>
+    <script src="/js/blog-common.min.js?v=2Mic1VLeHXarpdzASbXqFMIMVLEBiWXNO5yiTHUcmhw"></script>
+    
+    
+    
+</head>
+<body class="no-navbar">
+    <a name="top"></a>
+    <div id="top_nav" class="navbar forpc navbar-custom">
+        <nav id="nav_main" class="navbar-main">
+            <ul id="nav_left" class="navbar-list navbar-left">
+                <li class="navbar-branding"><a href="https://www.cnblogs.com/" title="开发者的网上家园"><img src="/images/logo.svg?v=R9M0WmLAIPVydmdzE2keuvnjl-bPR7_35oHqtiBzGsM" alt="博客园Logo" /></a></li>
+                <li><a href="/" onclick="ga('send', 'event', 'Link', 'click', 'skin-navbar-sitehome')">首页</a></li>
+                <li><a href="https://news.cnblogs.com/" onclick="ga('send', 'event', 'Link', 'click', 'skin-navbar-news')">新闻</a></li>
+                <li><a href="https://q.cnblogs.com/" onclick="ga('send', 'event', 'Link', 'click', 'skin-navbar-q')">博问</a></li>
+                <li><a id="nav_brandzone" href="https://brands.cnblogs.com/" onclick="ga('send', 'event', 'Link', 'click', 'skin-navbar-brands')">专区</a></li>
+                <li><a href="https://ing.cnblogs.com/" onclick="ga('send', 'event', 'Link', 'click', 'skin-navbar-ing')">闪存</a></li>
+                <li><a href="https://edu.cnblogs.com/" onclick="ga('send', 'event', 'Link', 'click', 'skin-navbar-edu')">班级</a></li>
+            </ul>
+            <ul id="nav_right" class="navbar-list navbar-right">
+                <li>
+                    <form id="zzk_search" class="navbar-search" action="https://zzk.cnblogs.com/s" method="get">
+                        <input name="w" id="zzk_search_input" placeholder="代码改变世界" type="text" tabindex="3" />
+                        <button type="submit" id="zzk_search_button">
+                            <img src="/images/aggsite/search.svg" alt="搜索" />
+                        </button>
+                    </form>
+                </li>
+                <li id="navbar_login_status" class="navbar-list">
+                    <a class="navbar-user-info navbar-blog" href="https://i.cnblogs.com/EditPosts.aspx?opt=1" alt="写随笔" title="写随笔">
+                        <img id="new_post_icon" class="navbar-icon" src="/images/aggsite/newpost.svg" alt="写随笔" />
+                    </a>
+                    <a id="navblog-myblog-icon" class="navbar-user-info navbar-blog" href="https://passport.cnblogs.com/GetBlogApplyStatus.aspx" alt="我的博客" title="我的博客">
+                        <img id="myblog_icon" class="navbar-icon" src="/images/aggsite/myblog.svg" alt="我的博客" />
+                    </a>
+                    <a class="navbar-user-info navbar-message navbar-icon-wrapper" href="https://msg.cnblogs.com/" alt="短消息" title="短消息">
+                        <img id="msg_icon" class="navbar-icon" src="/images/aggsite/message.svg?v=J0WS2P2iPgaIVgXxcAhliw4AFZIpaTWxtdoNAv9eiCA" alt="短消息" />
+                        <span id="msg_count" style="display: none"></span>
+                    </a>
+                    <div id="user_info" class="navbar-user-info dropdown">
+                        <a class="dropdown-button" href="https://home.cnblogs.com/">
+                            <img id="user_icon" class="navbar-avatar" src="/images/aggsite/avatar-default.svg" alt="用户头像" />
+                        </a>
+                        <div class="dropdown-menu">
+                            <a id="navblog-myblog-text" href="https://passport.cnblogs.com/GetBlogApplyStatus.aspx">我的博客</a>
+                            <a href="https://home.cnblogs.com/">我的园子</a>
+                            <a href="https://account.cnblogs.com/settings/account">账号设置</a>
+                            <a href="javascript:void(0)" id="navbar_lite_mode_toggle" title="简洁模式会使用简洁款皮肤显示所有博客">
+    简洁模式 <img id="navbar_lite_mode_on" src="/images/lite-mode-check.svg" class="hide" /><span id="navbar_lite_mode_spinner" class="hide">...</span>
+</a>
+                            <a href="javascript:void(0)" onclick="account.logout();">退出登录</a>
+                        </div>
+                    </div>
+                    <a class="navbar-anonymous" href="https://account.cnblogs.com/signup/">注册</a>
+                    <a class="navbar-anonymous" href="javascript:void(0);" onclick="account.login()">登录</a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+
+    <div id="page_begin_html">
+        <!-- 进度条 -->
+<div id="top-progress-bar"
+    style="position: fixed; top: 0px; left: 0px; right: 0px; background-color: rgb(244, 67, 54); height: 2px; width: 0%; transition: width 0.2s ease 0s, opacity 0.6s ease 0s;">
+</div>
+<!-- 右上角github-->
+<a href="https://github.com/Yunya-Github/" rel="noopener external nofollow noreferrer" target="_blank"
+    class="exturl github-corner"><svg width="80" height="80" viewBox="0 0 250 250" aria-hidden="true">
+        <path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path>
+        <path
+            d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2"
+            fill="currentColor" style="transform-origin:130px 106px" class="octo-arm"></path>
+        <path
+            d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z"
+            fill="currentColor" class="octo-body"></path>
+    </svg></a>
+<header class="header">
+    <div class="header-inner">
+        <!-- 头部banner-->
+        <div class="site-brand-container">
+            <div class="site-nav-toggle">
+                <div class="toggle" aria-label="切换导航栏"><span class="toggle-line toggle-line-first"></span> <span
+                        class="toggle-line toggle-line-middle"></span> <span
+                        class="toggle-line toggle-line-last"></span></div>
+            </div>
+            <div class="site-meta"><a href="https://www.cnblogs.com/YunyaSir/" class="brand" rel="start"><span
+                        class="logo-line-before"><i></i></span>
+                    <h1 class="site-title">摘星小筑</h1><span class="logo-line-after"><i></i></span>
+                </a></div>
+            <div class="site-nav-right">
+                <div class="toggle popup-trigger"><i class="fa fa-search fa-fw fa-lg"></i></div>
+            </div>
+        </div>
+        <!-- 导航-->
+        <nav class="site-nav">
+            <ul id="menu" class="menu">
+                <li class="menu-item menu-item-home menu-item-active"><a class="menu-item-inner"
+                        href="https://www.cnblogs.com/YunyaSir/" rel="section"><i
+                            class="fa fa-fw fa-file-text"></i>首页</a>
+                </li>
+                <li class="menu-item"><a class="menu-item-inner" href="https://i.cnblogs.com/" rel="section"><i
+                            class="fa fa-fw fa-cog"></i>后台</a></li>
+                <li class="menu-item"><a class="menu-item-inner" href="https://www.cnblogs.com/" rel="section"><i
+                            class="fa fa-fw fa-globe"></i>博客园</a></li>
+                <li class="menu-item menu-item-search"><a class="menu-item-inner search-wrap"><i
+                            class="fa fa-search fa-fw"></i><input type="text" id="q"
+                            onkeydown="return zzk_go_enter(event);" class="input_my_zzk" placeholder="按下Enter搜索"></a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+</header>
+    </div>
+    <!--done-->
+<div id="home">
+<div id="header">
+	<div id="blogTitle">
+        <a id="lnkBlogLogo" href="https://www.cnblogs.com/Yunya-Cnblogs/"><img id="blogLogo" src="/skins/custom/images/logo.gif" alt="返回主页" /></a>		
+		
+<!--done-->
+<h1><a id="Header1_HeaderTitle" class="headermaintitle HeaderMainTitle" href="https://www.cnblogs.com/Yunya-Cnblogs/">摘星小筑</a>
+</h1>
+<h2></h2>
+
+
+
+
+		
+	</div><!--end: blogTitle 博客的标题和副标题 -->
+	<div id="navigator">
+		
+<ul id="navList">
+<li>
+</li>
+<li>
+
+</li>
+<li>
+
+
+</li>
+<li>
+</li>
+<li>
+
+<!--<partial name="./Shared/_XmlLink.cshtml" model="Model" /></li>--></li>
+<li>
+<a id="blog_nav_admin" class="menu" href="https://i.cnblogs.com/">
+管理</a>
+</li>
+</ul>
+
+
+		<div class="blogStats">
+			<div id="blog_stats_place_holder"><script>loadBlogStats();</script></div>
+		</div><!--end: blogStats -->
+	</div><!--end: navigator 博客导航栏 -->
+</div><!--end: header 头部 -->
+<div id="main">
+	<div id="mainContent">
+	<div class="forFlow">
+		<div id="post_detail">
+    <!--done-->
+    <div id="topics">
+        <div class="post">
+            <h1 class = "postTitle">
+                
+<a id="cb_post_title_url" class="postTitle2 vertical-middle" href="https://www.cnblogs.com/Yunya-Cnblogs/p/14767943.html">
+    <span>老Python带你从浅入深探究Tuple</span>
+    
+
+
+
+</a>
+
+            </h1>
+            <div class="clear"></div>
+            <div class="postBody">
+                <div id="cnblogs_post_body" class="blogpost-body cnblogs-markdown">
+<h1 id="元组">元组</h1>
+<p>Python中的元组容器序列（tuple）与列表容器序列（list）具有极大的相似之处，因此也常被称为不可变的列表。</p>
+<p>但是两者之间也有很多的差距，元组侧重于数据的展示，而列表侧重于数据的存储与操作。</p>
+<p>它们非常相似，虽然都可以存储任意类型的数据，但是一个元组定义好之后就不能够再进行修改。</p>
+<h2 id="元组特性">元组特性</h2>
+<p>元组的特点：</p>
+<ol>
+<li>元组属于容器序列</li>
+<li>元组属于不可变类型</li>
+<li>元组底层由顺序存储组成，而顺序存储是线性结构的一种</li>
+</ol>
+<h2 id="基本声明">基本声明</h2>
+<p>以下是使用类实例化的形式进行对象声明：</p>
+<pre><code>tup = tuple((1, 2, 3, 4, 5))
+print("值:%r,类型：%r" % (tup, type(tup)))
+
+# 值:(1, 2, 3, 4, 5),类型：&lt;class 'tuple'&gt;
+</code></pre>
+<p>也可以选择使用更方便的字面量形式进行对象声明，使用逗号对数据项之间进行分割：</p>
+<pre><code>tup = 1, 2, 3, 4, 5
+print("值:%r,类型：%r" % (tup, type(tup)))
+
+# 值:(1, 2, 3, 4, 5),类型：&lt;class 'tuple'&gt;
+</code></pre>
+<p>为了美观，我们一般会在两侧加上()，但是要确定一点，元组定义是逗号分隔的数据项，而并非是()包裹的数据项：</p>
+<pre><code>tup = (1, 2, 3, 4, 5)
+print("值:%r,类型：%r" % (tup, type(tup)))
+
+# 值:(1, 2, 3, 4, 5),类型：&lt;class 'tuple'&gt;
+</code></pre>
+<h2 id="多维元组">多维元组</h2>
+<p>当一个元组中嵌套另一个元组，该元组就可以称为多维元组。</p>
+<p>如下，定义一个2维元组：</p>
+<pre><code>tup = (1, 2, ("三", "四"))
+print("值:%r,类型：%r" % (tup, type(tup)))
+
+# 值:(1, 2, ('三', '四')),类型：&lt;class 'tuple'&gt;
+</code></pre>
+<h2 id="续行操作">续行操作</h2>
+<p>在Python中，元组中的数据项如果过多，可能会导致整个元组太长，太长的元组是不符合PEP8规范的。</p>
+<ul>
+<li>每行最大的字符数不可超过79，文档字符或者注释每行不可超过72</li>
+</ul>
+<p>Python虽然提供了续行符\，但是在元组中可以忽略续行符，如下所示：</p>
+<pre><code>tup = (
+    1,
+    2,
+    3,
+    4,
+    5
+)
+print("值:%r,类型：%r" % (tup, type(tup)))
+
+# 值:(1, 2, 3, 4, 5),类型：&lt;class 'tuple'&gt;
+</code></pre>
+<h2 id="类型转换">类型转换</h2>
+<p>元组支持与布尔型、字符串、列表、以及集合类型进行类型转换：</p>
+<pre><code>tup = (1, 2, 3)
+bTup = bool(tup)    # 布尔类型
+strTup = str(tup)   # 字符串类型
+liTup = list(tup)   # 列表类型
+setTup = set(tup)   # 集合类型
+
+print("值:%r,类型：%r" % (bTup, type(bTup)))
+print("值:%r,类型：%r" % (strTup, type(strTup)))
+print("值:%r,类型：%r" % (liTup, type(liTup)))
+print("值:%r,类型：%r" % (setTup, type(setTup)))
+
+# 值:True,类型：&lt;class 'bool'&gt;
+# 值:'(1, 2, 3)',类型：&lt;class 'str'&gt;
+# 值:[1, 2, 3],类型：&lt;class 'list'&gt;
+# 值:{1, 2, 3},类型：&lt;class 'set'&gt;
+</code></pre>
+<p>如果一个2维元组遵循一定的规律，那么也可以将其转换为字典类型：</p>
+<pre><code>tup = (("k1", "v1"), ("k2", "v2"), ("k3", "v3"))
+dictTuple = dict(tup)
+
+print("值:%r,类型：%r" % (dictTuple, type(dictTuple)))
+
+# 值:{'k1': 'v1', 'k2': 'v2', 'k3': 'v3'},类型：&lt;class 'dict'&gt;
+</code></pre>
+<h1 id="索引操作">索引操作</h1>
+<p>元组的索引操作仅支持获取数据项。</p>
+<p>其他的任意索引操作均不被支持。</p>
+<p>使用方法参照列表的索引切片一节。</p>
+<h1 id="绝对引用">绝对引用</h1>
+<p>元组拥有绝对引用的特性，无论是深拷贝还是浅拷贝，都不会获得其副本，而是直接对源对象进行引用。</p>
+<p>但是列表没有绝对引用的特性，代码验证如下：</p>
+<pre><code>&gt;&gt;&gt; import copy
+&gt;&gt;&gt; # 列表的深浅拷贝均创建新列表...
+&gt;&gt;&gt; oldLi = [1, 2, 3]
+&gt;&gt;&gt; id(oldLi)
+4542649096
+&gt;&gt;&gt; li1 = copy.copy(oldLi)
+&gt;&gt;&gt; id(li1)
+4542648840
+&gt;&gt;&gt; li2 = copy.deepcopy(oldLi)
+&gt;&gt;&gt; id(li2)
+4542651208
+&gt;&gt;&gt; # 元组的深浅拷贝始终引用老元组
+&gt;&gt;&gt; oldTup = (1, 2, 3)
+&gt;&gt;&gt; id(oldTup)
+4542652920
+&gt;&gt;&gt; tup1 = copy.copy(oldTup)
+&gt;&gt;&gt; id(tup1)
+4542652920
+&gt;&gt;&gt; tup2 = copy.deepcopy(oldTup)
+&gt;&gt;&gt; id(tup2)
+4542652920
+</code></pre>
+<p>Python为何要这样设计？其实仔细想想不难发现，元组不能对其进行操作，仅能获取数据项。</p>
+<p>那么也就没有生成多个副本提供给开发人员操作的必要了，因为你修改不了元组，索性直接使用绝对引用策略。</p>
+<p>值得注意的一点：[:]也是浅拷贝，故对元组来说属于绝对引用范畴。</p>
+<h1 id="元组的陷阱">元组的陷阱</h1>
+<p>Leonardo Rochael在2013年的Python巴西会议提出了一个非常具有思考意义的问题。</p>
+<p>我们先来看一下：</p>
+<pre><code>&gt;&gt;&gt; t = (1, 2, [30, 40])
+&gt;&gt;&gt; t[-1] += [50, 60]
+Traceback (most recent call last):
+  File "&lt;stdin&gt;", line 1, in &lt;module&gt;
+TypeError: 'tuple' object does not support item assignment
+</code></pre>
+<p>现在，t到底会发生下面4种情况中的哪一种？</p>
+<ol>
+<li>t 变成 (1, 2, [30, 40, 50, 60])。</li>
+<li>因为 tuple 不支持对它的数据项赋值，所以会抛出 TypeError 异常。</li>
+<li>以上两个都不是。</li>
+<li>a 和 b 都是对的。</li>
+</ol>
+<p>正确答案是4，t确实会变成 (1, 2, [30, 40, 50, 60])，但同时元组是不可变类型故会引发TypeError异常的出现。</p>
+<pre><code>&gt;&gt;&gt; t
+(1, 2, [30, 40, 50, 60])
+</code></pre>
+<p>如果是使用extend()对t[-1]的列表进行数据项的增加，则答案会变成1。</p>
+<p>我当初在看了这个问题后，暗自告诉自己了2件事情：</p>
+<ul>
+<li>
+<p>list的数据项增加尽量不要使用+=，而应该使用append()或者extend()</p>
+<p>Ps：我也不知道自己为什么会产生这样的想法，但这个想法确实伴随我很长时间，直至现在</p>
+</li>
+<li>
+<p>tuple中不要存放可变类型的数据，如list、set、dict等..</p>
+</li>
+</ul>
+<p>元组更多的作用是展示数据，而不是操作数据。</p>
+<p>举个例子，当用户根据某个操作获取到了众多数据项之后，你可以将这些数据项做出元组并返回。</p>
+<p>用户对被返回的原对象只能看，不能修改，若想修改则必须创建新其他类型对象。</p>
+<h1 id="解构方法">解构方法</h1>
+<p>元组的解构方法与列表使用相同。</p>
+<p>使用方法参照列表的解构方法一节。</p>
+<h1 id="常用方法">常用方法</h1>
+<h2 id="方法一览">方法一览</h2>
+<p>常用的list方法一览表：</p>
+<table>
+<thead>
+<tr>
+<th>方法名</th>
+<th>返回值</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>count()</td>
+<td>integer</td>
+<td>返回数据项在T中出现的次数</td>
+</tr>
+<tr>
+<td>index()</td>
+<td>integer</td>
+<td>返回第一个数据项在T中出现位置的索引，若值不存在，则抛出ValueError</td>
+</tr>
+</tbody>
+</table>
+<p>基础公用函数：</p>
+<table>
+<thead>
+<tr>
+<th>函数名</th>
+<th>返回值</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>len()</td>
+<td>integer</td>
+<td>返回容器中的项目数</td>
+</tr>
+<tr>
+<td>enumerate()</td>
+<td>iterator for index, value of iterable</td>
+<td>返回一个可迭代对象，其中以小元组的形式包裹数据项与正向索引的对应关系</td>
+</tr>
+<tr>
+<td>reversed()</td>
+<td>...</td>
+<td>详情参见函数章节</td>
+</tr>
+<tr>
+<td>sorted()</td>
+<td>...</td>
+<td>详情参见函数章节</td>
+</tr>
+</tbody>
+</table>
+<h2 id="获取长度">获取长度</h2>
+<p>使用len()方法来获取元组的长度。</p>
+<p>返回int类型的值。</p>
+<pre><code>tup = ("A", "B", "C", "D", "E", "F", "G")
+
+print(len(tup))
+
+# 7
+</code></pre>
+<p>Python在对内置的数据类型使用len()方法时，实际上是会直接的从PyVarObject结构体中获取ob_size属性，这是一种非常高效的策略。</p>
+<p>PyVarObject是表示内存中长度可变的内置对象的C语言结构体。</p>
+<p>直接读取这个值比调用一个方法要快很多。</p>
+<h2 id="统计次数">统计次数</h2>
+<p>使用count()方法统计数据项在该元组中出现的次数。</p>
+<p>返回int：</p>
+<pre><code>tup = ("A", "B", "C", "D", "E", "F", "G", "A")
+
+aInTupCount = tup.count("A")
+
+print(aInTupCount)
+
+# 2
+</code></pre>
+<h2 id="查找位置">查找位置</h2>
+<p>使用index()方法找到数据项在当前元组中首次出现的位置索引值，如数据项不存在则抛出异常。</p>
+<p>返回int。</p>
+<pre><code>tup = ("A", "B", "C", "D", "E", "F", "G", "A")
+
+aInTupIndex = tup.index("A")
+
+print(aInTupIndex)
+
+# 0
+</code></pre>
+<h1 id="底层探究">底层探究</h1>
+<h2 id="内存开辟">内存开辟</h2>
+<p>Python内部实现中，列表和元组还是有一定的差别的。</p>
+<p>元组在创建对象申请内存的时候，内存空间大小便进行了固定，后续不可更改（如果是传入了一个可迭代对象，例如tupe(range(100))，这种情况会进行扩容与缩容，下面的章节将进行探讨研究）。</p>
+<p>而列表在创建对象申请内存的时候，内存空间大小不是固定的，如果后续对其新增或删除数据项，列表会进行扩容或者缩容机制。</p>
+<h2 id="元组创建">元组创建</h2>
+<h3 id="空元组">空元组</h3>
+<p>若创建一个空元组，会直接进行创建，然后将这个空元组丢到缓存free_list中。</p>
+<p>元组的free_list最多能缓存 20 * 2000 个元组，这个在下面会进行讲解。</p>
+<p>如图所示：</p>
+<p><img src="https://images-1302522496.cos.ap-nanjing.myqcloud.com/img/image-20210513195140580.png" alt="image-20210513195140580" loading="lazy"></p>
+<h3 id="元组转元组">元组转元组</h3>
+<p>这样的代码会进行元组转元组：</p>
+<pre><code>tup = tuple((1, 2, 3))
+</code></pre>
+<p>首先内部本身就是一个元组（1， 2， 3），所以会直接将内部的这个元组拿出来并返回引用，并不会再次创建。</p>
+<p>代码验证：</p>
+<pre><code>&gt;&gt;&gt; oldTup = (1, 2, 3)
+&gt;&gt;&gt; id(oldTup)
+4384908128
+&gt;&gt;&gt; newTup = tuple(oldTup)
+&gt;&gt;&gt; id(newTup)
+4384908128
+&gt;&gt;&gt;
+</code></pre>
+<h3 id="列表转元组">列表转元组</h3>
+<p>列表转元组会将列表中的每一个数据项都拿出来，然后放入至元组中：</p>
+<pre><code>tup = tuple([1, 2, 3])
+</code></pre>
+<p>所以你会发现，列表和元组中的数据项引用都是相同的：</p>
+<pre><code>&gt;&gt;&gt; li1 = ["A", "B", "C"]
+&gt;&gt;&gt; tup = tuple(li1)
+&gt;&gt;&gt; print(id(li1[0]))
+4383760656
+&gt;&gt;&gt; print(id(tup[0]))
+4383760656
+&gt;&gt;&gt;
+</code></pre>
+<h3 id="可迭代对象转元组">可迭代对象转元组</h3>
+<p>可迭代对象是没有长度这一概念的，如果是可迭代对象转换为元组，会先对可迭代对象的长度做一个猜想。</p>
+<p>并且根据这个猜想，为元组开辟一片内存空间，用于存放可迭代对象的数据项。</p>
+<p>然后内部会获取可迭代对象的迭代器，对其进行遍历操作，拿出数据项后放至元组中。</p>
+<p>如果猜想的长度太小，会导致元组内部的内存不够存放下所有的迭代器数据项，此时该元组会进行内部的扩容机制，直至可迭代对象中的数据项全部被添加至元组中。</p>
+<pre><code>rangeObject = range(1, 101)
+tup = tuple(rangeObject)
+
+// 假如猜想的是9
+// 第一步：+ 10 
+// 第二步：+ (原长度+10) * 0.25
+// 其实，就是增加【原长度*0.25 + 2.5】
+</code></pre>
+<p>如果猜想的长度太大，而实际上迭代器中的数据量偏少，则需要对该元组进行缩容。</p>
+<h2 id="切片取值">切片取值</h2>
+<p>对元组进行切片取值的时候，会开辟一个新元组用于存放切片后得到的数据项。</p>
+<pre><code>tup = (1, 2, 3)
+newSliceTup = tup[0:2]
+</code></pre>
+<p>当然，如果是[:]的操作，则参照绝对引用，直接返回被切片的元组引用。</p>
+<p>代码验证：</p>
+<pre><code>&gt;&gt;&gt; id(tup)
+4384908416
+&gt;&gt;&gt; newSliceTup = tup[0:2]
+&gt;&gt;&gt; id(newSliceTup)
+4384904392
+</code></pre>
+<h2 id="缓存机制">缓存机制</h2>
+<h3 id="free_list缓存">free_list缓存</h3>
+<p>元组的缓存机制和列表的缓存机制不同。</p>
+<p>元组的free_list会缓存0 - 19长度的共20种元组，其中每一种长度的元组通过单向链表横向扩展缓存至2000个，如下图所示：</p>
+<p><img src="https://images-1302522496.cos.ap-nanjing.myqcloud.com/img/image-20210513200942411.png" alt="image-20210513200942411" loading="lazy"></p>
+<p>当每一次的del操作有数据项的元组时，都会将该元组数据项清空并挂载至free_list单向链表的头部的位置。</p>
+<pre><code>del 元组1
+del 元组2
+del 元组3
+</code></pre>
+<p>如下图所示：</p>
+<p><img src="https://images-1302522496.cos.ap-nanjing.myqcloud.com/img/image-20210513202009430.png" alt="image-20210513202009430" loading="lazy"></p>
+<p>当要创建一个元组时，会通过创建元组的长度，从free_list单向链表的头部取出一个元组，然后将数据项存放进去。</p>
+<p>前提是free_list单向链表中缓存的有该长度的元组。</p>
+<pre><code>tup = (1, 2, 3)
+</code></pre>
+<p><img src="https://images-1302522496.cos.ap-nanjing.myqcloud.com/img/image-20210513202537264.png" alt="image-20210513202537264" loading="lazy"></p>
+<h3 id="空元组与非空元组的缓存">空元组与非空元组的缓存</h3>
+<p>空元组的缓存是一经创建就缓存到free_list单向链表中。</p>
+<p>而非空元组的缓存必须是del操作后才缓存到free_list单向链表中。</p>
+<h3 id="空元组的创建">空元组的创建</h3>
+<p>第一次创建空元组后，空元组会缓存至free_list单向链表中。</p>
+<p>以后的每一次空元组创建，返回的其实都是同一个引用，也就是说空元组在free_list单向链表中即使被引用了也不会被销毁。</p>
+<pre><code>&gt;&gt;&gt; t1 = ()
+&gt;&gt;&gt; id(t1)
+4511088712
+&gt;&gt;&gt; t2 = ()
+&gt;&gt;&gt; id(t2)
+4511088712
+</code></pre>
+<h3 id="非空元组的创建">非空元组的创建</h3>
+<p>当free_list单向链表中有相同长度的元组时，会进行引用并删除。</p>
+<p>这个在上图中已经示例过了，就是这个：</p>
+<p><img src="https://images-1302522496.cos.ap-nanjing.myqcloud.com/img/image-20210513202537264.png" alt="image-20210513202537264" loading="lazy"></p>
+<p>代码示例：</p>
+<pre><code>$ python3
+
+Python 3.6.8 (v3.6.8:3c6b436a57, Dec 24 2018, 02:04:31)
+[GCC 4.2.1 Compatible Apple LLVM 6.0 (clang-600.0.57)] on darwin
+Type "help", "copyright", "credits" or "license" for more information.
+&gt;&gt;&gt; v1 = (None, None, None)
+&gt;&gt;&gt; id(v1)
+4384907696
+&gt;&gt;&gt; v2 = (None, None, None)
+&gt;&gt;&gt; id(v2)
+4384908056
+&gt;&gt;&gt; del v1
+&gt;&gt;&gt; del v2   # ①
+&gt;&gt;&gt; v3 = (None, None, None)
+&gt;&gt;&gt; id(v3)   # ②
+4384908056
+&gt;&gt;&gt; v4 = (None, None, None)
+&gt;&gt;&gt; id(v4)   # ③
+4384907696
+&gt;&gt;&gt;
+</code></pre>
+<p>①：free_list num_free=3 单向链表结构：v2 —&gt; v1</p>
+<p>②：创建了v3，拿出v2的空元组，填入v3数据项，故v2和v3的id值相等，证明引用同一个元组，此时free_list num_free=3 单向链表结构为：—&gt; v1</p>
+<p>③：创建了v4，拿出v1的空元组，填入v4数据项，故v1和v4的id值相等，证明引用同一个元组</p>
+<h2 id="tupleobjectc源码">tupleobject.c源码</h2>
+<p>官网参考：<a href="https://docs.python.org/3.6/c-api/tuple.html" target="_blank">点我跳转</a></p>
+<p>源码一览：<a href="https://github.com/python/cpython/blob/main/Objects/tupleobject.c" target="_blank">点我跳转</a></p>
+<p>以下是截取了一些关键性源代码，并且做上了中文注释，方便查阅。</p>
+<p>每一个元组都有几个关键性的属性：</p>
+<pre><code>Py_ssize_t ob_refcnt;     // 引用计数器
+Py_ssize_t ob_size;       // 数据项个数，即元组大小
+PyObject *ob_item[1];     // 存储元组中的数据项 [指针, ]
+</code></pre>
+<p>关于缓存free_list的属性：</p>
+<pre><code>PyTuple_MAXSAVESIZE     // 相当于图中的 free_num ，最大20，即纵向扩展的缓存元组长度
+PyTuple_MAXFREELIST     // 图中 free_list 的横向扩展缓存列表个数，最大2000
+</code></pre>
+<h2 id="创建元组">创建元组</h2>
+<h3 id="空元组-1">空元组</h3>
+<pre><code>PyObject *
+PyTuple_New(Py_ssize_t size)
+{
+    PyTupleObject *op;
+    // 缓存相关
+    Py_ssize_t i;
+    
+    // 元组的大小不能小于0
+    if (size &lt; 0) {
+        PyErr_BadInternalCall();
+        return NULL;
+    }
+#if PyTuple_MAXSAVESIZE &gt; 0
+
+    // 创建空元组，优先从缓存中获取
+    // size = 0 表示这是一个空元组，从free_list[0]中获取空元组
+    if (size == 0 &amp;&amp; free_list[0]) {
+        // op就是空元组
+        op = free_list[0];
+        // 新增空元组引用计数器 + 1
+        Py_INCREF(op);
+#ifdef COUNT_ALLOCS
+        tuple_zero_allocs++;
+#endif
+        // 返回空元组的指针
+        return (PyObject *) op;
+    }
+    
+    // 如果创建的不是空元组，且这个创建的元组数据项个数小于20，并且free_list[size]不等于空，表示有缓存
+    // 则从缓存中去获取，不再重新开辟内存
+    if (size &lt; PyTuple_MAXSAVESIZE &amp;&amp; (op = free_list[size]) != NULL) {
+        // 拿出元组
+        free_list[size] = (PyTupleObject *) op-&gt;ob_item[0];
+        // num_free减1
+        numfree[size]--;
+#ifdef COUNT_ALLOCS
+        fast_tuple_allocs++;
+#endif
+        /* Inline PyObject_InitVar */
+        // 初始化，定义这个元组的长度为数据项个数
+#ifdef Py_TRACE_REFS
+        Py_SIZE(op) = size;
+        // 定义类型为 tuple
+        Py_TYPE(op) = &amp;PyTuple_Type;
+#endif
+        // 增加一次新的引用
+        _Py_NewReference((PyObject *)op);
+    }
+    
+    // 如果是空元组
+    else
+#endif
+    {
+        // 检查内存情况，是否充足
+        /* Check for overflow */
+        if ((size_t)size &gt; ((size_t)PY_SSIZE_T_MAX - sizeof(PyTupleObject) -
+                    sizeof(PyObject *)) / sizeof(PyObject *)) {
+            return PyErr_NoMemory();
+        }
+        // 开辟内存，并获得一个元组：op
+        op = PyObject_GC_NewVar(PyTupleObject, &amp;PyTuple_Type, size);
+        if (op == NULL)
+            return NULL;
+    }
+    
+    // 空元组的每一个槽位都是NULL
+    for (i=0; i &lt; size; i++)
+        op-&gt;ob_item[i] = NULL;
+        
+#if PyTuple_MAXSAVESIZE &gt; 0
+   // 缓存空元组
+    if (size == 0) {
+        free_list[0] = op;
+        ++numfree[0];
+        Py_INCREF(op);          /* extra INCREF so that this is never freed */
+    }
+#endif
+#ifdef SHOW_TRACK_COUNT
+    count_tracked++;
+#endif
+
+    // 将元组加入到GC机制中，用于内存管理
+    _PyObject_GC_TRACK(op);
+    return (PyObject *) op;
+}
+</code></pre>
+<h3 id="可迭代对象转元组-1">可迭代对象转元组</h3>
+<p>这个不在tupleobject.c源码中，而是在abstract.c源码中。</p>
+<p>官网参考：<a href="https://docs.python.org/3.6/c-api/sequence.html" target="_blank">点我跳转</a></p>
+<p>源码一览：<a href="https://github.com/KahnDepot/cpython/blob/3.6/Objects/abstract.c" target="_blank">点我跳转</a></p>
+<pre><code>PyObject *
+PySequence_Tuple(PyObject *v)
+{
+    PyObject *it;  /* iter(v) */
+    Py_ssize_t n;             /* guess for result tuple size */
+    PyObject *result = NULL;
+    Py_ssize_t j;
+
+    if (v == NULL) {
+        return null_error();
+    }
+
+    /* Special-case the common tuple and list cases, for efficiency. */
+    // 如果是元组转换元组，如 tup = (1, 2, 3) 或者 tup = ((1, 2, 3))直接返回内存地址
+    if (PyTuple_CheckExact(v)) {
+        Py_INCREF(v);
+        return v;
+    }
+    
+    // 如果是列表转换元组，则执行PyList_AsTuple()，将列表转换为元组
+    // 如 tup = ([1, 2, 3])
+    if (PyList_CheckExact(v))
+        return PyList_AsTuple(v);
+
+    /* Get iterator. */
+    // 获取迭代器， tup = (range(1, 4).__iter__())
+ 
+    it = PyObject_GetIter(v);
+    if (it == NULL)
+        return NULL;
+
+    /* Guess result size and allocate space. */
+    // 猜想迭代器长度，也就是猜一下有多少个数据项
+    n = PyObject_LengthHint(v, 10);
+    if (n == -1)
+        goto Fail;
+        
+    // 根据猜想的迭代器长度，进行元组的内存开辟
+    result = PyTuple_New(n);
+    if (result == NULL)
+        goto Fail;
+
+    /* Fill the tuple. */
+    // 将迭代器中每个数据项添加至元组中
+    for (j = 0; ; ++j) {
+        PyObject *item = PyIter_Next(it);
+        if (item == NULL) {
+            if (PyErr_Occurred())
+                goto Fail;
+            break;
+        }
+        
+        //如果迭代器中数据项比猜想的多，则证明开辟内存不足需要需要进行扩容
+        if (j &gt;= n) {
+            size_t newn = (size_t)n;
+            /* The over-allocation strategy can grow a bit faster
+               than for lists because unlike lists the
+               over-allocation isn't permanent -- we reclaim
+               the excess before the end of this routine.
+               So, grow by ten and then add 25%.
+            */
+            
+            // 假如猜想的是9
+            // 第一步：+ 10 
+            // 第二步：+ (原长度+10) * 0.25
+            // 其实，就是增加【原长度*0.25 + 2.5】
+            
+            newn += 10u;
+            newn += newn &gt;&gt; 2;
+            
+            // 判断是否超过了元组的数据项个数限制（sys.maxsize）
+            if (newn &gt; PY_SSIZE_T_MAX) {
+                /* Check for overflow */
+                PyErr_NoMemory();
+                Py_DECREF(item);
+                goto Fail;
+            }
+            n = (Py_ssize_t)newn;
+            // 扩容机制
+            if (_PyTuple_Resize(&amp;result, n) != 0) {
+                Py_DECREF(item);
+                goto Fail;
+            }
+        }
+        
+        // 将数据项放入元组之中
+        PyTuple_SET_ITEM(result, j, item);
+    }
+
+    /* Cut tuple back if guess was too large. */
+    
+    // 如果猜想的数据项太多，而实际上迭代器中的数据量偏少
+    // 则需要对该元组进行缩容
+    if (j &lt; n &amp;&amp;
+        _PyTuple_Resize(&amp;result, j) != 0)
+        goto Fail;
+
+    Py_DECREF(it);
+    return result;
+
+Fail:
+    Py_XDECREF(result);
+    Py_DECREF(it);
+    return NULL;
+}
+</code></pre>
+<h3 id="列表转元组-1">列表转元组</h3>
+<p>这个不在tupleobject.c源码中，而是在listobject.c源码中。</p>
+<p>官网参考：<a href="https://docs.python.org/3.6/c-api/list.html" target="_blank">点我跳转</a></p>
+<p>源码一览：<a href="https://github.com/python/cpython/blob/main/Objects/listobject.c" target="_blank">点我跳转</a></p>
+<pre><code>PyObject *
+PyList_AsTuple(PyObject *v)
+{
+    PyObject *w;
+    PyObject **p, **q;
+    Py_ssize_t n;
+    // 例如：tup = ([1, 2, 3])
+    
+    // 进行列表的验证
+    if (v == NULL || !PyList_Check(v)) {
+        PyErr_BadInternalCall();
+        return NULL;
+    }
+    
+    // 获取大小，即数据项个数
+    n = Py_SIZE(v);
+    // 开辟内存
+    w = PyTuple_New(n);
+    
+    // 如果是空元组
+    if (w == NULL)
+        return NULL;
+        
+    // 执行迁徙操作
+    p = ((PyTupleObject *)w)-&gt;ob_item;
+    q = ((PyListObject *)v)-&gt;ob_item;
+    
+    // 将列表中数据项的引用，也给元组进行引用
+    // 这样列表中数据项和元组中的数据项都引用同1个对象
+    while (--n &gt;= 0) {
+        // 数据项引用计数 + 1
+        Py_INCREF(*q);
+        *p = *q;
+        p++;
+        q++;
+    }
+    
+    // 返回元组
+    return w;
+}
+
+</code></pre>
+<h2 id="切片取值-1">切片取值</h2>
+<pre><code>PyObject *
+PyTuple_GetSlice(PyObject *op, Py_ssize_t i, Py_ssize_t j)
+// 切片会触发该方法
+{
+    // 如果对空元组进行切片，则会抛出异常
+    if (op == NULL || !PyTuple_Check(op)) {
+        PyErr_BadInternalCall();
+        return NULL;
+    }
+    // 内部的具体实现方法
+    return tupleslice((PyTupleObject *)op, i, j);
+}
+
+static PyObject *
+tupleslice(PyTupleObject *a, Py_ssize_t ilow,
+           Py_ssize_t ihigh)
+{
+    PyTupleObject *np;
+    PyObject **src, **dest;
+    Py_ssize_t i;
+    Py_ssize_t len;
+    
+    // 计算索引位置
+    if (ilow &lt; 0)
+        ilow = 0;
+    if (ihigh &gt; Py_SIZE(a))
+        ihigh = Py_SIZE(a);
+    if (ihigh &lt; ilow)
+        ihigh = ilow;
+        
+    // 如果是[:]的操作，则直接返回源元组对象a的指针，即绝对引用
+    if (ilow == 0 &amp;&amp; ihigh == Py_SIZE(a) &amp;&amp; PyTuple_CheckExact(a)) {
+        Py_INCREF(a);
+        return (PyObject *)a;
+    }
+    
+    // 初始化新的切片对象元组长度
+    len = ihigh - ilow;
+    
+    // 开始切片，创建了一个新元组np
+    np = (PyTupleObject *)PyTuple_New(len);
+    if (np == NULL)
+        return NULL;
+    src = a-&gt;ob_item + ilow;
+    dest = np-&gt;ob_item;
+    
+    // 对源元组中的数据项的引用计数+1
+    for (i = 0; i &lt; len; i++) {
+        PyObject *v = src[i];
+        Py_INCREF(v);
+        dest[i] = v;
+    }
+    
+    // 返回切片对象新元组np的引用
+    return (PyObject *)np;
+}
+</code></pre>
+<h2 id="缓存相关">缓存相关</h2>
+<pre><code>static void
+tupledealloc(PyTupleObject *op)
+{
+    Py_ssize_t i;
+    Py_ssize_t len =  Py_SIZE(op);
+    PyObject_GC_UnTrack(op);
+    Py_TRASHCAN_SAFE_BEGIN(op)
+    
+    // 如果元组的长度大于0，则不是一个非空元组
+    if (len &gt; 0) {
+        i = len;
+        // 将内部的数据项引用计数都 - 1
+        while (--i &gt;= 0)
+            Py_XDECREF(op-&gt;ob_item[i]);
+#if PyTuple_MAXSAVESIZE &gt; 0
+        
+        // 准备缓存，判断num_free是否小于20，并且单向链表中的已缓存元组个数小于2000
+        if (len &lt; PyTuple_MAXSAVESIZE &amp;&amp;
+            numfree[len] &lt; PyTuple_MAXFREELIST &amp;&amp;
+            Py_TYPE(op) == &amp;PyTuple_Type)
+        {
+            // 添加至链表头部
+            op-&gt;ob_item[0] = (PyObject *) free_list[len];
+            // 将num_free + 1
+            numfree[len]++;
+            free_list[len] = op;
+            goto done; /* return */
+        }
+#endif
+    }
+    // 内存中进行销毁
+    Py_TYPE(op)-&gt;tp_free((PyObject *)op);
+done:
+    Py_TRASHCAN_SAFE_END(op)
+}
+
+</code></pre>
+
+</div>
+<div id="MySignature"></div>
+<div class="clear"></div>
+<div id="blog_post_info_block">
+    <div id="blog_post_info"></div>
+    <div class="clear"></div>
+    <div id="post_next_prev"></div>
+</div>
+            </div>
+            <div class="postDesc">posted @ 
+<span id="post-date">2021-05-14 11:42</span>&nbsp;
+<a href="https://www.cnblogs.com/Yunya-Cnblogs/">云崖先生</a>&nbsp;
+阅读(<span id="post_view_count">36</span>)&nbsp;
+评论(<span id="post_comment_count">0</span>)&nbsp;
+<a href="https://i.cnblogs.com/EditPosts.aspx?postid=14767943" rel="nofollow">编辑</a>&nbsp;
+<a href="javascript:void(0)" onclick="AddToWz(14767943);return false;">收藏</a></div>
+        </div>
+	    
+	    
+    </div><!--end: topics 文章、评论容器-->
+</div>
+<script src="https://common.cnblogs.com/highlight/10.3.1/highlight.min.js"></script>
+<script>markdown_highlight();</script>
+<script>
+    var allowComments = true, cb_blogId = 569467, cb_blogApp = 'Yunya-Cnblogs', cb_blogUserGuid = 'f934dd8b-6e84-4912-dbf2-08d7723e4a4c';
+    var cb_entryId = 14767943, cb_entryCreatedDate = '2021-05-14 11:42', cb_postType = 1;
+    updatePostStats(
+        [cb_entryId],
+        function(id, count) { $("#post_view_count").text(count) },
+        function(id, count) { $("#post_comment_count").text(count) })
+    zoomManager.apply("#cnblogs_post_body img:not(.code_img_closed):not(.code_img_opened)");
+</script>
+<a name="!comments"></a>
+<div id="blog-comments-placeholder"></div>
+<div id="comment_form" class="commentform">
+    <a name="commentform"></a>
+    <div id="divCommentShow"></div>
+    <div id="comment_nav"><span id="span_refresh_tips"></span><a href="javascript:void(0);" onclick="return RefreshCommentList();" id="lnk_RefreshComments" runat="server" clientidmode="Static">刷新评论</a><a href="#" onclick="return RefreshPage();">刷新页面</a><a href="#top">返回顶部</a></div>
+    <div id="comment_form_container"></div>
+    <div class="ad_text_commentbox" id="ad_text_under_commentbox"></div>
+    <div id="ad_t2"></div>
+    <div id="opt_under_post"></div>
+    <div id="cnblogs_c1" class="under-post-card">
+        <div id='div-gpt-ad-1592365906576-0' style='width: 300px; height: 250px;'></div>
+    </div>
+    <div id="under_post_card1"></div>
+    <div id="cnblogs_c2" class="under-post-card">
+        <div id='div-gpt-ad-1592366332455-0' style='width: 468px; height: 60px;'></div>
+    </div>
+    <div id="under_post_card2"></div>
+    <div id="HistoryToday" class="under-post-card"></div>
+    <script type="text/javascript">
+       var commentManager = new blogCommentManager();
+       commentManager.renderComments(0);
+       fixPostBody();
+       deliverBigBanner();
+setTimeout(function() { incrementViewCount(cb_entryId); }, 50);       deliverT2();
+       deliverC1C2();
+       loadNewsAndKb();
+       loadBlogSignature();
+LoadPostCategoriesTags(cb_blogId, cb_entryId);       LoadPostInfoBlock(cb_blogId, cb_entryId, cb_blogApp, cb_blogUserGuid);
+       GetPrevNextPost(cb_entryId, cb_blogId, cb_entryCreatedDate, cb_postType);
+       loadOptUnderPost();
+       GetHistoryToday(cb_blogId, cb_blogApp, cb_entryCreatedDate);
+    </script>
+</div>
+
+	</div><!--end: forFlow -->
+	</div><!--end: mainContent 主体内容容器-->
+	<div id="sideBar">
+		<div id="sideBarMain">
+			<div id="sidebar_news" class="newsItem">
+            <script>loadBlogNews();</script>
+</div>
+<div id="sidebar_c3"></div>
+			<div id="blog-calendar" style="display:none"></div><script>loadBlogDefaultCalendar();</script>			
+			<div id="leftcontentcontainer">
+				<div id="blog-sidecolumn"></div>
+                    <script>loadBlogSideColumn();</script>
+			</div>			
+		</div><!--end: sideBarMain -->
+	</div><!--end: sideBar 侧边栏容器 -->
+	<div class="clear"></div>
+	</div><!--end: main -->
+	<div class="clear"></div>
+	<div id="footer">
+		<!--done-->
+Copyright &copy; 2021 云崖先生
+<br /><span id="poweredby">Powered by .NET 5.0 on Kubernetes</span>
+
+
+
+	</div><!--end: footer -->
+</div><!--end: home 自定义的最大容器 -->
+
+
+    <div id="page_end_html">
+        <script>
+    /**
+     * @author:me@makergyt.com
+     * @version:2020-07-01
+     */
+    window.config = {
+        avatar: 'https://pic.cnblogs.com/avatar/2150956/20210220221223.png',
+        github: 'makergyt',
+        gallery: '1796566'
+    }
+</script>
+<!-- 下方内容请勿擅自修改，除非知道明确含义，如进行完善和扩展，请fork源码(https://github.com/MakerGYT/cnblogs-theme-next)后提交pull request;-->
+<!-- 引入在线字体-->
+<!--<link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Noto Serif SC:wght@400;500;700&display=swap&subset=latin,latin-ext">-->
+<!-- 引入图标库-->
+<link href="https://cdn.bootcdn.net/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+
+<!-- 顶部滚动条-->
+<script src="https://cdn.jsdelivr.net/gh/djyde/ToProgress/ToProgress.min.js"></script>
+<script type="text/javascript">
+    let progressBar = new ToProgress({
+        color: getComputedStyle(document.documentElement).getPropertyValue('--primary-color')
+    })
+    progressBar.reset()
+    // 如未做大幅修改，请保留下方内容
+    $('#poweredby').append('&nbsp;&&nbsp;<a href="https://github.com/makergyt/cnblogs-theme-next">cnblogs-theme-next</a>')
+    // 获取默认基础信息
+    window.isPost = $('.forFlow').find('#post_detail').length ? true : false;
+    window.blogSlug = currentBlogApp;
+    var footerOverTestArray = $($("#footer")[0].childNodes[2]).text().trim().split(" ");
+
+    config = Object.assign({
+        siteTitle: $('#Header1_HeaderTitle').text(),
+        author: footerOverTestArray[footerOverTestArray.length - 1],
+        avatar: $('.author_avatar').attr('src'),
+        github: blogSlug,
+        gallery: null
+    }, config);
+
+    var linkObject = document.createElement("link");
+    linkObject.rel = "shortcut icon";
+    linkObject.href = config.avatar;
+
+    // 设置摘要
+    function setDesc() {
+        $('#cnblogs_post_description').css('display', 'block')
+        $('#cnblogs_post_description').prepend('<h3 id="post-description-meta">摘 要</h3>')
+        // 由于标签是网络请求，可能在修改dom后返回，故重新请求后再修改
+        $.ajax({
+            url: getAjaxBaseUrl() + "CategoriesTags.aspx",
+            type: "get",
+            contentType: "application/json; charset=utf-8",
+            data: {
+                blogId: cb_blogId,
+                postId: cb_entryId,
+            },
+            cache: !1,
+            dataType: "text",
+            timeout: 1e4,
+            success: function (n) {
+                n && $("#cnblogs_post_description").append(n.replace('EntryTag', 'post-keyword').replace('标签', '关键词'))
+                $('#EntryTag').remove()
+            }
+        })
+    }
+    // 设置参考文献标题
+    function setFoot() {
+        $('.footnotes').prepend('<h1 id="-参考文献" class="footnotes-meta">参 考 文 献</h1>')
+    }
+    // 设置左侧目录
+    function setContent() {
+        if ($('#post-toc-wrap').length) return;
+        var toc = $('<div id="post-toc-wrap"><h2 style="text-align:center">阅读目录</h2></div>')
+        $('#blog-news').prepend(toc)
+        var captions_ori = $("#cnblogs_post_body h1"),
+            captions_ori2 = $("#cnblogs_post_body h2"),
+            captions = $("#cnblogs_post_body h1,#cnblogs_post_body h2").clone(),
+            content = $("<ol id='post-toc'></ol>");
+
+        toc.append(content.append(captions));
+        toc.append('<div class="back-to-top" onclick="toScroll(0,500)"><i class="fa fa-arrow-up"></i>&nbsp;<span id="btc-persent">0%</span></div>')
+
+        var index = -1, index2 = -1;
+        captions.replaceWith(function () {
+            var self = this;
+            if (self.tagName == "H1" || self.tagName == "h1") {
+                // 设置点击目录跳转
+                index += 1;
+                $('<a name="' + '_caption_' + index + '"></a>').insertBefore(captions_ori[index]);
+                return '<li id="' + index + 'li"><a href="#_caption_' + index + '">' + self.innerHTML + '</a><ol></ol></li>';
+            } else {
+                index2 += 1;
+                $('<a name="' + '_caption' + index2 + '"></a>').insertBefore(captions_ori2[index2]);
+                $("#" + index + "li ol").append("<li><a href='#_caption" + index2 + "' style='color:#5f5f5f;'>" + self.innerHTML + "</a></li>");
+                return;
+            }
+        });
+    }
+    // 滚动至顶部
+    function toScroll(endScroll, time) {
+        $('html,body').stop().animate({ scrollTop: endScroll }, time);
+    }
+    function onScroll() {
+        // 上拉至指定位置贴顶
+        var oldScrollNum = 0;
+
+        window.onscroll = function () {
+            var t = document.documentElement.scrollTop || document.body.scrollTop;
+            if (t > oldScrollNum) {
+                if (t > 135) {
+                    $('.site-author').remove()
+                    $('#sidebar_categories').hide()
+                    setContent()
+                }
+                if (t > 270) {
+                    $("#post-toc-wrap").addClass("affix");
+                }
+            } else {
+                if (t <= 135) {
+                    $('#post-toc-wrap').remove()
+                    $('#sidebar_categories').show()
+                    setAuthor()
+                }
+                if (t <= 270) {
+                    $("#post-toc-wrap").removeClass("affix");
+                }
+            }
+            oldScrollNum = t;
+            // 滚动条
+            var docHeight = $(document).height(),
+                windowHeight = $(window).height(),
+                scrollPercent = (t / (docHeight - windowHeight)) * 100;
+            progressBar.setProgress(scrollPercent);
+            $('#btc-persent').replaceWith('<span id="btc-persent">' + scrollPercent.toFixed() + '%</span>')
+        }
+    }
+    function setAuthor() {
+        if ($('.site-author').length) return;
+        var siteAuthor = $('<div class="site-author motion-element"><img class="site-author-image" src="' + config.avatar + '"><p class="site-author-name">' + config.author + '</p></div>');
+        siteAuthor.append('<div class="site-state">' + $('.blogStats').html() + '</div>')
+        var links = $('<div class="links-of-author"></div>')
+        links.append('<div class="links-of-author-item"><a href="https://msg.cnblogs.com/send/' + config.author + '"><i class="fa fa-fw fa-envelope"></i></a></div>'
+            + '<div class="links-of-author-item"><a id="blog_nav_rss" href="https://www.cnblogs.com/' + blogSlug + '/rss/" data-rss="https://www.cnblogs.com/' + blogSlug + '/rss/" style="display: inline !important;"><i class="fa fa-fw fa-rss"></i></a></div>')
+        $('#blog-news').prepend(siteAuthor.append(links))
+    }
+    // 设置导航区
+    function setNav() {
+        var url = window.location.href;
+        $('.brand').attr('href', '/' + blogSlug)
+        $('.site-title').text(config.siteTitle)
+        $('.menu-item-home a:first').attr('href', '/' + blogSlug)
+        $('.menu-item-archives a:first').attr('href', '/' + blogSlug + '/p')
+        if (config.gallery) {
+            $('.menu-item-gallery a:first').attr('href', '/' + blogSlug + '/gallery/' + config.gallery + '.html')
+            $('.menu-item-gallery').css('display', 'block')
+
+            if (/gallery/.test(url)) {
+                $('.menu-item-home').removeClass('menu-item-active')
+                $('.menu-item-gallery').addClass('menu-item-active')
+            }
+        }
+
+        if (/(\/p)$/.test(url)) {
+            $('.menu-item-home').removeClass('menu-item-active')
+            $('.menu-item-archives').addClass('menu-item-active')
+        }
+    }
+
+    // 设置右上角github跳转链接
+    function setGithub() {
+        $('.github-corner').attr('href', 'https://github.com/' + config.github)
+    }
+    // 在响应式设计中，菜单折叠打开事件
+    function setToggle() {
+        document.querySelector('.site-nav-toggle .toggle').addEventListener('click', () => {
+            event.currentTarget.classList.toggle('toggle-close');
+            var e = document.querySelector('.site-nav'),
+                t = e.classList.contains('site-nav-on') ? 'slideUp' : 'slideDown';
+            'function' == typeof Velocity ? Velocity(e, t, {
+                duration: 200,
+                complete: function () {
+                    e.classList.toggle('site-nav-on')
+                }
+            }) : e.classList.toggle('site-nav-on')
+        });
+    }
+    function setCommentStyle() {
+        let t = $(".feedbackItem");
+        if (t.length > 0) {
+            $.each(t, function (t) {
+                let e = $(this)
+                    , n = e.find(".feedbackCon")
+                    , o = e.find(".feedbackListSubtitle")
+                    , i = n.length ? n.find(".blog_comment_body") : []
+                    , s = ""
+                    , a = i.length ? i.attr("id").split("_") : void 0;
+                if (a && a.length > 0) {
+                    let t = a[a.length - 1]
+                        , n = t.toString().match(/[0-9]/g);
+                    $.isArray(n) && (t = n.join(""));
+                    let o = $("#comment_" + t + "_avatar")
+                        , i = o.length > 0 ? $.trim(o.text()) : "https://cdn.jsdelivr.net/gh/BNDong/Cnblogs-Theme-SimpleMemory@master/img/webp/default_avatar.webp"
+                        , l = $("#a_comment_author_" + t)
+                        , c = l.length ? l.attr("href") : "javascropt:void(0);";
+                    s = '<div class="feedbackAvatar"><a href="' + c + '" target="_blank"><img src="' + i + '"/></a></div>',
+                        e.prepend(s)
+                }
+                o.length && o.find(".louzhu").length && o.addClass("feedbackListSubtitle-louzhu")
+            })
+        }
+    }
+    function setPreNext() {
+        var pnp = $("#post_next_prev a");
+        if (!pnp.length) return;
+        var cont = $('#post_next_prev').text();
+        var wrapper = $('<div class="post_next_prev"><div class="pre-block"></div><div class="next-block"></div></div>')
+        $("#post_next_prev").replaceWith(wrapper)
+        var pre = $('<a href="' + pnp[1].href + '"><div class="post_next_prev_label">&#9668上一篇</div><div>' + pnp[1].innerText + '</div></a>')
+
+        if (pnp.length > 2) {
+            $('.pre-block').append(pre)
+            var next = $('<a href="' + pnp[3].href + '"><div class="post_next_prev_label">下一篇&#9658</div><div>' + pnp[3].innerText + '</div></a>')
+            $('.next-block').append(next)
+        } else {
+            if (/上一篇/.test(cont)) {
+                $('.pre-block').append(pre)
+            } else if (/下一篇/.test(cont)) {
+                var next = $('<a href="' + pnp[1].href + '"><div class="post_next_prev_label">下一篇&#9658</div><div>' + pnp[1].innerText + '</div></a>')
+                $('.next-block').append(next)
+            }
+        }
+    }
+    setGithub();
+    setToggle();
+    setNav();
+    setTimeout(() => {
+        setAuthor();
+    }, 500);
+    // 只对文章页
+    if (isPost) {
+        setFoot();
+        // 由于加载需要时间故增加延时后操作
+        setTimeout(() => {
+            setDesc();
+            setPreNext();
+            onScroll();
+        }, 500);
+        setTimeout(() => {
+            setCommentStyle()
+        }, 1000)
+    }
+</script>
+
+<!-- 取消排版宽字符 -->
+<script>
+    let p = document.querySelectorAll("p");
+    p.forEach(function (ele, index) {
+        ele.innerHTML = ele.innerHTML.replace(/\u200B/g, '').trim();
+    })
+</script>
+
+<!-- 引入代码复制 -->
+<script src="https://cdn.bootcss.com/clipboard.js/2.0.4/clipboard.min.js"></script>
+<script src="https://blog-static.cnblogs.com/files/YunyaSir/title_copy.js"></script>
+
+<!-- 更改高亮样式，用默认的即可-->
+<!-- "https://cdn.jsdelivr.net/npm/highlight.js@10.1.1/styles/github.min.css"-->
+<!-- 白 -->
+<!-- <link href="https://blog-static.cnblogs.com/files/YunyaSir/github_gist.css" rel="stylesheet"> -->
+<link href="https://blog-static.cnblogs.com/files/YunyaSir/github.css" rel="stylesheet">
+
+<!-- 黑 -->
+<!-- <link href="https://blog-static.cnblogs.com/files/YunyaSir/qtcreator_dark.css" rel="stylesheet"> -->
+<!-- <link href="https://blog-static.cnblogs.com/files/YunyaSir/monokai_sublime.css" rel="stylesheet">-->
+
+    </div>
+
+    <input type="hidden" id="antiforgery_token" value="CfDJ8L-rpLgFVEJMgssCVvNUAjtB16hWiDBJNasuyUT5UQTUknKX3vt5hCVhuilJ2mL4oJjvqiwZi3uJi6BIoDyGyxykjJi-dpia_yS0fvZWEA5PsFGNeQCWzuMmyPBlr7rZboUGCtvBglYl85orFgtezq4" />
+</body>
+</html>

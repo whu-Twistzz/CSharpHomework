@@ -1,0 +1,661 @@
+﻿<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="referrer" content="origin-when-crossorigin" />
+    
+    
+    <meta http-equiv="Cache-Control" content="no-transform" />
+    <meta http-equiv="Cache-Control" content="no-siteapp" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>老豆浆 - 博客园</title>
+    <link id="favicon" rel="shortcut icon" href="//common.cnblogs.com/favicon.svg" type="image/svg+xml" />
+    
+    <link rel="stylesheet" href="/css/blog-common.min.css?v=zS6-e1bxywlu3kpHvpr1J6MySwya3ztFtEnS7RYQ0Fk" />
+    <link id="MainCss" rel="stylesheet" href="/skins/anothereon001/bundle-anothereon001.min.css?v=9x2ZP2K8SSBJowZA6xv0D5FvOmlvd5g21u0NBEAEwfQ" />
+    <link type="text/css" rel="stylesheet" href="https://www.cnblogs.com/wyy5552/custom.css?v=KEqe7nwWR4G9yXtXpvW/UrQ1D9w=" />
+    <link id="mobile-style" media="only screen and (max-width: 767px)" type="text/css" rel="stylesheet" href="/skins/anothereon001/bundle-anothereon001-mobile.min.css?v=xFiYH0_zTHqf_pk9Nf2PvR4VdQ1qJnJcRVcot-VdM-8" />
+    
+    <link type="application/rss+xml" rel="alternate" href="https://www.cnblogs.com/wyy5552/rss" />
+    <link type="application/rsd+xml" rel="EditURI" href="https://www.cnblogs.com/wyy5552/rsd.xml" />
+    <link type="application/wlwmanifest+xml" rel="wlwmanifest" href="https://www.cnblogs.com/wyy5552/wlwmanifest.xml" />
+    <script>
+        var currentBlogId = 161519;
+        var currentBlogApp = 'wyy5552';
+        var cb_enable_mathjax = false;
+        var isLogined = false;
+        var isBlogOwner = false;
+        var skinName = 'AnotherEon001';
+        var visitorUserId = '';
+    </script>
+    <script src="https://common.cnblogs.com/scripts/jquery-2.2.0.min.js"></script>
+    <script src="/js/blog-common.min.js?v=2Mic1VLeHXarpdzASbXqFMIMVLEBiWXNO5yiTHUcmhw"></script>
+    
+    
+    
+</head>
+<body class="no-navbar">
+    <a name="top"></a>
+    <div id="top_nav" class="navbar forpc navbar-custom">
+        <nav id="nav_main" class="navbar-main">
+            <ul id="nav_left" class="navbar-list navbar-left">
+                <li class="navbar-branding"><a href="https://www.cnblogs.com/" title="开发者的网上家园"><img src="/images/logo.svg?v=R9M0WmLAIPVydmdzE2keuvnjl-bPR7_35oHqtiBzGsM" alt="博客园Logo" /></a></li>
+                <li><a href="/" onclick="ga('send', 'event', 'Link', 'click', 'skin-navbar-sitehome')">首页</a></li>
+                <li><a href="https://news.cnblogs.com/" onclick="ga('send', 'event', 'Link', 'click', 'skin-navbar-news')">新闻</a></li>
+                <li><a href="https://q.cnblogs.com/" onclick="ga('send', 'event', 'Link', 'click', 'skin-navbar-q')">博问</a></li>
+                <li><a id="nav_brandzone" href="https://brands.cnblogs.com/" onclick="ga('send', 'event', 'Link', 'click', 'skin-navbar-brands')">专区</a></li>
+                <li><a href="https://ing.cnblogs.com/" onclick="ga('send', 'event', 'Link', 'click', 'skin-navbar-ing')">闪存</a></li>
+                <li><a href="https://edu.cnblogs.com/" onclick="ga('send', 'event', 'Link', 'click', 'skin-navbar-edu')">班级</a></li>
+            </ul>
+            <ul id="nav_right" class="navbar-list navbar-right">
+                <li>
+                    <form id="zzk_search" class="navbar-search" action="https://zzk.cnblogs.com/s" method="get">
+                        <input name="w" id="zzk_search_input" placeholder="代码改变世界" type="text" tabindex="3" />
+                        <button type="submit" id="zzk_search_button">
+                            <img src="/images/aggsite/search.svg" alt="搜索" />
+                        </button>
+                    </form>
+                </li>
+                <li id="navbar_login_status" class="navbar-list">
+                    <a class="navbar-user-info navbar-blog" href="https://i.cnblogs.com/EditPosts.aspx?opt=1" alt="写随笔" title="写随笔">
+                        <img id="new_post_icon" class="navbar-icon" src="/images/aggsite/newpost.svg" alt="写随笔" />
+                    </a>
+                    <a id="navblog-myblog-icon" class="navbar-user-info navbar-blog" href="https://passport.cnblogs.com/GetBlogApplyStatus.aspx" alt="我的博客" title="我的博客">
+                        <img id="myblog_icon" class="navbar-icon" src="/images/aggsite/myblog.svg" alt="我的博客" />
+                    </a>
+                    <a class="navbar-user-info navbar-message navbar-icon-wrapper" href="https://msg.cnblogs.com/" alt="短消息" title="短消息">
+                        <img id="msg_icon" class="navbar-icon" src="/images/aggsite/message.svg?v=J0WS2P2iPgaIVgXxcAhliw4AFZIpaTWxtdoNAv9eiCA" alt="短消息" />
+                        <span id="msg_count" style="display: none"></span>
+                    </a>
+                    <div id="user_info" class="navbar-user-info dropdown">
+                        <a class="dropdown-button" href="https://home.cnblogs.com/">
+                            <img id="user_icon" class="navbar-avatar" src="/images/aggsite/avatar-default.svg" alt="用户头像" />
+                        </a>
+                        <div class="dropdown-menu">
+                            <a id="navblog-myblog-text" href="https://passport.cnblogs.com/GetBlogApplyStatus.aspx">我的博客</a>
+                            <a href="https://home.cnblogs.com/">我的园子</a>
+                            <a href="https://account.cnblogs.com/settings/account">账号设置</a>
+                            <a href="javascript:void(0)" id="navbar_lite_mode_toggle" title="简洁模式会使用简洁款皮肤显示所有博客">
+    简洁模式 <img id="navbar_lite_mode_on" src="/images/lite-mode-check.svg" class="hide" /><span id="navbar_lite_mode_spinner" class="hide">...</span>
+</a>
+                            <a href="javascript:void(0)" onclick="account.logout();">退出登录</a>
+                        </div>
+                    </div>
+                    <a class="navbar-anonymous" href="https://account.cnblogs.com/signup/">注册</a>
+                    <a class="navbar-anonymous" href="javascript:void(0);" onclick="account.login()">登录</a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+
+    
+    <div id="wrapper">
+<div id="header">
+
+<div id="top">
+<h1><a id="Header1_HeaderTitle" class="headermaintitle HeaderMainTitle" href="https://www.cnblogs.com/wyy5552/">了不起的js</a>
+</h1>
+<div id="subtitle"></div>
+</div>
+<div id="sub"><div id="blog_stats_place_holder"><script>loadBlogStats();</script></div></div>
+
+
+
+
+</div>
+<div id="main_container">
+<div id="main_content">
+<div id="content">
+	
+
+
+
+
+
+		
+<p class="date">
+	<span>		  
+	<a href="https://www.cnblogs.com/wyy5552/archive/2021/05/14.html">2021年5月14日</a>
+	</span>
+</p>
+
+    <div class="post">
+        <h2>
+            
+
+<a class="postTitle2 vertical-middle" href="https://www.cnblogs.com/wyy5552/p/14766805.html">
+    <span>
+        SRP（单一职责）——没有一只能飞能走的鸟
+    </span>
+    
+
+
+
+</a>
+
+        </h2>
+        <div class="postbody">
+            
+
+    <div class="c_b_p_desc">
+摘要：外部模块需要用到我的“鸟”，进行操作。这个时候，有同事过来了，说“按照SRP，你这个鸟有问题”
+难道我要提供两只鸟：一只FlyBird，一只WalkBird？        <a href="https://www.cnblogs.com/wyy5552/p/14766805.html" class="c_b_p_desc_readmore">阅读全文</a>
+    </div>
+
+        </div>
+        <p class="postfoot">
+            posted @ 2021-05-14 01:36
+老豆浆
+<span data-post-id="14766805" class="post-view-count">阅读(171)</span> 
+<span data-post-id="14766805" class="post-comment-count">评论(1)</span> 
+<span data-post-id="14766805" class="post-digg-count">推荐(1)</span> 
+<a href="https://i.cnblogs.com/EditPosts.aspx?postid=14766805" rel="nofollow">
+    编辑
+</a>
+
+        </p>
+    </div>
+
+
+		
+<p class="date">
+	<span>		  
+	<a href="https://www.cnblogs.com/wyy5552/archive/2021/04/26.html">2021年4月26日</a>
+	</span>
+</p>
+
+    <div class="post">
+        <h2>
+            
+
+<a class="postTitle2 vertical-middle" href="https://www.cnblogs.com/wyy5552/p/14702807.html">
+    <span>
+        读《前端架构设计》，封面“粉头虫莺”
+    </span>
+    
+
+
+
+</a>
+
+        </h2>
+        <div class="postbody">
+            
+
+    <div class="c_b_p_desc">
+摘要：前端架构一直是这几年炙手可热的词语。但对于前端架构需要处理哪些问题，网上有各种各样的解释，但大多数的文章并没有权威性。规模百人以上的公司几乎都有前端架构师，但是各个公司的架构师做的事情看起来好像“差不多”，但是因为公司业务的不同，落地的方案也有些许区别。整体的演进思路还是追随者海外头部公司的宣讲。        <a href="https://www.cnblogs.com/wyy5552/p/14702807.html" class="c_b_p_desc_readmore">阅读全文</a>
+    </div>
+
+        </div>
+        <p class="postfoot">
+            posted @ 2021-04-26 00:36
+老豆浆
+<span data-post-id="14702807" class="post-view-count">阅读(114)</span> 
+<span data-post-id="14702807" class="post-comment-count">评论(1)</span> 
+<span data-post-id="14702807" class="post-digg-count">推荐(1)</span> 
+<a href="https://i.cnblogs.com/EditPosts.aspx?postid=14702807" rel="nofollow">
+    编辑
+</a>
+
+        </p>
+    </div>
+
+
+		
+<p class="date">
+	<span>		  
+	<a href="https://www.cnblogs.com/wyy5552/archive/2021/04/15.html">2021年4月15日</a>
+	</span>
+</p>
+
+    <div class="post">
+        <h2>
+            
+
+<a class="postTitle2 vertical-middle" href="https://www.cnblogs.com/wyy5552/p/14665062.html">
+    <span>
+        关于研发岗位怎样做新人培训
+    </span>
+    
+
+
+
+</a>
+
+        </h2>
+        <div class="postbody">
+            
+
+    <div class="c_b_p_desc">
+摘要：引子 面对茫茫多的代码，开始进行逆向分析； 问老员工，老员工也是一堆一知半解的； 需要耗费大量的时间，才能稍微捋顺当前的开发内容； 各种“术语”，听不懂他们在说什么，隔了一个公司好像隔了一个世界； devops造就了茫茫多的系统，而且很多都是低频的东西，用了过段时间就会忘记； 你是否也有碰到这些问题        <a href="https://www.cnblogs.com/wyy5552/p/14665062.html" class="c_b_p_desc_readmore">阅读全文</a>
+    </div>
+
+        </div>
+        <p class="postfoot">
+            posted @ 2021-04-15 23:30
+老豆浆
+<span data-post-id="14665062" class="post-view-count">阅读(514)</span> 
+<span data-post-id="14665062" class="post-comment-count">评论(2)</span> 
+<span data-post-id="14665062" class="post-digg-count">推荐(2)</span> 
+<a href="https://i.cnblogs.com/EditPosts.aspx?postid=14665062" rel="nofollow">
+    编辑
+</a>
+
+        </p>
+    </div>
+
+
+		
+<p class="date">
+	<span>		  
+	<a href="https://www.cnblogs.com/wyy5552/archive/2021/04/11.html">2021年4月11日</a>
+	</span>
+</p>
+
+    <div class="post">
+        <h2>
+            
+
+<a class="postTitle2 vertical-middle" href="https://www.cnblogs.com/wyy5552/p/14645961.html">
+    <span>
+        打工人的出路
+    </span>
+    
+
+
+
+</a>
+
+        </h2>
+        <div class="postbody">
+            
+
+    <div class="c_b_p_desc">
+摘要：打工人总是被各种敲诈，却无力反抗。 虽然打工人容易被内部瓦解，但是资本家也不是铁板一块。 只能游离于资本家的空隙里面，才能出头。 对个人来说，能跳槽就跳槽，能得到更多一定要争取。本来大多数行业都面临35岁危机，打工人能折腾的时间不多了。。。 英雄的程序员拯救不了大家，自己都拯救不了。甚至会带来更多压        <a href="https://www.cnblogs.com/wyy5552/p/14645961.html" class="c_b_p_desc_readmore">阅读全文</a>
+    </div>
+
+        </div>
+        <p class="postfoot">
+            posted @ 2021-04-11 22:38
+老豆浆
+<span data-post-id="14645961" class="post-view-count">阅读(36)</span> 
+<span data-post-id="14645961" class="post-comment-count">评论(0)</span> 
+<span data-post-id="14645961" class="post-digg-count">推荐(0)</span> 
+<a href="https://i.cnblogs.com/EditPosts.aspx?postid=14645961" rel="nofollow">
+    编辑
+</a>
+
+        </p>
+    </div>
+
+
+		
+<p class="date">
+	<span>		  
+	<a href="https://www.cnblogs.com/wyy5552/archive/2021/04/01.html">2021年4月1日</a>
+	</span>
+</p>
+
+    <div class="post">
+        <h2>
+            
+
+<a class="postTitle2 vertical-middle" href="https://www.cnblogs.com/wyy5552/p/14604515.html">
+    <span>
+        箭头函数的副作用
+    </span>
+    
+
+
+
+</a>
+
+        </h2>
+        <div class="postbody">
+            
+
+    <div class="c_b_p_desc">
+摘要：第二部分《一些常见的问题》中的问题，并不能抵消箭头函数带来的便利性。相反，普通函数也有各种各样的问题。
+虽然对于性能要求不是很高的场景，箭头函数的确提高了生产力，解放了我们思考 this 的时间，但对于性能要求比较高的场景，还是需要评估。        <a href="https://www.cnblogs.com/wyy5552/p/14604515.html" class="c_b_p_desc_readmore">阅读全文</a>
+    </div>
+
+        </div>
+        <p class="postfoot">
+            posted @ 2021-04-01 00:18
+老豆浆
+<span data-post-id="14604515" class="post-view-count">阅读(60)</span> 
+<span data-post-id="14604515" class="post-comment-count">评论(2)</span> 
+<span data-post-id="14604515" class="post-digg-count">推荐(0)</span> 
+<a href="https://i.cnblogs.com/EditPosts.aspx?postid=14604515" rel="nofollow">
+    编辑
+</a>
+
+        </p>
+    </div>
+
+
+		
+<p class="date">
+	<span>		  
+	<a href="https://www.cnblogs.com/wyy5552/archive/2021/03/31.html">2021年3月31日</a>
+	</span>
+</p>
+
+    <div class="post">
+        <h2>
+            
+
+<a class="postTitle2 vertical-middle" href="https://www.cnblogs.com/wyy5552/p/14557904.html">
+    <span>
+        前端日志系统设计
+    </span>
+    
+
+
+
+</a>
+
+        </h2>
+        <div class="postbody">
+            
+
+    <div class="c_b_p_desc">
+摘要：日志系统是一种不可或缺的跟踪调试工具，特别是在任何无人职守以及那些没有跟踪调试环境的系统中有着广泛的应用。 长期以来， 日志系统作为一种应用程序服务，对于跟踪调试、程序状态记录、崩溃数据恢复都有非常现实的意义。        <a href="https://www.cnblogs.com/wyy5552/p/14557904.html" class="c_b_p_desc_readmore">阅读全文</a>
+    </div>
+
+        </div>
+        <p class="postfoot">
+            posted @ 2021-03-31 22:10
+老豆浆
+<span data-post-id="14557904" class="post-view-count">阅读(69)</span> 
+<span data-post-id="14557904" class="post-comment-count">评论(0)</span> 
+<span data-post-id="14557904" class="post-digg-count">推荐(0)</span> 
+<a href="https://i.cnblogs.com/EditPosts.aspx?postid=14557904" rel="nofollow">
+    编辑
+</a>
+
+        </p>
+    </div>
+
+
+		
+<p class="date">
+	<span>		  
+	<a href="https://www.cnblogs.com/wyy5552/archive/2020/12/31.html">2020年12月31日</a>
+	</span>
+</p>
+
+    <div class="post">
+        <h2>
+            
+
+<a class="postTitle2 vertical-middle" href="https://www.cnblogs.com/wyy5552/p/14219182.html">
+    <span>
+        cocos creator3d开发插件
+    </span>
+    
+
+
+
+</a>
+
+        </h2>
+        <div class="postbody">
+            
+
+    <div class="c_b_p_desc">
+摘要：官方 给的答案是这样子的，发现根据里面设置的内容，并不能完成。 cocos creator2d https://docs.cocos.com/creator/manual/zh/extension/your-first-extension.html cocos creator3d https://d        <a href="https://www.cnblogs.com/wyy5552/p/14219182.html" class="c_b_p_desc_readmore">阅读全文</a>
+    </div>
+
+        </div>
+        <p class="postfoot">
+            posted @ 2020-12-31 23:54
+老豆浆
+<span data-post-id="14219182" class="post-view-count">阅读(103)</span> 
+<span data-post-id="14219182" class="post-comment-count">评论(0)</span> 
+<span data-post-id="14219182" class="post-digg-count">推荐(0)</span> 
+<a href="https://i.cnblogs.com/EditPosts.aspx?postid=14219182" rel="nofollow">
+    编辑
+</a>
+
+        </p>
+    </div>
+
+
+		
+<p class="date">
+	<span>		  
+	<a href="https://www.cnblogs.com/wyy5552/archive/2020/11/13.html">2020年11月13日</a>
+	</span>
+</p>
+
+    <div class="post">
+        <h2>
+            
+
+<a class="postTitle2 vertical-middle" href="https://www.cnblogs.com/wyy5552/p/13969068.html">
+    <span>
+        webgl复习笔记——纹理装配
+    </span>
+    
+
+
+
+</a>
+
+        </h2>
+        <div class="postbody">
+            
+
+    <div class="c_b_p_desc">
+摘要：let canvas = document.getElementById(&#39;webgl&#39;); let gl = canvas.getContext(&#39;webgl&#39;); let v_shader = ` attribute vec4 a_Position; attribute vec2 a_TexCo        <a href="https://www.cnblogs.com/wyy5552/p/13969068.html" class="c_b_p_desc_readmore">阅读全文</a>
+    </div>
+
+        </div>
+        <p class="postfoot">
+            posted @ 2020-11-13 14:09
+老豆浆
+<span data-post-id="13969068" class="post-view-count">阅读(39)</span> 
+<span data-post-id="13969068" class="post-comment-count">评论(0)</span> 
+<span data-post-id="13969068" class="post-digg-count">推荐(0)</span> 
+<a href="https://i.cnblogs.com/EditPosts.aspx?postid=13969068" rel="nofollow">
+    编辑
+</a>
+
+        </p>
+    </div>
+
+
+		
+<p class="date">
+	<span>		  
+	<a href="https://www.cnblogs.com/wyy5552/archive/2020/11/12.html">2020年11月12日</a>
+	</span>
+</p>
+
+    <div class="post">
+        <h2>
+            
+
+<a class="postTitle2 vertical-middle" href="https://www.cnblogs.com/wyy5552/p/13961870.html">
+    <span>
+        webgl复习笔记——图形装配过程
+    </span>
+    
+
+
+
+</a>
+
+        </h2>
+        <div class="postbody">
+            
+
+    <div class="c_b_p_desc">
+摘要：屏幕中的三角形是有片元——像素组成； 光栅化过程 三个像素——》 图形装配——》光栅化，插值——》执行片元着色器； 插值测试 记得，api的单词特别容易拼写错误。有过报 webgl相关的，一般都是语法哪里错了。 let canvas = document.getElementById(&#39;webgl&#39;        <a href="https://www.cnblogs.com/wyy5552/p/13961870.html" class="c_b_p_desc_readmore">阅读全文</a>
+    </div>
+
+        </div>
+        <p class="postfoot">
+            posted @ 2020-11-12 00:45
+老豆浆
+<span data-post-id="13961870" class="post-view-count">阅读(45)</span> 
+<span data-post-id="13961870" class="post-comment-count">评论(0)</span> 
+<span data-post-id="13961870" class="post-digg-count">推荐(0)</span> 
+<a href="https://i.cnblogs.com/EditPosts.aspx?postid=13961870" rel="nofollow">
+    编辑
+</a>
+
+        </p>
+    </div>
+
+
+		
+<p class="date">
+	<span>		  
+	<a href="https://www.cnblogs.com/wyy5552/archive/2020/09/12.html">2020年9月12日</a>
+	</span>
+</p>
+
+    <div class="post">
+        <h2>
+            
+
+<a class="postTitle2 vertical-middle" href="https://www.cnblogs.com/wyy5552/p/13656842.html">
+    <span>
+        webgl复习笔记——三角形平移、旋转(2)
+    </span>
+    
+
+
+
+</a>
+
+        </h2>
+        <div class="postbody">
+            
+
+    <div class="c_b_p_desc">
+摘要：转换矩阵是列主序的； 平移、旋转、缩放 let canvas = document.getElementById(&#39;webgl&#39;); let gl = canvas.getContext(&#39;webgl&#39;); let v_shader = ` attribute vec4 v_position; un        <a href="https://www.cnblogs.com/wyy5552/p/13656842.html" class="c_b_p_desc_readmore">阅读全文</a>
+    </div>
+
+        </div>
+        <p class="postfoot">
+            posted @ 2020-09-12 14:02
+老豆浆
+<span data-post-id="13656842" class="post-view-count">阅读(111)</span> 
+<span data-post-id="13656842" class="post-comment-count">评论(0)</span> 
+<span data-post-id="13656842" class="post-digg-count">推荐(0)</span> 
+<a href="https://i.cnblogs.com/EditPosts.aspx?postid=13656842" rel="nofollow">
+    编辑
+</a>
+
+        </p>
+    </div>
+
+
+
+<div class="topicListFooter">
+    <div id="nav_next_page">
+        
+    <a href="https://www.cnblogs.com/wyy5552/default.html?page=2">
+        下一页
+    </a>
+
+    </div>    
+</div>
+
+
+
+
+
+
+<script>
+    updatePostStats(
+        $(".post-view-count").map(function () { return this.dataset.postId }).get(),
+        function(id, count) { $(".post-view-count[data-post-id=" + id + "]").text("阅读(" + count + ")") },
+        function(id, count) { $(".post-comment-count[data-post-id=" + id + "]").text("评论(" + count + ")") },
+        function(id, count) { $(".post-digg-count[data-post-id=" + id + "]").text("推荐(" + count + ")") });
+</script>
+</div>
+</div>
+<div id="leftmenu">
+
+
+<h3>导航</h3>
+<ul>
+    <li>
+        <a id="blog_nav_sitehome" class="menu" href="https://www.cnblogs.com/">
+博客园</a>
+
+    </li>
+    <li>
+        
+<a id="blog_nav_myhome" class="menu" href="https://www.cnblogs.com/wyy5552/">
+首页</a>
+
+    </li>
+    <li>
+        
+
+<a id="blog_nav_newpost" class="menu" href="https://i.cnblogs.com/EditPosts.aspx?opt=1">
+新随笔</a>
+
+    </li>
+    <li>
+        
+<a id="blog_nav_contact" class="menu" href="https://msg.cnblogs.com/send/%E8%80%81%E8%B1%86%E6%B5%86">
+联系</a>
+    </li>
+    <li>
+        
+<a id="blog_nav_rss" class="menu" href="javascript:void(0)" data-rss="https://www.cnblogs.com/wyy5552/rss/">
+订阅</a>
+        
+<a id="blog_nav_rss_image" href="https://www.cnblogs.com/wyy5552/rss/">
+    <img src="/skins/anothereon001/images/xml.gif" alt="订阅" />
+</a>
+    </li>
+    <li>
+        
+<a id="blog_nav_admin" class="menu" href="https://i.cnblogs.com/">
+管理</a>
+
+    </li>
+</ul>
+
+
+<div id="blog-calendar" style="display:none"></div><script>loadBlogDefaultCalendar();</script>
+<div id="sidebar_news" class="newsItem">
+            <script>loadBlogNews();</script>
+</div>
+<div id="sidebar_c3"></div>
+<div id="blog-sidecolumn"></div>
+                    <script>loadBlogSideColumn();</script>
+
+</div>
+</div>
+<div class="clear"></div>
+<div id="footer">
+<p id="footer">
+	Powered by: 
+	<br />
+	
+	<a href="https://www.cnblogs.com/" id="footer_site_link">博客园</a>
+	<br />
+	Copyright &copy; 2021 老豆浆
+<br /><span id="poweredby">Powered by .NET 5.0 on Kubernetes</span>
+
+</p>
+
+
+</div>
+</div>
+
+
+    
+
+    <input type="hidden" id="antiforgery_token" value="CfDJ8L-rpLgFVEJMgssCVvNUAjtkpTqkkoZQCe7Rio43Gtx3OnhRtS0wl9B4OWjh5VTehNyjTu9_ZuIUfPXx0FpUSd7nWb-ZlD9qoLbZb5cbCzzEVfXIsxXfQgifAFmTQI6h9cHco23ssWlQVctlzzIaY28" />
+</body>
+</html>
